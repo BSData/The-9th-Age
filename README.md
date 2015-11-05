@@ -15,6 +15,8 @@ The 9th Age
 
 __What's this?__
 
+The 9th Age project homepage: http://www.the-ninth-age.com/
+
 BSData organisation created this project. It's GitHub repository of datafiles.
 Maintained by community, in no way endorsed by BattleScribe. If you want
 to develop - cool! We need you! Take a look at [Getting Started wiki][]
