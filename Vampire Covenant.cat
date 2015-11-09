@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c4f-2485-9386-ab13" revision="4" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="0" battleScribeVersion="1.15" name="Vampire Covenant" books="Vampire Covenant - v0.9.0" authorName="Toreador13" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2c4f-2485-9386-ab13" revision="4" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="0" battleScribeVersion="1.15" name="Vampire Covenant" books="Vampire Covenant - v0.9.1" authorName="Toreador13" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="c7d7-11af-11a4-1340" name="Angels of Death" points="0.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
@@ -741,7 +741,7 @@ Necromancer Lord or the model with this special rule fights in a Challange.
     </entry>
     <entry id="6b49-435a-6d1c-38e9" name="Bat Swarm" points="0.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="4" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="38d5-f1a3-9fa2-9be9" name="Bat Swarm" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="2" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="38d5-f1a3-9fa2-9be9" name="Bat Swarm" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="2" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -1802,7 +1802,27 @@ Stage       Wounds caused Bonus
     <entry id="accd-5a88-37c9-06b9" name="Ghouls" points="0.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="4" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="92bb-c0dc-36bd-c9e3" name="Ghoul" points="9.0" categoryId="(No Category)" type="model" minSelections="10" maxSelections="40" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
-          <entries/>
+          <entries>
+            <entry id="7134-5c90-6ad2-1043" name="Skirmishers" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="accd-5a88-37c9-06b9" childId="92bb-c0dc-36bd-c9e3" field="selections" type="greater than" value="15.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="b0f2-b12e-3b96-4f27" targetId="cbb3-1499-3221-d592" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+          </entries>
           <entryGroups/>
           <modifiers/>
           <rules/>
@@ -1849,9 +1869,6 @@ Stage       Wounds caused Bonus
             <link id="292b-c1c2-e4b7-f564" targetId="4aef-38cd-fc54-d541" linkType="rule">
               <modifiers/>
             </link>
-            <link id="fdf4-9f9c-eb6f-5703" targetId="dc45-d263-b35d-db93" linkType="rule">
-              <modifiers/>
-            </link>
           </links>
         </entry>
       </entries>
@@ -1862,6 +1879,36 @@ Stage       Wounds caused Bonus
               <entries/>
               <entryGroups/>
               <modifiers/>
+              <rules/>
+              <profiles/>
+              <links/>
+            </entry>
+            <entry id="1df9-dda3-9a04-feab" name="Musician" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+              <entries/>
+              <entryGroups/>
+              <modifiers>
+                <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <rules/>
+              <profiles/>
+              <links/>
+            </entry>
+            <entry id="5b07-3f98-efb2-4774" name="Standard Bearer" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+              <entries/>
+              <entryGroups/>
+              <modifiers>
+                <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <rules/>
               <profiles/>
               <links/>
@@ -2762,10 +2809,16 @@ increased by +1 (up to maximum of 4+).
               <entryGroups/>
               <modifiers>
                 <modifier type="set" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="at least" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="at least" value="1.0"/>
+                        <condition parentId="roster" childId="c261-832b-3491-9b96" field="selections" type="at least" value="1.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
                 <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
@@ -2811,6 +2864,12 @@ increased by +1 (up to maximum of 4+).
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="c261-832b-3491-9b96" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
               </modifiers>
               <rules>
                 <rule id="d098-7ae1-c608-1ff2" name="Path of Necromancy, Shadow or Death." hidden="false">
@@ -2822,14 +2881,7 @@ increased by +1 (up to maximum of 4+).
             </entry>
           </entries>
           <entryGroups/>
-          <modifiers>
-            <modifier type="set" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="c261-832b-3491-9b96" field="selections" type="at least" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <links/>
         </entryGroup>
         <entryGroup id="71f7-f25c-d7fe-70da" name="Bloodline Powers" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -3474,9 +3526,9 @@ increased by +1 (up to maximum of 4+).
             </link>
           </links>
         </entryGroup>
-        <entryGroup id="f7df-e4f7-8738-cbca" name="Wizard Level" defaultEntryId="9f5c-e44b-8091-fab4" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+        <entryGroup id="f7df-e4f7-8738-cbca" name="Wizard Level" defaultEntryId="4aef-0a97-6a78-52b2" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
           <entries>
-            <entry id="9f5c-e44b-8091-fab4" name="Wizard Level 2" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+            <entry id="4aef-0a97-6a78-52b2" name="Wizard Level 4" points="75.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
               <entries/>
               <entryGroups/>
               <modifiers>
@@ -3492,30 +3544,17 @@ increased by +1 (up to maximum of 4+).
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-              </modifiers>
-              <rules>
-                <rule id="de99-16d7-ef80-607c" name="Path of Necromancy, Shadow or Death." hidden="false">
-                  <modifiers/>
-                </rule>
-              </rules>
-              <profiles/>
-              <links/>
-            </entry>
-            <entry id="4aef-0a97-6a78-52b2" name="Wizard Level 3" points="75.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
-              <entries/>
-              <entryGroups/>
-              <modifiers>
-                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition parentId="roster" childId="a6b3-c5c9-f3b9-b3ad" field="selections" type="at least" value="1.0"/>
-                        <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="at least" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </conditionGroup>
-                  </conditionGroups>
+                <modifier type="set" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="c261-832b-3491-9b96" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="c261-832b-3491-9b96" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
                 </modifier>
               </modifiers>
               <rules>
@@ -5207,7 +5246,7 @@ Wounds restored, for each unit targeted</description>
         </link>
       </links>
     </entry>
-    <entry id="f576-fa94-0a7d-f399" name="Nosferatu Bloodline" points="60.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+    <entry id="f576-fa94-0a7d-f399" name="Nosferatu Bloodline" points="140.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
       <entries/>
       <entryGroups>
         <entryGroup id="822f-4e64-6abf-a8e9" name="Thick Blood Power" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -5275,7 +5314,7 @@ by the Vampire has 3” longer range.</description>
         </entryGroup>
       </entryGroups>
       <modifiers>
-        <modifier type="set" field="points" value="35.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="points" value="80.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="direct parent" childId="951e-6eba-73f2-2f4a" field="selections" type="instance of" value="0.0"/>
           </conditions>
@@ -5284,9 +5323,10 @@ by the Vampire has 3” longer range.</description>
       </modifiers>
       <rules>
         <rule id="4efb-905d-d81d-721e" name="Nosferatu Bloodline" hidden="false">
-          <description>The Vampire has -1 Attack, -2 Weapon Skill, cannot take any kind of armour, has an additional Magic Level and has
-the Awaken (Zombies; Skeletons) Special Rule. A Nosferatu Vampire may generate spells from more than one Path of
-Magic. Which Paths and how many spells from each Path will be generated has to be stated on the army list.
+          <description>The Vampire is a Level 4/2 Wizard, has -1 Attack, -2 Weapon Skill, cannot take any kind of armour, generates an
+additional spell and has the Awaken (Zombies; Skeletons) Special Rule.
+A Nosferatu Vampire may generate spells from more than one Path of Magic. Which Paths and how many spells from
+each Path will be generated has to be stated on the army list.
 </description>
           <modifiers/>
         </rule>
@@ -5530,11 +5570,11 @@ Regeneration (6+), if they already have Regeneration their save is increased by 
                 </link>
               </links>
             </entry>
-            <entry id="a95b-5d63-0fb3-e680" name="Thin Blood: Flying Terror" points="70.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="a95b-5d63-0fb3-e680" name="Thin Blood: Flying Terror" points="65.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers>
-                <modifier type="set" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                <modifier type="set" field="points" value="40.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
                     <condition parentId="direct parent" childId="951e-6eba-73f2-2f4a" field="selections" type="instance of" value="0.0"/>
                   </conditions>
@@ -5593,6 +5633,9 @@ single additional magic Level and must use Path of Beast or Necromancy</descript
               <conditionGroups/>
             </modifier>
           </modifiers>
+        </link>
+        <link id="0a47-9f5f-c46e-a48d" targetId="8d66-892b-7ed1-d6d8" linkType="rule">
+          <modifiers/>
         </link>
       </links>
     </entry>
@@ -5742,9 +5785,9 @@ Hunger (5+).</description>
       </modifiers>
       <rules>
         <rule id="4395-d6b8-8ce6-a302" name="Von Castlestein Bloodline" hidden="false">
-          <description>The Vampire grants +1 Combat Resolution. Undead units joined by the Vampire may march as if they had the
-Vampiric Special Rule. The range of Inspiring Presence and Hold Your Ground of the vampire is increased by 6”. In
-addition, the Vampire may reroll failed Hunger rolls.
+          <description>The presence of one or more Von Castelstein Vampires grants +1 Combat Score. Undead units joined by the Vampire
+may march as if they had the Vampiric Special Rule. The range of Inspiring Presence and Hold Your Ground of the
+vampire is increased by 6”. In addition, the Vampire may reroll failed Hunger rolls.
 </description>
           <modifiers/>
         </rule>
@@ -6047,11 +6090,11 @@ Regeneration (6+), if they already have Regeneration their save is increased by 
                         </link>
                       </links>
                     </entry>
-                    <entry id="4a5c-d35b-3453-b675" name="Thin Blood: Flying Terror" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+                    <entry id="4a5c-d35b-3453-b675" name="Thin Blood: Flying Terror" points="65.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
                       <entries/>
                       <entryGroups/>
                       <modifiers>
-                        <modifier type="set" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                        <modifier type="set" field="points" value="40.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                           <conditions>
                             <condition parentId="direct parent" childId="951e-6eba-73f2-2f4a" field="selections" type="instance of" value="0.0"/>
                           </conditions>
@@ -6757,7 +6800,7 @@ Hunger (5+).</description>
           </profiles>
           <links/>
         </entry>
-        <entry id="281a-1ca3-1611-b25b" name="The Accursed Book" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="281a-1ca3-1611-b25b" name="The Accursed Book" points="55.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -6765,7 +6808,7 @@ Hunger (5+).</description>
           <profiles>
             <profile id="b248-6079-bf06-ebc3" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="The Accursed Book" hidden="false">
               <characteristics>
-                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Enchanted Item. Wearer and all models in its unit have the Distracting special rule. "/>
+                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Wearer and other models on foot in its unit have the Distracting special rule"/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -6952,7 +6995,7 @@ Hunger (5+).</description>
           <profiles>
             <profile id="9ff3-4133-e0af-a96a" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="The Accursed Book" hidden="false">
               <characteristics>
-                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Enchanted Item. Wearer and all models in its unit have the Distracting special rule. "/>
+                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Wearer and other models on foot in its unit have the Distracting special rule"/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -9251,9 +9294,10 @@ model that has the rule.
       <modifiers/>
     </rule>
     <rule id="10b5-724c-e6bd-1cf4" name="Reaper" hidden="false">
-      <description>Units consisting solely of models with this special rule can move through enemy units in the remaining moves
-sub-phase and a single enemy unit moved through can be attacked. When attacking, each model in the unit can make
-a single close combat attack against the enemy unit, that hits automatically</description>
+      <description>Units consisting solely of models with this special rule may move through enemy units during the Remaining Moves
+Sub-Phase. The unit may attack one enemy enemy unit which has been moved through, allowing each Model in the unit
+to make a single Close Combat attack that hits automatically. These attacks are distributes towards the unit as a whole.
+</description>
       <modifiers/>
     </rule>
     <rule id="a6f2-05a8-21b6-84be" name="Regeneration" hidden="false">
