@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3f50-6696-4016-2dd6" revision="1" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Kingdom of Equitaine" books="Kingdom of Equitaine - v0.9.0" authorName="Bombastian &amp; Smallpox" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3f50-6696-4016-2dd6" revision="1" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Kingdom of Equitaine" books="Kingdom of Equitaine - v0.9.1" authorName="Bombastian &amp; Smallpox" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="5aa6-8fe9-64dd-88dd" name="Bowmen" points="0.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="4" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
@@ -126,7 +126,14 @@
             <entry id="fa72-de3b-8dd7-bff9" name="Archers Defilades" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Kingdom of Equitaine">
               <entries/>
               <entryGroups/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="5aa6-8fe9-64dd-88dd" childId="271f-2c5b-70ee-d12a" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <rules/>
               <profiles/>
               <links>
@@ -994,7 +1001,7 @@
                 </link>
               </links>
             </entry>
-            <entry id="badb-d640-74e4-5918" name="Unicorn" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Kingdom of Equitaine">
+            <entry id="badb-d640-74e4-5918" name="Unicorn" points="60.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Kingdom of Equitaine">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -1650,28 +1657,13 @@
                     </link>
                   </links>
                 </entry>
-                <entry id="617b-6a83-e8d7-a81e" name="Shield" points="1.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
+                <entry id="c272-5b46-cd07-8aed" name="Spear" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
                   <entries/>
                   <entryGroups/>
                   <modifiers/>
                   <rules/>
                   <profiles/>
                   <links>
-                    <link id="5d75-7eb1-163c-77f9" targetId="0f8e-229b-bd7c-4928" linkType="profile">
-                      <modifiers/>
-                    </link>
-                  </links>
-                </entry>
-                <entry id="c272-5b46-cd07-8aed" name="Spear and Shield" points="1.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
-                  <entries/>
-                  <entryGroups/>
-                  <modifiers/>
-                  <rules/>
-                  <profiles/>
-                  <links>
-                    <link id="2b7a-9ec2-af28-ea17" targetId="0f8e-229b-bd7c-4928" linkType="profile">
-                      <modifiers/>
-                    </link>
                     <link id="9c78-f661-f439-64c0" targetId="b431-5cda-da36-125a" linkType="profile">
                       <modifiers/>
                     </link>
@@ -1837,6 +1829,9 @@
         <link id="f10f-bc29-254c-a21b" targetId="7b7f-d1c5-2e39-bfc7" linkType="entry">
           <modifiers/>
         </link>
+        <link id="1229-869e-cbfa-f804" targetId="0f8e-229b-bd7c-4928" linkType="profile">
+          <modifiers/>
+        </link>
       </links>
     </entry>
     <entry id="aeef-db65-acc4-dc1b" name="Lord" points="100.0" categoryId="b2e4-176b-505b-1d2a" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Kingdom of Equitaine">
@@ -1997,7 +1992,7 @@
         </link>
       </links>
     </entry>
-    <entry id="a7fc-78fd-855b-180b" name="Paladin" points="60.0" categoryId="c76a9923-4373-79cb-bfba-ed9b87d453e1" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="9" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="a7fc-78fd-855b-180b" name="Paladin" points="60.0" categoryId="c76a9923-4373-79cb-bfba-ed9b87d453e1" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups>
         <entryGroup id="4eda-a1d4-8d9d-1617" name="Magic Items" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="50.0" collective="false" hidden="false">
@@ -2442,7 +2437,7 @@
         </link>
       </links>
     </entry>
-    <entry id="24d3-eb5e-203c-8a5c" name="Trebuchet" points="120.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="24d3-eb5e-203c-8a5c" name="Trebuchet" points="130.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups>
         <entryGroup id="1deb-f2e7-1012-3f59" name="Weapon" defaultEntryId="3b95-53ec-2df7-addf" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -2655,16 +2650,16 @@
                   <modifiers/>
                   <links/>
                 </entryGroup>
-                <entryGroup id="0064-bbcc-9ef6-44dc" name="Shooting Weapon" defaultEntryId="7238-35fa-b0d0-33d6" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+                <entryGroup id="0064-bbcc-9ef6-44dc" name="Shooting Weapon" defaultEntryId="9fb5-e366-488f-8efe" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
                   <entries>
-                    <entry id="7238-35fa-b0d0-33d6" name="Bow" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
+                    <entry id="7238-35fa-b0d0-33d6" name="Crossbow" points="1.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
                       <entries/>
                       <entryGroups/>
                       <modifiers/>
                       <rules/>
                       <profiles/>
                       <links>
-                        <link id="c8f4-cdab-f866-5e71" targetId="d79b-cce1-b93e-d785" linkType="profile">
+                        <link id="9464-dc6f-02c5-145a" targetId="a793-808f-fe7e-591c" linkType="profile">
                           <modifiers/>
                         </link>
                       </links>
@@ -2677,6 +2672,18 @@
                       <profiles/>
                       <links>
                         <link id="80cf-02c9-0aeb-da0f" targetId="0986-4112-e313-fe77" linkType="profile">
+                          <modifiers/>
+                        </link>
+                      </links>
+                    </entry>
+                    <entry id="9fb5-e366-488f-8efe" name="Bow" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+                      <entries/>
+                      <entryGroups/>
+                      <modifiers/>
+                      <rules/>
+                      <profiles/>
+                      <links>
+                        <link id="c8cf-d880-933c-0646" targetId="d79b-cce1-b93e-d785" linkType="profile">
                           <modifiers/>
                         </link>
                       </links>
@@ -2800,6 +2807,9 @@
           <modifiers/>
         </link>
         <link id="1917-ca87-168f-98fc" targetId="0f8e-229b-bd7c-4928" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="dfdf-42ff-b5df-7f54" targetId="8c07-cc44-f5e4-8e9d" linkType="profile">
           <modifiers/>
         </link>
       </links>
@@ -3455,7 +3465,7 @@
           <profiles>
             <profile id="c38f-adc9-6822-dd21" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="KoE - Wafers of Penitence" hidden="false">
               <characteristics>
-                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Arcane Item. Generate d3+2 Wafers at the end of deployment. A Wafer of Penitence can be used once per attempt and adds D3 to the dispelling result. If this die rolls a natural 1, the dispel fails and the wizard takes a Strength 3 hit with Armour Piercing (6)."/>
+                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Arcane Item. Generate d3+2 Wafers at the end of deployment. A Wafer of Penitence can be used once per attempt and adds D3 to the dispelling result (this cannor be used in Aided Dispelling). If this die rolls a natural 1, the dispel fails and the wizard takes a Strength 3 hit with Armour Piercing (6)."/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -6837,7 +6847,7 @@
           <modifiers/>
           <rules>
             <rule id="27e1-4e59-9718-d42c" name="Vitue of the Saint" hidden="false">
-              <description>The character and the unit he is joined gets +1 to its Ward Save to a maximum of 4+.</description>
+              <description>The Character and all non-character models in the same unit has its Ward Save increases by +1, to a maximum of 4+. Can only join Cacvalry units.</description>
               <modifiers/>
             </rule>
           </rules>
@@ -6860,7 +6870,7 @@
       <modifiers/>
     </rule>
     <rule id="92c4-ca3a-3d23-8ef2" name="Archers Defilades" hidden="false" book="Kingdom of Equitaine">
-      <description>After deployment but before deploying Scouts, place a wall in front of any unit with this Special Rule. The wall is as wide as the unit, and no more than 20mm deep. Follow the rules for walls, except it is Soft Terrain instead of Hard Terrain.</description>
+      <description>After deployment but before deploying Scouts, place a wall in base contact on the front of any unit with this Special Rule. The wall is as wide as the unit, and no more than 20mm deep. Follow the rules for walls, except it is Soft Terrain instead of Hard Terrain.</description>
       <modifiers/>
     </rule>
     <rule id="e4e7-ad05-536d-6607" name="Armour Piercing (1)" hidden="false">
@@ -6909,8 +6919,8 @@ Never benefit from any Equipment or Special Rules the model perfoming the attack
     <rule id="afd3-568c-c9d1-3c83" name="Chill Aura" hidden="false">
       <modifiers/>
     </rule>
-    <rule id="fd1a-d972-2e8a-5071" name="Consecrated Ligh" hidden="false">
-      <description>(Bound Level 3) Augment: Range 12â€ Duration: Permanent) Target immediately gains the Blessing Special rule.</description>
+    <rule id="fd1a-d972-2e8a-5071" name="Consecrated Light" hidden="false">
+      <description>(Bound Level 3) Augment: Range 12&quot; Duration: Permanent) Target immediately gains the Blessing Special rule and count as prayed.</description>
       <modifiers/>
     </rule>
     <rule id="14fa-3a4e-b48d-f22f" name="Counts as Champion" hidden="false">
@@ -7071,7 +7081,7 @@ may only use one of these rule in the same combat phase. </description>
       <modifiers/>
     </rule>
     <rule id="f5d0-7e9d-a7d1-11f6" name="Holy Fervor" hidden="false">
-      <description>Grail Fanatics with the Sacred Reliquary lose Frenzy, gain the Blessing Special Rule and the Sacred Reliquary loses the First in Rank rule.</description>
+      <description>Grail Fanatics with the Sacred Reliquary lose Frenzy, gain the Immune to Psycology as well as the Blessing Special Rule and the Sacred Reliquary loses the First in Rank rule.</description>
       <modifiers/>
     </rule>
     <rule id="3b75-c029-aa38-78d0" name="Ignobel" hidden="false" book="Kingdom or Equitaine">
