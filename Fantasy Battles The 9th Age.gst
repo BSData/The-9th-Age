@@ -5,23 +5,17 @@
       <categories>
         <category id="b2e4-176b-505b-1d2a" name="Lords" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="35" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" incrementField="percent" incrementValue="1.0">
+            <modifier type="decrement" field="maxPercentage" value="20.0" repeat="false" numRepeats="1" incrementParentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" incrementField="percent" incrementValue="1.0">
               <conditions/>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition parentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" field="percent" type="less than" value="35.0"/>
+                    <condition parentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" field="percent" type="greater than" value="35.0"/>
                     <condition parentId="roster" field="points limit" type="at least" value="1.0"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
               </conditionGroups>
-            </modifier>
-            <modifier type="set" field="maxPercentage" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
-              <conditions>
-                <condition parentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" field="percent" type="at least" value="35.0"/>
-              </conditions>
-              <conditionGroups/>
             </modifier>
           </modifiers>
         </category>
