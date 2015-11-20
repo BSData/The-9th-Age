@@ -4,20 +4,7 @@
     <forceType id="5374616e6461726423232344415441232323" name="Standard (1500-3999pts)" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
         <category id="b2e4-176b-505b-1d2a" name="Lords" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="35" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="20.0" repeat="false" numRepeats="1" incrementParentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" incrementField="percent" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition parentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" field="percent" type="greater than" value="35.0"/>
-                    <condition parentId="roster" field="points limit" type="at least" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+          <modifiers/>
         </category>
         <category id="c76a9923-4373-79cb-bfba-ed9b87d453e1" name="Heroes" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="50" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
@@ -32,9 +19,6 @@
         <category id="436f726523232344415441232323" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
         </category>
-        <category id="4465746163686d656e7423232344415441232323" name="Detachment" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
-        </category>
         <category id="5370656369616c23232344415441232323" name="Special" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
         </category>
@@ -47,26 +31,7 @@
     <forceType id="1177-b26b-017b-9fc4" name="Grand Army (4000+ pts)" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
         <category id="b2e4-176b-505b-1d2a" name="Lords" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="35" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers>
-            <modifier type="set" field="maxPercentage" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
-              <conditions>
-                <condition parentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" field="percent" type="at least" value="35.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" incrementField="percent" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition parentId="roster" field="points limit" type="at least" value="1.0"/>
-                    <condition parentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" field="percent" type="less than" value="35.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+          <modifiers/>
         </category>
         <category id="c76a9923-4373-79cb-bfba-ed9b87d453e1" name="Heroes" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="50" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
@@ -92,27 +57,8 @@
     </forceType>
     <forceType id="7732-e457-4a60-ddb3" name="Warband (Less than 1500pts)" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
-        <category id="b2e4-176b-505b-1d2a" name="Lords" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers>
-            <modifier type="set" field="maxPercentage" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
-              <conditions>
-                <condition parentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" field="percent" type="at least" value="35.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" incrementField="percent" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition parentId="c76a9923-4373-79cb-bfba-ed9b87d453e1" field="percent" type="less than" value="35.0"/>
-                    <condition parentId="roster" field="points limit" type="at least" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+        <category id="b2e4-176b-505b-1d2a" name="Lords" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="35" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
         </category>
         <category id="c76a9923-4373-79cb-bfba-ed9b87d453e1" name="Heroes" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="50" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
