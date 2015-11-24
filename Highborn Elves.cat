@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="199d-a23a-85fa-6353" revision="5" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Highborn Elves" books="Highborn Elves - v0.9.1" authorName="Bombastian" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="199d-a23a-85fa-6353" revision="6" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Highborn Elves" books="Highborn Elves - v0.9.1" authorName="Bombastian" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="6f03-493b-80b5-683c" name="Archmage" points="165.0" categoryId="b2e4-176b-505b-1d2a" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -1755,14 +1755,7 @@
         <entryGroup id="9c2e-15f9-4b73-fda0" name="Magic Items" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="50.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
-          <modifiers>
-            <modifier type="decrement" field="maxPoints" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="0c5a-e0d1-0a3e-ee95" childId="6a12-ff17-91c5-9749" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <links>
             <link id="eb6f-6704-4fe1-c367" targetId="b4f5-1cd5-486e-b846" linkType="entry group">
               <modifiers/>
@@ -1775,6 +1768,16 @@
             </link>
             <link id="57da-58dd-3c13-9467" targetId="e348-d7b3-a4d3-c4a1" linkType="entry group">
               <modifiers/>
+            </link>
+            <link id="eaa8-ba14-e952-506c" targetId="09ae-a50b-12ef-4ee5" linkType="entry group">
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="0c5a-e0d1-0a3e-ee95" childId="6561-1c8b-3731-ed15" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
           </links>
         </entryGroup>
