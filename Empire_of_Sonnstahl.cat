@@ -1462,19 +1462,23 @@
           </profiles>
           <links/>
         </entry>
-        <entry id="3566-f5a5-e5d2-6959" name="Veterans" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+        <entry id="3566-f5a5-e5d2-6959" name="Veterans" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
           <entries/>
           <entryGroups/>
           <modifiers>
-            <modifier type="increment" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="37af-10b1-de1b-c92b" incrementChildId="173c-eda2-8ddf-1cb2" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="3c84-2d75-8204-c2da" field="selections" type="at least" value="1.0"/>
-              </conditions>
+            <modifier type="increment" field="points" value="1.0" repeat="true" numRepeats="1" incrementParentId="37af-10b1-de1b-c92b" incrementChildId="173c-eda2-8ddf-1cb2" incrementField="selections" incrementValue="1.0">
+              <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="3c84-2d75-8204-c2da" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="1404-0aa3-d1fd-4561" field="selections" type="at least" value="1.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -3059,7 +3063,7 @@
           </profiles>
           <links/>
         </entry>
-        <entry id="1404-0aa3-d1fd-4561" name="Veterans" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+        <entry id="1404-0aa3-d1fd-4561" name="Veterans" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
           <entries/>
           <entryGroups/>
           <modifiers>
@@ -3070,6 +3074,12 @@
             <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="3c84-2d75-8204-c2da" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="3566-f5a5-e5d2-6959" field="selections" type="at least" value="1.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
