@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="77dd-4cde-c938-76ab" revision="2" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Infernal Dwarves" books="v0.10.0" authorName="Bombastian" authorUrl="http://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="77dd-4cde-c938-76ab" revision="3" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Infernal Dwarves" books="v0.10.0" authorName="Bombastian" authorUrl="http://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="aa60-91ec-78ff-1773" name="Anointed Taurukh" points="150.0" categoryId="c76a9923-4373-79cb-bfba-ed9b87d453e1" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -410,6 +410,66 @@
           <modifiers/>
         </link>
         <link id="130a-5b29-fb1b-d6ed" targetId="3f8a-daf4-462a-85b7" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="3773-d04f-6493-7106" name="Hellfire Cannon" points="180.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="increment" field="maxInRoster" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="no child" field="points limit" type="less than" value="4000.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="no child" field="points limit" type="less than" value="1500.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles>
+        <profile id="be5a-8c3c-21f2-e2e9" profileTypeId="4d6f64656c23232344415441232323" name="Hellfire Cannon" hidden="false">
+          <characteristics>
+            <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
+            <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
+            <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
+            <characteristic characteristicId="5323232344415441232323" name="S" value="5"/>
+            <characteristic characteristicId="5423232344415441232323" name="T" value="6"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="5"/>
+            <characteristic characteristicId="4923232344415441232323" name="I" value="1"/>
+            <characteristic characteristicId="4123232344415441232323" name="A" value="5"/>
+            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="6"/>
+            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value="4+"/>
+            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave" value="5+"/>
+            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+            <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monster"/>
+            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="100x150mm"/>
+          </characteristics>
+          <modifiers/>
+        </profile>
+      </profiles>
+      <links>
+        <link id="d70b-36b3-5315-3c62" targetId="eb82-6cfd-823a-7f7f" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="a2df-90d2-a15b-aa92" targetId="3240-6054-a48d-07b2" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="116a-76e5-7c7a-39cd" targetId="ef5f-3df4-8d28-9c69" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="ce2d-7772-bf95-4f67" targetId="3d23-aae1-c8ef-a82e" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="73cf-f192-b2e1-6688" targetId="87d9-7269-6ba8-b3c0" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="7b5d-f3a8-18a0-5b94" targetId="9488-4be7-78db-89a7" linkType="profile">
           <modifiers/>
         </link>
       </links>
@@ -1431,6 +1491,208 @@
         </link>
       </links>
     </entry>
+    <entry id="e0cb-4606-b171-f9f6" name="Infernal Engine" points="250.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups>
+        <entryGroup id="8151-869b-e404-8c3b" name="Weapon" defaultEntryId="2d0c-8013-4476-5ee3" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries>
+            <entry id="2d0c-8013-4476-5ee3" name="Hellguns" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="da25-b12b-76db-ebda" targetId="075a-b2ad-286d-b599" linkType="profile">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+            <entry id="f18f-cbab-3f76-975c" name="Hellhammers" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules>
+                <rule id="cb41-50f5-48d1-55b2" name="Hellhammers" hidden="false">
+                  <description>The Steeldaemon increases its Grinding Attacks and Impact Hits by D6</description>
+                  <modifiers/>
+                </rule>
+              </rules>
+              <profiles/>
+              <links/>
+            </entry>
+          </entries>
+          <entryGroups/>
+          <modifiers/>
+          <links/>
+        </entryGroup>
+        <entryGroup id="aa1e-9837-34e2-c351" name="Modification" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries>
+            <entry id="3454-4157-9fe9-9ba1" name="Steel Beast" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules>
+                <rule id="0395-526b-6e1d-a0f8" name="Steel Beast" hidden="false">
+                  <description>The I​nfernal Engine​has +1 Strength and +1 Toughness</description>
+                  <modifiers/>
+                </rule>
+              </rules>
+              <profiles/>
+              <links/>
+            </entry>
+            <entry id="5535-b0b5-8407-f943" name="Armour Plating" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="3690-08a3-8430-843e" targetId="ef6c-0d10-fe54-4f55" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+            <entry id="67f1-e171-b702-d068" name="Whirling Blades" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules>
+                <rule id="a44b-5ad4-8885-e94f" name="Whirling Blades" hidden="false">
+                  <description>The Infernal Engine has A4 and WS4.</description>
+                  <modifiers/>
+                </rule>
+              </rules>
+              <profiles/>
+              <links/>
+            </entry>
+          </entries>
+          <entryGroups/>
+          <modifiers/>
+          <links/>
+        </entryGroup>
+        <entryGroup id="0f08-3013-84ff-2c7a" name="Special Rules" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries>
+            <entry id="0a2c-9f1c-8a77-23eb" name="Otherworldly" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="f0f2-2326-2f1c-aab4" targetId="eb82-6cfd-823a-7f7f" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+          </entries>
+          <entryGroups/>
+          <modifiers/>
+          <links/>
+        </entryGroup>
+      </entryGroups>
+      <modifiers>
+        <modifier type="increment" field="maxInRoster" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="no child" field="points limit" type="greater than" value="4000.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="no child" field="points limit" type="less than" value="1500.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles>
+        <profile id="1f1d-1048-3279-4d15" profileTypeId="4d6f64656c23232344415441232323" name="Infernal Engine" hidden="false">
+          <characteristics>
+            <characteristic characteristicId="4d23232344415441232323" name="M" value="6"/>
+            <characteristic characteristicId="575323232344415441232323" name="WS" value="-"/>
+            <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
+            <characteristic characteristicId="5323232344415441232323" name="S" value="6"/>
+            <characteristic characteristicId="5423232344415441232323" name="T" value="6"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="7"/>
+            <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
+            <characteristic characteristicId="4123232344415441232323" name="A" value="-"/>
+            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="-"/>
+            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+            <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Chariot"/>
+            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="60x100mm"/>
+          </characteristics>
+          <modifiers>
+            <modifier type="increment" field="5323232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="e0cb-4606-b171-f9f6" childId="3454-4157-9fe9-9ba1" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="5423232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="e0cb-4606-b171-f9f6" childId="3454-4157-9fe9-9ba1" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="4123232344415441232323" value="4" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="e0cb-4606-b171-f9f6" childId="67f1-e171-b702-d068" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="575323232344415441232323" value="4" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="e0cb-4606-b171-f9f6" childId="67f1-e171-b702-d068" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile id="a46f-80a3-a699-abcf" profileTypeId="4d6f64656c23232344415441232323" name="Crew (3)" hidden="false">
+          <characteristics>
+            <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
+            <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
+            <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
+            <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
+            <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
+            <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
+            <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
+            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="9"/>
+            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+            <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
+            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
+          </characteristics>
+          <modifiers/>
+        </profile>
+      </profiles>
+      <links>
+        <link id="5424-0026-02d3-163d" targetId="ef5f-3df4-8d28-9c69" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="8e14-f1bb-3036-a5fe" targetId="3181-8685-802e-0114" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="a69e-dccd-5c13-7d4d" targetId="a193-c2d2-b0c6-6578" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="fd23-e53f-f1a0-9586" targetId="f38c-022a-1b9b-fbd9" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="e0cb-4606-b171-f9f6" childId="5535-b0b5-8407-f943" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+      </links>
+    </entry>
     <entry id="5125-8b2a-e5a9-3658" name="Infernal Marksmen" points="0.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="4" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="bb85-4583-36c0-d37c" name="Marksman" points="12.0" categoryId="(No Category)" type="model" minSelections="10" maxSelections="20" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -1938,12 +2200,82 @@
         </link>
       </links>
     </entry>
+    <entry id="62e5-69c7-8e1c-47c9" name="Kadim Titan" points="260.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups>
+        <entryGroup id="3c0e-3ff2-2b4c-6872" name="Special Rules" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries>
+            <entry id="12ea-6214-f5d2-c3c3" name="Ward Save (4+)" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="b25c-ee46-d841-ad0c" targetId="6db9-9415-d887-cac8" linkType="rule">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+          </entries>
+          <entryGroups/>
+          <modifiers/>
+          <links/>
+        </entryGroup>
+      </entryGroups>
+      <modifiers/>
+      <rules/>
+      <profiles>
+        <profile id="0cf4-9676-bf7d-d494" profileTypeId="4d6f64656c23232344415441232323" name="Kadim Titan" hidden="false">
+          <characteristics>
+            <characteristic characteristicId="4d23232344415441232323" name="M" value="9"/>
+            <characteristic characteristicId="575323232344415441232323" name="WS" value="5"/>
+            <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
+            <characteristic characteristicId="5323232344415441232323" name="S" value="7"/>
+            <characteristic characteristicId="5423232344415441232323" name="T" value="6"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="6"/>
+            <characteristic characteristicId="4923232344415441232323" name="I" value="4"/>
+            <characteristic characteristicId="4123232344415441232323" name="A" value="6"/>
+            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
+            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave" value="5+"/>
+            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+            <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monster"/>
+            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="100x150mm"/>
+          </characteristics>
+          <modifiers/>
+        </profile>
+      </profiles>
+      <links>
+        <link id="b002-50ef-a957-fd59" targetId="1a14-fb6e-2bee-90a5" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="9f0b-c61a-9450-413b" targetId="eb82-6cfd-823a-7f7f" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="837b-f6d5-b7a6-7df2" targetId="9291-0c9b-8f40-6446" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="a6d9-273b-4ab8-04e0" targetId="3d23-aae1-c8ef-a82e" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="b8b5-9c13-273c-cdaf" targetId="87d9-7269-6ba8-b3c0" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="f1da-d670-1691-d2f4" targetId="4c33-59d3-433d-9f6d" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="0460-331b-ea08-1d45" targetId="201a-5329-c5ad-30d7" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
     <entry id="4529-ef65-a388-45a6" name="Lamassu" points="170.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups>
         <entryGroup id="6ee6-6858-4272-b4e2" name="Magic" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="33b5-e599-67d4-52cb" name="Level 2 Wizard" points="45.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="33b5-e599-67d4-52cb" name="Level 2 Wizard" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups>
                 <entryGroup id="5507-b09a-0be6-60e7" name="Path of Magic" defaultEntryId="be3a-a73b-cf20-2f4c" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -2029,76 +2361,6 @@
           <modifiers/>
         </link>
         <link id="82d1-7ea3-fe97-8e53" targetId="88e4-9ce0-52b2-ee90" linkType="rule">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
-    <entry id="62e5-69c7-8e1c-47c9" name="Kadim Titan" points="260.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-      <entries/>
-      <entryGroups>
-        <entryGroup id="3c0e-3ff2-2b4c-6872" name="Special Rules" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries>
-            <entry id="12ea-6214-f5d2-c3c3" name="Ward Save (4+)" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules/>
-              <profiles/>
-              <links>
-                <link id="b25c-ee46-d841-ad0c" targetId="6db9-9415-d887-cac8" linkType="rule">
-                  <modifiers/>
-                </link>
-              </links>
-            </entry>
-          </entries>
-          <entryGroups/>
-          <modifiers/>
-          <links/>
-        </entryGroup>
-      </entryGroups>
-      <modifiers/>
-      <rules/>
-      <profiles>
-        <profile id="0cf4-9676-bf7d-d494" profileTypeId="4d6f64656c23232344415441232323" name="Kadim Titan" hidden="false">
-          <characteristics>
-            <characteristic characteristicId="4d23232344415441232323" name="M" value="9"/>
-            <characteristic characteristicId="575323232344415441232323" name="WS" value="5"/>
-            <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
-            <characteristic characteristicId="5323232344415441232323" name="S" value="7"/>
-            <characteristic characteristicId="5423232344415441232323" name="T" value="6"/>
-            <characteristic characteristicId="5723232344415441232323" name="W" value="6"/>
-            <characteristic characteristicId="4923232344415441232323" name="I" value="4"/>
-            <characteristic characteristicId="4123232344415441232323" name="A" value="6"/>
-            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
-            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
-            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave" value="5+"/>
-            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-            <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monster"/>
-            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="100x150mm"/>
-          </characteristics>
-          <modifiers/>
-        </profile>
-      </profiles>
-      <links>
-        <link id="b002-50ef-a957-fd59" targetId="1a14-fb6e-2bee-90a5" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="9f0b-c61a-9450-413b" targetId="eb82-6cfd-823a-7f7f" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="837b-f6d5-b7a6-7df2" targetId="9291-0c9b-8f40-6446" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="a6d9-273b-4ab8-04e0" targetId="3d23-aae1-c8ef-a82e" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="b8b5-9c13-273c-cdaf" targetId="87d9-7269-6ba8-b3c0" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="f1da-d670-1691-d2f4" targetId="4c33-59d3-433d-9f6d" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="0460-331b-ea08-1d45" targetId="201a-5329-c5ad-30d7" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -2720,208 +2982,6 @@
         </link>
         <link id="4305-0baa-9982-9378" targetId="e2e7-9b06-b469-a936" linkType="entry">
           <modifiers/>
-        </link>
-      </links>
-    </entry>
-    <entry id="e0cb-4606-b171-f9f6" name="Infernal Engine" points="250.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-      <entries/>
-      <entryGroups>
-        <entryGroup id="8151-869b-e404-8c3b" name="Weapon" defaultEntryId="2d0c-8013-4476-5ee3" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries>
-            <entry id="2d0c-8013-4476-5ee3" name="Hellguns" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules/>
-              <profiles/>
-              <links>
-                <link id="da25-b12b-76db-ebda" targetId="075a-b2ad-286d-b599" linkType="profile">
-                  <modifiers/>
-                </link>
-              </links>
-            </entry>
-            <entry id="f18f-cbab-3f76-975c" name="Hellhammers" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules>
-                <rule id="cb41-50f5-48d1-55b2" name="Hellhammers" hidden="false">
-                  <description>The Steeldaemon increases its Grinding Attacks and Impact Hits by D6</description>
-                  <modifiers/>
-                </rule>
-              </rules>
-              <profiles/>
-              <links/>
-            </entry>
-          </entries>
-          <entryGroups/>
-          <modifiers/>
-          <links/>
-        </entryGroup>
-        <entryGroup id="aa1e-9837-34e2-c351" name="Modification" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries>
-            <entry id="3454-4157-9fe9-9ba1" name="Steel Beast" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules>
-                <rule id="0395-526b-6e1d-a0f8" name="Steel Beast" hidden="false">
-                  <description>The I​nfernal Engine​has +1 Strength and +1 Toughness</description>
-                  <modifiers/>
-                </rule>
-              </rules>
-              <profiles/>
-              <links/>
-            </entry>
-            <entry id="5535-b0b5-8407-f943" name="Armour Plating" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules/>
-              <profiles/>
-              <links>
-                <link id="3690-08a3-8430-843e" targetId="ef6c-0d10-fe54-4f55" linkType="rule">
-                  <modifiers/>
-                </link>
-              </links>
-            </entry>
-            <entry id="67f1-e171-b702-d068" name="Whirling Blades" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules>
-                <rule id="a44b-5ad4-8885-e94f" name="Whirling Blades" hidden="false">
-                  <description>The Infernal Engine has A4 and WS4.</description>
-                  <modifiers/>
-                </rule>
-              </rules>
-              <profiles/>
-              <links/>
-            </entry>
-          </entries>
-          <entryGroups/>
-          <modifiers/>
-          <links/>
-        </entryGroup>
-        <entryGroup id="0f08-3013-84ff-2c7a" name="Special Rules" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries>
-            <entry id="0a2c-9f1c-8a77-23eb" name="Otherworldly" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules/>
-              <profiles/>
-              <links>
-                <link id="f0f2-2326-2f1c-aab4" targetId="eb82-6cfd-823a-7f7f" linkType="rule">
-                  <modifiers/>
-                </link>
-              </links>
-            </entry>
-          </entries>
-          <entryGroups/>
-          <modifiers/>
-          <links/>
-        </entryGroup>
-      </entryGroups>
-      <modifiers>
-        <modifier type="increment" field="maxInRoster" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="roster" childId="no child" field="points limit" type="greater than" value="4000.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="roster" childId="no child" field="points limit" type="less than" value="1500.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <rules/>
-      <profiles>
-        <profile id="1f1d-1048-3279-4d15" profileTypeId="4d6f64656c23232344415441232323" name="Infernal Engine" hidden="false">
-          <characteristics>
-            <characteristic characteristicId="4d23232344415441232323" name="M" value="6"/>
-            <characteristic characteristicId="575323232344415441232323" name="WS" value="-"/>
-            <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
-            <characteristic characteristicId="5323232344415441232323" name="S" value="6"/>
-            <characteristic characteristicId="5423232344415441232323" name="T" value="6"/>
-            <characteristic characteristicId="5723232344415441232323" name="W" value="7"/>
-            <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
-            <characteristic characteristicId="4123232344415441232323" name="A" value="-"/>
-            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="-"/>
-            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
-            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
-            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-            <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Chariot"/>
-            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="60x100mm"/>
-          </characteristics>
-          <modifiers>
-            <modifier type="increment" field="5323232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="e0cb-4606-b171-f9f6" childId="3454-4157-9fe9-9ba1" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="5423232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="e0cb-4606-b171-f9f6" childId="3454-4157-9fe9-9ba1" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="set" field="4123232344415441232323" value="4" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="e0cb-4606-b171-f9f6" childId="67f1-e171-b702-d068" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="set" field="575323232344415441232323" value="4" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="e0cb-4606-b171-f9f6" childId="67f1-e171-b702-d068" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile id="a46f-80a3-a699-abcf" profileTypeId="4d6f64656c23232344415441232323" name="Crew (3)" hidden="false">
-          <characteristics>
-            <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
-            <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
-            <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
-            <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
-            <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
-            <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
-            <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
-            <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
-            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="9"/>
-            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
-            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
-            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-            <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
-            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
-          </characteristics>
-          <modifiers/>
-        </profile>
-      </profiles>
-      <links>
-        <link id="5424-0026-02d3-163d" targetId="ef5f-3df4-8d28-9c69" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="8e14-f1bb-3036-a5fe" targetId="3181-8685-802e-0114" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="a69e-dccd-5c13-7d4d" targetId="a193-c2d2-b0c6-6578" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="fd23-e53f-f1a0-9586" targetId="f38c-022a-1b9b-fbd9" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="e0cb-4606-b171-f9f6" childId="5535-b0b5-8407-f943" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
         </link>
       </links>
     </entry>
@@ -3573,66 +3633,6 @@
           <modifiers/>
         </link>
         <link id="9574-8bfb-eb2a-b129" targetId="e2e7-9b06-b469-a936" linkType="entry">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
-    <entry id="3773-d04f-6493-7106" name="Hellfire Cannon" points="180.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-      <entries/>
-      <entryGroups/>
-      <modifiers>
-        <modifier type="increment" field="maxInRoster" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="roster" childId="no child" field="points limit" type="less than" value="4000.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="roster" childId="no child" field="points limit" type="less than" value="1500.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <rules/>
-      <profiles>
-        <profile id="be5a-8c3c-21f2-e2e9" profileTypeId="4d6f64656c23232344415441232323" name="Hellfire Cannon" hidden="false">
-          <characteristics>
-            <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
-            <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
-            <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
-            <characteristic characteristicId="5323232344415441232323" name="S" value="5"/>
-            <characteristic characteristicId="5423232344415441232323" name="T" value="6"/>
-            <characteristic characteristicId="5723232344415441232323" name="W" value="5"/>
-            <characteristic characteristicId="4923232344415441232323" name="I" value="1"/>
-            <characteristic characteristicId="4123232344415441232323" name="A" value="5"/>
-            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="6"/>
-            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value="4+"/>
-            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave" value="5+"/>
-            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-            <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monster"/>
-            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="100x150mm"/>
-          </characteristics>
-          <modifiers/>
-        </profile>
-      </profiles>
-      <links>
-        <link id="d70b-36b3-5315-3c62" targetId="eb82-6cfd-823a-7f7f" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="a2df-90d2-a15b-aa92" targetId="3240-6054-a48d-07b2" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="116a-76e5-7c7a-39cd" targetId="ef5f-3df4-8d28-9c69" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="ce2d-7772-bf95-4f67" targetId="3d23-aae1-c8ef-a82e" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="73cf-f192-b2e1-6688" targetId="87d9-7269-6ba8-b3c0" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="7b5d-f3a8-18a0-5b94" targetId="9488-4be7-78db-89a7" linkType="profile">
           <modifiers/>
         </link>
       </links>
@@ -4560,7 +4560,7 @@
       </profiles>
       <links/>
     </entry>
-    <entry id="a29c-93c1-cb1b-6175" name="Mount Bull of Shamut" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="a29c-93c1-cb1b-6175" name="Bull of Shamut" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers/>
@@ -4612,7 +4612,7 @@
         </link>
       </links>
     </entry>
-    <entry id="a804-029f-3597-6630" name="Mount Great Bull of Shamut" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="a804-029f-3597-6630" name="Great Bull of Shamut" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers/>
@@ -4664,12 +4664,12 @@
         </link>
       </links>
     </entry>
-    <entry id="487b-d65f-9da3-db74" name="Mount Temple Lamassu" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="487b-d65f-9da3-db74" name="Temple Lamassu" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups>
         <entryGroup id="1de4-b396-ed5c-0657" name="Magic" defaultEntryId="e86b-2b37-5b0e-b025" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="e86b-2b37-5b0e-b025" name="Level 2 Wizard" points="45.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="e86b-2b37-5b0e-b025" name="Level 2 Wizard" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups>
                 <entryGroup id="c850-6ab4-b254-c333" name="Path of Magic" defaultEntryId="0fd4-f636-b5f6-3921" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -4759,7 +4759,7 @@
         </link>
       </links>
     </entry>
-    <entry id="d998-5f3f-27c4-5a85" name="Mount Wolf" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="d998-5f3f-27c4-5a85" name="Wolf" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers/>
@@ -8078,21 +8078,21 @@ Giant Attacks counts as Close Combat attack and therefore are affected by all ru
       </characteristics>
       <modifiers/>
     </profile>
-    <profile id="075a-b2ad-286d-b599" profileTypeId="576561706f6e23232344415441232323" name="Hellguns" hidden="false">
-      <characteristics>
-        <characteristic characteristicId="52616e676523232344415441232323" name="Range" value="18&quot;"/>
-        <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="6"/>
-        <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Q​uick to Fire,​Armour Piercing (1), Multiple Shots (2D6), Multiple Wounds (D3)"/>
-        <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Volley Gun Artillery Weapon"/>
-      </characteristics>
-      <modifiers/>
-    </profile>
     <profile id="9488-4be7-78db-89a7" profileTypeId="576561706f6e23232344415441232323" name="Hellfire Cannon" hidden="false">
       <characteristics>
         <characteristic characteristicId="52616e676523232344415441232323" name="Range" value="60&quot;"/>
         <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="4[9]"/>
         <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="3&quot; Template, Strength 4 [9], Armour Piercing (1), [​Multiple Wounds (Ordnance)].​ A unit which suffers 1 or more casualties from a Hellmortar must immediately take a Panic Test."/>
         <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Catapult Artillery Weapon"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
+    <profile id="075a-b2ad-286d-b599" profileTypeId="576561706f6e23232344415441232323" name="Hellguns" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="52616e676523232344415441232323" name="Range" value="18&quot;"/>
+        <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="6"/>
+        <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Q​uick to Fire,​Armour Piercing (1), Multiple Shots (2D6), Multiple Wounds (D3)"/>
+        <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Volley Gun Artillery Weapon"/>
       </characteristics>
       <modifiers/>
     </profile>
