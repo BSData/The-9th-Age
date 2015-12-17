@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7447-3020-797b-4050" revision="6" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Ogre Khans" books="v0.10.2" authorName="Bombastian" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7447-3020-797b-4050" revision="7" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Ogre Khans" books="v0.10.2" authorName="Bombastian" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="deb9-bcce-fe3f-ed18" name="Blood Shaman" points="250.0" categoryId="b2e4-176b-505b-1d2a" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
@@ -516,7 +516,14 @@
             </entry>
           </entries>
           <entryGroups/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="4b94-0d6f-4473-1df2" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <links/>
         </entryGroup>
         <entryGroup id="fb8c-5cfd-74c3-5e9b" name="Mark of the Dark Gods" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
@@ -1497,7 +1504,14 @@
             </entry>
           </entries>
           <entryGroups/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="4b94-0d6f-4473-1df2" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <links/>
         </entryGroup>
         <entryGroup id="561f-2ed6-eb06-e8a7" name="Mundane Equipment" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -2784,12 +2798,6 @@
         </modifier>
         <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="roster" childId="4b94-0d6f-4473-1df2" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
             <condition parentId="roster" childId="e492-eff1-8353-edc1" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
@@ -2806,7 +2814,7 @@
         </link>
       </links>
     </entry>
-    <entry id="158c-655c-6c6f-7d9d" name="Sabretooth Tigers" points="20.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+    <entry id="158c-655c-6c6f-7d9d" name="Sabretooth Tigers" points="20.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
       <entries>
         <entry id="8103-e126-29ab-9355" name="Sabretooth Tiger" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -4020,7 +4028,7 @@
           <modifiers>
             <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
-                <condition parentId="3c73-c4f8-7104-40c4" childId="a363-5d52-36db-2ead" field="selections" type="at most" value="4.0"/>
+                <condition parentId="3c73-c4f8-7104-40c4" childId="a363-5d52-36db-2ead" field="selections" type="greater than" value="4.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -4038,12 +4046,6 @@
         <modifier type="decrement" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="roster" childId="no child" field="points limit" type="less than" value="1500.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="roster" childId="4b94-0d6f-4473-1df2" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4077,7 +4079,7 @@
         </link>
       </links>
     </entry>
-    <entry id="5596-6fca-4c1c-d60e" name="Yetis" points="0.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+    <entry id="5596-6fca-4c1c-d60e" name="Yetis" points="0.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
       <entries>
         <entry id="0f87-9e2b-209e-39c9" name="Yeti" points="40.0" categoryId="(No Category)" type="model" minSelections="3" maxSelections="8" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -4172,7 +4174,7 @@
           <modifiers>
             <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
-                <condition parentId="5596-6fca-4c1c-d60e" childId="0f87-9e2b-209e-39c9" field="selections" type="at most" value="4.0"/>
+                <condition parentId="5596-6fca-4c1c-d60e" childId="0f87-9e2b-209e-39c9" field="selections" type="greater than" value="4.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
