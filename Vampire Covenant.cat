@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c4f-2485-9386-ab13" revision="15" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="0" battleScribeVersion="1.15" name="Vampire Covenant" books="Vampire Covenant - v0.10.0 Beta" authorName="Toreador13" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2c4f-2485-9386-ab13" revision="16" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="0" battleScribeVersion="1.15" name="Vampire Covenant" books="Vampire Covenant - v0.10.0 Beta" authorName="Toreador13" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="2eb7-fb68-4747-cd09" name="Altar of Undeath" points="200.0" categoryId="5261726523232344415441232323" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
@@ -388,7 +388,7 @@
         </entry>
         <entry id="ac5f-4b33-4935-8851" name="Mount" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="f7e0-24be-9b7c-e5d3" name="Skeletal Steed" points="25.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="f7e0-24be-9b7c-e5d3" name="Skeletal Steed" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups>
                 <entryGroup id="956e-a470-41e4-e4ff" name="May take one of the following" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -463,21 +463,21 @@
         <entry id="f4e3-a2c4-bf42-478b" name="Unliving Shield" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
-          <modifiers/>
-          <rules>
-            <rule id="ca1b-9bee-e312-e55c" name="Unliving Shield" hidden="false">
-              <description>Close combat attacks allocated against a Necromancer or Necromancer Lords in base to base
-contact with a model with this special rule must instead be allocated at the model with this special rule if it passes a
-Weapon Skill test (determine for each attack separately). This ability cannot be used if the Necromancer,
-Necromancer Lord or the model with this special rule fights in a Challange.
-
-
-*The Unliving Shield option may only be taken in armies without any character model with the Vampiric special rule.</description>
-              <modifiers/>
-            </rule>
-          </rules>
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="ae66-ff87-abcc-412f" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <rules/>
           <profiles/>
-          <links/>
+          <links>
+            <link id="8102-5ed6-ab28-ca2f" targetId="3a9d-1e13-b58f-a4fa" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
         </entry>
         <entry id="ac33-d8fa-d8b8-9bc8" name="Magic Items" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -3779,7 +3779,7 @@ Stage       Wounds caused Bonus
         <link id="ffdc-c9f4-d6d8-55f5" targetId="eeea-cfd1-e63d-8d4c" linkType="rule">
           <modifiers/>
         </link>
-        <link id="9cd1-b2c1-22c5-ff46" targetId="868d-580d-07cf-9ba9" linkType="rule">
+        <link id="9cd1-b2c1-22c5-ff46" targetId="ae66-ff87-abcc-412f" linkType="entry">
           <modifiers/>
         </link>
         <link id="9b91-18ff-3ec6-c6c0" targetId="f743-de9a-5dba-6ab2" linkType="rule">
@@ -4443,6 +4443,9 @@ Stage       Wounds caused Bonus
           <modifiers/>
         </link>
         <link id="d031-81fe-4b4b-bf95" targetId="f223-0181-cb79-cf54" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="3605-270a-5006-846b" targetId="ae66-ff87-abcc-412f" linkType="entry">
           <modifiers/>
         </link>
       </links>
@@ -7204,6 +7207,18 @@ engaged in combat itself, it can instead choose to grant this bonus to a single 
         </link>
       </links>
     </entry>
+    <entry id="ae66-ff87-abcc-412f" name="Vampiric" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="4010-78cf-014a-7f2f" targetId="868d-580d-07cf-9ba9" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
   </sharedEntries>
   <sharedEntryGroups>
     <entryGroup id="ddbd-5c05-ba95-4359" name="Arcane Items" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -8853,6 +8868,12 @@ A unit with both the Unstable and Stubborn special rules halves (Round fractions
     <rule id="0219-bcf9-3c5b-b19d" name="Wizard Conlclave" hidden="false">
       <description>A Champion of a Unit with the Wizard Conclave Special Rule receives +1 Wound in addition to the normal Characteristics increases associated with being a Champion, and are Wizards of the Wizard Level given within brackets. This Champion knows predetermined spells, which are defined within the brackets. For example, a Champion of a Wizard Conclave (level 1, Blue Fire, Pink Fire) would be a level 1 Wizard with two predetermined spells (Blue Fire and Pink Fire). The Champion has a +1 to cast for each 5 models (excluding other Characters) in the Unit above their minimum starting Unit size, up to a maximum of +4 (including the bonus from their Wizard Level).
 </description>
+      <modifiers/>
+    </rule>
+    <rule id="3a9d-1e13-b58f-a4fa" name="Unliving Shield" hidden="false">
+      <description>*The Unliving Shield option may only be taken in armies without any character model with the Vampiric special rule.
+
+Close Combat attacks allocated against a Necromancer or Necromancer Lords in base to base contact with a model with this special rule must instead be allocated at the model with this special rule if it passes a Weapon Skill test (determine for each attack separately). This ability cannot be used if the Necromancer, Necromancer Lord or the model with this special rule fights in a Challenge.</description>
       <modifiers/>
     </rule>
   </sharedRules>
