@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2ba1-7df2-2602-1e80" revision="6" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Undying Dynasties" books="0.11.0" authorName="Bombastian &amp; Smallpox" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2ba1-7df2-2602-1e80" revision="7" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Undying Dynasties" books="0.11.0" authorName="Bombastian &amp; Smallpox" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="76c4d992-3edc-5349-f6a9-4694ba71c0bc" name="Battle Sphinx" points="220.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Undying Dynasties">
       <entries/>
@@ -382,6 +382,124 @@
               <conditionGroups/>
             </modifier>
           </modifiers>
+        </link>
+      </links>
+    </entry>
+    <entry id="e4675e42-099d-59cd-7e36-ce1aecd34602" name="Colossus" points="180.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Undying Dynasties">
+      <entries/>
+      <entryGroups>
+        <entryGroup id="b2228f50-112c-315d-d045-88040b4c1485" name="Weapon" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries>
+            <entry id="45181b07-dec8-ae39-73f0-29e21103db8e" name="Additional Hand Weapon" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="ccf43678-84a6-5493-e228-e848a36618b1" targetId="23c6-64d7-6e57-5806" linkType="profile">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+            <entry id="93431ac7-c00a-c3b6-fbf1-d464b9b13bde" name="Giant Aspen Bow" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="fb8fd24b-3036-e617-24d2-1db525cedb1a" targetId="f7632032-67e4-b6e3-5d65-fccf1939f386" linkType="profile">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+            <entry id="24974625-21dc-8513-837a-bac667036c5d" name="Great Weapon" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="b3cb68a8-7c93-e8ff-fbd6-205dd4760b5a" targetId="edc6-577a-cf86-7260" linkType="profile">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+            <entry id="fc50-ee78-0910-a8ab" name="Scales of Destiny" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="4625-12aa-d6c8-44a9" targetId="bc4d-e104-3a6b-15d6" linkType="profile">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+          </entries>
+          <entryGroups/>
+          <modifiers/>
+          <links/>
+        </entryGroup>
+      </entryGroups>
+      <modifiers>
+        <modifier type="increment" field="maxInRoster" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="no child" field="points limit" type="at least" value="4000.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="no child" field="points limit" type="less than" value="1500.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles>
+        <profile id="76d2996f-6114-fa60-e49f-3f57c4874ce6" profileTypeId="4d6f64656c23232344415441232323" name="Colossus" hidden="false">
+          <characteristics>
+            <characteristic characteristicId="4d23232344415441232323" name="M" value="6"/>
+            <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
+            <characteristic characteristicId="425323232344415441232323" name="BS" value="2"/>
+            <characteristic characteristicId="5323232344415441232323" name="S" value="6"/>
+            <characteristic characteristicId="5423232344415441232323" name="T" value="6"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="5"/>
+            <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
+            <characteristic characteristicId="4123232344415441232323" name="A" value="5"/>
+            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
+            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value=""/>
+            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave" value=""/>
+            <characteristic characteristicId="4d5223232344415441232323" name="MR" value=""/>
+            <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monster"/>
+          </characteristics>
+          <modifiers/>
+        </profile>
+      </profiles>
+      <links>
+        <link id="5095540f-5ea4-4339-a50c-9ab5274efdcd" targetId="59db-842f-01fb-6193" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="c5bd99a9-adc4-b4c0-583e-a490f7ca2e29" targetId="71ec-9b9c-0697-1fb4" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="8dad6b39-7ad1-be93-848b-2c4a1fe81ce8" targetId="a255db08-e195-2459-4dcf-3757c5a879b8" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="b12f2a62-d5a0-1295-b58d-2a959aba0fe5" targetId="fa3bc8b4-2a37-864c-9bf0-4ab6cbc08aa2" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="71df-f309-2bc1-b487" targetId="1336-08d0-fd9a-ca5b" linkType="rule">
+          <modifiers/>
         </link>
       </links>
     </entry>
@@ -913,6 +1031,12 @@
         <modifier type="decrement" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="roster" childId="no child" field="points limit" type="less than" value="1500.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -2004,7 +2128,14 @@
           <modifiers/>
         </link>
         <link id="0c8815ea-1f59-e5cc-979c-3c0006d192a9" targetId="7c438693-8e9c-3129-da34-82bff79b3fc5" linkType="rule">
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
         <link id="5265-ae0a-e0a6-5e5f" targetId="1336-08d0-fd9a-ca5b" linkType="rule">
           <modifiers/>
@@ -2092,7 +2223,14 @@
             </entry>
           </entries>
           <entryGroups/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <links/>
         </entryGroup>
       </entryGroups>
@@ -2141,7 +2279,14 @@
         <entry id="1737f0c2-896c-5ea0-dd29-268edc317ed1" name="Scarab Swarm" points="25.0" categoryId="(No Category)" type="model" minSelections="2" maxSelections="7" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="points" value="15.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <rules/>
           <profiles>
             <profile id="45ea10db-af81-45df-8322-8aaae8acafd9" profileTypeId="4d6f64656c23232344415441232323" name="Scarab Swarm" hidden="false">
@@ -2186,7 +2331,7 @@
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="increment" field="points" value="15.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="points" value="20.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
           </conditions>
@@ -2212,7 +2357,14 @@
           <modifiers/>
         </link>
         <link id="d85e58a1-e5f4-7c53-ae17-ed832eec2b7a" targetId="7c438693-8e9c-3129-da34-82bff79b3fc5" linkType="rule">
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
         <link id="7f02-67a2-93d9-42d5" targetId="fac2-a717-631f-cb4c" linkType="rule">
           <modifiers>
@@ -2389,6 +2541,12 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="decrement" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="c3b4-dd00-1533-39a4" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <rules/>
       <profiles/>
@@ -2412,7 +2570,7 @@
     </entry>
     <entry id="6080695a-8135-e609-21d2-2044336ebbae" name="Skeleton Cavalry" points="10.0" categoryId="436f726523232344415441232323" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="4" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="f55f8a2e-25d9-3a2d-1c3e-3f33c6bced7a" name="Skeleton Cavalry" points="12.0" categoryId="(No Category)" type="upgrade" minSelections="5" maxSelections="20" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="f55f8a2e-25d9-3a2d-1c3e-3f33c6bced7a" name="Skeleton Cavalry" points="11.0" categoryId="(No Category)" type="upgrade" minSelections="5" maxSelections="20" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups>
             <entryGroup id="2c13-7fdc-1de8-034d" name="Armour" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -2666,6 +2824,12 @@
         <modifier type="decrement" field="maxInRoster" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="roster" childId="no child" field="points limit" type="less than" value="1500.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="points" value="10.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -3063,7 +3227,7 @@
         <entry id="e1a8c269-b145-da23-5025-0601fecffda4" name="Skeleton" points="5.0" categoryId="(No Category)" type="model" minSelections="10" maxSelections="50" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups>
-            <entryGroup id="55d4045e-e573-c34e-5826-ee3f60079d5c" name="Close Combat Weapon" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entryGroup id="55d4045e-e573-c34e-5826-ee3f60079d5c" name="Options" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries>
                 <entry id="cb48-6d1a-4a01-8a44" name="Spears" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
                   <entries/>
@@ -3092,26 +3256,25 @@
                   <profiles/>
                   <links/>
                 </entry>
-              </entries>
-              <entryGroups/>
-              <modifiers/>
-              <links/>
-            </entryGroup>
-            <entryGroup id="38fc-76d9-6688-e849" name="Shooting Weapon" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries>
-                <entry id="bf89-e98f-9b9e-5119" name="Exchange shields for Aspen Bow" points="1.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
+                <entry id="55f2-6897-729e-32cf" name="Exchange shields for Aspen Bow" points="1.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
                   <entries/>
                   <entryGroups/>
                   <modifiers/>
                   <rules/>
                   <profiles/>
                   <links>
-                    <link id="e914-5dfc-f504-fb2a" targetId="b719-33aa-a066-85b6" linkType="profile">
+                    <link id="3687-35e6-3da2-de1d" targetId="b719-33aa-a066-85b6" linkType="profile">
                       <modifiers/>
                     </link>
                   </links>
                 </entry>
               </entries>
+              <entryGroups/>
+              <modifiers/>
+              <links/>
+            </entryGroup>
+            <entryGroup id="38fc-76d9-6688-e849" name="Shooting Weapon" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
               <entryGroups/>
               <modifiers/>
               <links/>
@@ -3250,6 +3413,18 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <rules/>
       <profiles/>
@@ -3274,7 +3449,7 @@
           <modifiers>
             <modifier type="hide" field="None" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
-                <condition parentId="02ac28dd-51a8-7ff8-5b4c-8c7bc5ef94eb" childId="bf89-e98f-9b9e-5119" field="selections" type="at least" value="1.0"/>
+                <condition parentId="02ac28dd-51a8-7ff8-5b4c-8c7bc5ef94eb" childId="55f2-6897-729e-32cf" field="selections" type="at least" value="1.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -4070,124 +4245,6 @@
         </link>
       </links>
     </entry>
-    <entry id="e4675e42-099d-59cd-7e36-ce1aecd34602" name="Colossus" points="180.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Undying Dynasties">
-      <entries/>
-      <entryGroups>
-        <entryGroup id="b2228f50-112c-315d-d045-88040b4c1485" name="Weapon" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries>
-            <entry id="45181b07-dec8-ae39-73f0-29e21103db8e" name="Additional Hand Weapon" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules/>
-              <profiles/>
-              <links>
-                <link id="ccf43678-84a6-5493-e228-e848a36618b1" targetId="23c6-64d7-6e57-5806" linkType="profile">
-                  <modifiers/>
-                </link>
-              </links>
-            </entry>
-            <entry id="93431ac7-c00a-c3b6-fbf1-d464b9b13bde" name="Giant Aspen Bow" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules/>
-              <profiles/>
-              <links>
-                <link id="fb8fd24b-3036-e617-24d2-1db525cedb1a" targetId="f7632032-67e4-b6e3-5d65-fccf1939f386" linkType="profile">
-                  <modifiers/>
-                </link>
-              </links>
-            </entry>
-            <entry id="24974625-21dc-8513-837a-bac667036c5d" name="Great Weapon" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules/>
-              <profiles/>
-              <links>
-                <link id="b3cb68a8-7c93-e8ff-fbd6-205dd4760b5a" targetId="edc6-577a-cf86-7260" linkType="profile">
-                  <modifiers/>
-                </link>
-              </links>
-            </entry>
-            <entry id="fc50-ee78-0910-a8ab" name="Scales of Destiny" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups/>
-              <modifiers/>
-              <rules/>
-              <profiles/>
-              <links>
-                <link id="4625-12aa-d6c8-44a9" targetId="bc4d-e104-3a6b-15d6" linkType="profile">
-                  <modifiers/>
-                </link>
-              </links>
-            </entry>
-          </entries>
-          <entryGroups/>
-          <modifiers/>
-          <links/>
-        </entryGroup>
-      </entryGroups>
-      <modifiers>
-        <modifier type="increment" field="maxInRoster" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="roster" childId="no child" field="points limit" type="at least" value="4000.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="roster" childId="no child" field="points limit" type="less than" value="1500.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <rules/>
-      <profiles>
-        <profile id="76d2996f-6114-fa60-e49f-3f57c4874ce6" profileTypeId="4d6f64656c23232344415441232323" name="Colossus" hidden="false">
-          <characteristics>
-            <characteristic characteristicId="4d23232344415441232323" name="M" value="6"/>
-            <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
-            <characteristic characteristicId="425323232344415441232323" name="BS" value="2"/>
-            <characteristic characteristicId="5323232344415441232323" name="S" value="6"/>
-            <characteristic characteristicId="5423232344415441232323" name="T" value="6"/>
-            <characteristic characteristicId="5723232344415441232323" name="W" value="5"/>
-            <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
-            <characteristic characteristicId="4123232344415441232323" name="A" value="5"/>
-            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
-            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value=""/>
-            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave" value=""/>
-            <characteristic characteristicId="4d5223232344415441232323" name="MR" value=""/>
-            <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monster"/>
-          </characteristics>
-          <modifiers/>
-        </profile>
-      </profiles>
-      <links>
-        <link id="5095540f-5ea4-4339-a50c-9ab5274efdcd" targetId="59db-842f-01fb-6193" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="c5bd99a9-adc4-b4c0-583e-a490f7ca2e29" targetId="71ec-9b9c-0697-1fb4" linkType="profile">
-          <modifiers/>
-        </link>
-        <link id="8dad6b39-7ad1-be93-848b-2c4a1fe81ce8" targetId="a255db08-e195-2459-4dcf-3757c5a879b8" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="b12f2a62-d5a0-1295-b58d-2a959aba0fe5" targetId="fa3bc8b4-2a37-864c-9bf0-4ab6cbc08aa2" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="71df-f309-2bc1-b487" targetId="1336-08d0-fd9a-ca5b" linkType="rule">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
     <entry id="6f9e3f5a-0b2f-50a7-28b0-ffbc435af64b" name="Winged Reapers" points="10.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Undying Dynasties">
       <entries>
         <entry id="c28b8dfe-2029-51b1-1c84-1b4f6c7c43b8" name="Winged Reaper" points="75.0" categoryId="(No Category)" type="model" minSelections="2" maxSelections="5" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -4323,10 +4380,183 @@
         </link>
       </links>
     </entry>
+    <entry id="e1ca-68f6-1225-5907" name="Shabtis" points="0.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true" book="Undying Dynasties">
+      <entries>
+        <entry id="54b8-06b6-2f38-c03c" name="Shabti" points="40.0" categoryId="(No Category)" type="model" minSelections="3" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups>
+            <entryGroup id="c35b-df50-2dbc-a22b" name="Weapons" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries>
+                <entry id="a878-7ea0-099c-1bd9" name="Halberd" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
+                  <entries/>
+                  <entryGroups/>
+                  <modifiers/>
+                  <rules/>
+                  <profiles/>
+                  <links>
+                    <link id="47df-c21c-f9db-502a" targetId="63b0-c22b-fa89-cc59" linkType="profile">
+                      <modifiers/>
+                    </link>
+                  </links>
+                </entry>
+                <entry id="5085-60f1-8e37-7f5c" name="Additional Hand Weapon" points="3.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false" book="">
+                  <entries/>
+                  <entryGroups/>
+                  <modifiers/>
+                  <rules/>
+                  <profiles/>
+                  <links>
+                    <link id="df56-7804-8110-9567" targetId="23c6-64d7-6e57-5806" linkType="profile">
+                      <modifiers/>
+                    </link>
+                  </links>
+                </entry>
+                <entry id="e109-ad47-a73b-7093" name="Great Aspen Bow" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
+                  <entries/>
+                  <entryGroups/>
+                  <modifiers/>
+                  <rules/>
+                  <profiles/>
+                  <links>
+                    <link id="95ac-7b58-f7fb-fc88" targetId="a37bc50e-80c3-7a48-77af-86492d162bf2" linkType="profile">
+                      <modifiers/>
+                    </link>
+                  </links>
+                </entry>
+              </entries>
+              <entryGroups/>
+              <modifiers/>
+              <links/>
+            </entryGroup>
+          </entryGroups>
+          <modifiers/>
+          <rules/>
+          <profiles>
+            <profile id="3df5-b8bb-09ff-e868" profileTypeId="4d6f64656c23232344415441232323" name="Shabti" hidden="false">
+              <characteristics>
+                <characteristic characteristicId="4d23232344415441232323" name="M" value="6"/>
+                <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
+                <characteristic characteristicId="425323232344415441232323" name="BS" value="2"/>
+                <characteristic characteristicId="5323232344415441232323" name="S" value="5"/>
+                <characteristic characteristicId="5423232344415441232323" name="T" value="4"/>
+                <characteristic characteristicId="5723232344415441232323" name="W" value="3"/>
+                <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
+                <characteristic characteristicId="4123232344415441232323" name="A" value="3"/>
+                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
+                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+                <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monstrous Infantry"/>
+              </characteristics>
+              <modifiers/>
+            </profile>
+          </profiles>
+          <links/>
+        </entry>
+      </entries>
+      <entryGroups>
+        <entryGroup id="9756-9b48-5fbb-683f" name="Command Group" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries>
+            <entry id="cc6b-9aab-9380-0f83" name="Champion" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles>
+                <profile id="61f1-5a99-9327-5c15" profileTypeId="4d6f64656c23232344415441232323" name="Champion" hidden="false">
+                  <characteristics>
+                    <characteristic characteristicId="4d23232344415441232323" name="M" value="6"/>
+                    <characteristic characteristicId="575323232344415441232323" name="WS" value="5"/>
+                    <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
+                    <characteristic characteristicId="5323232344415441232323" name="S" value="5"/>
+                    <characteristic characteristicId="5423232344415441232323" name="T" value="4"/>
+                    <characteristic characteristicId="5723232344415441232323" name="W" value="3"/>
+                    <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
+                    <characteristic characteristicId="4123232344415441232323" name="A" value="4"/>
+                    <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
+                    <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+                    <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+                    <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+                    <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Infantry"/>
+                  </characteristics>
+                  <modifiers/>
+                </profile>
+              </profiles>
+              <links/>
+            </entry>
+            <entry id="a121-80c6-296f-3aca" name="Musician" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links/>
+            </entry>
+            <entry id="35a8-41e7-a9b7-68ff" name="Standard Bearer" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers/>
+              <rules/>
+              <profiles/>
+              <links>
+                <link id="832b-de72-9e53-9db5" targetId="12fa-d737-f405-0cc5" linkType="entry group">
+                  <modifiers/>
+                </link>
+              </links>
+            </entry>
+          </entries>
+          <entryGroups/>
+          <modifiers/>
+          <links/>
+        </entryGroup>
+      </entryGroups>
+      <modifiers>
+        <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="c3b4-dd00-1533-39a4" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="6b69-f9ad-5c2e-60da" targetId="59db-842f-01fb-6193" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="5dd0-0df5-ac78-34aa" targetId="fcf4-8cc8-a2ce-fe3c" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="0b36-869a-c066-841d" targetId="71ec-9b9c-0697-1fb4" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="a755-a405-189b-bdc4" targetId="a255db08-e195-2459-4dcf-3757c5a879b8" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="5d18-10ec-42d5-3551" targetId="1336-08d0-fd9a-ca5b" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
   </entries>
   <rules/>
   <links/>
   <sharedEntries>
+    <entry id="c3b4-dd00-1533-39a4" name="Achitect General" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="d238-3f0b-c062-5a52" targetId="f95a-33a9-b83e-290d" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="98d2-bda5-b39e-72f8" targetId="7bb7-39cc-9943-14d4" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
     <entry id="38e9-7af9-f36b-6a3c" name="Amuut" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Undying Dynasties">
       <entries/>
       <entryGroups/>
@@ -4620,6 +4850,23 @@
         </link>
       </links>
     </entry>
+    <entry id="aa9d-3e55-f22f-0895" name="Commander of the Terracotta Army" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules>
+        <rule id="8a7f-cf97-e30c-7a47" name="Commander of the Terracotta Army" hidden="false">
+          <description>• Skeletons, Skeleton Cavalry, and Necropolis Guard must be upgraded with +1 Toughness, -1 Initiative and Undead Construct special rule for +3 pts/model
+• All other non Undead Construct units (including characters) must be upgraded with +1 Toughness, -1 Initiative and Undead Construct special rule for +15 pts/model.
+• All models reduce their Risen characteristic to 1.
+• The Underground Ambush and Free Reform special rule can not be used by any unit in the army.
+• Great Vultures, Scarab Swarm and Winged Reapers may not be taken in the army.</description>
+          <modifiers/>
+        </rule>
+      </rules>
+      <profiles/>
+      <links/>
+    </entry>
     <entry id="f95a-33a9-b83e-290d" name="General" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="1" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
@@ -4651,6 +4898,25 @@
         <rule id="5d53-e68b-4945-528d" name="Honoured Company" hidden="false">
           <description>For each model with this Special Rule one Core unit in the army may take a magic standard worth up to 25 points. If the chosen unit can already take a magic standard the limit is increased to 50 points.
 </description>
+          <modifiers/>
+        </rule>
+      </rules>
+      <profiles/>
+      <links/>
+    </entry>
+    <entry id="691e-8ab0-cd56-ea61" name="Lord of the Barrow Legion" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules>
+        <rule id="34ff-81c2-c797-cd30" name="Lord of the Barrow Legion" hidden="false">
+          <description>• Skeletons must take Heavy Armour for +2 pts/model; may take Halberds +2 pts/model
+• Skeletons must take Heavy Armour for +2 pts/model; may exchange Spears for Halberds +2 pts/model
+• Scarab Swarm must take with the Ethereal special rule for +15 pts/model
+• Necropolis Guard must be upgraded with Heavy Ar- mour for +2 pts/model;
+• Skeleton Cavalry may take Lance for +3 pts/model; may take Heavy Armour for +3 pts/model
+• Models with Large Target and Monstrous Cavalry may not be taken in the army. Underground Ambush and Scout Special Rules may not be used by any unit in the army. Units with Heavy Armour cannot use Free Reform Special Rule
+• Ethereal models reduce their Risen characteristic to 1</description>
           <modifiers/>
         </rule>
       </rules>
@@ -4801,57 +5067,6 @@ Units suffer 1 less Wound than they normally would due to the Unstable and Ashes
           <modifiers/>
         </link>
         <link id="2e3e-a648-1f9a-58ed" targetId="aa34-7623-dc18-5bcc" linkType="rule">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
-    <entry id="aa9d-3e55-f22f-0895" name="Commander of the Terracotta Army" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-      <entries/>
-      <entryGroups/>
-      <modifiers/>
-      <rules>
-        <rule id="8a7f-cf97-e30c-7a47" name="Commander of the Terracotta Army" hidden="false">
-          <description>• Skeletons, Skeleton Cavalry, and Necropolis Guard must be upgraded with +1 Toughness, -1 Initiative and Undead Construct special rule for +3 pts/model
-• All other non Undead Construct units (including characters) must be upgraded with +1 Toughness, -1 Initiative and Undead Construct special rule for +15 pts/model.
-• All models reduce their Risen characteristic to 1.
-• The Underground Ambush and Free Reform special rule can not be used by any unit in the army.
-• Great Vultures, Scarab Swarm and Winged Reapers may not be taken in the army.</description>
-          <modifiers/>
-        </rule>
-      </rules>
-      <profiles/>
-      <links/>
-    </entry>
-    <entry id="691e-8ab0-cd56-ea61" name="Lord of the Barrow Legion" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-      <entries/>
-      <entryGroups/>
-      <modifiers/>
-      <rules>
-        <rule id="34ff-81c2-c797-cd30" name="Lord of the Barrow Legion" hidden="false">
-          <description>• Skeletons must take Heavy Armour for +2 pts/model; may take Halberds +2 pts/model
-• Skeletons must take Heavy Armour for +2 pts/model; may exchange Spears for Halberds +2 pts/model
-• Scarab Swarm must take with the Ethereal special rule for +15 pts/model
-• Necropolis Guard must be upgraded with Heavy Ar- mour for +2 pts/model;
-• Skeleton Cavalry may take Lance for +3 pts/model; may take Heavy Armour for +3 pts/model
-• Models with Large Target and Monstrous Cavalry may not be taken in the army. Underground Ambush and Scout Special Rules may not be used by any unit in the army. Units with Heavy Armour cannot use Free Reform Special Rule
-• Ethereal models reduce their Risen characteristic to 1</description>
-          <modifiers/>
-        </rule>
-      </rules>
-      <profiles/>
-      <links/>
-    </entry>
-    <entry id="c3b4-dd00-1533-39a4" name="Achitect General" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-      <entries/>
-      <entryGroups/>
-      <modifiers/>
-      <rules/>
-      <profiles/>
-      <links>
-        <link id="d238-3f0b-c062-5a52" targetId="f95a-33a9-b83e-290d" linkType="entry">
-          <modifiers/>
-        </link>
-        <link id="98d2-bda5-b39e-72f8" targetId="7bb7-39cc-9943-14d4" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -6186,8 +6401,7 @@ Units suffer 1 less Wound than they normally would due to the Unstable and Ashes
             <profile id="88f9cb3b-1a33-8c71-8a14-cb90a394773d" profileTypeId="41726d6f757223232344415441232323" name="UD - Crown of the Paraohs" hidden="false">
               <characteristics>
                 <characteristic characteristicId="536176696e67205468726f77206d6f64696669657223232344415441232323" name="Saving Throw modifier" value="+6"/>
-                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="The wearer may use his Undying Will special rule on a single friendly unit within 6”. If a character is engaged in close combat, it may only choose to confer its unmodified WS to one friendly Undead unit engaged with the same enemy unit as the Character. In addition, the player may choose to use the Undying Will special rule in the shooting phase by bestowing his unmodified BS instead of his WS.
-The Undying Will special rule may be used only in a single phase of each turn. A wearer mounted on a mount with the Large Target rule adds 6” to the item’s range."/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="The wearer may use his Undying Will special rule on a single friendly unit within 6”. If a character is engaged in close combat, it may only choose to confer its unmodified WS to one friendly Undead unit engaged with the same enemy unit as the Character. In addition, the player may choose to use the Undying Will special rule in the shooting phase by bestowing his unmodified BS instead of his WS. The Undying Will special rule may be used only in a single phase of each turn. A wearer mounted on a mount with the Large Target rule adds 6” to the item’s range."/>
                 <characteristic characteristicId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" name="Type" value="None"/>
               </characteristics>
               <modifiers/>
@@ -6280,8 +6494,7 @@ The Undying Will special rule may be used only in a single phase of each turn. A
           <profiles>
             <profile id="5397-5ca9-7abb-e320" profileTypeId="4d61676963205374616e6461726423232344415441232323" name="Icon of the Relentless Company" hidden="false">
               <characteristics>
-                <characteristic characteristicId="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emination" value="- Infantry models only
-One use only. Activate at the start of any of your Remaining Moves sub-phases. The bearer&apos;s unit can triple its Movement when Marching instead of doubling it this turn. This cannot be made longer than up to a maximum of 15” a​nd cannot be used on turn 1 if the unit has used Vanguard or Scout.​"/>
+                <characteristic characteristicId="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emination" value="- Infantry models only One use only. Activate at the start of any of your Remaining Moves sub-phases. The bearer&apos;s unit can triple its Movement when Marching instead of doubling it this turn. This cannot be made longer than up to a maximum of 15” a​nd cannot be used on turn 1 if the unit has used Vanguard or Scout.​"/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -6458,8 +6671,7 @@ One use only. Activate at the start of any of your Remaining Moves sub-phases. T
           <profiles>
             <profile id="4d57-9d86-d5e9-98f0" profileTypeId="4d61676963205374616e6461726423232344415441232323" name="Icon of the Relentless Company" hidden="false">
               <characteristics>
-                <characteristic characteristicId="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emination" value="- Infantry models only
-One use only. Activate at the start of any of your Remaining Moves sub-phases. The bearer&apos;s unit can triple its Movement when Marching instead of doubling it this turn. This cannot be made longer than up to a maximum of 15” a​nd cannot be used on turn 1 if the unit has used Vanguard or Scout.​"/>
+                <characteristic characteristicId="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emination" value="- Infantry models only One use only. Activate at the start of any of your Remaining Moves sub-phases. The bearer&apos;s unit can triple its Movement when Marching instead of doubling it this turn. This cannot be made longer than up to a maximum of 15” a​nd cannot be used on turn 1 if the unit has used Vanguard or Scout.​"/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -6591,8 +6803,7 @@ One use only. Activate at the start of any of your Remaining Moves sub-phases. T
           <profiles>
             <profile id="f091-2d95-a6ae-848d" profileTypeId="4d61676963205374616e6461726423232344415441232323" name="Icon of the Relentless Company" hidden="false">
               <characteristics>
-                <characteristic characteristicId="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emination" value="- Infantry models only
-One use only. Activate at the start of any of your Remaining Moves sub-phases. The bearer&apos;s unit can triple its Movement when Marching instead of doubling it this turn. This cannot be made longer than up to a maximum of 15” a​nd cannot be used on turn 1 if the unit has used Vanguard or Scout.​"/>
+                <characteristic characteristicId="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emination" value="- Infantry models only One use only. Activate at the start of any of your Remaining Moves sub-phases. The bearer&apos;s unit can triple its Movement when Marching instead of doubling it this turn. This cannot be made longer than up to a maximum of 15” a​nd cannot be used on turn 1 if the unit has used Vanguard or Scout.​"/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -7295,11 +7506,7 @@ One use only. Activate at the start of any of your Remaining Moves sub-phases. T
               <characteristics>
                 <characteristic characteristicId="52616e676523232344415441232323" name="Range" value="Close Combat"/>
                 <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="+1"/>
-                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Models on foot only. The Weapon has two modes of attack, Focused Strike and Sweeping Strike. Choose at the beginning of each combat round which mode is used.
-
-Focused Strike: Attacks in this mode have Multiple Wounds (D3) and Lethal Strike Special Rules.
-
-Sweeping Strike: All of the model’s attacks are exchanged for: each enemy model in base to base contact with the wielder suffers an automatic hit. Models which could make a supporting attack against the wielder suffer a hit on 4+. These hits have the Lethal Strike Special Rule."/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Models on foot only. The Weapon has two modes of attack, Focused Strike and Sweeping Strike. Choose at the beginning of each combat round which mode is used.  Focused Strike: Attacks in this mode have Multiple Wounds (D3) and Lethal Strike Special Rules.  Sweeping Strike: All of the model’s attacks are exchanged for: each enemy model in base to base contact with the wielder suffers an automatic hit. Models which could make a supporting attack against the wielder suffer a hit on 4+. These hits have the Lethal Strike Special Rule."/>
                 <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Halberd"/>
               </characteristics>
               <modifiers/>
@@ -7329,6 +7536,26 @@ Sweeping Strike: All of the model’s attacks are exchanged for: each enemy mode
       <entryGroups/>
       <modifiers/>
       <links/>
+    </entryGroup>
+    <entryGroup id="51de-f1c1-ae0e-13ef" name="Monarchs of Undeath" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+      <entries/>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="direct parent" childId="f95a-33a9-b83e-290d" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <links>
+        <link id="978f-422c-f579-74b2" targetId="aa9d-3e55-f22f-0895" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="0033-bc15-74a3-d259" targetId="691e-8ab0-cd56-ea61" linkType="entry">
+          <modifiers/>
+        </link>
+      </links>
     </entryGroup>
     <entryGroup id="03d3-090d-454e-6407" name="Talismans" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
@@ -7505,26 +7732,6 @@ Sweeping Strike: All of the model’s attacks are exchanged for: each enemy mode
       <modifiers/>
       <links/>
     </entryGroup>
-    <entryGroup id="51de-f1c1-ae0e-13ef" name="Monarchs of Undeath" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
-      <entries/>
-      <entryGroups/>
-      <modifiers>
-        <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="direct parent" childId="f95a-33a9-b83e-290d" field="selections" type="equal to" value="1.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <links>
-        <link id="978f-422c-f579-74b2" targetId="aa9d-3e55-f22f-0895" linkType="entry">
-          <modifiers/>
-        </link>
-        <link id="0033-bc15-74a3-d259" targetId="691e-8ab0-cd56-ea61" linkType="entry">
-          <modifiers/>
-        </link>
-      </links>
-    </entryGroup>
   </sharedEntryGroups>
   <sharedRules>
     <rule id="04c8-0f99-fabf-98a7" name="Ambush" hidden="false">
@@ -7620,6 +7827,14 @@ Never benefit from any Equipment or Special Rules the model perfoming the attack
     </rule>
     <rule id="7183-ab86-5b85-02f5" name="Devastating Charge (Knight only)" hidden="false" book="">
       <description>+1 Attack in the first round of combat after charging.</description>
+      <modifiers/>
+    </rule>
+    <rule id="dca6-de75-ca45-c211" name="Divine Attacks" hidden="false">
+      <description>Successful Ward Saves taken against attacks with this Special Rule or against Close Combat attacks made by parts of models with this Special Rule must be rerolled.</description>
+      <modifiers/>
+    </rule>
+    <rule id="fa11-06ff-5281-65cf" name="Divine Attacks (Rider only)" hidden="false">
+      <description>Successful Ward Saves taken against attacks with this Special Rule or against Close Combat attacks made by parts of models with this Special Rule must be rerolled.</description>
       <modifiers/>
     </rule>
     <rule id="3fde-472b-f804-b467" name="Divine Reservoir" hidden="false" book="Undying Dynasties">
@@ -7754,14 +7969,6 @@ may only use one of these rule in the same combat phase. </description>
     <rule id="b64c-e049-0ae0-3671" name="Hidden" hidden="false">
       <modifiers/>
     </rule>
-    <rule id="dca6-de75-ca45-c211" name="Divine Attacks" hidden="false">
-      <description>Successful Ward Saves taken against attacks with this Special Rule or against Close Combat attacks made by parts of models with this Special Rule must be rerolled.</description>
-      <modifiers/>
-    </rule>
-    <rule id="fa11-06ff-5281-65cf" name="Divine Attacks (Rider only)" hidden="false">
-      <description>Successful Ward Saves taken against attacks with this Special Rule or against Close Combat attacks made by parts of models with this Special Rule must be rerolled.</description>
-      <modifiers/>
-    </rule>
     <rule id="e776-1f75-54c3-08c0" name="Immune to Psychology" hidden="false">
       <description>If half or more of a Unit&apos;s models are Immune to Psychology, the Unit automatically passes Panic tests and cannot declare a Flee reaction (unless already Fleeing). Models that are Immune to Psychology are also immune to the effects of Fear.</description>
       <modifiers/>
@@ -7882,6 +8089,10 @@ If a multipart model has this rule, then the rule is only applied to the part of
     </rule>
     <rule id="4d91-b0ef-7b35-c9e2" name="Magical Attacks (Rider only)" hidden="false">
       <description>Attacks with this Special Rule or Attacks made by parts of models with this Special Rule don&apos;t normally have any special effect. However they interact with other rules (such as Ethereal). Part of Models with this Special Rule apply it to all its attacks, including Stomps, Impact Hits and Breath Attacks (unless otherwise stated). All damage from Spells, Miscast hits and Magic Items cause Magical Attacks.</description>
+      <modifiers/>
+    </rule>
+    <rule id="7bb7-39cc-9943-14d4" name="Mason’s Menagerie" hidden="false">
+      <description>If a Tomb Architect is your army General one unit of Shabties may be taken as a Core rather than a Special choice.</description>
       <modifiers/>
     </rule>
     <rule id="6103-eef4-d694-448f" name="Master Mason" hidden="false">
@@ -8287,10 +8498,6 @@ If a skirmishing Unit declares a charge, or a charge reaction other than flee, t
       <modifiers/>
     </rule>
     <rule id="78f5-0d90-6f80-3ff8" name="Wizard Conclave (Level 2: Soul Blight, Bolt of Darkness)" hidden="false">
-      <modifiers/>
-    </rule>
-    <rule id="7bb7-39cc-9943-14d4" name="Mason’s Menagerie" hidden="false">
-      <description>If a Tomb Architect is your army General one unit of Shabties may be taken as a Core rather than a Special choice.</description>
       <modifiers/>
     </rule>
   </sharedRules>
@@ -8720,6 +8927,15 @@ If a skirmishing Unit declares a charge, or a charge reaction other than flee, t
       </characteristics>
       <modifiers/>
     </profile>
+    <profile id="bc4d-e104-3a6b-15d6" profileTypeId="576561706f6e23232344415441232323" name="Scales of Destiny" hidden="false">
+      <characteristics>
+        <characteristic characteristicId="52616e676523232344415441232323" name="Range" value="Close Combat"/>
+        <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="As Wielder"/>
+        <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="-1 Attack in Close Combat. The Colossus has two Bound Spells: Burning Brightness (Power Level 4) and Touch of the Reaper (Power Level 4)."/>
+        <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Hand Weapon"/>
+      </characteristics>
+      <modifiers/>
+    </profile>
     <profile id="0f8e-229b-bd7c-4928" profileTypeId="41726d6f757223232344415441232323" name="Shield" hidden="false">
       <characteristics>
         <characteristic characteristicId="536176696e67205468726f77206d6f64696669657223232344415441232323" name="Saving Throw modifier" value="+1"/>
@@ -8860,15 +9076,6 @@ If a skirmishing Unit declares a charge, or a charge reaction other than flee, t
         <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength"/>
         <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules"/>
         <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type"/>
-      </characteristics>
-      <modifiers/>
-    </profile>
-    <profile id="bc4d-e104-3a6b-15d6" profileTypeId="576561706f6e23232344415441232323" name="Scales of Destiny" hidden="false">
-      <characteristics>
-        <characteristic characteristicId="52616e676523232344415441232323" name="Range" value="Close Combat"/>
-        <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="As Wielder"/>
-        <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="-1 Attack in Close Combat. The Colossus has two Bound Spells: Burning Brightness (Power Level 4) and Touch of the Reaper (Power Level 4)."/>
-        <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Hand Weapon"/>
       </characteristics>
       <modifiers/>
     </profile>
