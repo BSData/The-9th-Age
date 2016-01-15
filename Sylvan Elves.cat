@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6c38-38de-1739-441a" revision="18" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Sylvan Elves" books="v0.11.1" authorName="Bombastian" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6c38-38de-1739-441a" revision="19" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="10" battleScribeVersion="1.15" name="Sylvan Elves" books="v0.11.1" authorName="Bombastian" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="809d-5db9-ae9c-1313" name="Blade Dancers" points="0.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
@@ -299,6 +299,16 @@
                 <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
                     <condition parentId="4364-31b9-3542-1af0" childId="6d11-1ed6-f77b-28a3" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+            <link id="7f6f-aa32-7dc5-afb5" targetId="09ae-a50b-12ef-4ee5" linkType="entry group">
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="direct parent" childId="efcc-62ea-7995-f9b7" field="selections" type="equal to" value="0.0"/>
                   </conditions>
                   <conditionGroups/>
                 </modifier>
@@ -1539,6 +1549,22 @@
             </link>
             <link id="77d9-f6a6-14e8-5064" targetId="e348-d7b3-a4d3-c4a1" linkType="entry group">
               <modifiers/>
+            </link>
+            <link id="b642-6b5f-d6e7-94da" targetId="750a-48f7-1dc8-9022" linkType="entry group">
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="direct parent" childId="efcc-62ea-7995-f9b7" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="96aa-c91a-cc66-60a4" childId="efcc-62ea-7995-f9b7" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
           </links>
         </entryGroup>
@@ -3292,7 +3318,7 @@
       </modifiers>
       <rules/>
       <profiles>
-        <profile id="7511-e48e-8741-e144" profileTypeId="4d6f64656c23232344415441232323" name="Treefolk Elder" hidden="false">
+        <profile id="7511-e48e-8741-e144" profileTypeId="4d6f64656c23232344415441232323" name="Thicket Shepherd" hidden="false">
           <characteristics>
             <characteristic characteristicId="4d23232344415441232323" name="M" value="5"/>
             <characteristic characteristicId="575323232344415441232323" name="WS" value="5"/>
@@ -4349,6 +4375,21 @@ All Dryads and Thicket Beasts units may upgrade a model to a standard bearer and
         </link>
       </links>
     </entry>
+    <entry id="efcc-62ea-7995-f9b7" name="Wizard&apos;s Hood" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+      <entries/>
+      <entryGroups/>
+      <modifiers/>
+      <rules/>
+      <profiles>
+        <profile id="2624-7507-6572-b570" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="Wizard&apos;s Hood" hidden="false">
+          <characteristics>
+            <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="The wearer has Stupidity. If the wearer didn&apos;t have any Wizard Levels, it becomes a Level 1 Wizard. Instead of selecting a Path as usual, the wearer uses a randomly chosen Battle Magic Path at the start of each battle. "/>
+          </characteristics>
+          <modifiers/>
+        </profile>
+      </profiles>
+      <links/>
+    </entry>
   </sharedEntries>
   <sharedEntryGroups>
     <entryGroup id="09ae-a50b-12ef-4ee5" name="Arcane Items (Heroes)" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -4741,21 +4782,6 @@ All Dryads and Thicket Beasts units may upgrade a model to a standard bearer and
     </entryGroup>
     <entryGroup id="b4f5-1cd5-486e-b846" name="Enchanted Items" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="af78-408b-e142-0ffd" name="Wizard&apos;s Hood" points="45.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers/>
-          <rules/>
-          <profiles>
-            <profile id="c6a3-adf4-a0c0-862a" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="Wizard&apos;s Hood" hidden="false">
-              <characteristics>
-                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="The wearer has Stupidity. If the wearer didn&apos;t have any Wizard Levels, it becomes a Level 1 Wizard. Instead of selecting a Path as usual, the wearer uses a randomly chosen Battle Magic Path at the start of each battle. "/>
-              </characteristics>
-              <modifiers/>
-            </profile>
-          </profiles>
-          <links/>
-        </entry>
         <entry id="aab5-5edb-f8e6-7c2b" name="Crystal Ball" points="35.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
@@ -4972,6 +4998,18 @@ All Dryads and Thicket Beasts units may upgrade a model to a standard bearer and
             </profile>
           </profiles>
           <links/>
+        </entry>
+        <entry id="67a9-e0f3-c1c3-f0c9" name="Wizard&apos;s Hood" points="45.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="e60d-e0ee-f374-7309" targetId="efcc-62ea-7995-f9b7" linkType="entry">
+              <modifiers/>
+            </link>
+          </links>
         </entry>
       </entries>
       <entryGroups/>
@@ -7126,6 +7164,24 @@ All Dryads and Thicket Beasts units may upgrade a model to a standard bearer and
                 <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="4"/>
                 <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Multiple Shots (4), Armour Piercing (1), always hits on 4+. "/>
                 <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Shooting Weapon"/>
+              </characteristics>
+              <modifiers/>
+            </profile>
+          </profiles>
+          <links/>
+        </entry>
+        <entry id="2e27-85d8-8552-70ac" name="Blade of Strife" points="45.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="9th Age 0.11.0" page="102">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles>
+            <profile id="3b5a-9708-fb82-9c72" profileTypeId="576561706f6e23232344415441232323" name="Blade of Strife" hidden="false" book="9th Age 0.11.0" page="102">
+              <characteristics>
+                <characteristic characteristicId="52616e676523232344415441232323" name="Range" value="Close Combat"/>
+                <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="As user"/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="The wielder has +3 Attacks."/>
+                <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Magical Hand Weapon"/>
               </characteristics>
               <modifiers/>
             </profile>
