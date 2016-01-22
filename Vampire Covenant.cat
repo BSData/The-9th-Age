@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c4f-2485-9386-ab13" revision="20" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="0" battleScribeVersion="1.15" name="Vampire Covenant" books="Vampire Covenant - v0.11.0 Beta" authorName="Toreador13" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2c4f-2485-9386-ab13" revision="21" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="0" battleScribeVersion="1.15" name="Vampire Covenant" books="Vampire Covenant - v0.11.0 Beta" authorName="Toreador13" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="2eb7-fb68-4747-cd09" name="Altar of Undeath" points="200.0" categoryId="5261726523232344415441232323" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
@@ -653,7 +653,7 @@
     </entry>
     <entry id="4d5c-40d1-b305-b8cc" name="Barrow Knights" points="0.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="a999-8852-e341-ead6" name="Barrow Knight" points="24.0" categoryId="(No Category)" type="upgrade" minSelections="5" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="a999-8852-e341-ead6" name="Barrow Knight" points="24.0" categoryId="(No Category)" type="upgrade" minSelections="5" maxSelections="15" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -1326,7 +1326,7 @@
         <link id="d2d7-4fc6-f916-e77f" targetId="868d-580d-07cf-9ba9" linkType="rule">
           <modifiers/>
         </link>
-        <link id="ded4-3135-1ff2-1c16" targetId="8503-af4e-82f7-942f" linkType="rule">
+        <link id="ded4-3135-1ff2-1c16" targetId="868d-580d-07cf-9ba9" linkType="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (6+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
@@ -3530,16 +3530,7 @@ Stage       Wounds caused Bonus
               <conditionGroups/>
             </modifier>
           </modifiers>
-          <links>
-            <link id="b6b0-594c-39c3-9e11" targetId="8503-af4e-82f7-942f" linkType="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="(6+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </link>
-          </links>
+          <links/>
         </entryGroup>
         <entryGroup id="e516-b88e-b1ad-32e5" name="Armour" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
@@ -3835,7 +3826,12 @@ Stage       Wounds caused Bonus
           <modifiers/>
         </link>
         <link id="9cd1-b2c1-22c5-ff46" targetId="ae66-ff87-abcc-412f" linkType="entry">
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
         <link id="9b91-18ff-3ec6-c6c0" targetId="f743-de9a-5dba-6ab2" linkType="rule">
           <modifiers/>
@@ -4489,7 +4485,7 @@ Stage       Wounds caused Bonus
             </modifier>
           </modifiers>
         </link>
-        <link id="63c4-b1c0-55e9-cb1c" targetId="8503-af4e-82f7-942f" linkType="rule">
+        <link id="63c4-b1c0-55e9-cb1c" targetId="868d-580d-07cf-9ba9" linkType="rule">
           <modifiers>
             <modifier type="append" field="name" value="(6+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
@@ -5057,9 +5053,6 @@ Stage       Wounds caused Bonus
           </modifiers>
         </link>
         <link id="a1b0-ecdb-41fa-535c" targetId="868d-580d-07cf-9ba9" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="aa19-dbc7-3aea-7515" targetId="8503-af4e-82f7-942f" linkType="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (3+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
@@ -5895,7 +5888,7 @@ changes its base size to 60x100 mm.
         </link>
       </links>
     </entry>
-    <entry id="9266-132c-3111-942d" name="Colossal Zombie Dragon" points="320.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="9266-132c-3111-942d" name="Colossal Zombie Dragon" points="310.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers/>
@@ -6118,7 +6111,7 @@ changes its base size to 60x100 mm.
         <link id="1025-56a7-32fe-ce5d" targetId="868d-580d-07cf-9ba9" linkType="rule">
           <modifiers/>
         </link>
-        <link id="f618-fd51-4175-88d1" targetId="8503-af4e-82f7-942f" linkType="rule">
+        <link id="f618-fd51-4175-88d1" targetId="868d-580d-07cf-9ba9" linkType="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (6+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
@@ -6390,14 +6383,14 @@ changes its base size to 60x100 mm.
                 </link>
               </links>
             </entry>
-            <entry id="8bfa-d034-826c-4f91" name="Hunger" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="8bfa-d034-826c-4f91" name="Vampiric" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
               <rules/>
               <profiles/>
               <links>
-                <link id="6d9f-5be3-1f4b-1e26" targetId="8503-af4e-82f7-942f" linkType="rule">
+                <link id="6d9f-5be3-1f4b-1e26" targetId="868d-580d-07cf-9ba9" linkType="rule">
                   <modifiers>
                     <modifier type="append" field="name" value=" (5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                       <conditions/>
@@ -6785,7 +6778,7 @@ changes its base size to 60x100 mm.
                       </rules>
                       <profiles/>
                       <links>
-                        <link id="978e-dce7-7c53-9157" targetId="8503-af4e-82f7-942f" linkType="rule">
+                        <link id="978e-dce7-7c53-9157" targetId="868d-580d-07cf-9ba9" linkType="rule">
                           <modifiers>
                             <modifier type="append" field="name" value=" (2+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                               <conditions/>
@@ -7040,7 +7033,7 @@ changes its base size to 60x100 mm.
               <profiles/>
               <links/>
             </entry>
-            <entry id="12ee-7167-c9ba-6ead" name="Fly" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+            <entry id="12ee-7167-c9ba-6ead" name="Fly" points="35.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
               <entries/>
               <entryGroups/>
               <modifiers>
@@ -7375,7 +7368,20 @@ changes its base size to 60x100 mm.
                 </rule>
               </rules>
               <profiles/>
-              <links/>
+              <links>
+                <link id="915f-afcf-ca90-22bb" targetId="868d-580d-07cf-9ba9" linkType="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (2+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions/>
+                      <conditionGroups/>
+                    </modifier>
+                    <modifier type="append" field="name" value=" (2+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions/>
+                      <conditionGroups/>
+                    </modifier>
+                  </modifiers>
+                </link>
+              </links>
             </entry>
           </entries>
           <entryGroups/>
@@ -9002,10 +9008,6 @@ At the beginning of your next Player&apos;s Turn following the death ofthe Maste
     <rule id="8d66-892b-7ed1-d6d8" name="Hatred" hidden="false">
       <description>Models with this Special Rule may reroll failed To Hit rolls during the first Round of a Close Combat. Sometimes this rule only works against certain enemies, which are then stated in brackets. For example, “Hatred (Armybook: Empire of Men)” means that Hatred only applies when attacking models bought from the Empire of Men Armybook. If a multipart model has this rule, then the rule is only applied to the part of the model that has the rule.
 </description>
-      <modifiers/>
-    </rule>
-    <rule id="8503-af4e-82f7-942f" name="Hunger" hidden="false">
-      <description>At the end of the close combat phase, roll a D6 for each unit with this Special Rule that caused at least one wound during the phase. On the roll of X+ a single wound is Raised to the unit, where X is the number stated within the brackets. Characters must cause wounds and roll for Raised wounds separately from any unit they are joined to. </description>
       <modifiers/>
     </rule>
     <rule id="e5a1-3daf-b958-d7a8" name="Impact hits" hidden="false">
