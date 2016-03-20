@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="a4f1-e922-7744-9cf5" revision="21" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="1" battleScribeVersion="1.15" name="Orcs and Goblins" books="Orcs and Goblins v0.99.0" authorName="Toreador13 &amp; gommo" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
-    <entry id="f0de-6622-be87-fd4f" name="Gargantula" points="210.0" categoryId="5261726523232344415441232323" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="f0de-6622-be87-fd4f" name="Gargantula" points="225.0" categoryId="5261726523232344415441232323" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="e0d5-add8-5fb8-dffb" name="Forest Goblin" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="8" maxSelections="8" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -61,7 +61,8 @@
           <modifiers/>
           <rules>
             <rule id="2df6-b28f-423a-0df7" name="Web Launcher" hidden="false">
-              <description>target hit suffers -D3 to Movement and Initiative characteristics until the start of your next turn. Effect of several Web launches doesn’t combine.</description>
+              <description>Units that are hit suffer ‐D3 to their Initiative, treat Dangerous Terrain (1) as Dangerous Terrain (2) and all other terrain (including Open Terrain) as
+Dangerous Terrain (1) until the end of the next Player Turn. The effects of several Web Launchers do not stack.</description>
               <modifiers/>
             </rule>
           </rules>
@@ -124,9 +125,6 @@
               <conditionGroups/>
             </modifier>
           </modifiers>
-        </link>
-        <link id="1036-9fdc-48c0-f253" targetId="a0d9-e2f4-88db-6a20" linkType="rule">
-          <modifiers/>
         </link>
         <link id="1293-90a9-3c42-cda9" targetId="35c9-379a-bfd6-bb8a" linkType="rule">
           <modifiers/>
@@ -384,7 +382,7 @@ Template that amount of inches in any direction except moving on to units in clo
         </link>
       </links>
     </entry>
-    <entry id="cad2-286c-0c8f-a3f5" name="Gnasher Dashers" points="5.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="cad2-286c-0c8f-a3f5" name="Gnasher Dashers" points="10.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="3d89-008a-3825-9ba1" name="Gnasher Dasher" points="10.0" categoryId="(No Category)" type="model" minSelections="5" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
@@ -462,7 +460,11 @@ Template that amount of inches in any direction except moving on to units in clo
       </modifiers>
       <rules>
         <rule id="4212-d7c5-3009-52f7" name="Rows of Teeth" hidden="false">
-          <description>Gnashers make supporting attacks instead of their Cave Goblin riders</description>
+          <description>Gnasher Dashers make Supporting Attacks instead of their Cave Goblin riders.</description>
+          <modifiers/>
+        </rule>
+        <rule id="23ae-a304-3afa-f064" name="Oi, it bites!" hidden="false">
+          <description>This unit cannot be joined by Characters.</description>
           <modifiers/>
         </rule>
       </rules>
@@ -488,9 +490,6 @@ Template that amount of inches in any direction except moving on to units in clo
         </profile>
       </profiles>
       <links>
-        <link id="fa0e-2dd3-d36e-912a" targetId="34d4-728b-405b-f0c1" linkType="rule">
-          <modifiers/>
-        </link>
         <link id="1170-5b2d-f5f6-4ed5" targetId="a6d5-7d7f-6ddf-43ad" linkType="rule">
           <modifiers>
             <modifier type="append" field="name" value="(3D6), Steady" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
@@ -505,16 +504,28 @@ Template that amount of inches in any direction except moving on to units in clo
         <link id="de59-e9d1-d913-8b86" targetId="38f2-b081-6148-12c3" linkType="entry">
           <modifiers/>
         </link>
+        <link id="6fb3-34bb-0889-f793" targetId="331d-1426-6647-d594" linkType="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(6)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="01c3-0c96-82e8-c7f1" targetId="35c9-379a-bfd6-bb8a" linkType="rule">
+          <modifiers/>
+        </link>
       </links>
     </entry>
-    <entry id="de04-af91-cc1f-aac7" name="Gnasher Herd" points="0.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="de04-af91-cc1f-aac7" name="Gnasher Herd" points="-10.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="6118-4d9c-f881-7039" name="Gnasher" points="7.0" categoryId="(No Category)" type="upgrade" minSelections="10" maxSelections="50" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="6118-4d9c-f881-7039" name="Gnasher" points="9.0" categoryId="(No Category)" type="upgrade" minSelections="10" maxSelections="40" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
           <rules>
-            <rule id="3aee-b427-07f4-05ba" name="Cannot be joined by characters" hidden="false">
+            <rule id="3aee-b427-07f4-05ba" name="Oi, it bites!" hidden="false">
+              <description>This unit cannot be joined by Characters.</description>
               <modifiers/>
             </rule>
           </rules>
@@ -563,7 +574,7 @@ Template that amount of inches in any direction except moving on to units in clo
       </modifiers>
       <rules>
         <rule id="e4a6-3ece-a967-72b0" name="They&apos;re Everywhere!" hidden="false">
-          <description>​When a Gnasher Herd breaks from combat, the unit is immediately removed as a casualty and all units within 6’’ take a Strength 5 hit for every 3 Gnashers in the Gnasher Herd.
+          <description>​When a Gnasher Herd breaks from combat, the unit is immediately removed as a casualty and all units within 6’’ take a Strength 5 hit for every 5 Gnashers in the Gnasher Herd.
 </description>
           <modifiers/>
         </rule>
@@ -2512,7 +2523,7 @@ Template that amount of inches in any direction except moving on to units in clo
     </entry>
     <entry id="57c8-324c-7f1f-b094" name="Goblin Wolf Chariot" points="0.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="1026-f9b8-85b2-5613" name="Goblin Wolf Chariot" points="55.0" categoryId="(No Category)" type="model" minSelections="1" maxSelections="3" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="1026-f9b8-85b2-5613" name="Goblin Wolf Chariot" points="60.0" categoryId="(No Category)" type="model" minSelections="1" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
             <entry id="1df2-67ca-e34c-7cef" name="Goblin Wolf Chariot Rider" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="3" maxSelections="3" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
@@ -2661,14 +2672,23 @@ Template that amount of inches in any direction except moving on to units in clo
         <link id="fbd7-b806-25bb-2376" targetId="a0d9-e2f4-88db-6a20" linkType="rule">
           <modifiers/>
         </link>
-        <link id="4641-1afa-9c2b-0b38" targetId="6717-0c65-5d49-6692" linkType="rule">
-          <modifiers/>
-        </link>
         <link id="4855-5dcb-82d8-7c23" targetId="6062-1f2e-7fad-466e" linkType="rule">
           <modifiers/>
         </link>
         <link id="3b54-5290-bbbe-85f4" targetId="fd1a-9124-e610-8c5a" linkType="entry">
           <modifiers/>
+        </link>
+        <link id="b1ae-da11-4b40-9ff6" targetId="954d-a90e-3c03-2c92" linkType="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (D6)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="name" value="Impact Hits (+1)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -3073,21 +3093,13 @@ Template that amount of inches in any direction except moving on to units in clo
     </entry>
     <entry id="cd85-dacb-b2b7-f57e" name="Great Green Idol" points="230.0" categoryId="5261726523232344415441232323" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="a2ac-8259-bd25-1c2f" name="BSB and Ward Save" points="60.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="a2ac-8259-bd25-1c2f" name="May become the Battle Standard Bearer" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
           <rules/>
           <profiles/>
           <links>
-            <link id="515e-813e-5fae-7c62" targetId="c189-a764-5e9c-e7db" linkType="rule">
-              <modifiers>
-                <modifier type="append" field="name" value=" (5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </link>
             <link id="c6fe-1a69-335e-1d0a" targetId="96dc-d096-8e8e-a05e" linkType="entry">
               <modifiers>
                 <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
@@ -3124,7 +3136,7 @@ Template that amount of inches in any direction except moving on to units in clo
           <modifiers/>
         </rule>
         <rule id="9f64-79be-cfc6-fad9" name="Smash &apos;Em Flat" hidden="false">
-          <description>All friendly Units within 8“ have the Hatred Special Rule if the Great Green Idol is in combat.</description>
+          <description>All friendly Units within 8“ gain Devastating Charge if the Great Green Idol is Engaged in Combat.</description>
           <modifiers/>
         </rule>
       </rules>
@@ -3152,7 +3164,7 @@ Template that amount of inches in any direction except moving on to units in clo
       <links>
         <link id="bcc7-cfcf-34bd-4c49" targetId="8db6-5208-786b-6fa1" linkType="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (2+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="append" field="name" value=" (5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -3249,9 +3261,9 @@ Template that amount of inches in any direction except moving on to units in clo
         </link>
       </links>
     </entry>
-    <entry id="ed75-0a7f-1cf2-43ef" name="Iron Orcs" points="0.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="ed75-0a7f-1cf2-43ef" name="Iron Orcs" points="-30.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="af98-7531-5824-b5f0" name="Iron Orc" points="12.0" categoryId="(No Category)" type="upgrade" minSelections="10" maxSelections="35" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="af98-7531-5824-b5f0" name="Iron Orc" points="13.0" categoryId="(No Category)" type="upgrade" minSelections="10" maxSelections="35" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -3424,11 +3436,15 @@ Template that amount of inches in any direction except moving on to units in clo
       </modifiers>
       <rules/>
       <profiles/>
-      <links/>
+      <links>
+        <link id="bdf5-3b37-379c-2032" targetId="ef7a-b355-b971-e84d" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
     </entry>
     <entry id="0eda-345e-1d17-46e1" name="Mounted &apos;Eadbashers" points="0.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="fee9-91b4-cfd2-3a14" name="&apos;Eadbasher Rider" points="18.0" categoryId="(No Category)" type="upgrade" minSelections="5" maxSelections="15" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="fee9-91b4-cfd2-3a14" name="&apos;Eadbasher Rider" points="16.0" categoryId="(No Category)" type="upgrade" minSelections="5" maxSelections="15" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -3444,8 +3460,8 @@ Template that amount of inches in any direction except moving on to units in clo
                 <characteristic characteristicId="5723232344415441232323" name="W" value="1"/>
                 <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
                 <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
-                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="7"/>
-                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
+                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value=""/>
                 <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
                 <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
                 <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Cavalry 25x50mm"/>
@@ -3530,7 +3546,7 @@ Template that amount of inches in any direction except moving on to units in clo
                 <entry id="0288-cc6f-40bb-1c86" name="Magical Banner" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
                   <entries/>
                   <entryGroups>
-                    <entryGroup id="3d61-bd92-71b6-8555" name="Magic Banner (25pts)" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="25.0" collective="false" hidden="false">
+                    <entryGroup id="3d61-bd92-71b6-8555" name="Magic Banner (25pts)" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="50.0" collective="false" hidden="false">
                       <entries/>
                       <entryGroups/>
                       <modifiers/>
@@ -3628,7 +3644,7 @@ Template that amount of inches in any direction except moving on to units in clo
               <entries/>
               <entryGroups/>
               <modifiers>
-                <modifier type="increment" field="points" value="2.0" repeat="true" numRepeats="1" incrementParentId="0eda-345e-1d17-46e1" incrementChildId="fee9-91b4-cfd2-3a14" incrementField="selections" incrementValue="1.0">
+                <modifier type="increment" field="points" value="3.0" repeat="true" numRepeats="1" incrementParentId="0eda-345e-1d17-46e1" incrementChildId="fee9-91b4-cfd2-3a14" incrementField="selections" incrementValue="1.0">
                   <conditions/>
                   <conditionGroups/>
                 </modifier>
@@ -3671,7 +3687,7 @@ Template that amount of inches in any direction except moving on to units in clo
         </entryGroup>
         <entryGroup id="e130-27e6-1f8f-c02f" name="Options" minSelections="0" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="d1f6-4be0-d42d-b4cd" name="Additional Hand Weapons" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+            <entry id="d1f6-4be0-d42d-b4cd" name="Paired Weapons" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
               <entries/>
               <entryGroups/>
               <modifiers>
@@ -3681,7 +3697,7 @@ Template that amount of inches in any direction except moving on to units in clo
                   </conditions>
                   <conditionGroups/>
                 </modifier>
-                <modifier type="increment" field="points" value="2.0" repeat="true" numRepeats="1" incrementParentId="0eda-345e-1d17-46e1" incrementChildId="fee9-91b4-cfd2-3a14" incrementField="selections" incrementValue="1.0">
+                <modifier type="increment" field="points" value="3.0" repeat="true" numRepeats="1" incrementParentId="0eda-345e-1d17-46e1" incrementChildId="fee9-91b4-cfd2-3a14" incrementField="selections" incrementValue="1.0">
                   <conditions/>
                   <conditionGroups/>
                 </modifier>
@@ -3715,7 +3731,7 @@ Template that amount of inches in any direction except moving on to units in clo
               <entries/>
               <entryGroups/>
               <modifiers>
-                <modifier type="increment" field="points" value="4.0" repeat="true" numRepeats="1" incrementParentId="0eda-345e-1d17-46e1" incrementChildId="fee9-91b4-cfd2-3a14" incrementField="selections" incrementValue="1.0">
+                <modifier type="increment" field="points" value="3.0" repeat="true" numRepeats="1" incrementParentId="0eda-345e-1d17-46e1" incrementChildId="fee9-91b4-cfd2-3a14" incrementField="selections" incrementValue="1.0">
                   <conditions/>
                   <conditionGroups/>
                 </modifier>
@@ -4336,7 +4352,7 @@ Large Targets)
                 </link>
               </links>
             </entry>
-            <entry id="8349-5b5e-d311-629a" name="Heavy Armour" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="8349-5b5e-d311-629a" name="Heavy Armour" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -6056,13 +6072,14 @@ Large Targets)
           <entries/>
           <entryGroups/>
           <modifiers/>
-          <rules/>
-          <profiles/>
-          <links>
-            <link id="5c44-ba12-688d-e5e9" targetId="34d4-728b-405b-f0c1" linkType="rule">
+          <rules>
+            <rule id="17e1-e293-ca32-a572" name="Pursuit Mode" hidden="false">
+              <description>When moving in the Movement Phase, roll an additional D6 for Random Movement and remove the lowest dice.</description>
               <modifiers/>
-            </link>
-          </links>
+            </rule>
+          </rules>
+          <profiles/>
+          <links/>
         </entry>
         <entry id="a17a-cc8a-803f-1916" name="Smells Like Green Spirit" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -6172,7 +6189,7 @@ Large Targets)
         </link>
       </links>
     </entry>
-    <entry id="b12b-20a2-c76f-b15d" name="Skewerer" points="45.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="b12b-20a2-c76f-b15d" name="Skewerer" points="45.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="1255-bc41-07f8-b4b8" name="Common Goblin" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="3" maxSelections="3" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -6394,9 +6411,9 @@ This Warmachine may choose to lose one wound in order to reroll a roll on the Mi
         </link>
       </links>
     </entry>
-    <entry id="8d23-845f-bb61-530f" name="Trolls" points="0.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="8d23-845f-bb61-530f" name="Trolls" points="17.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="4f8c-ba6c-fa60-31f3" name="Troll" points="42.0" categoryId="(No Category)" type="model" minSelections="1" maxSelections="9" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="4f8c-ba6c-fa60-31f3" name="Troll" points="38.0" categoryId="(No Category)" type="model" minSelections="1" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -6533,6 +6550,9 @@ This Warmachine may choose to lose one wound in order to reroll a roll on the Mi
           <modifiers/>
         </link>
         <link id="5385-99e5-6cbd-8fa5" targetId="7ec2-8e9e-a26d-91f8" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="e54a-3c12-2de3-6ab1" targetId="f743-de9a-5dba-6ab2" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -8319,7 +8339,7 @@ Shady Gits do not gain First Among Equals or Order the Charge.</description>
           <modifiers>
             <modifier type="show" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
-                <condition parentId="direct parent" childId="262c-05a6-1f57-0112" field="selections" type="equal to" value="1.0"/>
+                <condition parentId="direct parent" childId="e48c-4398-762f-ecb5" field="selections" type="equal to" value="1.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
