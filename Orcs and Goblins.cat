@@ -7995,7 +7995,7 @@ Mad Gits are used in two ways:
     </entryGroup>
     <entryGroup id="9c55-bb50-6c87-da07" name="Enchanted Items" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="ebb6-9742-5372-cb73" name="Lucky Boar’s Leg" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
+        <entry id="ebb6-9742-5372-cb73" name="Lucky Boar’s Leg" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -8003,7 +8003,7 @@ Mad Gits are used in two ways:
           <profiles>
             <profile id="5f6c-83a1-6015-220e" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="Lucky Boar’s Leg" hidden="false" book="Orcs and Goblins">
               <characteristics>
-                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Orc mounted on War Boar or Boar Chariot only. Wearer and his unit have +1 Movement that can&apos;t be combined with other Magic Items grating positive modifications to movement or swiftstride."/>
+                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Mounted models only All Cavalry models within 18&quot; of the bearer may reroll Dangerous Terrain tests."/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -8160,15 +8160,22 @@ Mad Gits are used in two ways:
           </profiles>
           <links/>
         </entry>
-        <entry id="cd7a-aafc-fa0d-218f" name="Waaargh! Paint - Feral Orc only" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
+        <entry id="cd7a-aafc-fa0d-218f" name="Waaargh! Paint" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="0" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
           <entries/>
           <entryGroups/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="direct parent" childId="e48c-4398-762f-ecb5" field="selections" type="instance of" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <rules/>
           <profiles>
-            <profile id="25b0-616a-e9d5-1994" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="Waaargh! Paint - Feral Orc only" hidden="false" book="Orcs and Goblins">
+            <profile id="25b0-616a-e9d5-1994" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="Waaargh! Paint" hidden="false" book="Orcs and Goblins">
               <characteristics>
-                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Models with the Greenhide Race: Feral Orc in the wearer&apos;s unit have Frenzy (cannot lose it) and gain Swiftstride for the purpose of Pursue and Overrun"/>
+                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="The wearer gains Frenzy, can never lose it, and all Feral Orcs in the same unit gain Frenzy for as long as the wearer is in the unit. The wearer&apos;s unit gains Swiftstride for the purposes of Pursuit and Overrun moves."/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -8214,24 +8221,32 @@ Mad Gits are used in two ways:
           </profiles>
           <links/>
         </entry>
-        <entry id="38b4-c701-b17c-caf5" name="Crown of the Cavern King - Cave Goblin Only" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
+        <entry id="38b4-c701-b17c-caf5" name="Crown of the Cavern King - Goblin Only, Cannot be taken by Large Target" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="0" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
           <entries/>
           <entryGroups/>
           <modifiers>
             <modifier type="set" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="direct parent" childId="6982-33fa-6cf6-c3a1" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition parentId="direct parent" childId="d81b-103b-9e01-1d4b" field="selections" type="equal to" value="1.0"/>
+                    <condition parentId="direct parent" childId="6982-33fa-6cf6-c3a1" field="selections" type="equal to" value="1.0"/>
+                    <condition parentId="direct parent" childId="d507-50cb-cf6a-ff8b" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <rules/>
           <profiles>
-            <profile id="b7e1-205b-1e35-59d7" profileTypeId="41726d6f757223232344415441232323" name="Hat of Nine Caves" hidden="false">
+            <profile id="b7e1-205b-1e35-59d7" profileTypeId="41726d6f757223232344415441232323" name="Crown of the Cavern King - Goblin Only, Cannot be taken by Large Target" hidden="false" book="Orcs and Goblins">
               <characteristics>
                 <characteristic characteristicId="536176696e67205468726f77206d6f64696669657223232344415441232323" name="Saving Throw modifier"/>
-                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Wearer can only join units of Cave Goblins. Wearer&apos;s unit gains Vanguard and can move (but not march nor shoot) after rallying. Furthermore, wearer’s Inspiring Presence or Hold Your Ground range is increased by 6&quot;."/>
-                <characteristic characteristicId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" name="Type" value="None (5+ Armour Save)."/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="The wearer may only join units of Goblins of the same Greenhide Race . The wearer&apos;s unit gains Vanguard and may move after
+Rallying, although it does not gain the ability to March or shoot in the same turn. The wearer’s Inspiring Presence or Hold Your Ground range is increased by 6&quot;."/>
+                <characteristic characteristicId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" name="Type" value="None (6+ Armour Save)."/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -8449,7 +8464,7 @@ Mad Gits are used in two ways:
     </entryGroup>
     <entryGroup id="e75b-835d-c687-7de1" name="Magical Standards" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="1d22-9fbe-771b-8359" name="Mikinok’s Totem" points="75.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
+        <entry id="1d22-9fbe-771b-8359" name="Mikinok’s Totem" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -8457,22 +8472,7 @@ Mad Gits are used in two ways:
           <profiles>
             <profile id="0105-c493-ccd2-978d" profileTypeId="4d61676963205374616e6461726423232344415441232323" name="Mikinok’s Totem" hidden="false" book="Orcs and Goblins">
               <characteristics>
-                <characteristic characteristicId="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emination" value="Grants Magic Resistance (D6). Roll each time Magic Resistance is used. Furthermore, Magic items in base contact with the bearer have no effects (revert to mundane version of the items). The ability to revert magic items into mundane version will always work regardless of similar effects affecting this banner."/>
-              </characteristics>
-              <modifiers/>
-            </profile>
-          </profiles>
-          <links/>
-        </entry>
-        <entry id="4e14-e3b2-6efb-ceb1" name="Mother’s Gift" points="25.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
-          <entries/>
-          <entryGroups/>
-          <modifiers/>
-          <rules/>
-          <profiles>
-            <profile id="7ad1-6592-fce5-aea9" profileTypeId="4d61676963205374616e6461726423232344415441232323" name="Mother’s Gift" hidden="false" book="Orcs and Goblins">
-              <characteristics>
-                <characteristic characteristicId="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emination" value="Forest Goblins in wearer’s unit has Poisoned Attacks."/>
+                <characteristic characteristicId="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emination" value="Other Magical Items in the bearer&apos;s unit or in units (friendly or enemy) in base contact with bearer&apos;s unit cease to work and revert to their mundane type. This effect last as long as the units remain in base contact"/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -8681,7 +8681,7 @@ Mad Gits are used in two ways:
     </entryGroup>
     <entryGroup id="f106-fbd5-1c1c-5705" name="Magical Weapons" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="114e-de07-763e-f0ae" name="Axe of the Aporcalypse - Orcs only" points="65.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="114e-de07-763e-f0ae" name="Axe of the Aporcalypse" points="65.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
           <entries/>
           <entryGroups/>
           <modifiers>
@@ -8694,11 +8694,13 @@ Mad Gits are used in two ways:
           </modifiers>
           <rules/>
           <profiles>
-            <profile id="951d-871d-2163-b323" profileTypeId="576561706f6e23232344415441232323" name="Axe of the Aporcalypse - Orcs only" hidden="false">
+            <profile id="951d-871d-2163-b323" profileTypeId="576561706f6e23232344415441232323" name="Axe of the Aporcalypse" hidden="false">
               <characteristics>
                 <characteristic characteristicId="52616e676523232344415441232323" name="Range"/>
                 <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="+D3"/>
-                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="+D3 Attacks. "/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="+D3 Attacks. 
+
+Bonuses are rolled for and in effect at the Initiative step when the Character attacks with the weapon."/>
                 <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Hand weapon"/>
               </characteristics>
               <modifiers/>
@@ -8706,7 +8708,7 @@ Mad Gits are used in two ways:
           </profiles>
           <links/>
         </entry>
-        <entry id="63de-b9c5-a664-5655" name="Backstabbing dirks - Goblins only" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="63de-b9c5-a664-5655" name="Backstabbing dirks" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -8716,8 +8718,9 @@ Mad Gits are used in two ways:
               <characteristics>
                 <characteristic characteristicId="52616e676523232344415441232323" name="Range"/>
                 <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength"/>
-                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="- Models on foot only. Attacks made with this weapon has Armour Piercing (1). If wielder is attacking an enemy unit in their flank or rear, attacks made with this weapon has +2 Strength."/>
-                <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Additional Hand Weapon"/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Attacks made with this weapon have Armour Piercing (1). If the wielder is attacking an enemy unit in their flank or rear, attacks made with this
+weapon gain +2 Strength."/>
+                <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Hand Weapon"/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -9031,6 +9034,25 @@ Mad Gits are used in two ways:
                 <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="As User +1"/>
                 <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Attacks made with this weapon are at +1 Strength. "/>
                 <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Hand Weapon"/>
+              </characteristics>
+              <modifiers/>
+            </profile>
+          </profiles>
+          <links/>
+        </entry>
+        <entry id="81d4-54be-635d-5a2a" name="Maza&apos;s Zappin Bow" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles>
+            <profile id="4caf-bdae-767a-f402" profileTypeId="576561706f6e23232344415441232323" name="Maza&apos;s Zappin Bow" hidden="false">
+              <characteristics>
+                <characteristic characteristicId="52616e676523232344415441232323" name="Range" value="24&quot;"/>
+                <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="3"/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Range 24”, Strength 3, Multiple Shots (3),
+Lightning Attacks. The wielder’s unit gains Quick to Fire."/>
+                <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Bow"/>
               </characteristics>
               <modifiers/>
             </profile>
