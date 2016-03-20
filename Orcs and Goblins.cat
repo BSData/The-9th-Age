@@ -5192,7 +5192,7 @@ Large Targets)
         </link>
       </links>
     </entry>
-    <entry id="1aed-1074-11ab-29dd" name="Orc Warlord" points="130.0" categoryId="b2e4-176b-505b-1d2a" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="1aed-1074-11ab-29dd" name="Orc Warlord" points="120.0" categoryId="b2e4-176b-505b-1d2a" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="4e5e-5007-35c2-53d7" name="Magic Items" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -5237,7 +5237,7 @@ Large Targets)
             </link>
           </links>
         </entry>
-        <entry id="1b97-e885-9ba6-2422" name="Additional Hand Weapon" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="1b97-e885-9ba6-2422" name="Paired Weapons" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -5249,7 +5249,7 @@ Large Targets)
             </link>
           </links>
         </entry>
-        <entry id="358c-1941-8967-db55" name="Shield" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="358c-1941-8967-db55" name="Shield" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -5291,11 +5291,17 @@ Large Targets)
                       <conditions/>
                       <conditionGroups/>
                     </modifier>
+                    <modifier type="set" field="points" value="10.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions>
+                        <condition parentId="1aed-1074-11ab-29dd" childId="5692-0e58-c373-5491" field="selections" type="equal to" value="1.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </modifier>
                   </modifiers>
                 </link>
                 <link id="ccd9-ff79-9bb1-8a56" targetId="30ba-12dc-0e42-d592" linkType="entry">
                   <modifiers>
-                    <modifier type="set" field="points" value="35.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                    <modifier type="set" field="points" value="30.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                       <conditions/>
                       <conditionGroups/>
                     </modifier>
@@ -5313,6 +5319,12 @@ Large Targets)
                       <conditions/>
                       <conditionGroups/>
                     </modifier>
+                    <modifier type="set" field="points" value="105.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions>
+                        <condition parentId="1aed-1074-11ab-29dd" childId="5692-0e58-c373-5491" field="selections" type="equal to" value="1.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </modifier>
                   </modifiers>
                 </link>
               </links>
@@ -5322,6 +5334,25 @@ Large Targets)
           <rules/>
           <profiles/>
           <links/>
+        </entry>
+        <entry id="4526-7114-f6aa-110f" name="Waaaargh!" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+          <entries/>
+          <entryGroups/>
+          <modifiers>
+            <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="direct parent" childId="2f63-25fd-f302-4025" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="9db5-3887-f38b-a724" targetId="91e3-c90c-11f9-00b5" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
         </entry>
       </entries>
       <entryGroups>
@@ -5343,7 +5374,7 @@ Large Targets)
             </link>
             <link id="5692-0e58-c373-5491" targetId="e48c-4398-762f-ecb5" linkType="entry">
               <modifiers>
-                <modifier type="set" field="points" value="20.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                <modifier type="set" field="points" value="15.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions/>
                   <conditionGroups/>
                 </modifier>
@@ -5372,7 +5403,7 @@ Large Targets)
                 </link>
               </links>
             </entry>
-            <entry id="058b-e1de-78e3-49c2" name="Heavy Armour" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+            <entry id="058b-e1de-78e3-49c2" name="Heavy Armour" points="12.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
               <entries/>
               <entryGroups/>
               <modifiers>
@@ -5550,9 +5581,6 @@ Large Targets)
       </profiles>
       <links>
         <link id="9992-74b2-2851-c21b" targetId="2f63-25fd-f302-4025" linkType="entry">
-          <modifiers/>
-        </link>
-        <link id="6176-377f-04dc-6651" targetId="91e3-c90c-11f9-00b5" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -8160,13 +8188,13 @@ Mad Gits are used in two ways:
           </profiles>
           <links/>
         </entry>
-        <entry id="cd7a-aafc-fa0d-218f" name="Waaargh! Paint" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="0" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Orcs and Goblins">
+        <entry id="cd7a-aafc-fa0d-218f" name="Waaargh! Paint" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true" book="Orcs and Goblins">
           <entries/>
           <entryGroups/>
           <modifiers>
-            <modifier type="set" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="show" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
-                <condition parentId="direct parent" childId="e48c-4398-762f-ecb5" field="selections" type="instance of" value="1.0"/>
+                <condition parentId="direct parent" childId="262c-05a6-1f57-0112" field="selections" type="equal to" value="1.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
