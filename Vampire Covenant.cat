@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2c4f-2485-9386-ab13" revision="28" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="0" battleScribeVersion="1.15" name="Vampire Covenant" books="Vampire Covenant - v0.99.2" authorName="Toreador13 and duxbuse" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2c4f-2485-9386-ab13" revision="29" gameSystemId="7e6fb76e-1bec-b992-2c43-e797a6758b13" gameSystemRevision="0" battleScribeVersion="1.15" name="Vampire Covenant" books="Vampire Covenant - v0.99.4.1" authorName="Toreador13 and duxbuse" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="2eb7-fb68-4747-cd09" name="Altar of Undeath" points="200.0" categoryId="5261726523232344415441232323" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
@@ -27,15 +27,44 @@
       <entryGroups>
         <entryGroup id="3e38-98b7-b6fb-b7c3" name="May take one of the following" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="530e-3a96-768b-0966" name="Wailing Spirits (1)" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="530e-3a96-768b-0966" name="Deathly Choir" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
               <rules/>
-              <profiles/>
-              <links/>
+              <profiles>
+                <profile id="cda3-14f1-1876-d3b0" profileTypeId="4d6f64656c23232344415441232323" name="Deathly Choir" hidden="false">
+                  <characteristics>
+                    <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
+                    <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
+                    <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
+                    <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
+                    <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
+                    <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
+                    <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
+                    <characteristic characteristicId="4123232344415441232323" name="A" value="3"/>
+                    <characteristic characteristicId="4c4423232344415441232323" name="LD" value="5"/>
+                    <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+                    <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+                    <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+                    <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
+                    <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
+                  </characteristics>
+                  <modifiers/>
+                </profile>
+              </profiles>
+              <links>
+                <link id="5b0d-e212-c037-72b2" targetId="6fd7-8cee-a917-3dc2" linkType="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (2,8) (Wailing Spirits)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions/>
+                      <conditionGroups/>
+                    </modifier>
+                  </modifiers>
+                </link>
+              </links>
             </entry>
-            <entry id="2f2d-12db-a35e-ed46" name="Dark Tome" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="2f2d-12db-a35e-ed46" name="Dark Tome" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -71,11 +100,14 @@
       </modifiers>
       <rules>
         <rule id="13a1-23bc-08d0-44e9" name="Aura of Undeath" hidden="false">
-          <description>​​At the start of each of your player turns you may choose one of the following effects. In both cases, X is equal to the current turn number.
+          <description>​​At the beginning of each friendly Player Turn and before the battle (after moving Vanguarding units), choose one of the following Effects. For both effects, X is equal to the current Turn number (X is 0 before the battle).
 
-❖ All friendly units within 6”+X gain Regeneration (6+), which lasts until the end of the following Player Turn. Place a counter next to the units affected to track which is affected by the Regeneration even after leaving the area of effect.If a unit already has Regeneration then it is increased by +1, up to maximum of 4+ Regeneration Save.
-
-❖ All enemy units within 12” suffer D6 hits at Strength X.
+❖ All friendly units within 6+X” gain Regeneration (6+),which lasts until the beginning of the
+next friendly Player Turn. Place a counter next to the units affected to track which are
+affected by the Regeneration even after leaving the area of effect. If a unit already has
+Regeneration then this is increased by +1, up to maximum of 4+. Only this effect can be
+chosen before the battle.
+❖ All enemy units within 12” suffer D6 hits with Strength X.
 </description>
           <modifiers/>
         </rule>
@@ -100,16 +132,16 @@
           </characteristics>
           <modifiers/>
         </profile>
-        <profile id="d1b8-9822-3643-e317" profileTypeId="4d6f64656c23232344415441232323" name="Banshee (*)" hidden="false">
+        <profile id="d1b8-9822-3643-e317" profileTypeId="4d6f64656c23232344415441232323" name="Master" hidden="false">
           <characteristics>
             <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
             <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
-            <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
+            <characteristic characteristicId="425323232344415441232323" name="BS" value="1"/>
             <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
             <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
             <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
             <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
-            <characteristic characteristicId="4123232344415441232323" name="A" value="3"/>
+            <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
             <characteristic characteristicId="4c4423232344415441232323" name="LD" value="5"/>
             <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
             <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
@@ -119,17 +151,17 @@
           </characteristics>
           <modifiers/>
         </profile>
-        <profile id="3006-db3d-f438-8de9" profileTypeId="4d6f64656c23232344415441232323" name="Ghost Steeds (1)" hidden="false">
+        <profile id="3006-db3d-f438-8de9" profileTypeId="4d6f64656c23232344415441232323" name="Ghost Steeds" hidden="false">
           <characteristics>
             <characteristic characteristicId="4d23232344415441232323" name="M" value="8"/>
-            <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
+            <characteristic characteristicId="575323232344415441232323" name="WS" value="2"/>
             <characteristic characteristicId="425323232344415441232323" name="BS" value="0"/>
             <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
             <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
             <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
-            <characteristic characteristicId="4923232344415441232323" name="I" value="1"/>
-            <characteristic characteristicId="4123232344415441232323" name="A" value="*"/>
-            <characteristic characteristicId="4c4423232344415441232323" name="LD"/>
+            <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
+            <characteristic characteristicId="4123232344415441232323" name="A" value="2D6"/>
+            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="3"/>
             <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
             <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
             <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
@@ -171,14 +203,6 @@
         <link id="60e1-939f-3ba1-237f" targetId="a6f2-05a8-21b6-84be" linkType="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (4+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
-        <link id="5cee-c024-406b-8274" targetId="6fd7-8cee-a917-3dc2" linkType="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2,8) (Wailing Spirits)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -391,78 +415,25 @@
           </links>
         </entry>
         <entry id="ac5f-4b33-4935-8851" name="Mount" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries>
-            <entry id="f7e0-24be-9b7c-e5d3" name="Skeletal Steed" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
-              <entryGroups>
-                <entryGroup id="956e-a470-41e4-e4ff" name="May take one of the following" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-                  <entries>
-                    <entry id="be13-1392-f017-aabd" name="Fly" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-                      <entries/>
-                      <entryGroups/>
-                      <modifiers/>
-                      <rules/>
-                      <profiles/>
-                      <links>
-                        <link id="ffb6-d8c5-8023-f805" targetId="331d-1426-6647-d594" linkType="rule">
-                          <modifiers>
-                            <modifier type="append" field="name" value=" (8)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                              <conditions/>
-                              <conditionGroups/>
-                            </modifier>
-                          </modifiers>
-                        </link>
-                      </links>
-                    </entry>
-                    <entry id="362b-9a37-27fb-0475" name="Natural Armour" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-                      <entries/>
-                      <entryGroups/>
-                      <modifiers/>
-                      <rules/>
-                      <profiles/>
-                      <links/>
-                    </entry>
-                  </entries>
-                  <entryGroups/>
-                  <modifiers/>
-                  <links/>
-                </entryGroup>
-              </entryGroups>
-              <modifiers/>
-              <rules/>
-              <profiles>
-                <profile id="fda0-d439-a808-61b0" profileTypeId="4d6f64656c23232344415441232323" name="Skeletal Steed" hidden="false">
-                  <characteristics>
-                    <characteristic characteristicId="4d23232344415441232323" name="M" value="8"/>
-                    <characteristic characteristicId="575323232344415441232323" name="WS" value="2"/>
-                    <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
-                    <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
-                    <characteristic characteristicId="5423232344415441232323" name="T" value="3"/>
-                    <characteristic characteristicId="5723232344415441232323" name="W" value="1"/>
-                    <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
-                    <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
-                    <characteristic characteristicId="4c4423232344415441232323" name="LD" value="3"/>
-                    <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
-                    <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
-                    <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-                    <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Cavalry"/>
-                    <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="25x50mm"/>
-                  </characteristics>
-                  <modifiers/>
-                </profile>
-              </profiles>
-              <links>
-                <link id="75f6-540d-2743-3107" targetId="347c-07db-9f06-ccec" linkType="rule">
-                  <modifiers/>
-                </link>
-              </links>
-            </entry>
-          </entries>
+          <entries/>
           <entryGroups/>
           <modifiers/>
           <rules/>
           <profiles/>
-          <links/>
+          <links>
+            <link id="403b-ffe8-be0b-ce0a" targetId="6da8-47ee-a9ba-63ba" linkType="entry">
+              <modifiers>
+                <modifier type="set" field="points" value="15.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="set" field="points" value="15.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+          </links>
         </entry>
         <entry id="f4e3-a2c4-bf42-478b" name="Unliving Shield" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -644,9 +615,9 @@
         </link>
       </links>
     </entry>
-    <entry id="4d5c-40d1-b305-b8cc" name="Barrow Knights" points="-55.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="4d5c-40d1-b305-b8cc" name="Barrow Knights" points="-40.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="a999-8852-e341-ead6" name="Barrow Knight" points="29.0" categoryId="(No Category)" type="upgrade" minSelections="5" maxSelections="12" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="a999-8852-e341-ead6" name="Barrow Knight" points="26.0" categoryId="(No Category)" type="upgrade" minSelections="5" maxSelections="12" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -842,9 +813,9 @@
         </link>
       </links>
     </entry>
-    <entry id="6b49-435a-6d1c-38e9" name="Bat Swarm" points="30.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="4" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="6b49-435a-6d1c-38e9" name="Bat Swarm" points="20.0" categoryId="436f726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="4" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="38d5-f1a3-9fa2-9be9" name="Bat Swarm" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="2" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="38d5-f1a3-9fa2-9be9" name="Bat Swarm" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="2" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -916,115 +887,37 @@
             </modifier>
           </modifiers>
         </link>
+        <link id="1aca-ab7d-cd3e-d579" targetId="521c-9338-a13f-5b81" linkType="rule">
+          <modifiers/>
+        </link>
       </links>
     </entry>
-    <entry id="ed6b-401a-43a5-e6bb" name="Cadaver Wagon" points="80.0" categoryId="5370656369616c23232344415441232323" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="d87f-1682-1c01-8742" name="Cadaver Wagon" points="80.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="c2a8-4bea-baa6-190d" name="Mount&apos;s Protection" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers/>
-          <rules/>
-          <profiles/>
-          <links>
-            <link id="3dca-6fd8-360e-8d4e" targetId="a7c9-81ec-0fa6-2eb5" linkType="rule">
-              <modifiers>
-                <modifier type="append" field="name" value=" (5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </link>
-          </links>
-        </entry>
-        <entry id="59cc-1efa-e385-afe0" name="Endless Horde" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="12f6-3d1b-dc17-d908" name="Endless Horde" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
           <rules>
-            <rule id="7eed-6f79-c2e0-f514" name="Endless Horde" hidden="false">
-              <description> ​The Cadaver Wagon has War Platform, but can only join units of Zombies. While joined to Zombies, the Cadaver Master may issue and accept Challenges as if it was a Champion. If this upgrade is taken, the model changes its base to 60x100mm.</description>
+            <rule id="f9f2-66dd-b8c6-2847" name="Endless Horde" hidden="false">
+              <description>The Cadaver Wagon has War Platform, but can only join units of Zombies. While joined to Zombies, the Cadaver Master may issue and accept Challenges as if it was a Champion. If this upgrade is taken, the model changes its base to 60x100mm.
+</description>
               <modifiers/>
             </rule>
           </rules>
           <profiles/>
           <links/>
         </entry>
-        <entry id="345a-9cb8-2292-be70" name="Shambling Horde" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers/>
-          <rules/>
-          <profiles>
-            <profile id="4daa-3367-dc75-65d2" profileTypeId="4d6f64656c23232344415441232323" name="Shambling Horde" hidden="false">
-              <characteristics>
-                <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
-                <characteristic characteristicId="575323232344415441232323" name="WS" value="1"/>
-                <characteristic characteristicId="425323232344415441232323" name="BS" value="0"/>
-                <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
-                <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
-                <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
-                <characteristic characteristicId="4923232344415441232323" name="I" value="1"/>
-                <characteristic characteristicId="4123232344415441232323" name="A" value="*"/>
-                <characteristic characteristicId="4c4423232344415441232323" name="LD"/>
-                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
-                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
-                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-                <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
-                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
-              </characteristics>
-              <modifiers/>
-            </profile>
-          </profiles>
-          <links>
-            <link id="2dbb-a5dc-18db-7063" targetId="31d2-46b4-7c21-b1e7" linkType="rule">
-              <modifiers>
-                <modifier type="append" field="name" value=" (2D6) Shamling Horde" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </link>
-          </links>
-        </entry>
-        <entry id="9880-b84b-0023-f11e" name="Cadaver Master" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers/>
-          <rules/>
-          <profiles>
-            <profile id="8205-061c-55ed-87bf" profileTypeId="4d6f64656c23232344415441232323" name="Cadaver Master" hidden="false">
-              <characteristics>
-                <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
-                <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
-                <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
-                <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
-                <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
-                <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
-                <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
-                <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
-                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="5"/>
-                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
-                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
-                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-                <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
-                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
-              </characteristics>
-              <modifiers/>
-            </profile>
-          </profiles>
-          <links/>
-        </entry>
       </entries>
       <entryGroups>
-        <entryGroup id="6c86-f65d-e0c9-0217" name="May take one upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entryGroup id="3ff5-a8e3-5e40-b49e" name="May take one upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="1134-7a8e-1232-fd84" name="Bone Pyre" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="d721-5a56-a26b-9fb7" name="Bone Pyre" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
               <rules>
-                <rule id="0312-a35a-27ae-1bb7" name="Bone Pyre" hidden="false">
+                <rule id="f9bf-ea39-3fff-843b" name="Bone Pyre" hidden="false">
                   <description>​Enemy Wizards within 24” of one or more Cadaver Wagons with this upgrade suffer a -1 modifier to all their casting attempts.
 </description>
                   <modifiers/>
@@ -1033,31 +926,32 @@
               <profiles/>
               <links/>
             </entry>
-            <entry id="fcff-5f12-8091-96dc" name="Bring Out Your Dead" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="d40c-9da2-f4f3-806f" name="Bring Out Your Dead" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
               <rules>
-                <rule id="3a6b-17d9-f24b-0ffe" name="Bring Out Your Dead" hidden="false">
-                  <description>​Friendly Wizards who cast Invocation of Nehek while being within 6” one or more Cadaver Wagons with this upgrade, and the Cadaver Wagon itself, can re-roll a single die used to determine the amount of Wounds restored, for each unit targeted</description>
+                <rule id="2b3b-5f91-4969-578b" name="Bring Out Your Dead" hidden="false">
+                  <description>​Friendly units targeted by Invocation of the Undead when cast by a Wizard that is within 6&quot; of one or more Cadaver Wagon with this upgrade increase their Invocation Characteristic based on their Height for this spell: If Small Height: +2 Invocation, If Medium Height: +1 Invocation, Ethereal or Vampiric models are not affected.
+</description>
                   <modifiers/>
                 </rule>
               </rules>
               <profiles/>
               <links/>
             </entry>
-            <entry id="6c4f-4bbb-6bcf-e7fc" name="Necromantic Aura" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="a266-fda9-14c6-b278" name="Necromantic Aura" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
               <rules>
-                <rule id="fced-1bc8-54a4-5cfd" name="Anti-Crumble Aura" hidden="false">
+                <rule id="fb22-7983-efdc-9c7f" name="Anti-Crumble Aura" hidden="false">
                   <modifiers/>
                 </rule>
               </rules>
               <profiles/>
               <links>
-                <link id="28d7-bb3f-4ecb-ddd5" targetId="29b3-4d62-3f2c-b4e0" linkType="rule">
+                <link id="8720-12d0-31b7-d2a9" targetId="29b3-4d62-3f2c-b4e0" linkType="rule">
                   <modifiers/>
                 </link>
               </links>
@@ -1069,27 +963,28 @@
         </entryGroup>
       </entryGroups>
       <modifiers>
-        <modifier type="set" field="maxInRoster" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="7732-e457-4a60-ddb3" field="selections" type="instance of" value="0.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="maxInRoster" value="6.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="maxInRoster" value="4.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="1177-b26b-017b-9fc4" field="selections" type="instance of" value="0.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="set" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="7732-e457-4a60-ddb3" field="selections" type="instance of" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <rules>
-        <rule id="c314-e2d7-4c9d-9bb5" name="Cart " hidden="false">
-          <description>​The Cadaver Wagon can make march moves despite being a Chariot but does not have Swiftstride</description>
+        <rule id="78e2-03f5-68c4-47a9" name="Cart " hidden="false">
+          <description>​Despite being a Chariot, a Cadaver Wagon does not have Swiftstride nor Cannot March.
+</description>
           <modifiers/>
         </rule>
       </rules>
       <profiles>
-        <profile id="705b-1e02-a4e0-833d" profileTypeId="4d6f64656c23232344415441232323" name="Cadaver Wagon" hidden="false">
+        <profile id="8537-968a-cfd1-b9f0" profileTypeId="4d6f64656c23232344415441232323" name="Cadaver Wagon" hidden="false">
           <characteristics>
             <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
             <characteristic characteristicId="575323232344415441232323" name="WS" value="-"/>
@@ -1108,15 +1003,61 @@
           </characteristics>
           <modifiers/>
         </profile>
+        <profile id="6465-c895-5e7a-78d4" profileTypeId="4d6f64656c23232344415441232323" name="Shambling Horde" hidden="false">
+          <characteristics>
+            <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
+            <characteristic characteristicId="575323232344415441232323" name="WS" value="1"/>
+            <characteristic characteristicId="425323232344415441232323" name="BS" value="0"/>
+            <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
+            <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
+            <characteristic characteristicId="4923232344415441232323" name="I" value="1"/>
+            <characteristic characteristicId="4123232344415441232323" name="A" value="*"/>
+            <characteristic characteristicId="4c4423232344415441232323" name="LD"/>
+            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+            <characteristic characteristicId="5479706523232344415441232323" name="Type" value=""/>
+            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value=""/>
+          </characteristics>
+          <modifiers/>
+        </profile>
+        <profile id="17da-b042-beb5-e299" profileTypeId="4d6f64656c23232344415441232323" name="Cadaver Master" hidden="false">
+          <characteristics>
+            <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
+            <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
+            <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
+            <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
+            <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
+            <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
+            <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
+            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="5"/>
+            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value=""/>
+            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave" value=""/>
+            <characteristic characteristicId="4d5223232344415441232323" name="MR" value=""/>
+            <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
+            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
+          </characteristics>
+          <modifiers/>
+        </profile>
       </profiles>
       <links>
-        <link id="ab63-8b52-0103-4e82" targetId="eeea-cfd1-e63d-8d4c" linkType="rule">
+        <link id="ea8f-9b8a-6298-802c" targetId="eeea-cfd1-e63d-8d4c" linkType="rule">
           <modifiers/>
         </link>
-        <link id="e1b8-a683-1512-cc0a" targetId="3249-3d9e-5d02-f7c9" linkType="rule">
+        <link id="39ad-cc6a-2d0e-2231" targetId="3249-3d9e-5d02-f7c9" linkType="rule">
           <modifiers/>
         </link>
-        <link id="c68e-efd8-08c0-178d" targetId="a6f2-05a8-21b6-84be" linkType="rule">
+        <link id="b609-ede8-2bc0-3d81" targetId="31d2-46b4-7c21-b1e7" linkType="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (2D6) Shamling Horde" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="0799-0bb2-b503-dbd0" targetId="a6f2-05a8-21b6-84be" linkType="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (4+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
@@ -1124,15 +1065,23 @@
             </modifier>
           </modifiers>
         </link>
-        <link id="788d-41dc-bb13-e435" targetId="1b6c-d106-c9d3-f6b7" linkType="rule">
+        <link id="502e-561a-fa6e-6485" targetId="1b6c-d106-c9d3-f6b7" linkType="rule">
           <modifiers/>
         </link>
-        <link id="a3a1-4787-b32a-5366" targetId="42ff-db03-1efb-37d7" linkType="entry">
+        <link id="7f46-2046-c266-d842" targetId="42ff-db03-1efb-37d7" linkType="entry">
           <modifiers/>
+        </link>
+        <link id="1a1d-56a2-1c97-ceca" targetId="a7c9-81ec-0fa6-2eb5" linkType="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
-    <entry id="7036-47d5-d785-237f" name="Court of the Damned​" points="200.0" categoryId="5370656369616c23232344415441232323" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="7036-47d5-d785-237f" name="Court of the Damned​" points="140.0" categoryId="5370656369616c23232344415441232323" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="482c-d887-a500-682c" name="Ghost Steed" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -1154,7 +1103,7 @@
             </link>
           </links>
         </entry>
-        <entry id="c75b-9ff1-1b7d-0ad5" name="Blood Ties (Lamia) - Unholy Dominion" points="35.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+        <entry id="c75b-9ff1-1b7d-0ad5" name="Blood Ties (Lamia)" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
           <entries/>
           <entryGroups/>
           <modifiers>
@@ -1168,8 +1117,17 @@
           <rules/>
           <profiles/>
           <links>
-            <link id="21cb-b5fe-9ca5-c9ff" targetId="45a2-78a1-baad-c3b1" linkType="rule">
-              <modifiers/>
+            <link id="9b2c-3137-c573-9799" targetId="c189-a764-5e9c-e7db" linkType="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (4+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="append" field="name" value="(4+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
           </links>
         </entry>
@@ -1200,6 +1158,18 @@
             </profile>
           </profiles>
           <links/>
+        </entry>
+        <entry id="6893-41b0-d015-7c8e" name="Unholy Dominion" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="18b2-dba4-e485-692c" targetId="45a2-78a1-baad-c3b1" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
         </entry>
       </entries>
       <entryGroups/>
@@ -1238,7 +1208,7 @@
           </characteristics>
           <modifiers/>
         </profile>
-        <profile id="fec7-c615-bf63-57bb" profileTypeId="4d6f64656c23232344415441232323" name="Ghost Steeds (1)" hidden="false">
+        <profile id="fec7-c615-bf63-57bb" profileTypeId="4d6f64656c23232344415441232323" name="Ghost Steeds" hidden="false">
           <characteristics>
             <characteristic characteristicId="4d23232344415441232323" name="M" value="8"/>
             <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
@@ -1268,26 +1238,7 @@
         <link id="0c00-a24a-39d6-0615" targetId="fc37-afc2-2043-4c9a" linkType="rule">
           <modifiers/>
         </link>
-        <link id="0a54-f99f-c8ef-dec3" targetId="64ed-4d89-0686-9615" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="0ca0-93f4-df8e-a116" targetId="8db6-5208-786b-6fa1" linkType="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
-        <link id="f0ac-b60e-dcfe-b9d0" targetId="c189-a764-5e9c-e7db" linkType="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (4+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
-        <link id="d2d7-4fc6-f916-e77f" targetId="868d-580d-07cf-9ba9" linkType="rule">
+        <link id="0a54-f99f-c8ef-dec3" targetId="f743-de9a-5dba-6ab2" linkType="rule">
           <modifiers/>
         </link>
         <link id="ded4-3135-1ff2-1c16" targetId="868d-580d-07cf-9ba9" linkType="rule">
@@ -1298,16 +1249,16 @@
             </modifier>
           </modifiers>
         </link>
-        <link id="99ee-3dde-831d-7729" targetId="e028-ee38-360f-5a5c" linkType="rule">
+        <link id="8044-ae6f-687b-968b" targetId="42ff-db03-1efb-37d7" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="da39-2125-73df-dbc9" targetId="a7c9-81ec-0fa6-2eb5" linkType="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (Sisterhood of the Silver Keep)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="append" field="name" value="(5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
-        </link>
-        <link id="8044-ae6f-687b-968b" targetId="42ff-db03-1efb-37d7" linkType="entry">
-          <modifiers/>
         </link>
       </links>
     </entry>
@@ -1343,7 +1294,7 @@
                 <characteristic characteristicId="4923232344415441232323" name="I" value="-"/>
                 <characteristic characteristicId="4123232344415441232323" name="A" value="-"/>
                 <characteristic characteristicId="4c4423232344415441232323" name="LD" value="-"/>
-                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value="3+"/>
+                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value="4+"/>
                 <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave" value="4+"/>
                 <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
                 <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Chariot"/>
@@ -1355,7 +1306,7 @@
           <links>
             <link id="8c4c-f8f1-d669-6301" targetId="a7c9-81ec-0fa6-2eb5" linkType="rule">
               <modifiers>
-                <modifier type="append" field="name" value="(5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                <modifier type="append" field="name" value="(6+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions/>
                   <conditionGroups/>
                 </modifier>
@@ -1444,7 +1395,14 @@
                 <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
                 <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
               </characteristics>
-              <modifiers/>
+              <modifiers>
+                <modifier type="increment" field="4123232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="8457-9cf7-5623-fae2" childId="ab65-8db3-2131-cd77" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <links/>
@@ -1499,7 +1457,16 @@
               <modifiers/>
             </profile>
           </profiles>
-          <links/>
+          <links>
+            <link id="59f1-8507-0a39-1e73" targetId="868d-580d-07cf-9ba9" linkType="rule">
+              <modifiers>
+                <modifier type="append" field="name" value="(5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+          </links>
         </entry>
         <entry id="ab65-8db3-2131-cd77" name="Extended Chassis" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -1507,22 +1474,22 @@
           <modifiers/>
           <rules/>
           <profiles>
-            <profile id="f9a0-9266-c9fd-53c1" profileTypeId="4d6f64656c23232344415441232323" name="Extended Chassis" hidden="false">
+            <profile id="0f1b-822f-77b0-3aaf" profileTypeId="4d6f64656c23232344415441232323" name="Extended Chassis" hidden="false">
               <characteristics>
-                <characteristic characteristicId="4d23232344415441232323" name="M" value="8"/>
+                <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
                 <characteristic characteristicId="575323232344415441232323" name="WS" value="-"/>
                 <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
                 <characteristic characteristicId="5323232344415441232323" name="S" value="5"/>
                 <characteristic characteristicId="5423232344415441232323" name="T" value="6"/>
-                <characteristic characteristicId="5723232344415441232323" name="W" value="5"/>
-                <characteristic characteristicId="4923232344415441232323" name="I"/>
-                <characteristic characteristicId="4123232344415441232323" name="A"/>
-                <characteristic characteristicId="4c4423232344415441232323" name="LD"/>
-                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
-                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+                <characteristic characteristicId="5723232344415441232323" name="W" value="4"/>
+                <characteristic characteristicId="4923232344415441232323" name="I" value="-"/>
+                <characteristic characteristicId="4123232344415441232323" name="A" value="-"/>
+                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="-"/>
+                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value="4+"/>
+                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave" value="4+"/>
                 <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-                <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
-                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="50x150"/>
+                <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Chariot"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="50x150mm"/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -2076,33 +2043,11 @@ Stage       Wounds caused Bonus
             </entry>
             <entry id="5b07-3f98-efb2-4774" name="Standard Bearer" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
-              <entryGroups>
-                <entryGroup id="1734-90e1-7eef-61d8" name="Magic Banner (25pts)" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="25.0" collective="false" hidden="true">
-                  <entries/>
-                  <entryGroups/>
-                  <modifiers>
-                    <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                      <conditions>
-                        <condition parentId="accd-5a88-37c9-06b9" childId="50ec-96f9-d7d1-024f" field="selections" type="equal to" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
-                  <links>
-                    <link id="8394-9763-45d3-42c8" targetId="e75b-835d-c687-7de1" linkType="entry group">
-                      <modifiers/>
-                    </link>
-                  </links>
-                </entryGroup>
-              </entryGroups>
+              <entryGroups/>
               <modifiers/>
               <rules/>
               <profiles/>
-              <links>
-                <link id="50ec-96f9-d7d1-024f" targetId="817e-c49e-c077-e10c" linkType="entry">
-                  <modifiers/>
-                </link>
-              </links>
+              <links/>
             </entry>
             <entry id="60f7-fe5c-f23c-f2e7" name="Champion" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
@@ -2587,7 +2532,7 @@ Stage       Wounds caused Bonus
     </entry>
     <entry id="5852-6746-a5b5-2cc1" name="Phantom Host" points="10.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="e9e4-8c84-ab50-2aa7" name="Phantom Host" points="30.0" categoryId="(No Category)" type="model" minSelections="2" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="e9e4-8c84-ab50-2aa7" name="Phantom Host" points="25.0" categoryId="(No Category)" type="model" minSelections="2" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -2656,15 +2601,21 @@ Stage       Wounds caused Bonus
         </link>
       </links>
     </entry>
-    <entry id="e8c1-4b6c-4f3f-e67d" name="Shrieking Horror" points="230.0" categoryId="5261726523232344415441232323" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="e8c1-4b6c-4f3f-e67d" name="Shrieking Horror" points="245.0" categoryId="5261726523232344415441232323" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers>
         <modifier type="set" field="maxInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="force type" childId="7732-e457-4a60-ddb3" field="selections" type="instance of" value="0.0"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition parentId="force type" childId="7732-e457-4a60-ddb3" field="selections" type="instance of" value="0.0"/>
+                <condition parentId="roster" childId="c202-7acb-2dd6-1e7a" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="maxInRoster" value="4.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
@@ -2719,12 +2670,7 @@ Stage       Wounds caused Bonus
           </modifiers>
         </link>
         <link id="4a09-0bcb-0b3f-6532" targetId="0a68-0101-9bab-3307" linkType="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(6,4)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
         </link>
         <link id="63b1-d851-eb99-a4ff" targetId="1d3c-61f5-bbc2-5ce6" linkType="entry">
           <modifiers/>
@@ -2845,7 +2791,7 @@ Stage       Wounds caused Bonus
                 </link>
               </links>
             </entry>
-            <entry id="12cd-9d27-e94a-635f" name="Halberd" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+            <entry id="12cd-9d27-e94a-635f" name="Halberd" points="1.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false" page="0">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -2940,16 +2886,6 @@ Stage       Wounds caused Bonus
               <entryGroups/>
               <modifiers/>
               <links>
-                <link id="573a-c8ac-e349-0b48" targetId="5b51-8203-36bf-975c" linkType="entry">
-                  <modifiers>
-                    <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                      <conditions>
-                        <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="at least" value="1.0"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
-                </link>
                 <link id="1431-6b59-337e-2287" targetId="61d2-0536-c01f-2069" linkType="entry">
                   <modifiers>
                     <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
@@ -2971,7 +2907,14 @@ Stage       Wounds caused Bonus
                   </modifiers>
                 </link>
                 <link id="45ec-da3f-acef-f9d9" targetId="c202-7acb-2dd6-1e7a" linkType="entry">
-                  <modifiers/>
+                  <modifiers>
+                    <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions>
+                        <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="equal to" value="0.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </modifier>
+                  </modifiers>
                 </link>
                 <link id="76af-2733-9659-7b1f" targetId="f847-7f2d-6117-b911" linkType="entry">
                   <modifiers>
@@ -2983,7 +2926,7 @@ Stage       Wounds caused Bonus
                     </modifier>
                   </modifiers>
                 </link>
-                <link id="39a0-ff08-57fc-522d" targetId="9266-132c-3111-942d" linkType="entry">
+                <link id="23c2-494f-e8a6-bea2" targetId="d7e4-da94-4db0-ad47" linkType="entry">
                   <modifiers>
                     <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                       <conditions>
@@ -2993,8 +2936,21 @@ Stage       Wounds caused Bonus
                     </modifier>
                   </modifiers>
                 </link>
-                <link id="23c2-494f-e8a6-bea2" targetId="d7e4-da94-4db0-ad47" linkType="entry">
-                  <modifiers/>
+                <link id="a06d-a12f-c70a-04d1" targetId="2252-8130-d29f-809e" linkType="entry">
+                  <modifiers>
+                    <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions>
+                        <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="at least" value="1.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </modifier>
+                    <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions>
+                        <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="at least" value="1.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </modifier>
+                  </modifiers>
                 </link>
               </links>
             </entryGroup>
@@ -3483,12 +3439,6 @@ Stage       Wounds caused Bonus
                   </conditions>
                   <conditionGroups/>
                 </modifier>
-                <modifier type="set" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="172a-8c4e-16a5-b1e0" childId="ccb0-01ee-0dd0-f902" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
               </modifiers>
               <rules/>
               <profiles/>
@@ -3818,7 +3768,7 @@ Stage       Wounds caused Bonus
         </link>
       </links>
     </entry>
-    <entry id="951e-6eba-73f2-2f4a" name="Vampire Courtier" points="80.0" categoryId="c76a9923-4373-79cb-bfba-ed9b87d453e1" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="951e-6eba-73f2-2f4a" name="Vampire Courtier" points="75.0" categoryId="c76a9923-4373-79cb-bfba-ed9b87d453e1" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="a1b3-b0e4-30ab-3696" name="Shield" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -3855,14 +3805,38 @@ Stage       Wounds caused Bonus
               <links>
                 <link id="baab-d5c1-0877-468b" targetId="61d2-0536-c01f-2069" linkType="entry">
                   <modifiers>
-                    <modifier type="set" field="points" value="120.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                    <modifier type="set" field="points" value="110.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                       <conditions/>
                       <conditionGroups/>
                     </modifier>
                   </modifiers>
                 </link>
                 <link id="cf4c-961f-1239-5086" targetId="6da8-47ee-a9ba-63ba" linkType="entry">
+                  <modifiers>
+                    <modifier type="set" field="points" value="15.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions/>
+                      <conditionGroups/>
+                    </modifier>
+                  </modifiers>
+                </link>
+                <link id="8bf4-496f-f9b0-816b" targetId="d7e4-da94-4db0-ad47" linkType="entry">
                   <modifiers/>
+                </link>
+                <link id="9975-5b83-55ef-a976" targetId="2252-8130-d29f-809e" linkType="entry">
+                  <modifiers>
+                    <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions>
+                        <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="at least" value="1.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </modifier>
+                    <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions>
+                        <condition parentId="roster" childId="1b65-630e-1182-fadf" field="selections" type="at least" value="1.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </modifier>
+                  </modifiers>
                 </link>
               </links>
             </entryGroup>
@@ -4047,7 +4021,7 @@ Stage       Wounds caused Bonus
         </entryGroup>
         <entryGroup id="107f-edc2-818a-e1d2" name="Wizard Level" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="746f-f869-4162-0899" name="Level 1 Wizard Apprentice" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+            <entry id="746f-f869-4162-0899" name="Level 1 Wizard Apprentice" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
               <entries/>
               <entryGroups>
                 <entryGroup id="0129-b9ad-5c81-d357" name="Path of Magic" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -4161,7 +4135,7 @@ Stage       Wounds caused Bonus
               <profiles/>
               <links/>
             </entry>
-            <entry id="7949-bf8a-1184-ecc9" name="Level 2 Wizard Apprentice" points="65.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+            <entry id="7949-bf8a-1184-ecc9" name="Level 2 Wizard Apprentice" points="55.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
               <entries/>
               <entryGroups>
                 <entryGroup id="1621-ee6f-a222-9811" name="Path of Magic" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -4258,12 +4232,6 @@ Stage       Wounds caused Bonus
                   </conditionGroups>
                 </modifier>
                 <modifier type="set" field="points" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="951e-6eba-73f2-2f4a" childId="2cb2-5053-15b3-245f" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-                <modifier type="set" field="maxSelections" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
                     <condition parentId="951e-6eba-73f2-2f4a" childId="2cb2-5053-15b3-245f" field="selections" type="equal to" value="1.0"/>
                   </conditions>
@@ -4746,7 +4714,7 @@ Stage       Wounds caused Bonus
         </link>
       </links>
     </entry>
-    <entry id="4420-17fa-8fe1-143c" name="Vampire Spawn" points="-5.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="4420-17fa-8fe1-143c" name="Vampire Spawn" points="-15.0" categoryId="5370656369616c23232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="ab85-10d3-4890-9ea6" name="Vampire Spawn" points="40.0" categoryId="(No Category)" type="model" minSelections="3" maxSelections="8" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -4936,12 +4904,12 @@ Stage       Wounds caused Bonus
       <profiles/>
       <links/>
     </entry>
-    <entry id="2018-f521-3d39-281a" name="Varkolak" points="165.0" categoryId="5370656369616c23232344415441232323" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="2018-f521-3d39-281a" name="Varkolak" points="175.0" categoryId="5370656369616c23232344415441232323" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups>
         <entryGroup id="c557-80e2-a9e0-083f" name="May take one of the following" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="4122-be19-0c57-2f4f" name="Fly" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="4122-be19-0c57-2f4f" name="Fly" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -4970,7 +4938,7 @@ Stage       Wounds caused Bonus
                 </link>
               </links>
             </entry>
-            <entry id="3ea8-0e6b-6221-5b84" name="Stomp" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="3ea8-0e6b-6221-5b84" name="Stomp" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -4987,7 +4955,7 @@ Stage       Wounds caused Bonus
                 </link>
               </links>
             </entry>
-            <entry id="8eba-3414-4ddf-616c" name="Vampiric (3+)" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="8eba-3414-4ddf-616c" name="Vampiric (3+)" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -5085,9 +5053,9 @@ Stage       Wounds caused Bonus
         </link>
       </links>
     </entry>
-    <entry id="c7d7-11af-11a4-1340" name="Winged Reapers" points="10.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="c7d7-11af-11a4-1340" name="Winged Reapers" points="11.0" categoryId="5261726523232344415441232323" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="8f69-520b-346e-58aa" name="Winged Reapers" points="70.0" categoryId="(No Category)" type="upgrade" minSelections="2" maxSelections="5" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="8f69-520b-346e-58aa" name="Winged Reapers" points="72.0" categoryId="(No Category)" type="upgrade" minSelections="2" maxSelections="5" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -5115,15 +5083,10 @@ Stage       Wounds caused Bonus
           </profiles>
           <links/>
         </entry>
-        <entry id="6a32-143f-3f3a-c8ff" name="Light Armour" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="6a32-143f-3f3a-c8ff" name="Light Armour" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
           <entries/>
           <entryGroups/>
-          <modifiers>
-            <modifier type="increment" field="points" value="10.0" repeat="true" numRepeats="1" incrementParentId="c7d7-11af-11a4-1340" incrementChildId="8f69-520b-346e-58aa" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <rules/>
           <profiles/>
           <links/>
@@ -5132,31 +5095,29 @@ Stage       Wounds caused Bonus
       <entryGroups>
         <entryGroup id="e2ca-b237-1022-e101" name="May take one weapon of the following:" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="9d82-721d-f5f9-df28" name="Additional Hand Weapon" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="9d82-721d-f5f9-df28" name="Paired Weapons" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
               <entries/>
               <entryGroups/>
-              <modifiers>
-                <modifier type="increment" field="points" value="5.0" repeat="true" numRepeats="1" incrementParentId="c7d7-11af-11a4-1340" incrementChildId="8f69-520b-346e-58aa" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
+              <modifiers/>
               <rules/>
               <profiles/>
-              <links/>
+              <links>
+                <link id="8953-7cb2-bfc0-9b1d" targetId="1cc8-6058-cce5-626a" linkType="profile">
+                  <modifiers/>
+                </link>
+              </links>
             </entry>
-            <entry id="4624-d578-b52f-ceab" name="Halberd" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="4624-d578-b52f-ceab" name="Halberd" points="12.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
               <entries/>
               <entryGroups/>
-              <modifiers>
-                <modifier type="increment" field="points" value="10.0" repeat="true" numRepeats="1" incrementParentId="c7d7-11af-11a4-1340" incrementChildId="8f69-520b-346e-58aa" incrementField="selections" incrementValue="1.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
+              <modifiers/>
               <rules/>
               <profiles/>
-              <links/>
+              <links>
+                <link id="8e2f-a3de-3925-2507" targetId="e46d-0f58-2390-6842" linkType="profile">
+                  <modifiers/>
+                </link>
+              </links>
             </entry>
           </entries>
           <entryGroups/>
@@ -5177,7 +5138,7 @@ Stage       Wounds caused Bonus
                 </link>
               </links>
             </entry>
-            <entry id="6ed1-4bbe-c518-8e6d" name="Autonomous" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="6ed1-4bbe-c518-8e6d" name="Autonomous" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -5237,7 +5198,7 @@ Stage       Wounds caused Bonus
             </modifier>
           </modifiers>
         </link>
-        <link id="865b-b0e4-ebb1-7d23" targetId="64ed-4d89-0686-9615" linkType="rule">
+        <link id="865b-b0e4-ebb1-7d23" targetId="f743-de9a-5dba-6ab2" linkType="rule">
           <modifiers/>
         </link>
         <link id="7a03-894f-a660-cf40" targetId="4dde-38dd-6f7e-b43d" linkType="rule">
@@ -5245,6 +5206,14 @@ Stage       Wounds caused Bonus
         </link>
         <link id="494b-4a1e-3dd9-b4b2" targetId="9720-543b-4ac1-2d4f" linkType="entry">
           <modifiers/>
+        </link>
+        <link id="2112-11e1-77fc-4029" targetId="8db6-5208-786b-6fa1" linkType="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -5352,11 +5321,28 @@ Stage       Wounds caused Bonus
                 </modifier>
               </modifiers>
               <rules/>
-              <profiles/>
-              <links>
-                <link id="38d6-e4f3-bfa8-a4cb" targetId="d7e4-da94-4db0-ad47" linkType="entry">
+              <profiles>
+                <profile id="3c63-f7e7-005b-8c5e" profileTypeId="4d6f64656c23232344415441232323" name="Ghost Steeds" hidden="false">
+                  <characteristics>
+                    <characteristic characteristicId="4d23232344415441232323" name="M" value="8"/>
+                    <characteristic characteristicId="575323232344415441232323" name="WS" value="2"/>
+                    <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
+                    <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
+                    <characteristic characteristicId="5423232344415441232323" name="T" value="3"/>
+                    <characteristic characteristicId="5723232344415441232323" name="W" value="1"/>
+                    <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
+                    <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
+                    <characteristic characteristicId="4c4423232344415441232323" name="LD" value="3"/>
+                    <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+                    <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+                    <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+                    <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Cavalry"/>
+                    <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="25x20mm"/>
+                  </characteristics>
                   <modifiers/>
-                </link>
+                </profile>
+              </profiles>
+              <links>
                 <link id="16a6-66f9-e10c-2514" targetId="a7c9-81ec-0fa6-2eb5" linkType="rule">
                   <modifiers/>
                 </link>
@@ -5413,7 +5399,9 @@ Stage       Wounds caused Bonus
         <link id="f539-6472-12cb-5b40" targetId="cbb3-1499-3221-d592" linkType="rule">
           <modifiers>
             <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="8aa0-696f-5e26-1ea2" incrementField="selections" incrementValue="1.0">
-              <conditions/>
+              <conditions>
+                <condition parentId="fb24-e47d-605f-039c" childId="8aa0-696f-5e26-1ea2" field="selections" type="equal to" value="1.0"/>
+              </conditions>
               <conditionGroups/>
             </modifier>
           </modifiers>
@@ -5581,7 +5569,8 @@ the range of the Battle Standard Bearer’s Hold your Ground.
       <modifiers/>
       <rules>
         <rule id="320e-a8f7-825f-1615" name="Blood Power: Forbidden Path" hidden="false">
-          <description>The Vampire gains access to an additional Path of Battle Magic except Path of Life.</description>
+          <description>The Vampire can generate spells from the Path of Necromancy or any of the Battle Magic Paths other than Path of Nature.
+</description>
           <modifiers/>
         </rule>
       </rules>
@@ -5759,23 +5748,15 @@ the range of the Battle Standard Bearer’s Hold your Ground.
       <profiles/>
       <links/>
     </entry>
-    <entry id="49dc-a999-2857-b304" name="Cadaver Wagon" points="80.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="49dc-a999-2857-b304" name="Cadaver Wagon" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="9a6e-5668-c3b6-f777" name="Natural Armour" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
-          <entryGroups/>
-          <modifiers/>
-          <rules/>
-          <profiles/>
-          <links/>
-        </entry>
         <entry id="f2e2-fd2b-4f9d-b286" name="Endless Horde" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
           <rules>
             <rule id="b0ba-dade-43fd-0485" name="Endless Horde" hidden="false">
-              <description>​: The Cadaver Wagon has War Platform, but can only join units of Zombies. While joined to Zombies, the Cadaver Master may issue and accept Challenges as if it was a Champion. If this upgrade is taken, the model changes its base to 60x100mm.
+              <description>The Cadaver Wagon has War Platform, but can only join units of Zombies. While joined to Zombies, the Cadaver Master may issue and accept Challenges as if it was a Champion. If this upgrade is taken, the model changes its base to 60x100mm.
 </description>
               <modifiers/>
             </rule>
@@ -5807,7 +5788,8 @@ the range of the Battle Standard Bearer’s Hold your Ground.
               <modifiers/>
               <rules>
                 <rule id="9137-bc6b-ef24-9b9c" name="Bring Out Your Dead" hidden="false">
-                  <description>​Friendly Wizards who cast Invocation of Nehek while being within 6” one or more Cadaver Wagons with this upgrade, and the Cadaver Wagon itself, can re-roll a single die used to determine the amount of Wounds restored, for each unit targeted</description>
+                  <description>​Friendly units targeted by Invocation of the Undead when cast by a Wizard that is within 6&quot; of one or more Cadaver Wagon with this upgrade increase their Invocation Characteristic based on their Height for this spell: If Small Height: +2 Invocation, If Medium Height: +1 Invocation, Ethereal or Vampiric models are not affected.
+</description>
                   <modifiers/>
                 </rule>
               </rules>
@@ -5878,8 +5860,8 @@ the range of the Battle Standard Bearer’s Hold your Ground.
             <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
             <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
             <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-            <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
-            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
+            <characteristic characteristicId="5479706523232344415441232323" name="Type" value=""/>
+            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value=""/>
           </characteristics>
           <modifiers/>
         </profile>
@@ -5912,6 +5894,14 @@ the range of the Battle Standard Bearer’s Hold your Ground.
         </link>
         <link id="f194-840c-21ea-0383" targetId="42ff-db03-1efb-37d7" linkType="entry">
           <modifiers/>
+        </link>
+        <link id="640c-83e2-2ef1-5e16" targetId="a7c9-81ec-0fa6-2eb5" linkType="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -6029,16 +6019,16 @@ the range of the Battle Standard Bearer’s Hold your Ground.
         </link>
       </links>
     </entry>
-    <entry id="5b51-8203-36bf-975c" name="Court of the Damned" points="200.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="2252-8130-d29f-809e" name="Court of the Damned​" points="140.0" categoryId="5370656369616c23232344415441232323" type="model" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="d6f2-2498-60d3-c76e" name="Ghost Steeds" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="93ea-5b81-76bc-0f39" name="Ghost Steed" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
           <rules/>
           <profiles/>
           <links>
-            <link id="b428-74ae-15ea-823d" targetId="31d2-46b4-7c21-b1e7" linkType="rule">
+            <link id="7068-e8f9-c7e8-8d95" targetId="31d2-46b4-7c21-b1e7" linkType="rule">
               <modifiers>
                 <modifier type="append" field="name" value="(2D6) Ghost Steeds" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions/>
@@ -6046,12 +6036,12 @@ the range of the Battle Standard Bearer’s Hold your Ground.
                 </modifier>
               </modifiers>
             </link>
-            <link id="e714-a5d4-b499-19fe" targetId="347c-07db-9f06-ccec" linkType="rule">
+            <link id="9c41-89e1-7d21-eb4f" targetId="347c-07db-9f06-ccec" linkType="rule">
               <modifiers/>
             </link>
           </links>
         </entry>
-        <entry id="722f-087a-3e75-b197" name="Unholy Dominion" points="35.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+        <entry id="0517-361a-7613-a6ee" name="Blood Ties (Lamia)" points="55.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
           <entries/>
           <entryGroups/>
           <modifiers>
@@ -6065,7 +6055,56 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <rules/>
           <profiles/>
           <links>
-            <link id="08fd-f496-3029-196d" targetId="45a2-78a1-baad-c3b1" linkType="rule">
+            <link id="1595-0f34-58b8-63de" targetId="c189-a764-5e9c-e7db" linkType="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (4+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="append" field="name" value="(4+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </link>
+          </links>
+        </entry>
+        <entry id="fbee-f7e0-585b-2097" name="Paramours" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="2" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles>
+            <profile id="a129-f598-47f2-a041" profileTypeId="4d6f64656c23232344415441232323" name="Paramour" hidden="false">
+              <characteristics>
+                <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
+                <characteristic characteristicId="575323232344415441232323" name="WS" value="5"/>
+                <characteristic characteristicId="425323232344415441232323" name="BS" value="5"/>
+                <characteristic characteristicId="5323232344415441232323" name="S" value="5"/>
+                <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
+                <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
+                <characteristic characteristicId="4923232344415441232323" name="I" value="6"/>
+                <characteristic characteristicId="4123232344415441232323" name="A" value="2"/>
+                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="7"/>
+                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+                <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
+              </characteristics>
+              <modifiers/>
+            </profile>
+          </profiles>
+          <links/>
+        </entry>
+        <entry id="c9a0-2086-01a8-0329" name="Unholy Dominion" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links>
+            <link id="d7ea-8c2d-3107-406b" targetId="45a2-78a1-baad-c3b1" linkType="rule">
               <modifiers/>
             </link>
           </links>
@@ -6075,7 +6114,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
       <modifiers/>
       <rules/>
       <profiles>
-        <profile id="a5cc-b2a6-ec43-c4ba" profileTypeId="4d6f64656c23232344415441232323" name="Court of the Damned" hidden="false">
+        <profile id="1d96-bdf1-6060-78bd" profileTypeId="4d6f64656c23232344415441232323" name="Court of the Damned​" hidden="false">
           <characteristics>
             <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
             <characteristic characteristicId="575323232344415441232323" name="WS" value="-"/>
@@ -6094,26 +6133,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           </characteristics>
           <modifiers/>
         </profile>
-        <profile id="4534-58ad-3cbb-22df" profileTypeId="4d6f64656c23232344415441232323" name="Paramours (2)" hidden="false">
-          <characteristics>
-            <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
-            <characteristic characteristicId="575323232344415441232323" name="WS" value="5"/>
-            <characteristic characteristicId="425323232344415441232323" name="BS" value="5"/>
-            <characteristic characteristicId="5323232344415441232323" name="S" value="5"/>
-            <characteristic characteristicId="5423232344415441232323" name="T" value="-"/>
-            <characteristic characteristicId="5723232344415441232323" name="W" value="-"/>
-            <characteristic characteristicId="4923232344415441232323" name="I" value="6"/>
-            <characteristic characteristicId="4123232344415441232323" name="A" value="2"/>
-            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="7"/>
-            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
-            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
-            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-            <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
-            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
-          </characteristics>
-          <modifiers/>
-        </profile>
-        <profile id="97e2-d154-b368-36ac" profileTypeId="4d6f64656c23232344415441232323" name="Ghost Steeds (1)" hidden="false">
+        <profile id="f6a4-66df-8567-e19c" profileTypeId="4d6f64656c23232344415441232323" name="Ghost Steeds" hidden="false">
           <characteristics>
             <characteristic characteristicId="4d23232344415441232323" name="M" value="8"/>
             <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
@@ -6134,38 +6154,19 @@ the range of the Battle Standard Bearer’s Hold your Ground.
         </profile>
       </profiles>
       <links>
-        <link id="cc5c-c4fe-e637-16b8" targetId="eeea-cfd1-e63d-8d4c" linkType="rule">
+        <link id="2fa7-712d-2885-383c" targetId="eeea-cfd1-e63d-8d4c" linkType="rule">
           <modifiers/>
         </link>
-        <link id="ca55-5ca2-73a5-a28a" targetId="3249-3d9e-5d02-f7c9" linkType="rule">
+        <link id="61b1-6117-2665-6028" targetId="3249-3d9e-5d02-f7c9" linkType="rule">
           <modifiers/>
         </link>
-        <link id="9709-34cc-5817-5cb8" targetId="fc37-afc2-2043-4c9a" linkType="rule">
+        <link id="1c28-3930-381e-992e" targetId="fc37-afc2-2043-4c9a" linkType="rule">
           <modifiers/>
         </link>
-        <link id="240a-1c1a-b8a4-28e4" targetId="64ed-4d89-0686-9615" linkType="rule">
+        <link id="6258-c55d-2c40-d703" targetId="f743-de9a-5dba-6ab2" linkType="rule">
           <modifiers/>
         </link>
-        <link id="cef4-a0a7-4342-98d1" targetId="8db6-5208-786b-6fa1" linkType="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
-        <link id="d2f4-71ae-47e1-45d5" targetId="c189-a764-5e9c-e7db" linkType="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (4+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
-        <link id="1025-56a7-32fe-ce5d" targetId="868d-580d-07cf-9ba9" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="f618-fd51-4175-88d1" targetId="868d-580d-07cf-9ba9" linkType="rule">
+        <link id="52a5-7a8f-9609-7153" targetId="868d-580d-07cf-9ba9" linkType="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (6+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
@@ -6173,16 +6174,16 @@ the range of the Battle Standard Bearer’s Hold your Ground.
             </modifier>
           </modifiers>
         </link>
-        <link id="5b41-3c70-e996-79fc" targetId="e028-ee38-360f-5a5c" linkType="rule">
+        <link id="c670-2545-c0c8-08ea" targetId="42ff-db03-1efb-37d7" linkType="entry">
+          <modifiers/>
+        </link>
+        <link id="85f4-eb31-bfbb-fc93" targetId="a7c9-81ec-0fa6-2eb5" linkType="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (Lamia)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="append" field="name" value="(5+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
-        </link>
-        <link id="7dc1-3bac-533a-667e" targetId="42ff-db03-1efb-37d7" linkType="entry">
-          <modifiers/>
         </link>
       </links>
     </entry>
@@ -6220,7 +6221,11 @@ the range of the Battle Standard Bearer’s Hold your Ground.
               <modifiers/>
               <rules>
                 <rule id="fa17-47fa-4e8f-20dd" name="Blood Power: Mesmerizing Gaze" hidden="false">
-                  <description>The Vampire can cast Lurid Delusions (Path of Lust) as a Bound Spell, Power Level 4</description>
+                  <description>The Vampire can cast Lurid Delusions (Path of Lust) as a Bound Spell, Power Level 4:
+Range 24” Hex
+Lasts one Turn
+Whenever the target takes a Leadership test, it rolls an additional dice and discards the lowest.
+</description>
                   <modifiers/>
                 </rule>
               </rules>
@@ -6261,7 +6266,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
               <modifiers/>
               <rules>
                 <rule id="b078-26c3-70a9-1407" name="Ancient Blood Power: Commandment" hidden="false">
-                  <description>All Rank‐and‐File models in any unit joined by the Vampire have Weapon Skill 5. At the start of each Close Combat Phase, if the Vampire is not Engaged in Combat itself, it can choose to grant this bonus until end of the Close Combat Phase to a single friendly unit within 6” instead.
+                  <description>All Rank­and­File models in any unit joined by the Vampire have Weapon Skill 5.
 </description>
                   <modifiers/>
                 </rule>
@@ -6298,7 +6303,8 @@ the range of the Battle Standard Bearer’s Hold your Ground.
       </modifiers>
       <rules>
         <rule id="1189-ba3b-fddc-5860" name="Lamia Bloodline" hidden="false">
-          <description>The Vampire has ‐1 Attack and has LightningReflexes, and ifthe Vampire is notwearing any Armour (excluding Mount’s Protection and InnateDefence)it also hasDistracting. Challenges issued by the Vampire have to be accepted if possible and models fighting in a Challenge against it have to pass a Leadership test with an additional ‐1 Leadership modifier or must reroll successful to‐hit rolls for the duration of the Combat Round. The Vampire has to choose either the Path of Light, Shadow or Necromancy.</description>
+          <description>The Vampire has ­1 Attack and Lightning Reflexes.If the Vampire is not wearing any Armour (excluding Mount’s Protection and Innate Defence), it has Distracting. Challenges issued by the Vampire have to be accepted if possible. Any model fighting in a Challenge against the Vampire has to take a Leadership test with an additional­1 Leadership modifier.If this test is failed, the enemy model must reroll successful to­hit rolls for the duration of that Round of Combat. The Vampire must choose either the Path of Light, Shadows, or Necromancy.
+</description>
           <modifiers/>
         </rule>
       </rules>
@@ -6384,10 +6390,10 @@ the range of the Battle Standard Bearer’s Hold your Ground.
         </link>
       </links>
     </entry>
-    <entry id="61d2-0536-c01f-2069" name="Monstrous Revenant" points="100.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="61d2-0536-c01f-2069" name="Monstrous Revenant" points="90.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups>
-        <entryGroup id="7533-46ff-868c-705e" name="May take up to two" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entryGroup id="7533-46ff-868c-705e" name="Options:" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
             <entry id="6cd7-7594-62e2-dc06" name="Fly" points="40.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
@@ -6489,7 +6495,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <characteristics>
             <characteristic characteristicId="4d23232344415441232323" name="M" value="6"/>
             <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
-            <characteristic characteristicId="425323232344415441232323" name="BS" value="0"/>
+            <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
             <characteristic characteristicId="5323232344415441232323" name="S" value="5"/>
             <characteristic characteristicId="5423232344415441232323" name="T" value="5"/>
             <characteristic characteristicId="5723232344415441232323" name="W" value="4"/>
@@ -6836,7 +6842,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
       <profiles/>
       <links/>
     </entry>
-    <entry id="f576-fa94-0a7d-f399" name="Nosferatu Bloodline" points="120.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+    <entry id="f576-fa94-0a7d-f399" name="Nosferatu Bloodline" points="110.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
       <entries/>
       <entryGroups>
         <entryGroup id="822f-4e64-6abf-a8e9" name="Ancient Blood Power" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -6875,7 +6881,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
         </entryGroup>
         <entryGroup id="11aa-c910-fc35-beb9" name="Blood Powers" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="2ba7-19cd-4f7a-fd62" name="Blood Power: Arcane Knowledge" points="25.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="2ba7-19cd-4f7a-fd62" name="Blood Power: Arcane Knowledge" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -6907,7 +6913,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
         </entryGroup>
       </entryGroups>
       <modifiers>
-        <modifier type="set" field="points" value="60.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="points" value="50.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="direct parent" childId="951e-6eba-73f2-2f4a" field="selections" type="instance of" value="0.0"/>
           </conditions>
@@ -6916,8 +6922,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
       </modifiers>
       <rules>
         <rule id="4efb-905d-d81d-721e" name="Nosferatu Bloodline" hidden="false">
-          <description>The Vampire has ‐1 Attack, ‐2 Weapon Skill and may not be equipped with any Armour (excluding Mount’s Protection and Innate Defence) or any mundane Weapon. The Vampire becomes a Level 2 Wizard Apprentice if it is aHero Character or a level 4 Wizard Master if it is a Lord Character. The Vampire generates an additional spell and gainsAwaken (Zombies, Skeletons). A Nosferatu Vampire may generate spells from more than one Path of Magic available to it. The player must write on the Army List which Paths the Vampire knows and
-how many spells are generated from each Path</description>
+          <description>The Vampire has ­1 Attack, ­2 Weapon Skill, may not wear any Armour (excluding Mount’s Protection and Innate Defence) and may not wield a mundane Weapon. The Vampire becomes a Level 2 Wizard Apprentice if it is a Hero Character or a level 4 Wizard Master if it is a Lord Character. The Vampire gains Awaken (Zombies, Skeletons) and generates an additional spell, but must exchange one of its spells for Invocation of the Undead (Path of Necromancy).</description>
           <modifiers/>
         </rule>
       </rules>
@@ -6988,7 +6993,7 @@ how many spells are generated from each Path</description>
       <profiles/>
       <links/>
     </entry>
-    <entry id="c202-7acb-2dd6-1e7a" name="Shrieking Horror" points="230.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="c202-7acb-2dd6-1e7a" name="Shrieking Horror" points="245.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers/>
@@ -7037,13 +7042,8 @@ how many spells are generated from each Path</description>
             </modifier>
           </modifiers>
         </link>
-        <link id="8011-46d5-1673-a749" targetId="6fd7-8cee-a917-3dc2" linkType="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (6,4)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+        <link id="8011-46d5-1673-a749" targetId="0a68-0101-9bab-3307" linkType="rule">
+          <modifiers/>
         </link>
         <link id="698f-d97e-f38e-dc53" targetId="1d3c-61f5-bbc2-5ce6" linkType="entry">
           <modifiers/>
@@ -7107,7 +7107,7 @@ how many spells are generated from each Path</description>
       <modifiers/>
       <rules/>
       <profiles>
-        <profile id="2309-68b6-6c96-de23" profileTypeId="4d6f64656c23232344415441232323" name="Skeletal Steed" hidden="false">
+        <profile id="2309-68b6-6c96-de23" profileTypeId="4d6f64656c23232344415441232323" name="Spectral Steed" hidden="false">
           <characteristics>
             <characteristic characteristicId="4d23232344415441232323" name="M" value="8"/>
             <characteristic characteristicId="575323232344415441232323" name="WS" value="2"/>
@@ -7136,10 +7136,6 @@ how many spells are generated from each Path</description>
         </link>
         <link id="9b05-06bc-2e31-7e37" targetId="331d-1426-6647-d594" linkType="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (7)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="append" field="name" value="(8)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
@@ -7148,35 +7144,24 @@ how many spells are generated from each Path</description>
         </link>
       </links>
     </entry>
-    <entry id="6883-09c0-6a82-5ec2" name="Strigoi Bloodline" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+    <entry id="6883-09c0-6a82-5ec2" name="Strigoi Bloodline" points="55.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
       <entries/>
       <entryGroups>
         <entryGroup id="fb3d-cef1-eb8c-41fa" name="Ancient Blood Power" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="ddee-a882-5576-484b" name="Ancient Blood Power: Ghoul Lord" points="65.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="552a-6a33-9606-00c2" name="Ancient Blood Power: Beastial Bulk" points="55.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
               <rules>
-                <rule id="1f3e-fe9d-323c-fec4" name="Ancient Blood Power: Ghoul Lord" hidden="false">
-                  <description>The Vampire has Poisoned Attacks and Armour Piercing (1). All Ghouls in the same unit as the Vampire have Hatred and Armour Piercing (1). </description>
+                <rule id="43e4-a13d-784a-8a90" name="Blood Power: Beastial Bulk" hidden="false">
+                  <description>Models on foot only. The Vampire changes his Troop Type to Monstrous Infantry and his base to 40x40mm. It gains +1 Wound, is equipped with Paired Weapons and cannot be equipped with any other weapon (mundane or magical).
+</description>
                   <modifiers/>
                 </rule>
               </rules>
               <profiles/>
-              <links>
-                <link id="b1d9-c76e-e798-3b4b" targetId="f061-7400-a1c9-3d80" linkType="rule">
-                  <modifiers/>
-                </link>
-                <link id="8f6f-9926-3bf7-0b34" targetId="9ea6-7407-9159-bd26" linkType="rule">
-                  <modifiers>
-                    <modifier type="append" field="name" value=" (1)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                      <conditions/>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
-                </link>
-              </links>
+              <links/>
             </entry>
           </entries>
           <entryGroups/>
@@ -7225,19 +7210,30 @@ how many spells are generated from each Path</description>
                 </link>
               </links>
             </entry>
-            <entry id="a95b-5d63-0fb3-e680" name="Blood Power: Beastial Bulk" points="55.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="b49a-7e55-dac4-c197" name="Blood Power: Ghoul Lord" points="55.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
               <rules>
-                <rule id="7bbf-2bc4-b13d-7bed" name="Blood Power: Beastial Bulk" hidden="false">
-                  <description>Models on foot only. The Vampire changes his Troop Type to Monstrous Infantry and his base to 40x40mm. It gains +1 Wound, +1 Strength, Regeneration (5+) and Toughness 5. It is equipped with Paired Weapons and cannot be equipped with any other weapon (mundane or magical), and may not wear any kind of armour.
-</description>
+                <rule id="7219-9541-1cb1-9421" name="Ancient Blood Power: Ghoul Lord" hidden="false">
+                  <description>The Vampire has Poisoned Attacks and Armour Piercing (1). All Ghouls in the same unit as the Vampire have Hatred.</description>
                   <modifiers/>
                 </rule>
               </rules>
               <profiles/>
-              <links/>
+              <links>
+                <link id="84b8-7a2d-5844-aeb3" targetId="f061-7400-a1c9-3d80" linkType="rule">
+                  <modifiers/>
+                </link>
+                <link id="bf97-84e2-e290-0023" targetId="9ea6-7407-9159-bd26" linkType="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (1)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                      <conditions/>
+                      <conditionGroups/>
+                    </modifier>
+                  </modifiers>
+                </link>
+              </links>
             </entry>
           </entries>
           <entryGroups/>
@@ -7262,7 +7258,9 @@ how many spells are generated from each Path</description>
       </modifiers>
       <rules>
         <rule id="8c3b-c1cf-c1bc-6c7c" name="Strigoi Bloodline" hidden="false">
-          <description>The Vampire’s model has +1 Wound, Regeneration (5+) and Hatred. The Vampire cannot select any mount except for the Shrieking Horror, may not wear any kind of Armour (excluding Mount’s Protection), can only purchase a single additional Magic Level and must use the Path of Wilderness or the Path of Necromancy.
+          <description>The Vampire and its mount have Regeneration (5+) and Hatred. The Vampire has +1 Wound and cannot select any mount exceptfor a Shrieking Horror, may not wear any kind of Armour
+(excluding Mount’s Protection), can only purchase a single additional Magic Level, and must use the Path of Wilderness or the Path of Necromancy.
+
 </description>
           <modifiers/>
         </rule>
@@ -7338,7 +7336,7 @@ how many spells are generated from each Path</description>
               <modifiers/>
               <rules>
                 <rule id="1672-8b1a-c232-b778" name="Ancient Blood Power: Storm Caller" hidden="false">
-                  <description>The Vampire can cast Thunderbolt (Path of Heavens) as a Bound Spell Power Level 4, and all units within 12” of the Vampire gain Hard Target. Once per game, the Vampire may grant Lightning Attacks and Lightning Reflexes to itself and to all R&amp;F models in the same unit. This ability is activated at the start of any Close Combat Phase and lasts until the end of next turn.
+                  <description>The Vampire can cast Thunderbolt (Path of Heavens) as a Bound Spell Power Level 4, and all units within 12” of the Vampire gain Hard Target. Once per game, the Vampire may grant Lightning Attacks and Lightning Reflexes to itself and to all Rank­and­File models in its unit until the end of that Combat Round.
 </description>
                   <modifiers/>
                 </rule>
@@ -7372,7 +7370,7 @@ how many spells are generated from each Path</description>
               <modifiers/>
               <rules>
                 <rule id="7870-43b2-8bd0-824d" name="Thin Blood Power: Hour of the Wolf" hidden="false">
-                  <description>The Vampire gains Swiftstride and confers this special rule to any unit it joins, except other Characters with the Vampiric special rule. The Vampire gains Awaken (Zombies, Direwolves, Bat Swarms, Great Bats).
+                  <description>The Vampire and all models in the same unit as the Vampire have Swiftstride. Other Characters with the Vampiric special rule are not affected. The Vampire gains Awaken (Zombies, Direwolves, Bat Swarms, Great Bats).
 </description>
                   <modifiers/>
                 </rule>
@@ -7395,7 +7393,7 @@ how many spells are generated from each Path</description>
               <modifiers/>
               <rules>
                 <rule id="dea4-ee85-2459-7267" name="Thin Blood Power: Refined Taste" hidden="false">
-                  <description>The Vampire has the Vampiric (2+) Special Rule.
+                  <description>The Vampire has the Vampiric (2+)
 </description>
                   <modifiers/>
                 </rule>
@@ -7426,7 +7424,7 @@ how many spells are generated from each Path</description>
       </modifiers>
       <rules>
         <rule id="4395-d6b8-8ce6-a302" name="Von Karnstein Bloodline" hidden="false">
-          <description>The presence of one or more VonKarnstein Vampires grants +1 Combat Score.Undead units joined by the Vampire may march as if they had the Vampiric SpecialRule. The range of Inspiring Presence andHold Your Ground ofthe vampire is increased by 6”. In addition, the Vampire may reroll failed Hunger rolls.
+          <description>The Vampire may reroll failed Vampiric rolls, and the presence of one or more Von Karnstein Vampires grants +1 to their side’s Combat Score in any combat in which they participate. Undead units joined by a Von Karnstein Vampire may March as if they had the Vampiric special rule. When applicable, the ranges of Inspiring Presence and Hold Your Ground of Von Karnstein Vampires are increased by 6”.
 </description>
           <modifiers/>
         </rule>
@@ -7447,7 +7445,16 @@ how many spells are generated from each Path</description>
       </links>
     </entry>
     <entry id="f847-7f2d-6117-b911" name="Zombie Dragon" points="270.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-      <entries/>
+      <entries>
+        <entry id="1156-945d-9d28-072f" name="Colossal Zombie Dragon" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+          <entries/>
+          <entryGroups/>
+          <modifiers/>
+          <rules/>
+          <profiles/>
+          <links/>
+        </entry>
+      </entries>
       <entryGroups/>
       <modifiers/>
       <rules/>
@@ -7469,7 +7476,40 @@ how many spells are generated from each Path</description>
             <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monster"/>
             <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="50x100mm"/>
           </characteristics>
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="4d23232344415441232323" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="f847-7f2d-6117-b911" childId="1156-945d-9d28-072f" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile id="dbaf-cef7-782a-badc" profileTypeId="4d6f64656c23232344415441232323" name="Colossal Zombie Dragon" hidden="true">
+          <characteristics>
+            <characteristic characteristicId="4d23232344415441232323" name="M" value="6"/>
+            <characteristic characteristicId="575323232344415441232323" name="WS" value="5"/>
+            <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
+            <characteristic characteristicId="5323232344415441232323" name="S" value="6"/>
+            <characteristic characteristicId="5423232344415441232323" name="T" value="6"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="6"/>
+            <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
+            <characteristic characteristicId="4123232344415441232323" name="A" value="5"/>
+            <characteristic characteristicId="4c4423232344415441232323" name="LD" value="4"/>
+            <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value=""/>
+            <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+            <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+            <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
+            <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="100x150mm"/>
+          </characteristics>
+          <modifiers>
+            <modifier type="show" field="4d23232344415441232323" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="f847-7f2d-6117-b911" childId="1156-945d-9d28-072f" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <links>
@@ -7484,7 +7524,15 @@ how many spells are generated from each Path</description>
         <link id="039e-9e48-e962-d340" targetId="8db6-5208-786b-6fa1" linkType="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (4+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
+              <conditions>
+                <condition parentId="f847-7f2d-6117-b911" childId="1156-945d-9d28-072f" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="append" field="name" value=" (3+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="f847-7f2d-6117-b911" childId="1156-945d-9d28-072f" field="selections" type="equal to" value="1.0"/>
+              </conditions>
               <conditionGroups/>
             </modifier>
           </modifiers>
@@ -7702,7 +7750,7 @@ how many spells are generated from each Path</description>
           </profiles>
           <links/>
         </entry>
-        <entry id="ce78-89bf-c4a0-e0ca" name="Eye of Setesh" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Vampire Covenant">
+        <entry id="ce78-89bf-c4a0-e0ca" name="Eye of Setesh" points="15.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Vampire Covenant">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -7710,7 +7758,7 @@ how many spells are generated from each Path</description>
           <profiles>
             <profile id="0093-fd7a-4b71-b5bf" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="Eye of Setesh" hidden="false" book="Vampire Covenant">
               <characteristics>
-                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="At the end of any Magic Phase, the wearer can save one of his unused Magic Dice and add it to your pool of Magic Dice in the next Magic Phase (immediately after rolling Magic Flux). "/>
+                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="One use only. At the end of any enemy Magic Phase, the bearer may remove one unused Dispel Dice. This Dice may then be added as a Power Dice to the pool of Magic Dice immediately after rolling Magic Flux. "/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -7732,7 +7780,7 @@ how many spells are generated from each Path</description>
           </profiles>
           <links/>
         </entry>
-        <entry id="1267-f2ba-9b27-0fa6" name="Staff of Gerhard the Black" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Vampire Covenant">
+        <entry id="1267-f2ba-9b27-0fa6" name="Staff of Gerhard the Black" points="45.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Vampire Covenant">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -7897,7 +7945,7 @@ how many spells are generated from each Path</description>
           <profiles>
             <profile id="b248-6079-bf06-ebc3" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="Tullius’ Teeth" hidden="false" book="Vampire Covenant">
               <characteristics>
-                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Wearer and other R&amp;F models in its unit have the Distracting special rule. "/>
+                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Bearer gains Distracting. All Infantry and Cavalry Rank­and­File models in bearer’s unit gain Parry. "/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -8914,7 +8962,7 @@ how many spells are generated from each Path</description>
           <profiles>
             <profile id="af73-28bb-f608-ae14" profileTypeId="54616c69736d616e23232344415441232323" name="Mantle of Night" hidden="false" book="Vampire Counts">
               <characteristics>
-                <characteristic characteristicId="50726f74656374696f6e23232344415441232323" name="Protection" value=" - models on foot only. Enemy models in base contact with wearer, and all models allocating close combat attacks at thewearer, do not gain strength bonuses of the +X type conferred by mundane or magical weapons.  "/>
+                <characteristic characteristicId="50726f74656374696f6e23232344415441232323" name="Protection" value="Infantry or Cavalry only. All models allocating Close Combat Attacks against the wearer do not gain Strength bonuses of the +X type conferred by mundane or Magical Weapons. "/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -8948,9 +8996,7 @@ how many spells are generated from each Path</description>
       <modifiers/>
     </rule>
     <rule id="3249-3d9e-5d02-f7c9" name="Ashes to Ashes" hidden="false">
-      <description>At the end of any phase in which the Master is removed as a casualty, every unitin the armywith one or more models with Ashes toAshes must pass a Leadership test or suffer an amount ofwoundswith no saves of any kind allowed equal to the amount by which the test was failed. These wounds are distributed following the rules forUnstable except they can never be distributed to models that do not have Ashes to Ashes. This is reduced by onewound ifthe unit received Hold Your Ground.
-
-At the beginning of your next Player&apos;s Turn following the death ofthe Master, a new Master may be selected. In order to do so, the Player must nominate another eligible character who is a Wizard using the Path of Necromancy. This character is your new Master. If the army does not have any eligible character, every unit with the Ashes toAshes rule must once again pass a Leadership test or suffer wounds as described above. This effectwill repeatitself atthe start of each of the owning Player’s turn until the game ends.
+      <description>At the end of any phase in which the Master is removed as a casualty, every unitin the army with one or more models with Ashes to Ashes must pass a Leadership test or suffer a number of wounds equal to the amount by which the test was failed,with no saves of any kind allowed. These wounds are distributed following the rules for Unstable, except that they can never be distributed to models that do not haveAshes toAshes. The number of wounds inflicted is reduced by 1 if the unit received Hold Your Ground. At the end of the Player Turn in which the Master was removed as a casualty, a new Master may be selected. In order to do so, nominate an eligible Character who is a Wizard using the Path of the Necromancy. This Character is your new Master. At the start of each friendly Player Turn in which the army&apos;s Master has been removed as a casualty (and no new Master has been selected), every unit with the Ashes to Ashes rule must once again pass a Leadership test or suffer wounds as described above.
 </description>
       <modifiers/>
     </rule>
@@ -8959,7 +9005,7 @@ At the beginning of your next Player&apos;s Turn following the death ofthe Maste
       <modifiers/>
     </rule>
     <rule id="e28f-d980-232d-9e2d" name="Awaken" hidden="false">
-      <description>Models with this special rule are allowed toRaise Wounds above a unit’s starting size for allthe unittypes stated within brackets. Units can however not be increased to a size more than twice their starting size using any effect thatRaises Wounds. A unit’s starting size is the size of unit as written in the Army List</description>
+      <description>Models with this special rule are allowed to Raise Wounds above a unit’s starting size for allthe unit types stated within brackets. Units can however not be increased to a size more than twice their starting size using any effect that Raises Wounds. A unit’s starting size is the size of unit as written in the Army List</description>
       <modifiers/>
     </rule>
     <rule id="e2dd-bb55-eaf1-b3d5" name="Blood Pool" hidden="false">
@@ -9108,7 +9154,8 @@ Sometimes this rule is connected to certain Troop types or special rules, if thi
       <modifiers/>
     </rule>
     <rule id="29b3-4d62-3f2c-b4e0" name="Necromantic ​​Aura" hidden="false">
-      <description>All friendly units within 6&quot; of one or models with this Special Rule reduce the number of wounds caused by Ashes to Ashes and Unstable by 1. Models with the Necromantic Aura cannot benefit themselves from Necromantic Aura.
+      <description>All friendly units within 6&quot; of one or more models with this special rule reduce the number ofwounds caused by Ashes to Ashes and Unstable by 1. Models with Necromantic Aura cannot benefit from Necromantic Aura themselves.
+
 </description>
       <modifiers/>
     </rule>
@@ -9132,7 +9179,7 @@ Sometimes this rule is connected to certain Troop types or special rules, if thi
       <modifiers/>
     </rule>
     <rule id="10b5-724c-e6bd-1cf4" name="Reaper" hidden="false">
-      <description>Units consisting solely of modelswith this special rule may move through friendly or enemy units during theRemaining Moves Sub‐Phase. The unit may perform a Sweeping attack, except if is considered a Special Close Combat Attack instead of a Special Shooting Attack The enemy suffers a hitfor each modelwithin the unit. These hit. counts as though they were dealt in a close combat, i.e. using models Strength, Special Rules and weapon bonuses.
+      <description>Any unit consisting entirely of models with this special rule may ignore all Terrain and units during the Remaining Moves sub­phase (from its starting position to its ending position), but must abide by the Unit Spacing rule upon the completion of its move. The unit may perform a Sweeping Attack. The enemy suffers a hit for each model with the Reaper special rule that have moved through the target. These hits use the Reaper model’s Strength, including weapon bonuses and special rules affecting Close Combat Attacks (such as Armour Piercing or Flaming Attacks).
 </description>
       <modifiers/>
     </rule>
@@ -9159,7 +9206,7 @@ If a skirmishing Unit declares a Charge, or a Charge Reaction other than Flee, t
       <modifiers/>
     </rule>
     <rule id="3c27-97d1-8920-f6ba" name="Storm of Wings" hidden="false">
-      <description>​: ​Enemy units in base contact with one or more Bat Swarm suffer a -1 penalty to their Weapon Skill, down to a minimum of 1.
+      <description>​​Enemy units in base contact with one or more Bat Swarm suffer a -1 penalty to their Weapon Skill, down to a minimum of 1.
 </description>
       <modifiers/>
     </rule>
@@ -9197,7 +9244,8 @@ directed against the charged enemies</description>
       <modifiers/>
     </rule>
     <rule id="4dde-38dd-6f7e-b43d" name="Undead Constructs" hidden="false">
-      <description>Models with this special rule have Innate Defence (5+). They suffer one less wound from the Unstable and Ashes to Ashes special rules.</description>
+      <description>​If at least half of the models in a unit has this special rule, reduce the number of wounds caused to this unit by Ashes to Ashes and Unstable by 1.
+</description>
       <modifiers/>
     </rule>
     <rule id="45a2-78a1-baad-c3b1" name="Unholy Dominion" hidden="false" book="Vampire Covenant" page="16">
@@ -9206,7 +9254,8 @@ directed against the charged enemies</description>
       <modifiers/>
     </rule>
     <rule id="3a9d-1e13-b58f-a4fa" name="Unliving Shield" hidden="false">
-      <description>​Enemy models that could allocate Close Combat Attacks to a model with this special rule cannot instead allocate Close Combat Attacks to any Necromancer or Necromancer Lords. This rule cannot be used if there are models with Vampiric in the same unit.
+      <description>​Enemy models that could allocate Close Combat Attacks at both a model with this special rule and a Necromancer or Necromancer Lord, cannot choose to allocate Close Combat Attacks towards the Necromancer or Necromancer Lord. This rule cannot be used if there are models with Vampiric in the same unit.
+
 </description>
       <modifiers/>
     </rule>
@@ -9222,7 +9271,7 @@ A unit with both the Unstable and Stubborn special rules halves (Round fractions
     <rule id="868d-580d-07cf-9ba9" name="Vampiric" hidden="false">
       <description>Undead units with all models with this special rule may perform a March Move as normal evenwhen outside the range of the General&apos;s Inspiring Presence. The unit must still pass a Leadership test in order to do so if within 8” of enemy units.
 
-At the end of each Close Combat Phase, unitswith this special rule can make VampiricRolls.Roll aD6 for each Vampiric Character that caused at least one unsaved wound during this Close Combat Phase, and roll one D6 if one or more Vampiric R&amp;F models caused at least one unsavedwound during this Close Combat Phase.AVampiric roll is successful if theD6 scores X+ (where X is the number statedwithin brackets).Aroll of ‘1’ on a VampiricRoll is always a failure and a ‘6’ is always a success. Models with the Large Target special rule have a ‐2 modifier to their Vampiric Rolls. A Character that rolls a successful VampiricRollRecovers one Wound.Asuccessful VampiricRoll forR&amp;F modelsRaises a single Wound to the unit.
+At the end of each Close Combat Phase, unitswith this special rule can make VampiricRolls. Roll aD6 for each Vampiric Character that caused at least one unsaved wound during this Close Combat Phase, and roll one D6 if one or more Vampiric R&amp;F models caused at least one unsavedwound during this Close Combat Phase. A Vampiric roll is successful if the D6 scores X+ (where X is the number statedwithin brackets). A roll of ‘1’ on a VampiricRoll is always a failure and a ‘6’ is always a success. Models with the Large Target special rule have a ‐2 modifier to their Vampiric Rolls. A Character that rolls a successful VampiricRollRecovers one Wound. A successful VampiricRoll for R&amp;F models Raises a single Wound to the unit.
 </description>
       <modifiers/>
     </rule>
@@ -9232,7 +9281,9 @@ At the end of each Close Combat Phase, unitswith this special rule can make Vamp
       <modifiers/>
     </rule>
     <rule id="6fd7-8cee-a917-3dc2" name="Wail of Woe " hidden="false">
-      <description>Special Attack. Model parts with this special rule can perform a Special ShootingAttack. It can be used after Marching, hits automatically and has the following profile: Range 8”, Strength 4, Multiple Shots (D6+2), Magical Attacks.
+      <description>Model parts with this special rule have the Special Shooting Attack and Special Close Combat Attack detailed below.
+­ As a Special Shooting Attack (normally in the Shooting Phase): Choose a target using the normal rules for Shooting Attacks. The attack hits automatically and has the following profile:Range 8”, Strength 4, Multiple Shots (D6+2), Magical Attacks. This attack can be used even if the model Marched in the previously this Player Turn.
+­ As a Special Close Combat Attack (normally in the Close Combat Phase): If used,the attack is made atthe model part&apos;s Initiative and replaces the model part’s normal non­SpecialAttacks. Choose a single unitin base contact as the target. The target unit suffers D3+1 Strength 4 Hits with the Magical Attacks special rule.
 
 </description>
       <modifiers/>
@@ -9253,7 +9304,7 @@ At the end of each Close Combat Phase, unitswith this special rule can make Vamp
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="1cc8-6058-cce5-626a" profileTypeId="576561706f6e23232344415441232323" name="Additional Hand Weapon" hidden="false">
+    <profile id="1cc8-6058-cce5-626a" profileTypeId="576561706f6e23232344415441232323" name="Paired Weapons" hidden="false">
       <characteristics>
         <characteristic characteristicId="52616e676523232344415441232323" name="Range"/>
         <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength"/>
