@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="7e6fb76e-1bec-b992-2c43-e797a6758b13" revision="1" battleScribeVersion="1.15" name="Fantasy Battles: The 9th Age" books="The 9th Age - Rules - v0.9.0" authorName="Jimmy &quot;Noxer&quot; Malmer" authorContact="jimmy.eliasson@hotmail.se" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="7e6fb76e-1bec-b992-2c43-e797a6758b13" revision="2" battleScribeVersion="1.15" name="Fantasy Battles: The 9th Age" books="The 9th Age - Rules - v0.9.4" authorName="Jimmy &quot;Noxer&quot; Malmer" authorContact="jimmy.eliasson@hotmail.se" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <forceTypes>
     <forceType id="5374616e6461726423232344415441232323" name="Standard (1500-3999pts)" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
@@ -129,7 +129,7 @@
     </profileType>
     <profileType id="4d61676963205374616e6461726423232344415441232323" name="Magic Banner">
       <characteristics>
-        <characteristic id="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emination"/>
+        <characteristic id="4d61676963616c20456d696e6174696f6e23232344415441232323" name="Magical Emanation"/>
       </characteristics>
     </profileType>
   </profileTypes>
