@@ -65,7 +65,8 @@
               <modifiers/>
               <rules>
                 <rule id="c061-7c76-1a17-9e89" name="Dark Tome" hidden="false">
-                  <description>Friendly Wizards within 12” of at least one Altar of Undeath with Dark Tome may add +2 to all casting attempts from the Path of Necromancy (to a maximum of +3). Wizards that suffer a miscast within 12” of a Altar of Undeath with Dark Tome count as having used two additional PDU for their casting roll (up to a maximum of 5).
+                  <description>​Friendly Wizards within 12” of one or more Altar of Undeath with this upgrade may add +2 to their casting rolls when casting spells from the Path of Necromancy. Friendly and enemy Wizards that suffer a miscast within 12” of one or more Altar of Undeath with this upgraded count as having used two additional MDU for their casting roll, up to a maximum of 5.
+
 </description>
                   <modifiers/>
                 </rule>
@@ -1435,7 +1436,7 @@ chosen before the battle.
           </profiles>
           <links/>
         </entry>
-        <entry id="cd4d-317c-d88a-8380" name="Blood Ties (Von Castlestein) - Stubborn" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+        <entry id="cd4d-317c-d88a-8380" name="Blood Ties (Von Karnstein)" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
           <entries/>
           <entryGroups/>
           <modifiers>
@@ -1542,16 +1543,14 @@ chosen before the battle.
       </modifiers>
       <rules>
         <rule id="c02c-d2eb-857e-a3c7" name="Soul Syphon" hidden="false">
-          <description>Tally up how many wounds each Dark Couch causes. At the end of each close combat phase,
-compare the wound count with the chart below. The Dark Coach has the bonus of the corresponding stage and that
-of all the stages preceding it.
+          <description>​Keep track of how many wounds this model has caused during the game. At the end of each Close Combat Phase, compare this number with the chart belowto determine the level of Soul Syphon that the Dark Coach has reached. The Dark Coach gains the bonus corresponding to that level as well as the bonuses of all levels that preceded it.
 
-Stage       Wounds caused Bonus
-1              1 - 3  Lethal Strike and Multiple Wounds (2, Infantry, War Beast, Cavalry)
-2              4 - 6 Grinding Attacks (D3)(resolved with the Fell Wraith´s Initiative) and Flaming Attacks
-3              7 - 9  Awakened Vampire (1) and Hunger (2+)
-4             10 - 12  Fly (8)
-5             13+  Ethereal</description>
+Wounds Caused        Bonus
+       1 - 3               Lethal Strike and Multiple Wounds (2, Infantry, War Beast, Cavalry)
+       4 - 6               Grinding Attacks (D3)(resolved with the Fell Wraith´s Initiative) and Flaming Attacks
+       7 - 9               Awakened Vampire (1) and Hunger (2+)
+     10 - 12             Fly (8)
+        13+               Ethereal</description>
           <modifiers/>
         </rule>
       </rules>
@@ -2678,6 +2677,14 @@ Stage       Wounds caused Bonus
         </link>
         <link id="63b1-d851-eb99-a4ff" targetId="1d3c-61f5-bbc2-5ce6" linkType="entry">
           <modifiers/>
+        </link>
+        <link id="d8f6-f1c0-4692-3a68" targetId="3af5-2a35-3a8b-c07b" linkType="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(1)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -4521,7 +4528,7 @@ Stage       Wounds caused Bonus
             </link>
           </links>
         </entry>
-        <entry id="f978-8ec8-a399-18c3" name="Bloodline Unit (Blood Drake)" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+        <entry id="f978-8ec8-a399-18c3" name="Blood Ties (Brotherhood of the Dragon)" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
           <entries/>
           <entryGroups/>
           <modifiers>
@@ -4638,10 +4645,6 @@ Stage       Wounds caused Bonus
         </link>
         <link id="ad74-ebcf-2653-5c91" targetId="3af5-2a35-3a8b-c07b" linkType="rule">
           <modifiers>
-            <modifier type="append" field="name" value="(2)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="append" field="name" value="(1)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
@@ -4675,6 +4678,24 @@ Stage       Wounds caused Bonus
           <modifiers/>
         </link>
         <link id="9639-a8f0-3f12-0d6b" targetId="3b36-c800-7697-f098" linkType="profile">
+          <modifiers/>
+        </link>
+        <link id="386a-fcbe-5b57-8390" targetId="eeea-cfd1-e63d-8d4c" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="59f5-13e9-e378-790c" targetId="868d-580d-07cf-9ba9" linkType="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(6+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="append" field="name" value="(6+)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="a891-6355-7ff7-23c1" targetId="f743-de9a-5dba-6ab2" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -5418,6 +5439,16 @@ Stage       Wounds caused Bonus
             <modifier type="show" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="c261-832b-3491-9b96" field="selections" type="at least" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="e677-e855-1c53-00e9" targetId="a02d-e83b-dab6-66d2" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="8aa0-696f-5e26-1ea2" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="fb24-e47d-605f-039c" childId="8aa0-696f-5e26-1ea2" field="selections" type="equal to" value="1.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -9167,10 +9198,22 @@ Sometimes this rule is connected to certain Troop types or special rules, if thi
       <modifiers/>
     </rule>
     <rule id="cbb3-1499-3221-d592" name="Skirmishers" hidden="false">
-      <description>Models with this Special Rule always also have the Free Reform Special Rule. Shooting at Units with the Skirmishers Special Rule rule suffers a -1 to hit penalty. Skirmishing models are not placed in base to base contact with each other. Instead, models are placed with a ½” distance between them. Other than this empty space between the models, they follow the normal rules for forming Units (they still have front, flanks, rear, etc). Only non-mounted characters can join Units with the
-Skirmishers Special Rule. When joined to a Skirmishers Unit, a character gains the Skirmishers Special Rule for as long as it is with the Unit, and unless they have the exact same base size they are always considered Mismatching for placement within the Unit.
+      <description>Models with this special rule always also have Light Troops. Shooting at Skirmishers suffers a ­1 to hit penalty.
 
-If a skirmishing Unit declares a Charge, or a Charge Reaction other than Flee, they immediately contract their loose formation into a normal formation. When doing this, the model closest to the charged or charging Unit must not change position. Skirmishers regain their loose formation if they are not Engaged in combat at the beginning of any Movement Phase (of any player). Keep the Centre of the front rank stationary. If there isn’t enough room for the Unit to regain its loose formation, keep the Unit in tight formation until the first point when there is enough room.
+Skirmishing models are not placed in base to base contact with each other. Instead, models are placed with a ½”
+distance between them. Other than this gap between models, units of Skirmishers follow the normal rules for forming
+units and therefore have a front,two flanks and a rear. Skirmishing units can only be joined by Characters that have the
+same Troop Type as the unit. A Character which joins a unit of Skirmishers gains Skirmishers for as long as it remains
+with the unit (the unit ceases to be Skirmishers if all models with Skirmishers are wiped out, immediately contracting
+their loose formation into a normal formation). The Character is always considered Mismatched for the purpose of
+placement within the unit unless it has the exact same base size as the other Skirmisher models.
+
+After Skirmishing units declares a Charges or a Charge Reaction other than Flee,they immediately contract their loose
+formation into a normal formation. When doing this,the model closestto the charged or charging unit must not change
+position, see Figure 14. If several models are equally close, the Active Player chooses which model is considered to be
+the closest. Skirmishers regain their loose formation if they are not Engaged in Combat at the beginning of any
+Movement Phase (of any player). Keep the centre of the front rank stationary.If there isn’t enough room for the unit to
+regain its loose formation, keep the unit in tight formation until the first place where there is enough room.
 </description>
       <modifiers/>
     </rule>
