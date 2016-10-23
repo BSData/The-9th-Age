@@ -2489,7 +2489,7 @@ contact with the unit.</description>
     </entry>
     <entry id="84de-66f8-1379-945f" name="Goblins" points="0.0" categoryId="a2a3-8d76-c9e1-a187" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="4" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
-        <entry id="9704-99b9-6371-71c9" name="Goblin" points="3.0" categoryId="(No Category)" type="model" minSelections="20" maxSelections="60" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="9704-99b9-6371-71c9" name="Goblin" points="6.0" categoryId="(No Category)" type="model" minSelections="20" maxSelections="60" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
@@ -2592,7 +2592,6 @@ contact with the unit.</description>
                 <conditionGroup type="and">
                   <conditions>
                     <condition parentId="84de-66f8-1379-945f" childId="7cc2-42a9-b932-9a5b" field="selections" type="equal to" value="1.0"/>
-                    <condition parentId="84de-66f8-1379-945f" childId="74f5-b132-c233-31bd" field="selections" type="less than" value="1.0"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -2600,7 +2599,7 @@ contact with the unit.</description>
             </modifier>
             <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
-                <condition parentId="84de-66f8-1379-945f" childId="74f5-b132-c233-31bd" field="selections" type="equal to" value="1.0"/>
+                <condition parentId="84de-66f8-1379-945f" childId="7cc2-42a9-b932-9a5b" field="selections" type="equal to" value="0.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -2609,35 +2608,11 @@ contact with the unit.</description>
           <profiles/>
           <links/>
         </entry>
-        <entry id="d71e-1837-d57c-6d66" name="Nets" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
-          <entries/>
-          <entryGroups/>
-          <modifiers>
-            <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="84de-66f8-1379-945f" childId="d3fa-0ae9-5f6a-d4f9" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="points" value="1.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <rules>
-            <rule id="2fdb-4abf-930b-6cbc" name="Nets" hidden="false">
-              <description>At the start of a round of combat, choose one unit in base contact with the unit carrying nets. roll a D6. On 2+ the target unit suffers -1 Strength (to a minimum of 1) for the remainder of the player turn. On the roll of 1, the unit with Nets suffer the penalty instead. Unit can be affected by nets only once per phase.</description>
-              <modifiers/>
-            </rule>
-          </rules>
-          <profiles/>
-          <links/>
-        </entry>
         <entry id="11b3-fade-ddc6-d7af" name="Throwing Weapon" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
           <entries/>
           <entryGroups/>
           <modifiers>
-            <modifier type="increment" field="points" value="1.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="2.0">
+            <modifier type="increment" field="points" value="1.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -2677,25 +2652,21 @@ contact with the unit.</description>
           <profiles/>
           <links/>
         </entry>
-        <entry id="5921-c2d7-8f6a-d4fd" name="Mother&apos;s Kiss" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+        <entry id="845d-fbe5-3e64-ee09" name="Shield" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers>
-            <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
-                <condition parentId="84de-66f8-1379-945f" childId="bbbe-4b13-034a-3da9" field="selections" type="equal to" value="1.0"/>
+                <condition parentId="84de-66f8-1379-945f" childId="7cc2-42a9-b932-9a5b" field="selections" type="equal to" value="0.0"/>
               </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="points" value="3.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="2.0">
-              <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <rules/>
           <profiles/>
           <links>
-            <link id="9e1c-c6f8-ec65-38ca" targetId="70e7-46d5-8d31-0cad" linkType="rule">
+            <link id="8522-3595-1412-98a2" targetId="f378-5311-1555-b3d9" linkType="profile">
               <modifiers/>
             </link>
           </links>
@@ -2704,10 +2675,10 @@ contact with the unit.</description>
       <entryGroups>
         <entryGroup id="3f2b-fd78-6fa3-f640" name="Command" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
-            <entry id="3719-613c-96fb-dec2" name="Standard Bearer" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+            <entry id="3719-613c-96fb-dec2" name="Standard Bearer" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
               <entries/>
               <entryGroups>
-                <entryGroup id="a6b3-daf5-653c-a73a" name="Magic Banner (25pts)" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="25.0" collective="false" hidden="true">
+                <entryGroup id="a6b3-daf5-653c-a73a" name="Magic Banner (50pts)" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="50.0" collective="false" hidden="true">
                   <entries/>
                   <entryGroups/>
                   <modifiers>
@@ -2734,7 +2705,7 @@ contact with the unit.</description>
                 </link>
               </links>
             </entry>
-            <entry id="bd5a-a4df-2e79-5022" name="Champion" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+            <entry id="bd5a-a4df-2e79-5022" name="Champion" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -2742,7 +2713,7 @@ contact with the unit.</description>
               <profiles/>
               <links/>
             </entry>
-            <entry id="34f6-9fac-0e9c-0250" name="Musician" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+            <entry id="34f6-9fac-0e9c-0250" name="Musician" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -2761,24 +2732,40 @@ contact with the unit.</description>
           <modifiers/>
           <links>
             <link id="d3fa-0ae9-5f6a-d4f9" targetId="6982-33fa-6cf6-c3a1" linkType="entry">
-              <modifiers/>
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
             <link id="7cc2-42a9-b932-9a5b" targetId="d81b-103b-9e01-1d4b" linkType="entry">
               <modifiers/>
             </link>
             <link id="bbbe-4b13-034a-3da9" targetId="d507-50cb-cf6a-ff8b" linkType="entry">
-              <modifiers/>
+              <modifiers>
+                <modifier type="increment" field="points" value="3.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
           </links>
         </entryGroup>
-        <entryGroup id="e820-9d54-44fd-986e" name="May take weapons" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entryGroup id="e820-9d54-44fd-986e" name="May take equipment (1 choice only)" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries>
             <entry id="6d5a-6819-0498-6243" name="Shields" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers>
-                <modifier type="increment" field="points" value="1.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="2.0">
+                <modifier type="increment" field="points" value="1.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="1.0">
                   <conditions/>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="84de-66f8-1379-945f" childId="7cc2-42a9-b932-9a5b" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
                   <conditionGroups/>
                 </modifier>
               </modifiers>
@@ -2790,14 +2777,19 @@ contact with the unit.</description>
                 </link>
               </links>
             </entry>
-            <entry id="f7a3-774e-8c72-dc65" name="Short Bows" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="f7a3-774e-8c72-dc65" name="Bows" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <rules/>
               <profiles/>
               <links>
-                <link id="558f-70e4-3948-b066" targetId="a58c-e8bd-e172-a45b" linkType="profile">
+                <link id="558f-70e4-3948-b066" targetId="4af7-6a47-099b-1067" linkType="profile">
                   <modifiers/>
                 </link>
               </links>
@@ -2806,7 +2798,7 @@ contact with the unit.</description>
               <entries/>
               <entryGroups/>
               <modifiers>
-                <modifier type="increment" field="points" value="1.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="2.0">
+                <modifier type="increment" field="points" value="1.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="1.0">
                   <conditions/>
                   <conditionGroups/>
                 </modifier>
@@ -2822,46 +2814,26 @@ contact with the unit.</description>
                 </link>
               </links>
             </entry>
-            <entry id="74f5-b132-c233-31bd" name="Shields and short bows" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
-              <entries/>
-              <entryGroups/>
-              <modifiers>
-                <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="84de-66f8-1379-945f" childId="7cc2-42a9-b932-9a5b" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-                <modifier type="increment" field="points" value="1.0" repeat="true" numRepeats="1" incrementParentId="84de-66f8-1379-945f" incrementChildId="9704-99b9-6371-71c9" incrementField="selections" incrementValue="2.0">
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <rules/>
-              <profiles/>
-              <links/>
-            </entry>
           </entries>
           <entryGroups/>
           <modifiers/>
           <links/>
         </entryGroup>
       </entryGroups>
-      <modifiers>
-        <modifier type="increment" field="maxInRoster" value="4.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="roster" childId="no child" field="points limit" type="at least" value="4000.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="maxInRoster" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions>
-            <condition parentId="roster" childId="no child" field="points limit" type="at most" value="1500.0"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
-      <rules/>
+      <modifiers/>
+      <rules>
+        <rule id="551b-01a6-89ef-fadc" name="Nets" hidden="false">
+          <description>At the start of a round of combat, choose one unit in base contact with the unit carrying nets. roll a D6. On 2+ the target unit suffers -1 Strength (to a minimum of 1) for the remainder of the player turn. On the roll of 1, the unit with Nets suffer the penalty instead. Unit can be affected by nets only once per phase.</description>
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="84de-66f8-1379-945f" childId="d3fa-0ae9-5f6a-d4f9" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </rule>
+      </rules>
       <profiles/>
       <links>
         <link id="155e-0a8f-8b9c-b6dd" targetId="378c-ec89-03da-a2f7" linkType="entry">
@@ -2879,6 +2851,30 @@ contact with the unit.</description>
             <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="84de-66f8-1379-945f" childId="d3fa-0ae9-5f6a-d4f9" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="7a4d-a3cf-cff2-a4da" targetId="dc45-d263-b35d-db93" linkType="rule">
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="84de-66f8-1379-945f" childId="90c1-4167-92e8-67c9" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="ce01-91ab-c60f-d737" targetId="f061-7400-a1c9-3d80" linkType="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (close combat only)" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="84de-66f8-1379-945f" childId="bbbe-4b13-034a-3da9" field="selections" type="equal to" value="0.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -5244,7 +5240,7 @@ Large Targets)
             <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
             <characteristic characteristicId="5323232344415441232323" name="S" value="4"/>
             <characteristic characteristicId="5423232344415441232323" name="T" value="5"/>
-            <characteristic characteristicId="5723232344415441232323" name="W" value="2"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="3"/>
             <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
             <characteristic characteristicId="4123232344415441232323" name="A" value="3"/>
             <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
@@ -5276,7 +5272,7 @@ Large Targets)
             <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
             <characteristic characteristicId="5323232344415441232323" name="S" value="4"/>
             <characteristic characteristicId="5423232344415441232323" name="T" value="5"/>
-            <characteristic characteristicId="5723232344415441232323" name="W" value="2"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="3"/>
             <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
             <characteristic characteristicId="4123232344415441232323" name="A" value="3"/>
             <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
@@ -5308,7 +5304,7 @@ Large Targets)
             <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
             <characteristic characteristicId="5323232344415441232323" name="S" value="4"/>
             <characteristic characteristicId="5423232344415441232323" name="T" value="5"/>
-            <characteristic characteristicId="5723232344415441232323" name="W" value="2"/>
+            <characteristic characteristicId="5723232344415441232323" name="W" value="3"/>
             <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
             <characteristic characteristicId="4123232344415441232323" name="A" value="3"/>
             <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
@@ -6705,7 +6701,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
         </link>
       </links>
     </entry>
-    <entry id="99bd-bd28-a9b7-b740" name="Mad Git" points="20.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="3" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+    <entry id="99bd-bd28-a9b7-b740" name="Mad Git" points="50.0" categoryId="(No Category)" type="model" minSelections="0" maxSelections="3" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
       <entries>
         <entry id="d516-1907-9847-450d" name="Cave Goblin" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="true" hidden="false">
           <entries/>
@@ -7199,10 +7195,7 @@ Mad Gits can be released in two ways:
       <modifiers/>
       <rules>
         <rule id="73fd-4457-6d8d-1b71" name="Sneaky!" hidden="false">
-          <description>Shady Gits count as Champions for the unit and are automatically deployed Hidden in the unit to which they are upgrades. 
-Shady Gits are automatically revealed on the first Round of Combat that unit is in. They cannot be revealed earlier. 
-On the turn they are revealed, Shady Gits gain +3 Initiative and Lightning Reflexes until the end of the turn. 
-Shady Gits do not gain First Among Equals or Order the Charge.</description>
+          <description>Sneaky! : Shady Gits count as Champions and are automatically deployed in the unit to which they are upgrades. On the first round of combat Shady Gits gain +3 Initiative and Lightning Reflexes until the end of the Round of Combat. Shady Gits do not gain First Among Equals or Order the Charge.</description>
           <modifiers/>
         </rule>
       </rules>
