@@ -196,7 +196,7 @@
               <profiles/>
               <links/>
             </entry>
-            <entry id="42f0-253e-a044-16b6" name="May become a Wizard Master" points="70.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="42f0-253e-a044-16b6" name="May become a Wizard Master" points="70.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -317,7 +317,14 @@
           <modifiers/>
         </link>
         <link id="3e4b-0b3d-6d0e-63e5" targetId="076a-9a11-4c9c-c4d7" linkType="entry group">
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="maxPoints" value="200.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="3ef0-1c57-18ac-63d0" childId="42f0-253e-a044-16b6" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
         <link id="804f-1365-ad6a-617e" targetId="e21e-c0f1-2268-abd0" linkType="entry">
           <modifiers/>
