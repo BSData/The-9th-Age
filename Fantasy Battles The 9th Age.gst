@@ -510,21 +510,13 @@
             </modifier>
           </modifiers>
         </category>
-        <category id="2a8a-ab02-8831-07f7" name="DH Characters + Clans&apos; Thunder" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="35" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+        <category id="2a8a-ab02-8831-07f7" name="DH Characters + Engines of War" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="20" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
             <modifier type="decrement" field="maxPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="980d-cabc-2b83-1c2" incrementField="percent" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="9a16-56b8-62e7-ec1" incrementField="percent" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="2329-f0f6-6359-9b6" incrementField="percent" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="9c79-a3c6-01c4-8caa" incrementField="percent" incrementValue="1.0">
+            <modifier type="decrement" field="maxPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="1f39-4f7b-28ff-663" incrementField="percent" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
