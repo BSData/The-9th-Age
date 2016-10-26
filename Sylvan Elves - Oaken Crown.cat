@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8746-d59b-3e52-7629" revision="4" gameSystemId="875f-af88-1503-3e7f" gameSystemRevision="1" battleScribeVersion="1.15" name="Sylvan Elves - Oaken Crown" books="Sylvan Elves V1.2" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8746-d59b-3e52-7629" revision="5" gameSystemId="875f-af88-1503-3e7f" gameSystemRevision="1" battleScribeVersion="1.15" name="Sylvan Elves - Oaken Crown" books="Sylvan Elves V1.2" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
-    <entry id="ab27-2dc5-6e5e-5c73" name="Avatar of Nature" points="750.0" categoryId="30fa-22d1-8fe8-8adb" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="1" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="ab27-2dc5-6e5e-5c73" name="Avatar of Nature" points="750.0" categoryId="30fa-22d1-8fe8-8adb" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups/>
       <modifiers/>
@@ -770,7 +770,7 @@ Dance of Disarming Delusions: Enemy units in base contact with the model cannot 
             </entry>
           </entries>
           <entryGroups>
-            <entryGroup id="ddc0-2343-5edf-7f87" name="Path" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entryGroup id="ddc0-2343-5edf-7f87" name="Path" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries>
                 <entry id="b935-cf6f-1d1a-6e33" name="Druidism" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
                   <entries/>
@@ -794,6 +794,12 @@ Dance of Disarming Delusions: Enemy units in base contact with the model cannot 
                 <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
                     <condition parentId="f6a1-a384-7306-f43c" childId="daff-65a0-eb08-cb7f" field="selections" type="equal to" value="0.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="increment" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="f6a1-a384-7306-f43c" childId="daff-65a0-eb08-cb7f" field="selections" type="equal to" value="1.0"/>
                   </conditions>
                   <conditionGroups/>
                 </modifier>
@@ -845,6 +851,9 @@ Dance of Disarming Delusions: Enemy units in base contact with the model cannot 
               <conditionGroups/>
             </modifier>
           </modifiers>
+        </link>
+        <link id="66c9-2f03-b0c1-5f06" targetId="89a7-2952-5fda-de32" linkType="entry">
+          <modifiers/>
         </link>
       </links>
     </entry>
@@ -2864,6 +2873,26 @@ Dance of Disarming Delusions: Enemy units in base contact with the model cannot 
             </modifier>
           </modifiers>
         </link>
+        <link id="2b7d-67be-1ca8-ffe8" targetId="89a7-2952-5fda-de32" linkType="entry">
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="direct parent" childId="c15d-c503-c820-fcc4" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
+        <link id="042a-18c2-71fc-4c2f" targetId="c15d-c503-c820-fcc4" linkType="entry">
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="direct parent" childId="89a7-2952-5fda-de32" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </link>
       </links>
     </entry>
     <entry id="bf7a-4567-a666-3a73" name="Treefather" points="480.0" categoryId="2ded-7bec-fb35-3d30" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -2919,7 +2948,7 @@ Dance of Disarming Delusions: Enemy units in base contact with the model cannot 
         </link>
       </links>
     </entry>
-    <entry id="2d25-b5d3-d86c-6778" name="Treefather Ancient" points="480.0" categoryId="30fa-22d1-8fe8-8adb" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="2d25-b5d3-d86c-6778" name="Treefather Ancient" points="480.0" categoryId="30fa-22d1-8fe8-8adb" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="1" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries/>
       <entryGroups>
         <entryGroup id="91cb-66c2-32c2-7ca7" name="Magic" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
