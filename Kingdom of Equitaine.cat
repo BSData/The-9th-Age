@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3676-0ce0-db65-7f46" revision="7" gameSystemId="875f-af88-1503-3e7f" gameSystemRevision="1" battleScribeVersion="1.15" name="Kingdom of Equitaine" books="Kingdom of Equitaine V1.2" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3676-0ce0-db65-7f46" revision="6" gameSystemId="875f-af88-1503-3e7f" gameSystemRevision="1" battleScribeVersion="1.15" name="Kingdom of Equitaine" books="Kingdom of Equitaine V1.2" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="edc1-3f40-822e-2ea5" name="Castellan" points="120.0" categoryId="980d-cabc-2b83-1c27" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="5" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
@@ -423,9 +423,6 @@
           </modifiers>
         </link>
         <link id="0465-f3cb-8a08-8f94" targetId="e21e-c0f1-2268-abd0" linkType="entry">
-          <modifiers/>
-        </link>
-        <link id="b70c-ee7d-4e34-105b" targetId="9e98-1eba-bb0b-fa49" linkType="entry">
           <modifiers/>
         </link>
       </links>
@@ -3227,12 +3224,7 @@ This Special rule is One of a Kind for Characters.</description>
         </entry>
       </entries>
       <entryGroups/>
-      <modifiers>
-        <modifier type="decrement" field="maxPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="direct parent" incrementChildId="076a-9a11-4c9c-c4d7" incrementField="points" incrementValue="1.0">
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <links/>
     </entryGroup>
     <entryGroup id="076a-9a11-4c9c-c4d7" name="Magic Items" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="100.0" collective="false" hidden="false">
@@ -3649,7 +3641,14 @@ This Special rule is One of a Kind for Characters.</description>
             </entry>
           </entries>
           <entryGroups/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="direct parent" childId="e21e-c0f1-2268-abd0" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <links/>
         </entryGroup>
         <entryGroup id="b1f2-aa59-6367-3e43" name="Magic Armour" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -3674,7 +3673,14 @@ This Special rule is One of a Kind for Characters.</description>
             <entry id="a3af-65cd-19b2-8a39" name="Bluffer&apos;s Helm" points="70.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="direct parent" childId="3afd-6823-c24f-dbaa" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <rules/>
               <profiles>
                 <profile id="edc4-b2bc-36ed-3d4d" profileTypeId="41726d6f757223232344415441232323" name="Bluffer&apos;s Helm" hidden="false">
@@ -3824,7 +3830,7 @@ This Special rule is One of a Kind for Characters.</description>
               </profiles>
               <links/>
             </entry>
-            <entry id="c7d5-2328-1f41-78ed" name="Crusader&apos;s Helm" points="90.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="c7d5-2328-1f41-78ed" name="Crusader&apos;s Helm" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -3885,12 +3891,23 @@ This Special rule is One of a Kind for Characters.</description>
                   <modifiers/>
                 </profile>
               </profiles>
-              <links/>
+              <links>
+                <link id="e6e2-08e8-e180-7508" targetId="e21e-c0f1-2268-abd0" linkType="entry">
+                  <modifiers/>
+                </link>
+              </links>
             </entry>
             <entry id="8a0b-d8eb-529e-f8a1" name="Crown of Scorn" points="30.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="e21e-c0f1-2268-abd0" field="selections" type="at least" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <rules/>
               <profiles>
                 <profile id="88dc-1cf8-4ba3-be33" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="Crown of Scorn" hidden="false">
@@ -4164,7 +4181,7 @@ This Special rule is One of a Kind for Characters.</description>
               </profiles>
               <links/>
             </entry>
-            <entry id="e794-5a22-bf9f-ded5" name="Talisman of Roland" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="e794-5a22-bf9f-ded5" name="Talisman of Roland" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers/>
@@ -4200,12 +4217,7 @@ This Special rule is One of a Kind for Characters.</description>
           <links/>
         </entryGroup>
       </entryGroups>
-      <modifiers>
-        <modifier type="decrement" field="maxPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="direct parent" incrementChildId="f24a-8968-8a1f-7741" incrementField="points" incrementValue="1.0">
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <links/>
     </entryGroup>
     <entryGroup id="e03e-cc93-fcfd-74ea" name="Magic Weapons (Champion)" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -4347,20 +4359,7 @@ This Special rule is One of a Kind for Characters.</description>
         <entry id="ebf7-1fe7-c3c5-5080" name="Grail Oath" points="50.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
-          <modifiers>
-            <modifier type="set" field="points" value="30.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="direct parent" childId="19a3-b4ea-8d7c-c9bf" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="set" field="points" value="30.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="direct parent" childId="1ab7-692b-1243-fd6d" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <rules/>
           <profiles/>
           <links>
