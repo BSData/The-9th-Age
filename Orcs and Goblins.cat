@@ -372,9 +372,6 @@ contact with the unit.</description>
             </modifier>
           </modifiers>
         </link>
-        <link id="1906-4c89-50e6-7530" targetId="cbb3-1499-3221-d592" linkType="rule">
-          <modifiers/>
-        </link>
         <link id="de59-e9d1-d913-8b86" targetId="38f2-b081-6148-12c3" linkType="entry">
           <modifiers/>
         </link>
@@ -520,7 +517,7 @@ contact with the unit.</description>
         </link>
       </links>
     </entry>
-    <entry id="2420-d65a-a7ad-d888" name="Goblin King" points="0.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="6" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="2420-d65a-a7ad-d888" name="Lords of Sneakin&apos;" points="0.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="6e72-da45-b6e4-9ffb" name="Magic Items" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -968,7 +965,14 @@ contact with the unit.</description>
           <modifiers/>
           <links>
             <link id="d8d2-97a4-d974-40ca" targetId="a767-6627-de30-f95d" linkType="entry">
-              <modifiers/>
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="d8d2-97a4-d974-40ca" field="selections" type="greater than" value="6.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </link>
             <link id="256c-2d7a-f9a6-b1ff" targetId="a3da-a696-00c6-c479" linkType="entry">
               <modifiers/>
@@ -1470,7 +1474,7 @@ contact with the unit.</description>
         </link>
       </links>
     </entry>
-    <entry id="4194-0ca5-8981-9d36" name="Goblin Shaman" points="140.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="4194-0ca5-8981-9d36" name="Goblin Witch Doctor" points="140.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="443f-cd92-ecce-54ba" name="Magic Items" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -2432,7 +2436,7 @@ contact with the unit.</description>
       <modifiers/>
       <rules>
         <rule id="9f64-79be-cfc6-fad9" name="Smash &apos;Em Flat" hidden="false">
-          <description>All friendly Units within 8“ of a Great Green Idol that is Engaged in Combat may gain either Devastating Charge or +1 to wound. Each unit chooses which bonus to use at the start of each Round of Combat.</description>
+          <description>At the start of each Round of Combat , if the Great Green Idol is engaged in Combat, all friendly units within 8&quot; of it may gain either Devastating Charge or a +1 to-wound modifier  to Close Combat Attacks . Each unit may choose a different bonus.  The bonus lasts until the end of the Round of Combat or until the Great Green Idol is no longer engaged in Combat, whichever comes first.</description>
           <modifiers/>
         </rule>
         <rule id="6812-236f-86f1-541b" name="Icon of the Waaargh!" hidden="false">
@@ -4099,7 +4103,7 @@ Large Targets)
         </link>
       </links>
     </entry>
-    <entry id="1aed-1074-11ab-29dd" name="Orc Warlord" points="0.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="1aed-1074-11ab-29dd" name="Lords of FIghtin&apos;" points="0.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="4e5e-5007-35c2-53d7" name="Magic Items" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -7003,10 +7007,7 @@ Mad Gits can be released in two ways:
           <profiles>
             <profile id="a60d-3a55-93bd-98d9" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" name="Wizard&apos;s Hood" hidden="false">
               <characteristics>
-                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Models on foot only 
-The wearer is a Wizard Apprentice with 2 Learned Spells (regardless if it was a Wizard before). Instead of
-selecting a Path as normal, the wearer uses a randomly selected Path of Magic. Randomize between all Paths
-available to any model from the same Armybook, excluding Bound Spells."/>
+                <characteristic characteristicId="4d616769632050726f706572747923232344415441232323" name="Magic Property" value="Models on foot only  The wearer is a Wizard Apprentice with 2 Learned Spells (regardless if it was a Wizard before). Instead of selecting a Path as normal, the wearer uses a randomly selected Path of Magic. Randomize between all Paths available to any model from the same Armybook, excluding Bound Spells."/>
               </characteristics>
               <modifiers/>
             </profile>
@@ -7202,8 +7203,7 @@ available to any model from the same Armybook, excluding Bound Spells."/>
             <profile id="68bc-5fee-f890-9773" profileTypeId="41726d6f757223232344415441232323" name="Armour of Destiny" hidden="false">
               <characteristics>
                 <characteristic characteristicId="536176696e67205468726f77206d6f64696669657223232344415441232323" name="Saving Throw modifier" value="+2"/>
-                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="The wearer has a Ward Save (4+). Infantry, Cavalry and War
-Beasts only"/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="The wearer has a Ward Save (4+). Infantry, Cavalry and War Beasts only"/>
                 <characteristic characteristicId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" name="Type" value="Heavy Armour"/>
               </characteristics>
               <modifiers/>
@@ -7237,8 +7237,7 @@ Beasts only"/>
             <profile id="18cd-3704-1a33-c9dc" profileTypeId="41726d6f757223232344415441232323" name="Bluffer&apos;s Helm" hidden="false">
               <characteristics>
                 <characteristic characteristicId="536176696e67205468726f77206d6f64696669657223232344415441232323" name="Saving Throw modifier"/>
-                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value=" (6+ Armour Save). Successful To Wound rolls against the wearer must be rerolled. 
-"/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value=" (6+ Armour Save). Successful To Wound rolls against the wearer must be rerolled.  "/>
                 <characteristic characteristicId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" name="Type" value="None"/>
               </characteristics>
               <modifiers/>
@@ -7255,8 +7254,7 @@ Beasts only"/>
             <profile id="47df-cbb2-f5ab-107a" profileTypeId="41726d6f757223232344415441232323" name="Bronze Breastplate" hidden="false">
               <characteristics>
                 <characteristic characteristicId="536176696e67205468726f77206d6f64696669657223232344415441232323" name="Saving Throw modifier" value="+2"/>
-                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="One use only. Whenever the wearer&apos;s model suffers a hit, the item can be activated. For the duration
-of the Phase, the wearer&apos;s model has a 1+ Armour Save. If the of the Phase, the wearer&apos;s model has a 1+ Armour Save. If the wearer’s model has Towering Presence , it gains a 2+ Armour Save insteadl"/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="One use only. Whenever the wearer&apos;s model suffers a hit, the item can be activated. For the duration of the Phase, the wearer&apos;s model has a 1+ Armour Save. If the of the Phase, the wearer&apos;s model has a 1+ Armour Save. If the wearer’s model has Towering Presence , it gains a 2+ Armour Save insteadl"/>
                 <characteristic characteristicId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" name="Type" value="Heavy Armour"/>
               </characteristics>
               <modifiers/>
@@ -7324,8 +7322,7 @@ of the Phase, the wearer&apos;s model has a 1+ Armour Save. If the of the Phase,
             <profile id="abd4-1e2f-bb93-df04" profileTypeId="41726d6f757223232344415441232323" name="Hardened Shield" hidden="false">
               <characteristics>
                 <characteristic characteristicId="536176696e67205468726f77206d6f64696669657223232344415441232323" name="Saving Throw modifier" value="+2"/>
-                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="The bearer gains an additional +1 to its Armour Save (for a total of +2) while using the shield . The bearer
-attacks with normal Close Combat Attacks at Initiative 0 (regardless of the bearer’s Initiative)."/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="The bearer gains an additional +1 to its Armour Save (for a total of +2) while using the shield . The bearer attacks with normal Close Combat Attacks at Initiative 0 (regardless of the bearer’s Initiative)."/>
                 <characteristic characteristicId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" name="Type" value="Shield"/>
               </characteristics>
               <modifiers/>
@@ -7790,8 +7787,7 @@ attacks with normal Close Combat Attacks at Initiative 0 (regardless of the bear
               <characteristics>
                 <characteristic characteristicId="52616e676523232344415441232323" name="Range" value="24&quot;"/>
                 <characteristic characteristicId="537472656e67746823232344415441232323" name="Strength" value="4"/>
-                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Multiple Shots (4), Armour Piercing (1)
-Shooting Attacks made with this weapon ignore Ballistic Skill and all to-hit modifiers, and instead hit on 4+."/>
+                <characteristic characteristicId="5370656369616c2052756c657323232344415441232323" name="Special Rules" value="Multiple Shots (4), Armour Piercing (1) Shooting Attacks made with this weapon ignore Ballistic Skill and all to-hit modifiers, and instead hit on 4+."/>
                 <characteristic characteristicId="29462612-b0ed-72ab-53b7-0db0a426202a" name="Type" value="Shooting Weapon"/>
               </characteristics>
               <modifiers/>
@@ -8019,6 +8015,16 @@ Shooting Attacks made with this weapon ignore Ballistic Skill and all to-hit mod
   <sharedRules>
     <rule id="e439-6334-a9be-d300" name="Accident Prone" hidden="false">
       <description>When Accident Prone models contact any terrain feature except open or hills, contact the board edge or stop 1&apos;&apos; away from impassable terrain, they must take a dangerous terrain test which is failed on a 1 and 2. If two Accident Prone units touch each other, they are both removed as casualties.</description>
+      <modifiers/>
+    </rule>
+    <rule id="9f4d-3303-d003-1ace" name="Area Attack" hidden="false">
+      <description>When an attack with this special rule hits a unit, chose up to X different ranks of this unit, the ranks resulting in the
+maximum amount of hits. For each rank selected this way: the unit suffers X hits, to a maximum equal to the
+number of models in this rank.
+
+Some Area Attacks have a higher Strength and/or additional special rules stated in square brackets (such as
+Strength 3[7], [Multiple Wounds (D3)]). If so, a single hit from this attack uses the Strength value and special rules
+in brackets. The Bracketed values and special rules are not applied to any other hits.</description>
       <modifiers/>
     </rule>
     <rule id="9ea6-7407-9159-bd26" name="Armour Piercing" hidden="false">
@@ -8279,6 +8285,17 @@ Wounds rule when attacking models of the given Troop Type or possessing the give
       <description>​Close Combat Attacks from opponents in the front can never score successful hits on to-hit rolls of better than 4+, before applying to-hit modifiers. This can only be used by models on foot and against Close Combat Attacks from the front. </description>
       <modifiers/>
     </rule>
+    <rule id="b023-4ff2-e743-2ea9" name="Penetrating" hidden="false">
+      <description>When a weapon with this special rule hits, check in which arc of the target the shooter is in. The weapon causes a
+number of hits equal to the number of ranks of its target if the shooter is in the front or the rear arc, or a number
+hits equal to the number of files of its target if the shooter is in either flank arc. In either case, the number of hits
+cannot exceed 5.
+
+Some Penetrating attacks have a higher Strength and/or additional special rules stated in square brackets (such as
+Strength 3[6], [Multiple Wounds (D3)]). If so, a single hit from this attack uses the Strength value and special rules
+in brackets. The Bracketed values and special rules are not applied to any other hits.</description>
+      <modifiers/>
+    </rule>
     <rule id="f061-7400-a1c9-3d80" name="Poisoned Attacks" hidden="false">
       <description>If an attack with this Special Rule, or an attack from a model with this Special Rule (both Shooting and Close Combat Attacks), rolls an unmodified &apos;6&apos; To Hit, it automatically wounds with no To Wound roll needed. Shooting attacks that need a 7+ To Hit (or more) can never benefit from Poisoned Attacks. If a multipart model has this rule, then the rule is only applied to the part of the model that has the rule. </description>
       <modifiers/>
@@ -8534,27 +8551,6 @@ War Machines have separate profiles for the machine and its crew members. Use th
       <modifiers/>
     </rule>
     <rule id="b45c-45d8-7a68-0ee9" name="Wizard Master" hidden="false">
-      <modifiers/>
-    </rule>
-    <rule id="9f4d-3303-d003-1ace" name="Area Attack" hidden="false">
-      <description>When an attack with this special rule hits a unit, chose up to X different ranks of this unit, the ranks resulting in the
-maximum amount of hits. For each rank selected this way: the unit suffers X hits, to a maximum equal to the
-number of models in this rank.
-
-Some Area Attacks have a higher Strength and/or additional special rules stated in square brackets (such as
-Strength 3[7], [Multiple Wounds (D3)]). If so, a single hit from this attack uses the Strength value and special rules
-in brackets. The Bracketed values and special rules are not applied to any other hits.</description>
-      <modifiers/>
-    </rule>
-    <rule id="b023-4ff2-e743-2ea9" name="Penetrating" hidden="false">
-      <description>When a weapon with this special rule hits, check in which arc of the target the shooter is in. The weapon causes a
-number of hits equal to the number of ranks of its target if the shooter is in the front or the rear arc, or a number
-hits equal to the number of files of its target if the shooter is in either flank arc. In either case, the number of hits
-cannot exceed 5.
-
-Some Penetrating attacks have a higher Strength and/or additional special rules stated in square brackets (such as
-Strength 3[6], [Multiple Wounds (D3)]). If so, a single hit from this attack uses the Strength value and special rules
-in brackets. The Bracketed values and special rules are not applied to any other hits.</description>
       <modifiers/>
     </rule>
   </sharedRules>
