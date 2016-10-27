@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a4f1-e922-7744-9cf5" revision="98" gameSystemId="875f-af88-1503-3e7f" gameSystemRevision="1" battleScribeVersion="1.15" name="Orcs and Goblins" books="Orcs and Goblins v1.2.0" authorName="Toreador13 &amp; gommo, Mikel2311" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a4f1-e922-7744-9cf5" revision="99" gameSystemId="875f-af88-1503-3e7f" gameSystemRevision="1" battleScribeVersion="1.15" name="Orcs and Goblins" books="Orcs and Goblins v1.2.0" authorName="Toreador13 &amp; gommo, Mikel2311" authorContact="Toreador13@gmail.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="f0de-6622-be87-fd4f" name="Gargantula" points="480.0" categoryId="2ded-7bec-fb35-3d30" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
@@ -372,6 +372,9 @@ contact with the unit.</description>
             </modifier>
           </modifiers>
         </link>
+        <link id="1906-4c89-50e6-7530" targetId="cbb3-1499-3221-d592" linkType="rule">
+          <modifiers/>
+        </link>
         <link id="de59-e9d1-d913-8b86" targetId="38f2-b081-6148-12c3" linkType="entry">
           <modifiers/>
         </link>
@@ -517,7 +520,7 @@ contact with the unit.</description>
         </link>
       </links>
     </entry>
-    <entry id="2420-d65a-a7ad-d888" name="Lords of Sneakin&apos;" points="0.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="2420-d65a-a7ad-d888" name="Goblin King" points="0.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="6" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="6e72-da45-b6e4-9ffb" name="Magic Items" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -789,7 +792,20 @@ contact with the unit.</description>
             <entry id="7513-fa9d-5ad2-0ca2" name="Heavy Armour" points="16.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition parentId="2420-d65a-a7ad-d888" childId="d81b-103b-9e01-1d4b" field="selections" type="equal to" value="0.0"/>
+                        <condition parentId="2420-d65a-a7ad-d888" childId="a3da-a696-00c6-c479" field="selections" type="equal to" value="0.0"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <rules/>
               <profiles/>
               <links>
@@ -965,14 +981,7 @@ contact with the unit.</description>
           <modifiers/>
           <links>
             <link id="d8d2-97a4-d974-40ca" targetId="a767-6627-de30-f95d" linkType="entry">
-              <modifiers>
-                <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="roster" childId="d8d2-97a4-d974-40ca" field="selections" type="greater than" value="6.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
+              <modifiers/>
             </link>
             <link id="256c-2d7a-f9a6-b1ff" targetId="a3da-a696-00c6-c479" linkType="entry">
               <modifiers/>
@@ -1472,9 +1481,12 @@ contact with the unit.</description>
             </modifier>
           </modifiers>
         </link>
+        <link id="f7a1-5cd4-86c8-36a7" targetId="5e56-4552-0e4d-9a64" linkType="profile">
+          <modifiers/>
+        </link>
       </links>
     </entry>
-    <entry id="4194-0ca5-8981-9d36" name="Goblin Witch Doctor" points="140.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="4194-0ca5-8981-9d36" name="Goblin Shaman" points="140.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="443f-cd92-ecce-54ba" name="Magic Items" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -1667,7 +1679,7 @@ contact with the unit.</description>
                     <conditionGroup type="and">
                       <conditions>
                         <condition parentId="4194-0ca5-8981-9d36" childId="5642-4970-3121-e6bb" field="selections" type="equal to" value="0.0"/>
-                        <condition parentId="4194-0ca5-8981-9d36" childId="9c00-3bcb-8d73-fdf2" field="selections" type="equal to" value="0.0"/>
+                        <condition parentId="4194-0ca5-8981-9d36" childId="2ec2-d2ab-22a0-9318" field="selections" type="equal to" value="0.0"/>
                       </conditions>
                       <conditionGroups/>
                     </conditionGroup>
@@ -2113,15 +2125,10 @@ contact with the unit.</description>
               <conditionGroups/>
             </modifier>
             <modifier type="set" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition parentId="84de-66f8-1379-945f" childId="7cc2-42a9-b932-9a5b" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition parentId="84de-66f8-1379-945f" childId="d81b-103b-9e01-1d4b" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
             <modifier type="set" field="maxSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
@@ -2436,7 +2443,7 @@ contact with the unit.</description>
       <modifiers/>
       <rules>
         <rule id="9f64-79be-cfc6-fad9" name="Smash &apos;Em Flat" hidden="false">
-          <description>At the start of each Round of Combat , if the Great Green Idol is engaged in Combat, all friendly units within 8&quot; of it may gain either Devastating Charge or a +1 to-wound modifier  to Close Combat Attacks . Each unit may choose a different bonus.  The bonus lasts until the end of the Round of Combat or until the Great Green Idol is no longer engaged in Combat, whichever comes first.</description>
+          <description>All friendly Units within 8“ of a Great Green Idol that is Engaged in Combat may gain either Devastating Charge or +1 to wound. Each unit chooses which bonus to use at the start of each Round of Combat.</description>
           <modifiers/>
         </rule>
         <rule id="6812-236f-86f1-541b" name="Icon of the Waaargh!" hidden="false">
@@ -2595,7 +2602,7 @@ This Warmachine may choose to lose one wound in order to reroll a roll on the Mi
         </link>
       </links>
     </entry>
-    <entry id="2ea3-35ac-c794-015e" name="Grotlings" points="40.0" categoryId="a2a3-8d76-c9e1-a187" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="2ea3-35ac-c794-015e" name="Grotlings" points="40.0" categoryId="6a35-8450-fd55-ec4c" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="4242-550d-2749-4eb0" name="Grotling" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="2" maxSelections="6" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -4103,7 +4110,7 @@ Large Targets)
         </link>
       </links>
     </entry>
-    <entry id="1aed-1074-11ab-29dd" name="Lords of FIghtin&apos;" points="0.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="1aed-1074-11ab-29dd" name="Orc Warlord" points="0.0" categoryId="980d-cabc-2b83-1c27" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="4e5e-5007-35c2-53d7" name="Magic Items" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
@@ -4853,7 +4860,20 @@ Large Targets)
             <entry id="ae7e-a6a8-0569-8fcd" name="Light Armour" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="4f6c-3261-b2c2-42ad" childId="784b-bfd5-64cb-6dc9" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="set" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="4f6c-3261-b2c2-42ad" childId="784b-bfd5-64cb-6dc9" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <rules/>
               <profiles/>
               <links>
@@ -4884,20 +4904,7 @@ Large Targets)
             </entry>
           </entries>
           <entryGroups/>
-          <modifiers>
-            <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="4f6c-3261-b2c2-42ad" childId="61ca-8392-e64e-111b" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="set" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="4f6c-3261-b2c2-42ad" childId="61ca-8392-e64e-111b" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <links/>
         </entryGroup>
         <entryGroup id="cb86-5449-0039-4764" name="May take any of the following" minSelections="0" maxSelections="4" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -5023,7 +5030,7 @@ Large Targets)
             </link>
           </links>
         </entry>
-        <entry id="86d1-961f-b7ab-5554" name="Pointed Sticks" points="10.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+        <entry id="86d1-961f-b7ab-5554" name="Pointed Sticks" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
           <modifiers/>
