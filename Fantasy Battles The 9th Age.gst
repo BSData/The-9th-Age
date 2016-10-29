@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="875f-af88-1503-3e7f" revision="8" battleScribeVersion="1.15" name="Fantasy Battles: The 9th Age" books="The 9th Age - Rules - v1.2" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="875f-af88-1503-3e7f" revision="9" battleScribeVersion="1.15" name="Fantasy Battles: The 9th Age" books="The 9th Age - Rules - v1.2" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <forceTypes>
     <forceType id="5374616e6461726423232344415441232323" name="Saurian Ancients" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="100" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="20" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
             <modifier type="decrement" field="minPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="a48e-2911-ba52-456c" incrementField="percent" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="a48e-2911-ba52-456c" incrementField="points" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -70,7 +80,14 @@
           <modifiers/>
         </category>
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </category>
         <category id="6a35-8450-fd55-ec4c" name="Special" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
@@ -101,6 +118,16 @@
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="15" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
             <modifier type="decrement" field="minPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="43ab-691c-d4b7-d229" incrementField="percent" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="43ab-691c-d4b7-d229" incrementField="points" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -235,7 +262,14 @@
           </modifiers>
         </category>
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="15" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </category>
         <category id="2ded-7bec-fb35-3d30" name="Dark Gods&apos; Might" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="40" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
@@ -1251,6 +1285,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="445a-3e3a-fc94-74cb" incrementField="points" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
           </modifiers>
         </category>
         <category id="6a35-8450-fd55-ec4c" name="Special" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
@@ -1314,6 +1358,16 @@
         <category id="a2a3-8d76-c9e1-a18" name="DH Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
             <modifier type="decrement" field="minPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="2329-f0f6-6359-9b6" incrementField="percent" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="2329-f0f6-6359-9b6" incrementField="points" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -1392,7 +1446,14 @@
           </modifiers>
         </category>
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </category>
         <category id="6a35-8450-fd55-ec4c" name="Special" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
@@ -1443,6 +1504,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="5aee-c040-9100-618" incrementField="points" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
           </modifiers>
         </category>
         <category id="d28f-bd4f-dce2-f270" name="HBE Special" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
@@ -1475,6 +1546,16 @@
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
             <modifier type="decrement" field="minPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="ab11-df67-7a23-ee2e" incrementField="percent" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="ab11-df67-7a23-ee2e" incrementField="points" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -1552,7 +1633,14 @@
           </modifiers>
         </category>
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="30" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </category>
         <category id="6a35-8450-fd55-ec4c" name="Special" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
@@ -1582,7 +1670,14 @@
           <modifiers/>
         </category>
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </category>
         <category id="6a35-8450-fd55-ec4c" name="Special" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
@@ -1630,6 +1725,20 @@
               <conditionGroups/>
             </modifier>
             <modifier type="decrement" field="minPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="0cfd-71d8-15d8-baf3" incrementField="percent" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="0cfd-71d8-15d8-baf3" incrementField="points" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="439b-b022-63fc-5504" incrementField="points" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -1744,7 +1853,14 @@
           </modifiers>
         </category>
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </category>
         <category id="6a35-8450-fd55-ec4c" name="Elite" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
@@ -1774,39 +1890,6 @@
         </category>
         <category id="d090-853c-dc05-8a2d" name="Artillery + Tremendous" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
-        </category>
-      </categories>
-      <forceTypes/>
-    </forceType>
-    <forceType id="6590-6e04-13d6-5f0c" name="Vampire Covenant" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-      <categories>
-        <category id="980d-cabc-2b83-1c27" name="Characters" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="40" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
-        </category>
-        <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="20" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
-        </category>
-        <category id="6a35-8450-fd55-ec4c" name="Elite" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
-        </category>
-        <category id="2ded-7bec-fb35-3d30" name="Tormentors" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="30" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
-        </category>
-        <category id="15d5-3175-1b52-43ec" name="Suffering" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="20" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="4dd6-541b-0b09-eeab" incrementField="percent" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </category>
-        <category id="4dd6-541b-0b09-eeab" name="Character + Suffering" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="4dd6-541b-0b09-eeab" incrementField="percent" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
         </category>
       </categories>
       <forceTypes/>
@@ -1873,7 +1956,14 @@
           <modifiers/>
         </category>
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </category>
         <category id="6a35-8450-fd55-ec4c" name="Special" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
@@ -1905,6 +1995,16 @@
         <category id="fc2f-b643-b0c7-2631" name="HBE of Ryma Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
             <modifier type="decrement" field="minPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="ed53-694b-b38d-de63" incrementField="percent" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="ed53-694b-b38d-de63" incrementField="points" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -1957,6 +2057,20 @@
               <conditionGroups/>
             </modifier>
             <modifier type="decrement" field="minPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="8dd0-473e-0f37-2358" incrementField="percent" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="8dd0-473e-0f37-2358" incrementField="points" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="339c-5ea5-50bd-a984" incrementField="points" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -2070,7 +2184,14 @@
           <modifiers/>
         </category>
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </category>
         <category id="6a35-8450-fd55-ec4c" name="Elite" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
@@ -2097,6 +2218,16 @@
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
             <modifier type="decrement" field="minPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="1189-37ec-1f5b-af68" incrementField="percent" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="1189-37ec-1f5b-af68" incrementField="points" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -2174,7 +2305,14 @@
           <modifiers/>
         </category>
         <category id="a2a3-8d76-c9e1-a187" name="Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="15" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </category>
         <category id="6a35-8450-fd55-ec4c" name="Special" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
@@ -2196,6 +2334,16 @@
         <category id="5de8-0f59-5420-7741" name="UD Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="25" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
             <modifier type="decrement" field="minPercentage" value="1.0" repeat="true" numRepeats="1" incrementParentId="3fd0-0f0b-04bc-00d6" incrementField="percent" incrementValue="1.0">
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="minPoints" value="1.0" repeat="true" numRepeats="1" incrementParentId="3fd0-0f0b-04bc-00d6" incrementField="points" incrementValue="1.0">
               <conditions/>
               <conditionGroups/>
             </modifier>
@@ -2266,6 +2414,33 @@
               <conditionGroups/>
             </modifier>
           </modifiers>
+        </category>
+      </categories>
+      <forceTypes/>
+    </forceType>
+    <forceType id="6e0f-b434-d169-cd4e" name="Vampire Covenant" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="100" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+      <categories>
+        <category id="c7d3-1044-3ce6-90a7" name="VC Characters" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="40" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+        <category id="e4f5-7c0d-6de4-7742" name="VC Core" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="20" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers>
+            <modifier type="set" field="minPoints" value="1125.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" field="points limit" type="equal to" value="4500.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </category>
+        <category id="9a00-8903-5d68-e8f5" name="VC Special" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+        <category id="7db8-be6d-5ac4-de76" name="VC The Suffering" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="20" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+        <category id="977a-a2ee-dee5-ab6f" name="VC Swift Death" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="30" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
         </category>
       </categories>
       <forceTypes/>
