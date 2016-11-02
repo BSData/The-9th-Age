@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2ba1-7df2-2602-1e80" revision="3" gameSystemId="875f-af88-1503-3e7f" gameSystemRevision="10" battleScribeVersion="1.15" name="Undying Dynasties" books="v1.2.1" authorName="Arturius" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2ba1-7df2-2602-1e80" revision="4" gameSystemId="875f-af88-1503-3e7f" gameSystemRevision="10" battleScribeVersion="1.15" name="Undying Dynasties" books="v1.2.1" authorName="Arturius" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries>
     <entry id="fe6e-3e8b-1919-d455" name="Ark of Ages mount" points="350.0" categoryId="fc27-3d0e-db34-88c3" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true" book="Undying Dynasties">
       <entries>
@@ -278,6 +278,12 @@
           </conditions>
           <conditionGroups/>
         </modifier>
+        <modifier type="increment" field="points" value="30.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
       </modifiers>
       <rules/>
       <profiles>
@@ -353,13 +359,16 @@
         <link id="e1ae-c11c-2820-985c" targetId="71ec-9b9c-0697-1fb4" linkType="profile">
           <modifiers/>
         </link>
+        <link id="b047-79ed-5a04-250d" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
+          <modifiers/>
+        </link>
       </links>
     </entry>
     <entry id="01855473-8145-0269-22c8-673bae662a71" name="Charnel Catapult" points="240.0" categoryId="db85-163f-7632-dc0a" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="2" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Undying Dynasties">
       <entries/>
       <entryGroups/>
       <modifiers>
-        <modifier type="increment" field="points" value="15.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="increment" field="points" value="30.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
           </conditions>
@@ -701,7 +710,14 @@
           <links/>
         </entryGroup>
       </entryGroups>
-      <modifiers/>
+      <modifiers>
+        <modifier type="increment" field="points" value="30.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles>
         <profile id="d7a6-64f0-ac5c-1f46" profileTypeId="4d6f64656c23232344415441232323" name="Death Cult Hierarch" hidden="false">
@@ -783,6 +799,9 @@
           <modifiers/>
         </link>
         <link id="d311-cce3-01c6-acab" targetId="7b83-51fa-2dfc-2428" linkType="entry group">
+          <modifiers/>
+        </link>
+        <link id="5da5-d906-9961-51b7" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -1150,7 +1169,14 @@
                   <links/>
                 </entryGroup>
               </entryGroups>
-              <modifiers/>
+              <modifiers>
+                <modifier type="increment" field="points" value="30.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <rules/>
               <profiles>
                 <profile id="efa5-d76a-c86d-461a" profileTypeId="4d6f64656c23232344415441232323" name="Nomarch" hidden="false">
@@ -1203,9 +1229,6 @@
                 <link id="268c-8346-3290-123b" targetId="5634-af9e-1658-3530" linkType="entry">
                   <modifiers/>
                 </link>
-                <link id="8356-47a3-1d9c-6699" targetId="1336-08d0-fd9a-ca5b" linkType="rule">
-                  <modifiers/>
-                </link>
                 <link id="467b-a257-914d-f428" targetId="59db-842f-01fb-6193" linkType="rule">
                   <modifiers>
                     <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
@@ -1239,6 +1262,9 @@
                       <conditionGroups/>
                     </modifier>
                   </modifiers>
+                </link>
+                <link id="166d-f2d0-35cf-bf90" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
+                  <modifiers/>
                 </link>
               </links>
             </entry>
@@ -1467,7 +1493,14 @@
                   <links/>
                 </entryGroup>
               </entryGroups>
-              <modifiers/>
+              <modifiers>
+                <modifier type="increment" field="points" value="30.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <rules/>
               <profiles>
                 <profile id="2623-d1aa-b456-a5df" profileTypeId="4d6f64656c23232344415441232323" name="Pharaoh" hidden="false">
@@ -1533,7 +1566,7 @@
                 <link id="5666-d284-5867-2519" targetId="5634-af9e-1658-3530" linkType="entry">
                   <modifiers/>
                 </link>
-                <link id="4edb-7f3e-dbe3-9513" targetId="1336-08d0-fd9a-ca5b" linkType="rule">
+                <link id="4edb-7f3e-dbe3-9513" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
                   <modifiers/>
                 </link>
                 <link id="80e1-0b93-ff00-67ac" targetId="51de-f1c1-ae0e-13ef" linkType="entry group">
@@ -1620,13 +1653,13 @@
             </entryGroup>
           </entryGroups>
           <modifiers>
-            <modifier type="increment" field="points" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="increment" field="points" value="6.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="points" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="increment" field="points" value="4.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
               </conditions>
@@ -1641,7 +1674,7 @@
           </modifiers>
           <rules/>
           <profiles>
-            <profile id="cf6a93d1-ee23-b3c5-12e9-1758b5ab5b09" profileTypeId="4d6f64656c23232344415441232323" name="Necropolis Guard" hidden="false">
+            <profile id="ca1f-4b02-28cf-7901" profileTypeId="4d6f64656c23232344415441232323" name="Necropolis Guard" hidden="false">
               <characteristics>
                 <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
                 <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
@@ -1656,8 +1689,16 @@
                 <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
                 <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
                 <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Infantry"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="20x20mm"/>
+                <characteristic characteristicId="2f85-d560-70d4-3b71" name="Evoked" value="4"/>
               </characteristics>
               <modifiers>
+                <modifier type="set" field="2f85-d560-70d4-3b71" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
                 <modifier type="decrement" field="4923232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
                     <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
@@ -1777,46 +1818,8 @@
         <link id="db8a-154b-a6c1-87bf" targetId="8fd2-a5ed-3d91-4b81" linkType="rule">
           <modifiers/>
         </link>
-        <link id="1f51-a7aa-45d7-baea" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
         <link id="c8fe-cb65-3832-3f84" targetId="59db-842f-01fb-6193" linkType="rule">
           <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
-        <link id="61ed-3494-1771-4392" targetId="d459-8c85-5aaa-fb93" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
             <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
@@ -1985,7 +1988,7 @@
           <modifiers/>
           <rules/>
           <profiles>
-            <profile id="f4bff92f-6dae-678d-fcc7-ec9bd1c57ffb" profileTypeId="4d6f64656c23232344415441232323" name="Sand Stalker" hidden="false">
+            <profile id="ca42-ab15-0006-c610" profileTypeId="4d6f64656c23232344415441232323" name="Sand Stalker" hidden="false">
               <characteristics>
                 <characteristic characteristicId="4d23232344415441232323" name="M" value="7"/>
                 <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
@@ -1999,9 +2002,18 @@
                 <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
                 <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
                 <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-                <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monstrous Beast"/>
+                <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monstroust Beast"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="50x100mm"/>
+                <characteristic characteristicId="2f85-d560-70d4-3b71" name="Evoked" value="2"/>
               </characteristics>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="2f85-d560-70d4-3b71" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <links/>
@@ -2079,7 +2091,14 @@
           <modifiers/>
         </link>
         <link id="b50e-48ff-6845-c966" targetId="52ba-2423-640d-c0e1" linkType="rule">
-          <modifiers/>
+          <modifiers>
+            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </link>
       </links>
     </entry>
@@ -2335,7 +2354,7 @@
           <modifiers/>
           <rules/>
           <profiles>
-            <profile id="af4a-17ec-0e52-c3c1" profileTypeId="4d6f64656c23232344415441232323" name="Shabti" hidden="false">
+            <profile id="cee3-959d-f773-eba5" profileTypeId="4d6f64656c23232344415441232323" name="Shabti" hidden="false">
               <characteristics>
                 <characteristic characteristicId="4d23232344415441232323" name="M" value="6"/>
                 <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
@@ -2350,8 +2369,17 @@
                 <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
                 <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
                 <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monstrous Infantry"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="40x40mm"/>
+                <characteristic characteristicId="2f85-d560-70d4-3b71" name="Evoked" value="2"/>
               </characteristics>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="2f85-d560-70d4-3b71" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <links/>
@@ -2442,9 +2470,6 @@
         <link id="9cdd-953c-426a-59b4" targetId="a255db08-e195-2459-4dcf-3757c5a879b8" linkType="rule">
           <modifiers/>
         </link>
-        <link id="7a1e-76d3-deed-3fee" targetId="52ba-2423-640d-c0e1" linkType="rule">
-          <modifiers/>
-        </link>
         <link id="6d22-0d19-782c-9599" targetId="47f8-481f-02a8-0e92" linkType="rule">
           <modifiers/>
         </link>
@@ -2493,7 +2518,7 @@
           <modifiers/>
           <rules/>
           <profiles>
-            <profile id="e501642a-9e8c-5796-e66e-34c50c454784" profileTypeId="4d6f64656c23232344415441232323" name="Shabti" hidden="false">
+            <profile id="8daa-f4b5-e815-d5c3" profileTypeId="4d6f64656c23232344415441232323" name="Shabti" hidden="false">
               <characteristics>
                 <characteristic characteristicId="4d23232344415441232323" name="M" value="6"/>
                 <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
@@ -2508,8 +2533,17 @@
                 <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
                 <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
                 <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monstrous Infantry"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="40x40mm"/>
+                <characteristic characteristicId="2f85-d560-70d4-3b71" name="Evoked" value="2"/>
               </characteristics>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="2f85-d560-70d4-3b71" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <links/>
@@ -2600,9 +2634,6 @@
         <link id="9cea6004-242c-49cc-6896-fb9e0a30ad9b" targetId="a255db08-e195-2459-4dcf-3757c5a879b8" linkType="rule">
           <modifiers/>
         </link>
-        <link id="cbb6-dfd6-437e-ed21" targetId="52ba-2423-640d-c0e1" linkType="rule">
-          <modifiers/>
-        </link>
         <link id="042e-3043-15dc-3c27" targetId="47f8-481f-02a8-0e92" linkType="rule">
           <modifiers/>
         </link>
@@ -2614,13 +2645,13 @@
           <entries/>
           <entryGroups/>
           <modifiers>
-            <modifier type="increment" field="points" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="increment" field="points" value="6.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="points" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="increment" field="points" value="4.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
               </conditions>
@@ -2629,7 +2660,7 @@
           </modifiers>
           <rules/>
           <profiles>
-            <profile id="ca7a-c3a3-9e37-f491" profileTypeId="4d6f64656c23232344415441232323" name="Skeleton" hidden="false">
+            <profile id="02b9-643b-64a7-bd7a" profileTypeId="4d6f64656c23232344415441232323" name="Skeleton Archer" hidden="false">
               <characteristics>
                 <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
                 <characteristic characteristicId="575323232344415441232323" name="WS" value="2"/>
@@ -2644,8 +2675,16 @@
                 <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
                 <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
                 <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Infantry"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="20x20mm"/>
+                <characteristic characteristicId="2f85-d560-70d4-3b71" name="Evoked" value="6"/>
               </characteristics>
               <modifiers>
+                <modifier type="set" field="2f85-d560-70d4-3b71" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
                 <modifier type="increment" field="5423232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
                     <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
@@ -2753,27 +2792,7 @@
             </modifier>
           </modifiers>
         </link>
-        <link id="1ed6-4dbe-4852-f9f5" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
         <link id="88d9-2e82-4edd-014e" targetId="59db-842f-01fb-6193" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
-        <link id="7b14-2d6d-8df1-9f9d" targetId="f118-5536-b99d-23bd" linkType="rule">
           <modifiers>
             <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
@@ -2807,45 +2826,21 @@
         </link>
       </links>
     </entry>
-    <entry id="6080695a-8135-e609-21d2-2044336ebbae" name="Skeleton Cavalry" points="10.0" categoryId="5de8-0f59-5420-7741" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+    <entry id="6080695a-8135-e609-21d2-2044336ebbae" name="Skeleton Cavalry" points="60.0" categoryId="5de8-0f59-5420-7741" type="model" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
       <entries>
         <entry id="f55f8a2e-25d9-3a2d-1c3e-3f33c6bced7a" name="Skeleton Cavalry" points="24.0" categoryId="(No Category)" type="upgrade" minSelections="5" maxSelections="20" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
           <entries/>
           <entryGroups/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="points" value="6.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <rules/>
           <profiles>
-            <profile id="5d6c0f4f-f097-7bbc-b63e-4ee3fd7c65ae" profileTypeId="4d6f64656c23232344415441232323" name="Skeleton Rider" hidden="false">
-              <characteristics>
-                <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
-                <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
-                <characteristic characteristicId="425323232344415441232323" name="BS" value="2"/>
-                <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
-                <characteristic characteristicId="5423232344415441232323" name="T" value="3"/>
-                <characteristic characteristicId="5723232344415441232323" name="W" value="1"/>
-                <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
-                <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
-                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="6"/>
-                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
-                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
-                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-                <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Cavalry"/>
-              </characteristics>
-              <modifiers>
-                <modifier type="decrement" field="4923232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-                <modifier type="increment" field="5423232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </profile>
             <profile id="0fdad56e-e640-4890-df89-90048656714f" profileTypeId="4d6f64656c23232344415441232323" name="Skeletal Horse" hidden="false">
               <characteristics>
                 <characteristic characteristicId="4d23232344415441232323" name="M" value="8"/>
@@ -2870,6 +2865,45 @@
                   <conditionGroups/>
                 </modifier>
                 <modifier type="decrement" field="4923232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </profile>
+            <profile id="1e2b-25e0-2d9e-b0aa" profileTypeId="4d6f64656c23232344415441232323" name="Skeleton Rider" hidden="false">
+              <characteristics>
+                <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
+                <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
+                <characteristic characteristicId="425323232344415441232323" name="BS" value="2"/>
+                <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
+                <characteristic characteristicId="5423232344415441232323" name="T" value="3"/>
+                <characteristic characteristicId="5723232344415441232323" name="W" value="1"/>
+                <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
+                <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
+                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="6"/>
+                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+                <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
+                <characteristic characteristicId="2f85-d560-70d4-3b71" name="Evoked" value="5"/>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" field="2f85-d560-70d4-3b71" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="decrement" field="4923232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="increment" field="5423232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
                     <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
                   </conditions>
@@ -3009,40 +3043,8 @@
             </modifier>
           </modifiers>
         </link>
-        <link id="9b36-f19b-fa6b-000b" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
         <link id="2d36-d579-903b-9f42" targetId="59db-842f-01fb-6193" linkType="rule">
           <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
-        <link id="54f4-7169-1409-699f" targetId="4131-dfd7-3523-bbb9" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
             <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
@@ -3098,31 +3100,6 @@
           </modifiers>
           <rules/>
           <profiles>
-            <profile id="91e4082a-3483-6c69-e5cf-5b279944fdc6" profileTypeId="4d6f64656c23232344415441232323" name="Chariot" hidden="false">
-              <characteristics>
-                <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
-                <characteristic characteristicId="575323232344415441232323" name="WS" value="-"/>
-                <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
-                <characteristic characteristicId="5323232344415441232323" name="S" value="4"/>
-                <characteristic characteristicId="5423232344415441232323" name="T" value="4"/>
-                <characteristic characteristicId="5723232344415441232323" name="W" value="3"/>
-                <characteristic characteristicId="4923232344415441232323" name="I" value="-"/>
-                <characteristic characteristicId="4123232344415441232323" name="A" value="-"/>
-                <characteristic characteristicId="4c4423232344415441232323" name="LD" value=""/>
-                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value=""/>
-                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
-                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-                <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Chariot"/>
-              </characteristics>
-              <modifiers>
-                <modifier type="increment" field="5423232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </profile>
             <profile id="0d124b46-7f79-e50a-1e15-2e28cfb51e30" profileTypeId="4d6f64656c23232344415441232323" name="Skeletal Horse (2)" hidden="false">
               <characteristics>
                 <characteristic characteristicId="4d23232344415441232323" name="M" value="8"/>
@@ -3172,6 +3149,39 @@
               </characteristics>
               <modifiers>
                 <modifier type="decrement" field="4923232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </profile>
+            <profile id="ff01-5c7f-8647-33c8" profileTypeId="4d6f64656c23232344415441232323" name="Chariot" hidden="false">
+              <characteristics>
+                <characteristic characteristicId="4d23232344415441232323" name="M" value="-"/>
+                <characteristic characteristicId="575323232344415441232323" name="WS" value="-"/>
+                <characteristic characteristicId="425323232344415441232323" name="BS" value="-"/>
+                <characteristic characteristicId="5323232344415441232323" name="S" value="4"/>
+                <characteristic characteristicId="5423232344415441232323" name="T" value="4"/>
+                <characteristic characteristicId="5723232344415441232323" name="W" value="3"/>
+                <characteristic characteristicId="4923232344415441232323" name="I" value="-"/>
+                <characteristic characteristicId="4123232344415441232323" name="A" value="-"/>
+                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="-"/>
+                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+                <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Chariot"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="50x100mm"/>
+                <characteristic characteristicId="2f85-d560-70d4-3b71" name="Evoked" value="4"/>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" field="2f85-d560-70d4-3b71" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="increment" field="5423232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
                     <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
                   </conditions>
@@ -3310,16 +3320,6 @@
         <link id="876e1c44-8e5d-b90b-80ca-8f97873c6147" targetId="8c07-cc44-f5e4-8e9d" linkType="profile">
           <modifiers/>
         </link>
-        <link id="7c2c-27ef-1836-cd6b" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
         <link id="c39d-62d9-09b8-75ce" targetId="aa34-7623-dc18-5bcc" linkType="rule">
           <modifiers/>
         </link>
@@ -3357,22 +3357,6 @@
             </modifier>
           </modifiers>
         </link>
-        <link id="c000-d049-c893-adc5" targetId="d459-8c85-5aaa-fb93" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
         <link id="89f3-51bc-8214-c186" targetId="8b14-f129-6f5c-88aa" linkType="profile">
           <modifiers>
             <modifier type="hide" field="None" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
@@ -3394,7 +3378,7 @@
           <entries/>
           <entryGroups/>
           <modifiers>
-            <modifier type="increment" field="points" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="increment" field="points" value="6.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
               </conditions>
@@ -3403,37 +3387,6 @@
           </modifiers>
           <rules/>
           <profiles>
-            <profile id="1055-de78-1011-4ff7" profileTypeId="4d6f64656c23232344415441232323" name="Skeleton Rider" hidden="false">
-              <characteristics>
-                <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
-                <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
-                <characteristic characteristicId="425323232344415441232323" name="BS" value="2"/>
-                <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
-                <characteristic characteristicId="5423232344415441232323" name="T" value="3"/>
-                <characteristic characteristicId="5723232344415441232323" name="W" value="1"/>
-                <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
-                <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
-                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="6"/>
-                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
-                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
-                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-                <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Cavalry"/>
-              </characteristics>
-              <modifiers>
-                <modifier type="decrement" field="4923232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-                <modifier type="increment" field="5423232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-                  <conditions>
-                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-            </profile>
             <profile id="40f0-428b-61cc-e59e" profileTypeId="4d6f64656c23232344415441232323" name="Skeletal Horse" hidden="false">
               <characteristics>
                 <characteristic characteristicId="4d23232344415441232323" name="M" value="8"/>
@@ -3458,6 +3411,45 @@
                   <conditionGroups/>
                 </modifier>
                 <modifier type="decrement" field="4923232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </profile>
+            <profile id="8003-7861-73f7-a6f3" profileTypeId="4d6f64656c23232344415441232323" name="Skeleton Rider" hidden="false">
+              <characteristics>
+                <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
+                <characteristic characteristicId="575323232344415441232323" name="WS" value="3"/>
+                <characteristic characteristicId="425323232344415441232323" name="BS" value="2"/>
+                <characteristic characteristicId="5323232344415441232323" name="S" value="3"/>
+                <characteristic characteristicId="5423232344415441232323" name="T" value="3"/>
+                <characteristic characteristicId="5723232344415441232323" name="W" value="1"/>
+                <characteristic characteristicId="4923232344415441232323" name="I" value="2"/>
+                <characteristic characteristicId="4123232344415441232323" name="A" value="1"/>
+                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="6"/>
+                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+                <characteristic characteristicId="5479706523232344415441232323" name="Type"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size"/>
+                <characteristic characteristicId="2f85-d560-70d4-3b71" name="Evoked" value="5"/>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" field="2f85-d560-70d4-3b71" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="decrement" field="4923232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="increment" field="5423232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
                     <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
                   </conditions>
@@ -3576,40 +3568,8 @@
             </modifier>
           </modifiers>
         </link>
-        <link id="3247-c672-0613-17b3" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
         <link id="a3ca-d102-6b74-54c0" targetId="59db-842f-01fb-6193" linkType="rule">
           <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
-        <link id="d798-835c-ecd9-7dd6" targetId="4131-dfd7-3523-bbb9" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
             <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
@@ -3673,13 +3633,13 @@
             </entryGroup>
           </entryGroups>
           <modifiers>
-            <modifier type="increment" field="points" value="3.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="increment" field="points" value="6.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
               </conditions>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="points" value="2.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+            <modifier type="increment" field="points" value="4.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
                 <condition parentId="roster" childId="691e-8ab0-cd56-ea61" field="selections" type="equal to" value="1.0"/>
               </conditions>
@@ -3688,7 +3648,7 @@
           </modifiers>
           <rules/>
           <profiles>
-            <profile id="1df8f626-df75-40bb-1d24-c37f08a3c283" profileTypeId="4d6f64656c23232344415441232323" name="Skeleton" hidden="false">
+            <profile id="78c3-2ee6-17fd-27fa" profileTypeId="4d6f64656c23232344415441232323" name="Skeleton" hidden="false">
               <characteristics>
                 <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
                 <characteristic characteristicId="575323232344415441232323" name="WS" value="2"/>
@@ -3703,8 +3663,16 @@
                 <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
                 <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
                 <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Infantry"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="20x20mm"/>
+                <characteristic characteristicId="2f85-d560-70d4-3b71" name="Evoked" value="6"/>
               </characteristics>
               <modifiers>
+                <modifier type="set" field="2f85-d560-70d4-3b71" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
                 <modifier type="increment" field="5423232344415441232323" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
                   <conditions>
                     <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
@@ -3822,27 +3790,7 @@
             </modifier>
           </modifiers>
         </link>
-        <link id="0d44-9c4a-ada5-0ca5" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
         <link id="18dc-437c-896d-8fc4" targetId="59db-842f-01fb-6193" linkType="rule">
-          <modifiers>
-            <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-              <conditions>
-                <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </link>
-        <link id="da14-cec3-a828-7a5f" targetId="f118-5536-b99d-23bd" linkType="rule">
           <modifiers>
             <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
               <conditions>
@@ -3971,7 +3919,14 @@
           <links/>
         </entryGroup>
       </entryGroups>
-      <modifiers/>
+      <modifiers>
+        <modifier type="increment" field="points" value="30.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles>
         <profile id="d893-c0d0-6369-17a5" profileTypeId="4d6f64656c23232344415441232323" name="Tomb Architect" hidden="false">
@@ -4074,6 +4029,9 @@
             </modifier>
           </modifiers>
         </link>
+        <link id="502e-b9c7-f95c-6cf6" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
+          <modifiers/>
+        </link>
       </links>
     </entry>
     <entry id="96b72c7b-0c94-3872-1625-08a9e290ebe9" name="Tomb Cataphracts" points="0.0" categoryId="d629-4cea-ee28-9158" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="3" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" book="Undying Dynasties">
@@ -4084,24 +4042,6 @@
           <modifiers/>
           <rules/>
           <profiles>
-            <profile id="33050485-2678-69db-4915-50262d46fd65" profileTypeId="4d6f64656c23232344415441232323" name="Rider" hidden="false">
-              <characteristics>
-                <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
-                <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
-                <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
-                <characteristic characteristicId="5323232344415441232323" name="S" value="4"/>
-                <characteristic characteristicId="5423232344415441232323" name="T" value="4"/>
-                <characteristic characteristicId="5723232344415441232323" name="W" value="1"/>
-                <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
-                <characteristic characteristicId="4123232344415441232323" name="A" value="2"/>
-                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
-                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave" value=""/>
-                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
-                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
-                <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monstrous Cavalry"/>
-              </characteristics>
-              <modifiers/>
-            </profile>
             <profile id="d8501e81-0534-48cd-edf9-17999d67796d" profileTypeId="4d6f64656c23232344415441232323" name="Amuut" hidden="false" book="">
               <characteristics>
                 <characteristic characteristicId="4d23232344415441232323" name="M" value="7"/>
@@ -4119,6 +4059,33 @@
                 <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Montrous Beast"/>
               </characteristics>
               <modifiers/>
+            </profile>
+            <profile id="364e-583a-5f3e-ceae" profileTypeId="4d6f64656c23232344415441232323" name="Rider" hidden="false">
+              <characteristics>
+                <characteristic characteristicId="4d23232344415441232323" name="M" value="4"/>
+                <characteristic characteristicId="575323232344415441232323" name="WS" value="4"/>
+                <characteristic characteristicId="425323232344415441232323" name="BS" value="3"/>
+                <characteristic characteristicId="5323232344415441232323" name="S" value="4"/>
+                <characteristic characteristicId="5423232344415441232323" name="T" value="4"/>
+                <characteristic characteristicId="5723232344415441232323" name="W" value="1"/>
+                <characteristic characteristicId="4923232344415441232323" name="I" value="3"/>
+                <characteristic characteristicId="4123232344415441232323" name="A" value="2"/>
+                <characteristic characteristicId="4c4423232344415441232323" name="LD" value="8"/>
+                <characteristic characteristicId="41726d6f75725361766523232344415441232323" name="ArmourSave"/>
+                <characteristic characteristicId="576172645361766523232344415441232323" name="WardSave"/>
+                <characteristic characteristicId="4d5223232344415441232323" name="MR"/>
+                <characteristic characteristicId="5479706523232344415441232323" name="Type" value="Monstrous Cavalry"/>
+                <characteristic characteristicId="b268-8d89-a887-0d3b" name="Base Size" value="50x100"/>
+                <characteristic characteristicId="2f85-d560-70d4-3b71" name="Evoked" value="2"/>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" field="2f85-d560-70d4-3b71" value="1" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                  <conditions>
+                    <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <links>
@@ -4232,9 +4199,6 @@
           <modifiers/>
         </link>
         <link id="10b23dc4-66fd-6b08-2b18-47e2dcda0856" targetId="a255db08-e195-2459-4dcf-3757c5a879b8" linkType="rule">
-          <modifiers/>
-        </link>
-        <link id="7024-44d7-feb3-49c8" targetId="52ba-2423-640d-c0e1" linkType="rule">
           <modifiers/>
         </link>
         <link id="c1d6-a9d4-b4e6-974f" targetId="47f8-481f-02a8-0e92" linkType="rule">
@@ -4383,6 +4347,12 @@
         <modifier type="set" field="maxInRoster" value="6.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="roster" childId="no child" field="points limit" type="greater than" value="7999.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="hide" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4638,7 +4608,14 @@
           <links/>
         </entryGroup>
       </entryGroups>
-      <modifiers/>
+      <modifiers>
+        <modifier type="increment" field="points" value="30.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="roster" childId="aa9d-3e55-f22f-0895" field="selections" type="equal to" value="1.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles>
         <profile id="a6d8-423a-9eb8-a3e6" profileTypeId="4d6f64656c23232344415441232323" name="Tomb Harbinger" hidden="false">
@@ -4747,6 +4724,9 @@
           </modifiers>
         </link>
         <link id="f8b0-9bf0-56fa-9025" targetId="42d5-697b-7dd7-6144" linkType="rule">
+          <modifiers/>
+        </link>
+        <link id="d247-514f-bd98-24a6" targetId="8436-ffc2-a8e0-7e7a" linkType="rule">
           <modifiers/>
         </link>
       </links>
