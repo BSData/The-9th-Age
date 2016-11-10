@@ -3125,7 +3125,7 @@
           <modifiers>
             <modifier type="decrement" field="minPoints" value="1">
               <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="5aee-c040-9100-618" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="5aee-c040-9100-618" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -3548,7 +3548,7 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="increment" field="maxPercentage" value="3.5">
+            <modifier type="increment" field="maxPercentage" value="0.0">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
