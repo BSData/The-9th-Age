@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.2" revision="16" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.2" revision="17" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -3999,7 +3999,7 @@
       <modifiers/>
       <constraints/>
       <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+        <categoryEntry id="980d-cabc-2b83-1c27" name="VS Characters" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4021,7 +4021,7 @@
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        <categoryEntry id="a2a3-8d76-c9e1-a187" name="VS Core" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4038,14 +4038,14 @@
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
         </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Elite" hidden="false">
+        <categoryEntry id="6a35-8450-fd55-ec4c" name="VS Special" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
         </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-6635" name="Artillery" hidden="false">
+        <categoryEntry id="1f39-4f7b-28ff-6635" name="VS Tunnel Gunners" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4069,7 +4069,7 @@
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
-        <categoryEntry id="66da-a929-a1d8-abbb" name="Tremendous" hidden="false">
+        <categoryEntry id="66da-a929-a1d8-abbb" name="VS Built and Bred" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4100,7 +4100,7 @@
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
-        <categoryEntry id="cbb8-59fa-fea6-8a90" name="Character + Tremendous" hidden="false">
+        <categoryEntry id="cbb8-59fa-fea6-8a90" name="VS Character + Built and Bred" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4131,7 +4131,7 @@
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="8985-c425-674a-00de" type="max"/>
           </constraints>
         </categoryEntry>
-        <categoryEntry id="d090-853c-dc05-8a2d" name="Artillery + Tremendous" hidden="false">
+        <categoryEntry id="d090-853c-dc05-8a2d" name="VS Tunnel Gunners + Built and Bred" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
