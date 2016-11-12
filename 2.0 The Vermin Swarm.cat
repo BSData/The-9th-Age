@@ -549,7 +549,7 @@
                     <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="4"/>
                     <characteristic name="S" characteristicTypeId="5323232344415441232323" value="4"/>
                     <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
-                    <characteristic name="W" characteristicTypeId="5723232344415441232323" value="2"/>
+                    <characteristic name="W" characteristicTypeId="5723232344415441232323" value="3"/>
                     <characteristic name="I" characteristicTypeId="4923232344415441232323" value="6"/>
                     <characteristic name="A" characteristicTypeId="4123232344415441232323" value="3"/>
                     <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="6"/>
@@ -937,7 +937,7 @@
           <characteristics>
             <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="18&quot;"/>
             <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="(D6*2)"/>
-            <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Multiple Shot (3), Multiple Wounds (D3), Magical Attacks, Lightning Attacks, Reload!.   During each friendly shooting phase, the Dreadmill must shoot it’s Electric Discharge. The Rakachit Technician can try to prevent it from shooting by taking and passing a Leadership test. The Dreadmill can shot even if it is Engaged in Combat, is Fleeing or have Rallied in this Player Turn. It must always choose the closest unit as its target (Friend or Foe, controlling player may choose if several units are equally close) even if outside of its Front Arc and/or outside Line of Sight, and even if the target is Engaged in Combat. Each of the three shots are resolved one at a time (measure which unit is the closest, and therefore the target, before resolving each shot).   Electric Discharge shots hits automatically, Roll to determine Strength once for all shots in the same phase. If a natural ‘6’ is rolled for Strength the Dreadmill has misfired and must roll on the Volatile Table. However, if the misfire occurs when the Dreadmill is Engaged in Combat, apply the Malfunction result instead of rolling on the table. "/>
+            <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Multiple Shot (3), Multiple Wounds (D3), Magical Attacks, Lightning Attacks, Reload!.    "/>
             <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a"/>
           </characteristics>
         </profile>
@@ -971,8 +971,7 @@
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>Shots with Warp Discharge can shoot 360o and automatically hits. If a natural six comes up when rolling the number
-of shots, the attacks are lost and the model must roll on the Warp Weapon Misfire Table.
+          <description>During each friendly shooting phase, the Dreadmill must shoot it’s Electric Discharge. The Rakachit Technician can try to prevent it from shooting by taking and passing a Leadership test. The Dreadmill can shot even if it is Engaged in Combat, is Fleeing or have Rallied in this Player Turn. It must always choose the closest unit as its target (Friend or Foe, controlling player may choose if several units are equally close) even if outside of its Front Arc and/or outside Line of Sight, and even if the target is Engaged in Combat. Each of the three shots are resolved one at a time (measure which unit is the closest, and therefore the target, before resolving each shot).   Electric Discharge shots hits automatically, Roll to determine Strength once for all shots in the same phase. If a natural ‘6’ is rolled for Strength the Dreadmill has misfired and must roll on the Volatile Table. However, if the misfire occurs when the Dreadmill is Engaged in Combat, apply the Malfunction result instead of rolling on the table.
 </description>
         </rule>
       </rules>
@@ -3375,9 +3374,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
         </infoLink>
       </infoLinks>
       <modifiers/>
-      <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-      </constraints>
+      <constraints/>
       <selectionEntries>
         <selectionEntry id="d8ce-f6d4-3ea4-d860" name="Magic Items" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
           <profiles/>
@@ -3471,33 +3468,11 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
                   <infoLinks/>
                   <modifiers/>
                 </infoLink>
-                <infoLink id="c4d0-6a4e-4a5c-d24e" hidden="false" targetId="f33f-5ec4-db86-1ef8" type="rule">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers>
-                    <modifier type="append" field="name" value=" (2)">
-                      <repeats/>
-                      <conditions/>
-                      <conditionGroups/>
-                    </modifier>
-                    <modifier type="append" field="name" value=" (2)">
-                      <repeats/>
-                      <conditions/>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
                 <infoLink id="b412-f88b-2a4f-e407" hidden="false" targetId="9ea6-7407-9159-bd26" type="rule">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
                   <modifiers>
-                    <modifier type="append" field="name" value=" (1)">
-                      <repeats/>
-                      <conditions/>
-                      <conditionGroups/>
-                    </modifier>
                     <modifier type="append" field="name" value=" (6)">
                       <repeats/>
                       <conditions/>
@@ -3631,6 +3606,12 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
                   <infoLinks/>
                   <modifiers/>
                 </infoLink>
+                <infoLink id="7bdc-556c-e43a-02af" name="New InfoLink" hidden="false" targetId="a882-ce2e-8e76-bc25" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
               </infoLinks>
               <modifiers/>
               <constraints>
@@ -3679,7 +3660,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
               <rules/>
               <infoLinks/>
               <modifiers>
-                <modifier type="set" field="points" value="10.0">
+                <modifier type="set" field="points" value="10">
                   <repeats/>
                   <conditions/>
                   <conditionGroups/>
@@ -6547,12 +6528,6 @@ the range of the Battle Standard Bearer’s Hold your Ground.
       <rules/>
       <infoLinks>
         <infoLink id="31bc-bf41-2493-18ee" hidden="false" targetId="d572-fd17-5e9f-087d" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="09dc-749c-77ff-b9d6" hidden="false" targetId="5296-4b99-e35f-c3f7" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
