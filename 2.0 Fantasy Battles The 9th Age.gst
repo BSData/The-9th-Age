@@ -159,13 +159,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="9a16-56b8-62e7-ec17" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -1830,20 +1823,6 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="ef41-13f5-e976-aa01" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f39-4f7b-28ff-6635" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="ef41-13f5-e976-aa01" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5903-9054-ea47-ffbd" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ef41-13f5-e976-aa01" type="max"/>
@@ -1857,20 +1836,6 @@
             <modifier type="increment" field="2170-c593-e4cc-1a42" value="2">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="2170-c593-e4cc-1a42" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b2d-0a00-3f27-f5f7" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="2170-c593-e4cc-1a42" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f39-4f7b-28ff-6635" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -2004,13 +1969,6 @@
             <modifier type="increment" field="maxPercentage" value="2">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="20ae-eb92-cc45-8306" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -2169,20 +2127,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1f39-4f7b-28ff-6635" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1376-ffd8-b3b5-6efc" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="1">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -2200,13 +2144,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="9a16-56b8-62e7-ec17" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="1">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -2224,20 +2161,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="d4d4-7499-1da6-bf26" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1f39-4f7b-28ff-6635" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="1">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -2337,13 +2260,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="980d-cabc-2b83-1c27" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -2453,13 +2369,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1f39-4f7b-28ff-6635" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -2970,13 +2879,6 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="facb-a586-aba9-32c9" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ded-7bec-fb35-3d30" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="facb-a586-aba9-32c9" type="max"/>
@@ -3138,13 +3040,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1f39-4f7b-28ff-6635" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -3281,13 +3176,6 @@
             <modifier type="increment" field="maxPercentage" value="2">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0f4-fb9e-d55b-cf93" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -3703,20 +3591,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1f39-4f7b-28ff-6635" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="6b05-f94e-960b-8cd1" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -3734,13 +3608,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="9a16-56b8-62e7-ec17" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -3758,13 +3625,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="2ded-7bec-fb35-3d30" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="1.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -3997,20 +3857,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="db85-163f-7632-dc0a" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1f40-0595-13c5-3b3a" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -4028,20 +3874,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="56e3-a093-42f0-3b63" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1f40-0595-13c5-3b3a" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -4059,20 +3891,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" childId="56e3-a093-42f0-3b63" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" childId="4c34-34d5-345d-f0ae" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
@@ -4189,13 +4007,6 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="7db8-be6d-5ac4-de76" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
