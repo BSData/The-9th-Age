@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7225-2e88-fc22-56ce" name="BS2.0 Saurian Ancients" book="Saurian Ancients v1.2" revision="10" battleScribeVersion="2.00" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7225-2e88-fc22-56ce" name="BS2.0 Saurian Ancients" book="Saurian Ancients v1.2" revision="11" battleScribeVersion="2.00" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -1987,7 +1987,23 @@
           </profiles>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2eb7-0e4b-cd9e-ab18" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ebf-c9d0-9119-f176" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5d8a-1d44-9bfc-8802" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e74-311c-fe91-c264" type="atLeast"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="35.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -2006,7 +2022,8 @@
               </infoLinks>
               <modifiers/>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="939d-434e-d1d7-7ccc" type="min"/>
               </constraints>
               <selectionEntries/>
               <selectionEntryGroups/>
@@ -2016,49 +2033,7 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="301a-872c-93ac-15a2" name="Totem" hidden="false" collective="false">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks>
-                <entryLink id="9fa8-41dc-b6b3-b782" hidden="false" targetId="29a4-a73e-3d5c-a7e5" type="selectionEntry">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints/>
-                </entryLink>
-                <entryLink id="ac10-3c36-0367-b792" hidden="false" targetId="bf62-7e6b-4ce2-12c4" type="selectionEntry">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints/>
-                </entryLink>
-                <entryLink id="ca85-e782-dbc9-d952" hidden="false" targetId="81bc-688c-6818-19f8" type="selectionEntry">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints/>
-                </entryLink>
-                <entryLink id="6f8d-5a4f-b0e0-5754" hidden="false" targetId="1190-d71d-30bc-3a57" type="selectionEntry">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints/>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+          <selectionEntryGroups/>
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="22.0"/>
@@ -2129,6 +2104,48 @@
           </selectionEntries>
           <selectionEntryGroups/>
           <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5b7d-6eaf-1e67-3a36" name="Totem" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6ad9-f1fa-36fd-fc58" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b24-ccbd-9510-2150" type="min"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="2eb7-0e4b-cd9e-ab18" hidden="false" targetId="29a4-a73e-3d5c-a7e5" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+            <entryLink id="3ebf-c9d0-9119-f176" hidden="false" targetId="bf62-7e6b-4ce2-12c4" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+            <entryLink id="5d8a-1d44-9bfc-8802" hidden="false" targetId="81bc-688c-6818-19f8" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+            <entryLink id="0e74-311c-fe91-c264" hidden="false" targetId="1190-d71d-30bc-3a57" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
@@ -5277,7 +5294,7 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="29a4-a73e-3d5c-a7e5" name="Crocodile" hidden="false" collective="true" categoryEntryId="(No Category)" type="upgrade">
+    <selectionEntry id="29a4-a73e-3d5c-a7e5" name="Crocodile" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
       <rules>
         <rule id="90e6-258f-23a0-d713" name="Crocodile" hidden="false">
@@ -5290,15 +5307,15 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
       </rules>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="maxSelections" value="0.0">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1190-d71d-30bc-3a57" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf62-7e6b-4ce2-12c4" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81bc-688c-6818-19f8" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1190-d71d-30bc-3a57" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf62-7e6b-4ce2-12c4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="81bc-688c-6818-19f8" type="atLeast"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -5306,16 +5323,15 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecb8-3f3c-17b8-6eb8" type="min"/>
       </constraints>
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="2.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
-    <selectionEntry id="bf62-7e6b-4ce2-12c4" name="Jaguar" hidden="false" collective="true" categoryEntryId="(No Category)" type="upgrade">
+    <selectionEntry id="bf62-7e6b-4ce2-12c4" name="Jaguar" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
       <rules>
         <rule id="6244-15a9-d138-a718" name="Jaguar" hidden="false">
@@ -5328,15 +5344,15 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
       </rules>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="maxSelections" value="0.0">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1190-d71d-30bc-3a57" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="29a4-a73e-3d5c-a7e5" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81bc-688c-6818-19f8" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1190-d71d-30bc-3a57" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="29a4-a73e-3d5c-a7e5" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="81bc-688c-6818-19f8" type="atLeast"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -5344,16 +5360,15 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e0c-b16d-f14e-1163" type="min"/>
       </constraints>
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="2.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
-    <selectionEntry id="1190-d71d-30bc-3a57" name="Pirahna" hidden="false" collective="true" categoryEntryId="(No Category)" type="upgrade">
+    <selectionEntry id="1190-d71d-30bc-3a57" name="Pirahna" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
       <rules>
         <rule id="356f-4e75-b5d2-a350" name="Pirahna" hidden="false">
@@ -5366,15 +5381,15 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
       </rules>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="maxSelections" value="0.0">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="29a4-a73e-3d5c-a7e5" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf62-7e6b-4ce2-12c4" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81bc-688c-6818-19f8" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="29a4-a73e-3d5c-a7e5" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf62-7e6b-4ce2-12c4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="81bc-688c-6818-19f8" type="atLeast"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -5382,16 +5397,15 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc1e-441a-24d2-6969" type="min"/>
       </constraints>
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="2.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
-    <selectionEntry id="81bc-688c-6818-19f8" name="Serpent" hidden="false" collective="true" categoryEntryId="(No Category)" type="upgrade">
+    <selectionEntry id="81bc-688c-6818-19f8" name="Serpent" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
       <rules>
         <rule id="227d-77ea-37c2-2446" name="Serpent" hidden="false">
@@ -5404,15 +5418,15 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
       </rules>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="maxSelections" value="0.0">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1190-d71d-30bc-3a57" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf62-7e6b-4ce2-12c4" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="29a4-a73e-3d5c-a7e5" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1190-d71d-30bc-3a57" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf62-7e6b-4ce2-12c4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="29a4-a73e-3d5c-a7e5" type="atLeast"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -5420,14 +5434,13 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fc9-2133-6889-e3d2" type="min"/>
       </constraints>
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="2.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="4f89-605f-a5bb-0fec" name="Skink Palanquin" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles>
