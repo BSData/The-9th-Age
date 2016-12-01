@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e809-5132-736c-62a6" name="BS2.0 Highborn Elves" book="HBE v1.2" revision="15" battleScribeVersion="2.00" authorName="Arturius" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e809-5132-736c-62a6" name="BS2.0 Highborn Elves" book="HBE v1.2" revision="16" battleScribeVersion="2.00" authorName="Arturius" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -1076,13 +1076,21 @@
         <modifier type="set" field="hidden" value="false">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="482a-db13-a6bc-6e38" type="atLeast"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3187-d140-57f8-a13d" type="atLeast"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3187-d140-57f8-a13c" type="atLeast"/>
           </conditions>
           <conditionGroups/>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29c6-012a-e54b-e6eb" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="a586-7194-013e-be87" name="Sky Sloop with Sky Reaper" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -1197,15 +1205,13 @@
           </selectionEntries>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="240.0"/>
-          </costs>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="320.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8bd1-8ce8-986f-1491" name="Frost Phoenix" hidden="false" collective="false" categoryEntryId="dc3b-8a11-4ef9-0019" type="unit">
@@ -4428,7 +4434,7 @@
                           <selectionEntryGroups/>
                           <entryLinks/>
                         </selectionEntryGroup>
-                        <selectionEntryGroup id="c22a-6736-abae-d45a" name="Armour" hidden="false" collective="false">
+                        <selectionEntryGroup id="c22a-6736-abae-d45a" name="Armour" hidden="false" collective="false" defaultSelectionEntryId="8fc3-aab4-82c9-a71e">
                           <profiles/>
                           <rules/>
                           <infoLinks/>
@@ -4540,29 +4546,6 @@
                                 <cost name="pts" costTypeId="points" value="100.0"/>
                               </costs>
                             </selectionEntry>
-                            <selectionEntry id="482a-db13-a6bc-6e38" name="Fleet Officer Sky Sloop with Sky Reaper mount" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
-                              <profiles/>
-                              <rules/>
-                              <infoLinks/>
-                              <modifiers>
-                                <modifier type="set" field="maxSelections" value="0.0">
-                                  <repeats/>
-                                  <conditions>
-                                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56d6-03ce-7299-a66c" type="equalTo"/>
-                                  </conditions>
-                                  <conditionGroups/>
-                                </modifier>
-                              </modifiers>
-                              <constraints>
-                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-                              </constraints>
-                              <selectionEntries/>
-                              <selectionEntryGroups/>
-                              <entryLinks/>
-                              <costs>
-                                <cost name="pts" costTypeId="points" value="0.0"/>
-                              </costs>
-                            </selectionEntry>
                             <selectionEntry id="2f86-d1bf-e6a3-514a" name="Fleet Officer Sky Sloop with Storm Pennant mount" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
                               <profiles/>
                               <rules/>
@@ -4582,6 +4565,29 @@
                                   <constraints/>
                                 </entryLink>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" costTypeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="3187-d140-57f8-a13c" name="Fleet Officer Sky Sloop with Sky Reaper mount" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers>
+                                <modifier type="set" field="96c3-7c43-852a-cfd4" value="0.0">
+                                  <repeats/>
+                                  <conditions>
+                                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56d6-03ce-7299-a66c" type="equalTo"/>
+                                  </conditions>
+                                  <conditionGroups/>
+                                </modifier>
+                              </modifiers>
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="96c3-7c43-852a-cfd4" type="max"/>
+                              </constraints>
+                              <selectionEntries/>
+                              <selectionEntryGroups/>
+                              <entryLinks/>
                               <costs>
                                 <cost name="pts" costTypeId="points" value="0.0"/>
                               </costs>
@@ -10450,7 +10456,9 @@
                           <constraints/>
                         </entryLink>
                       </entryLinks>
-                      <costs/>
+                      <costs>
+                        <cost name="pts" costTypeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                   <selectionEntryGroups/>
@@ -12416,24 +12424,10 @@ Cosmology as a Bound spell (Power Level 5).</description>
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers>
-        <modifier type="set" field="maxInRoster" value="1.0">
-          <repeats/>
-          <conditions>
-            <condition field="limit::points" scope="roster" value="3001.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="set" field="maxInRoster" value="4.0">
-          <repeats/>
-          <conditions>
-            <condition field="limit::points" scope="roster" value="7999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b38-0127-fef6-a487" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="e64f-fb7a-45a7-fcb6" name="Sky Sloop with Storm Pennant" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -12544,15 +12538,13 @@ Cosmology as a Bound spell (Power Level 5).</description>
           </selectionEntries>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="240.0"/>
-          </costs>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="320.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dfb5-b135-461d-dfa8" name="Frost Phoenix Mount" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
