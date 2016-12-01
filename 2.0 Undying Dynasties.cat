@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8eed-a4f7-71fa-8b28" name="BS2.0 Undying Dynasties" book="v1.2.1" revision="8" battleScribeVersion="2.00" authorName="Arturius" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8eed-a4f7-71fa-8b28" name="BS2.0 Undying Dynasties" book="v1.2.1" revision="9" battleScribeVersion="2.00" authorName="Arturius" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -3682,6 +3682,13 @@
               </conditions>
               <conditionGroups/>
             </modifier>
+            <modifier type="set" field="maxSelections" value="4">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="atLeast"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
@@ -4225,13 +4232,6 @@
               </conditions>
               <conditionGroups/>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <repeats/>
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
         </infoLink>
         <infoLink id="24f6-18f4-0e36-fcf7" hidden="false" targetId="47f8-481f-02a8-0e92" type="rule">
@@ -4637,6 +4637,34 @@
             <cost name="pts" costTypeId="points" value="24.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="2faa-856e-8114-c85c" name="Barding" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="points" value="6">
+              <repeats>
+                <repeat field="selections" scope="6080695a-8135-e609-21d2-2044336ebbae" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f55f8a2e-25d9-3a2d-1c3e-3f33c6bced7a" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd0c-f919-dbc8-f9e0" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="12b4caa4-b389-014d-6338-826ee386a076" name="Command Group" hidden="false" collective="false">
@@ -4762,7 +4790,15 @@
                   <modifiers/>
                 </infoLink>
               </infoLinks>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="minSelections" value="0.0">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -4773,6 +4809,41 @@
               <costs>
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
+            </selectionEntry>
+            <selectionEntry id="d9e3-d9dd-d42c-2949" name="Lance" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="4b74-75d8-1d7d-e3e8" name="New InfoLink" hidden="false" targetId="ce82-839f-9c07-86df" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="increment" field="points" value="6">
+                  <repeats>
+                    <repeat field="selections" scope="6080695a-8135-e609-21d2-2044336ebbae" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f55f8a2e-25d9-3a2d-1c3e-3f33c6bced7a" repeats="1"/>
+                  </repeats>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="33d6-f8af-5cbc-e7b1" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -4804,7 +4875,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="atLeast"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
         <infoLink id="9dbd8692-ab0a-aa60-caa7-9642a8521062" hidden="false" targetId="b719-33aa-a066-85b6" type="profile">
           <profiles/>
@@ -5041,7 +5120,7 @@
               </conditions>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="points" value="5.0">
+            <modifier type="increment" field="points" value="5">
               <repeats>
                 <repeat field="selections" scope="b7866968-081a-0ec2-0a05-9d987bbe1a62" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d1cac992-bbc7-7917-79f4-1c22a69884dc" repeats="1"/>
               </repeats>
@@ -5179,7 +5258,7 @@
               <rules/>
               <infoLinks/>
               <modifiers>
-                <modifier type="increment" field="points" value="5.0">
+                <modifier type="increment" field="points" value="10">
                   <repeats>
                     <repeat field="selections" scope="b7866968-081a-0ec2-0a05-9d987bbe1a62" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d1cac992-bbc7-7917-79f4-1c22a69884dc" repeats="1"/>
                   </repeats>
@@ -5195,7 +5274,7 @@
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="max"/>
               </constraints>
               <selectionEntries/>
               <selectionEntryGroups/>
@@ -5552,7 +5631,7 @@
             <modifier type="set" field="hidden" value="true">
               <repeats/>
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0033-bc15-74a3-d259" type="atLeast"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -5594,7 +5673,7 @@
             <modifier type="set" field="hidden" value="true">
               <repeats/>
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="notEqualTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -5721,7 +5800,7 @@
                     <modifier type="set" field="hidden" value="false">
                       <repeats/>
                       <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="691e-8ab0-cd56-ea61" type="atLeast"/>
                       </conditions>
                       <conditionGroups/>
                     </modifier>
@@ -5887,9 +5966,9 @@
             <characteristic name="S" characteristicTypeId="5323232344415441232323" value="4"/>
             <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
             <characteristic name="W" characteristicTypeId="5723232344415441232323" value="3"/>
-            <characteristic name="I" characteristicTypeId="4923232344415441232323" value="2"/>
-            <characteristic name="A" characteristicTypeId="4123232344415441232323" value="7"/>
-            <characteristic name="LD" characteristicTypeId="4c4423232344415441232323"/>
+            <characteristic name="I" characteristicTypeId="4923232344415441232323" value="3"/>
+            <characteristic name="A" characteristicTypeId="4123232344415441232323" value="2"/>
+            <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="7"/>
             <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
             <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
             <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
