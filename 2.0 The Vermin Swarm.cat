@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f468-e817-4618-0e57" name="BS2.0 The Vermin Swarm" book="The Vermin Swarm v1.2.1" revision="18" battleScribeVersion="2.00" authorName="Kahlek166 &amp; Karanadon" authorContact="" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f468-e817-4618-0e57" name="BS2.0 The Vermin Swarm" book="The Vermin Swarm v1.2.1" revision="20" battleScribeVersion="2.00" authorName="Kahlek166 &amp; Karanadon" authorContact="" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -299,7 +299,7 @@
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="pts" costTypeId="points" value="60.0"/>
+                    <cost name="pts" costTypeId="points" value="75.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -484,7 +484,7 @@
                       <rules/>
                       <infoLinks/>
                       <modifiers>
-                        <modifier type="set" field="points" value="110.0">
+                        <modifier type="set" field="points" value="125">
                           <repeats/>
                           <conditions/>
                           <conditionGroups/>
@@ -535,7 +535,7 @@
                   <rules/>
                   <infoLinks/>
                   <modifiers>
-                    <modifier type="set" field="4d23232344415441232323" value="6">
+                    <modifier type="set" field="4d23232344415441232323" value="7">
                       <repeats/>
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ee4d-a0b9-e5b0-9af5" type="equalTo"/>
@@ -625,7 +625,7 @@
                   <selectionEntryGroups/>
                   <entryLinks/>
                   <costs>
-                    <cost name="pts" costTypeId="points" value="10.0"/>
+                    <cost name="pts" costTypeId="points" value="25.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -871,7 +871,7 @@
                       <rules/>
                       <infoLinks/>
                       <modifiers>
-                        <modifier type="set" field="points" value="80.0">
+                        <modifier type="set" field="points" value="95">
                           <repeats/>
                           <conditions/>
                           <conditionGroups/>
@@ -904,7 +904,7 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="58e1-ae47-aa45-9686" name="Dreadmill" hidden="false" collective="false" categoryEntryId="d090-853c-dc05-8a2d" type="model">
+    <selectionEntry id="58e1-ae47-aa45-9686" name="Dreadmill" hidden="false" collective="false" categoryEntryId="1f39-4f7b-28ff-6635" type="model">
       <profiles>
         <profile id="251f-b200-830e-d523" name="Chariot" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
           <profiles/>
@@ -915,8 +915,8 @@
             <characteristic name="M" characteristicTypeId="4d23232344415441232323"/>
             <characteristic name="WS" characteristicTypeId="575323232344415441232323"/>
             <characteristic name="BS" characteristicTypeId="425323232344415441232323"/>
-            <characteristic name="S" characteristicTypeId="5323232344415441232323" value="6"/>
-            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="6"/>
+            <characteristic name="S" characteristicTypeId="5323232344415441232323" value="5"/>
+            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="5"/>
             <characteristic name="W" characteristicTypeId="5723232344415441232323" value="5"/>
             <characteristic name="I" characteristicTypeId="4923232344415441232323" value="4"/>
             <characteristic name="A" characteristicTypeId="4123232344415441232323"/>
@@ -1120,7 +1120,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="300.0"/>
+        <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a8da-3d1b-db31-bd85" name="Footpads" hidden="false" collective="false" categoryEntryId="a2a3-8d76-c9e1-a187" type="unit">
@@ -1362,7 +1362,7 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9596-873b-24de-cedd" name="Giant Rats" hidden="false" collective="false" categoryEntryId="6a35-8450-fd55-ec4c" type="unit">
+    <selectionEntry id="9596-873b-24de-cedd" name="Giant Rats - Chaff" hidden="false" collective="false" categoryEntryId="6a35-8450-fd55-ec4c" type="unit">
       <profiles/>
       <rules>
         <rule id="2ee2-dc7c-e4bc-7c8b" name="Handlers" hidden="false">
@@ -1395,7 +1395,7 @@
         </infoLink>
       </infoLinks>
       <modifiers>
-        <modifier type="set" field="maxInRoster" value="8.0">
+        <modifier type="set" field="maxInRoster" value="8">
           <repeats/>
           <conditions>
             <condition field="limit::points" scope="roster" value="7999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="greaterThan"/>
@@ -1407,6 +1407,13 @@
           <conditions>
             <condition field="limit::points" scope="roster" value="3001.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
           </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="maxInRoster" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="983c-659c-7ee7-7fff" repeats="1"/>
+          </repeats>
+          <conditions/>
           <conditionGroups/>
         </modifier>
       </modifiers>
@@ -1445,7 +1452,7 @@
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="60.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="19.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -1900,7 +1907,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b259-f935-926d-ec9c" name="Pavise" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -1932,7 +1939,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="-30.0"/>
+        <cost name="pts" costTypeId="points" value="-15.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b188-8d6a-be8f-6656" name="Magister" hidden="false" collective="false" categoryEntryId="980d-cabc-2b83-1c27" type="model">
@@ -2426,7 +2433,7 @@
         <cost name="pts" costTypeId="points" value="140.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c28f-c17b-93a7-5bca" name="Monstrous Rat Mount - Chief" hidden="false" collective="false" categoryEntryId="66da-a929-a1d8-abbb" type="model">
+    <selectionEntry id="c28f-c17b-93a7-5bca" name="Monstrous Rat Mount - Chief" hidden="false" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
       <profiles>
         <profile id="8b61-e171-5202-a5b8" name="Monstrous Rat" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
           <profiles/>
@@ -4419,7 +4426,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="-10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4edb-64a0-e729-3fc2" name="Thunder Hulks" hidden="false" collective="false" categoryEntryId="1f39-4f7b-28ff-6635" type="unit">
@@ -4453,6 +4460,12 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
           <infoLinks/>
           <modifiers/>
         </infoLink>
+        <infoLink id="765c-2e92-8863-4076" name="New InfoLink" hidden="false" targetId="5f22-3e9e-2b65-5c82" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="decrement" field="maxInRoster" value="6.0">
@@ -4471,7 +4484,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="2f37-2bdf-46bc-59b0" name="Thunder Hulk" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4486,8 +4499,8 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
                 <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="3"/>
                 <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="3"/>
                 <characteristic name="S" characteristicTypeId="5323232344415441232323" value="5"/>
-                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
-                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="4"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="5"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="3"/>
                 <characteristic name="I" characteristicTypeId="4923232344415441232323" value="4"/>
                 <characteristic name="A" characteristicTypeId="4123232344415441232323" value="3"/>
                 <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="6"/>
@@ -4511,7 +4524,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="94.0"/>
+            <cost name="pts" costTypeId="points" value="85.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="aee6-f540-6b0d-c2dc" name="Plate Armour" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4633,7 +4646,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="152.0"/>
+        <cost name="pts" costTypeId="points" value="185.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8e45-5af0-3e8f-bab0" name="Vermin Daemon" hidden="false" collective="false" categoryEntryId="cbb8-59fa-fea6-8a90" type="model">
@@ -4755,8 +4768,8 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="b6bf-8e06-4b81-5b99" name="Deceiver" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4878,20 +4891,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
                 </profile>
               </profiles>
               <rules/>
-              <infoLinks>
-                <infoLink id="1f0e-605e-67fe-6214" hidden="false" targetId="8c47-8a46-0bd4-6138" type="rule">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers>
-                    <modifier type="append" field="name" value="(3)">
-                      <repeats/>
-                      <conditions/>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
+              <infoLinks/>
               <modifiers/>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -5017,7 +5017,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="750.0"/>
+        <cost name="pts" costTypeId="points" value="725.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b733-929a-e0c5-26ac" name="Vermin Guard" hidden="false" collective="false" categoryEntryId="a2a3-8d76-c9e1-a187" type="unit">
@@ -5290,7 +5290,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
                 <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="3"/>
                 <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="1"/>
                 <characteristic name="S" characteristicTypeId="5323232344415441232323" value="5"/>
-                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="5"/>
                 <characteristic name="W" characteristicTypeId="5723232344415441232323" value="3"/>
                 <characteristic name="I" characteristicTypeId="4923232344415441232323" value="4"/>
                 <characteristic name="A" characteristicTypeId="4123232344415441232323" value="3"/>
@@ -5315,7 +5315,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="70.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -5555,7 +5555,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="90.0"/>
+                <cost name="pts" costTypeId="points" value="80.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5565,7 +5565,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="180.0"/>
+        <cost name="pts" costTypeId="points" value="170.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7f52-77e8-06ee-15e4" name="Weapon Team" hidden="false" collective="false" categoryEntryId="1f39-4f7b-28ff-6635" type="unit">
@@ -5766,7 +5766,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
         <cost name="pts" costTypeId="points" value="140.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="32f4-eeaa-1d1a-6427" name="Monstrous Rat Mount - Tyrant" hidden="false" collective="false" categoryEntryId="66da-a929-a1d8-abbb" type="model">
+    <selectionEntry id="32f4-eeaa-1d1a-6427" name="Monstrous Rat Mount - Tyrant" hidden="false" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
       <profiles>
         <profile id="a10c-1de9-0e15-c013" name="Monstrous Rat" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
           <profiles/>
@@ -5900,7 +5900,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
         <cost name="pts" costTypeId="points" value="220.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3cce-d923-50e5-317d" name="Doom Bell Mount" hidden="false" collective="false" categoryEntryId="66da-a929-a1d8-abbb" type="model">
+    <selectionEntry id="3cce-d923-50e5-317d" name="Doom Bell Mount" hidden="false" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
       <profiles>
         <profile id="91ad-9a46-3e65-7fb5" name="Doom Bell" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
           <profiles/>
@@ -6088,10 +6088,10 @@ If a double comes up when rolling, all units in base contact with the Doom Bell 
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="400.0"/>
+        <cost name="pts" costTypeId="points" value="375.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e9dc-ba8e-85ff-a129" name="Plague Pendulum Mount" hidden="false" collective="false" categoryEntryId="66da-a929-a1d8-abbb" type="model">
+    <selectionEntry id="e9dc-ba8e-85ff-a129" name="Plague Pendulum Mount" hidden="false" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
       <profiles>
         <profile id="c657-bf33-7ad1-c986" name="Plague Pendulum" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
           <profiles/>
@@ -6334,6 +6334,112 @@ These spells cannot be duplicated within the Army. This also gives the bearer ac
         <cost name="pts" costTypeId="points" value="440.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="983c-659c-7ee7-7fff" name="Giant Rats - Core" hidden="false" collective="false" categoryEntryId="a2a3-8d76-c9e1-a187" type="unit">
+      <profiles/>
+      <rules>
+        <rule id="3ca4-c42e-57b2-8b56" name="Handlers" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <description>The unit may always perform a Swift Reform as if it had a Musician.
+</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="640b-98fb-b78b-6e4c" hidden="false" targetId="5ec7-64c1-a75b-9250" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="d8a5-62e8-03f4-4071" hidden="false" targetId="7377-2421-6a11-452d" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="c1c9-f7b4-e560-276f" hidden="false" targetId="3ddf-107e-b6a0-05a2" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" field="9ff5-7424-9fe0-3ebe" value="8">
+          <repeats/>
+          <conditions>
+            <condition field="limit::points" scope="roster" value="7999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="greaterThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="9ff5-7424-9fe0-3ebe" value="2">
+          <repeats/>
+          <conditions>
+            <condition field="limit::points" scope="roster" value="3001.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="9ff5-7424-9fe0-3ebe" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9596-873b-24de-cedd" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9ff5-7424-9fe0-3ebe" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="7b06-703c-db7b-ade1" name="Giant Rat" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+          <profiles>
+            <profile id="f07e-f104-151b-8021" name="Giant Rat" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="7"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="3"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="0"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="1"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323" value="4"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="5"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Infantry"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="20x20mm"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7800-095e-dbf1-cca2" type="min"/>
+            <constraint field="selections" scope="parent" value="60.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2132-f0d5-85d9-efff" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="4.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="40.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks/>
   <sharedSelectionEntries>
@@ -6358,7 +6464,9 @@ These spells cannot be duplicated within the Army. This also gives the bearer ac
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="329d-9f3d-d504-cb30" name="3 Dark Shards" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
@@ -6381,7 +6489,9 @@ These spells cannot be duplicated within the Army. This also gives the bearer ac
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="73bb-00e6-b6c4-7eb3" name="Battle Standard Bearer" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
@@ -6425,7 +6535,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>Before the Battle (After Deployment, before rolling for first turn), roll a D6 for each unit of Rats-at-Arms or Vermin Guard with one or more Characters with this upgrade and Consult the table below to see what rules the bearer and Rats-at-Arms or Vermin Guard models in the unit gain for the duration of the Battle.The Bearer can never leave his unit 
+          <description>Before the Battle (After Deployment, before rolling for first turn), roll a D6 for each unit of Rats-at-Arms or Vermin Guard with one or more Characters with this upgrade and Consult the table below to see what rules the bearer and Rats-at-Arms or Vermin Guard models in the unit gain for the duration of the Battle.
 
 1-2 Poisoned Attacks &amp; Stupidity
 3-4 Thunderous Charge
@@ -6441,7 +6551,9 @@ the range of the Battle Standard Bearer’s Hold your Ground.
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="40f8-7b9e-1f1d-0eb5" name="Flail" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
       <profiles/>
@@ -7479,7 +7591,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="70.0"/>
+            <cost name="pts" costTypeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9f8e-cc8c-7aa4-5d2d" name="Sceptre of Power" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7505,7 +7617,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="30.0"/>
+            <cost name="pts" costTypeId="points" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bd63-7d54-f068-469f" name="Shielding Scroll" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7655,7 +7767,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="11df-2ee9-4ec6-f663" name="Ring of Fire" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7681,7 +7793,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="40.0"/>
+            <cost name="pts" costTypeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1b72-dc6a-72f9-00ea" name="Potion of Swiftness" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7759,10 +7871,10 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="120.0"/>
+            <cost name="pts" costTypeId="points" value="105.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b2ad-5c6c-29a0-13a3" name="Sceptre of Vermin Valor" book="The Vermin Swarm" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+        <selectionEntry id="b2ad-5c6c-29a0-13a3" name="Sceptre of Vermin Valor - Infantry Only" book="The Vermin Swarm" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
           <profiles>
             <profile id="3132-0358-6c80-ec47" name="Sceptre of Vermin Valor" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323">
               <profiles/>
@@ -7784,7 +7896,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="70.0"/>
+            <cost name="pts" costTypeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e863-7738-3847-7b9e" name="Scabbing Potion" book="The Vermin Swarm" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7820,7 +7932,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Instead of making a dispell roll, you may use this item. The Spell is automatically dispelled. You can only take this item in an army without Wizards."/>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Instead of making a dispell roll, you may use this item. The Spell is automatically dispelled. In an Army List that includes a model bearing the Crown of Scorn, friendly models cannot cast Spells (including Bound Spells) nor can any friendly models carry Arcane Items"/>
               </characteristics>
             </profile>
           </profiles>
@@ -7860,7 +7972,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="80.0"/>
+            <cost name="pts" costTypeId="points" value="70.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -8020,7 +8132,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="70.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f2a3-ed51-365d-0a4a" name="Bronze Breastplate" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8048,7 +8160,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d2e5-63a1-1dee-638c" name="Dragon Mantle" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8281,7 +8393,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="40.0"/>
+            <cost name="pts" costTypeId="points" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dc80-fbea-9d33-0f41" name="Banner of Discipline" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8307,7 +8419,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c10c-20be-d8bc-9c65" name="Rending Banner" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8396,7 +8508,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="A unit with this banner can make Dispel attempts as if it were a Wizard Master. "/>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The Bearer can make Dispel attempts as if it were a Wizard Master. "/>
               </characteristics>
             </profile>
           </profiles>
@@ -8411,7 +8523,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b0fa-85c1-372f-d288" name="Icon of the Relentless Company" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8680,7 +8792,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="60.0"/>
+            <cost name="pts" costTypeId="points" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1728-6666-2f78-abe9" name="Flaming Lance" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8796,7 +8908,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="60.0"/>
+            <cost name="pts" costTypeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1a2f-634a-0aec-1724" name="Obsidian Sword" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8912,7 +9024,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="80.0"/>
+            <cost name="pts" costTypeId="points" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1cea-248b-bd4b-b29c" name="Sword of Strength" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8952,9 +9064,9 @@ the range of the Battle Standard Bearer’s Hold your Ground.
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value=""/>
-                <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323"/>
-                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Type: Hand Weapon. If the wielder’s unit has more Full Ranks than each of the enemy units Engaged in the same Combat, the wielder gains +3 Attacks when using this weapon. When attacking models from the Dwarven Holds, attacks made with this weapon must reroll failed to-wound rolls."/>
+                <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
+                <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="As user"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Type: Hand Weapon. If the wielder’s unit has more Full Ranks than each of the enemy units Engaged in the same combat, the wielder gains +3 Attacks when using this weapon."/>
                 <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Hand Weapon"/>
               </characteristics>
             </profile>
@@ -8970,7 +9082,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="08a3-9abb-f255-f119" name="Hero´s Sword" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -9029,6 +9141,35 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6b9c-17f0-6847-fa9c" name="Jack&apos;s Pickaxe" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="d721-fa88-04b8-9226" name="Jack&apos;s Pickaxe" hidden="false" profileTypeId="576561706f6e23232344415441232323" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
+                <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="+1"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Against models with Towering Presence, attacks made with this weapon also gain Multiple Wounds (2) and count as having a Strength equal to the Toughness of their target when rolling to wound (ignore all other Strength modifiers except the ones granted by this weapon when attacking models with Towering Presence)"/>
+                <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3aa9-926f-e98d-19da" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35fa-8548-cd5c-8c4d" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="70.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -9100,7 +9241,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="20.0"/>
+            <cost name="pts" costTypeId="points" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dc68-2802-a072-6aee" name="Lucky Charm" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -9152,7 +9293,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="90.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="efb3-5388-d4d4-b789" name="Obsidian Rock" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -9178,7 +9319,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4ed5-c506-3bd4-4670" name="Sprout of Rebirth" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -9659,7 +9800,7 @@ Sometimes this rule is connected to certain Troop types or special rules , if th
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>​Sicarra Assassins cannot join (nor be deployed in) units that contain another Sicarra Assassin (not even when Hidden).
+      <description>​Sicarra Assassins cannot join (nor be deployed in) units that contain another Sicarra Assassin. Sicarra Assassins may perform make way moves even when they are in base contact with an enemy model.
 </description>
     </rule>
     <rule id="64d9-d2f0-67e8-3555" name="Quick to Fire" hidden="false">
@@ -10062,7 +10203,7 @@ The shooting is resolved as normal (a Dreadmill will fire at strength 10, while 
       <characteristics>
         <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323"/>
         <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="+2 "/>
-        <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Uses rules for Flails, with the following addition: Models wielding Plague Flails must make a single additional special attack against a model in base contact. This is resolved at Initiative 10, hits automatically and has the Toxic Attacks Special Rule.  "/>
+        <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Uses rules for Flails, with the following addition: Unless using another weapon, models wielding Plague Flails must make a single additional special attack against a model in base contact. This is resolved at Initiative 10, hits automatically and has the Toxic Attacks Special Rule.  "/>
         <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a"/>
       </characteristics>
     </profile>
