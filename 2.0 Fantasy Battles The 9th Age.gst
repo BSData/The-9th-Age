@@ -344,7 +344,7 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="increment" field="minPoints" value="1.5">
+            <modifier type="increment" field="minPoints" value="2">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>

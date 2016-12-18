@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="886f-e3af-292a-b18e" name="BS2.0 Beast Herds" book="Beast Herds V1.2" revision="7" battleScribeVersion="2.00" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="886f-e3af-292a-b18e" name="BS2.0 Beast Herds" book="Beast Herds V1.2" revision="8" battleScribeVersion="2.00" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -3470,7 +3470,8 @@ Smash: Select a single model in the chosen unit and in base contact with the Bea
           <infoLinks/>
           <modifiers/>
           <description>Catapult (4) Artillery Weapon with:
-Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Attacks, Divine Attacks.</description>
+Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Attacks, Divine Attacks. A Cyclops that only Pivots (and moves no further) during its owner’s Movement Phase ignores the to-hit modifier from Moving and Shooting in the next Shooting Phase.
+</description>
         </rule>
       </rules>
       <infoLinks>
@@ -3557,7 +3558,15 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers/>
+      <modifiers>
+        <modifier type="decrement" field="maxInRoster" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6a40-6b36-fd3f-b89b" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
@@ -3593,7 +3602,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -3805,7 +3814,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
       </infoLinks>
       <modifiers/>
       <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
       <selectionEntries/>
       <selectionEntryGroups/>
@@ -3862,12 +3871,6 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="9f7b-2d55-ffe2-6e9d" hidden="false" targetId="257e-4d91-0df6-fb41" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
         <infoLink id="fa88-c60f-7011-cf13" hidden="false" targetId="c34d-f235-bca9-36d6" type="profile">
           <profiles/>
           <rules/>
@@ -3889,9 +3892,38 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
       </infoLinks>
       <modifiers/>
       <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="89c0-995a-f21a-f7d4" name="Breath Weapon" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="440c-1006-3cdc-fcc5" name="New InfoLink" hidden="false" targetId="9acb-baeb-7606-3a9e" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="name" value="Breath Weapon (Strength 3, Armour Piercing (2))">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca13-48b9-812b-7f46" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
@@ -4001,15 +4033,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <modifiers/>
             </infoLink>
           </infoLinks>
-          <modifiers>
-            <modifier type="increment" field="points" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="194e-bb52-2ab8-6d49" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cba6-96a9-3016-013a" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
@@ -4117,7 +4141,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="-60.0"/>
+        <cost name="pts" costTypeId="points" value="-70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a497-ef51-f96c-f65d" name="Minotaur Chieftain" hidden="false" collective="false" categoryEntryId="980d-cabc-2b83-1c27" type="model">
@@ -4746,7 +4770,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="72.0"/>
+            <cost name="pts" costTypeId="points" value="75.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4926,9 +4950,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="24.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="639b-9363-1285-cf60" name="Mongrel Herd" hidden="false" collective="false" categoryEntryId="a2a3-8d76-c9e1-a187" type="unit">
       <profiles/>
@@ -5287,7 +5309,15 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers/>
+      <modifiers>
+        <modifier type="decrement" field="maxInRoster" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="50d3-37cc-d53a-15bd" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
@@ -5392,7 +5422,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -5586,7 +5616,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="260.0"/>
+        <cost name="pts" costTypeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bdfe-f10c-1b7b-8954" name="Razortusk Herd" hidden="false" collective="false" categoryEntryId="6a35-8450-fd55-ec4c" type="unit">
@@ -5648,14 +5678,14 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="70.0"/>
+            <cost name="pts" costTypeId="points" value="75.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="30.0"/>
+        <cost name="pts" costTypeId="points" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8a45-4542-dc8b-0dd5" name="Soothsayer" hidden="false" collective="false" categoryEntryId="980d-cabc-2b83-1c27" type="model">
@@ -5670,7 +5700,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
             <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="4"/>
             <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="4"/>
             <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
-            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
+            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="5"/>
             <characteristic name="W" characteristicTypeId="5723232344415441232323" value="3"/>
             <characteristic name="I" characteristicTypeId="4923232344415441232323" value="3"/>
             <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
@@ -5936,7 +5966,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="170.0"/>
+        <cost name="pts" costTypeId="points" value="185.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="07e9-375b-e0bb-4240" name="Soothsayer with Ambush" hidden="false" collective="false" categoryEntryId="a5f4-56ef-5522-d37e" type="model">
@@ -5951,7 +5981,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
             <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="4"/>
             <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="4"/>
             <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
-            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
+            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="5"/>
             <characteristic name="W" characteristicTypeId="5723232344415441232323" value="3"/>
             <characteristic name="I" characteristicTypeId="4923232344415441232323" value="3"/>
             <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
@@ -6200,7 +6230,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="180.0"/>
+        <cost name="pts" costTypeId="points" value="195.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4b97-8ce8-5fe7-38fb" name="Wildhorn Herd" hidden="false" collective="false" categoryEntryId="a2a3-8d76-c9e1-a187" type="unit">
@@ -6470,6 +6500,271 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6a40-6b36-fd3f-b89b" name="Feral Hounds - Core" hidden="false" collective="false" categoryEntryId="43ab-691c-d4b7-d229" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="2828-5809-a396-d6c1" hidden="false" targetId="ce5f-14ec-ea3a-4242" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="b64a-1072-7792-85ea" hidden="false" targetId="9b50-d626-f736-425c" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="976d-513b-aec3-4230" hidden="false" targetId="8dab-26ba-334d-b6b7" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="7fb0-d399-111c-63b4" hidden="false" targetId="30f2-dc53-796a-a1b9" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="decrement" field="6d5f-2ece-23fe-8c36" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6194-9dc3-2b5d-5411" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6d5f-2ece-23fe-8c36" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="e78c-2fc7-3b18-cff9" name="Feral hound" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+          <profiles>
+            <profile id="26aa-6154-822b-79ca" name="Feral hound" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="7"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="4"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="-"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="1"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323" value="3"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="5"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="War Beast"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="25x50mm"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0c71-e0be-3449-47a5" type="min"/>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="94e2-30e5-4f42-2f11" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="8.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="50d3-37cc-d53a-15bd" name="Raiding Chariots - Core" hidden="false" collective="false" categoryEntryId="a2a3-8d76-c9e1-a187" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="b72b-41d2-a0e6-b0c8" hidden="false" targetId="f0c5-d349-6557-a6aa" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="d334-0132-8b35-ab60" hidden="false" targetId="fa1e-1716-6e43-85f0" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="684b-61b0-110f-d080" hidden="false" targetId="f404-5e25-ddfa-a222" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="dc21-6e50-4def-c3ab" hidden="false" targetId="bec0-23d0-2d01-93b8" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="9cc6-d32d-527e-a5de" hidden="false" targetId="4e32-34fa-da63-3cf2" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="bd4b-ff27-055e-26d3" hidden="false" targetId="ce5f-14ec-ea3a-4242" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="d6f5-f945-95f7-0b52" hidden="false" targetId="8cfc-065a-fc0e-2fd0" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="decrement" field="fc42-73db-6646-3801" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="66e5-55c3-9921-27ab" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="fc42-73db-6646-3801" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="8a3d-f4ba-5677-30f2" name="Raiding Chariot" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles>
+            <profile id="aaa7-654e-c559-99ce" name="Wildhorn Crew (1)" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="4"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="3"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="-"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="-"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323" value="3"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="7"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+            <profile id="61d3-80fb-efe2-3c75" name="Raiding Chariot" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="5"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="4"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+            <profile id="7cc9-4203-c205-1d65" name="War Hog (2)" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="7"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="3"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="-"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="4"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="-"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="-"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323" value="2"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="3"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+            <profile id="c2b4-1fcc-98e8-1975" name="Longhorn Crew (1)" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="4"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="3"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="4"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="-"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="-"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323" value="3"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="8"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8714-12da-f345-e0a6" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6bbe-6d5f-f60f-1173" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="120.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="10.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -6934,7 +7229,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The Bearer&apos;s unit can make dispel attempts as if it were a wizard master."/>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The Bearer can make dispel attempts as if it were a wizard master."/>
               </characteristics>
             </profile>
           </profiles>
@@ -6948,7 +7243,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6808-9997-d220-67e5" name="Banner of Discipline" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6973,7 +7268,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fce5-d7e6-e022-1924" name="Banner of Speed" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7023,7 +7318,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="40.0"/>
+            <cost name="pts" costTypeId="points" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="cdcf-2345-81a5-47f3" name="War Standard" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7262,7 +7557,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="30.0"/>
+                <cost name="pts" costTypeId="points" value="20.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="ddb0-97dc-a065-1626" name="Shielding Scroll" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7409,7 +7704,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="80.0"/>
+                <cost name="pts" costTypeId="points" value="65.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9a26-d409-d3c8-a4dc" name="Obsidian Sword" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7465,7 +7760,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="60.0"/>
+                <cost name="pts" costTypeId="points" value="45.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6514-9542-706b-11b4" name="King Slayer" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7493,7 +7788,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="60.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="46cc-65f8-815b-d927" name="Axe of Battle" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7776,6 +8071,35 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
                 <cost name="pts" costTypeId="points" value="30.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="3041-8df0-a48c-5e45" name="Jack&apos;s Pickaxe" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="d501-5dc1-ed66-5bae" name="Jack&apos;s Pickaxe" hidden="false" profileTypeId="576561706f6e23232344415441232323" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
+                    <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="+1"/>
+                    <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Against models with Towering Presence, attacks made with this weapon also gain Multiple Wounds (2) and count as having a Strength equal to the Toughness of their target when rolling to wound (ignore all other Strength modifiers except the ones granted by this weapon when attacking models with Towering Presence)"/>
+                    <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae8c-6f15-5600-bb7e" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd12-d9b7-cf9c-b798" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="70.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -7849,7 +8173,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="70.0"/>
+                <cost name="pts" costTypeId="points" value="80.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f8c1-b418-a58d-ba7d" name="Mithril Mail" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7957,7 +8281,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="35.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f1ec-9e3d-b31a-762e" name="Dragon Mantle - Foot only" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8130,7 +8454,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="120.0"/>
+                <cost name="pts" costTypeId="points" value="105.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8a0b-d8eb-529e-f8a1" name="Crown of Scorn" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8141,7 +8465,8 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Instead of making a dispel roll, you may use this item. The spell is automatically dispelled.  You can only take this item in an army with no Wizards. "/>
+                    <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Instead of making a dispel roll, you may use this item. The spell is automatically dispelled.  In an Army List that includes a model bearing the
+Crown of Scorn, friendly models cannot cast Spells (including Bound Spells) nor can any friendly models carry Arcane Items."/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -8180,7 +8505,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="35.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="b36f-a64c-f3bd-4eb9" name="Ring of Fire" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8205,7 +8530,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="40.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e717-942e-9f44-4d0e" name="Potion of Strength" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8330,7 +8655,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="80.0"/>
+                <cost name="pts" costTypeId="points" value="70.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e167-4fed-ccaf-1dde" name="Pillager Icon" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8543,7 +8868,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="90.0"/>
+                <cost name="pts" costTypeId="points" value="80.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="af4b-0e9b-4d94-514c" name="Dusk Stone" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8593,7 +8918,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="40.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="fc5d-6458-2631-deeb" name="Talisman of Greater Shielding" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8668,7 +8993,7 @@ Range 6-36&quot;, Strength 3[7] , [Multiple Wounds (D3, Ordnance) ], Magical Att
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="20.0"/>
+                <cost name="pts" costTypeId="points" value="15.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4ef1-54f7-1490-4a9e" name="Talisman of Shielding" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -9712,7 +10037,7 @@ Characteristics increases associated with being a Champion and is a Wizard Appre
       <characteristics>
         <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
         <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="+1"/>
-        <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Close Combat Weapon. Attacks made with this weapon gain +1 Strength and strike at Initiative 0 (regardless of the wielder’s Initiative). The wielder gains +1 to its Armour Save."/>
+        <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Close Combat Weapon. Attacks made with this weapon gain +1 Strength and strike at Initiative 0 (regardless of the wielder’s Initiative). The wielder gains +1 to its Armour Save, unless using another weapon."/>
         <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a"/>
       </characteristics>
     </profile>
