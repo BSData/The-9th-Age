@@ -77,6 +77,13 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
+            <modifier type="decrement" field="minPoints" value="1">
+              <repeats>
+                <repeat field="points" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fddf-ebf0-41db-186e" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
@@ -101,9 +108,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="maxPercentage" value="3.5">
+            <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxPercentage" value="1">
+              <repeats>
+                <repeat field="points" scope="5374616e6461726423232344415441232323" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -132,6 +146,13 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
+            <modifier type="decrement" field="maxPercentage" value="1">
+              <repeats>
+                <repeat field="points" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fddf-ebf0-41db-186e" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
@@ -142,9 +163,16 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="increment" field="maxPercentage" value="3">
+            <modifier type="increment" field="maxPercentage" value="3.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxPercentage" value="1">
+              <repeats>
+                <repeat field="points" scope="5374616e6461726423232344415441232323" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -170,6 +198,20 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
+        </categoryEntry>
+        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryEntry>
+        <categoryEntry id="fddf-ebf0-41db-186e" name="Core + Jungle Guerilla" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
         </categoryEntry>
       </categoryEntries>
       <forceEntries/>
