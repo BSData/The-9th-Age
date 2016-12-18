@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.2" revision="24" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.2" revision="25" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2153,9 +2153,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="maxPercentage" value="3.5">
+            <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxPercentage" value="1">
+              <repeats>
+                <repeat field="points" scope="c63a-6e06-8660-cf83" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -2170,7 +2177,7 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="increment" field="minPoints" value="3">
+            <modifier type="increment" field="minPoints" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
@@ -2208,6 +2215,13 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
+            <modifier type="decrement" field="maxPercentage" value="1">
+              <repeats>
+                <repeat field="points" scope="c63a-6e06-8660-cf83" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
@@ -2228,6 +2242,23 @@
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+          </constraints>
+        </categoryEntry>
+        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="83c9-e7b2-fd76-8b56" value="4">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83c9-e7b2-fd76-8b56" type="max"/>
           </constraints>
         </categoryEntry>
       </categoryEntries>
@@ -2895,6 +2926,13 @@
           <constraints/>
         </categoryEntry>
         <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryEntry>
+        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
