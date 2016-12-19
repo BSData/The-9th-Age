@@ -4032,9 +4032,16 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="increment" field="maxPercentage" value="3.5">
+            <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxPercentage" value="1">
+              <repeats>
+                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eaf3-846a-f789-98a4" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -4111,9 +4118,16 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="increment" field="maxPercentage" value="3">
+            <modifier type="increment" field="maxPercentage" value="3.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxPercentage" value="1">
+              <repeats>
+                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eaf3-846a-f789-98a4" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -4197,6 +4211,13 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
+        </categoryEntry>
+        <categoryEntry id="eaf3-846a-f789-98a4" name="UD Large Mounts" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
         </categoryEntry>
       </categoryEntries>
       <forceEntries/>
