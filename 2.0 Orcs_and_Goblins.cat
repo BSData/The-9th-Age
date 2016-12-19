@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1fe6-5df8-5e30-48d5" name="BS2.0 Orcs and Goblins" revision="3" battleScribeVersion="2.00" authorName="Mikel2311" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1fe6-5df8-5e30-48d5" name="BS2.0 Orcs and Goblins" revision="5" battleScribeVersion="2.00" authorName="Mikel2311" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -113,7 +113,7 @@
             <characteristic name="A" characteristicTypeId="4123232344415441232323" value="4"/>
             <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="9"/>
             <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323" value=""/>
-            <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323" value="6+"/>
+            <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323" value="5+"/>
             <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
             <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Infantry"/>
             <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="25x25"/>
@@ -150,7 +150,7 @@
             <characteristic name="A" characteristicTypeId="4123232344415441232323" value="3"/>
             <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="8"/>
             <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323" value=""/>
-            <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323" value="6+"/>
+            <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323" value="5+"/>
             <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
             <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Infantry"/>
             <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="25x25"/>
@@ -257,6 +257,25 @@
               <repeats/>
               <conditions>
                 <condition field="selections" scope="be94-5c90-ef53-728e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82ee-8d9c-fd4c-b177" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="101b-b842-cdf7-6b96" name="New InfoLink" hidden="false" targetId="0853-bc4e-dd26-34ac" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value="(5+)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="be94-5c90-ef53-728e" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47f7-caa1-3780-6de4" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -436,7 +455,7 @@
               <rules/>
               <infoLinks/>
               <modifiers>
-                <modifier type="set" field="points" value="120">
+                <modifier type="set" field="points" value="140">
                   <repeats/>
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a2f-238e-3e1f-63d1" type="equalTo"/>
@@ -626,25 +645,25 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" field="points" value="40">
+                <modifier type="set" field="points" value="35">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a2f-238e-3e1f-63d1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="set" field="points" value="50">
                   <repeats/>
                   <conditions/>
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a2f-238e-3e1f-63d1" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb1b-42ca-9117-70de" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ff1-5a3d-40c2-309d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="47f7-caa1-3780-6de4" type="equalTo"/>
                       </conditions>
                       <conditionGroups/>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-                <modifier type="set" field="points" value="50">
-                  <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ff1-5a3d-40c2-309d" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
                 </modifier>
               </modifiers>
               <constraints/>
@@ -656,10 +675,23 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a2f-238e-3e1f-63d1" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a2f-238e-3e1f-63d1" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ff1-5a3d-40c2-309d" type="equalTo"/>
+                            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="37dd-8736-456a-c351" type="equalTo"/>
+                          </conditions>
+                          <conditionGroups/>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints/>
@@ -823,12 +855,12 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9998-6541-2341-e76b" name="Wyvern Mount" hidden="false" collective="false" categoryEntryId="2ded-7bec-fb35-3d30" type="model">
+    <selectionEntry id="9998-6541-2341-e76b" name="Wyvern Mount" hidden="false" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="increment" field="points" value="210">
+        <modifier type="increment" field="points" value="190">
           <repeats>
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86dc-d41f-7a4a-d1bc" repeats="1"/>
           </repeats>
@@ -849,28 +881,28 @@
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="increment" field="points" value="230">
+        <modifier type="increment" field="points" value="210">
           <repeats>
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d360-4dde-8550-5b93" repeats="1"/>
           </repeats>
           <conditions/>
           <conditionGroups/>
         </modifier>
-        <modifier type="increment" field="points" value="190">
+        <modifier type="increment" field="points" value="170">
           <repeats>
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cd11-846a-def8-ee9e" repeats="1"/>
           </repeats>
           <conditions/>
           <conditionGroups/>
         </modifier>
-        <modifier type="increment" field="points" value="140">
+        <modifier type="increment" field="points" value="120">
           <repeats>
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e465-7f2b-a4f9-2d64" repeats="1"/>
           </repeats>
           <conditions/>
           <conditionGroups/>
         </modifier>
-        <modifier type="increment" field="points" value="130">
+        <modifier type="increment" field="points" value="110">
           <repeats>
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b37-eb85-96c6-720a" repeats="1"/>
           </repeats>
@@ -890,13 +922,57 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="478e-41d6-48cb-492c" name="Orc Shaman" hidden="false" collective="false" categoryEntryId="980d-cabc-2b83-1c27" type="model">
-      <profiles/>
+      <profiles>
+        <profile id="44c5-578b-87e9-8906" name="Orc Shaman" hidden="false" profileTypeId="4d6f64656c23232344415441232323" profileTypeName="Model">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="4"/>
+            <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="3"/>
+            <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="3"/>
+            <characteristic name="S" characteristicTypeId="5323232344415441232323" value="4"/>
+            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
+            <characteristic name="W" characteristicTypeId="5723232344415441232323" value="3"/>
+            <characteristic name="I" characteristicTypeId="4923232344415441232323" value="2"/>
+            <characteristic name="A" characteristicTypeId="4123232344415441232323" value="2"/>
+            <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="8"/>
+            <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
+            <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+            <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+            <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Infantry"/>
+            <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="25x25"/>
+            <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
-      <infoLinks/>
+      <infoLinks>
+        <infoLink id="6da8-1a99-65f5-ce78" name="New InfoLink" hidden="false" targetId="0853-bc4e-dd26-34ac" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value="(5+)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="478e-41d6-48cb-492c" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="47f7-caa1-3780-6de4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
       <modifiers/>
       <constraints/>
       <selectionEntries>
-        <selectionEntry id="929c-d454-4f21-313c" name="Learned Spells" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="929c-d454-4f21-313c" name="Additonal Learned Spells" hidden="false" collective="false" type="upgrade">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -996,7 +1072,7 @@
               <rules/>
               <infoLinks/>
               <modifiers>
-                <modifier type="set" field="points" value="190">
+                <modifier type="set" field="points" value="205">
                   <repeats/>
                   <conditions/>
                   <conditionGroups/>
@@ -1009,7 +1085,7 @@
               <rules/>
               <infoLinks/>
               <modifiers>
-                <modifier type="set" field="points" value="180">
+                <modifier type="set" field="points" value="185">
                   <repeats/>
                   <conditions/>
                   <conditionGroups/>
@@ -1037,15 +1113,7 @@
               <constraints/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks>
-                <entryLink id="beae-d608-8770-8844" name="New EntryLink" hidden="false" targetId="b8af-50cf-c55d-7f57" type="selectionEntryGroup">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints/>
-                </entryLink>
-              </entryLinks>
+              <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
@@ -1058,15 +1126,7 @@
               <constraints/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks>
-                <entryLink id="7616-79df-b0fd-1f96" name="New EntryLink" hidden="false" targetId="b8af-50cf-c55d-7f57" type="selectionEntryGroup">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints/>
-                </entryLink>
-              </entryLinks>
+              <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="70.0"/>
               </costs>
@@ -1203,12 +1263,19 @@
           <modifiers/>
           <constraints/>
         </entryLink>
+        <entryLink id="3e35-17cb-5e49-e4ff" name="New EntryLink" hidden="false" targetId="b8af-50cf-c55d-7f57" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="37c1-86ef-13f8-2213" name="Gargantula Mount" hidden="false" collective="false" categoryEntryId="2ded-7bec-fb35-3d30" type="model">
+    <selectionEntry id="37c1-86ef-13f8-2213" name="Gargantula Mount" hidden="false" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1955,7 +2022,9 @@
                   <conditionGroups/>
                 </modifier>
               </modifiers>
-              <constraints/>
+              <constraints>
+                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="72d1-8830-78c1-215d" type="max"/>
+              </constraints>
             </entryLink>
             <entryLink id="3eb7-d885-ce2e-b18b" name="New EntryLink" hidden="false" targetId="54fc-31d3-6a08-0f19" type="selectionEntry">
               <profiles/>
@@ -2312,7 +2381,101 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8823-bc83-c77d-11ca" name="Goblin Witch Doctor" hidden="false" collective="false" categoryEntryId="980d-cabc-2b83-1c27" type="model">
-      <profiles/>
+      <profiles>
+        <profile id="1c0d-d30d-e46d-0ab5" name="Common Goblin Witch Doctor" hidden="false" profileTypeId="4d6f64656c23232344415441232323" profileTypeName="Model">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="8823-bc83-c77d-11ca" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="22a6-c143-34dc-bf3c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="4"/>
+            <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="2"/>
+            <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="3"/>
+            <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
+            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
+            <characteristic name="W" characteristicTypeId="5723232344415441232323" value="2"/>
+            <characteristic name="I" characteristicTypeId="4923232344415441232323" value="2"/>
+            <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+            <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="6"/>
+            <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323" value=""/>
+            <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323" value=""/>
+            <characteristic name="MR" characteristicTypeId="4d5223232344415441232323" value=""/>
+            <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Infantry"/>
+            <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="20x20"/>
+            <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+          </characteristics>
+        </profile>
+        <profile id="a97a-92b9-ae92-1d16" name="Forest Goblin Witch Doctor" hidden="false" profileTypeId="4d6f64656c23232344415441232323" profileTypeName="Model">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="8823-bc83-c77d-11ca" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57c3-f2de-5d0a-4b8b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="4"/>
+            <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="2"/>
+            <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="3"/>
+            <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
+            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
+            <characteristic name="W" characteristicTypeId="5723232344415441232323" value="2"/>
+            <characteristic name="I" characteristicTypeId="4923232344415441232323" value="2"/>
+            <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+            <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="6"/>
+            <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323" value=""/>
+            <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323" value=""/>
+            <characteristic name="MR" characteristicTypeId="4d5223232344415441232323" value=""/>
+            <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Infantry"/>
+            <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="20x20"/>
+            <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+          </characteristics>
+        </profile>
+        <profile id="c61f-f419-3f29-f55a" name="Cave Goblin Witch Doctor" hidden="false" profileTypeId="4d6f64656c23232344415441232323" profileTypeName="Model">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="8823-bc83-c77d-11ca" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c57-5c0c-3b10-fecb" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="4"/>
+            <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="2"/>
+            <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="3"/>
+            <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
+            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
+            <characteristic name="W" characteristicTypeId="5723232344415441232323" value="2"/>
+            <characteristic name="I" characteristicTypeId="4923232344415441232323" value="3"/>
+            <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+            <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="5"/>
+            <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323" value=""/>
+            <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323" value=""/>
+            <characteristic name="MR" characteristicTypeId="4d5223232344415441232323" value=""/>
+            <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Infantry"/>
+            <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="20x20"/>
+            <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks>
         <infoLink id="c05e-969d-15a9-a88f" name="New InfoLink" hidden="false" targetId="fba6-35d1-cceb-9bdd" type="rule">
@@ -2338,7 +2501,7 @@
       <modifiers/>
       <constraints/>
       <selectionEntries>
-        <selectionEntry id="1d62-0de6-20d1-eae1" name="Learned Spells" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="1d62-0de6-20d1-eae1" name="Additional Learned Spells" hidden="false" collective="false" type="upgrade">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2492,15 +2655,7 @@
               <constraints/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks>
-                <entryLink id="4d97-0110-1d4d-b759" name="New EntryLink" hidden="false" targetId="c922-32c6-ab6d-2778" type="selectionEntryGroup">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints/>
-                </entryLink>
-              </entryLinks>
+              <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
@@ -2513,15 +2668,7 @@
               <constraints/>
               <selectionEntries/>
               <selectionEntryGroups/>
-              <entryLinks>
-                <entryLink id="d2c9-dfcf-60aa-1b13" name="New EntryLink" hidden="false" targetId="c922-32c6-ab6d-2778" type="selectionEntryGroup">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints/>
-                </entryLink>
-              </entryLinks>
+              <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="70.0"/>
               </costs>
@@ -2670,6 +2817,13 @@
           <modifiers/>
           <constraints/>
         </entryLink>
+        <entryLink id="11b9-79c6-35f8-149f" name="New EntryLink" hidden="false" targetId="c922-32c6-ab6d-2778" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
@@ -2696,6 +2850,25 @@
                   <conditionGroups/>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="3ea7-292a-0e5a-bf54" name="New InfoLink" hidden="false" targetId="0853-bc4e-dd26-34ac" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value="(6+)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="70a7-6ce4-0e8d-6a6d" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="47f7-caa1-3780-6de4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
         </infoLink>
@@ -2888,7 +3061,7 @@
                 </infoLink>
               </infoLinks>
               <modifiers>
-                <modifier type="increment" field="points" value="2">
+                <modifier type="increment" field="points" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="58cc-c047-573c-8de3" repeats="1"/>
                   </repeats>
@@ -2925,7 +3098,7 @@
                 </infoLink>
               </infoLinks>
               <modifiers>
-                <modifier type="increment" field="points" value="2">
+                <modifier type="increment" field="points" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="58cc-c047-573c-8de3" repeats="1"/>
                   </repeats>
@@ -2962,7 +3135,7 @@
                 </infoLink>
               </infoLinks>
               <modifiers>
-                <modifier type="increment" field="points" value="2">
+                <modifier type="increment" field="points" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="58cc-c047-573c-8de3" repeats="1"/>
                   </repeats>
@@ -2999,7 +3172,7 @@
                 </infoLink>
               </infoLinks>
               <modifiers>
-                <modifier type="increment" field="points" value="2">
+                <modifier type="increment" field="points" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="58cc-c047-573c-8de3" repeats="1"/>
                   </repeats>
@@ -3468,6 +3641,25 @@
             </modifier>
           </modifiers>
         </infoLink>
+        <infoLink id="5f92-0c82-cf99-37e8" name="New InfoLink" hidden="false" targetId="0853-bc4e-dd26-34ac" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value="(6+)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="139b-839c-88f2-b882" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="47f7-caa1-3780-6de4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers/>
       <constraints>
@@ -3847,20 +4039,6 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="c542-1088-af33-a146" name="New InfoLink" hidden="false" targetId="50e0-3855-d819-ba61" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <repeats/>
-              <conditions>
-                <condition field="selections" scope="0719-1e60-ab0b-0782" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c57-5c0c-3b10-fecb" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="26ad-1661-efe7-7e6e" name="New InfoLink" hidden="false" targetId="8a01-3683-14f7-a864" type="rule">
           <profiles/>
           <rules/>
@@ -4229,6 +4407,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d561-5a49-ccd1-9cd8" type="max"/>
+            <constraint field="selections" scope="roster" value="8.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f6ef-35e7-a96a-3fa2" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -4310,6 +4489,43 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
             <cost name="pts" costTypeId="points" value="20.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="0e13-a69c-30e8-f8b9" name="Nets" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="4a21-5ed3-9fcc-b96b" name="New InfoLink" hidden="false" targetId="50e0-3855-d819-ba61" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="0719-1e60-ab0b-0782" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b72d-b002-ca97-efcf" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="0719-1e60-ab0b-0782" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c57-5c0c-3b10-fecb" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d3f-364a-5d25-5e44" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="baa5-9ae8-c612-11f8" name="Must become one of the following" hidden="false" collective="false">
@@ -4328,15 +4544,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
               <profiles/>
               <rules/>
               <infoLinks/>
-              <modifiers>
-                <modifier type="increment" field="points" value="2">
-                  <repeats>
-                    <repeat field="selections" scope="0719-1e60-ab0b-0782" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b72d-b002-ca97-efcf" repeats="1"/>
-                  </repeats>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
+              <modifiers/>
               <constraints/>
             </entryLink>
             <entryLink id="e7c5-c02d-2bc0-d0f0" name="New EntryLink" hidden="false" targetId="22a6-c143-34dc-bf3c" type="selectionEntry">
@@ -4394,6 +4602,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cea7-75da-537a-9857" type="max"/>
+                <constraint field="points" scope="roster" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0755-2bb3-ece3-252b" type="max"/>
               </constraints>
               <selectionEntries/>
               <selectionEntryGroups/>
@@ -4780,6 +4989,25 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
             </modifier>
           </modifiers>
         </infoLink>
+        <infoLink id="8929-1fce-e79c-67e3" name="New InfoLink" hidden="false" targetId="0853-bc4e-dd26-34ac" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="append" field="name" value="(6+)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="eb0e-aa87-5988-d694" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="47f7-caa1-3780-6de4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers/>
       <constraints>
@@ -4960,7 +5188,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
                 </infoLink>
               </infoLinks>
               <modifiers>
-                <modifier type="increment" field="points" value="6">
+                <modifier type="increment" field="points" value="4">
                   <repeats>
                     <repeat field="selections" scope="eb0e-aa87-5988-d694" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a462-691e-2ee1-7838" repeats="1"/>
                   </repeats>
@@ -4995,7 +5223,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
                 </infoLink>
               </infoLinks>
               <modifiers>
-                <modifier type="increment" field="points" value="6">
+                <modifier type="increment" field="points" value="4">
                   <repeats>
                     <repeat field="selections" scope="eb0e-aa87-5988-d694" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a462-691e-2ee1-7838" repeats="1"/>
                   </repeats>
@@ -5140,15 +5368,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
               <profiles/>
               <rules/>
               <infoLinks/>
-              <modifiers>
-                <modifier type="increment" field="points" value="2">
-                  <repeats>
-                    <repeat field="selections" scope="eb0e-aa87-5988-d694" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a462-691e-2ee1-7838" repeats="1"/>
-                  </repeats>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
+              <modifiers/>
               <constraints/>
             </entryLink>
           </entryLinks>
@@ -5187,7 +5407,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
       </profiles>
       <rules/>
       <infoLinks>
-        <infoLink id="8ce9-b90e-9516-c2ea" name="New InfoLink" hidden="false" targetId="27d0-52e3-c242-ea5a" type="profile">
+        <infoLink id="8ce9-b90e-9516-c2ea" name="New InfoLink" hidden="false" targetId="dc46-0ae7-94e8-7e55" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5198,7 +5418,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="append" field="name" value="(6+)">
+            <modifier type="append" field="name" value="(5+)">
               <repeats/>
               <conditions/>
               <conditionGroups/>
@@ -5342,7 +5562,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
         <cost name="pts" costTypeId="points" value="170.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9e70-d615-95cc-0830" name="Goblin Raiders" book="Orcs and Goblins" page="16" hidden="false" collective="false" categoryEntryId="6a35-8450-fd55-ec4c" type="upgrade">
+    <selectionEntry id="9e70-d615-95cc-0830" name="Goblin Raiders (Core)" book="Orcs and Goblins" page="16" hidden="false" collective="false" categoryEntryId="a2a3-8d76-c9e1-a187" type="unit">
       <profiles/>
       <rules/>
       <infoLinks>
@@ -5528,7 +5748,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
           </infoLinks>
           <modifiers/>
           <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b68c-3790-3e05-6340" type="min"/>
+            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b68c-3790-3e05-6340" type="min"/>
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c523-075d-64c2-f5e8" type="max"/>
           </constraints>
           <selectionEntries/>
@@ -5645,14 +5865,12 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
           <selectionEntryGroups/>
           <entryLinks/>
         </selectionEntryGroup>
-        <selectionEntryGroup id="2321-67b2-a04c-95a1" name="Must take one or more of the following" hidden="false" collective="false">
+        <selectionEntryGroup id="2321-67b2-a04c-95a1" name="May take one or more of the following" hidden="false" collective="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c209-0906-68c7-1fe7" type="min"/>
-          </constraints>
+          <constraints/>
           <selectionEntries>
             <selectionEntry id="20eb-a092-d95c-cc68" name="Bow" hidden="false" collective="false" type="upgrade">
               <profiles/>
@@ -5986,14 +6204,14 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="120.0"/>
+            <cost name="pts" costTypeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="321f-46ea-7cf3-6231" name="Gnasher Dashers" hidden="false" collective="false" categoryEntryId="6a35-8450-fd55-ec4c" type="unit">
@@ -6657,7 +6875,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
           </infoLinks>
           <modifiers/>
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b078-0562-ba19-a77a" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b078-0562-ba19-a77a" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3130-d96b-2bc5-58de" type="max"/>
           </constraints>
           <selectionEntries/>
@@ -6671,7 +6889,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="40.0"/>
+        <cost name="pts" costTypeId="points" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="54e3-9843-e7de-d9ff" name="Scrap Wagon" book="Orcs and Goblins" page="19" hidden="false" collective="false" categoryEntryId="6a35-8450-fd55-ec4c" type="unit">
@@ -7154,12 +7372,13 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
               <modifiers/>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="58a4-717b-f780-ee1d" type="max"/>
+                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6f34-af45-945c-f2f0" type="max"/>
               </constraints>
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="200.0"/>
+                <cost name="pts" costTypeId="points" value="180.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="c84e-1b04-fb16-d668" name="Git Launcher" hidden="false" collective="false" type="upgrade">
@@ -7195,6 +7414,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
               <modifiers/>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba2b-a91e-62eb-74ab" type="max"/>
+                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2dc8-532e-ff7d-103f" type="max"/>
               </constraints>
               <selectionEntries/>
               <selectionEntryGroups/>
@@ -7319,7 +7539,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>At the start of each Round of Combat, if the Great Green Idol is engaged in Combat, all friendly units within 8&quot; of it may gain either Devastating Charge or a +1 to-wound modifier to Close Combat Attacks. Each unit may choose a different bonus. The bonus lasts until the end of the Round of Combat or until the Great Green Idol is no longer engaged in Combat, whichever comes first.</description>
+          <description>At the start of each Round of Combat, if the Great Green Idol is engaged in Combat, all friendly units within 8&quot; of one or more Great Green Idols may gain either Devastating Charge or a +1 to-wound modifier to Close Combat Attacks. Each unit may choose a different bonus. The bonus lasts until the end of the Round of Combat or until the Great Green Idol is no longer engaged in Combat, whichever comes first.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -7399,7 +7619,7 @@ Resolve one Mad Git at a time. Place the Mad Git in base contact with the concea
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="440.0"/>
+        <cost name="pts" costTypeId="points" value="380.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e95e-aaf7-89a3-2398" name="Giant" book="Orcs and Goblins" page="22" hidden="false" collective="false" categoryEntryId="2ded-7bec-fb35-3d30" type="upgrade">
@@ -7501,6 +7721,453 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
         <cost name="pts" costTypeId="points" value="280.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="0521-bb92-403f-cb36" name="Goblin Raiders (Special)" book="Orcs and Goblins" page="16" hidden="false" collective="false" categoryEntryId="6a35-8450-fd55-ec4c" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="bc85-539f-bb90-c2a9" name="New InfoLink" hidden="false" targetId="dc46-0ae7-94e8-7e55" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="0521-bb92-403f-cb36" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="22a6-c143-34dc-bf3c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <modifiers/>
+      <constraints/>
+      <selectionEntries>
+        <selectionEntry id="de68-af70-383b-e1f4" name="Goblin Raider" hidden="false" collective="false" type="model">
+          <profiles>
+            <profile id="b43c-9a1d-f8cb-edc4" name="Goblin Rider" hidden="false" profileTypeId="4d6f64656c23232344415441232323" profileTypeName="Model">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="4"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="2"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="3"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="1"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323" value="2"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="6"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Cavalry"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+            <profile id="8924-4e09-ee94-7167" name="Wolf" hidden="false" profileTypeId="4d6f64656c23232344415441232323" profileTypeName="Model">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="0521-bb92-403f-cb36" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="22a6-c143-34dc-bf3c" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="9"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="3"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="-"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="1"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323" value="3"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="3"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="25x50"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+            <profile id="0d36-97ae-079e-af7f" name="Scuttler Spider" hidden="false" profileTypeId="4d6f64656c23232344415441232323" profileTypeName="Model">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="0521-bb92-403f-cb36" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57c3-f2de-5d0a-4b8b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="7"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="3"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="-"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="1"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323" value="4"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="2"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323"/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="25x50"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="3efa-b771-1907-7318" name="New InfoLink" hidden="false" targetId="8bf2-1429-292d-b776" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="append" field="name" value="(6+)">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="1e4c-c96b-1068-8246" name="New InfoLink" hidden="false" targetId="9df2-2696-b53b-9892" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="f06c-9f00-de34-b7ca" name="New InfoLink" hidden="false" targetId="9cc1-8231-42e2-b8f5" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="40b0-4112-4c9a-8042" name="New InfoLink" hidden="false" targetId="b0cd-a63d-d161-96c9" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="0521-bb92-403f-cb36" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57c3-f2de-5d0a-4b8b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="86eb-bc90-bf56-c51b" name="New InfoLink" hidden="false" targetId="2a45-1e5d-dd83-b334" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="0521-bb92-403f-cb36" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57c3-f2de-5d0a-4b8b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="6415-c4bc-4a3a-5c15" name="New InfoLink" hidden="false" targetId="8a01-3683-14f7-a864" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="append" field="name" value="(Spider Only)">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="0521-bb92-403f-cb36" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57c3-f2de-5d0a-4b8b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5982-205d-1b92-4a5c" type="min"/>
+            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="56f7-a839-6dd7-7d7e" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="16.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4305-df33-eece-c000" name="Must become one of the following" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f695-4de5-3a7a-5a69" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fbe5-decc-f353-015c" type="min"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="a15e-72f7-806f-e539" name="New EntryLink" hidden="false" targetId="22a6-c143-34dc-bf3c" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+            <entryLink id="b51b-e47d-3aaa-34ae" name="New EntryLink" hidden="false" targetId="57c3-f2de-5d0a-4b8b" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="15e1-297e-150b-7175" name="Command" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <selectionEntries>
+            <selectionEntry id="74cc-6a8d-a775-2190" name="Champion" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="5f86-a8a8-1eb5-c004" name="New InfoLink" hidden="false" targetId="7995-5370-bd1f-6877" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="609b-2aed-6f41-2a59" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="919e-e9f9-51eb-fcb8" name="Musician" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="f4cb-c018-f07e-790f" name="New InfoLink" hidden="false" targetId="ca7f-72ed-2a57-aeea" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d891-6084-b4f4-56ce" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2297-3756-b627-94ea" name="Standard Bearer" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="d831-f567-a184-8694" name="New InfoLink" hidden="false" targetId="a278-69ca-5a64-549f" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="737b-f1b0-77ca-818d" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6587-db06-c488-027a" name="May take one or more of the following" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <selectionEntries>
+            <selectionEntry id="9a40-bb44-41e5-bd70" name="Bow" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="6999-b6d2-cdcc-de21" name="New InfoLink" hidden="false" targetId="4e8f-3ec2-7698-7fe8" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="increment" field="points" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="0521-bb92-403f-cb36" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="de68-af70-383b-e1f4" repeats="1"/>
+                  </repeats>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4e0e-92d5-b7e8-f12d" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="21f4-1787-5a48-4e3a" name="Shield" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="e6d5-35bc-8e39-e597" name="New InfoLink" hidden="false" targetId="350b-9338-3ff9-cadc" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="increment" field="points" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="0521-bb92-403f-cb36" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="de68-af70-383b-e1f4" repeats="1"/>
+                  </repeats>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="030b-2c49-6537-944d" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f5d3-269a-f00c-62db" name="Throwing Weapons" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="37b1-36f3-3547-a5ae" name="New InfoLink" hidden="false" targetId="888d-5baf-b097-370f" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="increment" field="points" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="0521-bb92-403f-cb36" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="de68-af70-383b-e1f4" repeats="1"/>
+                  </repeats>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="0521-bb92-403f-cb36" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57c3-f2de-5d0a-4b8b" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0005-8f6b-81f8-ef19" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1833-4288-4c86-393d" name="Light Lance" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="93bc-11e3-1793-ff1e" name="New InfoLink" hidden="false" targetId="91ef-7847-22f3-1c39" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="increment" field="points" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="0521-bb92-403f-cb36" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="de68-af70-383b-e1f4" repeats="1"/>
+                  </repeats>
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fae8-3ca4-5ae3-07c3" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="40.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks/>
   <sharedSelectionEntries>
@@ -7587,18 +8254,6 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <rules/>
           <infoLinks/>
           <modifiers/>
-        </infoLink>
-        <infoLink id="0021-f9c3-951e-5931" name="New InfoLink" hidden="false" targetId="0853-bc4e-dd26-34ac" type="rule">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="append" field="name" value="(6+)">
-              <repeats/>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
         </infoLink>
       </infoLinks>
       <modifiers/>
@@ -7866,7 +8521,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="07d7-3352-5713-b030" name="New InfoLink" hidden="false" targetId="27d0-52e3-c242-ea5a" type="profile">
+        <infoLink id="07d7-3352-5713-b030" name="New InfoLink" hidden="false" targetId="dc46-0ae7-94e8-7e55" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -7877,7 +8532,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="append" field="name" value="(6+)">
+            <modifier type="append" field="name" value="(5+)">
               <repeats/>
               <conditions/>
               <conditionGroups/>
@@ -9011,7 +9666,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="80.0"/>
+            <cost name="pts" costTypeId="points" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b310-2016-d035-d7b6" name="Fencer&apos;s Swords" book="BRB" page="105" hidden="false" collective="false" type="upgrade">
@@ -9040,7 +9695,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="60.0"/>
+            <cost name="pts" costTypeId="points" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ffb9-bec0-550e-dfb4" name="King Slayer" book="BRB" page="105" hidden="false" collective="false" type="upgrade">
@@ -9069,7 +9724,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="60.0"/>
+            <cost name="pts" costTypeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7519-6e18-8398-3d30" name="Beast-Bane Halberd " book="BRB" page="105" hidden="false" collective="false" type="upgrade">
@@ -9518,6 +10173,35 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
             <cost name="pts" costTypeId="points" value="30.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="b2ee-5d4b-74bb-0db1" name="Jack&apos;s Pickaxe" book="BRB" page="104" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="c5b9-242b-d479-d6f3" name="Jack&apos;s Pickaxe" hidden="false" profileTypeId="576561706f6e23232344415441232323" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
+                <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="+1"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Against models with Towering Presence, attacks made with this weapon also gain Multiple Wounds (2) and count as having a Strength equal to the Toughness of their target when rolling to wound (ignore all other Strength modifiers except the ones granted by this weapon when attacking models with Towering Presence)."/>
+                <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Hand Weapon"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f70b-8544-a6d4-a9b9" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="71fd-788f-49c9-afed" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="70.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -9604,7 +10288,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="70.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dca0-c07f-bc9d-b1be" name="Mithril Mail" book="BRB" page="106" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -9764,7 +10448,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6e56-fde4-68ae-5058" name="Dragonscale Helm​ " book="BRB" page="106" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10022,7 +10706,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="90.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="69ca-7920-9152-ea37" name="Sprout of Rebirth" book="BRB" page="107" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10126,7 +10810,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="df0a-7a3a-a5f5-fec0" name="Talisman of Greater Shielding" book="BRB" page="107" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10198,7 +10882,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="20.0"/>
+            <cost name="pts" costTypeId="points" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4f75-9f9a-0c0c-e9e0" name="Talisman of Shielding" book="BRB" page="107" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10335,7 +11019,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="120.0"/>
+            <cost name="pts" costTypeId="points" value="105.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0d6a-4255-5595-4497" name="Crown of Autocracy" book="BRB" page="108" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10361,7 +11045,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="80.0"/>
+            <cost name="pts" costTypeId="points" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2609-94a2-037b-4aa9" name="Potion of Strength" book="BRB" page="108" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10413,7 +11097,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="89f7-e8f1-6022-1300" name="Ring of Fire" book="BRB" page="108" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10439,7 +11123,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="40.0"/>
+            <cost name="pts" costTypeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1607-7d7d-b1ff-7d25" name="Divine Icon" book="BRB" page="108" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10483,7 +11167,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Instead of making a dispel roll, you may use this item. The spell is automatically dispelled. You can only take this item in an army with no Wizards."/>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Instead of making a dispel roll, you may use this item. The spell is automatically dispelled. You can only take this item in an army with no Wizards. In an Army List that includes a model bearing the Crown of Scorn, friendly models cannot cast Spells (including Bound Spells) nor can any friendly models carry Arcane Items."/>
               </characteristics>
             </profile>
           </profiles>
@@ -10574,7 +11258,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="Mounted models only. All friendly Cavalry models within 18&quot; of the bearer may re-roll Dangerous Terrain Tests."/>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="Mounted models only. All friendly Cavalry and Chariot models within 18&quot; of the bearer may re-roll Dangerous Terrain Tests."/>
               </characteristics>
             </profile>
           </profiles>
@@ -10726,7 +11410,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="70.0"/>
+            <cost name="pts" costTypeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1380-8ed4-b941-d201" name="Sceptre of Power" book="BRB" page="109" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10752,7 +11436,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="30.0"/>
+            <cost name="pts" costTypeId="points" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="956f-0645-6a96-d24e" name="Shielding Scroll" book="BRB" page="109" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10913,7 +11597,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer’s unit can make Dispel Attempts as if it was a Wizard Master."/>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer can make Dispel Attempts as if it was a Wizard Master."/>
               </characteristics>
             </profile>
           </profiles>
@@ -10928,7 +11612,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="466d-0bee-d955-1ce8" name="Banner of Discipline" book="BRB" page="110" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -10954,7 +11638,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9164-f98a-f77b-ad19" name="Banner of Speed" book="BRB" page="110" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -11013,7 +11697,7 @@ Giant Attacks are treated as normal Close Combat attacks and are therefore affec
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="40.0"/>
+            <cost name="pts" costTypeId="points" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="902d-e14d-6f22-a7e1" name="War Standard​" book="BRB" page="110" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
