@@ -1388,9 +1388,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="maxPercentage" value="3.5">
+            <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxPercentage" value="1">
+              <repeats>
+                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1450,7 +1457,7 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="maxPercentage" value="2.5">
+            <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
@@ -1470,6 +1477,13 @@
             <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxPercentage" value="1">
+              <repeats>
+                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1515,7 +1529,7 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="maxPercentage" value="2.5">
+            <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
@@ -1546,7 +1560,7 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="maxPercentage" value="2.5">
+            <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
@@ -1557,6 +1571,13 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
+        </categoryEntry>
+        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
         </categoryEntry>
       </categoryEntries>
       <forceEntries/>
