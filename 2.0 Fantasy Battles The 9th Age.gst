@@ -1601,7 +1601,7 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="increment" field="maxPercentage" value="3.5">
+            <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
