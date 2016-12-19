@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="de0b-5c77-c49e-d61b" name="BS2.0 Vampire Covenant" book="v1.2.0" revision="10" battleScribeVersion="2.00" authorName="duxbuse" authorContact="duxbuse@gmail.com" authorUrl="http://www.the-ninth-age.com/" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="de0b-5c77-c49e-d61b" name="BS2.0 Vampire Covenant" book="v1.2.0" revision="11" battleScribeVersion="2.00" authorName="duxbuse" authorContact="duxbuse@gmail.com" authorUrl="http://www.the-ninth-age.com/" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -171,7 +171,32 @@ The last effect is automatically activated before the battle (after moving Vangu
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="fb6f-21a8-04e7-f080" name="May take Dark Tome" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules>
+            <rule id="f897-8975-ee51-9487" name="May take Dark Tome" hidden="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <description>Friendly Wizards within 12&quot; of one or more Altar of Undeath with Dark Tome add +2 to their casting rolls when casting spells from Evocation. Friendly and enemy Wizards that suffer a miscast when within 12&quot; of one or more Altar of Undeath with Dark Tome count as having used two additional Magic Dice (MDU) for their Casting roll, up to a maximum of 5.
+</description>
+            </rule>
+          </rules>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6227-d1b0-bb6d-e105" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
@@ -264,14 +289,14 @@ The last effect is automatically activated before the battle (after moving Vangu
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
+            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="40.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="20.0"/>
+            <cost name="pts" costTypeId="points" value="21.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3a15-1b9b-8ae0-461f" name="Champion" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -437,7 +462,7 @@ The last effect is automatically activated before the battle (after moving Vangu
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="-80.0"/>
+        <cost name="pts" costTypeId="points" value="-125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bb4d-427f-509c-cf97" name="Barrow King" hidden="false" collective="false" categoryEntryId="c7d3-1044-3ce6-90a7" type="model">
@@ -1351,10 +1376,10 @@ The last effect is automatically activated before the battle (after moving Vangu
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="330.0"/>
+        <cost name="pts" costTypeId="points" value="310.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1f2f-a78d-1cc9-4c3c" name="Dark Coach" hidden="false" collective="false" categoryEntryId="977a-a2ee-dee5-ab6f" type="model">
+    <selectionEntry id="1f2f-a78d-1cc9-4c3c" name="Dark Coach" hidden="false" collective="false" categoryEntryId="9a00-8903-5d68-e8f5" type="model">
       <profiles>
         <profile id="f7d4-129a-29b5-e5cb" name="Wagon" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
           <profiles/>
@@ -1523,7 +1548,7 @@ Wounds Caused Bonus
         </infoLink>
       </infoLinks>
       <modifiers>
-        <modifier type="increment" field="points" value="60.0">
+        <modifier type="increment" field="points" value="20">
           <repeats/>
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fdeb-708e-a9ad-45f5" type="equalTo"/>
@@ -1552,7 +1577,7 @@ Wounds Caused Bonus
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="400.0"/>
+        <cost name="pts" costTypeId="points" value="440.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2af3-2979-6271-412b" name="Dire Wolves" hidden="false" collective="false" categoryEntryId="9a00-8903-5d68-e8f5" type="unit">
@@ -1608,7 +1633,15 @@ Wounds Caused Bonus
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers/>
+      <modifiers>
+        <modifier type="decrement" field="maxInRoster" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f63-e824-1f47-e7fd" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
@@ -1620,7 +1653,7 @@ Wounds Caused Bonus
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -2040,7 +2073,7 @@ Wounds Caused Bonus
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="20.0"/>
+            <cost name="pts" costTypeId="points" value="18.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b1d8-557d-2524-1f0e" name="Champion" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -2093,7 +2126,7 @@ Wounds Caused Bonus
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="-70.0"/>
+        <cost name="pts" costTypeId="points" value="-50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="12c6-ce37-43a0-bfed" name="Great Bats" hidden="false" collective="false" categoryEntryId="9a00-8903-5d68-e8f5" type="unit">
@@ -3482,7 +3515,7 @@ Wounds Caused Bonus
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="40.0"/>
+                <cost name="pts" costTypeId="points" value="30.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="37d2-923c-9f7b-dcda" name="Von Karnstein Bloodline" hidden="true" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -3544,7 +3577,7 @@ Wounds Caused Bonus
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="40.0"/>
+                <cost name="pts" costTypeId="points" value="20.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9d29-8c05-19a4-a039" name="Strigoi Bloodline" hidden="true" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -3723,7 +3756,7 @@ Wounds Caused Bonus
                   <selectionEntryGroups/>
                   <entryLinks/>
                   <costs>
-                    <cost name="pts" costTypeId="points" value="100.0"/>
+                    <cost name="pts" costTypeId="points" value="60.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="79eb-2e25-f7c7-8337" name="Beastial Bulk" hidden="true" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -3973,7 +4006,7 @@ Wounds Caused Bonus
                   <selectionEntryGroups/>
                   <entryLinks/>
                   <costs>
-                    <cost name="pts" costTypeId="points" value="50.0"/>
+                    <cost name="pts" costTypeId="points" value="40.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="1621-e70b-31b3-7104" name="Mesmerizing Gaze" hidden="true" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4011,7 +4044,7 @@ Wounds Caused Bonus
                   <selectionEntryGroups/>
                   <entryLinks/>
                   <costs>
-                    <cost name="pts" costTypeId="points" value="50.0"/>
+                    <cost name="pts" costTypeId="points" value="30.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="955f-c38e-769c-9aa6" name="Forbidden Path" hidden="true" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4216,7 +4249,7 @@ Wounds Caused Bonus
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ae58-2ca3-c9f0-c533" name="Monsterous Revenant" hidden="true" collective="false" categoryEntryId="977a-a2ee-dee5-ab6f" type="model">
+    <selectionEntry id="ae58-2ca3-c9f0-c533" name="Monsterous Revenant" hidden="true" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
       <profiles>
         <profile id="7837-3f8d-c4a7-3162" name="Monsterous Revenant" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
           <profiles/>
@@ -4394,6 +4427,12 @@ Wounds Caused Bonus
           <modifiers/>
         </infoLink>
         <infoLink id="41c1-02c3-4212-5c45" hidden="false" targetId="340b-a0f9-5d04-588c" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="689d-c0f4-8237-aac2" name="New InfoLink" hidden="false" targetId="8a2b-fa89-4421-2417" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4888,17 +4927,10 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
         </infoLink>
       </infoLinks>
       <modifiers>
-        <modifier type="increment" field="minInRoster" value="1.0">
+        <modifier type="decrement" field="maxInRoster" value="1">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cd74-b39e-954e-08e7" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="maxInRoster" value="1.0">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cd74-b39e-954e-08e7" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="45ee-6af6-70b1-4a3d" type="atLeast"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -4907,42 +4939,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="f8bd-2707-6547-40b3" name="Mount" hidden="true" collective="false" categoryEntryId="(No Category)" type="upgrade">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="minInRoster" value="1.0">
-              <repeats/>
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cd74-b39e-954e-08e7" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="set" field="hidden" value="false">
-              <repeats>
-                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cd74-b39e-954e-08e7" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minInRoster" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-            <constraint field="points" scope="parent" value="-10.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-          </constraints>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="-10.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
@@ -6037,7 +6034,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="476a-8e15-7b24-eabf" name="Zombie Dragon" hidden="true" collective="false" categoryEntryId="977a-a2ee-dee5-ab6f" type="model">
+    <selectionEntry id="476a-8e15-7b24-eabf" name="Zombie Dragon" hidden="true" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
       <profiles>
         <profile id="9bbe-731c-ad45-1832" name="Zombie Dragon" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
           <profiles/>
@@ -6086,7 +6083,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
         </profile>
       </profiles>
       <rules>
-        <rule id="232c-a1b3-9feb-c202" name="Breath Weapon (Strength 2, Armour Piercing (6)) " hidden="false">
+        <rule id="232c-a1b3-9feb-c202" name="Breath Weapon (Toxic Attacks) " hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6147,14 +6144,14 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="40.0"/>
+            <cost name="pts" costTypeId="points" value="30.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="530.0"/>
+        <cost name="pts" costTypeId="points" value="480.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4ad3-aced-3c6f-aaf3" name="Zombies" hidden="false" collective="false" categoryEntryId="e4f5-7c0d-6de4-7742" type="unit">
@@ -6260,6 +6257,190 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="-10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="45ee-6af6-70b1-4a3d" name="Shrieking Horror - Mount" hidden="false" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
+      <profiles>
+        <profile id="439a-4832-201c-313b" name="Shrieking Horror" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="6 (8)"/>
+            <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="4"/>
+            <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="-"/>
+            <characteristic name="S" characteristicTypeId="5323232344415441232323" value="5"/>
+            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="6"/>
+            <characteristic name="W" characteristicTypeId="5723232344415441232323" value="6"/>
+            <characteristic name="I" characteristicTypeId="4923232344415441232323" value="2"/>
+            <characteristic name="A" characteristicTypeId="4123232344415441232323" value="4"/>
+            <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="4"/>
+            <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323" value="-"/>
+            <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323" value="6+ Regen"/>
+            <characteristic name="MR" characteristicTypeId="4d5223232344415441232323" value="-"/>
+            <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Monster"/>
+            <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="100x150mm"/>
+            <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71" value="1"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="831a-8284-5b1b-a132" name="Chilling Shriek" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <description>Model parts with this special rule have a special shooting attack and a special close combat attack as detailed below.
+- As a special shooting attack: Choose a target using the normal rules the attack has range 8&quot; and can be used if the model charged.
+- As a special Close Combat attack: If used this attack is amde at the model Initiiave step and replaces the normal non specail attacks.
+Regarless of how its used it causes 1 automatic hit to the target for each wound remaining on the model. The hits are resolved at Strength 10 and have AP(6) and amgical attacks Use the enemies LD instead of Toughness.
+ 
+ </description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="c0c4-cc33-7191-f6c3" hidden="false" targetId="bd30-0c91-03d6-4f73" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="c2ea-35e5-21bc-7125" hidden="false" targetId="02eb-86f7-48e2-5518" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="94e3-16b3-78e7-a75e" hidden="false" targetId="c015-07f1-385f-3866" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" field="d11d-1f0e-3d73-8a57" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2e35-47dd-e96d-2480" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d11d-1f0e-3d73-8a57" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bb95-09df-d6fa-fd0f" type="max"/>
+      </constraints>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="490.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2f63-e824-1f47-e7fd" name="Dire Wolves - Core" hidden="false" collective="false" categoryEntryId="e4f5-7c0d-6de4-7742" type="unit">
+      <profiles>
+        <profile id="22b6-8e41-497d-8a41" name="Dire Wolves" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="9"/>
+            <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="3"/>
+            <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="-"/>
+            <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
+            <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
+            <characteristic name="W" characteristicTypeId="5723232344415441232323" value="1"/>
+            <characteristic name="I" characteristicTypeId="4923232344415441232323" value="3"/>
+            <characteristic name="A" characteristicTypeId="4123232344415441232323" value="1"/>
+            <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="3"/>
+            <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323" value="-"/>
+            <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323" value="-"/>
+            <characteristic name="MR" characteristicTypeId="4d5223232344415441232323" value="-"/>
+            <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="War Beast"/>
+            <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="25x50mm"/>
+            <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71" value="D3+4"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks>
+        <infoLink id="cf27-017f-252b-21a3" hidden="false" targetId="02eb-86f7-48e2-5518" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="821a-4fbc-6937-7bb4" hidden="false" targetId="bd30-0c91-03d6-4f73" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="7c24-fee9-64c9-de68" hidden="false" targetId="ac5d-26b8-896d-5b80" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="a800-c88c-e48c-bfbb" hidden="false" targetId="9cb5-20e2-fa44-dfdb" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="decrement" field="612d-31a3-f3c9-9ae0" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa18-439f-bbcc-6786" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="5.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="612d-31a3-f3c9-9ae0" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="07dc-5fa8-1393-d0ff" name="Dire Wolves" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3d7e-8953-fa51-a13f" type="min"/>
+            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bc79-670c-97a4-4528" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="12.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8034-792d-9106-2ad4" name="Champion" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f76c-5299-d214-58f2" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="20.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="20.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -6371,6 +6552,20 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2e35-47dd-e96d-2480" name="Shrieking Horror" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="815c-8db1-3c89-8f43" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0054-9241-4a6f-195e" type="max"/>
+      </constraints>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs/>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ab5a-4f55-e039-773c" name="Bloodline" hidden="false" collective="false" defaultSelectionEntryId="52bb-5f12-6c59-369d">
@@ -6415,9 +6610,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
+          <costs/>
         </selectionEntry>
         <selectionEntry id="fdeb-708e-a9ad-45f5" name="Von Karnstein" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
           <profiles/>
@@ -6609,7 +6802,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="70.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="27d3-944a-01fa-1c92" name="Sceptre of Power" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6635,7 +6828,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="30.0"/>
+                <cost name="pts" costTypeId="points" value="20.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6fc8-87e2-7722-d64c" name="Shielding Scroll" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6688,32 +6881,6 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="40.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b16f-5090-4c45-2c00" name="Staff of Gerhard the Black" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
-              <profiles>
-                <profile id="6013-12cc-bcbb-4859" name="Staff of Gerhard the Black" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <characteristics>
-                    <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="An army containing this item may reroll failed Channel attempts. When the bearer casts ​Evocation of Souls from Evocation ​it may, for each target, reroll a single D6 or D3 used to determine the number of Raised Wounds. "/>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-              </constraints>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="90.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="7678-10d2-9612-6a03" name="Unholy Tome" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6869,7 +7036,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="60.0"/>
+                <cost name="pts" costTypeId="points" value="45.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="c8e5-b171-4ffd-f412" name="Flaming Lance" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7043,7 +7210,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="60.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e741-a986-85c5-dff4" name="Ogre Sword" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7130,7 +7297,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="80.0"/>
+                <cost name="pts" costTypeId="points" value="65.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="bf84-4ba5-63b7-03bf" name="Blade of Red Thirst" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7141,9 +7308,9 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323"/>
-                    <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value=""/>
-                    <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value=" Vampires only. ​The model gains Vampiric (3+). The model​ makes a Vampiric​ Roll for each unsaved wound caused by this weapon (instead of just one). Each successful Vampiric Roll Recovers one Wound to the wielder as normal. Once the wielder is at full Wounds, any excess wounds can be used to Raise Wounds​ in the wielder&apos;s unit.​ "/>
+                    <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
+                    <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="+1"/>
+                    <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value=" Attacks made with this weapon gain +1 Strength. The wielder gains Vampiric (3+), and makes a Vampiric roll for each unsaved wound caused by this weapon (instead of just one). Instead of following normal rules for successful Vampiric Rolls, each successful roll can be used to either Recover 1 wound to wielder, or Raise 1 Wound in Wielder’s unit. Wielder’s model can never Recover more than 1 Wound per phase with this."/>
                     <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Hand Weapon"/>
                   </characteristics>
                 </profile>
@@ -7159,7 +7326,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="60.0"/>
+                <cost name="pts" costTypeId="points" value="75.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8e35-ac23-081c-0353" name="Sword of Strength" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7188,6 +7355,36 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3cb2-c4aa-7c7e-29bc" name="Jack&apos;s Pickaxe" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="fa92-6385-6cd8-d1bf" name="Jack&apos;s Pickaxe" hidden="false" profileTypeId="576561706f6e23232344415441232323" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
+                    <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="+1"/>
+                    <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Against models with Towering Presence, attacks made with this weapon also gain Multiple Wounds (2) and count as having a Strength equal to the Toughness of their target when rolling to wound (ignore all other Strength modifiers except the ones granted by this weapon when attacking models with Towering Presence).
+"/>
+                    <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be7c-db3f-af2e-755f" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b937-47af-acd2-2bb0" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="70.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -7331,7 +7528,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="40.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9618-0d2e-d748-7c08" name="Obsidian Nullstone" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7357,7 +7554,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="90.0"/>
+                <cost name="pts" costTypeId="points" value="80.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4f25-47a3-1651-672c" name="Lucky Charm" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7435,10 +7632,10 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="20.0"/>
+                <cost name="pts" costTypeId="points" value="15.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="5b01-cf37-abc9-9640" name="Eternal Ring" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+            <selectionEntry id="5b01-cf37-abc9-9640" name="Eternal Ring- Midnight Aristocracy Only" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
               <profiles>
                 <profile id="62a5-4468-51c4-d680" name="Eternal Ring" hidden="false" profileTypeId="54616c69736d616e23232344415441232323">
                   <profiles/>
@@ -7665,7 +7862,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="40.0"/>
+                <cost name="pts" costTypeId="points" value="45.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="74b6-9d6b-8d05-6ef1" name="Banner of speed" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7717,7 +7914,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="35.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e998-604a-2299-9d11" name="Aether Icon" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7728,7 +7925,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer&apos;s unit make Dispel Attempts as if was a Wizard Master."/>
+                    <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer makes Dispel Attempts as if was a Wizard Master."/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7743,7 +7940,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="55.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="a8e2-6a05-640d-4548" name="Black Standard of Zagvozd" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7846,7 +8043,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Cannot be taken if there are wizards in the army. May automatically dispell a spell instead of rolling."/>
+                    <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. May automatically dispell a spell instead of rolling. In an Army List that includes a model bearing the Crown of Scorn, friendly models cannot cast Spells (including Bound Spells) nor can any friendly models carry Arcane Items."/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7913,7 +8110,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="35.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="ae48-83b4-7d56-92a3" name="Potion of Swiftness" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -7991,7 +8188,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="80.0"/>
+                <cost name="pts" costTypeId="points" value="70.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="66fe-2f72-dec6-a699" name="Ring of Fire" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8017,7 +8214,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="40.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f45d-6f89-733e-489a" name="Wizards Hood" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8043,7 +8240,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="120.0"/>
+                <cost name="pts" costTypeId="points" value="105.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="25cf-e753-6389-f442" name="Tullius&apos; Teeth" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8070,6 +8267,32 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="100.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ae71-dd12-c850-445a" name="Staff of Gerhard the Black" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+              <profiles>
+                <profile id="efcc-18c6-ceee-0e3c" name="Staff of Gerhard the Black" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="An army containing this item may reroll failed Channel attempts. When the bearer casts ​Evocation of Souls from Evocation ​it may, for each target, reroll a single D6 or D3 used to determine the number of Raised Wounds. "/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b80-ba80-0225-f914" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="65d5-6920-84b1-57ff" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="80.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -8161,7 +8384,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="35.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="c553-bef0-aeb0-d445" name="Dragon Mantle" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8217,7 +8440,7 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="70.0"/>
+                <cost name="pts" costTypeId="points" value="80.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="7a10-242f-ef76-9fa9" name="Armour Of Fortune" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -8360,17 +8583,17 @@ Regarless of how its used it causes 1 automatic hit to the target for each wound
                 <cost name="pts" costTypeId="points" value="30.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7505-fea7-3987-7b49" name="Red Plate of Gilles de Raux" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+            <selectionEntry id="7505-fea7-3987-7b49" name="Red Gauntlets of Gilles de Raux" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
               <profiles>
-                <profile id="6c6c-f865-d183-6616" name="Red Plate of Gilles de Raux" hidden="false" profileTypeId="41726d6f757223232344415441232323">
+                <profile id="6c6c-f865-d183-6616" name="Red Gauntlets of Gilles de Raux" hidden="false" profileTypeId="41726d6f757223232344415441232323">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323"/>
+                    <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="6+"/>
                     <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="The wearer gains +1 Wound"/>
-                    <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="Plate Armour"/>
+                    <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="None (6+ Armour Save)"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9384,6 +9607,14 @@ At the start of each friendly PlayerTurn in which the army&apos;s Master has bee
       <rules/>
       <infoLinks/>
       <modifiers/>
+    </rule>
+    <rule id="8a2b-fa89-4421-2417" name="Gates of the Netherworld" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>Whenever the caster successfully casts Evocation of Souls, after resolving the effect of the Spell, choose a Friendly unit with an Evoked value and within 12&quot; of the caster. This unit, or a single Character inside the unit, Raises 1 Wound. No unit can be chosen by this special rule more than twice per Magic Phase.
+</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
