@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.2" revision="26" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3" revision="27" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -3308,7 +3308,7 @@
       </categoryEntries>
       <forceEntries/>
     </forceEntry>
-     <forceEntry id="b7b4-f6cf-f38a-69fa" name="Highborn Elves of Ryma" hidden="false">
+    <forceEntry id="b7b4-f6cf-f38a-69fa" name="Highborn Elves of Ryma" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
