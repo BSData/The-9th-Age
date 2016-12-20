@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3" revision="28" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3" revision="29" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -1206,14 +1206,21 @@
           <modifiers>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="d4b1-8d8e-7696-2098" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="d4b1-8d8e-7696-2098" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxPercentage" value="4">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="40.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="a2a3-8d76-c9e1-a18" name="DH Core" hidden="false">
@@ -1223,14 +1230,21 @@
           <modifiers>
             <modifier type="decrement" field="minPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="2329-f0f6-6359-9b6" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="2329-f0f6-6359-9b6" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="minPercentage" value="2.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="25.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="minPercentage" type="min"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPercentage" type="min"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="6a35-8450-fd55-ec4" name="DH Special" hidden="false">
@@ -1247,21 +1261,28 @@
           <modifiers>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="2329-f0f6-6359-9b6" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="2329-f0f6-6359-9b6" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="9c79-a3c6-01c4-8caa" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="9c79-a3c6-01c4-8caa" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxPercentage" value="3.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="35.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="1f39-4f7b-28ff-663" name="DH Engines of War" hidden="false">
@@ -1271,41 +1292,72 @@
           <modifiers>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="d4b1-8d8e-7696-2098" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="d4b1-8d8e-7696-2098" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxPercentage" value="2">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="20.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="2329-f0f6-6359-9b6" name="DH Core + Clans&apos; Thunder" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="maxPercentage" value="3.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="35.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="9c79-a3c6-01c4-8caa" name="DH Special + Clans&apos; Thunder" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="maxPercentage" value="3.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="35.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="d4b1-8d8e-7696-2098" name="DH Characters + Engines of War" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="maxPercentage" value="3.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="35.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
       </categoryEntries>
@@ -1480,16 +1532,23 @@
           <rules/>
           <infoLinks/>
           <modifiers>
+            <modifier type="increment" field="maxPercentage" value="3">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a850-d388-fafa-f339" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a850-d388-fafa-f339" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="30.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="dc3b-8a11-4ef9-0019" name="HBE The Ancient Allies" hidden="false">
@@ -1497,16 +1556,23 @@
           <rules/>
           <infoLinks/>
           <modifiers>
+            <modifier type="increment" field="maxPercentage" value="2">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9859-bc5a-05d5-4239" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9859-bc5a-05d5-4239" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="20.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="1db2-c1d7-774f-55c0" name="HBE Characters" hidden="false">
@@ -1514,16 +1580,23 @@
           <rules/>
           <infoLinks/>
           <modifiers>
+            <modifier type="increment" field="maxPercentage" value="4">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9859-bc5a-05d5-4239" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9859-bc5a-05d5-4239" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="40.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="12cc-b646-34b5-eeb3" name="HBE Core" hidden="false">
@@ -1533,14 +1606,21 @@
           <modifiers>
             <modifier type="decrement" field="minPoints" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="5aee-c040-9100-618" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="5aee-c040-9100-618" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="minPoints" value="2.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="25.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="minPoints" type="min"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="d28f-bd4f-dce2-f270" name="HBE Special" hidden="false">
@@ -1557,23 +1637,38 @@
           <modifiers>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="1730-580e-acf5-aa87" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1730-580e-acf5-aa87" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxPercentage" value="1.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="15.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="1730-580e-acf5-aa87" name="HBE Special + Peacekeepers" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="maxPercentage" value="1.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="15.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="9859-bc5a-05d5-4239" name="HBE Big Mounts" hidden="false">
@@ -1588,16 +1683,23 @@
           <rules/>
           <infoLinks/>
           <modifiers>
+            <modifier type="increment" field="9531-b1da-39d5-3870" value="3">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
             <modifier type="decrement" field="9531-b1da-39d5-3870" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5aee-c040-9100-618" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5aee-c040-9100-618" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="30.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="9531-b1da-39d5-3870" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="9531-b1da-39d5-3870" type="max"/>
           </constraints>
         </categoryEntry>
       </categoryEntries>
@@ -2556,16 +2658,23 @@
           <rules/>
           <infoLinks/>
           <modifiers>
+            <modifier type="increment" field="minPoints" value="2.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
             <modifier type="decrement" field="minPoints" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ed53-694b-b38d-de63" repeats="1"/>
+                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ed53-694b-b38d-de63" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="25.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="minPoints" type="min"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="665d-c512-e883-8a3a" name="HBE of Ryma Characters" hidden="false">
@@ -2573,16 +2682,23 @@
           <rules/>
           <infoLinks/>
           <modifiers>
+            <modifier type="increment" field="maxPercentage" value="4.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="78fa-dcb9-1b6c-d074" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78fa-dcb9-1b6c-d074" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="45.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="0f40-dd20-cc28-9e70" name="HBE of Ryma Special" hidden="false">
@@ -2599,23 +2715,38 @@
           <modifiers>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="16d9-9866-cae4-3ced" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="16d9-9866-cae4-3ced" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="maxPercentage" value="0">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="0.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="8927-3dc9-8a88-b9fd" name="HBE of Ryma The Ancient Allies" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="maxPercentage" value="2.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="25.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="ed53-694b-b38d-de63" name="HBE of Ryma Core + Elder Service" hidden="false">
@@ -2623,25 +2754,40 @@
           <rules/>
           <infoLinks/>
           <modifiers>
+            <modifier type="increment" field="maxPercentage" value="3">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
             <modifier type="decrement" field="maxPercentage" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8b31-64ef-8603-bdac" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8b31-64ef-8603-bdac" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="30.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="16d9-9866-cae4-3ced" name="HBE of Ryma Special + Peacekeepers" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="increment" field="maxPercentage" value="0">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="0.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
         </categoryEntry>
         <categoryEntry id="78fa-dcb9-1b6c-d074" name="HBE of Ryma Big Mounts" hidden="false">
@@ -2656,16 +2802,23 @@
           <rules/>
           <infoLinks/>
           <modifiers>
+            <modifier type="increment" field="3ede-6393-f0a5-e024" value="3">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
             <modifier type="decrement" field="3ede-6393-f0a5-e024" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="45.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ed53-694b-b38d-de63" repeats="1"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ed53-694b-b38d-de63" repeats="1"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="limit::points" scope="roster" value="30.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="3ede-6393-f0a5-e024" type="max"/>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="3ede-6393-f0a5-e024" type="max"/>
           </constraints>
         </categoryEntry>
       </categoryEntries>
