@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cd11-2764-672d-873d" name="BS2.0 Ogre Khans" book="Ogre Khans v1.2" revision="7" battleScribeVersion="2.00" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cd11-2764-672d-873d" name="BS2.0 Ogre Khans" book="Ogre Khans v1.3" revision="8" battleScribeVersion="2.00" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -85,7 +85,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="80.0"/>
+            <cost name="pts" costTypeId="points" value="75.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -163,7 +163,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="-20.0"/>
+        <cost name="pts" costTypeId="points" value="5.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b930-c4df-e7b5-d819" name="Bruisers" hidden="false" collective="false" categoryEntryId="a2a3-8d76-c9e1-a187" type="unit">
@@ -309,7 +309,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="-84.0"/>
+        <cost name="pts" costTypeId="points" value="-99.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7004-93b5-b3f4-4c6f" name="Frost Mammoth" hidden="false" collective="false" categoryEntryId="2ded-7bec-fb35-3d30" type="model">
@@ -368,7 +368,7 @@
           <infoLinks/>
           <modifiers/>
           <description>The model can cast Chilling Howl from Shamanism as a Bound Spell (Power Level 3).
-All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a minimum of 1.</description>
+Enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative for each Frost Mammoth within 6&quot; , to a minimum of 1.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -996,7 +996,7 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
             <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
             <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
             <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Monstrous Infantry"/>
-            <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="50x50mm"/>
+            <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="40x40mm"/>
             <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
           </characteristics>
         </profile>
@@ -1008,13 +1008,6 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
           <infoLinks/>
           <modifiers/>
           <description>Mammoth Hunters on foot may only join units of Yetis and Sabretooth Tigers, and only as long as no other characters form part of the unit already. Other Characters cannot join Yetis and Sabretooth Tigers with a Mammoth Hunter joined to it. Mounted Mammoth Hunters may not join any units at all.</description>
-        </rule>
-        <rule id="6d81-6234-aa68-c765" name="Leader of the Pack" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <description>If a Mammoth Hunter is joined to a unit of Sabretooth Tigers (and only whilst he is inside it), the unit loses Insignificant and gains Vanguard. Furthermore, the Mammoth Hunter counts as having the War Beast Troop Type for the purposes of distributing hits.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1034,7 +1027,15 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="723d-d378-4a71-d57e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c1b-3c3f-69e9-8f6a" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
         <infoLink id="566c-963f-f3c7-fc50" hidden="false" targetId="59c7-5de5-9ed9-4a85" type="rule">
           <profiles/>
@@ -1051,7 +1052,29 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
       </infoLinks>
       <modifiers/>
       <constraints/>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="3c6a-9988-3002-f4be" name="May Gain Leader of the Pack" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules>
+            <rule id="1f6e-859b-9ba1-334f" name="Leader of the Pack" hidden="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <description>If a Mammoth Hunter is joined to a unit of Sabretooth Tigers (and only whilst he is inside it), the unit loses Insignificant and gains Vanguard. Furthermore, the Mammoth Hunter counts as having the War Beast Troop Type for the purposes of distributing hits.</description>
+            </rule>
+          </rules>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42a3-fe62-2faf-2c05" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="bdf7-0d7a-f0a5-aaf8" name="Close Combat Weapon" hidden="false" collective="false">
           <profiles/>
@@ -1244,7 +1267,7 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
                 <cost name="pts" costTypeId="points" value="60.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="1c1b-3c3f-69e9-8f6a" name="Rock Auroch" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+            <selectionEntry id="1c1b-3c3f-69e9-8f6a" name="Rock Auroch (Lose Light Troops)" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -1289,7 +1312,7 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="210.0"/>
+        <cost name="pts" costTypeId="points" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="85bc-f966-9b64-5d3d" name="Mercenary Veterans" hidden="false" collective="false" categoryEntryId="6a35-8450-fd55-ec4c" type="unit">
@@ -2229,9 +2252,17 @@ Accurate .</description>
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers/>
+      <modifiers>
+        <modifier type="decrement" field="maxInRoster" value="1">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="23a5-9e4b-5099-cc95" type="atLeast"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
       <selectionEntries/>
       <selectionEntryGroups>
@@ -2321,7 +2352,7 @@ Accurate .</description>
         <cost name="pts" costTypeId="points" value="480.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="23a5-9e4b-5099-cc95" name="Rock Auroch Mount" hidden="false" collective="false" categoryEntryId="2ded-7bec-fb35-3d30" type="model">
+    <selectionEntry id="23a5-9e4b-5099-cc95" name="Rock Auroch Mount" hidden="false" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -2363,7 +2394,15 @@ Accurate .</description>
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers/>
+      <modifiers>
+        <modifier type="decrement" field="maxInRoster" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a9d-5b12-c160-1ca9" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
@@ -2399,7 +2438,7 @@ Accurate .</description>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -2622,7 +2661,7 @@ Feature.</description>
                     <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="4"/>
                     <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
                     <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
-                    <characteristic name="W" characteristicTypeId="5723232344415441232323" value="2"/>
+                    <characteristic name="W" characteristicTypeId="5723232344415441232323" value="1"/>
                     <characteristic name="I" characteristicTypeId="4923232344415441232323" value="4"/>
                     <characteristic name="A" characteristicTypeId="4123232344415441232323" value="3"/>
                     <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="7"/>
@@ -2827,6 +2866,7 @@ Feature.</description>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+                <constraint field="points" scope="roster" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9cfd-5daa-4beb-22b5" type="max"/>
               </constraints>
               <selectionEntries/>
               <selectionEntryGroups/>
@@ -2915,7 +2955,7 @@ Feature.</description>
           <characteristics>
             <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="12-48&quot;"/>
             <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="3"/>
-            <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Lethal Strike"/>
+            <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Lethal Strike. A Scratapult that only Pivots (and moves no further) during its owner’s Movement Phase ignores the to-hit modifier from Moving and Shooting in the next Shooting Phase."/>
             <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Catapult (6) Artillery Weapon"/>
           </characteristics>
         </profile>
@@ -3030,7 +3070,7 @@ Feature.</description>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="250.0"/>
+        <cost name="pts" costTypeId="points" value="230.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5df7-9f88-3d9a-f719" name="Shaman" hidden="false" collective="false" categoryEntryId="980d-cabc-2b83-1c27" type="model">
@@ -3042,11 +3082,11 @@ Feature.</description>
           <modifiers/>
           <characteristics>
             <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="6"/>
-            <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="3"/>
+            <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="4"/>
             <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="3"/>
             <characteristic name="S" characteristicTypeId="5323232344415441232323" value="4"/>
             <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
-            <characteristic name="W" characteristicTypeId="5723232344415441232323" value="4"/>
+            <characteristic name="W" characteristicTypeId="5723232344415441232323" value="5"/>
             <characteristic name="I" characteristicTypeId="4923232344415441232323" value="2"/>
             <characteristic name="A" characteristicTypeId="4123232344415441232323" value="3"/>
             <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="8"/>
@@ -3125,7 +3165,7 @@ Feature.</description>
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3328,7 +3368,7 @@ Feature.</description>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="210.0"/>
+        <cost name="pts" costTypeId="points" value="240.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="103e-6194-4d12-0420" name="Slave Giant" hidden="false" collective="false" categoryEntryId="2ded-7bec-fb35-3d30" type="model">
@@ -3442,7 +3482,8 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <characteristics>
             <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="48&quot;"/>
             <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="4[10]"/>
-            <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Armour Piercing (1), [Multiple Wounds (D3+1), Clipped Wings]"/>
+            <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Armour Piercing (1), [Multiple Wounds (D3+1), Clipped Wings]. A Thunder Cannon that only Pivots (and moves no further) during its owner’s Movement Phase ignores the to-hit
+modifier from Moving and Shooting in the next Shooting Phase."/>
             <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Cannon Artillery Weapon"/>
           </characteristics>
         </profile>
@@ -3658,7 +3699,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="14.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="13.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -4194,6 +4235,77 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
         <cost name="pts" costTypeId="points" value="20.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="6a9d-5b12-c160-1ca9" name="Sabretooth Tigers - Core" hidden="false" collective="false" categoryEntryId="a2a3-8d76-c9e1-a187" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="9e54-96ec-262b-4744" hidden="false" targetId="8dab-26ba-334d-b6b7" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="decrement" field="dd46-932d-e647-7233" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4df-af7c-b5d4-16f8" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="dd46-932d-e647-7233" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="0b0b-32b4-7b0f-b2b4" name="Sabretooth Tiger" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+          <profiles>
+            <profile id="4d30-c345-8983-17e1" name="Sabretooth Tiger" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="8"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="4"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="-"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="4"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="2"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323" value="4"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323" value="3"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="5"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323" value=""/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e70a-485a-615c-2a02" type="min"/>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4ad9-3a1e-f473-94a2" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="50.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks/>
   <sharedSelectionEntries>
@@ -4518,7 +4630,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <rules/>
               <infoLinks/>
               <modifiers/>
-              <description>The Character gains Regeneration (5+) and Stupidity. In addition, the Character gains Multiple Wounds (2, Monstrous Infantry).</description>
+              <description>The Character gains Regeneration (4+) and Stupidity. In addition, the Character gains Multiple Wounds (2, Monstrous Infantry).</description>
             </rule>
           </rules>
           <infoLinks/>
@@ -4531,7 +4643,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7b67-73db-dfa6-3e46" name="Headhunter" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4555,7 +4667,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c70e-60a8-b66f-a2e5" name="Spinesplitter" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4715,7 +4827,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6808-9997-d220-67e5" name="Banner of Discipline" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4740,7 +4852,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fce5-d7e6-e022-1924" name="Banner of Speed" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -5014,7 +5126,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="70.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6f42-f23a-f06a-0e3d" name="Dispel Scroll" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -5125,7 +5237,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Activate during the opponent’s Magic Phase, after rolling for Magic Flux and Channeling. During this phase, all enemy Wizards within 24&quot; of the bearer will suffer a miscast on a roll that includes any double (regardless if the spell was successful or not, or if it was dispelled). Only double ‘6’ counts as an Overwhelming Power, and no more than one Miscast can be suffered per roll. Bound Spells are not affected."/>
+                    <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Activate during the opponent’s Magic Phase, after rolling for Magic Flux and Channeling. During this phase, all enemy Wizards within 24&quot; of the bearer will suffer a miscast on successful Casting rolls that include any double. This Miscast is resolved as if 1 more Magic Dice was used. Only double ‘6’ counts as an Overwhelming Power, and no more than one Miscast can be suffered per roll. Bound Spells are not affected."/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5293,7 +5405,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="60.0"/>
+                <cost name="pts" costTypeId="points" value="45.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6514-9542-706b-11b4" name="King Slayer" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -5321,7 +5433,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="60.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="46cc-65f8-815b-d927" name="Axe of Battle" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -5616,7 +5728,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
                   <characteristics>
                     <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
                     <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value=""/>
-                    <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="If the wielder scores one or more hits in a single Round of Combat using this weapon against an enemy model with a Magical Weapon, roll a D6 before rolling to wound: On a roll of 4+, all Magical Weapons wielded by this enemy model are reverted to its mundane type for the rest of the game ."/>
+                    <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="If the wielder scores one or more hits in a single Round of Combat using this weapon against an enemy model with a Magical Weapon, roll a D6 before rolling to wound: On a roll of 3+, all Magical Weapons wielded by this enemy model are reverted to its mundane type for the rest of the game ."/>
                     <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Iron Fist"/>
                   </characteristics>
                 </profile>
@@ -5633,6 +5745,35 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="793d-dc43-54cc-d0d9" name="Jack&apos;s Pickaxe" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="e460-b6e7-9328-9c0b" name="Jack&apos;s Pickaxe" hidden="false" profileTypeId="576561706f6e23232344415441232323" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
+                    <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="+1"/>
+                    <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Against models with Towering Presence, attacks made with this weapon also gain Multiple Wounds (2) and count as having a Strength equal to the Toughness of their target when rolling to wound (ignore all other Strength modifiers except the ones granted by this weapon when attacking models with Towering Presence)."/>
+                    <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Hand Weapon"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eebe-4bef-dd9e-5fe7" type="max"/>
+                <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8cc-4ddc-71e3-7b79" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="70.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5708,7 +5849,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="70.0"/>
+                <cost name="pts" costTypeId="points" value="80.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f8c1-b418-a58d-ba7d" name="Mithril Mail" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -5816,7 +5957,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="35.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f1ec-9e3d-b31a-762e" name="Dragon Mantle - Foot only" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6018,7 +6159,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="120.0"/>
+                <cost name="pts" costTypeId="points" value="105.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8a0b-d8eb-529e-f8a1" name="Crown of Scorn" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6093,7 +6234,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="40.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e717-942e-9f44-4d0e" name="Potion of Strength" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6218,7 +6359,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="80.0"/>
+                <cost name="pts" costTypeId="points" value="70.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="18f3-81f6-e7ca-16fc" name="Aurochs Charm" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6332,7 +6473,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="90.0"/>
+                <cost name="pts" costTypeId="points" value="80.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="af4b-0e9b-4d94-514c" name="Dusk Stone" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6382,7 +6523,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="40.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="fc5d-6458-2631-deeb" name="Talisman of Greater Shielding" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6457,7 +6598,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="20.0"/>
+                <cost name="pts" costTypeId="points" value="15.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4ef1-54f7-1490-4a9e" name="Talisman of Shielding" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -6508,7 +6649,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="40.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
