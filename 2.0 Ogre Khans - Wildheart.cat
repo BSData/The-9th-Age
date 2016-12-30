@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c28b-bd59-4edd-8701" name="BS2.0 Ogre Khans - Wildheart" book="Ogre Khans v1.2" revision="7" battleScribeVersion="2.00" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c28b-bd59-4edd-8701" name="BS2.0 Ogre Khans - Wildheart" book="Ogre Khans v1.3" revision="8" battleScribeVersion="2.00" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -63,7 +63,7 @@
           <infoLinks/>
           <modifiers/>
           <description>The model can cast Chilling Howl from Shamanism as a Bound Spell (Power Level 3).
-All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a minimum of 1.</description>
+Enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative for each Frost Mammoth within 6&quot; , to a minimum of 1.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -253,7 +253,7 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
             <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
             <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
             <characteristic name="Type" characteristicTypeId="5479706523232344415441232323" value="Monstrous Infantry"/>
-            <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="50x50mm"/>
+            <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b" value="40x40mm"/>
             <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
           </characteristics>
         </profile>
@@ -265,13 +265,6 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
           <infoLinks/>
           <modifiers/>
           <description>Mammoth Hunters on foot may only join units of Yetis and Sabretooth Tigers, and only as long as no other characters form part of the unit already. Other Characters cannot join Yetis and Sabretooth Tigers with a Mammoth Hunter joined to it. Mounted Mammoth Hunters may not join any units at all.</description>
-        </rule>
-        <rule id="6d81-6234-aa68-c765" name="Leader of the Pack" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <description>If a Mammoth Hunter is joined to a unit of Sabretooth Tigers (and only whilst he is inside it), the unit loses Insignificant and gains Vanguard. Furthermore, the Mammoth Hunter counts as having the War Beast Troop Type for the purposes of distributing hits.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -291,7 +284,29 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="723d-d378-4a71-d57e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c1b-3c3f-69e9-8f6a" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="566c-963f-f3c7-fc50" hidden="false" targetId="59c7-5de5-9ed9-4a85" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="723d-d378-4a71-d57e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c52-3985-a75b-a690" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
         </infoLink>
         <infoLink id="65d6-2056-5cd5-a34e" hidden="false" targetId="97a7-b378-d33c-b598" type="rule">
           <profiles/>
@@ -302,7 +317,31 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
       </infoLinks>
       <modifiers/>
       <constraints/>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="3c6a-9988-3002-f4be" name="May Gain Leader of the Pack" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules>
+            <rule id="1f6e-859b-9ba1-334f" name="Leader of the Pack" hidden="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <description>If a Mammoth Hunter is joined to a unit of Sabretooth Tigers (and only whilst he is inside it), the unit loses Insignificant and gains Vanguard. Furthermore, the Mammoth Hunter counts as having the War Beast Troop Type for the purposes of distributing hits.</description>
+            </rule>
+          </rules>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42a3-fe62-2faf-2c05" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="bdf7-0d7a-f0a5-aaf8" name="Close Combat Weapon" hidden="false" collective="false">
           <profiles/>
@@ -495,7 +534,7 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
                 <cost name="pts" costTypeId="points" value="60.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="1c1b-3c3f-69e9-8f6a" name="Rock Auroch" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+            <selectionEntry id="1c1b-3c3f-69e9-8f6a" name="Rock Auroch (Lose Light Troops)" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -506,7 +545,7 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks>
-                <entryLink id="5ef4-7242-1e15-8874" hidden="false" targetId="ab2e-df15-ca0d-a6fb" type="selectionEntry">
+                <entryLink id="dd81-761c-4151-bae9" hidden="false" targetId="ab2e-df15-ca0d-a6fb" type="selectionEntry">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
@@ -522,220 +561,23 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
           <selectionEntryGroups/>
           <entryLinks/>
         </selectionEntryGroup>
-        <selectionEntryGroup id="1002-8fc3-07f4-56c8" name="Magic Items (100pts)" hidden="false" collective="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="decrement" field="d4ce-b89b-0e15-0e4c" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f24a-8968-8a1f-7741" repeats="1"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="100.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d4ce-b89b-0e15-0e4c" type="max"/>
-          </constraints>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks>
-            <entryLink id="52cb-8e26-8637-c10d" hidden="false" targetId="076a-9a11-4c9c-c4d7" type="selectionEntryGroup">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints/>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="99c6-c995-4d03-c243" name="Big Names" hidden="false" collective="false">
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="c167-b2df-2d9c-eaba" hidden="false" targetId="18a3-37c4-4096-a2a9" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0721-19f3-9fac-004c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3e63-8892-b0b3-3116" type="max"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1dcb-5a98-938f-583e" type="min"/>
-            <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d540-e5c0-2e62-4032" type="max"/>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="25fe-3c34-e43e-e3cc" type="min"/>
-            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9393-c573-36da-5b4f" type="max"/>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="606e-0f5d-1880-ca97" type="min"/>
-            <constraint field="points" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c633-9ec8-2d49-b11b" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="6cab-235a-fcb7-699d" name="Rottenjaw" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
-              <profiles/>
-              <rules>
-                <rule id="e080-6055-8ad5-52a1" name="Rottenjaw" hidden="false">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <description>The Character gains Poisoned Attacks. For the duration of one single Close Combat Phase, all models in the Character’s unit also gain Poisoned Attacks. The player must declare at the start of a Round of Combat if they are using this ability.</description>
-                </rule>
-              </rules>
-              <infoLinks/>
-              <modifiers/>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="86e4-6102-b63a-a869" type="max"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fae3-4424-4f2b-69ae" type="max"/>
-              </constraints>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="70.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bf28-7c3a-27b1-ffb6" name="Trolleater" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
-              <profiles/>
-              <rules>
-                <rule id="f948-d314-6504-d4de" name="Trolleater" hidden="false">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <description>The Character gains Regeneration (5+) and Stupidity. In addition, the Character gains Multiple Wounds (2, Monstrous Infantry).</description>
-                </rule>
-              </rules>
-              <infoLinks/>
-              <modifiers/>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6487-a3ee-6c89-80d0" type="max"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="97f7-80fc-b20f-e34d" type="max"/>
-              </constraints>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="08ba-1561-0607-0c2f" name="Headhunter" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
-              <profiles/>
-              <rules>
-                <rule id="2b9c-5c20-61b3-7d01" name="Headhunter" hidden="false">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <description>At the end of any Close Combat Phase in which the bearer has killed one or more models and is not fleeing, roll a D6. On a roll of 3+, it Recovers a single Wound.</description>
-                </rule>
-              </rules>
-              <infoLinks/>
-              <modifiers/>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b32d-dd23-709a-6d31" type="max"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f77e-43e1-9a95-c082" type="max"/>
-              </constraints>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1493-5d20-3c71-3fdc" name="Spinesplitter" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
-              <profiles/>
-              <rules>
-                <rule id="9b2a-fbb8-36e2-0148" name="Spinesplitter" hidden="false">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <description>The Character gains Devastating Charge and Thunderous Charge. The strength bonus from Thunderous Charge also affects Impact Hits and Stomps.</description>
-                </rule>
-              </rules>
-              <infoLinks/>
-              <modifiers/>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ce65-e47b-7075-5d11" type="max"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f09-38d3-47bc-1de9" type="max"/>
-              </constraints>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="40.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2be6-c339-f326-08a0" name="Hoardmaster" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
-              <profiles/>
-              <rules>
-                <rule id="d5b3-79fe-244f-5831" name="Hoardmaster" hidden="false">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <description>The Character gains Weapon Master and Plate Armour, and may purchase any number of mundane Close Combat and Shooting Weapons available to him rather than just one of each type.</description>
-                </rule>
-              </rules>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8b0-1b90-d0f7-03df" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fc9d-c8f3-f104-441d" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fdf2-129a-856d-348e" type="max"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9a5a-0b0b-bc7d-786f" type="max"/>
-              </constraints>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="40.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="cfc0-52d9-b6bc-6977" name="Wildheart" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
-              <profiles/>
-              <rules>
-                <rule id="8729-2411-6f90-1f6b" name="Wildheart" hidden="false">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <description>Mammoth Hunters only A Mammoth Hunter with this Big Name loses the Not a Leader special rule. A single Mammoth Hunter in the army may be upgraded to a Battle Standard Bearer for 50 pts. The Core limit is reduced to minimum 15%. The army may not include Khagans , Bruisers, Mercenary Veterans, Bombardiers, or Thunder Cannons.</description>
-                </rule>
-              </rules>
-              <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="89a7-2952-5fda-de32" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="24c3-2077-36c8-92c3" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79e2-db68-ab94-3606" type="max"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bafc-a4af-3788-3002" type="min"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2229-4954-2fd4-06e7" type="max"/>
-              </constraints>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="30.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups/>
-          <entryLinks/>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="d6c2-ced2-5ebf-3d8b" hidden="false" targetId="89a7-2952-5fda-de32" type="selectionEntry">
+          <constraints/>
+        </entryLink>
+        <entryLink id="ca5c-dc67-f4a1-5bc8" hidden="false" targetId="076a-9a11-4c9c-c4d7" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </entryLink>
+        <entryLink id="1e67-3ab1-4454-0e9a" name="New EntryLink" hidden="false" targetId="89a7-2952-5fda-de32" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -743,14 +585,21 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
             <modifier type="set" field="hidden" value="true">
               <repeats/>
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c15d-c503-c820-fcc4" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0c52-3985-a75b-a690" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b8c-b6ce-dc91-ce7c" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
         </entryLink>
-        <entryLink id="3dc2-9f67-9619-b713" hidden="false" targetId="c15d-c503-c820-fcc4" type="selectionEntry">
+        <entryLink id="9b8c-b6ce-dc91-ce7c" name="New EntryLink" hidden="false" targetId="c15d-c503-c820-fcc4" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -758,7 +607,7 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
             <modifier type="set" field="hidden" value="true">
               <repeats/>
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89a7-2952-5fda-de32" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="89a7-2952-5fda-de32" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -767,7 +616,7 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="210.0"/>
+        <cost name="pts" costTypeId="points" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0ab5-c58f-c8f2-1717" name="Rock Auroch" hidden="false" collective="false" categoryEntryId="2ded-7bec-fb35-3d30" type="model">
@@ -864,9 +713,17 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers/>
+      <modifiers>
+        <modifier type="decrement" field="maxInRoster" value="1">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="23a5-9e4b-5099-cc95" type="atLeast"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
       <selectionEntries/>
       <selectionEntryGroups>
@@ -956,7 +813,7 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
         <cost name="pts" costTypeId="points" value="480.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="23a5-9e4b-5099-cc95" name="Rock Auroch Mount" hidden="false" collective="false" categoryEntryId="2ded-7bec-fb35-3d30" type="model">
+    <selectionEntry id="23a5-9e4b-5099-cc95" name="Rock Auroch Mount" hidden="false" collective="false" categoryEntryId="112c-5556-6539-fccb" type="model">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -998,7 +855,15 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers/>
+      <modifiers>
+        <modifier type="decrement" field="maxInRoster" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a9d-5b12-c160-1ca9" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
@@ -1034,7 +899,7 @@ All enemy units within 6&quot; of a Frost Mammoth suffer -3 Initiative, to a min
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -1257,7 +1122,7 @@ Feature.</description>
                     <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="4"/>
                     <characteristic name="S" characteristicTypeId="5323232344415441232323" value="3"/>
                     <characteristic name="T" characteristicTypeId="5423232344415441232323" value="3"/>
-                    <characteristic name="W" characteristicTypeId="5723232344415441232323" value="2"/>
+                    <characteristic name="W" characteristicTypeId="5723232344415441232323" value="1"/>
                     <characteristic name="I" characteristicTypeId="4923232344415441232323" value="4"/>
                     <characteristic name="A" characteristicTypeId="4123232344415441232323" value="3"/>
                     <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="7"/>
@@ -1462,6 +1327,7 @@ Feature.</description>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+                <constraint field="points" scope="roster" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9cfd-5daa-4beb-22b5" type="max"/>
               </constraints>
               <selectionEntries/>
               <selectionEntryGroups/>
@@ -1550,7 +1416,7 @@ Feature.</description>
           <characteristics>
             <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="12-48&quot;"/>
             <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="3"/>
-            <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Lethal Strike"/>
+            <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Lethal Strike. A Scratapult that only Pivots (and moves no further) during its owner’s Movement Phase ignores the to-hit modifier from Moving and Shooting in the next Shooting Phase."/>
             <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Catapult (6) Artillery Weapon"/>
           </characteristics>
         </profile>
@@ -1665,7 +1531,7 @@ Feature.</description>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="250.0"/>
+        <cost name="pts" costTypeId="points" value="230.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5df7-9f88-3d9a-f719" name="Shaman" hidden="false" collective="false" categoryEntryId="980d-cabc-2b83-1c27" type="model">
@@ -1677,11 +1543,11 @@ Feature.</description>
           <modifiers/>
           <characteristics>
             <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="6"/>
-            <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="3"/>
+            <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="4"/>
             <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="3"/>
             <characteristic name="S" characteristicTypeId="5323232344415441232323" value="4"/>
             <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
-            <characteristic name="W" characteristicTypeId="5723232344415441232323" value="4"/>
+            <characteristic name="W" characteristicTypeId="5723232344415441232323" value="5"/>
             <characteristic name="I" characteristicTypeId="4923232344415441232323" value="2"/>
             <characteristic name="A" characteristicTypeId="4123232344415441232323" value="3"/>
             <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="8"/>
@@ -1760,7 +1626,7 @@ Feature.</description>
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1963,7 +1829,7 @@ Feature.</description>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="210.0"/>
+        <cost name="pts" costTypeId="points" value="240.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="103e-6194-4d12-0420" name="Slave Giant" hidden="false" collective="false" categoryEntryId="2ded-7bec-fb35-3d30" type="model">
@@ -2124,7 +1990,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="14.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="13.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -2660,6 +2526,77 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
         <cost name="pts" costTypeId="points" value="20.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="6a9d-5b12-c160-1ca9" name="Sabretooth Tigers - Core" hidden="false" collective="false" categoryEntryId="a2a3-8d76-c9e1-a187" type="unit">
+      <profiles/>
+      <rules/>
+      <infoLinks>
+        <infoLink id="9e54-96ec-262b-4744" hidden="false" targetId="8dab-26ba-334d-b6b7" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="decrement" field="dd46-932d-e647-7233" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4df-af7c-b5d4-16f8" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="dd46-932d-e647-7233" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="0b0b-32b4-7b0f-b2b4" name="Sabretooth Tiger" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+          <profiles>
+            <profile id="4d30-c345-8983-17e1" name="Sabretooth Tiger" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="M" characteristicTypeId="4d23232344415441232323" value="8"/>
+                <characteristic name="WS" characteristicTypeId="575323232344415441232323" value="4"/>
+                <characteristic name="BS" characteristicTypeId="425323232344415441232323" value="-"/>
+                <characteristic name="S" characteristicTypeId="5323232344415441232323" value="4"/>
+                <characteristic name="T" characteristicTypeId="5423232344415441232323" value="4"/>
+                <characteristic name="W" characteristicTypeId="5723232344415441232323" value="2"/>
+                <characteristic name="I" characteristicTypeId="4923232344415441232323" value="4"/>
+                <characteristic name="A" characteristicTypeId="4123232344415441232323" value="3"/>
+                <characteristic name="LD" characteristicTypeId="4c4423232344415441232323" value="5"/>
+                <characteristic name="ArmourSave" characteristicTypeId="41726d6f75725361766523232344415441232323" value=""/>
+                <characteristic name="WardSave" characteristicTypeId="576172645361766523232344415441232323"/>
+                <characteristic name="MR" characteristicTypeId="4d5223232344415441232323"/>
+                <characteristic name="Type" characteristicTypeId="5479706523232344415441232323"/>
+                <characteristic name="Base Size" characteristicTypeId="b268-8d89-a887-0d3b"/>
+                <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e70a-485a-615c-2a02" type="min"/>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4ad9-3a1e-f473-94a2" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="50.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks/>
   <sharedSelectionEntries>
@@ -2934,6 +2871,20 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="0c52-3985-a75b-a690" name="Wildheart" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dfd2-e4ab-3fef-f6f5" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57ac-eb90-d0c1-9edd" type="max"/>
+      </constraints>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs/>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="18a3-37c4-4096-a2a9" name="Big Names" hidden="false" collective="false">
@@ -2984,7 +2935,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <rules/>
               <infoLinks/>
               <modifiers/>
-              <description>The Character gains Regeneration (5+) and Stupidity. In addition, the Character gains Multiple Wounds (2, Monstrous Infantry).</description>
+              <description>The Character gains Regeneration (4+) and Stupidity. In addition, the Character gains Multiple Wounds (2, Monstrous Infantry).</description>
             </rule>
           </rules>
           <infoLinks/>
@@ -2997,7 +2948,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7b67-73db-dfa6-3e46" name="Headhunter" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -3021,7 +2972,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c70e-60a8-b66f-a2e5" name="Spinesplitter" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -3081,6 +3032,41 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
             <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="fc05-d602-8416-50b1" name="Wildheart" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules>
+            <rule id="9c64-2181-21db-612e" name="Wildheart" hidden="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <description>Mammoth Hunters only
+A Mammoth Hunter with this Big Name loses the Not a Leader special rule. A single Mammoth Hunter in the army may be upgraded to a Battle Standard Bearer for 50 pts. The Core limit is reduced to minimum 20% . The army may not include Khagans, Bruisers, Mercenary
+Veterans, Bombardiers, or Thunder Cannons.</description>
+            </rule>
+          </rules>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52da-4ea6-e3a2-58ab" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebd6-b131-1afb-bfde" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0295-bb69-255f-3284" type="min"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="0507-ddf7-7f70-0a05" name="New EntryLink" hidden="false" targetId="0c52-3985-a75b-a690" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -3089,7 +3075,15 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="decrement" field="maxPoints" value="1">
+          <repeats>
+            <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="076a-9a11-4c9c-c4d7" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -3173,7 +3167,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6808-9997-d220-67e5" name="Banner of Discipline" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -3198,7 +3192,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="50.0"/>
+            <cost name="pts" costTypeId="points" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fce5-d7e6-e022-1924" name="Banner of Speed" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -3386,7 +3380,15 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="decrement" field="maxPoints" value="1">
+          <repeats>
+            <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f24a-8968-8a1f-7741" repeats="1"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -3464,7 +3466,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="70.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6f42-f23a-f06a-0e3d" name="Dispel Scroll" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -3575,7 +3577,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Activate during the opponent’s Magic Phase, after rolling for Magic Flux and Channeling. During this phase, all enemy Wizards within 24&quot; of the bearer will suffer a miscast on a roll that includes any double (regardless if the spell was successful or not, or if it was dispelled). Only double ‘6’ counts as an Overwhelming Power, and no more than one Miscast can be suffered per roll. Bound Spells are not affected."/>
+                    <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Activate during the opponent’s Magic Phase, after rolling for Magic Flux and Channeling. During this phase, all enemy Wizards within 24&quot; of the bearer will suffer a miscast on successful Casting rolls that include any double. This Miscast is resolved as if 1 more Magic Dice was used. Only double ‘6’ counts as an Overwhelming Power, and no more than one Miscast can be suffered per roll. Bound Spells are not affected."/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3743,7 +3745,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="60.0"/>
+                <cost name="pts" costTypeId="points" value="45.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6514-9542-706b-11b4" name="King Slayer" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -3771,7 +3773,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="60.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="46cc-65f8-815b-d927" name="Axe of Battle" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4066,7 +4068,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
                   <characteristics>
                     <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
                     <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value=""/>
-                    <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="If the wielder scores one or more hits in a single Round of Combat using this weapon against an enemy model with a Magical Weapon, roll a D6 before rolling to wound: On a roll of 4+, all Magical Weapons wielded by this enemy model are reverted to its mundane type for the rest of the game ."/>
+                    <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="If the wielder scores one or more hits in a single Round of Combat using this weapon against an enemy model with a Magical Weapon, roll a D6 before rolling to wound: On a roll of 3+, all Magical Weapons wielded by this enemy model are reverted to its mundane type for the rest of the game ."/>
                     <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Iron Fist"/>
                   </characteristics>
                 </profile>
@@ -4083,6 +4085,35 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="793d-dc43-54cc-d0d9" name="Jack&apos;s Pickaxe" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="e460-b6e7-9328-9c0b" name="Jack&apos;s Pickaxe" hidden="false" profileTypeId="576561706f6e23232344415441232323" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Melee"/>
+                    <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="+1"/>
+                    <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Against models with Towering Presence, attacks made with this weapon also gain Multiple Wounds (2) and count as having a Strength equal to the Toughness of their target when rolling to wound (ignore all other Strength modifiers except the ones granted by this weapon when attacking models with Towering Presence)."/>
+                    <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Hand Weapon"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eebe-4bef-dd9e-5fe7" type="max"/>
+                <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8cc-4ddc-71e3-7b79" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="70.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -4158,7 +4189,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="70.0"/>
+                <cost name="pts" costTypeId="points" value="80.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f8c1-b418-a58d-ba7d" name="Mithril Mail" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4266,7 +4297,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="35.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f1ec-9e3d-b31a-762e" name="Dragon Mantle - Foot only" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4468,7 +4499,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="120.0"/>
+                <cost name="pts" costTypeId="points" value="105.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8a0b-d8eb-529e-f8a1" name="Crown of Scorn" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4543,7 +4574,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="40.0"/>
+                <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e717-942e-9f44-4d0e" name="Potion of Strength" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4668,7 +4699,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="80.0"/>
+                <cost name="pts" costTypeId="points" value="70.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="18f3-81f6-e7ca-16fc" name="Aurochs Charm" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4782,7 +4813,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="90.0"/>
+                <cost name="pts" costTypeId="points" value="80.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="af4b-0e9b-4d94-514c" name="Dusk Stone" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4832,7 +4863,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="40.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="fc5d-6458-2631-deeb" name="Talisman of Greater Shielding" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4907,7 +4938,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="20.0"/>
+                <cost name="pts" costTypeId="points" value="15.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4ef1-54f7-1490-4a9e" name="Talisman of Shielding" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -4958,7 +4989,7 @@ Smash: Select a single model in the chosen unit and in base contact with the Sla
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="points" value="50.0"/>
+                <cost name="pts" costTypeId="points" value="40.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
