@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3" revision="33" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3" revision="34" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -79,7 +79,7 @@
             </modifier>
             <modifier type="decrement" field="minPoints" value="1">
               <repeats>
-                <repeat field="points" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fddf-ebf0-41db-186e" repeats="1" roundUp="false"/>
+                <repeat field="points" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fddf-ebf0-41db-186e" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -2199,7 +2199,7 @@
           <modifiers>
             <modifier type="decrement" field="minPoints" value="1">
               <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="ab11-df67-7a23-ee2e" repeats="1" roundUp="false"/>
+                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="ab11-df67-7a23-ee2e" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
