@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4acf-f14e-0391-b14c" name="BS2.0 Kingdom of Equitaine" book="Kingdom of Equitaine v1.2" revision="16" battleScribeVersion="2.00" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4acf-f14e-0391-b14c" name="BS2.0 Kingdom of Equitaine" book="Kingdom of Equitaine v1.2" revision="17" battleScribeVersion="2.00" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -16,7 +16,7 @@
           <modifiers>
             <modifier type="increment" field="4c4423232344415441232323" value="2">
               <repeats>
-                <repeat field="selections" scope="edc1-3f40-822e-2ea5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025e-565e-1949-df43" repeats="1"/>
+                <repeat field="selections" scope="edc1-3f40-822e-2ea5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025e-565e-1949-df43" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -612,7 +612,7 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="set" field="maxPoints" value="200.0">
+            <modifier type="set" field="maxPoints" value="200">
               <repeats/>
               <conditions>
                 <condition field="selections" scope="3ef0-1c57-18ac-63d0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="42f0-253e-a044-16b6" type="equalTo"/>
@@ -707,6 +707,34 @@
                 <cost name="pts" costTypeId="points" value="50.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="2d26-aafc-e430-1c95" name="May become a Wizard Master" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks>
+                <infoLink id="9279-d94b-0ac0-c437" hidden="false" targetId="f74d-b8e2-30ab-7878" type="rule">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers>
+                    <modifier type="set" field="name" value="Wizard Master">
+                      <repeats/>
+                      <conditions/>
+                      <conditionGroups/>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36f9-72fc-5e09-9fd2" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="70.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="f89e-d05a-8ce1-755d" name="Magic Path" hidden="false" collective="false">
@@ -784,9 +812,11 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="set" field="maxPoints" value="200.0">
+            <modifier type="set" field="maxPoints" value="200">
               <repeats/>
-              <conditions/>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d26-aafc-e430-1c95" type="equalTo"/>
+              </conditions>
               <conditionGroups/>
             </modifier>
           </modifiers>
@@ -1420,7 +1450,7 @@
       <modifiers>
         <modifier type="increment" field="minInRoster" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3afd-6823-c24f-dbaa" repeats="1"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3afd-6823-c24f-dbaa" repeats="1" roundUp="false"/>
           </repeats>
           <conditions/>
           <conditionGroups/>
@@ -1729,7 +1759,7 @@
           <modifiers>
             <modifier type="increment" field="points" value="2">
               <repeats>
-                <repeat field="selections" scope="77ba-8891-605e-2fcb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4da5-01c7-9d13-e643" repeats="1"/>
+                <repeat field="selections" scope="77ba-8891-605e-2fcb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4da5-01c7-9d13-e643" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -2172,7 +2202,7 @@
           <modifiers>
             <modifier type="increment" field="points" value="6">
               <repeats>
-                <repeat field="selections" scope="1281-72b5-1344-4003" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7860-616e-df2c-3143" repeats="1"/>
+                <repeat field="selections" scope="1281-72b5-1344-4003" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7860-616e-df2c-3143" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -2477,7 +2507,7 @@
               <modifiers>
                 <modifier type="increment" field="points" value="6.0">
                   <repeats>
-                    <repeat field="selections" scope="a1a5-e239-3b45-befa" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c05a-ceab-8f57-10a1" repeats="1"/>
+                    <repeat field="selections" scope="a1a5-e239-3b45-befa" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c05a-ceab-8f57-10a1" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions/>
                   <conditionGroups/>
@@ -2507,7 +2537,7 @@
               <modifiers>
                 <modifier type="increment" field="points" value="10.0">
                   <repeats>
-                    <repeat field="selections" scope="a1a5-e239-3b45-befa" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c05a-ceab-8f57-10a1" repeats="1"/>
+                    <repeat field="selections" scope="a1a5-e239-3b45-befa" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c05a-ceab-8f57-10a1" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions/>
                   <conditionGroups/>
@@ -3321,7 +3351,7 @@
               <modifiers>
                 <modifier type="increment" field="points" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="28b6-70bd-1d49-556f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb72-1ca4-2af1-cbbe" repeats="1"/>
+                    <repeat field="selections" scope="28b6-70bd-1d49-556f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb72-1ca4-2af1-cbbe" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions/>
                   <conditionGroups/>
@@ -3359,7 +3389,7 @@
               <modifiers>
                 <modifier type="increment" field="points" value="4.0">
                   <repeats>
-                    <repeat field="selections" scope="28b6-70bd-1d49-556f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb72-1ca4-2af1-cbbe" repeats="1"/>
+                    <repeat field="selections" scope="28b6-70bd-1d49-556f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb72-1ca4-2af1-cbbe" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions/>
                   <conditionGroups/>
@@ -3736,7 +3766,7 @@
               <modifiers>
                 <modifier type="increment" field="points" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="7720-2f7e-333d-a5e9" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49c6-3837-e7b1-6541" repeats="1"/>
+                    <repeat field="selections" scope="7720-2f7e-333d-a5e9" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49c6-3837-e7b1-6541" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions/>
                   <conditionGroups/>
@@ -4004,7 +4034,7 @@
               <modifiers>
                 <modifier type="increment" field="points" value="10.0">
                   <repeats>
-                    <repeat field="selections" scope="c34f-1c67-71cb-c84b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6294-2f3e-caf0-9438" repeats="1"/>
+                    <repeat field="selections" scope="c34f-1c67-71cb-c84b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6294-2f3e-caf0-9438" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions/>
                   <conditionGroups/>
@@ -4041,7 +4071,7 @@
                 </modifier>
                 <modifier type="increment" field="points" value="10">
                   <repeats>
-                    <repeat field="selections" scope="c34f-1c67-71cb-c84b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6294-2f3e-caf0-9438" repeats="1"/>
+                    <repeat field="selections" scope="c34f-1c67-71cb-c84b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6294-2f3e-caf0-9438" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions/>
                   <conditionGroups/>
@@ -4635,7 +4665,7 @@
               <modifiers>
                 <modifier type="increment" field="points" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="bc2a-b226-7261-98c6" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8cd-8d3f-8b17-e93d" repeats="1"/>
+                    <repeat field="selections" scope="bc2a-b226-7261-98c6" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8cd-8d3f-8b17-e93d" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions/>
                   <conditionGroups/>
@@ -4665,7 +4695,7 @@
               <modifiers>
                 <modifier type="increment" field="points" value="4.0">
                   <repeats>
-                    <repeat field="selections" scope="bc2a-b226-7261-98c6" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8cd-8d3f-8b17-e93d" repeats="1"/>
+                    <repeat field="selections" scope="bc2a-b226-7261-98c6" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8cd-8d3f-8b17-e93d" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions/>
                   <conditionGroups/>
