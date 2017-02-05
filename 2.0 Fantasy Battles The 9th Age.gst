@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3.4" revision="36" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3.4" revision="37" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -4793,6 +4793,1807 @@
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9033-7a36-779e-4d0a" name="HBE - Spear of the Blazing Dawn" book="HBE v.1.3.4" page="5" hidden="true" collective="false" type="upgrade">
+          <profiles>
+            <profile id="f736-800f-d18a-84fe" name="HBE - Spear of the Blazing Dawn" book="HBE v.1.3.4" page="5" hidden="false" profileTypeId="576561706f6e23232344415441232323" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="Close Combat"/>
+                <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="special"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Characters only. Attacks made with this weapon count as having a Strength equal to the Toughness of the model they are attacking +1 (regardless of modifiers). If the Strength would be higher without this rule, ignore it. When attacking a Monster or Ridden Monster, any successful rolls to-hit with this weapon will cause two hits instead of one."/>
+                <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Magical Spear"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="011d-0873-be56-a000" name="New InfoLink" hidden="false" targetId="3b7c-3961-69c1-c1a0" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e197-debd-1ca1-567d" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b7b4-f6cf-f38a-69fa" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cdef-2380-e713-7dfc" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f2ea-5f61-8549-a620" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="60f7-8aab-f4ea-d439" name="HBE - Great Bow of Elu" book="HBE v.1.3.4" page="5" hidden="true" collective="false" type="upgrade">
+          <profiles>
+            <profile id="f29a-4694-ee9a-f7fb" name="HBE - Great Bow of Elu" book="HBE v.1.3.4" page="5" hidden="false" profileTypeId="576561706f6e23232344415441232323" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Range" characteristicTypeId="52616e676523232344415441232323" value="30&apos;&apos;"/>
+                <characteristic name="Strength" characteristicTypeId="537472656e67746823232344415441232323" value="As user +1"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Multiple Shots (3), Armour Piercing (1)"/>
+                <characteristic name="Type" characteristicTypeId="29462612-b0ed-72ab-53b7-0db0a426202a" value="Magical Longbow"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="2711-9ec5-0b32-72a6" name="New InfoLink" hidden="false" targetId="8f3a-2ef4-2ff9-1bb5" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="ab3d-4ea9-79fe-cd2b" name="New InfoLink" hidden="false" targetId="ca8e-9417-40fc-d8f4" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="c6ec-545c-ec50-7883" name="New InfoLink" hidden="false" targetId="3b7c-3961-69c1-c1a0" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e197-debd-1ca1-567d" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b7b4-f6cf-f38a-69fa" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="339e-bc45-d0ab-7297" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4aec-7595-01b3-036a" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="70.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="be13-544a-62c2-e6db" name="Magical Armour" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5d47-6df9-6058-c9c0" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="7377-c181-f013-3a7f" name="Armour of Destiny" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="a0c6-55cb-f6e0-3361" name="Armour of Destiny" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="5+"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Infantry, Cavalry and War Beasts only. The wearer gains a Ward Save (4+)."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="Magical Heavy Armour"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="ff78-0e70-aff3-3e12" name="New InfoLink" hidden="false" targetId="5798-4176-b70b-7067" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="75ef-4db7-bced-ecec" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1acf-d81b-1fbc-e7c9" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="90.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4883-8353-cbee-83c1" name="Bluffer&apos;s Helm" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="112a-2451-dded-9754" name="Bluffer&apos;s Helm" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="+1"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Cannot be taken by models with Towering Presence. Successful to-wound rolls against the wearer must be rerolled."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="None"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="217f-cf54-3ed2-6967" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f07a-8208-63d2-1dc8" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="80.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e782-6385-b244-52c4" name="Mithril Mail" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="5c10-58ed-cda5-2424" name="Mithril Mail" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="2+"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="This Armour Save cannot be improved by any means."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="Magical Heavy Armour"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0461-b040-324d-000c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cd15-7ce1-e532-fd09" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="70.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c7a2-55d3-b6cc-6178" name="Glittering Cuirass" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="8ba2-25bd-38c1-fef1" name="Glittering Cuirass" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="5+"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="The wearer gains Distracting."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="Magical Heavy Armour"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="5524-8bd5-004d-6bb5" name="New InfoLink" hidden="false" targetId="f1d1-04ea-b627-1714" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ad1b-220b-e0f4-42ee" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8b5a-d955-390c-e41a" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2e41-2586-aa0a-ba17" name="Armour of Fortune" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="d580-8cf8-4432-5cbc" name="Armour of Fortune" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="5+"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="The wearer gains a Ward Save (5+)."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="Magical Heavy Armour"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="e0f9-032b-d0bf-1b45" name="New InfoLink" hidden="false" targetId="5798-4176-b70b-7067" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1995-c8c6-2706-37ec" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2017-3631-39e8-9e27" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0776-b1e4-423b-afd6" name="Dragon Mantle" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="3de9-27a8-0f1e-a531" name="Dragon Mantle" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value=""/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Models on foot only. The wearer gains Innate Defence (5+)."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="None"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="357b-8700-fb16-9c0b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e47f-c0b9-872c-18ea" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a484-bb05-d07d-edc4" name="Bronze Breastplate" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="eb13-8f9a-5bac-633b" name="Bronze Breastplate" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="5+"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="One use only. Whenever the wearer&apos;s model suffers a hit, the item can be activated. For the duration of the Phase, the wearer&apos;s model gains a 1+ Armour Save. If the wearer’s model has Towering Presence, it gains a 2+ Armour Save instead."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="Magical Heavy Armour"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1633-3b7b-9de6-cca5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="db8a-663c-c67c-e80c" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9689-13b5-4ea3-1ab1" name="Dragonscale Helm" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="c65c-b108-6c28-5527" name="Dragonscale Helm" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="+1"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="The wearer gains Fireborn."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="None"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="9257-fa7d-1fff-69b2" name="New InfoLink" hidden="false" targetId="7f2a-d19f-6364-e179" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2a46-d916-dc01-328d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="738c-abfc-99f8-52a2" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a26e-4e32-d73b-049e" name="Hardened Shield" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="bad0-4989-566d-3080" name="Hardened Shield" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="+2"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="The bearer gains an additional +1 to its Armour Save (for a total of +2) while using the shield . The bearer attacks with normal Close Combat Attacks at -3 Initiative (to a minimum of 1)."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="Magical Shield"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8151-65c1-19d3-fb37" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c980-c2c5-d7d7-9d57" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e2df-58ed-0a30-1649" name="Lucky Shield" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="f212-207e-cc61-25b8" name="Lucky Shield" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="+1"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="One use only. Ignore the first hit the bearer&apos;s model suffers while using the shield . If the bearer is hit by several simultaneous attacks, the bearer chooses which attack to ignore."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="Magical Shield"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a7e8-d008-9580-d847" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0c2b-cc02-beb3-feae" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c376-4485-b301-0f7d" name="HBE - Daemon Hunter&apos;s Helm" book="HBE v.1.3.4" page="5" hidden="true" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1d32-be49-c0c7-2ba8" name="HBE - Daemon Hunter&apos;s Helm" book="HBE v.1.3.4" page="5" hidden="false" profileTypeId="41726d6f757223232344415441232323" profileTypeName="Armour">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Saving Throw modifier" characteristicTypeId="536176696e67205468726f77206d6f64696669657223232344415441232323" value="+1"/>
+                <characteristic name="Special Rules" characteristicTypeId="5370656369616c2052756c657323232344415441232323" value="Cannot be taken by models with Towering Presences, except models mounted on Griffon.
+The wearer gains Ward Save (3+) against Magical Attacks."/>
+                <characteristic name="Type" characteristicTypeId="94cf20a4-1493-f0f7-cc00-c1a4c796e7cd" value="None"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="b367-3a24-509d-9c43" name="New InfoLink" hidden="false" targetId="5798-4176-b70b-7067" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e197-debd-1ca1-567d" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b7b4-f6cf-f38a-69fa" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="19d6-66ef-f905-4b70" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="aad8-d69f-491a-41bb" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="80.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="7068-7e8a-ff0d-a25d" name="Talismans" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e7cd-8e0d-08be-6818" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="4c55-4351-4407-4038" name="Talisman of Supreme Shielding" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="55c8-cfc4-dbad-9633" name="Talisman of Supreme Shielding" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="54616c69736d616e23232344415441232323" profileTypeName="Talisman">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Protection" characteristicTypeId="50726f74656374696f6e23232344415441232323" value="The bearer gains a Ward Save (4+)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="3a6a-66d9-e854-aeb5" name="New InfoLink" hidden="false" targetId="5798-4176-b70b-7067" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2b0c-48a8-ebd8-545f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="82a8-cc6f-0f21-f027" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="100.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="11bf-a246-c426-5d9c" name="Talisman of Greater Shielding" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="7527-5f54-3926-5004" name="Talisman of Greater Shielding" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="54616c69736d616e23232344415441232323" profileTypeName="Talisman">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Protection" characteristicTypeId="50726f74656374696f6e23232344415441232323" value="The bearer gains a Ward Save (5+)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="a81f-3dc9-8810-4fa1" name="New InfoLink" hidden="false" targetId="5798-4176-b70b-7067" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c5c1-fc8f-86bd-6ecf" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="080d-4fde-f28a-7b72" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cd25-748b-6f4e-f44a" name="Talisman of Shielding" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="8527-c342-1b24-537d" name="Talisman of Shielding" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="54616c69736d616e23232344415441232323" profileTypeName="Talisman">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Protection" characteristicTypeId="50726f74656374696f6e23232344415441232323" value="The bearer gains a Ward Save (6+)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="7a56-0ef3-88ea-6373" name="New InfoLink" hidden="false" targetId="5798-4176-b70b-7067" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d33c-b3a2-f221-dfbd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8a2b-6e00-22b6-e605" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="26f5-074e-a48b-660c" name="Obsidian Nullstone" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="9136-46b6-5448-bc74" name="Obisidian Nullstone" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="54616c69736d616e23232344415441232323" profileTypeName="Talisman">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Protection" characteristicTypeId="50726f74656374696f6e23232344415441232323" value="The bearer gains Magic Resistance (3)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="316f-6f71-2126-7b3e" name="New InfoLink" hidden="false" targetId="eef2-1c8e-53fc-e1e7" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a3bf-fcb2-bed4-a3e5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1247-370c-93b1-ea87" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="80.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e081-2276-8846-da6a" name="Obsidian Rock" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="77db-e3ac-7cca-05ee" name="Obisidian Rock" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="54616c69736d616e23232344415441232323" profileTypeName="Talisman">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Protection" characteristicTypeId="50726f74656374696f6e23232344415441232323" value="The bearer gains Magic Resistance (2)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="03fb-38c9-7f06-2c44" name="New InfoLink" hidden="false" targetId="eef2-1c8e-53fc-e1e7" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="be8d-dc34-8669-4e02" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0a97-f18a-4b5a-e4ff" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b65d-939f-b52a-f50c" name="Sprout of Rebirth" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="43c1-5b9b-6447-1a9a" name="Sprout of Rebirth" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="54616c69736d616e23232344415441232323" profileTypeName="Talisman">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Protection" characteristicTypeId="50726f74656374696f6e23232344415441232323" value="The bearer gains a Regeneration (4+)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="72f3-4433-bd61-7476" name="New InfoLink" hidden="false" targetId="72dc-ec0a-9c68-5f94" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="567e-4c52-425f-cd17" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b141-733a-de37-83c5" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="80.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="390b-ac2b-ddbf-2857" name="Dusk Stone" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="5a0c-8495-a3ba-736d" name="Dusk Stone" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="54616c69736d616e23232344415441232323" profileTypeName="Talisman">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Protection" characteristicTypeId="50726f74656374696f6e23232344415441232323" value="The bearer may choose to reroll its failed Armour Saves. If it does, it cannot take Ward or Regeneration Saves."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="833e-ac35-af34-11b4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e51b-3215-7941-88c5" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4f22-8531-ffa9-34d9" name="Dragonfire Gem" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="359d-6b84-e0fd-637b" name="Dragonfire Gem" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="54616c69736d616e23232344415441232323" profileTypeName="Talisman">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Protection" characteristicTypeId="50726f74656374696f6e23232344415441232323" value="The bearer gains Fireborn."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="6b0f-a2ea-4c0d-27bd" name="New InfoLink" hidden="false" targetId="7f2a-d19f-6364-e179" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1a6c-0200-2438-83a6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="21d6-cd15-a6f4-62ba" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ade4-a9ad-2c1d-5fd1" name="Lucky Charm" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="b031-b876-2cc9-4602" name="Lucky Charm" book="T9A Rules v.1.3.4" page="105" hidden="false" profileTypeId="54616c69736d616e23232344415441232323" profileTypeName="Talisman">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Protection" characteristicTypeId="50726f74656374696f6e23232344415441232323" value="One use only. May be activated when the bearer&apos;s model fails an Armour Save. That failed Armour Save may be rerolled."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3dab-7b60-7d71-2e7d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="98eb-1589-e2c5-8b72" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7b7e-5200-0281-72b4" name="HBE - Gleaming Robe" book="HBE v.1.3.4" page="5" hidden="true" collective="false" type="upgrade">
+          <profiles>
+            <profile id="d72b-4c87-c337-e323" name="HBE - Gleaming Robe" book="HBE v.1.3.4" page="5" hidden="false" profileTypeId="54616c69736d616e23232344415441232323" profileTypeName="Talisman">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Protection" characteristicTypeId="50726f74656374696f6e23232344415441232323" value="Mage on foot only. The wearer gains Ethereal. The model cannot make attacks, including special attacks."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="c7be-92d0-475f-4f1b" name="New InfoLink" hidden="false" targetId="bfd4-3fd6-331c-3a77" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e197-debd-1ca1-567d" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b7b4-f6cf-f38a-69fa" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="67e6-479d-b0fe-5a1e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="73f7-2183-0258-0123" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="90.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="455e-e64d-c83a-cec2" name="Enchanted Items" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4cb7-57e3-3f2e-9dcf" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="0357-98a9-9a0b-fff2" name="Wizard&apos;s Hood" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="58f9-02dd-d25f-da25" name="Wizard&apos;s Hood" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="Models on foot only. The wearer is a Wizard Apprentice with 2 Learned Spells (regardless if it was a Wizard before). Instead of selecting a Path as normal, the wearer uses a randomly selected Path of Magic. Randomize between all Paths available to any model from the same Armybook, excluding Bound Spells."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b479-f1a2-67fe-7d9f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1d1e-e6ce-98aa-3c1b" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="105.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6464-caa0-2d22-ef7e" name="Crown of Autocracy" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="a47d-c9b0-7e4e-631c" name="Crown of Autocracy" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="The bearer gains +1 Leadership. A Wizard cannot use this modifier to increase its Leadership above 9."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5f07-2bbd-9229-99ab" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e974-f1a8-f17d-d5c6" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="70.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="251a-b844-41f5-930d" name="Potion of Strength" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="dadf-32e6-bd0d-b677" name="Potion of Strength" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. May be activated at the start of any phase or Round of Combat. Until the end of the Player Turn, the bearer gains +2 Strength."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1d59-8381-af81-a58d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="56c0-d3d5-af81-fbb5" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ff0f-e110-40cb-2c46" name="Ring of Fire" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="e74c-4af3-d8e6-d38f" name="Ring of Fire" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="The bearer can cast Pyroclastic Flow from Pyromancy as a Bound Spell (Power Level 3)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0770-4673-6a60-7d97" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="57e6-7321-b565-4c17" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d463-8684-4df7-6207" name="Divine Icon" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="a872-cfa4-5bd4-066a" name="Divine Icon" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="The bearer&apos;s model gains Divine Attacks."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="b8ec-926a-0e4f-7f70" name="New InfoLink" hidden="false" targetId="fa05-adf6-8000-3912" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b31b-cc1e-8f70-ab73" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9326-efa6-7291-42d3" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b07a-4376-b2f6-933c" name="Gem of Fortune" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="492d-cc9f-7706-a99a" name="Gem of Fortune" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="Successful to-wound rolls of &apos;6&apos; from Ranged Attacks against the bearer&apos;s unit must be rerolled, unless the hit was distributed onto a model with Towering Presence."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="750d-da69-3d6c-3aa6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f3ef-8456-4479-4035" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b840-3e2f-861e-5376" name="Charm of Cursed Iron" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="3d3f-a113-e03d-4e2f" name="Charm of Cursed Iron" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="The bearer and its unit gain a Ward Save (5+) against Wounds caused by Artillery Weapons."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="7d23-7aa8-e0f7-b9c9" name="New InfoLink" hidden="false" targetId="5798-4176-b70b-7067" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bce8-a113-9556-89c9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6ef0-742f-89ba-b037" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4300-e226-6a48-fb2e" name="Crown of Scorn" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2142-6761-a261-b15b" name="Crown of Scorn" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Instead of making a dispel roll, you may use this item. The spell is automatically dispelled. In an Army List that includes a model bearing the Crown of Scorn, friendly models cannot cast Spells (including Bound Spells) nor can any friendly models carry Arcane Items."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3b85-8b37-d7a9-b9ba" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9213-a522-4b8e-5958" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="77a8-5792-66d6-705b" name="Potion of Swiftness" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1ee0-650c-b627-3589" name="Potion of Swiftness" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. May be activated at the start of any phase or Round of Combat. Until the end of the Player Turn, the bearer gains +3 Initiative."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f188-35a9-5988-6f90" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e930-55c7-98a2-885b" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cb6b-0ede-2d4d-1e72" name="HBE - Cloak of the Stars" book="HBE v.1.3.4" page="5" hidden="true" collective="false" type="upgrade">
+          <profiles>
+            <profile id="316d-55fa-6fca-1db4" name="HBE - Cloak of the Stars" book="HBE v.1.3.4" page="5" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="Spells targeting the bearer’s unit suffer a -2 modifier to their Casting roll."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e197-debd-1ca1-567d" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b7b4-f6cf-f38a-69fa" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="eaf9-add7-f46a-1e6f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d31f-0ab0-66f7-f86e" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1af8-6045-0b96-d40d" name="HBE - Shard of Cenyrn" book="HBE v.1.3.4" page="5" hidden="true" collective="false" type="upgrade">
+          <profiles>
+            <profile id="a70c-f2eb-be82-173d" name="HBE - Shard of Cenyrn" book="HBE v.1.3.4" page="5" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Use at the start of any Close Combat Phase. Effects last until end of the Close Combat Phase. After rolling to hit, the bearer may choose to reroll all its to-hit dice. After rolling to wound, the bearer may choose to reroll all its to-wound dice. Models wounded by the bearer must reroll all successful saves of any kind from wounds inflicted by the bearer. At the end of the phase the bearer suffers 1 hit wound with no saves of any kind allowed and Multiple Wounds (2, Ridden Monster)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e197-debd-1ca1-567d" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b7b4-f6cf-f38a-69fa" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1bda-5b63-5480-a3b9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="63a2-f17c-050b-eda0" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="20.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="05df-78a2-0c4c-ddd9" name="Arcane Items" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5dc2-da47-ad92-b835" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="ead3-d359-3e25-ac49" name="Book of Arcane Power" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="7189-7f1f-d99f-27e9" name="Book of Arcane Power" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="The bearer gains a +1 casting modifier to casting and dispel rolls."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4f87-cbb8-29ef-2072" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f035-971c-2d4b-b0f2" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="100.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8259-5060-5233-dee0" name="Dispel Scroll" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="4552-15c9-925d-2db4" name="Dispel Scroll" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Instead of making a dispel roll, you may use this scroll. The spell is automatically dispelled."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="18df-545e-7efe-fb04" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="80ea-c306-9a53-6043" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="100.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="68f3-a994-268b-4680" name="Essence of a Free Mind" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="8bbc-6232-1930-c43c" name="Essence of a Free Mind" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="The Wizard may select up to two Paths on their Army List instead of one (from the ones normally available to it). Select which of the two Paths to use when generating spells."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="62cb-55b0-7c37-271b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d124-36d6-c102-f9bf" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="acc8-10ac-6a85-f536" name="Wand of Stability" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1f2a-d851-1e29-d209" name="Wand of Stability" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. The bearer may add a free additional Magic Dice to one of its dispel rolls, after seeing the dispel roll."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="78dd-da01-331a-f5c6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d62a-5b97-d5ea-5a98" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c314-d249-a6c4-0e17" name="Shielding Scroll" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="c469-c6e5-bb81-be34" name="Shielding Scroll" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. Instead of making a dispel roll, you may use the scroll. All models affected by the spell gain a Ward Save (4+) against the spell."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="9723-a0ee-5a79-47dc" name="New InfoLink" hidden="false" targetId="5798-4176-b70b-7067" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4262-08ae-4877-ee73" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="26da-bc7e-0bbc-3f9a" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1d15-2553-b478-e2fe" name="Sceptre of Power" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="8cdd-d3ed-c92a-2082" name="Sceptre of Power" book="T9A Rules v.1.3.4" page="106" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="One use only. The bearer may add a single Magic Dice from its Dice Pool to a casting roll, after seeing the casting roll. Note that this cannot exceed the limit of max 5 Magic Dice used to cast spells."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="18c7-c1ba-5d65-5be9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9736-d20c-2321-81a7" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="53bd-60ec-7a61-6fed" name="HBE - Amethyst Crystal" book="HBE v.1.3.4" page="5" hidden="true" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2c1f-1da5-4f84-87ce" name="HBE - Amethyst Crystal" book="HBE v.1.3.4" page="5" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="In each of the opponent’s Magic Phases, after rolling Magic Flux, the bearer may remove 1 Magic Dice from the opponent&apos;s Magic Dice pool and add +1 for its side’s Channel Attempt."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e197-debd-1ca1-567d" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b7b4-f6cf-f38a-69fa" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8714-3072-d16f-6481" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9fcc-0218-a400-618b" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="110.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="de8d-2d85-5ac5-8512" name="HBE - Book of Meladys" book="HBE v.1.3.4" page="5" hidden="true" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1318-8aaa-9215-af46" name="HBE - Book of Meladys" book="HBE v.1.3.4" page="5" hidden="false" profileTypeId="417263616e6520616e6420456e6368616e746564204974656d23232344415441232323" profileTypeName="Arcane and Enchanted Item">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magic Property" characteristicTypeId="4d616769632050726f706572747923232344415441232323" value="Once per Magic Phase, the bearer may reroll a single Magic Dice when making a casting roll provided the Magic Dice was not a natural &apos;6&apos;."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e197-debd-1ca1-567d" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b7b4-f6cf-f38a-69fa" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6d82-24fb-22df-11f3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="03f0-74b0-c03d-8c0a" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="90.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="0c39-7bc0-5280-8907" name="Magical Standards" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="004a-3a26-97cc-5f08" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="34b5-191e-ef19-b4b7" name="Rending Banner" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="f4b1-d195-0ba2-9df5" name="Rending Banner" book="T9A Rules v.1.3.4" page="107" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="All non-character models in the bearer’s unit gain Armour Piercing (1)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="e9c3-9508-c0e8-202a" name="New InfoLink" hidden="false" targetId="3b7c-3961-69c1-c1a0" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="82ca-d63a-616d-e49b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="126c-fe86-5a9c-b244" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="70.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0758-0fe3-ea52-9929" name="Stalker&apos;s Standard" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="9f69-0413-a1e4-61d2" name="Stalker&apos;s Standard" book="T9A Rules v.1.3.4" page="107" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer’s unit gains Strider and Swiftstride."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="aa89-106d-1670-6a85" name="New InfoLink" hidden="false" targetId="31e2-1a5f-05ef-78fb" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+            <infoLink id="3f85-378c-0f1a-b5ec" name="New InfoLink" hidden="false" targetId="996f-5aac-9d77-d5b2" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d1fc-a70c-558d-2b3a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f395-292f-9ae6-745f" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="acb7-847d-274c-fc03" name="Aether Icon" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="da21-32f9-2405-52da" name="Aether Icon" book="T9A Rules v.1.3.4" page="107" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer can make Dispel Attempts as if it was a Wizard Master."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bec4-ab3b-7422-69a8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b477-ac06-658b-6ebc" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="55.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8d18-b5d1-94c4-c185" name="Banner of Speed" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="7f81-67bc-1ef1-e1fa" name="Banner of Speed" book="T9A Rules v.1.3.4" page="107" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer&apos;s unit gains +1 Movement."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="da8e-771b-b0b2-e7dd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7fba-e139-a158-9b09" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="31f4-9d11-1855-2472" name="Flaming Standard" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="18d9-7e07-22b6-f13e" name="Flaming Standard" book="T9A Rules v.1.3.4" page="107" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="At the start of each Round of Combat, or before shooting with the bearer’s unit, the banner may be activated. If it is, the bearer&apos;s unit’s non-special Close Combat and Shooting Attacks gains Flaming Attacks until the end of the phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="448b-4c41-31a8-8221" name="New InfoLink" hidden="false" targetId="fa3f-22b9-679c-966b" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5e4e-0ca8-db92-fbb1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1b1a-f428-bacb-b433" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="45.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="83d3-dc3d-285e-0858" name="Banner of Discipline" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="bdc8-66b2-eb96-771b" name="Banner of Discipline" book="T9A Rules v.1.3.4" page="107" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer&apos;s unit automatically passes all Panic Tests."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="294c-e312-20e6-a392" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9a30-1bd5-6de0-f840" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b811-a30b-6294-a7ff" name="War Standard" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="32af-34a1-b6d0-a23c" name="War Standard" book="T9A Rules v.1.3.4" page="107" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer&apos;s unit adds +1 to the Combat Score of any combat they are involved in."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4a0a-0328-0cf9-5229" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b601-ba3c-c677-1ee2" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ca13-36a5-58a5-4f26" name="Icon of the Relentless Company" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="abe0-a08d-5600-73ac" name="Icon of the Relentless Company" book="T9A Rules v.1.3.4" page="107" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="One use only. Activate at the start of any of your Remaining Moves sub-phases. Infantry models in the bearer&apos;s unit can triple its Movement when Marching instead of doubling it this turn. This March Move cannot be longer than 15&quot; and cannot be used in Game Turn 1 if the unit has used Vanguard or Scout."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="48dd-1d5f-a28e-d67b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ff4d-2e3e-2c37-df22" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6254-d289-e40f-92cb" name="Gleaming Icon" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="3f3e-0d2b-8542-b6bd" name="Gleaming Icon" book="T9A Rules v.1.3.4" page="107" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="One use only. Must be activated the first time the bearer&apos;s unit fails a Leadership Test. The unit may reroll the failed test."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d4cf-ac5d-1cd6-fb91" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ab29-77b9-f3ee-8242" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c91e-683d-8ed4-d055" name="HBE - Banner of Becalming" book="HBE v.1.3.4" page="5" hidden="true" collective="false" type="upgrade">
+          <profiles>
+            <profile id="025c-c8ae-58c3-3995" name="HBE - Banner of Becalming" book="HBE v.1.3.4" page="5" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer gains Channel. At the Start of each enemy Magic Phase select one friendly Wizard within 12&quot; of the bearer. That Wizard gains a +1 modifier to its dispel rolls during this Magic Phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="a954-18b4-d921-d3c7" name="New InfoLink" hidden="false" targetId="6ff3-c1f9-102e-50a9" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e197-debd-1ca1-567d" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b7b4-f6cf-f38a-69fa" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ff36-19ac-9a1c-5b21" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f648-25e8-3362-cc59" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="70.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1b93-2d95-e83c-fe8f" name="HBE - War Banner of Ryma" book="HBE v.1.3.4" page="5" hidden="true" collective="false" type="upgrade">
+          <profiles>
+            <profile id="6976-b93d-3aff-95e1" name="HBE - War Banner of Ryma" book="HBE v.1.3.4" page="5" hidden="false" profileTypeId="4d61676963205374616e6461726423232344415441232323" profileTypeName="Magic Banner">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Magical Emanation" characteristicTypeId="4d61676963616c20456d696e6174696f6e23232344415441232323" value="The bearer’s unit gains Thunderous Charge. Mounts are not affected."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="4e11-2399-8d27-5a43" name="New InfoLink" hidden="false" targetId="adaa-9e77-3b12-f481" type="rule">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e197-debd-1ca1-567d" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b7b4-f6cf-f38a-69fa" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5f3e-7559-fdc2-f71e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a282-4724-7e3d-b7b4" type="max"/>
+          </constraints>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
