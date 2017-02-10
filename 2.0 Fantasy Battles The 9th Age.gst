@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3.4" revision="37" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3.4" revision="38" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -1805,7 +1805,7 @@
             </modifier>
             <modifier type="decrement" field="minPoints" value="1">
               <repeats>
-                <repeat field="points" scope="7b5c-38ca-1b41-d9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8e2b-6d0a-7212-2921" repeats="1" roundUp="false"/>
+                <repeat field="points" scope="7b5c-38ca-1b41-d9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8e2b-6d0a-7212-2921" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
