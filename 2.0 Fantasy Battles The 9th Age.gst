@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3.4" revision="40" battleScribeVersion="2.00" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3.4" revision="41" battleScribeVersion="2.01" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -57,6 +57,309 @@
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <categoryEntries>
+    <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="9a16-56b8-62e7-ec17" name="Jungle Guerilla" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="2ded-7bec-fb35-3d30" name="Thunder Lizards" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="1f39-4f7b-28ff-6635" name="Death from Above" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="18bf-71e6-1213-7ac2" name="Minions of Change" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="c8a6-cfb2-9aa2-ede3" name="Minions of Lust" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="2fcd-c9a4-d359-1af7" name="Minions of Pestilence" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="fd6b-3bf8-de65-a269" name="Minions of Wrath" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="15d5-3175-1b52-43e" name="Sunna&apos;s Fury" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="7d4e-7b04-8085-e1b0" name="Character Mounts" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="bc18-954b-92e9-a105" name="Imperial Auxillaries" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="66da-a929-a1d8-abbb" name="Built and Bred" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="db85-163f-7632-dc0a" name="Ancient Ordnance" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="fc27-3d0e-db34-88c3" name="Mason&apos;s Menagerie" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="56e3-a093-42f0-3b63" name="Entombed" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="7db8-be6d-5ac4-de76" name="The Suffering" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="977a-a2ee-dee5-ab6f" name="Swift Death" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="061d-2321-1dd6-6069" name="Terrors of the Wild" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="8e1c-b88b-a377-4dac" name="Ambush Predators" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="3071-dbf8-42cb-adc7" name="Raiders" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="b9db-a242-5a5f-5e7c" name="Destroyers" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="59cc-93d0-793f-0688" name="The Menagerie" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="f7b0-a716-17ca-5f52" name="Clan&apos;s Thunder" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="4d62-c562-2e62-1a8d" name="Engines of War" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="2e39-4910-2497-b1b8" name="Imperial Armoury" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="bcfd-082e-de16-cae7" name="Peacekeepers" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="4962-954a-5036-0f19" name="Elder Service" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="14e9-cf33-7ff6-6810" name="Ancient Allies" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="1fe5-c420-cf88-3219" name="Hail of the Gods" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="42c4-8745-abde-c5ad" name="Barrage" book="   " hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="f0e8-dacf-9d1d-3597" name="Bound and Binders" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="a718-dafe-7e1a-7cc7" name="Airbourne Gallantry" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="470f-45f0-c1d2-0f7d" name="Powder Keg" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="fbe4-637b-88f0-f5d6" name="Chained Beasts" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="034d-7898-19dd-f072" name="Big N Nasty" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="c87e-b1c8-d458-46f6" name="Unseen Arrows" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="7b91-8fed-e2d1-f4c7" name="Fleet of Foot" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="2a1f-2098-d28e-178e" name="Forest Giants" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="e963-1dcd-01a7-08c3" name="Tunnel Gunners" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="9a05-481c-5a20-1658" name="Empowered" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="4fd0-48e9-04ff-c26f" name="Dark God&apos;s Might" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+  </categoryEntries>
   <forceEntries>
     <forceEntry id="5374616e6461726423232344415441232323" name="Saurian Ancients" hidden="false">
       <profiles/>
@@ -64,8 +367,9 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="5374616e6461726423232344415441232323-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -77,37 +381,23 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fddf-ebf0-41db-186e" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="5374616e6461726423232344415441232323-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+        </categoryLink>
+        <categoryLink id="5374616e6461726423232344415441232323-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="6e72-b0c8-a146-d87b" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -115,30 +405,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="5374616e6461726423232344415441232323" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9a16-56b8-62e7-ec17" name="Jungle Guerilla" hidden="false">
+        </categoryLink>
+        <categoryLink id="5374616e6461726423232344415441232323-9a16-56b8-62e7-ec17" name="Jungle Guerilla" hidden="false" targetId="9a16-56b8-62e7-ec17" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="6e72-b0c8-a146-d87b" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -146,19 +422,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fddf-ebf0-41db-186e" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Thunder Lizards" hidden="false">
+        </categoryLink>
+        <categoryLink id="5374616e6461726423232344415441232323-2ded-7bec-fb35-3d30" name="Thunder Lizards" hidden="false" targetId="2ded-7bec-fb35-3d30" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -170,41 +439,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="5374616e6461726423232344415441232323" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6e72-b0c8-a146-d87b" name="Characters + Jungle Guerilla" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="fddf-ebf0-41db-186e" name="Core + Jungle Guerilla" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="8e83-c894-da84-f6b7" name="Orcs and Goblins" hidden="false">
       <profiles/>
@@ -212,8 +452,9 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="8e83-c894-da84-f6b7-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -225,19 +466,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="8e83-c894-da84-f6b7" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="8e83-c894-da84-f6b7-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -253,15 +487,15 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6eab-6fb6-409a-ba1d" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="8e83-c894-da84-f6b7-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-6635" name="Death from Above" hidden="false">
+        </categoryLink>
+        <categoryLink id="8e83-c894-da84-f6b7-1f39-4f7b-28ff-6635" name="Death from Above" hidden="false" targetId="1f39-4f7b-28ff-6635" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -277,8 +511,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b0f5-f63b-cf56-7311" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Big&apos;N Nasty" hidden="false">
+        </categoryLink>
+        <categoryLink id="8e83-c894-da84-f6b7-2ded-7bec-fb35-3d30" name="Big N Nasty" hidden="false" targetId="034d-7898-19dd-f072" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -290,270 +524,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="selections" scope="8e83-c894-da84-f6b7" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="d999-280a-0c26-008a" value="4">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d999-280a-0c26-008a" type="max"/>
-          </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
-    </forceEntry>
-    <forceEntry id="c2a5-60c6-4742-f507" name="Beast Herds" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="4">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a5f4-56ef-5522-d37e" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b7f-68d6-9ce4-3b94" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="minPoints" value="2">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="43ab-691c-d4b7-d229" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Terrors of the Wild" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="4">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c8b-8ffe-bfaa-550f" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b7f-68d6-9ce4-3b94" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="15d5-3175-1b52-43ec" name="Ambush Predators" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="a5f4-56ef-5522-d37e" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="43ab-691c-d4b7-d229" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1bd7-15cf-6533-8a0b" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1c8b-8ffe-bfaa-550f" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="maxPercentage" value="6">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="43ab-691c-d4b7-d229" name="Ambushing Core" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="6">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="1bd7-15cf-6533-8a0b" name="Ambushing Special" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="6">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="1c8b-8ffe-bfaa-550f" name="Ambushing Terrors of the Wild" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="4">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="a5f4-56ef-5522-d37e" name="Ambushing Characters" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="4">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="1b7f-68d6-9ce4-3b94" name="Character Terrors of the Wild" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="4">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="d265-1f62-94f9-f629" name="Daemon Legion (Monotheistic)" hidden="false">
       <profiles/>
@@ -561,19 +537,13 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="d265-1f62-94f9-f629-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="e4eb-ed79-ec87-9bbe" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -585,8 +555,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="d265-1f62-94f9-f629-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -602,19 +572,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Dark Gods&apos; Might" hidden="false">
+        </categoryLink>
+        <categoryLink id="d265-1f62-94f9-f629-2ded-7bec-fb35-3d30" name="Dark God&apos;s Might" hidden="false" targetId="4fd0-48e9-04ff-c26f" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="e4eb-ed79-ec87-9bbe" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -626,23 +589,15 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Minions" hidden="false">
+        </categoryLink>
+        <categoryLink id="d265-1f62-94f9-f629-6a35-8450-fd55-ec4c" name="Minions" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="e4eb-ed79-ec87-9bbe" name="Dark Gods&apos; Might Character " hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="cc85-5e77-a45a-6435" name="Daemon Legion (Polytheistic)" hidden="false">
       <profiles/>
@@ -650,75 +605,13 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="cc85-5e77-a45a-6435-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="f344-a19f-7f34-3420" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="6073-04dc-edc5-6dc7" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="73ff-a44a-f9d8-a499" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="4acc-e270-b807-2f93" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="f777-e511-bac7-9b4f" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="82b9-9e19-9bc5-faaa" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="683d-bdee-110a-66d1" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="ab79-55df-e1ed-37ac" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="d913-2790-3887-e628" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -730,40 +623,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="cc85-5e77-a45a-6435-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="minPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="dad1-f663-1c71-3305" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="minPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="0819-e0bc-ef6a-f080" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="minPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8d36-f0fd-59fe-a787" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="minPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="78ff-1a3f-7d0d-022d" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="minPercentage" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -775,75 +640,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPercentage" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Dark Gods&apos; Might" hidden="false">
+        </categoryLink>
+        <categoryLink id="cc85-5e77-a45a-6435-2ded-7bec-fb35-3d30" name="Dark God&apos;s Might" hidden="false" targetId="4fd0-48e9-04ff-c26f" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="f344-a19f-7f34-3420" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="6073-04dc-edc5-6dc7" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="73ff-a44a-f9d8-a499" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="4acc-e270-b807-2f93" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="f777-e511-bac7-9b4f" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="22ac-72fa-3931-b153" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8b6f-1c82-9dd3-364d" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="ba4d-a87f-30ec-4ea4" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="b5b9-01f5-507c-0ace" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -855,159 +657,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="d913-2790-3887-e628" name="Wrath Character" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="683d-bdee-110a-66d1" name="Lust Character" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="ab79-55df-e1ed-37ac" name="Pestilence Character" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="82b9-9e19-9bc5-faaa" name="Change Character" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="78ff-1a3f-7d0d-022d" name="Wrath Core" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="0819-e0bc-ef6a-f080" name="Lust Core" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="dad1-f663-1c71-3305" name="Change Core" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="8d36-f0fd-59fe-a787" name="Pestilence Core" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="f777-e511-bac7-9b4f" name="Dark Gods&apos; Might Characters" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="4acc-e270-b807-2f93" name="Dark Gods&apos; Might Character of Wrath" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="6073-04dc-edc5-6dc7" name="Dark Gods&apos; Might Character of Lust" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="73ff-a44a-f9d8-a499" name="Dark Gods&apos; Might Character of Pestilence" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="f344-a19f-7f34-3420" name="Dark Gods&apos; Might Character of Change" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="22ac-72fa-3931-b153" name="Dark Gods&apos; Might of Change" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="8b6f-1c82-9dd3-364d" name="Dark Gods&apos; Might of Lust" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="b5b9-01f5-507c-0ace" name="Dark Gods&apos; Might of Wrath" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="ba4d-a87f-30ec-4ea4" name="Dark Gods&apos; Might of Pestilence" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="18bf-71e6-1213-7ac2" name="Minions of Change" hidden="false">
+        </categoryLink>
+        <categoryLink id="cc85-5e77-a45a-6435-18bf-71e6-1213-7ac2" name="Minions of Change" hidden="false" targetId="18bf-71e6-1213-7ac2" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="82b9-9e19-9bc5-faaa" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="dad1-f663-1c71-3305" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="f344-a19f-7f34-3420" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="22ac-72fa-3931-b153" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1019,40 +674,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="c8a6-cfb2-9aa2-ede3" name="Minions of Lust" hidden="false">
+        </categoryLink>
+        <categoryLink id="cc85-5e77-a45a-6435-c8a6-cfb2-9aa2-ede3" name="Minions of Lust" hidden="false" targetId="c8a6-cfb2-9aa2-ede3" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="6073-04dc-edc5-6dc7" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8b6f-1c82-9dd3-364d" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="683d-bdee-110a-66d1" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="0819-e0bc-ef6a-f080" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1064,40 +691,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2fcd-c9a4-d359-1af7" name="Minions of Pestilence" hidden="false">
+        </categoryLink>
+        <categoryLink id="cc85-5e77-a45a-6435-2fcd-c9a4-d359-1af7" name="Minions of Pestilence" hidden="false" targetId="2fcd-c9a4-d359-1af7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="73ff-a44a-f9d8-a499" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="ba4d-a87f-30ec-4ea4" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="ab79-55df-e1ed-37ac" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8d36-f0fd-59fe-a787" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1109,40 +708,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="fd6b-3bf8-de65-a269" name="Minions of Wrath" hidden="false">
+        </categoryLink>
+        <categoryLink id="cc85-5e77-a45a-6435-fd6b-3bf8-de65-a269" name="Minions of Wrath" hidden="false" targetId="fd6b-3bf8-de65-a269" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="4acc-e270-b807-2f93" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="b5b9-01f5-507c-0ace" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="d913-2790-3887-e628" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="78ff-1a3f-7d0d-022d" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1154,16 +725,15 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="cc85-5e77-a45a-6435-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="b9d4-f362-7c41-9e65" name="Dread Elves" hidden="false">
       <profiles/>
@@ -1171,29 +741,16 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="b9d4-f362-7c41-9e65-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="b5b8-b1ba-185c-1e04" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1202,19 +759,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="b9d4-f362-7c41-9e65-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="445a-3e3a-fc94-74cb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="minPoints" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1226,46 +776,15 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="b9d4-f362-7c41-9e65-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="9a16-56b8-62e7-ec17" name="Raiders" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="445a-3e3a-fc94-74cb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="b5b8-b1ba-185c-1e04" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="maxPercentage" value="3">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="The Menagerie" hidden="false">
+        </categoryLink>
+        <categoryLink id="b9d4-f362-7c41-9e65-9a16-56b8-62e7-ec17" name="Raiders" hidden="false" targetId="3071-dbf8-42cb-adc7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1277,9 +796,19 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="b9d4-f362-7c41-9e65-2ded-7bec-fb35-3d30" name="The Menagerie" hidden="false" targetId="59cc-93d0-793f-0688" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1288,8 +817,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-6635" name="Destroyers" hidden="false">
+        </categoryLink>
+        <categoryLink id="b9d4-f362-7c41-9e65-1f39-4f7b-28ff-6635" name="Destroyers" hidden="false" targetId="b9db-a242-5a5f-5e7c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1305,30 +834,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="b5b8-b1ba-185c-1e04" name="Character + Raiders" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="445a-3e3a-fc94-74cb" name="Core + Raiders" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="83a9-cb52-dd66-8ba1" name="Dwarven Holds" hidden="false">
       <profiles/>
@@ -1336,19 +843,13 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c2" name="DH Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="83a9-cb52-dd66-8ba1-980d-cabc-2b83-1c2" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="d4b1-8d8e-7696-2098" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1360,19 +861,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a18" name="DH Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="83a9-cb52-dd66-8ba1-a2a3-8d76-c9e1-a18" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="minPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="2329-f0f6-6359-9b6" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="minPercentage" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1384,57 +878,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPercentage" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4" name="DH Special" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="9a16-56b8-62e7-ec1" name="DH Clans&apos; Thunder" hidden="false">
+        </categoryLink>
+        <categoryLink id="83a9-cb52-dd66-8ba1-1f39-4f7b-28ff-663" name="Engines of War" hidden="false" targetId="4d62-c562-2e62-1a8d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="2329-f0f6-6359-9b6" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="9c79-a3c6-01c4-8caa" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="maxPercentage" value="3.5">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-663" name="DH Engines of War" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="d4b1-8d8e-7696-2098" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1446,8 +895,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2329-f0f6-6359-9b6" name="DH Core + Clans&apos; Thunder" hidden="false">
+        </categoryLink>
+        <categoryLink id="83a9-cb52-dd66-8ba1-d4b1-8d8e-7696-2098" name="Clan&apos;s Thunder" hidden="false" targetId="f7b0-a716-17ca-5f52" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1463,43 +912,15 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9c79-a3c6-01c4-8caa" name="DH Special + Clans&apos; Thunder" hidden="false">
+        </categoryLink>
+        <categoryLink id="106e-cd5b-12cf-1dad" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="3.5">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="d4b1-8d8e-7696-2098" name="DH Characters + Engines of War" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="3.5">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="7b5c-38ca-1b41-d9e2" name="Empire of Sonnstahl" hidden="false">
       <profiles/>
@@ -1507,29 +928,16 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="7b5c-38ca-1b41-d9e2-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="9b2d-0a00-3f27-f5f7" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="7b5c-38ca-1b41-d9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7d4e-7b04-8085-e1b0" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1538,8 +946,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="7b5c-38ca-1b41-d9e2-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1551,47 +959,26 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="7b5c-38ca-1b41-d9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8e2b-6d0a-7212-2921" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="7b5c-38ca-1b41-d9e2-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="15d5-3175-1b52-43e" name="Sunna&apos;s Fury" hidden="false">
+        </categoryLink>
+        <categoryLink id="7b5c-38ca-1b41-d9e2-15d5-3175-1b52-43e" name="Sunna&apos;s Fury" hidden="false" targetId="15d5-3175-1b52-43e" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="5903-9054-ea47-ffbd" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="7b5c-38ca-1b41-d9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7d4e-7b04-8085-e1b0" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1600,26 +987,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-6635" name="Imperial Armoury" hidden="false">
+        </categoryLink>
+        <categoryLink id="7b5c-38ca-1b41-d9e2-1f39-4f7b-28ff-6635" name="Imperial Armoury" hidden="false" targetId="2e39-4910-2497-b1b8" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="5903-9054-ea47-ffbd" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="9b2d-0a00-3f27-f5f7" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1631,36 +1004,15 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9b2d-0a00-3f27-f5f7" name="Character + Imperial Armoury" hidden="false">
+        </categoryLink>
+        <categoryLink id="7b5c-38ca-1b41-d9e2-7d4e-7b04-8085-e1b0" name="Character Mounts" hidden="false" targetId="7d4e-7b04-8085-e1b0" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="5903-9054-ea47-ffbd" name="Sunna&apos;s Fury + Imperial Armoury" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="7d4e-7b04-8085-e1b0" name="Character Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="8e2b-6d0a-7212-2921" name="Core + Imperial Auxillaries" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="bc18-954b-92e9-a105" name="Imperial Auxillaries" hidden="false">
+        </categoryLink>
+        <categoryLink id="7b5c-38ca-1b41-d9e2-bc18-954b-92e9-a105" name="Imperial Auxillaries" hidden="false" targetId="bc18-954b-92e9-a105" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1672,20 +1024,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="8a18-2eb3-9b92-aa9c" value="1">
-              <repeats>
-                <repeat field="points" scope="7b5c-38ca-1b41-d9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e2b-6d0a-7212-2921" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a18-2eb3-9b92-aa9c" type="max"/>
           </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="e197-debd-1ca1-567d" name="Highborn Elves" hidden="false">
       <profiles/>
@@ -1693,32 +1037,9 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="5aee-c040-9100-618" name="HBE Core + Elder Service" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="3">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a850-d388-fafa-f339" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="dc3b-8a11-4ef9-0019" name="HBE The Ancient Allies" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="e197-debd-1ca1-567d-dc3b-8a11-4ef9-0019" name="Ancient Allies" hidden="false" targetId="14e9-cf33-7ff6-6810" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1730,19 +1051,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9859-bc5a-05d5-4239" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1db2-c1d7-774f-55c0" name="HBE Characters" hidden="false">
+        </categoryLink>
+        <categoryLink id="e197-debd-1ca1-567d-1db2-c1d7-774f-55c0" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1754,30 +1068,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9859-bc5a-05d5-4239" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="12cc-b646-34b5-eeb3" name="HBE Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="e197-debd-1ca1-567d-12cc-b646-34b5-eeb3" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="5aee-c040-9100-618" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="minPoints" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1789,39 +1089,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="d28f-bd4f-dce2-f270" name="HBE Special" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="20ae-eb92-cc45-8306" name="HBE Peacekeepers" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1730-580e-acf5-aa87" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="maxPercentage" value="1.5">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="1730-580e-acf5-aa87" name="HBE Special + Peacekeepers" hidden="false">
+        </categoryLink>
+        <categoryLink id="e197-debd-1ca1-567d-1730-580e-acf5-aa87" name="Peacekeepers" hidden="false" targetId="bcfd-082e-de16-cae7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1837,15 +1106,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9859-bc5a-05d5-4239" name="HBE Big Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="a850-d388-fafa-f339" name="HBE Elder Service" hidden="false">
+        </categoryLink>
+        <categoryLink id="e197-debd-1ca1-567d-a850-d388-fafa-f339" name="Elder Service" hidden="false" targetId="4962-954a-5036-0f19" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1857,20 +1119,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="9531-b1da-39d5-3870" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5aee-c040-9100-618" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="9531-b1da-39d5-3870" type="max"/>
           </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="537f-487f-4fcf-d92a" name="Infernal Dwarves" hidden="false">
       <profiles/>
@@ -1878,29 +1132,16 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="537f-487f-4fcf-d92a-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="d4d4-7499-1da6-bf26" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -1909,19 +1150,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="537f-487f-4fcf-d92a-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="ab11-df67-7a23-ee2e" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="minPoints" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1933,26 +1167,19 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="537f-487f-4fcf-d92a-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="9a16-56b8-62e7-ec17" name="Hail of the Gods" hidden="false">
+        </categoryLink>
+        <categoryLink id="537f-487f-4fcf-d92a-9a16-56b8-62e7-ec17" name="Hail of the Gods" hidden="false" targetId="1fe5-c420-cf88-3219" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="ab11-df67-7a23-ee2e" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1964,26 +1191,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-6635" name="Barrage" hidden="false">
+        </categoryLink>
+        <categoryLink id="537f-487f-4fcf-d92a-1f39-4f7b-28ff-6635" name="Barrage" hidden="false" targetId="42c4-8745-abde-c5ad" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="d4d4-7499-1da6-bf26" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1376-ffd8-b3b5-6efc" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1995,8 +1208,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Bound and Binders" hidden="false">
+        </categoryLink>
+        <categoryLink id="537f-487f-4fcf-d92a-2ded-7bec-fb35-3d30" name="Bound and Binders" hidden="false" targetId="f0e8-dacf-9d1d-3597" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2008,55 +1221,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1376-ffd8-b3b5-6efc" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="d4d4-7499-1da6-bf26" name="Character + Barrage" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="ab11-df67-7a23-ee2e" name="Core + Hail of the Gods" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="1376-ffd8-b3b5-6efc" name="Barrage + Bound and Binders" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="c63a-6e06-8660-cf83" name="Kingdom of Equitaine" hidden="false">
       <profiles/>
@@ -2064,29 +1234,16 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="c63a-6e06-8660-cf83-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="3a7d-0f19-e42e-e3e4" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="c63a-6e06-8660-cf83" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -2095,8 +1252,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="c63a-6e06-8660-cf83-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2112,36 +1269,22 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="c63a-6e06-8660-cf83-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="15d5-3175-1b52-43ec" name="Airborne Gallantry" hidden="false">
+        </categoryLink>
+        <categoryLink id="c63a-6e06-8660-cf83-15d5-3175-1b52-43ec" name="Airbourne Gallantry" hidden="false" targetId="a718-dafe-7e1a-7cc7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="3a7d-0f19-e42e-e3e4" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="c63a-6e06-8660-cf83" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -2150,23 +1293,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="3a7d-0f19-e42e-e3e4" name="Character + Airborne Gallantry" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="3d8a-9eb3-08f9-fd7e" name="Ogre Khans" hidden="false">
       <profiles/>
@@ -2174,8 +1302,9 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="3d8a-9eb3-08f9-fd7e-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2187,19 +1316,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="3d8a-9eb3-08f9-fd7e-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2215,26 +1337,19 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="3d8a-9eb3-08f9-fd7e-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-6635" name="Powder Keg" hidden="false">
+        </categoryLink>
+        <categoryLink id="3d8a-9eb3-08f9-fd7e-1f39-4f7b-28ff-6635" name="Powder Keg" hidden="false" targetId="470f-45f0-c1d2-0f7d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="37fd-5a4a-d7e0-9929" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -2246,8 +1361,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Chained Beasts" hidden="false">
+        </categoryLink>
+        <categoryLink id="3d8a-9eb3-08f9-fd7e-2ded-7bec-fb35-3d30" name="Chained Beasts" hidden="false" targetId="fbe4-637b-88f0-f5d6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2259,34 +1374,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="37fd-5a4a-d7e0-9929" name="Special + Powder Keg" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="3bb6-ce0b-76ff-7352" name="Sylvan Elves" hidden="false">
       <profiles/>
@@ -2294,43 +1387,16 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="3bb6-ce0b-76ff-7352-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="aefe-3c1a-d06b-0e6a" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="58ac-3d69-5a8b-85d1" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e61-8812-4168-d689" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -2339,26 +1405,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="3bb6-ce0b-76ff-7352-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="0cfd-71d8-15d8-baf3" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="439b-b022-63fc-5504" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="minPoints" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -2370,33 +1422,19 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="3bb6-ce0b-76ff-7352-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="9a16-56b8-62e7-ec17" name="Unseen Arrows" hidden="false">
+        </categoryLink>
+        <categoryLink id="3bb6-ce0b-76ff-7352-9a16-56b8-62e7-ec17" name="Unseen Arrows" hidden="false" targetId="c87e-b1c8-d458-46f6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="0cfd-71d8-15d8-baf3" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="49ac-c06a-f7de-ae89" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -2404,30 +1442,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e61-8812-4168-d689" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Forest Giants" hidden="false">
+        </categoryLink>
+        <categoryLink id="3bb6-ce0b-76ff-7352-2ded-7bec-fb35-3d30" name="Forest Giants" hidden="false" targetId="2a1f-2098-d28e-178e" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="aefe-3c1a-d06b-0e6a" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -2435,44 +1459,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="15d5-3175-1b52-43ec" name="Fleet of Foot" hidden="false">
+        </categoryLink>
+        <categoryLink id="3bb6-ce0b-76ff-7352-15d5-3175-1b52-43ec" name="Fleet of Foot" hidden="false" targetId="7b91-8fed-e2d1-f4c7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="439b-b022-63fc-5504" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="58ac-3d69-5a8b-85d1" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="49ac-c06a-f7de-ae89" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -2484,58 +1480,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="58ac-3d69-5a8b-85d1" name="Characters + Fleet of Foot" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="0cfd-71d8-15d8-baf3" name="Core + Unseen Arrows" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="439b-b022-63fc-5504" name="Core + Fleet of Foot" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="aefe-3c1a-d06b-0e6a" name="Character+ Forest Giants" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="49ac-c06a-f7de-ae89" name="Unseen Arrows + Fleet of Foot" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="1e61-8812-4168-d689" name="Characters + Unseen Arrows" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="efb5-704e-a6cc-e4d4" name="The Vermin Swarm" hidden="false">
       <profiles/>
@@ -2543,26 +1489,13 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="VS Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="efb5-704e-a6cc-e4d4-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cbb8-59fa-fea6-8a90" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -2574,8 +1507,8 @@
           <constraints>
             <constraint field="points" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="VS Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="efb5-704e-a6cc-e4d4-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2591,15 +1524,15 @@
           <constraints>
             <constraint field="points" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="VS Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="efb5-704e-a6cc-e4d4-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-6635" name="VS Tunnel Gunners" hidden="false">
+        </categoryLink>
+        <categoryLink id="efb5-704e-a6cc-e4d4-1f39-4f7b-28ff-6635" name="Tunnel Gunners" hidden="false" targetId="e963-1dcd-01a7-08c3" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2615,26 +1548,12 @@
           <constraints>
             <constraint field="points" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="66da-a929-a1d8-abbb" name="VS Built and Bred" hidden="false">
+        </categoryLink>
+        <categoryLink id="efb5-704e-a6cc-e4d4-66da-a929-a1d8-abbb" name="Built and Bred" hidden="false" targetId="66da-a929-a1d8-abbb" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cbb8-59fa-fea6-8a90" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -2646,23 +1565,8 @@
           <constraints>
             <constraint field="points" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="cbb8-59fa-fea6-8a90" name="VS Character + Built and Bred" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="VS Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="4397-6288-6120-3703" name="Warriors of the Dark Gods" hidden="false">
       <profiles/>
@@ -2670,8 +1574,9 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="4397-6288-6120-3703-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2683,26 +1588,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaea-691d-10dd-cb6f" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="4397-6288-6120-3703-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2718,26 +1609,19 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="4397-6288-6120-3703-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Empowered" hidden="false">
+        </categoryLink>
+        <categoryLink id="4397-6288-6120-3703-2ded-7bec-fb35-3d30" name="Empowered" hidden="false" targetId="9a05-481c-5a20-1658" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="aaea-691d-10dd-cb6f" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="3.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -2745,110 +1629,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="aaea-691d-10dd-cb6f" name="Character + Empowered" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="b993-58c0-6232-804e" value="3.5">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b993-58c0-6232-804e" type="max"/>
-          </constraints>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
-    </forceEntry>
-    <forceEntry id="bc33-f899-fdf7-ff65" name="T9A Main" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-6635" name="Artillery" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Elite" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Beasts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="9a16-56b8-62e7-ec17" name="Ranged Support" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="15d5-3175-1b52-43ec" name="Characteristic" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="f7e9-a22b-141f-71bc" name="Ogre Khans - Hellfist" hidden="false">
       <profiles/>
@@ -2856,8 +1642,9 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="f7e9-a22b-141f-71bc-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2869,19 +1656,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="f7e9-a22b-141f-71bc-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2897,26 +1677,19 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="f7e9-a22b-141f-71bc-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-6635" name="Powder Keg" hidden="false">
+        </categoryLink>
+        <categoryLink id="f7e9-a22b-141f-71bc-1f39-4f7b-28ff-6635" name="Powder Keg" hidden="false" targetId="470f-45f0-c1d2-0f7d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="43bf-df13-5a3b-e158" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -2928,8 +1701,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Enslaved" hidden="false">
+        </categoryLink>
+        <categoryLink id="f7e9-a22b-141f-71bc-2ded-7bec-fb35-3d30" name="Chained Beasts" hidden="false" targetId="fbe4-637b-88f0-f5d6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2941,34 +1714,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="43bf-df13-5a3b-e158" name="Special / Powder Keg" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="b7b4-f6cf-f38a-69fa" name="Highborn Elves of Ryma" hidden="false">
       <profiles/>
@@ -2976,177 +1727,77 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="fc2f-b643-b0c7-2631" name="HBE of Ryma Core" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="minPoints" value="2.5">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ed53-694b-b38d-de63" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="665d-c512-e883-8a3a" name="HBE of Ryma Characters" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="4.5">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78fa-dcb9-1b6c-d074" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="0f40-dd20-cc28-9e70" name="HBE of Ryma Special" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="f0f4-fb9e-d55b-cf93" name="HBE of Ryma Peacekeepers" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="16d9-9866-cae4-3ced" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="maxPercentage" value="0">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="8927-3dc9-8a88-b9fd" name="HBE of Ryma The Ancient Allies" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="2.5">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="ed53-694b-b38d-de63" name="HBE of Ryma Core + Elder Service" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="3">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8b31-64ef-8603-bdac" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="16d9-9866-cae4-3ced" name="HBE of Ryma Special + Peacekeepers" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="maxPercentage" value="0">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="78fa-dcb9-1b6c-d074" name="HBE of Ryma Big Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="8b31-64ef-8603-bdac" name="HBE of Ryma Elder Service" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="3ede-6393-f0a5-e024" value="3">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="3ede-6393-f0a5-e024" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ed53-694b-b38d-de63" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="3ede-6393-f0a5-e024" type="max"/>
-          </constraints>
-        </categoryEntry>
-      </categoryEntries>
       <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="f2b7-36a4-dfeb-614c" name="Ancient Allies" hidden="false" targetId="14e9-cf33-7ff6-6810" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="20d2-7a15-486a-70eb" value="2.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="20d2-7a15-486a-70eb" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="91a1-c6a4-77cf-69e7" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="072e-8afa-a52c-7c59" value="4.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="072e-8afa-a52c-7c59" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="7cee-e11b-eb25-5082" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="2065-4b6f-eaf3-6341" value="2.5">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2065-4b6f-eaf3-6341" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="62fa-f93b-a8be-f8f1" name="Elder Service" hidden="false" targetId="4962-954a-5036-0f19" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="01c1-5493-36f3-d633" value="3">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="01c1-5493-36f3-d633" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="8cfc-a6f7-19ea-8015" name="Sylvan Elves (Oaken Crown)" hidden="false">
       <profiles/>
@@ -3154,43 +1805,16 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="8cfc-a6f7-19ea-8015-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="35a1-051e-918f-2cfc" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="30fa-22d1-8fe8-8adb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd6-0c75-38e5-f1ca" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -3199,26 +1823,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="8cfc-a6f7-19ea-8015-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="8dd0-473e-0f37-2358" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="339c-5ea5-50bd-a984" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="minPoints" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -3230,33 +1840,19 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="8cfc-a6f7-19ea-8015-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="9a16-56b8-62e7-ec17" name="Unseen Arrows" hidden="false">
+        </categoryLink>
+        <categoryLink id="8cfc-a6f7-19ea-8015-9a16-56b8-62e7-ec17" name="Unseen Arrows" hidden="false" targetId="c87e-b1c8-d458-46f6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="339c-5ea5-50bd-a984" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="af4b-bbf6-a735-f04a" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="1">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -3264,30 +1860,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd6-0c75-38e5-f1ca" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Forest Giants" hidden="false">
+        </categoryLink>
+        <categoryLink id="8cfc-a6f7-19ea-8015-2ded-7bec-fb35-3d30" name="Forest Giants" hidden="false" targetId="2a1f-2098-d28e-178e" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="30fa-22d1-8fe8-8adb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -3295,44 +1877,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="15d5-3175-1b52-43ec" name="Fleet of Foot" hidden="false">
+        </categoryLink>
+        <categoryLink id="8cfc-a6f7-19ea-8015-15d5-3175-1b52-43ec" name="Fleet of Foot" hidden="false" targetId="7b91-8fed-e2d1-f4c7" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8dd0-473e-0f37-2358" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="35a1-051e-918f-2cfc" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="af4b-bbf6-a735-f04a" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="1.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -3344,58 +1898,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="35a1-051e-918f-2cfc" name="Character/Fleet Footed" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="339c-5ea5-50bd-a984" name="Core/Unseen Arrows" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="8dd0-473e-0f37-2358" name="Core/Fleet Footed" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="30fa-22d1-8fe8-8adb" name="Character/Forest Giants" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="af4b-bbf6-a735-f04a" name="Unseen Arrows / Fleet of Foot" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="ffd6-0c75-38e5-f1ca" name="Character/Unseen Arrows" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="b854-867c-bf0d-71d4" name="Ogre Khans - Wildheart" hidden="false">
       <profiles/>
@@ -3403,8 +1907,9 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="980d-cabc-2b83-1c27" name="Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="b854-867c-bf0d-71d4-980d-cabc-2b83-1c27" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3416,19 +1921,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a2a3-8d76-c9e1-a187" name="Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="b854-867c-bf0d-71d4-a2a3-8d76-c9e1-a187" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3444,15 +1942,15 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="6a35-8450-fd55-ec4c" name="Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="b854-867c-bf0d-71d4-6a35-8450-fd55-ec4c" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="2ded-7bec-fb35-3d30" name="Enslaved" hidden="false">
+        </categoryLink>
+        <categoryLink id="b854-867c-bf0d-71d4-2ded-7bec-fb35-3d30" name="Chained Beasts" hidden="false" targetId="fbe4-637b-88f0-f5d6" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3464,17 +1962,12 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats/>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1f39-4f7b-28ff-6635" name="Powder Keg" hidden="false">
+        </categoryLink>
+        <categoryLink id="b854-867c-bf0d-71d4-1f39-4f7b-28ff-6635" name="Powder Keg" hidden="false" targetId="470f-45f0-c1d2-0f7d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3490,16 +1983,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="2e1d-6ff4-47ae-209a" name="Undying Dynasties" hidden="false">
       <profiles/>
@@ -3507,8 +1992,9 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="01cc-3121-f7ce-11c4" name="UD Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="2e1d-6ff4-47ae-209a-01cc-3121-f7ce-11c4" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3520,30 +2006,16 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eaf3-846a-f789-98a4" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="5de8-0f59-5420-7741" name="UD Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="2e1d-6ff4-47ae-209a-5de8-0f59-5420-7741" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="minPoints" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="3fd0-0f0b-04bc-00d6" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="minPoints" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -3555,46 +2027,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="d629-4cea-ee28-9158" name="UD Special" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="db85-163f-7632-dc0a" name="UD Ancient Ordnance" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="3fd0-0f0b-04bc-00d6" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="increment" field="maxPercentage" value="3.5">
-              <repeats>
-                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f40-0595-13c5-3b3a" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryEntry>
-        <categoryEntry id="fc27-3d0e-db34-88c3" name="UD Mason&apos;s Menagerie" hidden="false">
+        </categoryLink>
+        <categoryLink id="2e1d-6ff4-47ae-209a-db85-163f-7632-dc0a" name="UD Ancient Ordnance" hidden="false" targetId="db85-163f-7632-dc0a" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3606,9 +2040,19 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="2e1d-6ff4-47ae-209a-fc27-3d0e-db34-88c3" name="UD Mason&apos;s Menagerie" hidden="false" targetId="fc27-3d0e-db34-88c3" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="maxPercentage" value="3.5">
               <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eaf3-846a-f789-98a4" repeats="1" roundUp="false"/>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -3617,19 +2061,12 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="56e3-a093-42f0-3b63" name="UD Entombed" hidden="false">
+        </categoryLink>
+        <categoryLink id="2e1d-6ff4-47ae-209a-56e3-a093-42f0-3b63" name="UD Entombed" hidden="false" targetId="56e3-a093-42f0-3b63" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="4c34-34d5-345d-f0ae" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2.5">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -3641,37 +2078,15 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="3fd0-0f0b-04bc-00d6" name="UD Core + Ancient Ordnance" hidden="false">
+        </categoryLink>
+        <categoryLink id="2e1d-6ff4-47ae-209a-1f40-0595-13c5-3b3a" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="4c34-34d5-345d-f0ae" name="UD Special + Entombed" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="1f40-0595-13c5-3b3a" name="UD Ancient Ordnance + Entombed" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-        <categoryEntry id="eaf3-846a-f789-98a4" name="UD Large Mounts" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
     <forceEntry id="6e0f-b434-d169-cd4e" name="Vampire Covenant" hidden="false">
       <profiles/>
@@ -3679,29 +2094,16 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="c7d3-1044-3ce6-90a7" name="VC Characters" hidden="false">
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="6e0f-b434-d169-cd4e-c7d3-1044-3ce6-90a7" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="c392-7718-c3e3-8932" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="4">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
-              <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
@@ -3710,8 +2112,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="e4f5-7c0d-6de4-7742" name="VC Core" hidden="false">
+        </categoryLink>
+        <categoryLink id="6e0f-b434-d169-cd4e-e4f5-7c0d-6de4-7742" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3727,26 +2129,19 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="minPoints" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="9a00-8903-5d68-e8f5" name="VC Special" hidden="false">
+        </categoryLink>
+        <categoryLink id="6e0f-b434-d169-cd4e-9a00-8903-5d68-e8f5" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="7db8-be6d-5ac4-de76" name="VC The Suffering" hidden="false">
+        </categoryLink>
+        <categoryLink id="6e0f-b434-d169-cd4e-7db8-be6d-5ac4-de76" name="The Suffering" hidden="false" targetId="7db8-be6d-5ac4-de76" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="maxPercentage" value="1.0">
-              <repeats>
-                <repeat field="points" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="c392-7718-c3e3-8932" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
             <modifier type="increment" field="maxPercentage" value="2">
               <repeats>
                 <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -3758,8 +2153,8 @@
           <constraints>
             <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="977a-a2ee-dee5-ab6f" name="VC Swift Death" hidden="false">
+        </categoryLink>
+        <categoryLink id="6e0f-b434-d169-cd4e-977a-a2ee-dee5-ab6f" name="Swift Death" hidden="false" targetId="977a-a2ee-dee5-ab6f" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -3771,34 +2166,97 @@
               <conditions/>
               <conditionGroups/>
             </modifier>
-            <modifier type="decrement" field="maxPercentage" value="1">
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="dc27-8d9a-d72a-c820" name="Beast Herds" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="f99c-3a0e-4979-0d9b" name="Characters" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="a8cb-ded2-861d-8b8d" value="4">
               <repeats>
-                <repeat field="points" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="112c-5556-6539-fccb" repeats="1" roundUp="false"/>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="points" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="maxPercentage" type="max"/>
+            <constraint field="points" scope="roster" value="-0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8cb-ded2-861d-8b8d" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="c392-7718-c3e3-8932" name="VC Characters + The Suffering" hidden="false">
+        </categoryLink>
+        <categoryLink id="642e-2809-fff3-563c" name="Core" hidden="false" targetId="a2a3-8d76-c9e1-a187" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="22e7-6396-f97a-d13b" value="2">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="22e7-6396-f97a-d13b" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3c2a-cc12-2968-3396" name="Special" hidden="false" targetId="6a35-8450-fd55-ec4c" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="112c-5556-6539-fccb" name="Large Mounts" hidden="false">
+        </categoryLink>
+        <categoryLink id="6d45-a63c-fd7a-bc2e" name="Ambush Predators" hidden="false" targetId="8e1c-b88b-a377-4dac" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
+          <modifiers>
+            <modifier type="increment" field="6eb9-9151-6f51-a05a" value="6">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6eb9-9151-6f51-a05a" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e4b0-4b9d-74bf-b56b" name="Terrors of the Wild" hidden="false" targetId="061d-2321-1dd6-6069" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="7196-4d9e-d112-222f" value="4">
+              <repeats>
+                <repeat field="limit::points" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7196-4d9e-d112-222f" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
   </forceEntries>
   <selectionEntries/>
@@ -3813,6 +2271,7 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cb35-8f95-08b2-bf88" type="max"/>
       </constraints>
+      <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="b782-94ab-a548-ab9c" name="Giant Sword" book="T9A Rules v.1.3.4" page="104" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -3836,6 +2295,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="752c-c37f-cafe-b2a5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="82f3-5ad3-a51b-0a85" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -3865,6 +2325,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6c38-c017-cd7a-3937" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7bbd-2241-b0b8-9481" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -3894,6 +2355,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1d81-3812-8a29-b6ad" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ed70-3c6e-6837-670c" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -3936,6 +2398,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="556d-3066-28dd-7aaa" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d2c7-043b-a651-f831" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -3965,6 +2428,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ad20-ee55-7597-8719" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0337-40ce-e896-02a8" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4001,6 +2465,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="545e-819b-8ed5-95b0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="37f6-8e4b-ef21-2c04" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4037,6 +2502,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5f0b-5c5d-ac0f-0ab2" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="67a0-79ad-c1ce-d5a4" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4073,6 +2539,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f6dc-5e36-a227-abda" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="15c6-e311-5fa2-8aa3" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4102,6 +2569,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="479b-869a-c6b8-6b4f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="31e6-8490-b7cf-c8fa" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4138,6 +2606,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0190-bc58-ad66-a897" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="abe9-fe98-806a-f4b5" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4167,6 +2636,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="069c-fc9f-ca7f-20d4" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0025-bea8-e5d2-6655" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4196,6 +2666,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="84ec-ee95-93e5-1dd1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c206-8439-5c56-d25b" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4225,6 +2696,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f3d0-0da5-17c9-16e5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6b4d-0f1e-f407-76bf" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4261,6 +2733,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="604c-559c-f431-94ad" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cb66-08f9-a1bc-0b94" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4297,6 +2770,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="af74-cd1c-1267-0955" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="361f-909b-979a-d280" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4316,6 +2790,7 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5d47-6df9-6058-c9c0" type="max"/>
       </constraints>
+      <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="7377-c181-f013-3a7f" name="Armour of Destiny" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -4345,6 +2820,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="75ef-4db7-bced-ecec" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1acf-d81b-1fbc-e7c9" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4373,6 +2849,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="217f-cf54-3ed2-6967" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f07a-8208-63d2-1dc8" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4401,6 +2878,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0461-b040-324d-000c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cd15-7ce1-e532-fd09" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4436,6 +2914,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ad1b-220b-e0f4-42ee" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8b5a-d955-390c-e41a" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4471,6 +2950,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1995-c8c6-2706-37ec" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2017-3631-39e8-9e27" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4499,6 +2979,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="357b-8700-fb16-9c0b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e47f-c0b9-872c-18ea" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4527,6 +3008,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1633-3b7b-9de6-cca5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="db8a-663c-c67c-e80c" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4562,6 +3044,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2a46-d916-dc01-328d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="738c-abfc-99f8-52a2" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4590,6 +3073,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8151-65c1-19d3-fb37" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c980-c2c5-d7d7-9d57" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4618,6 +3102,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a7e8-d008-9580-d847" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0c2b-cc02-beb3-feae" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4637,6 +3122,7 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e7cd-8e0d-08be-6818" type="max"/>
       </constraints>
+      <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="4c55-4351-4407-4038" name="Talisman of Supreme Shielding" book="T9A Rules v.1.3.4" page="105" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -4664,6 +3150,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2b0c-48a8-ebd8-545f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="82a8-cc6f-0f21-f027" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4697,6 +3184,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c5c1-fc8f-86bd-6ecf" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="080d-4fde-f28a-7b72" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4730,6 +3218,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d33c-b3a2-f221-dfbd" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8a2b-6e00-22b6-e605" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4763,6 +3252,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a3bf-fcb2-bed4-a3e5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1247-370c-93b1-ea87" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4796,6 +3286,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="be8d-dc34-8669-4e02" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0a97-f18a-4b5a-e4ff" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4829,6 +3320,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="567e-4c52-425f-cd17" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b141-733a-de37-83c5" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4855,6 +3347,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="833e-ac35-af34-11b4" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e51b-3215-7941-88c5" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4888,6 +3381,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1a6c-0200-2438-83a6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="21d6-cd15-a6f4-62ba" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4914,6 +3408,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3dab-7b60-7d71-2e7d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="98eb-1589-e2c5-8b72" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4933,6 +3428,7 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4cb7-57e3-3f2e-9dcf" type="max"/>
       </constraints>
+      <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="0357-98a9-9a0b-fff2" name="Wizard&apos;s Hood" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -4953,6 +3449,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b479-f1a2-67fe-7d9f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1d1e-e6ce-98aa-3c1b" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -4979,6 +3476,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5f07-2bbd-9229-99ab" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e974-f1a8-f17d-d5c6" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5005,6 +3503,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1d59-8381-af81-a58d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="56c0-d3d5-af81-fbb5" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5031,6 +3530,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0770-4673-6a60-7d97" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="57e6-7321-b565-4c17" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5064,6 +3564,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b31b-cc1e-8f70-ab73" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9326-efa6-7291-42d3" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5090,6 +3591,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="750d-da69-3d6c-3aa6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f3ef-8456-4479-4035" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5123,6 +3625,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bce8-a113-9556-89c9" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6ef0-742f-89ba-b037" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5149,6 +3652,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3b85-8b37-d7a9-b9ba" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9213-a522-4b8e-5958" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5175,6 +3679,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f188-35a9-5988-6f90" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e930-55c7-98a2-885b" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5194,6 +3699,7 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5dc2-da47-ad92-b835" type="max"/>
       </constraints>
+      <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="ead3-d359-3e25-ac49" name="Book of Arcane Power" book="T9A Rules v.1.3.4" page="106" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -5214,6 +3720,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4f87-cbb8-29ef-2072" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f035-971c-2d4b-b0f2" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5240,6 +3747,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="18df-545e-7efe-fb04" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="80ea-c306-9a53-6043" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5266,6 +3774,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="62cb-55b0-7c37-271b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d124-36d6-c102-f9bf" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5292,6 +3801,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="78dd-da01-331a-f5c6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d62a-5b97-d5ea-5a98" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5325,6 +3835,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4262-08ae-4877-ee73" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="26da-bc7e-0bbc-3f9a" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5351,6 +3862,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="18c7-c1ba-5d65-5be9" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9736-d20c-2321-81a7" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5370,6 +3882,7 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="004a-3a26-97cc-5f08" type="max"/>
       </constraints>
+      <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="34b5-191e-ef19-b4b7" name="Rending Banner" book="T9A Rules v.1.3.4" page="107" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -5397,6 +3910,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="82ca-d63a-616d-e49b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="126c-fe86-5a9c-b244" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5436,6 +3950,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d1fc-a70c-558d-2b3a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f395-292f-9ae6-745f" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5462,6 +3977,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bec4-ab3b-7422-69a8" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b477-ac06-658b-6ebc" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5488,6 +4004,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="da8e-771b-b0b2-e7dd" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7fba-e139-a158-9b09" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5521,6 +4038,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5e4e-0ca8-db92-fbb1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1b1a-f428-bacb-b433" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5547,6 +4065,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="294c-e312-20e6-a392" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9a30-1bd5-6de0-f840" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5573,6 +4092,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4a0a-0328-0cf9-5229" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b601-ba3c-c677-1ee2" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5599,6 +4119,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="48dd-1d5f-a28e-d67b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ff4d-2e3e-2c37-df22" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -5625,6 +4146,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d4cf-ac5d-1cd6-fb91" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ab29-77b9-f3ee-8242" type="max"/>
           </constraints>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
