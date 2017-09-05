@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f468-e817-4618-0e57" name="BS2.0 The Vermin Swarm" book="The Vermin Swarm v1.2.1" revision="31" battleScribeVersion="2.01" authorName="Kahlek166 &amp; Karanadon" authorContact="" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f468-e817-4618-0e57" name="BS2.0 The Vermin Swarm" book="The Vermin Swarm v1.2.1" revision="32" battleScribeVersion="2.01" authorName="Kahlek166 &amp; Karanadon" authorContact="" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -475,6 +475,12 @@
           <modifiers/>
         </infoLink>
         <infoLink id="ec54-ddab-1de3-cbd6" hidden="false" targetId="f061-7400-a1c9-3d80" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="ed33-2dbc-2c06-e412" name="Paired Weapons" hidden="false" targetId="6473-8212-0561-be02" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1139,25 +1145,7 @@
                   <constraints/>
                 </categoryLink>
               </categoryLinks>
-              <selectionEntries>
-                <selectionEntry id="3e80-86db-dae5-d697" name="Shamanism" hidden="false" collective="false" type="upgrade">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-                  </constraints>
-                  <categoryLinks/>
-                  <selectionEntries/>
-                  <selectionEntryGroups/>
-                  <entryLinks/>
-                  <costs>
-                    <cost name="pts" costTypeId="points" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
+              <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
@@ -1424,15 +1412,7 @@ If a double comes up when rolling, all units in base contact with the Doom Bell 
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <repeats/>
-              <conditions>
-                <condition field="selections" scope="b188-8d6a-be8f-6656" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ba1-f6b8-1564-5ac8" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -1441,19 +1421,51 @@ If a double comes up when rolling, all units in base contact with the Doom Bell 
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks>
-            <entryLink id="4286-df4c-e5ae-0c98" hidden="false" targetId="617a-332f-dcd1-0891" type="selectionEntry">
+            <entryLink id="4286-df4c-e5ae-0c98" name="Thaumaturgy" hidden="false" targetId="617a-332f-dcd1-0891" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="b188-8d6a-be8f-6656" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ba1-f6b8-1564-5ac8" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <constraints/>
               <categoryLinks/>
             </entryLink>
-            <entryLink id="2fa0-4b63-1608-2bcf" hidden="false" targetId="ddad-59fc-6af0-d554" type="selectionEntry">
+            <entryLink id="2fa0-4b63-1608-2bcf" name="Witchcraft" hidden="false" targetId="ddad-59fc-6af0-d554" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="b188-8d6a-be8f-6656" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ba1-f6b8-1564-5ac8" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+            <entryLink id="b632-adce-af49-6d2f" name="Shamanism" hidden="false" targetId="77d9-dd49-4359-9dfe" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="b188-8d6a-be8f-6656" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ba1-f6b8-1564-5ac8" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <constraints/>
               <categoryLinks/>
             </entryLink>
@@ -6727,31 +6739,44 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
               <constraints/>
             </categoryLink>
           </categoryLinks>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks>
-            <entryLink id="1151-de5d-5ae2-dd72" hidden="false" targetId="73bb-00e6-b6c4-7eb3" type="selectionEntry">
+          <selectionEntries>
+            <selectionEntry id="7fd0-d3e5-da23-983c" name="Battle Standard Bearer" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers>
-                <modifier type="set" field="points" value="50">
-                  <repeats/>
-                  <conditions/>
-                  <conditionGroups/>
-                </modifier>
                 <modifier type="set" field="hidden" value="true">
                   <repeats/>
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdc2-9684-563c-f75c" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2e2f-cdce-7ad7-f29c" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </modifier>
               </modifiers>
-              <constraints/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6cb-f1e9-79c2-bb08" type="max"/>
+              </constraints>
               <categoryLinks/>
-            </entryLink>
-            <entryLink id="86c9-f496-e45b-5d75" hidden="false" targetId="bb61-bce9-9521-37d3" type="selectionEntry">
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks>
+                <entryLink id="1723-a54e-c95b-86e1" name="Battle Standard Bearer" hidden="false" targetId="73bb-00e6-b6c4-7eb3" type="selectionEntry">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" costTypeId="points" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="86c9-f496-e45b-5d75" name="Dark Shard Brew" hidden="false" targetId="bb61-bce9-9521-37d3" type="selectionEntry">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -7653,6 +7678,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
       <modifiers/>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5176-2a9f-9a5e-aa47" type="min"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -7678,6 +7704,7 @@ The target gains Magical Attacks, Flaming Attacks, and Armour Piercing (+1).</de
       <modifiers/>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ddf-4e7c-6538-a83d" type="min"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -7705,6 +7732,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65f0-4877-1d4e-5e06" type="min"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -7721,7 +7749,7 @@ the range of the Battle Standard Bearer’s Hold your Ground.
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks>
-            <entryLink id="aa3e-6614-b77a-da2e" name="New EntryLink" hidden="false" targetId="0c39-7bc0-5280-8907" type="selectionEntryGroup">
+            <entryLink id="aa3e-6614-b77a-da2e" name="Magical Standards" hidden="false" targetId="0c39-7bc0-5280-8907" type="selectionEntryGroup">
               <profiles/>
               <rules/>
               <infoLinks/>
