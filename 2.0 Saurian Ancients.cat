@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7225-2e88-fc22-56ce" name="BS2.0 Saurian Ancients" book="Saurian Ancients v1.3" revision="30" battleScribeVersion="2.01" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7225-2e88-fc22-56ce" name="BS2.0 Saurian Ancients" book="Saurian Ancients v1.3" revision="31" battleScribeVersion="2.01" authorName="Karanadon" authorUrl="http://www.the-ninth-age.com" gameSystemId="183f-2d4b-e805-13a3" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -308,7 +308,9 @@
               <categoryLinks/>
             </entryLink>
           </entryLinks>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -750,7 +752,7 @@
               <modifiers>
                 <modifier type="decrement" field="ce5a-f7c3-501e-f44b" value="1">
                   <repeats>
-                    <repeat field="points" scope="ca0d-2735-2cf0-233b" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="3456-5a44-defd-6229" repeats="1" roundUp="false"/>
+                    <repeat field="points" scope="ca0d-2735-2cf0-233b" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="aa08-26ed-6aad-1da5" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions/>
                   <conditionGroups/>
@@ -958,48 +960,9 @@
               </constraints>
               <categoryLinks/>
               <selectionEntries/>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="3456-5a44-defd-6229" name="Magic Banner" hidden="false" collective="false">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bd6a-9670-05e5-3300" type="max"/>
-                  </constraints>
-                  <categoryLinks>
-                    <categoryLink id="5945-1c6e-6666-7ac8" name="New CategoryLink" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
-                      <profiles/>
-                      <rules/>
-                      <infoLinks/>
-                      <modifiers/>
-                      <constraints/>
-                    </categoryLink>
-                  </categoryLinks>
-                  <selectionEntries/>
-                  <selectionEntryGroups/>
-                  <entryLinks>
-                    <entryLink id="3921-9b9c-d40e-f5f0" hidden="false" targetId="f24a-8968-8a1f-7741" type="selectionEntryGroup">
-                      <profiles/>
-                      <rules/>
-                      <infoLinks/>
-                      <modifiers/>
-                      <constraints/>
-                      <categoryLinks/>
-                    </entryLink>
-                    <entryLink id="4129-5791-b46a-13d0" hidden="false" targetId="0c39-7bc0-5280-8907" type="selectionEntryGroup">
-                      <profiles/>
-                      <rules/>
-                      <infoLinks/>
-                      <modifiers/>
-                      <constraints/>
-                      <categoryLinks/>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
+              <selectionEntryGroups/>
               <entryLinks>
-                <entryLink id="e554-f9c7-0c9b-25b1" hidden="false" targetId="c15d-c503-c820-fcc4" type="selectionEntry">
+                <entryLink id="e554-f9c7-0c9b-25b1" name="Battle Standard Bearer" hidden="false" targetId="c15d-c503-c820-fcc4" type="selectionEntry">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
@@ -1102,6 +1065,52 @@
           </selectionEntries>
           <selectionEntryGroups/>
           <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="aa08-26ed-6aad-1da5" name="Magic Banner" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02f4-a642-6c50-27a7" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb73-128c-2a93-aa29" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="feba-6746-9aca-6b4f" name="New CategoryLink" hidden="false" targetId="980d-cabc-2b83-1c27" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="e049-b149-448c-8514" hidden="false" targetId="f24a-8968-8a1f-7741" type="selectionEntryGroup">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+            <entryLink id="f1ac-8fd0-c749-2522" name="Magical Standards" hidden="false" targetId="0c39-7bc0-5280-8907" type="selectionEntryGroup">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -4098,7 +4107,7 @@
                     <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
                   </characteristics>
                 </profile>
-                <profile id="02cc-44b1-1a61-c1b7" name="Skink Crew (5)" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+                <profile id="02cc-44b1-1a61-c1b7" name="Skink Crew (4)" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
@@ -4873,7 +4882,7 @@
                     <characteristic name="Evoked" characteristicTypeId="2f85-d560-70d4-3b71"/>
                   </characteristics>
                 </profile>
-                <profile id="5534-1345-1b26-7182" name="Skink Crew (5)" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
+                <profile id="5534-1345-1b26-7182" name="Skink Crew (4)" hidden="false" profileTypeId="4d6f64656c23232344415441232323">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
@@ -6271,7 +6280,7 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
         </infoLink>
       </infoLinks>
       <modifiers>
-        <modifier type="decrement" field="maxInRoster" value="1">
+        <modifier type="set" field="maxInRoster" value="1">
           <repeats/>
           <conditions>
             <condition field="selections" scope="9a16-56b8-62e7-ec17" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff37-18c3-381f-035b" type="equalTo"/>
@@ -6397,7 +6406,7 @@ The Sun Engine can cast ​Pyroclastic Flow from Pyromancy as a Bound Spell​ (
         </infoLink>
       </infoLinks>
       <modifiers>
-        <modifier type="decrement" field="maxInRoster" value="1">
+        <modifier type="set" field="maxInRoster" value="1">
           <repeats/>
           <conditions>
             <condition field="selections" scope="9a16-56b8-62e7-ec17" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b840-fcca-6e6c-cb0b" type="equalTo"/>
