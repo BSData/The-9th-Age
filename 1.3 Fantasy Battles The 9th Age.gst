@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="183f-2d4b-e805-13a3" name="BS2.0 Fantasy Battles: The 9th Age" book="The 9th Age - Rules - v1.3.4" revision="42" battleScribeVersion="2.01" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gameSystem id="183f-2d4b-e805-13a3" name="Fantasy Battles: The 9th Age 1.3" book="The 9th Age - Rules - v1.3.4" revision="42" battleScribeVersion="2.01" authorName="Arturius &amp; Karanadon" authorContact="arturius@the-ninth-age.com" authorUrl="http://www.the-ninth-age.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
