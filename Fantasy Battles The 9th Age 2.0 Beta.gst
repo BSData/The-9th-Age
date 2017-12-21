@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="2" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="3" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -311,6 +311,13 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="0316-fabf-d156-9967" name="Built and Bred" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="304c-a8a1-cb0f-3db5" name="Legendary Beasts" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1032,7 +1039,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ede-ed3b-53f5-24b9" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ede-ed3b-53f5-24b9" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="a286-af7a-e7f5-c3aa" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
@@ -1049,7 +1056,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="92bd-46dd-05f3-0cd1" type="min"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="92bd-46dd-05f3-0cd1" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="c340-1dd8-907f-e812" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false">
@@ -1073,7 +1080,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3199-9e7f-a42b-699a" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3199-9e7f-a42b-699a" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="365f-4ac3-b3d9-4fc0" name="Queen&apos;s Bows" hidden="false" targetId="ac58-ee60-0c28-bdda" primary="false">
@@ -1928,10 +1935,164 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="4f52-9c26-b481-c4af" name="Warriors of the Dark Gods" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="c021-8b4e-6a12-9af1" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="9058-ee0e-cf6f-eb9c" value="4.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9058-ee0e-cf6f-eb9c" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="43d6-16ff-1702-e35b" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="9fca-1f22-f2be-1491" value="2">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9fca-1f22-f2be-1491" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="a1b3-72aa-d04f-86a1" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="ff13-eba0-e698-f8b8" name="Legendary Beasts" hidden="false" targetId="304c-a8a1-cb0f-3db5" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="2503-ad84-afc0-272d" value="3.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2503-ad84-afc0-272d" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="52a8-daa4-79ee-d831" name="Warriors of the Dark Gods - Feldrak Ancestor General" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="9665-1337-c215-0826" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="466a-a663-4b9e-f2f8" value="4.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="466a-a663-4b9e-f2f8" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="dd0f-f1cf-c22c-e153" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="6d4b-1b01-06db-eb01" value="2">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6d4b-1b01-06db-eb01" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3afb-14f3-d8ea-12f0" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="28ac-65d9-e811-4a16" name="Legendary Beasts" hidden="false" targetId="304c-a8a1-cb0f-3db5" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="58cf-e3c4-3648-948a" value="4.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="58cf-e3c4-3648-948a" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <selectionEntries/>
   <entryLinks/>
-  <sharedSelectionEntries/>
+  <sharedSelectionEntries>
+    <selectionEntry id="312f-8f87-7840-0442" name="Shield Enchantement" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="91df-2c4d-5874-4126" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1c43-11cb-de62-e40b" type="min"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f853-d3c3-4165-d5ab" name="Weapon Enchantments" hidden="false" collective="false">
       <profiles/>
@@ -2183,7 +2344,15 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="757a-d5c1-6cf9-bd2f" value="2">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="757a-d5c1-6cf9-bd2f" type="max"/>
       </constraints>
@@ -2304,7 +2473,16 @@
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
-          <entryLinks/>
+          <entryLinks>
+            <entryLink id="6a8b-1ded-cff0-9a28" name="Shield Enchantement" hidden="false" targetId="312f-8f87-7840-0442" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+          </entryLinks>
           <costs>
             <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
@@ -2388,7 +2566,16 @@
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
-          <entryLinks/>
+          <entryLinks>
+            <entryLink id="f2a6-8c8c-d8b1-852f" name="Shield Enchantement" hidden="false" targetId="312f-8f87-7840-0442" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+          </entryLinks>
           <costs>
             <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
