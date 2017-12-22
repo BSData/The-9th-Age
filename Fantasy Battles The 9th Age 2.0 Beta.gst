@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="3" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="5" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -318,6 +318,41 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="304c-a8a1-cb0f-3db5" name="Legendary Beasts" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="0c0a-e63d-d07f-e0a0" name="Ancient Ordnance" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="3876-145c-7cb2-a253" name="Mason&apos;s Menagerie" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="4abe-83f5-0118-16db" name="Entombed" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="ce40-9d61-830e-cdef" name="The Suffering" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="0adc-f4e6-0c6b-c21b" name="Swift Death" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -658,14 +693,14 @@
           <modifiers>
             <modifier type="increment" field="5232-60d0-2f7f-e6d6" value="4">
               <repeats>
-                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5232-60d0-2f7f-e6d6" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5232-60d0-2f7f-e6d6" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="3ee8-762f-539c-6728" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
@@ -675,14 +710,14 @@
           <modifiers>
             <modifier type="increment" field="7524-d181-3c7a-449b" value="2.5">
               <repeats>
-                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
               <conditions/>
               <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7524-d181-3c7a-449b" type="min"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7524-d181-3c7a-449b" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="5a8c-bcd0-eea6-94d7" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false">
@@ -706,7 +741,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d6a-fba2-c9d4-ed6b" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6d6a-fba2-c9d4-ed6b" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="66f1-5474-62dd-e5c0" name="Barrage" hidden="false" targetId="07b9-8bdd-9b0d-6119" primary="false">
@@ -723,7 +758,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b422-f62e-e30f-8a06" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b422-f62e-e30f-8a06" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="8d5c-ca4d-a043-c7b8" name="Bound and Binders" hidden="false" targetId="13a8-55e3-9886-acd2" primary="false">
@@ -740,7 +775,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e46-237e-2d7d-e5eb" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7e46-237e-2d7d-e5eb" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -2067,6 +2102,193 @@
           </modifiers>
           <constraints>
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="58cf-e3c4-3648-948a" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="9c2d-033e-db1b-78ab" name="Undying Dynasties" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="0ef4-7b59-8dfc-dab4" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="07a3-ea33-5288-7d43" value="4">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="07a3-ea33-5288-7d43" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="203e-dee6-235b-8565" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="863c-24ad-691b-ff79" value="2.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="863c-24ad-691b-ff79" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="1cba-194e-2f93-5946" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="c132-825a-869a-8d1e" name="Ancient Ordnance" hidden="false" targetId="0c0a-e63d-d07f-e0a0" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="ba3d-cde0-d1ea-4bc1" value="3.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ba3d-cde0-d1ea-4bc1" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="d51e-5f57-d11f-748b" name="Mason&apos;s Menagerie" hidden="false" targetId="3876-145c-7cb2-a253" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="a2fd-eabf-ad47-ba03" value="3.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a2fd-eabf-ad47-ba03" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="87fc-5b76-455e-a13a" name="Entombed" hidden="false" targetId="4abe-83f5-0118-16db" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="fa5e-01d4-7678-81c4" value="3">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fa5e-01d4-7678-81c4" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="6e68-4cd6-4eeb-688a" name="Vampire Covenant" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="5944-56c0-3e0f-3eb4" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="a13e-dcfd-af85-cff4" value="4">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a13e-dcfd-af85-cff4" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0766-d44e-24a1-603c" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="0fae-ea45-5878-0532" value="2">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0fae-ea45-5878-0532" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="c5c8-3292-2e99-a47f" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="6be9-2a2e-2339-6284" name="The Suffering" hidden="false" targetId="ce40-9d61-830e-cdef" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="6262-c47e-3fe8-c36b" value="2">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6262-c47e-3fe8-c36b" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="cbdb-324b-4bc6-95a1" name="Swift Death" hidden="false" targetId="0adc-f4e6-0c6b-c21b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="768c-7c76-fe82-1d6e" value="3">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="768c-7c76-fe82-1d6e" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
