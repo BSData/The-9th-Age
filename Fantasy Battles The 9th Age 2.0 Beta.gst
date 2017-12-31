@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="6" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="7" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2880,7 +2880,7 @@
             <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="80.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="02ee-20af-e439-e56f" name="Book of Arcane Power" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="02ee-20af-e439-e56f" name="Book of Arcane Power - Dominant" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="1fda-2a73-aee7-500b" name="Book of Arcane Power" hidden="false" profileTypeId="5bba-441c-01cb-6187" profileTypeName="Artefact">
               <profiles/>
