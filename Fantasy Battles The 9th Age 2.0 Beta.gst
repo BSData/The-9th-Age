@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="7" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="8" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -3084,7 +3084,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer can cast a Bound Spell, Power Level (4/9): Type: Hex, Missile, Damage. Range 24&quot;. Duration: Instant. The target suffers 2D6 hits with Strength 3 and Armour Penetration 0."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer can cast a Bound Spell, Power Level (4/8): Type: Hex, Missile, Damage. Range 24&quot;. Duration: Instant. The target suffers 2D6 hits with Strength 3 and Armour Penetration 0."/>
               </characteristics>
             </profile>
           </profiles>
