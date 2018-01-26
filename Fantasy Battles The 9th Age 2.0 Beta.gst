@@ -2293,6 +2293,74 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="471c-4f42-c584-e941" name="Åsklanders" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="7168-5563-f8a7-5148" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="36ae-c091-b140-4368" value="4">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="36ae-c091-b140-4368" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="1858-9865-88dd-d842" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="dd75-9bdb-202d-0d86" value="2.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dd75-9bdb-202d-0d86" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="c7a6-5057-f864-77fd" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="166a-ce36-2d2d-8f88" name="Legendary Beasts" hidden="false" targetId="304c-a8a1-cb0f-3db5" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="4380-550a-06a7-833b" value="3">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4380-550a-06a7-833b" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <selectionEntries/>
   <entryLinks/>
