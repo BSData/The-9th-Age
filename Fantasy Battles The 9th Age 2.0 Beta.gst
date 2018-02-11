@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="9" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="10" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2908,7 +2908,7 @@
             <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy - Dominant" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="7543-e866-afe8-638b" name="Crown of Autocracy" hidden="false" profileTypeId="5bba-441c-01cb-6187" profileTypeName="Artefact">
               <profiles/>
