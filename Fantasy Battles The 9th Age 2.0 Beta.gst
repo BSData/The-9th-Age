@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="8" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="9" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
   <costTypes>
-    <costType id="24fd-8af8-0c78-001c" name="Pts" defaultCostLimit="-1.0"/>
+    <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
   <profileTypes>
     <profileType id="8292-1fb8-8251-29a9" name="1 Global">
@@ -2311,7 +2311,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2359,7 +2359,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="311e-5a0b-83f2-9069" name="Blessed Inscriptions" hidden="false" collective="false" type="upgrade">
@@ -2387,7 +2387,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="65.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3eeb-4d3a-ca9b-17e5" name="King Slayer" hidden="false" collective="false" type="upgrade">
@@ -2415,7 +2415,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="51f1-66e8-4022-9d8b" name="Shield Breaker" hidden="false" collective="false" type="upgrade">
@@ -2443,7 +2443,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="eedf-4585-d0c1-f613" name="Hero&apos;s Heart" hidden="false" collective="false" type="upgrade">
@@ -2471,7 +2471,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="315a-5ef6-a1b7-336b" name="Touch of Greatness" hidden="false" collective="false" type="upgrade">
@@ -2499,7 +2499,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dd35-7a49-6952-982e" name="Supernatural Dexterity" hidden="false" collective="false" type="upgrade">
@@ -2527,7 +2527,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="81c6-6663-7fd4-18f7" name="Cleansing Light" hidden="false" collective="false" type="upgrade">
@@ -2555,7 +2555,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2613,7 +2613,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="90.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="90.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f961-86c2-9c05-26b8" name="Destiny&apos;s Call - Standard Size only" hidden="false" collective="false" type="upgrade">
@@ -2641,7 +2641,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8595-7314-30db-51da" name="Essence of Mithril - Standard Size only" hidden="false" collective="false" type="upgrade">
@@ -2669,7 +2669,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="65.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7826-dc11-ac6b-51c3" name="Dusk Forged" hidden="false" collective="false" type="upgrade">
@@ -2706,7 +2706,7 @@
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="16c0-7108-a6a7-f2b6" name="Ghostly Guard" hidden="false" collective="false" type="upgrade">
@@ -2734,7 +2734,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="38fa-9d02-70a4-fd41" name="Basalt Infusion" hidden="false" collective="false" type="upgrade">
@@ -2762,7 +2762,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7661-e05d-8c3d-4b60" name="Willow&apos;s Ward - Models on Foot only" hidden="false" collective="false" type="upgrade">
@@ -2799,7 +2799,7 @@
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="15.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a341-4e62-97af-a426" name="Alchemist&apos;s Alloy" hidden="false" collective="false" type="upgrade">
@@ -2827,7 +2827,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="15.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2877,7 +2877,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="80.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="02ee-20af-e439-e56f" name="Book of Arcane Power - Dominant" hidden="false" collective="false" type="upgrade">
@@ -2905,7 +2905,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy - Dominant" hidden="false" collective="false" type="upgrade">
@@ -2933,7 +2933,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="717c-cdd1-f368-649a" name="Obsidian Rock" hidden="false" collective="false" type="upgrade">
@@ -2961,7 +2961,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2078-81dc-eac0-b856" name="Rod of Battle" hidden="false" collective="false" type="upgrade">
@@ -2989,7 +2989,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3f7d-5a54-b1ca-550f" name="Binding Scroll" hidden="false" collective="false" type="upgrade">
@@ -3017,7 +3017,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3db5-8d52-cfe9-fbfa" name="Essence of a Free Mind - Dominant" hidden="false" collective="false" type="upgrade">
@@ -3044,7 +3044,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="589f-da5c-20ba-5f1a" name="Potion of Strength - Cannot be taken by Towering Presence" hidden="false" collective="false" type="upgrade">
@@ -3072,7 +3072,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3d77-9d65-58c3-9e7d" name="Lightning Vambraces" hidden="false" collective="false" type="upgrade">
@@ -3100,7 +3100,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8cca-6eee-ecd5-1620" name="Talisman of Shielding" hidden="false" collective="false" type="upgrade">
@@ -3128,7 +3128,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="538d-5665-58a8-281d" name="Ranger&apos;s Boots - Standard Size models on foot only" hidden="false" collective="false" type="upgrade">
@@ -3155,7 +3155,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1a15-8ac5-586b-1b94" name="Magical Heirloom - Dominant" hidden="false" collective="false" type="upgrade">
@@ -3183,7 +3183,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="52aa-545b-5fc8-64fe" name="Scepter of Power - Dominant" hidden="false" collective="false" type="upgrade">
@@ -3210,7 +3210,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bc10-9582-1642-6f0e" name="Talisman of the Void" hidden="false" collective="false" type="upgrade">
@@ -3238,7 +3238,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b996-d7ae-e854-2601" name="Dragon Staff" hidden="false" collective="false" type="upgrade">
@@ -3266,7 +3266,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ef67-0a29-6d5c-687c" name="Crystal Ball" hidden="false" collective="false" type="upgrade">
@@ -3294,7 +3294,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="57fe-c8e7-f786-132c" name="Dragonfire Gem" hidden="false" collective="false" type="upgrade">
@@ -3322,7 +3322,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fc3e-7023-b3ce-8579" name="Potion of Swiftness" hidden="false" collective="false" type="upgrade">
@@ -3350,7 +3350,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="10.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ebd9-2cee-402a-4ff4" name="Lucky Charm" hidden="false" collective="false" type="upgrade">
@@ -3378,7 +3378,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="10.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3420,7 +3420,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c7f0-afd2-df8b-2008" name="Banner of Speed" hidden="false" collective="false" type="upgrade">
@@ -3448,7 +3448,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bcfc-01a2-69fe-e5e7" name="Stalker&apos;s Standard" hidden="false" collective="false" type="upgrade">
@@ -3476,7 +3476,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="719b-6dee-2a2a-8e74" name="Banner of Discipline" hidden="false" collective="false" type="upgrade">
@@ -3504,7 +3504,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c287-b3cd-82d4-ba3d" name="Aether Icon" hidden="false" collective="false" type="upgrade">
@@ -3532,7 +3532,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5bf4-2476-8235-9323" name="Banner of the Relentless Company" hidden="false" collective="false" type="upgrade">
@@ -3560,7 +3560,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="59ec-00bd-1953-e80a" name="Flaming Standard" hidden="false" collective="false" type="upgrade">
@@ -3588,7 +3588,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ef5a-692b-1b30-d5d5" name="Legion Standard" hidden="false" collective="false" type="upgrade">
@@ -3616,7 +3616,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3644,7 +3644,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="10fe-ce12-d662-ae02" name="Musician" hidden="false" collective="false" type="upgrade">
@@ -3660,7 +3660,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8f82-6955-3d8a-01ea" name="Standard Bearer" hidden="false" collective="false" type="upgrade">
@@ -3676,7 +3676,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="Pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
