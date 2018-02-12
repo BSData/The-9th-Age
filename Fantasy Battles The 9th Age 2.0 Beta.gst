@@ -30,8 +30,7 @@
         <characteristicType id="f381-7850-7fa8-3440" name="HP"/>
         <characteristicType id="160d-4624-273f-2114" name="Def"/>
         <characteristicType id="ec15-bc66-645e-db5d" name="Res"/>
-        <characteristicType id="597b-8735-3dd1-0e70" name="AS"/>
-        <characteristicType id="2f78-472b-a950-385a" name="Spe"/>
+        <characteristicType id="597b-8735-3dd1-0e70" name="Arm"/>
       </characteristicTypes>
     </profileType>
     <profileType id="a00c-d586-ee68-ed21" name="6 Ranged Weapon">
@@ -4379,61 +4378,6 @@ In multipart models, only model parts that also have Restraints can use Stomp At
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="23d7-0af2-02ed-caca" name="Innate Defense (1)" hidden="false" profileTypeId="658e-7f7b-4e4f-162a" profileTypeName="Armour">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1" value="Innate Defense"/>
-        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="+1"/>
-        <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90" value="A model part can only use one instance of Innate Defence. Use the best available."/>
-      </characteristics>
-    </profile>
-    <profile id="3749-80e2-81fe-bdf5" name="Innate Defense (2)" hidden="false" profileTypeId="658e-7f7b-4e4f-162a" profileTypeName="Armour">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1" value="Innate Defense"/>
-        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="+2"/>
-        <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90" value="A model part can only use one instance of Innate Defence. Use the best available."/>
-      </characteristics>
-    </profile>
-    <profile id="3072-b4c2-2ed6-0fba" name="Innate Defense (3)" hidden="false" profileTypeId="658e-7f7b-4e4f-162a" profileTypeName="Armour">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1" value="Innate Defense"/>
-        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="+3"/>
-        <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90" value="A model part can only use one instance of Innate Defence. Use the best available."/>
-      </characteristics>
-    </profile>
-    <profile id="5540-1592-f931-aeaa" name="Innate Defense (4)" hidden="false" profileTypeId="658e-7f7b-4e4f-162a" profileTypeName="Armour">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1" value="Innate Defense"/>
-        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="+4"/>
-        <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90" value="A model part can only use one instance of Innate Defence. Use the best available."/>
-      </characteristics>
-    </profile>
-    <profile id="efc8-b07e-17e2-4fb8" name="Innate Defense (5)" hidden="false" profileTypeId="658e-7f7b-4e4f-162a" profileTypeName="Armour">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1" value="Innate Defense"/>
-        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="+5"/>
-        <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90" value="A model part can only use one instance of Innate Defence. Use the best available."/>
-      </characteristics>
-    </profile>
     <profile id="1da1-0128-4bf2-cf8d" name="Shield" hidden="false" profileTypeId="658e-7f7b-4e4f-162a" profileTypeName="Armour">
       <profiles/>
       <rules/>
@@ -4476,50 +4420,6 @@ In multipart models, only model parts that also have Restraints can use Stomp At
         <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1" value="Suit of Armour"/>
         <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="+3"/>
         <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90" value="A model part can only wear a single Suit of Armour."/>
-      </characteristics>
-    </profile>
-    <profile id="369c-0eb3-b766-3082" name="Mount&apos;s Protection (1)" hidden="false" profileTypeId="658e-7f7b-4e4f-162a" profileTypeName="Armour">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1" value="Mount"/>
-        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="+1"/>
-        <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90"/>
-      </characteristics>
-    </profile>
-    <profile id="b0c2-6b74-efc4-e5ee" name="Mount&apos;s Protection (2)" hidden="false" profileTypeId="658e-7f7b-4e4f-162a" profileTypeName="Armour">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1" value="Mount"/>
-        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="+2"/>
-        <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90"/>
-      </characteristics>
-    </profile>
-    <profile id="4956-a8ff-5188-1483" name="Mount&apos;s Protection (3)" hidden="false" profileTypeId="658e-7f7b-4e4f-162a" profileTypeName="Armour">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1" value="Mount"/>
-        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="+3"/>
-        <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90"/>
-      </characteristics>
-    </profile>
-    <profile id="67a3-65da-57e2-746c" name="Barding" hidden="false" profileTypeId="658e-7f7b-4e4f-162a" profileTypeName="Armour">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1" value="Mount"/>
-        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="+1"/>
-        <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90" value=""/>
       </characteristics>
     </profile>
     <profile id="2d01-b358-db9b-3b99" name="Hand Weapon" hidden="false" profileTypeId="a32f-208a-be3d-ad8d" profileTypeName="Melee Weapon">
