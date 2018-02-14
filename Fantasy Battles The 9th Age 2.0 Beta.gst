@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="10" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="11" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2813,7 +2813,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Suit of Armour Enchantment"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The wearer gains +1 Armour and Fireproof."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The wearer gains +1 Armour and Aegis (2+, against Flaming Attacks). The wearer cannot benefit from Regeneration."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2928,7 +2928,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="During Spell Selection, randomise a magic Path (from all Paths in The 9th Age: Fantasy Battles - Paths of Magic). The bearer is a Wizard Apprentice using the randomised Path. It cannot choose the Hereditary Spell."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="During Spell Selection, randomise a magic Path (from all Paths in The 9th Age: Fantasy Battles - Paths of Magic). The bearer is a Wizard Apprentice using the randomised Path. It cannot select the Hereditary Spell."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2944,10 +2944,10 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="80.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="02ee-20af-e439-e56f" name="Book of Arcane Power - Dominant" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="02ee-20af-e439-e56f" name="Book of Arcane Power - Dominant. Cannot be taken by Wizard Master." hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="1fda-2a73-aee7-500b" name="Book of Arcane Power" hidden="false" profileTypeId="5bba-441c-01cb-6187" profileTypeName="Artefact">
               <profiles/>
@@ -2972,7 +2972,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy" hidden="false" collective="false" type="upgrade">
@@ -3028,7 +3028,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2078-81dc-eac0-b856" name="Rod of Battle" hidden="false" collective="false" type="upgrade">
@@ -3068,7 +3068,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="One use only. May be activated at the start of a Magic Phase. When activated, pick an enemy model and choose one of its spells (including Attribute and Bound Spells). The chosen model cannot cast the chosen spell during this Magic Phase."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="One use only. May be activated at the start of a Magic Phase. When activated, pick an enemy model and select one of its spells (including Attribute and Bound Spells). The chosen model cannot cast the selected spell during this Magic Phase. Only a single Binding Scroll may be activated during the same Phase."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3345,7 +3345,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="One use only. May be activated at the start of your Magic Phase. During this Phase, directly after drawing a Flux Card, you may choose to draw a new card which you must use instead. Shuffle the former card into the deck."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="After Spell Selection (at the end of step 7 of the Pre-Game Sequence), mark a single enemy model in the opponent’s Army List. All dispelling attempts of spells cast by that model gain a +1 to dispel modifier."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3361,7 +3361,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="57fe-c8e7-f786-132c" name="Dragonfire Gem" hidden="false" collective="false" type="upgrade">
@@ -3373,7 +3373,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer gains Fireproof"/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer gains Aegis (2+, against Flaming Attacks). The wearer cannot benefit from Regeneration."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3471,7 +3471,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Banner"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="Close Combat Attacks from R&amp;F models in a unit with one or more Rending Banners gain +1 Armour Penetration."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="One use only. May be activated at the start of a Round of Combat. Close Combat Attacks from R&amp;F models ina unit with one or more Rending Banners gain +1 Armour Penetration. This effect lasts until the bearer’s unit is no longer Engaged in Combat."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3487,7 +3487,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c7f0-afd2-df8b-2008" name="Banner of Speed" hidden="false" collective="false" type="upgrade">
@@ -3583,7 +3583,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Banner"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer’s unit gains Magic Resistance (1)."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer’s unit gains Magic Resistance (1). If the unit already had Magic Resistance, it instead increases the Magic Resistance value by 1."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3667,7 +3667,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Banner"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer’s unit increases the maximum of its Rank Bonus by +1 (normally this means the unit can add up to 4 Full Ranks to its Combat Score, or up to 5 Full Ranks if two Standards of Formation are in the same unit)."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="A unit with one Legion Standard increases the maximum of its Rank Bonus by +1 (normally this means the unit can add up to 4 Full Ranks to its Combat Score). A unit with two Legion Standards increases the maximum of its Rank Bonus by +2 instead."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3757,14 +3757,21 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>At step 8 of the Pre- Game Sequence (after Spell Selection) an army that includes units with Ambush must state which of its units with Ambush will use it, starting with the player that picked the Deployment Zone. Deploy your army as usual, but without deploying any of the Ambushing units. Starting from your Player Turn 2, roll a dice for each Ambushing unit at the end of step 2 of the Movement Phase Sequence, after moving units with Random Movement. After you have rolled for all Ambushing units, each unit that rolled 3+ now enters the Battlefield from any Board Edge. Place the arriving unit with all of its rear rank touching the Board Edge. Ambushing models are free to move as normal except they can’t March Move, and they cannot voluntarily end this Movement Phase further than their March Rate from the Board Edge. If an Ambushing unit has not entered the board (e.g. due to failing all its 3+ rolls) before the game ends, the unit counts as destroyed. An Ambushing Character may choose to be deployed within an Ambushing unit that it would normally be allowed to join (declare this when declaring which units are Ambushing). In that case the player rolls once for the combined unit. Until arriving on the Battlefield, Ambushing units cannot do any actions at all, and all Artefacts, rules, abilities, etc. do not work while not on the Battlefield.</description>
+      <description>You may choose to not deploy units with Ambush, but instead let them Ambush by bringing them into play later on.
+Declare which units will be Ambushing during step 8 of the Pre-Game Sequence
+(after Spell Selection), starting with the player that picked the Deployment Zone. Deploy your army as usual, but without the Ambushing units. Starting with your Player Turn 2, at the end of step 2 of the Movement Phase Sequence (after moving units with Random Movement), roll a dice for each Ambushing unit. After rolling for all Ambushing units, all units that rolled 3+ enter the Battlefield from any Board Edge. Place the arriving units with their entire rear ranks touching the Board Edge.
+- Ambushing models can neither March Move during the Movement Phase in which they arrive, nor can they voluntarily end that Movement Phase further away from the Board Edge than their March Rate.
+- If an Ambushing unit has not entered the Battlefield before the end of the game (e.g. due to failing all its 3+ rolls), the unit counts as destroyed.
+- An Ambushing unit that enters the Battlefield on Game Turn 4 or later loses Scoring.
+- An Ambushing Character may be deployed within an Ambushing unit that it is allowed to join (declare this when declaring which units are Ambushing). Roll only one dice for the combined unit.
+- Until arriving on the Battlefield, Ambushing units follow the rules for units that have Pursued off the Table.</description>
     </rule>
     <rule id="3ef6-167b-7d0f-b484" name="Battle Standard Bearer" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>An army may only include a single Battle Standard Bearer. The model gains Rally Around the Flag and Not a Leader. If the model has the option to buy Artefacts, it is allowed to purchase a Banner Enchantment. If the model has no other Artefacts, it may take up to two Banner Enchantments instead of one.</description>
+      <description>An army may only include a single Battle Standard Bearer. The model gains Rally Around the Flag and Not a Leader. If the model has the option to buy Special Equipment, it is allowed to purchase up to two Banner Enchantments.</description>
     </rule>
     <rule id="1d4a-2ada-4edb-0363" name="Bodyguard" hidden="false">
       <profiles/>
@@ -3785,7 +3792,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>The model must roll an additional D6 when taking Dangerous Terrain Tests. A Character with Chariot (and without War Platform) cannot join units that include models without Chariot, and a Character without Chariot cannot join units that include models with Chariot (unless also War Platform).</description>
+      <description>The model must roll an additional D6 when taking Dangerous Terrain Tests. A model with Chariot can only be part of a unit consisting entirely of models with Chariot, unless noted otherwise.</description>
     </rule>
     <rule id="4d9a-1dea-1661-4083" name="Supernal" hidden="false">
       <profiles/>
@@ -3799,36 +3806,48 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>The model allows a War Machine within 3&quot; to replace the Aim of one of its Artillery Weapons with the value given in brackets (X+) and to reroll any rolls on the Misfire Table (if there are several War Machines within 3&quot; of the model with Engineer, declare which one will receive the Engineer&apos;s benefits this Player Turn before firing it). If the War Machine uses a Flame Thrower Artillery Weapon, all dice rolled for the number of hits the Flame Thrower scores on its target may be rerolled. If this is used, you must reroll all dice. This rule cannot be used if the model with Engineer is Engaged in Combat.</description>
+      <description>Once per Shooting Phase, an unengaged Engineer may select a single War Machine
+within 6″ that has not fired yet to gain the following effects:
+- Replace the Aim of one of the War Machine’s Artillery Weapons with the value given in brackets (X+).
+- You may reroll the roll on the Misfire Table .
+- You may reroll the dice (all of them or none) for determining the number of hits of a Flamethrower Artillery Weapon.</description>
     </rule>
     <rule id="06e4-3c2b-0e6d-e48f" name="Feigned Flight" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>A unit consisting solely of models with Feigned Flight that voluntarily chooses to Flee as a Charge Reaction, and subsequently passes a Rally Test in its next Player Turn, doesn’t become Shaken. Furthermore, the Reform that is made after Rallying in this case doesn’t prevent the unit from moving nor from shooting (but it still counts as having moved for shooting purposes). This rule cannot be applied if a unit fails to rally on the next friendly Player Turn or involuntarily Flees, such as a result of a failed Panic Test or if it was already Fleeing when being charged .</description>
+      <description>Models in a unit consisting solely of models with Feigned Flight do not become Shaken
+if their unit voluntarily chooses Flee as Charge Reaction and passes its Rally Test in its next Player Turn. The Reform after Rallying in this case does not prevent the unit from moving nor from shooting (but it still counts as having moved). This rule does not apply if a unit fails to rally on the next friendly Player Turn or involuntarily Flees (e.g. as a result of a failed Panic Test or if it was already Fleeing when being charged).</description>
     </rule>
     <rule id="229b-fa84-b9fe-b1ff" name="Tall" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>For the purpose of drawing Line of Sight and checking Cover, either to or from the model, it counts as one Size category bigger (up to Gigantic) than all intervening models of the same Size without Tall.</description>
+      <description>Line of Sight drawn to or from a model with Tall is not blocked by models of the same size (as the model with Tall), unless the intervening model also has Tall. Remember that this also affects Cover (if a model blocks Line of Sight it contributes to Hard Cover, otherwise only to Soft Cover).</description>
     </rule>
     <rule id="ed2a-e8b3-cc1a-cce0" name="Fear" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Units in base contact with one or more enemy models with Fear suffer -1 Discipline. At the start of each Round of Combat, such units must take a Discipline Test, called a Fear Test. If this test is failed, the models in the unit are Shaken until the end of the Round of Combat. Models that have Fear themselves are immune to the effects of Fear.</description>
+      <description>Models in units in base contact with one or more enemy models with Fear suffer -1 Discipline. At the start of each Round of Combat, such units must take a Discipline Test
+, called a Fear Test. If this test is failed, the models in the unit are Shaken and Close Combat Attacks made by the models in the unit suffer -1 to hit, while Close Combat Attacks allocated against the models in the unit gain +1 to hit. These effects apply until the end of the Round of Combat.
+Models that have Fear themselves are immune to the effects of Fear.</description>
     </rule>
     <rule id="4a5a-48a4-b2f9-f6ed" name="Fly" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>The model gains Swiftstride and Light Troops. Units composed entirely of models with Fly can make Flying Movements when performing a Move Chargers move, an Advance Move or a March Move. When a unit makes a Flying Movement, substitute its models’ Advance Rate with the first value given in brackets (X), and their March Rate with the second value given in brackets (Y). All modifiers to ground movement values are also applied to the flying values of a model. Units using Flying Movement ignore all Terrain Features and units during the Flying Movement (from their starting to their ending position), but must abide by the Unit Spacing rule at the end of the move (unless
-charging, when the normal exceptions to the Unit Spacing rule apply). They are still affected by the effects of the Terrain Features from which they take off and in which they land.</description>
+      <description>The model gains Light Troops and Swiftstride. Units composed entirely of models with Fly may use Flying Movement during Move Chargers moves, Advance Moves
+, and March Moves. When a unit uses Flying Movement, substitute its
+models’ Advance Rate with the first value given in brackets (X), and their March Rate with the second value given in brackets (Y). A unit using Flying Movement ignores all Terrain Features and units during the Flying Movement. Note that:
+- It must abide by the Unit Spacing rule at the end of the move (unless charging, when the normal exceptions to the Unit Spacing rule apply).
+- It is affected by the Terrain Features from which it takes off and in which it lands.
+- All modifiers to ground movement values also apply to a model’s Fly values (unless specified otherwise).
+- When Declaring a Charge with a unit with Fly, you must declare if the unit will use Flying Movement for the Charge Move.</description>
     </rule>
     <rule id="d3a1-728e-7e9f-992d" name="Front Rank" hidden="false">
       <profiles/>
@@ -3859,7 +3878,7 @@ If a model with Front Rank leaves a unit or is removed as a casualty, the gap it
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>If more than half of a unit&apos;s models are Fearless, the unit automatically passes Panic Tests and Decimated Tests and cannot declare a Flee Charge Reaction (unless already Fleeing). Models that are Fearless are also immune to the effects of Fear.</description>
+      <description>If more than half of a unit&apos;s models are Fearless, the unit automatically passes Panic Tests and cannot declare a Flee Charge Reaction (unless already Fleeing). Models that are Fearless are also immune to the effects of Fear.</description>
     </rule>
     <rule id="10f4-4cf9-f713-7351" name="Insignificant" hidden="false">
       <profiles/>
@@ -3881,10 +3900,12 @@ Insignificant. Only Insignificant Characters can join units with Insignificant R
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Units composed entirely of models with Light Troops are allowed to make any number of Reforms when performing Advance Moves or March Moves. They are allowed to shoot even if they Marched or Reformed. No model can end its movement with its centre further away than its March Rate from its starting position, around any obstructions (including the Unit Spacing rule). This means that when checking the distance travelled by a model, check the path the model would have taken if it was alone, with the exception that the unit as a whole cannot break the Unit Spacing rule while performing the move. If a model performed any action during the movement (such as a Sweeping Attack), the distance moved is counted from its starting position to the point on the Battlefield where it performed that action and then to its final position.
-If more than half the models in a unit have Light Troops, the unit always counts as having 0 Full Ranks. Characters with Light Troops that are joined to units with one or more models without Light Troops, lose this rule for as long as they remain with the unit. An Infantry Character joined to an Infantry unit with both Light Troops and the same Size as the Character gains Light Troops for as long as it remains with the unit.
-(measure this from the starting position to the ending position of the centre of the model with Front Rank to
-determine how far it has moved).</description>
+      <description>A unit composed entirely of models with Light Troops may shoot even after March Moving or Reforming earlier that Player Turn, and it may Reform any number of times during Advance Moves and March Moves. No model can end its movement with its centre further away from its starting position than its March Rate.
+- For measuring the distance travelled by a model, check the path the model would have taken if it was alone and measure the movement around any obstructions (abiding by the Unit Spacing rule). Note that the unit nevertheless must abide by the Unit Spacing rule (including all Reforms).
+- If a model performed any action during the movement (such as a Sweeping Attack), the distance moved is measured from its starting position to the point on the Battlefield where it performed that action and then to its final position.
+- Units with more than half of their models with Light Troops always count as having 0 Full Rank.
+- Characters lose Light Troops while joined to units with one or more models without Light Troops (if they had it).
+- Infantry Characters gain Light Troops while joined to Infantry units of the same Size with Light Troops.</description>
     </rule>
     <rule id="f611-6165-ada9-0d7d" name="Not a Leader" hidden="false">
       <profiles/>
@@ -3898,7 +3919,7 @@ determine how far it has moved).</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>A spell that is targeting at least one enemy unit with one or more models with Magic Resistance suffers a -X modifier to its casting roll (where X is given in brackets). This is an exception to the Casting and Dispelling Modifier rule. If there are different X values that could be used, use the highest value.</description>
+      <description>Learned Spells and Bound Spells that are targeting at least one enemy unit with one or more models with Magic Resistance suffers a -X modifier to their casting roll (where X is given in brackets). This is an exception to the Casting and Dispelling Modifier rule. If there are different X values that could be used, use the highest value.</description>
     </rule>
     <rule id="7a94-4a81-745e-66d1" name="Pathmaster" hidden="false">
       <profiles/>
@@ -3912,38 +3933,40 @@ determine how far it has moved).</description>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>When selecting its spells, the Wizard must choose a combination of its Hereditary Spell and/or Learned Spell 1 from any of the Paths it has access to. This rule overrides the normal Spell Selection rules connected to being a Wizard Apprentice, Apprentice or Master.</description>
+      <description>During Spell Selection, the Wizard must select its spells between the Learned Spell
+1 of the Paths it has access to and the Hereditary Spell of its army. This rule overrides the Spell Selection rules connected to being Wizard Apprentice, Adept or Master.</description>
     </rule>
     <rule id="0d8a-3fd8-a61d-5b74" name="Wizard Apprentice" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>The Wizard knows the Learned Spell 1 of its Path (chosen on the Army List). During Spell Selection this spell may be swapped for for its Hereditary Spell.</description>
+      <description>The Wizard selects its spells as described in Spell Selection.</description>
     </rule>
     <rule id="c0a6-6da5-98d6-f051" name="Wizard Adept" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>The Wizard gains Channel (1) and knows the Learned Spells 2 and 3 of its Path (chosen on the Army List). During Spell Selection a single of these spells may be swapped for either Learned Spell 1 or 4 . Furthermore, one Learned Spell may be swapped for for its Hereditary Spell.</description>
+      <description>The Wizard gains Channel (1) and selects its spells as described in Spell Selection</description>
     </rule>
     <rule id="fa5b-1bdc-8550-50c7" name="Wizard Master" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>The Wizard gains Channel (1) , a +1 modifier to its casting rolls, and knows the Learned Spells 2 , 3 , 4 and 5 of its Path (chosen on the Army List). During Spell Selection a single of these spells may be swapped for either Learned Spell 1 or 6 . Furthermore, one Learned Spell may be swapped for for its Hereditary Spell.</description>
+      <description>The Wizard gains Channel (1) and a +1 modifier to its casting rolls, and selects its spells as described in Spell Selection.</description>
     </rule>
     <rule id="b6f2-241f-8379-3327" name="Frenzy" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>A unit with at least half its models with Frenzy (or a model inside such a unit) cannot choose Flee as Charge Reaction, and when it takes Discipline tests other than Break Tests, apply the following:
-- if it is a Panic Test, Decimated Test or Fear Test: the unit gains +2 Discipline.
-- if it is any other Discipline Test, the unit suffers -2 Discipline.
-At the start of the Charge Phase, each of your units with at least one model with Frenzy that could Declare a Charge against an enemy unit within the unit&apos;s Advance Rate +7 (using the lowest Advance Rate among the unit’s models) must take a Discipline Test, called a Frenzy Test. If the test is failed, the whole unit must Declare a Charge this Player Turn (note that a Character is never forced to charge out of its unit).</description>
+      <description>The model gains Fearless. At the start of the Charge Phase, each of your units with at least one model with Frenzy that could Declare a Charge against an enemy unit within the unit’s Advance Rate +7″ must take a Discipline Test, called a Frenzy Test. If the test is failed, the whole unit must Declare a Charge this Player Turn if possible. When a unit with at least one model with Frenzy takes a Frenzy Test or Discipline Test to restrain from Pursuing, the test is subject to Maximised Roll.
+- When measuring if a unit must take a Frenzy Test, use the lowest available Advance Rate among the unit’s models.
+- If the unit has Fly and there is more than one Advance Rate available, you must use the type of movement (ground or Fly) that has the highest chance of completing the charge.
+- When a unit is forced to Declare a Charge due to a failed Frenzy Test, it is not forced to charge the enemy unit that triggered the Frenzy Test.
+- Characters are never forced to charge out of their units due to failed Frenzy Tests.</description>
     </rule>
     <rule id="33ac-93f2-47f5-d0f0" name="Massive Bulk" hidden="false">
       <profiles/>
@@ -3957,10 +3980,19 @@ At the start of the Charge Phase, each of your units with at least one model wit
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Units with Random Movement cannot Declare Charges and cannot move normally (Advance, March, Reform) in the Movement Phase (which also means they cannot perform Magical Moves). Models with this Universal Rule lose Swiftstride (and can never gain it), but always Charge, Flee, Pursue and Overrun the distance stated in brackets.
-In the Movement Phase, at the end of step 2 of the the Movement Phase sequence (directly after Rallying Fleeing units), each unengaged friendly unit with Random Movement moves using the rules for Pursuing units, except that they can freely choose which direction to rotate towards before rolling the Pursuit distance, cannot move off the Board Edge and only take Dangerous Terrain Tests if they actually charge an enemy unit (they still test as normal when Fleeing, Pursuing a broken enemy or Overrunning).
-Whenever a unit with Random Movement needs a March Rate (e.g. when Post-Combat Reforming), use the potential maximum value of X as its March Rate.
-Characters with Random Movement can only join units with Random Movement (by moving into contact with them during the Movement Phase or by being deployed inside) , and units with this Universal Rule can only be joined by Random Movement Characters. Units with Random Movement cannot enter Buildings. If a unit has several sets of Random Movement, use the one with the lowest average (in case of a tie, you may choose which version to use). A model with Random Movement cannot move in the same Phase as it arrives on the Battlefield as Reinforcement (Dawn Assault) or Ambusher.</description>
+      <description>At the end of step 2 of the Movement Phase sequence (after Rally Fleeing Units), the unit moves using the rules for Pursuing units, with the following exceptions:
+- It moves the distance stated in brackets (X), which is also used for Flee Distance and Pursue Distance (including Overruns).
+- It can choose which direction to rotate towards before rolling the Pursuit Distance.
+- It cannot move off the Board Edge.
+- It only takes Dangerous Terrain Tests if it charges (it still tests as normal when Fleeing, Pursuing, and Overrunning).
+- For units with several instances of Random Movement, use the one with the lowest average (choose in case of a tie).
+There are several restrictions connected with Random Movement:
+- The unit cannot move normally in the Movement Phase (Advance, March, Reform) and cannot Declare Charges. Whenever it needs a March Rate (e.g. when Post-Combat Reforming), use the potential maximum value of X as its March Rate.
+- The unit cannot perform Magical Moves.
+- The unit loses Swiftstride and can never gain it.
+- Characters with Random Movement can only join units with Random Movement (by moving into contact with them during the Movement Phase or by being deployed inside), and units with Random Movement can only be joined by Characters with Random Movement.
+- Units with Random Movement cannot enter Buildings .
+- A unit with Random Movement cannot move in the same phase as it arrives on the Battlefield as Reinforcement (Dawn Assault) or Ambusher.</description>
     </rule>
     <rule id="188e-05fb-8a95-60c8" name="Scoring" hidden="false">
       <profiles/>
@@ -3985,8 +4017,9 @@ Scoring can be lost during the game:
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>A model with Skirmisher can draw Lines of Sight in any direction (i.e. it is not limited by the Front Arc) from any point on its base (remember that Charge Moves are limited by a single Wheel of no more than 90°, and that Stand and Shoot Charge Reactions can only be done against enemies in the Front Arc) and can always use Shooting Attacks from any rank (they are not limited to shooting from first and second rank).
-Units with at least one R&amp;F model with Skirmisher are formed into a skirmish formation. They are not placed in base to base contact with each other. Instead, models are placed with a 12.5mm distance between them. This gap is considered part of the unit for Cover purposes, and will have the same Size as the models in the unit. Other than this gap between models, units with Skirmisher follow the normal rules for forming units and therefore have a Front, two Flanks, a Rear, can perform Supporting Attacks, and so on. Units in skirmish formation gain Light Troops and Hard Target, never block Line of Sight, and when units in skirmish formation would contribute to Hard Cover, they contribute to Soft Cover instead.
+      <description>A model with Skirmisher can always use Shooting Attacks from any rank (they are not limited to shooting from first and second rank).
+Units with at least one R&amp;F model with Skirmisher are formed into a skirmish formation. They are not placed in base to base contact with each other. Instead, models are placed with a 12.5mm distance between them. This gap is considered part of the unit for Cover purposes, and will have the same Size as the models in the unit. Other than this gap between models, units with Skirmisher follow the normal rules for forming units and therefore have a Front, two Flanks, a Rear, can perform Supporting Attacks, and so on. Units in skirmish formation gain Light Troops and Hard Target, never block Line of Sight (remember that this also affects Cover and that they can never contribute to Hard Cover.
+
 Units in skirmish formation can only be joined by Characters that have both the same Type and the same Size as the unit. Unless a Character has the exact same base size as all R&amp;F models in the unit, it is considered Mismatched for the purpose of placement within the unit. The unit ceases to be in skirmish formation when all R&amp;F models with Skirmisher are wiped out: immediately contract their skirmish formation into a normal formation, without moving the centre of the front rank. Nudge any unit as normal to maintain base contact if possible.</description>
     </rule>
     <rule id="36f9-836f-d687-5d43" name="Ghost Step" hidden="false">
@@ -4001,7 +4034,7 @@ Units in skirmish formation can only be joined by Characters that have both the 
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>The model automatically passes Dangerous Terrain Tests taken due to Terrain. Units with more than half of the models with Strider never lose their Steadfast or Rank Bonus due to Terrain. Sometimes Strider is linked to a specific type of Terrain, stated in brackets. In this case, models with Strider are considered Striders only when interacting with such type of Terrain.</description>
+      <description>The model automatically passes Dangerous Terrain Tests taken due to Terrain. If more than half of a unit&apos;s models have Strider, the unit never loses their Steadfast or Rank Bonus due to Terrain. Sometimes Strider is linked to a specific type of Terrain, stated in brackets. In this case, models with Strider are considered Striders only when interacting with such type of Terrain.</description>
     </rule>
     <rule id="51bf-5c8d-5b95-e33c" name="Stubborn" hidden="false">
       <profiles/>
@@ -4015,7 +4048,7 @@ Units in skirmish formation can only be joined by Characters that have both the 
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>When a unit composed entirely of models with Swiftstride rolls Charge Range, Flee Distance, Pursuit Distance or Overrun Distance, it rolls an additional D6 (normally this will lead to rolling 3D6) and discards the lowest D6 rolled.</description>
+      <description>If a unit is composed entirely of models with Swiftstride, its rolls for Charge Range, Flee Distance, Pursuit Distance, and Overrun Distance are subject to Maximised Roll</description>
     </rule>
     <rule id="0b48-87f9-1467-7ef2" name="Terror" hidden="false">
       <profiles/>
@@ -4075,7 +4108,7 @@ alternate moving units one at a time, starting with the player that finished dep
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>The model cannot Pursue, Declare Charges or Declare Flee as Charge Reaction. Characters can never join units with one or more War Machines.
+      <description>The Model gains Move or Fire. The model cannot Pursue, Declare Charges or Declare Flee as Charge Reaction. Characters can never join units with one or more War Machines.
 When a War Machine fails a Panic Test, instead of Fleeing it is Shaken until the end of the next Player Turn. War Machines that fail a Break Test are automatically destroyed. War Machines and units Engaged in Combat with them cannot make Combat Reforms.
 When a unit charges a War Machine, it can move into base contact by having its Front Facing contact any point of the War Machine’s base (it must still maximise the number of models in base contact, see Bases and Base Contact). No Align Move is allowed. Ignore the War Machine’s Facing, as it does not have any due to its round base.</description>
     </rule>
@@ -4085,11 +4118,11 @@ When a unit charges a War Machine, it can move into base contact by having its F
       <infoLinks/>
       <modifiers/>
       <description>Unless selected as a mount for a Character, a model with War Platform gains Not a Leader and Character, with the following exceptions:
-- It does not count towards the Characters category (for Army List creation).
+- It does not count as Characters when Deploying Units (It may still be deployed inside Units)
 - It cannot Issue Duels, Accept Duels or Make Way.
 - It can perform Swirling Melee.
 - It does not count as Character regarding Bodyguard and Multiple Wounds.
-The model can join units even if it has Towering Presence, and having Chariot does not prevent it from joining units without Chariot. When joined to a unit, it must always be placed in the centre of the front rank, possibly pushing back other models with Front Rank, and must keep its position in the centre of the front rank at all times (as long as it is joined to the unit). If two positions are equally central (this may e.g. be the case in a unit with an even number of models in the first rank and a War Platform replacing an uneven number of models per rank), the War Platform can
+The model can join units even if it has Towering Presence, and having Chariot does not prevent it from joining units without Chariot. Additionally, it does not prevent Characters without Chariot from joining a unit containing a model with War Platform and Chariot. When joined to a unit, it must always be placed in the centre of the front rank, possibly pushing back other models with Front Rank, and must keep its position in the centre of the front rank at all times (as long as it is joined to the unit). If two positions are equally central (this may e.g. be the case in a unit with an even number of models in the first rank and a War Platform replacing an uneven number of models per rank), the War Platform can
 be placed in either of these positions. If the War Platform cannot be placed in the centre of the the front rank (e.g. due to Mismatching bases or the front rank being too narrow), the model cannot join the unit. This means that a War Platform can never join a unit with Mismatching bases and that only a single War Platform can normally be in the same unit .</description>
     </rule>
     <rule id="7455-f914-028b-3359" name="Wizard Conclave" hidden="false">
@@ -4113,19 +4146,12 @@ be placed in either of these positions. If the War Platform cannot be placed in 
       <modifiers/>
       <description>Close Combat Attacks allocated towards a model with Distracting suffer a -1 to-hit modifier. This to-hit modifier cannot be combined with any other negative to-hit modifiers.</description>
     </rule>
-    <rule id="d050-ba7d-0791-45b0" name="Fireproof" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <description>The model gains Aegis (2+) against Flaming Attacks. While a model has Fireproof, it cannot benefit from Regeneration.</description>
-    </rule>
     <rule id="5df5-1a68-27be-1ad6" name="Flammable" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Attacks with the Flaming Attacks Attack Attribute must reroll failed to-wound rolls against a model with Flammable .</description>
+      <description>The attacks ignores Regeneration saves and must reroll failed to-wound rolls against models with Flammable.</description>
     </rule>
     <rule id="69d6-4d15-1fc4-13d3" name="Hard Target" hidden="false">
       <profiles/>
@@ -4141,27 +4167,19 @@ be placed in either of these positions. If the War Platform cannot be placed in 
       <modifiers/>
       <description>Parry can only be used against Close Combat Attacks from the Front Facing. The model gains +1 Defensive Skill, or its Defensive Skill is always equal to the Offensive Skill of the attacker, whichever is higher.</description>
     </rule>
-    <rule id="6571-df5b-7c9b-8a9c" name="Otherworldly" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <description>The model gains Aegis (X) . If a second value (Y) is given, this Aegis is replaced by Aegis (Y) against Magical Attacks. In addition, all model parts of a model with Otherworldly gain Magical Attacks .</description>
-    </rule>
     <rule id="faef-6f9d-ae02-d420" name="Regeneration" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Regeneration is a Special Save, taken after a failed Armour Save. If X is given as a dice roll (e.g. Regeneration (4+)), this is the value of the Regeneration Save. If X is given as a modifier and with a maximum value (e.g. Regeneration (+1, maximum 3+)), the model gains this as a modifier to all its Regeneration Save rolls, and if the model don’t have a Regeneration save in some situation, it gains Regeneration ((7-X)+) instead. This Regeneration save cannot be increased to rolls better than the maximum value given in brackets. Regeneration saves cannot be taken alongside Aegis saves (if a model has both, it must choose which one to use) and cannot be taken against Attacks with Lethal
-Strike that roll 6+ to wound or against Flaming Attacks. While a model has Fireproof, it cannot benefit from Regeneration Saves.</description>
+      <description>Regeneration is a Special Save. Regeneration Saves cannot be taken against attacks with Lethal Strike that rolled a natural 6+ to wound, or against attacks with Flaming Attacks.</description>
     </rule>
     <rule id="4966-e452-f252-6176" name="Aegis" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Aegis is a Special Save, taken after a failed Armour Save. If X is given as a dice roll (e.g. Aegis (4+)), this is the value of the Aegis Save. If X is given as a modifier and with a maximum value (e.g. Aegis (+1, maximum 3+)), the model gains this as a modifier to all its Aegis save rolls, and if the model doesn’t have a Aegis Save in some situation, it gains Aegis ((7-X)+) instead. This Aegis Save cannot be increased to rolls better than the maximum value given in brackets. Aegis saves cannot be taken alongside Regeneration saves (if a model has both, it must choose which one to use).</description>
+      <description>Aegis is a Special Save. A model must reroll successful Aegis saves against attacks with Divine Attacks.</description>
     </rule>
     <rule id="68aa-b60b-ae0b-158b" name="Accurate" hidden="false">
       <profiles/>
@@ -4175,7 +4193,7 @@ Strike that roll 6+ to wound or against Flaming Attacks. While a model has Firep
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>When the attack hits a unit, chose up to X different ranks of this unit; these must be the ranks resulting in the maximum amount of hits. For each rank selected this way: the unit suffers X hits, to a maximum equal to the number of models in this rank. No model can suffer more than one hit from a single Area Attack.
+      <description>When the attack hits a unit, chose up to X different ranks of this unit; these must be the ranks resulting in the maximum amount of hits. For each rank selected this way: the unit suffers X hits, to a maximum equal to the number of models in this rank. A single Area Attack can never cause more hits than there are models in the unit.
 Some Area Attacks have a higher Strength and/or additional Attack Attributes stated in square brackets (such as Strength 3 [7], [Multiple Wounds (D3)]). If so, a single hit from this attack, chosen by the attacker, uses the Strength value and Attack Attributes in brackets. The bracketed values and Attack Attributes are not applied to any other hits.</description>
     </rule>
     <rule id="9371-5924-2a39-1652" name="Crush Attack" hidden="false">
@@ -4183,7 +4201,7 @@ Some Area Attacks have a higher Strength and/or additional Attack Attributes sta
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>A model part with Crush Attack, or using a Weapon with Crush Attack, may exchange all of its Close Combat Attacks for a single Close Combat Attack, which cannot be made as a Supporting Attack, is resolved at Initiative Step 0, has Strength 10, Armour Penetration 10 (regardless of user’s Agility, Strength and Armour Penetration) and Multiple Wounds (D3+1). Crush Attacks never benefit from any Weapons or other Attack Attributes the model part may have. The model can still use its Special Attacks ( such as Stomp Attacks or Impact Hits).</description>
+      <description>At the end of step 4 of the Round of Combat Sequence (just after Issue and Accept Duels), the model part may announce that it will use its Crush Attack this Round of Combat. It performs a single Close Combat Attack, which cannot be made as a Supporting Attack , is resolved at Initiative Step 0, has Strength 10, Armour Penetration 10 (regardless of user’s Agility, Strength, and Armour Penetration), and Multiple Wounds (D3+1). Crush Attacks never benefit from any Weapons or other Attack Attributes the model part may have. The model part cannot make any other Close Combat Attacks during this Round of Combat (but can still use its Special Attacks such as Stomp Attacks or Impact Hits).</description>
     </rule>
     <rule id="030a-8283-3ebb-93f1" name="Divine Attacks" hidden="false">
       <profiles/>
@@ -4225,7 +4243,7 @@ Some Area Attacks have a higher Strength and/or additional Attack Attributes sta
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>If the attack wounds with a natural to-wound roll of 6+, its Armour Penetration is set to 10 and the target of the attack cannot take a Regeneration Save against it.</description>
+      <description>An attack with Lethal Strike that wounds with a natural to-wound roll of ‘6’ has its Armour Penetration set to 10 and ignores Regeneration saves.</description>
     </rule>
     <rule id="f17a-c7f9-af34-a039" name="Lightning Reflexes" hidden="false">
       <profiles/>
@@ -4239,7 +4257,7 @@ Some Area Attacks have a higher Strength and/or additional Attack Attributes sta
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>The attack doesn’t have any special effects. However, it interacts with other rules, such as Otherworldly . Model parts with Magical Attacks apply it also to their Special Attacks (such as Stomp Attacks, Impact Hits and Breath Attacks).</description>
+      <description>The attack doesn’t have any special effects. However, it interacts with other rules, such as Aegis (X, against Magical Attacks). Model parts with Magical Attacks apply it also to their Special Attacks (such as Stomp Attacks , Impact Hits and Breath Attack).</description>
     </rule>
     <rule id="6475-e063-0070-f6cc" name="Move or Fire" hidden="false">
       <profiles/>
@@ -4326,7 +4344,8 @@ Some Penetrating attacks have a higher Strength and/or additional Attack Attribu
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>If at least one model in a unit can draw Line of Sight to the target, then all model parts using Volley Fire in the same unit ignore all intervening models of their own size or smaller for Line of Sight and Cover purposes.</description>
+      <description>If at least one model in a unit can draw Line of Sight to the target, then all model parts using Volley Fire in the same unit ignore all intervening models of their own size or smaller for Line of Sight and Cover purposes.
+In addition, unless making a Stand and Shoot Charge Reaction, models in a unit in Line Formation that has not moved during this Player Turn may shoot from one additional rank (usually this means that they can shoot from the first three ranks).</description>
     </rule>
     <rule id="a9a1-31b4-37a3-4138" name="Weapon Master" hidden="false">
       <profiles/>
@@ -4374,7 +4393,7 @@ In multipart models, only model parts that also have Restraints can use Stomp At
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>This attack may be used by units consisting of models with Sweeping Attack. When the unit Advance Moves or March Moves, you may nominate a single unengaged enemy unit that the unit with Sweeping Attack moved through or over during this move (meaning their Bases were Overlapping, even partially). The whole unit makes the Sweeping Attack against the nominated enemy unit, which is resolved when the March or Advance Move is completed. Follow the description in the unit profile. These attacks hit automatically and count as Ranged Attacks. When a model performs a Sweeping At tack, the distance moved is counted from its starting position to the point on the Battlefield where it performed the attack, and then to its final position.</description>
+      <description>This attack may be used by units consisting of models with Sweeping Attack. When the unit Advance Moves or March Moves, you may nominate a single unengaged enemy unit that the unit with Sweeping Attack moved through or over during this move (meaning their Bases were Overlapping, even partially). The whole unit makes the Sweeping Attack against the nominated enemy unit, which is resolved when the March or Advance Move is completed. Follow the description in the unit profile. These attacks hit automatically and count as Ranged Attacks. When a model performs a Sweeping At tack, the distance moved is counted from its starting position to the point on the Battlefield where it performed the attack, and then to its final position. Each Sweeping Attack can only be performed once per Player Turn.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
