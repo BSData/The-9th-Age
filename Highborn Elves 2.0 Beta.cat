@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="66f6-8610-3962-63fa" name="Highborn Elves 2.0 Beta" revision="12" battleScribeVersion="2.01" authorName="Karanadon" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="66f6-8610-3962-63fa" name="Highborn Elves 2.0 Beta" revision="13" battleScribeVersion="2.01" authorName="Karanadon" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2640,7 +2640,15 @@
                   <modifiers/>
                 </infoLink>
               </infoLinks>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ee1b-9279-d27e-a466" type="atLeast"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f251-ce97-3608-74ca" type="max"/>
               </constraints>
@@ -6147,7 +6155,7 @@
                 <characteristic name="HP" characteristicTypeId="f381-7850-7fa8-3440" value="1"/>
                 <characteristic name="Def" characteristicTypeId="160d-4624-273f-2114" value="4"/>
                 <characteristic name="Res" characteristicTypeId="ec15-bc66-645e-db5d" value="3"/>
-                <characteristic name="Arm" characteristicTypeId="597b-8735-3dd1-0e70" value="C"/>
+                <characteristic name="Arm" characteristicTypeId="597b-8735-3dd1-0e70" value="0"/>
               </characteristics>
             </profile>
             <profile id="2698-7153-5430-f982" name="Grey Watcher Offence" hidden="false" profileTypeId="154c-6605-1486-e1da" profileTypeName="3 Offensive">
@@ -8796,7 +8804,7 @@ When a unit is hit by attacks with Fae Miasma, it must take a Resilience Test fo
       <modifiers/>
       <characteristics>
         <characteristic name="Type" characteristicTypeId="017b-143b-0520-bdc1"/>
-        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value="6+"/>
+        <characteristic name="Save" characteristicTypeId="4ca3-2498-f356-f056" value=""/>
         <characteristic name="Rules" characteristicTypeId="f269-16dd-a614-0f90" value="If on foot, the wearer gains +1 Armour, which is improved to +2 Armour against Shooting Attacks. Lion’s Fur cannot be taken by a model with Dragonforged Armour."/>
       </characteristics>
     </profile>
