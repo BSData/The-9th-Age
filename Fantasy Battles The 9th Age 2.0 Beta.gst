@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="11" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="12" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -4539,7 +4539,7 @@ In multipart models, only model parts that also have Restraints can use Stomp At
       <characteristics>
         <characteristic name="Range" characteristicTypeId="c2a8-bc01-360c-6aca" value="30&quot;"/>
         <characteristic name="Shots" characteristicTypeId="6867-dcc2-7874-e3b4" value="1"/>
-        <characteristic name="Str" characteristicTypeId="f166-13ff-9227-4525" value="1"/>
+        <characteristic name="Str" characteristicTypeId="f166-13ff-9227-4525" value="3"/>
         <characteristic name="AP" characteristicTypeId="857a-4ce1-d134-8701" value="0"/>
         <characteristic name="Attributes" characteristicTypeId="d988-3828-5f00-7582" value="Volley Fire"/>
       </characteristics>
