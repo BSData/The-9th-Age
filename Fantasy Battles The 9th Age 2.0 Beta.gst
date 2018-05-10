@@ -1547,7 +1547,7 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="increment" field="3651-f3f0-41ef-0504" value="3.5">
+            <modifier type="increment" field="3651-f3f0-41ef-0504" value="3">
               <repeats>
                 <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
@@ -1591,108 +1591,6 @@
           </modifiers>
           <constraints>
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe15-a0db-3395-15ca" type="max"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-    <forceEntry id="e51a-898b-4a2f-5b52" name="Sylvan Elves - Oaken Crown" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <forceEntries/>
-      <categoryLinks>
-        <categoryLink id="63ab-7e63-1962-cd48" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="41a5-2ca1-c2ed-517b" value="4">
-              <repeats>
-                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="41a5-2ca1-c2ed-517b" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="680d-e083-d94c-26aa" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="6aa8-f15d-699e-dbd2" value="2.5">
-              <repeats>
-                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6aa8-f15d-699e-dbd2" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="3c83-1aa4-231c-11ff" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryLink>
-        <categoryLink id="6cb4-d6df-1769-0cf9" name="Unseen Arrows" hidden="false" targetId="fd02-94df-6a9b-24d5" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="b0ad-ed06-3366-c167" value="1">
-              <repeats>
-                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b0ad-ed06-3366-c167" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="6ade-9ebe-e1a4-2e14" name="Fleet of Foot" hidden="false" targetId="5be1-ab92-d6dc-68e2" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="9748-f0cf-aff3-1fbc" value="1.5">
-              <repeats>
-                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9748-f0cf-aff3-1fbc" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="2828-7eb4-1f84-53c1" name="Forest Giants" hidden="false" targetId="5479-2126-272c-a9e3" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="7bc3-0127-6c6a-6c37" value="4">
-              <repeats>
-                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7bc3-0127-6c6a-6c37" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
