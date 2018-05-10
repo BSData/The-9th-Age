@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="14" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="15" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2426,7 +2426,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="311e-5a0b-83f2-9069" name="Blessed Inscriptions" hidden="false" collective="false" type="upgrade">
@@ -2510,7 +2510,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="eedf-4585-d0c1-f613" name="Hero&apos;s Heart" hidden="false" collective="false" type="upgrade">
@@ -2538,7 +2538,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="315a-5ef6-a1b7-336b" name="Touch of Greatness" hidden="false" collective="false" type="upgrade">
@@ -2566,7 +2566,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dd35-7a49-6952-982e" name="Supernatural Dexterity" hidden="false" collective="false" type="upgrade">
@@ -2664,7 +2664,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Suit of Armour Enchantment"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The wearer gains Regeneration (4+) and +1 Armour."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The wearer gains Fortitude (4+) and +1 Armour."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2680,7 +2680,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="90.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="95.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f961-86c2-9c05-26b8" name="Destiny&apos;s Call - Standard Size only" hidden="false" collective="false" type="upgrade">
@@ -2736,7 +2736,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="65.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7826-dc11-ac6b-51c3" name="Dusk Forged" hidden="false" collective="false" type="upgrade">
@@ -2748,7 +2748,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Shield Enchantment"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer may choose to reroll its failed Armour Saves while using this Shield. If it does, it cannot take Aegis or Regeneration Saves."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer may choose to reroll its failed Armour Saves while using this Shield. If it does, it automatically fails all special saves."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2785,7 +2785,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Heavy Armour and Plate Armour enchantment."/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The wearer gains +2 Armour. This Armour Enchantment cannot be used against Magical Attacks."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The wearer gains +2 Armour against non-Magical Attacks."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2813,7 +2813,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Suit of Armour Enchantment"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The wearer gains +1 Armour and Aegis (2+, against Flaming Attacks). The wearer cannot benefit from Regeneration."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The wearer gains +1 Armour and Aegis (3+, against Flaming Attacks). The wearer automatically fails all Fortitude saves."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2841,7 +2841,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Shield Enchantment"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer cannot use Parry and gains +1 Armour. Impact Hits distributed towards the bearer always have Armour Penetration 0."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer cannot use Parry and gains +1 Armour. Impact Hits distributed towards the bearer suffer -2 Armour Penetration."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2944,10 +2944,10 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="02ee-20af-e439-e56f" name="Book of Arcane Power - Dominant. Cannot be taken by Wizard Master." hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="02ee-20af-e439-e56f" name="Book of Arcane Mastery - Dominant. Cannot be taken by Wizard Master." hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="1fda-2a73-aee7-500b" name="Book of Arcane Power" hidden="false" profileTypeId="5bba-441c-01cb-6187" profileTypeName="Artefact">
               <profiles/>
@@ -2956,7 +2956,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="A Wizard with this Artefact gains a +1 modifier to its casting rolls."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The Bearer&apos;s first casting attempt in each magic phase gains +2 to cast. When using a single magic dice for this casting attempt, a natural roll of 1 or 2 on the magic dice is always a failed casting attempt, regardless of any modifiers."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2972,7 +2972,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy" hidden="false" collective="false" type="upgrade">
@@ -2984,7 +2984,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer gains +1 Discipline. This modifier cannot be used to increase the bearer&apos;s Discipline above 10. If taken by the General, the opponent doubles the Victory Points bonus for killing this General (normally +400 instead of +200)."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer gains +1 Discipline. If taken by the General, the opponent doubles the Victory Points bonus for killing this General (normally +400 instead of +200)."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3028,7 +3028,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2078-81dc-eac0-b856" name="Rod of Battle" hidden="false" collective="false" type="upgrade">
@@ -3056,7 +3056,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3f7d-5a54-b1ca-550f" name="Binding Scroll" hidden="false" collective="false" type="upgrade">
@@ -3068,7 +3068,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="One use only. May be activated at the start of a Magic Phase. When activated, pick an enemy model and select one of its spells (including Attribute and Bound Spells). The chosen model cannot cast the selected spell during this Magic Phase. Only a single Binding Scroll may be activated during the same Phase."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="One use only. May be activated after siphon the veil. When activated, pick an enemy model and select one of its spells (including Attribute and Bound Spells). The chosen model cannot cast the selected spell during this Magic Phase. Only a single Binding Scroll may be activated during the same Phase."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3139,7 +3139,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3d77-9d65-58c3-9e7d" name="Lightning Vambraces" hidden="false" collective="false" type="upgrade">
@@ -3167,7 +3167,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8cca-6eee-ecd5-1620" name="Talisman of Shielding" hidden="false" collective="false" type="upgrade">
@@ -3250,7 +3250,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="52aa-545b-5fc8-64fe" name="Scepter of Power - Dominant" hidden="false" collective="false" type="upgrade">
@@ -3305,7 +3305,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b996-d7ae-e854-2601" name="Dragon Staff" hidden="false" collective="false" type="upgrade">
@@ -3345,7 +3345,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="After Spell Selection (at the end of step 7 of the Pre-Game Sequence), mark a single enemy model in the opponent’s Army List. All dispelling attempts of spells cast by that model gain a +1 to dispel modifier."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="After Spell Selection (at the end of step 7 of the Pre-Game Sequence), mark a single enemy model in the opponent’s Army List. All dispelling attempts of spells cast by that model gain a +1 dispelling modifier, provided the bearer is on the battlefield."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3373,7 +3373,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer gains Aegis (2+, against Flaming Attacks). The wearer cannot benefit from Regeneration."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer gains Aegis (2+, against Flaming Attacks). The bearer automatically fails all Fortitude Saves."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3401,7 +3401,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="One use only. May be activated at the start of any Phase or Round of Combat. Until the end of the Player Turn, the bearer gains +3 Agility, to a maximum of 10."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="One use only. May be activated at the start of any Phase or Round of Combat. Until the end of the Player Turn, the bearer gains +3 Agility."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3471,7 +3471,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Banner"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="One use only. May be activated at the start of a Round of Combat. Close Combat Attacks from R&amp;F models ina unit with one or more Rending Banners gain +1 Armour Penetration. This effect lasts until the bearer’s unit is no longer Engaged in Combat."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="One use only. May be activated at the start of a Round of Combat. Close Combat Attacks from R&amp;F models in the bearer&apos;s unit gain +1 Armour Penetration until they are no longer engaged in combat. A model can only be affected by a single Rending Banner at the same time."/>
               </characteristics>
             </profile>
           </profiles>
@@ -3543,7 +3543,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="719b-6dee-2a2a-8e74" name="Banner of Discipline" hidden="false" collective="false" type="upgrade">
@@ -3599,7 +3599,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5bf4-2476-8235-9323" name="Banner of the Relentless Company" hidden="false" collective="false" type="upgrade">
@@ -3627,7 +3627,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="59ec-00bd-1953-e80a" name="Flaming Standard" hidden="false" collective="false" type="upgrade">
@@ -4167,12 +4167,12 @@ be placed in either of these positions. If the War Platform cannot be placed in 
       <modifiers/>
       <description>Parry can only be used against Close Combat Attacks from the Front Facing. The model gains +1 Defensive Skill, or its Defensive Skill is always equal to the Offensive Skill of the attacker, whichever is higher.</description>
     </rule>
-    <rule id="faef-6f9d-ae02-d420" name="Regeneration" hidden="false">
+    <rule id="faef-6f9d-ae02-d420" name="Fortitude" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Regeneration is a Special Save. Regeneration Saves cannot be taken against attacks with Lethal Strike that rolled a natural 6+ to wound, or against attacks with Flaming Attacks.</description>
+      <description>Fortitude is a Special Save. Fortitude Saves cannot be taken against attacks with Lethal Strike that rolled a natural 6+ to wound, or against attacks with Flaming Attacks.</description>
     </rule>
     <rule id="4966-e452-f252-6176" name="Aegis" hidden="false">
       <profiles/>
@@ -4330,7 +4330,7 @@ Some Penetrating attacks have a higher Strength and/or additional Attack Attribu
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>The attack has its Strength set to 3 and its Armour Penetration set to 10 .</description>
+      <description>The attack has its Strength always set to 3 and its Armour Penetration always set to 10 .</description>
     </rule>
     <rule id="c545-6ef2-4618-4d0f" name="Unwieldy" hidden="false">
       <profiles/>
