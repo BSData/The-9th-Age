@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3557-241b-5999-a3b1" name="Saurian Ancients 2.0 Beta" revision="12" battleScribeVersion="2.01" authorName="Karanadon" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3557-241b-5999-a3b1" name="Saurian Ancients 2.0 Beta" revision="13" battleScribeVersion="2.01" authorName="Karanadon" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -325,7 +325,7 @@
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="290.0"/>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="280.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="dd98-6047-314b-fbc4" name="Raptor" hidden="false" collective="false" type="upgrade">
@@ -398,7 +398,7 @@
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="480.0"/>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="490.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1821,7 +1821,7 @@
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="140.0"/>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="135.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0ade-1e54-8877-cfa9" name="Grasp of the Immortal" hidden="false" collective="false" type="upgrade">
@@ -1846,7 +1846,7 @@
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="110.0"/>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="120.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="95c3-d71a-20c9-7653" name="Ancient Knowledge" hidden="false" collective="false" type="upgrade">
@@ -1857,11 +1857,19 @@
                   <rules/>
                   <infoLinks/>
                   <modifiers/>
-                  <description>Instead of selecting spells, the Cuatl Lord knows all spells from Divination. A single Learned Spell may be exchanged for the Hereditary Spell during Spell Selection. All friendly Wizards within 12&quot; count as having spells from Divination for the purpose of The Conclave.</description>
+                  <description>Instead of selecting spells, the Cuatl Lord knows all spells from Divination. A single Learned Spell may be exchanged for the Hereditary Spell during Spell Selection. All friendly model parts with telepathic link within 12&quot; count as a wizard for the purpose of &quot;The Conclave&quot;.</description>
                 </rule>
               </rules>
               <infoLinks/>
-              <modifiers/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="0193-48cd-e080-e2c8" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="422f-04be-9820-bb97" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="361b-a053-9e09-ebb7" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a93e-3ca9-1e6e-6ea3" type="max"/>
@@ -1871,7 +1879,7 @@
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="90.0"/>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="95.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d1c0-33bd-8434-25c4" name="Protean Potentate" hidden="false" collective="false" type="upgrade">
@@ -1899,15 +1907,15 @@
                 <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0528-729c-7d28-c9d0" name="Master Transmutor" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="0528-729c-7d28-c9d0" name="Soulfire Weaver" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules>
-                <rule id="b9ac-4593-c571-e809" name="Master Transmutor" hidden="false">
+                <rule id="8757-315d-aa10-aa3d" name="Soulfire Weaver" hidden="false">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
                   <modifiers/>
-                  <description>At the end of the opponent&apos;s Magic Phase, you may turn a single unused Magic Dice from your pool into 3 Veil Tokens that may be turned into Magic Dice in subsequent friendly Magic Phases. This cannot be combined with Master of Reality.</description>
+                  <description>Every time the Cuatl Lord successfully casts a spell from Evocation, it can choose to discard one or more Veil Tokens instead of casting the Attribute Spell. For each Veil Token discarded this way, choose one unengaged enemy unit within 12” of a target of the spell (no unit can be chosen more than once per spell). Each chosen unit suffers a hit with Strength 4, Armour Penetration 0, Area Attack (2), and Magical Attacks</description>
                 </rule>
               </rules>
               <infoLinks/>
@@ -1921,7 +1929,7 @@
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="150.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1eb6-0c10-2df5-4a6a" name="Breaker of Spells" hidden="false" collective="false" type="upgrade">
@@ -1996,7 +2004,7 @@
               <selectionEntryGroups/>
               <entryLinks/>
               <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2622,7 +2630,7 @@
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="450.0"/>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="435.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -3138,7 +3146,7 @@
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="450.0"/>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="435.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -3606,7 +3614,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="230.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="225.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec7c-18f7-71ee-668a" name="Saurian Warriors" hidden="false" collective="false" type="unit">
@@ -3719,7 +3727,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="21.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="aa1f-2fff-1016-a072" name="Spears" hidden="false" collective="false" type="upgrade">
@@ -3978,12 +3986,12 @@
                   <rules/>
                   <infoLinks/>
                   <modifiers/>
-                  <description>The Saurian Warrior gains +1 Armour against Special Attacks.</description>
+                  <description>The Saurian Warrior gains +1 Armour against Close Combat Attacks.</description>
                 </rule>
               </rules>
               <infoLinks/>
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
                   <repeats>
                     <repeat field="selections" scope="ec7c-18f7-71ee-668a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0977-d6db-94fa-f6e9" repeats="1" roundUp="false"/>
                   </repeats>
@@ -4034,7 +4042,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="-35.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="-60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6d6a-55bb-f04f-5b8f" name="Skink Braves" hidden="false" collective="false" type="unit">
@@ -4560,7 +4568,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="13.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="12.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2ca1-a6f0-7ede-2223" name="Caiman" hidden="false" collective="false" type="model">
@@ -4891,7 +4899,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="31.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="32.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7459-c625-7b4e-3eda" name="Banner Enchantments" hidden="false" collective="false" type="upgrade">
@@ -4962,7 +4970,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="-90.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="-115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="307e-bcd7-0a5a-1fa9" name="Raptor Riders" hidden="false" collective="false" type="unit">
@@ -5094,7 +5102,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="52.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1192-6bc7-db61-2e67" name="Banner Enchantments" hidden="false" collective="false" type="upgrade">
@@ -5165,7 +5173,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="5.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="56f2-0046-f90a-d2cf" name="Caimans" hidden="false" collective="false" type="unit">
@@ -5268,7 +5276,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="88.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="85.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -5354,7 +5362,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="-54.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="-45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="889f-5702-f98f-1605" name="Snake Swarms" hidden="false" collective="false" type="unit">
@@ -5482,7 +5490,7 @@
             </infoLink>
           </infoLinks>
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="12">
               <repeats>
                 <repeat field="selections" scope="889f-5702-f98f-1605" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2258-f13c-792c-80aa" repeats="1" roundUp="false"/>
               </repeats>
@@ -5505,7 +5513,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6b51-ef75-d0bd-20d6" name="Skink Hunters" hidden="false" collective="false" type="unit">
@@ -6067,7 +6075,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="130.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="135.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a0cf-fa78-91ab-de9d" name="Salamander" hidden="false" collective="false" type="model">
@@ -6113,7 +6121,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="160.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="165.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -6276,7 +6284,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5c36-96fc-cc98-7910" name="Shield" hidden="false" collective="false" type="upgrade">
@@ -6445,7 +6453,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="85.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6e90-3f58-5696-193e" name="Ramphodon Riders" hidden="false" collective="false" type="unit">
@@ -6637,7 +6645,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="65.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="62.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3228-1b46-622d-e3ed" name="Shield" hidden="false" collective="false" type="upgrade">
@@ -6707,7 +6715,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="29.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7aec-c5e2-0281-0b84" name="Taurosaur" hidden="false" collective="false" type="model">
@@ -7154,7 +7162,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="HP" characteristicTypeId="f381-7850-7fa8-3440" value="4"/>
+            <characteristic name="HP" characteristicTypeId="f381-7850-7fa8-3440" value="5"/>
             <characteristic name="Def" characteristicTypeId="160d-4624-273f-2114" value="4"/>
             <characteristic name="Res" characteristicTypeId="ec15-bc66-645e-db5d" value="5"/>
             <characteristic name="Arm" characteristicTypeId="597b-8735-3dd1-0e70" value="6"/>
@@ -7195,7 +7203,7 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="536b-09e3-aa7e-321b" name="Unbreakable" hidden="false" targetId="99ef-69e8-164b-3335" type="rule">
+        <infoLink id="536b-09e3-aa7e-321b" name="Stubborn" hidden="false" targetId="51bf-5c8d-5b95-e33c" type="rule">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -7333,9 +7341,7 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
-              </costs>
+              <costs/>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -7344,7 +7350,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="310.0"/>
+        <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="350.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="31c1-8fb9-67db-b5b9" name="Skink Captain on Flying Mount" hidden="false" collective="false" type="model">
@@ -8057,7 +8063,7 @@
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="90.0"/>
+                <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="85.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -8978,7 +8984,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Suit of Armour Enchantment."/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The wearer gains +1 Armour, +1 Health Point, and Crush Attack. "/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The wearer gains +1 Armour and +1 Health Point."/>
               </characteristics>
             </profile>
           </profiles>
@@ -8994,7 +9000,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6805-d0d3-2feb-2789" name="Serrated Scales" hidden="false" collective="false" type="upgrade">
@@ -9006,7 +9012,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Shield Enchantment."/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer gains +2 Attack Value while using this Shield. The 2 Close Combat Attacks gained by this enchantment always have Strength 5 and Armour Penetration 2."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The bearer gains Grind Attacks (2) that are always resolved with Strength5 and Armour Penetration 2."/>
               </characteristics>
             </profile>
           </profiles>
@@ -9073,7 +9079,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="100.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="90.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fa1c-0e08-ddf2-21eb" name="Wildfire Burst" hidden="false" collective="false" type="upgrade">
@@ -9085,7 +9091,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Bow Enchantment"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="This enchanted weapon has Shots: 4, Strength 4, and Armour Penetration 1. Attacks made with this weapon gain Flaming Attacks and Magical Attacks. A unit that is hit by these attacks loses Soft Cover until the end of the Player Turn (if it had it). If the enemy unit was in Hard Cover, it is now considered to be in Soft Cover until the end of the Player Turn. "/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="This enchanted weapon has Shots: 4, Strength 4, Armour Penetration 1 and always hits on 3+. Attacks made with this weapon gain Flaming Attacks and Magical Attacks. A unit that is hit by these attacks loses Soft Cover until the end of the Player Turn (if it had it). If the enemy unit was in Hard Cover, it is now considered to be in Soft Cover until the end of the Player Turn. "/>
               </characteristics>
             </profile>
           </profiles>
@@ -9101,7 +9107,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="75.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -9127,7 +9133,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Type" characteristicTypeId="d779-a728-a38c-8340" value="Artefact"/>
-                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The Bearer&apos;s model gains Aegis (2+, against Flaming Attacks) and Hard Target, and cannot benefit from Regeneration."/>
+                <characteristic name="Effect" characteristicTypeId="9f42-950f-d2ed-9247" value="The Bearer&apos;s model gains Aegis (2+, against Flaming Attacks) and Hard Target, and cannot benefit from Fortitude."/>
               </characteristics>
             </profile>
           </profiles>
@@ -9143,7 +9149,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="75.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3be5-23e9-c563-1149" name="Spirit of the Stampede" hidden="false" collective="false" type="upgrade">
@@ -9227,7 +9233,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5c28-afe3-e354-1ff1" name="Ancient Plaque - Dominant" hidden="false" collective="false" type="upgrade">
@@ -9311,7 +9317,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="100.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="90.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9cd3-1be3-7559-0fcb" name="Sun Tablet" hidden="false" collective="false" type="upgrade">
@@ -9367,7 +9373,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="65.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="80.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -9409,7 +9415,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="75.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ca34-00f9-787f-6e4b" name="Tree Frog Banner" hidden="false" collective="false" type="upgrade">
