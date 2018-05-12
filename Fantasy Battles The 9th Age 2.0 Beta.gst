@@ -2135,7 +2135,7 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="increment" field="0fae-ea45-5878-0532" value="2">
+            <modifier type="increment" field="0fae-ea45-5878-0532" value="2.5">
               <repeats>
                 <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
@@ -2288,7 +2288,7 @@
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="increment" field="c88e-bb65-e8f6-716d" value="2.5">
+            <modifier type="increment" field="c88e-bb65-e8f6-716d" value="2">
               <repeats>
                 <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
