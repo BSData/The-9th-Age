@@ -1559,40 +1559,6 @@
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3651-f3f0-41ef-0504" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="832c-0711-1206-fe0f" name="Fleet of Foot" hidden="false" targetId="5be1-ab92-d6dc-68e2" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="a4c7-794f-bde9-aa4e" value="4.5">
-              <repeats>
-                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a4c7-794f-bde9-aa4e" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="ff0c-936b-fabb-dcf2" name="Forest Giants" hidden="false" targetId="5479-2126-272c-a9e3" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="increment" field="fe15-a0db-3395-15ca" value="2.5">
-              <repeats>
-                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe15-a0db-3395-15ca" type="max"/>
-          </constraints>
-        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="739c-52ca-bcef-2314" name="Empire of Sonnstahl" hidden="false">
