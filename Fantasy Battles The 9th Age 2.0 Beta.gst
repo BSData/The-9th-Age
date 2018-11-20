@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="18" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="19" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2451,7 +2451,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="eedf-4585-d0c1-f613" name="Hero&apos;s Heart" hidden="false" collective="false" type="upgrade">
@@ -2479,7 +2479,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="315a-5ef6-a1b7-336b" name="Touch of Greatness" hidden="false" collective="false" type="upgrade">
@@ -2507,7 +2507,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dd35-7a49-6952-982e" name="Supernatural Dexterity" hidden="false" collective="false" type="upgrade">
@@ -2535,7 +2535,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="81c6-6663-7fd4-18f7" name="Cleansing Light" hidden="false" collective="false" type="upgrade">
@@ -2613,7 +2613,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="95.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f961-86c2-9c05-26b8" name="Destiny&apos;s Call - Standard Size only" hidden="false" collective="false" type="upgrade">
@@ -2869,7 +2869,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="02ee-20af-e439-e56f" name="Book of Arcane Mastery - Dominant. Cannot be taken by Wizard Master." hidden="false" collective="false" type="upgrade">
@@ -2953,7 +2953,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2078-81dc-eac0-b856" name="Rod of Battle" hidden="false" collective="false" type="upgrade">
@@ -2981,7 +2981,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3f7d-5a54-b1ca-550f" name="Binding Scroll" hidden="false" collective="false" type="upgrade">
@@ -3064,7 +3064,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3d77-9d65-58c3-9e7d" name="Lightning Vambraces" hidden="false" collective="false" type="upgrade">
@@ -3175,10 +3175,10 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="52aa-545b-5fc8-64fe" name="Scepter of Power - Dominant" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="52aa-545b-5fc8-64fe" name="Scepter of Power" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="f4a8-989f-6404-cbf3" name="Scepter of Power" hidden="false" profileTypeId="5bba-441c-01cb-6187" profileTypeName="Artefact">
               <profiles/>
@@ -3286,7 +3286,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="57fe-c8e7-f786-132c" name="Dragonfire Gem" hidden="false" collective="false" type="upgrade">
@@ -3524,7 +3524,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5bf4-2476-8235-9323" name="Banner of the Relentless Company" hidden="false" collective="false" type="upgrade">
@@ -3552,7 +3552,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="59ec-00bd-1953-e80a" name="Flaming Standard" hidden="false" collective="false" type="upgrade">
