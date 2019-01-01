@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fb15-9166-d400-2894" name="Orcs and Goblins 2.0 Beta" revision="12" battleScribeVersion="2.01" authorName="Mikel2311" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fb15-9166-d400-2894" name="Orcs and Goblins 2.0 Beta" revision="13" battleScribeVersion="2.01" authorName="Mikel2311" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -3654,15 +3654,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3173-2f5b-58c5-06d0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="815b-feb6-ef79-e929" type="min"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="a57a-8cf5-5a81-3a81" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints/>
-            </categoryLink>
-          </categoryLinks>
+          <categoryLinks/>
           <selectionEntries>
             <selectionEntry id="ee78-2c56-490c-1de3" name="Wizard Apprentice" hidden="false" collective="false" type="upgrade">
               <profiles/>
@@ -9911,13 +9903,57 @@ The roll for the number of hits from its Stomp Attacks is subject to Maximised R
           <infoLinks/>
           <modifiers/>
         </infoLink>
+        <infoLink id="bbe9-37fe-1da4-acf0" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="6051-4fdb-b641-851c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ad7-93c4-4a91-584b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="append" field="name" value=" (+1 Str, +1 AP)">
+              <repeats/>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers/>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="09f2-1a3d-f1ca-0da5" type="max"/>
       </constraints>
       <categoryLinks/>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="3ad7-93c4-4a91-584b" name="Big Wing" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules>
+            <rule id="43f4-18cd-86b1-c8b0" name="Big Wing" hidden="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <description>The Wyvern gains Devastating Charge (+1 Str, +1 AP) and changes its base size to 75x100mm.</description>
+            </rule>
+          </rules>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb16-3296-2aaf-eee5" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="24fd-8af8-0c78-001c" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
