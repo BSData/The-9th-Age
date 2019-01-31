@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="19" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="Fantasy Battles: The 9th Age 2.0 Beta" revision="21" battleScribeVersion="2.01" authorName="Karanadon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -352,6 +352,13 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="0adc-f4e6-0c6b-c21b" name="Swift Death" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="e5ba-9a6f-e156-4126" name="Aves" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -2306,6 +2313,74 @@
           <constraints>
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d0b8-0975-7f52-d2e8" type="max"/>
           </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="c003-57d4-d8b2-f6b6" name="Daemon Legions" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <forceEntries/>
+      <categoryLinks>
+        <categoryLink id="f380-9d98-1069-e48c" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="02ee-ea44-8365-04b3" value="4">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="02ee-ea44-8365-04b3" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="22ab-3922-c59e-2dec" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="c440-aac4-f1f2-f213" value="2.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c440-aac4-f1f2-f213" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="6742-b649-a3a3-09a1" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="2411-bf2d-5cc3-0ca3" value="3.5">
+              <repeats>
+                <repeat field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2411-bf2d-5cc3-0ca3" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="c0e6-8fdd-33e0-4a67" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
