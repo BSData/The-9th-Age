@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.1.1" revision="19" battleScribeVersion="2.02" authorName="Artur &apos;WarX&apos; Fijalkowski, DarkSky" authorContact="wiki.warx@gmail.com" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.2" revision="20" battleScribeVersion="2.02" authorName="Artur &apos;WarX&apos; Fijalkowski, DarkSky" authorContact="wiki.warx@gmail.com" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="e6e2-5027-c8f6-da13" name="2 Defensive">
       <characteristicTypes>
@@ -296,7 +296,7 @@
                 <categoryLink id="c767-addf-0104-b530" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
               </categoryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="185.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -360,11 +360,6 @@
         <infoLink id="81f2-4ee8-6e59-e911" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="4508-096e-4aeb-adf0" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="e7fc-b37b-7e58-d098" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="21ac-3a62-4a11-a2ac" type="lessThan"/>
-              </conditions>
-            </modifier>
             <modifier type="append" field="name" value=" (Champion: Spear of Infinity)"/>
           </modifiers>
         </infoLink>
@@ -415,39 +410,37 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb53-99a1-fe95-2c85" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="70be-adf6-6642-cd46" name="Incendiary Ichor" hidden="false" collective="false" targetId="1351-554d-e665-dd67" type="selectionEntry">
+            <entryLink id="2314-1ba8-21db-3a01" name="Unit - Incendiary Ichor" hidden="false" collective="false" targetId="7679-cd89-0364-5aad" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
                   <repeats>
-                    <repeat field="selections" scope="e7fc-b37b-7e58-d098" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61cf-25a0-3b8d-9a50" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="6ba1-0bcf-e6d9-e923" name="Darkhide" hidden="false" collective="false" targetId="57b7-b10f-01b4-4706" type="selectionEntry">
+            <entryLink id="d4fc-36be-78f0-cc29" name="Unit - Dark Hide" hidden="false" collective="false" targetId="dc2e-45f8-578d-b084" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
                   <repeats>
-                    <repeat field="selections" scope="e7fc-b37b-7e58-d098" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61cf-25a0-3b8d-9a50" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="5425-4660-67e1-bdfa" name="Sorcerous Antennae" hidden="false" collective="false" targetId="44ee-ff4b-bf52-34b5" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="45"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="21ac-3a62-4a11-a2ac" name="Mark of the Eternal Champion" hidden="true" collective="false" targetId="a763-c2bb-8518-9ac0" type="selectionEntry">
+            <entryLink id="a336-eb69-5b4e-2410" name="Unit - Charged Tendrils" hidden="false" collective="false" targetId="3e2c-0f67-7121-d0cf" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="30"/>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c3e7-8c28-0d42-6aa8" type="equalTo"/>
-                  </conditions>
-                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="f9a8-b735-8340-fcc0" name="Unit - Mark of the Eternal Champion" hidden="false" collective="false" targetId="534b-7d71-737c-c912" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="24fd-8af8-0c78-001c" value="30"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="8b8c-242c-06f0-0058" name="Unit - Sorcerous Antennae" hidden="false" collective="false" targetId="7f66-1b58-871f-1f65" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="24fd-8af8-0c78-001c" value="45"/>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -517,19 +510,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44a6-05f2-d72e-fc8f" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="9302-ed92-f159-0089" name="Stiff Upper Lip" hidden="false" collective="false" targetId="3d99-01a4-58cf-606f" type="selectionEntry">
+            <entryLink id="6ceb-81c8-78dd-e695" name="Unit - Brimstone Secretions" hidden="false" collective="false" targetId="ca78-5b27-f154-1827" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="89f2-fc04-2168-b5cc" name="Brimstone Secretions" hidden="false" collective="false" targetId="203e-ab58-28af-6ae2" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -537,20 +519,36 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="4ea9-bd4b-bc5b-b496" name="Unnatural Roots" hidden="false" collective="false" targetId="481e-c945-4915-29a8" type="selectionEntry">
+            <entryLink id="5e76-67b7-bde3-a944" name="Unit - Stiff Upper Lip" hidden="false" collective="false" targetId="ba49-8bc7-c589-c54b" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="9de9-295c-a559-d69f" name="Venom Sacks" hidden="false" collective="false" targetId="128d-02c0-1c3a-06e0" type="selectionEntry">
+            <entryLink id="a664-6d3b-149f-0878" name="Unit - Unnatural Roots" hidden="false" collective="false" targetId="c10c-4085-48a0-3e83" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="8d48-74ec-c2fa-18ed" name="Unit - Venom Sacs" hidden="false" collective="false" targetId="d76e-a1e4-1dd2-738b" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="5e3f-ca8c-2df5-7255" name="Unit - Chilling Yawn" hidden="false" collective="false" targetId="1551-a143-9262-463f" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -628,9 +626,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac37-c467-5b04-9281" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="7271-05a8-843d-990a" name="Darkhide" hidden="false" collective="false" targetId="57b7-b10f-01b4-4706" type="selectionEntry">
+            <entryLink id="1863-1208-689e-ec47" name="Unit - Dark Hide" hidden="false" collective="false" targetId="dc2e-45f8-578d-b084" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -638,24 +635,40 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="763f-1539-14f5-e1b9" name="Bronze Backbone" hidden="false" collective="false" targetId="4931-e65f-55ed-87ca" type="selectionEntry">
+            <entryLink id="ee37-fb73-fe66-b230" name="Unit - Mesmerising Plumage" hidden="false" collective="false" targetId="e3be-cff3-6092-e8d1" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="3059-221c-9f9f-43d8" name="Unit - Bronze Backbone" hidden="false" collective="false" targetId="ed85-6fc9-ffad-b111" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="9d28-73b7-03a4-cc26" name="Smothering Coils" hidden="false" collective="false" targetId="df1d-1a9e-8623-9b6d" type="selectionEntry">
+            <entryLink id="054c-c8c5-80d3-eb41" name="Unit - Chilling Yawn" hidden="false" collective="false" targetId="1551-a143-9262-463f" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="89ff-640d-f87d-939f" name="Unit - Smothering Coils" hidden="false" collective="false" targetId="6712-49f2-5348-8362" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="6">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -720,9 +733,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee02-2677-526e-1901" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="09fc-cd7b-90b5-e48a" name="Hot Blood" hidden="false" collective="false" targetId="26be-8a76-e288-7d98" type="selectionEntry">
+            <entryLink id="903b-5438-a4d1-9be7" name="Unit - Hot Blood" hidden="false" collective="false" targetId="3bc5-58a2-f553-694a" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -730,19 +742,8 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="d47d-4312-22a5-05d6" name="Unhinging Jaw" hidden="false" collective="false" targetId="27db-89be-f9d3-eccf" type="selectionEntry">
+            <entryLink id="bf7d-59cd-c40d-b03c" name="Unit - Bronze Backbone" hidden="false" collective="false" targetId="ed85-6fc9-ffad-b111" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="a9b3-c89c-e035-04f2" name="Bronze Backbone" hidden="false" collective="false" targetId="4931-e65f-55ed-87ca" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -750,20 +751,27 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="54d0-88f0-150f-5948" name="Whipcrack Tail" hidden="false" collective="false" targetId="e70d-a4df-3cb0-1f76" type="selectionEntry">
+            <entryLink id="2dad-7328-987c-0d6d" name="Unit - Piercing Spike" hidden="false" collective="false" targetId="b964-16ff-626f-3a9b" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="57d5-e139-f05b-bb86" name="Unit - Whipcrack Tail" hidden="false" collective="false" targetId="a8de-e45d-4d3c-5858" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="9ad4-07df-cb92-f0ee" name="Piercing Spike" hidden="false" collective="false" targetId="64e4-7952-368a-3efd" type="selectionEntry">
+            <entryLink id="5bc9-b1bd-5ff8-68b5" name="Unit - Unhinging Jaw" hidden="false" collective="false" targetId="f5b5-176e-d138-9e9e" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1048,16 +1056,8 @@
         <infoLink id="307c-d087-adc9-7ebc" name="Skirmisher" hidden="false" targetId="2ce4-ece5-068c-4d20" type="rule"/>
         <infoLink id="a35c-63ce-1ab5-2e0a" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9fc1-c0fc-c2c9-e813" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (2)">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9fc1-c0fc-c2c9-e813" type="equalTo"/>
-              </conditions>
-            </modifier>
+            <modifier type="append" field="name" value=" (1)"/>
+            <modifier type="append" field="name" value=" (2)"/>
           </modifiers>
         </infoLink>
         <infoLink id="e69b-7543-7ad8-59d7" name="Wizard Conclave" hidden="false" targetId="7455-f914-028b-3359" type="rule"/>
@@ -1084,14 +1084,30 @@
             <constraint field="selections" scope="roster" value="18.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d02-da18-e6d3-fe87" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="37.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="33.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="f520-ac4d-3bf3-181f" name="Scout" hidden="false" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8bf-7d3f-3cda-092b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd86-150b-09c3-2432" type="max"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="e45b-e79e-9855-0e49" name="Command Group" hidden="false" collective="false">
           <selectionEntries>
             <selectionEntry id="4d98-7544-fbe4-dd8c" name="Champion" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b20-5cac-b156-211e" type="max"/>
+              </constraints>
               <selectionEntryGroups>
                 <selectionEntryGroup id="bb26-23b5-5a58-1d38" name="Spells" hidden="false" collective="false">
                   <constraints>
@@ -1159,25 +1175,32 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9cd-0dbc-9daa-b3f2" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="44d9-fdf9-3b15-a903" name="Incendiary Ichor" hidden="false" collective="false" targetId="1351-554d-e665-dd67" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="c927-73ae-d1b7-7dff" name="Sorcerous Antennae" hidden="false" collective="false" targetId="44ee-ff4b-bf52-34b5" type="selectionEntry">
+            <entryLink id="a68c-4273-01b2-f7d3" name="Unit - Sorcerous Antennae" hidden="false" collective="false" targetId="7f66-1b58-871f-1f65" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="35"/>
               </modifiers>
             </entryLink>
-            <entryLink id="9fc1-c0fc-c2c9-e813" name="Kaleidoscopic Flesh" hidden="false" collective="false" targetId="87d5-4b2c-0629-070a" type="selectionEntry">
+            <entryLink id="57b1-8cdd-0761-a543" name="Unit - Kaleidoscopic Flesh" hidden="false" collective="false" targetId="f137-39d8-d3f5-c363" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="d289-4174-f51f-3c07" name="Unit - Aura of Despair" hidden="false" collective="false" targetId="6f4b-fe91-ef41-420a" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="4cf5-5573-7d95-85f2" name="Unit - Incendiary Ichor" hidden="false" collective="false" targetId="7679-cd89-0364-5aad" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1188,7 +1211,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3a0d-aa65-df02-01df" name="Hellhounds" hidden="false" collective="false" type="unit">
@@ -1242,7 +1265,7 @@
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="674f-9432-07bf-aaf5" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="16.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1264,19 +1287,26 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c618-f930-7f4f-4fff" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="f7d9-e0b3-2763-72f9" name="Hot Blood" hidden="false" collective="false" targetId="26be-8a76-e288-7d98" type="selectionEntry">
+            <entryLink id="1ffc-c132-2850-5a52" name="Unit - Grasping Proboscis" hidden="false" collective="false" targetId="1e9e-1598-a3cc-5610" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="bf53-e40d-f574-ece4" name="Horns of Hubris" hidden="false" collective="false" targetId="40cc-4b6c-a804-f4b0" type="selectionEntry">
+            <entryLink id="b527-c9c3-72b5-1b00" name="Unit - Hot Blood" hidden="false" collective="false" targetId="3bc5-58a2-f553-694a" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="ec8b-c92f-2257-5cbe" name="Unit - Horns of Hubris" hidden="false" collective="false" targetId="deaa-fae6-282f-a5dd" type="selectionEntry">
+              <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1284,19 +1314,17 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="c240-5327-170a-4422" name="Incendiary Ichor" hidden="false" collective="false" targetId="1351-554d-e665-dd67" type="selectionEntry">
+            <entryLink id="1af3-46e2-d748-ed6c" name="Unit - Incendiary Ichor" hidden="false" collective="false" targetId="7679-cd89-0364-5aad" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="41fb-9139-6f3e-19e7" name="Centipede Legs" hidden="false" collective="false" targetId="b40c-425b-c660-3337" type="selectionEntry">
+            <entryLink id="5788-a2c4-db44-aefc" name="Unit - Centipede Legs" hidden="false" collective="false" targetId="9014-f681-74cb-b6b6" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1304,31 +1332,20 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="386b-38e5-ea2b-eca9" name="Grasping Proboscis" hidden="false" collective="false" targetId="00e0-addb-f812-8c84" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="cacf-cfe7-2dcd-1106" name="Digestive Vomit" hidden="false" collective="false" targetId="4b96-3e93-31dd-e02e" type="selectionEntry">
+            <entryLink id="00ac-f4f1-7588-332f" name="Unit - Digestive Vomit" hidden="false" collective="false" targetId="dd92-a99c-d63c-b2bf" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="65ce-1f50-81cb-52dd" name="Threshing Engine - Fly" hidden="false" collective="false" type="unit">
@@ -1360,6 +1377,9 @@
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="41e7-ed5f-20e5-bc83" name="Command Group" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59ff-be48-2c0e-d64d" type="max"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="d4d2-0e94-b269-648d" name="Standard Bearer" hidden="false" collective="false" type="upgrade">
               <costs>
@@ -1394,6 +1414,9 @@
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="62b7-ef5e-ac2b-402a" name="Command Group" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c92-c5bc-4a0b-3b32" type="max"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="8179-8674-bab8-730a" name="Standard Bearer" hidden="false" collective="false" type="upgrade">
               <costs>
@@ -1405,7 +1428,7 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="27c5-3182-3cf1-07af" name="Threshing Engine" hidden="false" collective="false" targetId="b84b-f803-e147-1f78" type="selectionEntryGroup"/>
-        <entryLink id="e09c-9a79-393a-d320" name="Manifestation" hidden="false" collective="false" targetId="b7bf-9c56-b4c2-03c0" type="selectionEntryGroup"/>
+        <entryLink id="e09c-9a79-393a-d320" name="Manifestations of Threshing Engine" hidden="false" collective="false" targetId="b7bf-9c56-b4c2-03c0" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -1579,7 +1602,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <entryLink id="2ed5-a2e9-79ee-0d10" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="565.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="570.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b5f8-7399-95ea-f00e" name="Titanslayer Chariot" hidden="false" collective="false" type="unit">
@@ -1673,32 +1696,36 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa28-a418-30e6-a86e" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="b7bb-faa8-6629-ad96" name="Digestive Vomit" hidden="false" collective="false" targetId="4b96-3e93-31dd-e02e" type="selectionEntry">
+            <entryLink id="a710-b0d1-ee63-953e" name="Unit - Stiff Upper Lip" hidden="false" collective="false" targetId="ba49-8bc7-c589-c54b" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="24fd-8af8-0c78-001c" value="10"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="f0e1-fe06-30b3-f247" name="Unit - Segmented Shell" hidden="false" collective="false" targetId="8101-3b21-c1ae-8871" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="20"/>
               </modifiers>
             </entryLink>
-            <entryLink id="725b-352d-7c7b-22fa" name="Stiff Upper Lip" hidden="false" collective="false" targetId="3d99-01a4-58cf-606f" type="selectionEntry">
+            <entryLink id="6bb2-a660-f2b1-1db1" name="Unit - Centipede Legs" hidden="false" collective="false" targetId="9014-f681-74cb-b6b6" type="selectionEntry">
               <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="10"/>
+                <modifier type="set" field="24fd-8af8-0c78-001c" value="25"/>
               </modifiers>
             </entryLink>
-            <entryLink id="609f-8cf3-ef1e-a1ac" name="Segmented Shell" hidden="false" collective="false" targetId="6325-18bd-a3b5-fd13" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="20"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="1adf-7308-dca2-6c9f" name="Centipede Legs" hidden="false" collective="false" targetId="b40c-425b-c660-3337" type="selectionEntry"/>
-            <entryLink id="517a-59db-64aa-bae5" name="Divining Snout" hidden="false" collective="false" targetId="020d-6dd1-8b3b-4b39" type="selectionEntry">
+            <entryLink id="b156-49fc-0daf-d60e" name="Unit - Digestive Vomit" hidden="false" collective="false" targetId="dd92-a99c-d63c-b2bf" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="20"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="3195-4e55-0f74-744d" name="Unit - Divining Snout" hidden="false" collective="false" targetId="98ea-ee0f-2037-cffd" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="24fd-8af8-0c78-001c" value="15"/>
               </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="220.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="205.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6461-ecc2-b233-18d2" name="Kuulima&apos;s Deceiver" hidden="false" collective="false" type="upgrade">
@@ -1716,14 +1743,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <categoryLinks>
         <categoryLink id="02d0-8446-5222-5956" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink id="eb5c-ce8b-4394-67c7" name="Kuulima’s Deceiver" hidden="false" collective="false" targetId="1152-1f29-7f68-b7ee" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="572f-5a9d-a9e0-f11c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0da-f5ab-0d93-bbca" type="min"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1752,16 +1771,8 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <categoryLink id="a5fe-d3b0-7ed8-e30c" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
         <categoryLink id="2586-1bb1-99db-33fe" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink id="a852-4299-3667-9a61" name="Kuulima’s Deceiver" hidden="false" collective="false" targetId="1152-1f29-7f68-b7ee" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a451-cb82-369a-3d20" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3eea-ee47-9cc9-52e1" type="min"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1123-fd6a-bbf7-5006" name="Courtesan of Cibaresh" hidden="false" collective="false" type="unit">
@@ -2171,7 +2182,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="96.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="97.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2181,34 +2192,49 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c12-df97-3989-3343" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="e961-24f0-6bc0-0163" name="Darkhide" hidden="false" collective="false" targetId="57b7-b10f-01b4-4706" type="selectionEntry">
+            <entryLink id="1428-c81e-5890-3b9d" name="Unit - Dark Hide" hidden="false" collective="false" targetId="dc2e-45f8-578d-b084" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="6">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3877-f472-efe1-5305" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="c80f-0659-4eab-c49b" name="Piercing Spike" hidden="false" collective="false" targetId="64e4-7952-368a-3efd" type="selectionEntry">
+            <entryLink id="09e3-e2da-8bb9-a362" name="Unit - Mesmerising Plumage" hidden="false" collective="false" targetId="e3be-cff3-6092-e8d1" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="9a43-6156-cc23-b462" name="Unit - Piercing Spike" hidden="false" collective="false" targetId="b964-16ff-626f-3a9b" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="12">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3877-f472-efe1-5305" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="d0f2-76ee-e367-3e4b" name="Unhinging Jaw" hidden="false" collective="false" targetId="27db-89be-f9d3-eccf" type="selectionEntry">
+            <entryLink id="8d3c-f713-8b9c-f6ee" name="Unit - Unhinging Jaw" hidden="false" collective="false" targetId="f5b5-176e-d138-9e9e" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="13">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3877-f472-efe1-5305" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="dd53-90b9-fdb4-6ada" name="Unit - Broodmother" hidden="false" collective="false" targetId="5c5d-b745-4ab1-3403" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -2218,7 +2244,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <entryLink id="9f1c-a0cf-fa70-cd97" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-13.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-21.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e0cb-1ac1-75f9-5a19" name="Mageblight Gremlins" hidden="false" collective="false" type="unit">
@@ -2292,50 +2318,45 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e26-73d7-a032-4e7e" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="89e6-6e04-3a59-0ea2" name="Unnatural Roots" hidden="false" collective="false" targetId="481e-c945-4915-29a8" type="selectionEntry">
+            <entryLink id="ba95-9934-9cd8-28b9" name="Unit - Greenfire Eyes" hidden="false" collective="false" targetId="df10-be3e-95ef-f9d9" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="6">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="dbad-7ea9-9fc3-7bdd" name="Living Shield" hidden="false" collective="false" targetId="7941-5cbd-27f3-f0b4" type="selectionEntry">
+            <entryLink id="d4fa-fa86-113f-1ccb" name="Unit - Living Shield" hidden="false" collective="false" targetId="9571-d0e9-f227-e54f" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="466c-4d7e-6095-4230" name="Piercing Spike" hidden="false" collective="false" targetId="64e4-7952-368a-3efd" type="selectionEntry">
+            <entryLink id="5696-b3bc-3bbd-91cb" name="Unit - Piercing Spike" hidden="false" collective="false" targetId="b964-16ff-626f-3a9b" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="9">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="6bcf-3f30-9e41-b4bf" name="Venom Sacs" hidden="false" collective="false" targetId="128d-02c0-1c3a-06e0" type="selectionEntry">
+            <entryLink id="fa5e-3f7f-2cea-de94" name="Unit - Venom Sacs" hidden="false" collective="false" targetId="d76e-a1e4-1dd2-738b" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="13">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="b4bc-b4ba-8b09-2d39" name="Greenfire Eyes" hidden="false" collective="false" targetId="b8bf-11bb-c792-32f8" type="selectionEntry">
+            <entryLink id="a35c-5b80-67cd-2b51" name="Unit - Unnatural Roots" hidden="false" collective="false" targetId="c10c-4085-48a0-3e83" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="7">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -2411,65 +2432,77 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8bcd-7fc7-1373-dce4" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="93df-0ed5-83f7-ba2a" name="Kaleidoscopic Flesh" hidden="false" collective="false" targetId="87d5-4b2c-0629-070a" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="bb19-ffd0-e4f8-4bf0" name="Grasping Proboscis" hidden="false" collective="false" targetId="00e0-addb-f812-8c84" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="9a35-945a-171d-f0d7" name="Unnatural Roots" hidden="false" collective="false" targetId="481e-c945-4915-29a8" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="dfb3-fcfc-89f6-ffdf" name="Divining Snout" hidden="false" collective="false" targetId="020d-6dd1-8b3b-4b39" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="7">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="3cbd-5d7d-8b6f-1997" name="Smothering Coils" hidden="false" collective="false" targetId="df1d-1a9e-8623-9b6d" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="12">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="f4f0-4a16-1f7f-6dc6" name="Dexterous Tentacles" hidden="false" collective="false" targetId="d95c-3ddb-4c02-c8a0" type="selectionEntry">
+            <entryLink id="1aeb-487f-3ca2-53c6" name="Unit - Dextrous Tentacles" hidden="false" collective="false" targetId="fedb-d9a8-d699-5d44" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0.0"/>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6a2-f767-7c9f-c7cd" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="b853-0888-08e1-508f" name="Unit - Smothering Coils" hidden="false" collective="false" targetId="6712-49f2-5348-8362" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="12">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3da0-763a-d957-6269" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="3324-7e33-0447-ae33" name="Unit - Unnatural Roots" hidden="false" collective="false" targetId="c10c-4085-48a0-3e83" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13e3-c0c2-d460-d2ba" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="24b2-1471-3414-ae34" name="Unit - Divining Snout" hidden="false" collective="false" targetId="98ea-ee0f-2037-cffd" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5304-876f-95ad-0af7" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="d48f-ef79-926c-1c9a" name="Unit - Kaleidoscopic Flesh" hidden="false" collective="false" targetId="f137-39d8-d3f5-c363" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0507-690d-37ed-bbff" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="5e59-aa3d-3172-7d63" name="Unit - Grasping Proboscis" hidden="false" collective="false" targetId="1e9e-1598-a3cc-5610" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ccb4-dc76-4294-0363" type="max"/>
+              </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -2544,7 +2577,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <infoLink id="b127-df3f-7c3d-e80b" name="Elusive" hidden="false" targetId="671a-279f-78f4-8edc" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="2ed3-1c42-f1e2-5060" name="New CategoryLink" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
         <categoryLink id="c60a-5ad1-f2c7-f036" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
@@ -2564,44 +2596,49 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cc3-4172-5a13-457b" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="b57e-fb7b-14db-0ca4" name="Centipede Legs" hidden="false" collective="false" targetId="b40c-425b-c660-3337" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="fed1-1841-198e-514c" name="Hot Blood" hidden="false" collective="false" targetId="26be-8a76-e288-7d98" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="aa83-95c8-8d33-708c" name="Hammer Hand" hidden="false" collective="false" targetId="4cae-33d8-153a-3190" type="selectionEntry">
+            <entryLink id="d622-2206-ccb1-bf59" name="Unit - Hammer Hand" hidden="false" collective="false" targetId="d44f-3ef6-47b7-c253" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
               </modifiers>
             </entryLink>
-            <entryLink id="e18c-0093-77a5-c275" name="Roaming Hands" hidden="false" collective="false" targetId="119c-a130-b016-df78" type="selectionEntry">
+            <entryLink id="322b-23d8-e9c8-65cc" name="Unit - Roaming Hands" hidden="false" collective="false" targetId="6629-56f3-ec7a-1bdf" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="7">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="0"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="aaaa-b9c4-f23e-b5e3" name="Unit - Mesmerising Plumage" hidden="false" collective="false" targetId="e3be-cff3-6092-e8d1" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="bf8d-0b13-d703-5809" name="Unit - Hot Blood" hidden="false" collective="false" targetId="3bc5-58a2-f553-694a" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="c088-f049-5f4f-a5cd" name="Unit - Centipede Legs" hidden="false" collective="false" targetId="9014-f681-74cb-b6b6" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -2669,42 +2706,11 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <categoryLinks>
         <categoryLink id="79fa-492f-918c-7109" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="59c1-2eac-215c-992c" name="Manifestation" hidden="false" collective="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7477-6e75-2714-d908" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5ed9-38a3-e335-a146" name="Brimstone Secretions" hidden="false" collective="false" targetId="203e-ab58-28af-6ae2" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="25"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="a1f0-665c-9a38-5b29" name="Cloven Hooves" hidden="false" collective="false" targetId="9fec-1349-74bd-7537" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="30"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="0d76-d6e1-fef8-f1b7" name="Horns of Hubris" hidden="false" collective="false" targetId="40cc-4b6c-a804-f4b0" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="15"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="1d1c-8322-5462-dcc0" name="Stiff Upper Lip" hidden="false" collective="false" targetId="3d99-01a4-58cf-606f" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="15"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="015d-6d57-3ed1-3c5a" name="Bronze Backbone" hidden="false" collective="false" targetId="4931-e65f-55ed-87ca" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="15"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="0498-ccfe-7b6f-57fe" name="Manifestations of Blazing Glory" hidden="false" collective="false" targetId="01d1-9391-d85a-1f6f" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="280.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="320.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4018-2042-49c3-9881" name="Blazing Glories - Fly" hidden="false" collective="false" type="unit">
@@ -2767,42 +2773,11 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <categoryLink id="ff38-8b87-7ce9-76e5" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
         <categoryLink id="7611-5574-2209-673a" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a58f-0c12-9f37-5e1a" name="Manifestation" hidden="false" collective="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="414c-fe87-7fb1-2721" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="73c6-47a5-aa53-b604" name="Brimstone Secretions" hidden="false" collective="false" targetId="203e-ab58-28af-6ae2" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="25"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="93aa-6fbb-8005-e7d5" name="Cloven Hooves" hidden="false" collective="false" targetId="9fec-1349-74bd-7537" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="30"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="5335-23a1-aafd-c681" name="Horns of Hubris" hidden="false" collective="false" targetId="40cc-4b6c-a804-f4b0" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="15"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="64b6-6da6-2516-bc47" name="Stiff Upper Lip" hidden="false" collective="false" targetId="3d99-01a4-58cf-606f" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="15"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="b230-56b1-f011-9ec5" name="Bronze Backbone" hidden="false" collective="false" targetId="4931-e65f-55ed-87ca" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="15"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="becc-9975-8ce1-b2fa" name="Manifestations of Blazing Glory" hidden="false" collective="false" targetId="01d1-9391-d85a-1f6f" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="340.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="380.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bc31-0baa-4e41-481f" name="Hope Harvester" hidden="false" collective="false" type="unit">
@@ -2891,16 +2866,33 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="a711-d022-7f0f-76aa" name="Manifestation" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b712-3249-1b04-eca2" type="max"/>
+          </constraints>
           <entryLinks>
-            <entryLink id="9398-a4d5-7ef7-4341" name="Segmented Shell" hidden="false" collective="false" targetId="6325-18bd-a3b5-fd13" type="selectionEntry"/>
-            <entryLink id="dca7-d001-ed3b-712d" name="Sorcerous Antennae" hidden="false" collective="false" targetId="44ee-ff4b-bf52-34b5" type="selectionEntry">
+            <entryLink id="2cff-c27e-5549-1b78" name="Unit - Sorcerous Antennae" hidden="false" collective="false" targetId="7f66-1b58-871f-1f65" type="selectionEntry">
               <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="5"/>
+                <modifier type="set" field="24fd-8af8-0c78-001c" value="40"/>
               </modifiers>
             </entryLink>
-            <entryLink id="f981-d94f-dad0-2587" name="Mark of the Eternal Champion" hidden="false" collective="false" targetId="a763-c2bb-8518-9ac0" type="selectionEntry">
+            <entryLink id="ab42-14c4-9ab6-4d66" name="Unit - Segmented Shell" hidden="false" collective="false" targetId="8101-3b21-c1ae-8871" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5"/>
+                <modifier type="set" field="24fd-8af8-0c78-001c" value="30"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="216b-d0b0-449f-bcce" name="Unit - Mark of the Eternal Champion" hidden="false" collective="false" targetId="534b-7d71-737c-c912" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="24fd-8af8-0c78-001c" value="50"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="f68e-e99e-e828-9f20" name="Unit - Chilling Yawn" hidden="false" collective="false" targetId="1551-a143-9262-463f" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="24fd-8af8-0c78-001c" value="65"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="04e7-c721-df41-2337" name="Unit - Aura of Despair" hidden="false" collective="false" targetId="6f4b-fe91-ef41-420a" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="24fd-8af8-0c78-001c" value="40"/>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -2992,54 +2984,49 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8224-49d1-7206-601e" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="ac26-a293-a076-caea" name="Incendiary Ichor" hidden="false" collective="false" targetId="1351-554d-e665-dd67" type="selectionEntry">
+            <entryLink id="5bd1-daca-9105-2bcd" name="Unit - Incendiary Ichor" hidden="false" collective="false" targetId="7679-cd89-0364-5aad" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="15"/>
               </modifiers>
             </entryLink>
-            <entryLink id="b105-c16a-56bd-42d1" name="Centipede Legs" hidden="false" collective="false" targetId="b40c-425b-c660-3337" type="selectionEntry">
+            <entryLink id="c9a7-e519-0329-e07c" name="Unit - Red Haze" hidden="false" collective="false" targetId="f196-5e13-bbef-20bd" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="9">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="21">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="25"/>
               </modifiers>
             </entryLink>
-            <entryLink id="f6e6-f8ab-8b75-9662" name="Chitinous Scales" hidden="false" collective="false" targetId="cccf-b217-ec9d-e09e" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="11">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="30"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="4914-28f3-8e2b-20d3" name="Whipcrack Tail" hidden="false" collective="false" targetId="e70d-a4df-3cb0-1f76" type="selectionEntry">
+            <entryLink id="4f1d-1b5f-1065-65e0" name="Unit - Whipcrack Tail" hidden="false" collective="false" targetId="a8de-e45d-4d3c-5858" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="12">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="50"/>
               </modifiers>
             </entryLink>
-            <entryLink id="a66d-d64f-eaf3-5cad" name="Red Haze" hidden="false" collective="false" targetId="9663-8903-83c6-c695" type="selectionEntry">
+            <entryLink id="9927-97e4-150c-cd3d" name="Unit - Chitinous Scales" hidden="false" collective="false" targetId="3fe2-a165-7438-54da" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="35"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="fe72-ae89-924c-f0f3" name="Unit - Centipede Legs" hidden="false" collective="false" targetId="9014-f681-74cb-b6b6" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -3117,7 +3104,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a182-04cd-83f4-6e93" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="21.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="13.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3127,42 +3114,47 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68e7-4a75-b22a-cce6" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="cf26-ce2f-2f3e-9bff" name="Kaleidoscopic Flesh" hidden="false" collective="false" targetId="87d5-4b2c-0629-070a" type="selectionEntry">
+            <entryLink id="29f0-ba65-5d1d-66fa" name="Unit - Red Haze" hidden="false" collective="false" targetId="f196-5e13-bbef-20bd" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="d322-5130-06bf-4411" name="Unit - Mesmerising Plumage" hidden="false" collective="false" targetId="e3be-cff3-6092-e8d1" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="777a-1747-9d52-0b36" name="Unit - Kaleidoscopic Flesh" hidden="false" collective="false" targetId="f137-39d8-d3f5-c363" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="45"/>
               </modifiers>
             </entryLink>
-            <entryLink id="3304-c41a-6892-16b8" name="Red Haze" hidden="false" collective="false" targetId="9663-8903-83c6-c695" type="selectionEntry">
+            <entryLink id="9b80-8f97-f2b2-abec" name="Unit - Venom Sacs" hidden="false" collective="false" targetId="d76e-a1e4-1dd2-738b" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="35"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="b9df-ff21-ba34-1527" name="Venom Sacs" hidden="false" collective="false" targetId="128d-02c0-1c3a-06e0" type="selectionEntry">
-              <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="25"/>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="e05f-f173-d832-af50" name="Darkhide" hidden="false" collective="false" targetId="57b7-b10f-01b4-4706" type="selectionEntry">
+            <entryLink id="6800-95b3-c18b-d8ed" name="Unit - Dark Hide" hidden="false" collective="false" targetId="dc2e-45f8-578d-b084" type="selectionEntry">
               <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="25"/>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -3171,7 +3163,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6d20-3958-6227-4099" name="Veil Serpents" hidden="false" collective="false" type="unit">
@@ -3234,7 +3226,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad6e-034f-6c0b-1ca5" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="58.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ea41-7d94-1d41-5ce0" name="Champion" hidden="false" collective="false" type="upgrade">
@@ -3310,7 +3302,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="91.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e4dc-24bc-8ac3-72a6" name="Bloat Flies" hidden="false" collective="false" type="unit">
@@ -3320,7 +3312,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <profiles>
         <profile id="db8a-9523-fd14-b9b3" name="Bloat Flies" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (8&quot;)</characteristic>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (6&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (12&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
             <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
@@ -3329,20 +3321,20 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         </profile>
         <profile id="5343-ee8e-1848-0258" name="Bloat Flies" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
           <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">2</characteristic>
+            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
+            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">6+</characteristic>
+            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
           </characteristics>
         </profile>
         <profile id="9c2d-1eef-0733-12d0" name="Bloat Fly" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">2</characteristic>
+            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">4</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">5</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">1</characteristic>
+            <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
+            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
+            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Acid Blood</characteristic>
           </characteristics>
         </profile>
@@ -3373,7 +3365,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bfc-5e73-cb7f-b3a2" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="92.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3383,44 +3375,40 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="944d-7065-0094-7df7" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="fe79-220b-3229-60a4" name="Unhinging Jaw" hidden="false" collective="false" targetId="27db-89be-f9d3-eccf" type="selectionEntry">
+            <entryLink id="8c7c-d9fc-3bc0-a63e" name="Unit - Dextrous Tentacles" hidden="false" collective="false" targetId="fedb-d9a8-d699-5d44" type="selectionEntry">
               <modifiers>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="40"/>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="7">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="38d8-c56b-6b03-e4bc" name="Digestive Vomit" hidden="false" collective="false" targetId="4b96-3e93-31dd-e02e" type="selectionEntry">
+            <entryLink id="ffc3-1767-0312-b5e7" name="Unit - Unhinging Jaw" hidden="false" collective="false" targetId="f5b5-176e-d138-9e9e" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="7">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="f74d-8873-3655-ae02" name="Unit - Digestive Vomit" hidden="false" collective="false" targetId="dd92-a99c-d63c-b2bf" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="10">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="45"/>
               </modifiers>
             </entryLink>
-            <entryLink id="6c27-37bd-d507-e1ac" name="Unnatural Roots" hidden="false" collective="false" targetId="481e-c945-4915-29a8" type="selectionEntry">
+            <entryLink id="f070-2a0c-22f0-7d77" name="Unit - Kaleidoscopic Flesh" hidden="false" collective="false" targetId="f137-39d8-d3f5-c363" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="10">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="11">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="35"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="f84e-9279-2074-5509" name="Kaleidoscopic Flesh" hidden="false" collective="false" targetId="87d5-4b2c-0629-070a" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="12">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="decrement" field="24fd-8af8-0c78-001c" value="45"/>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -3428,9 +3416,18 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="3c29-c3ec-a3dc-d661" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
+        <entryLink id="cd5a-e088-6d5e-43af" name="Unit - Broodmother" hidden="false" collective="false" targetId="5c5d-b745-4ab1-3403" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a3f0-b200-8276-5593" name="Vanadra’s Scourge" hidden="false" collective="false" type="unit">
@@ -3532,7 +3529,6 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <selectionEntryGroup id="13af-d873-0aaf-a85c" name="Wizard Level" hidden="false" collective="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c4a-8e23-6bf5-85f5" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9aae-b0be-5870-d78d" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="f44a-6c55-9fd4-a0f5" name="Wizard Apprentice" hidden="false" collective="false" type="upgrade">
@@ -3541,10 +3537,9 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
               </constraints>
               <infoLinks>
                 <infoLink id="0d0a-d312-e79a-a942" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule"/>
-                <infoLink id="92bc-b4b8-d5ac-f0e2" name="Smite the Unbeliever" hidden="false" targetId="6c28-3dd0-4de4-86e0" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="48b2-9df1-452b-eb8d" name="Wizard Adept" hidden="false" collective="false" type="upgrade">
@@ -3553,28 +3548,9 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
               </constraints>
               <infoLinks>
                 <infoLink id="4304-708f-8a0c-44c6" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule"/>
-                <infoLink id="8e86-128e-6e12-6265" name="Smite the Unbeliever" hidden="false" targetId="6c28-3dd0-4de4-86e0" type="profile"/>
-                <infoLink id="7050-1c23-72d8-f2f8" name="Know Thine Enemy" hidden="false" targetId="5edc-0bf7-e39d-1a55" type="profile"/>
-                <infoLink id="b66f-1748-b5ff-b5f4" name="Guiding Light" hidden="false" targetId="8db9-3ddf-ec0b-7b31" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="16b1-3a44-d06a-4a7f" name="Wizard Master" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d233-5163-6643-82bb" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="efdb-7d62-2b4c-67ff" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
-                <infoLink id="ddcc-cb81-ab68-98c2" name="Spectral Blades" hidden="false" targetId="e373-5fc8-7a3c-301a" type="profile"/>
-                <infoLink id="60d4-4150-6aea-017b" name="Evocation of Souls" hidden="false" targetId="7dd6-4e17-a494-b913" type="profile"/>
-                <infoLink id="1ba0-4f03-ba94-5b6b" name="Guiding Light" hidden="false" targetId="8db9-3ddf-ec0b-7b31" type="profile"/>
-                <infoLink id="0461-6a33-c7c4-c1f7" name="Know Thine Enemy" hidden="false" targetId="5edc-0bf7-e39d-1a55" type="profile"/>
-                <infoLink id="4049-1094-2e82-40bc" name="Smite the Unbeliever" hidden="false" targetId="6c28-3dd0-4de4-86e0" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -3593,7 +3569,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <entryLink id="0c0c-962d-e8dc-dfe9" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="705.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="725.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3aa8-8efa-2e56-ee79" name="Harbinger of Father Chaos" hidden="false" collective="false" type="unit">
@@ -3604,7 +3580,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <entryLink id="c60f-3517-e870-5ddd" name="Harbinger of Father Chaos" hidden="false" collective="false" targetId="5c3b-7d58-1689-4939" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="150.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a566-a60d-5074-ec12" name="Harbinger of Father Chaos - Fly" hidden="false" collective="false" type="unit">
@@ -3616,7 +3592,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <entryLink id="aeeb-3016-d8ec-9067" name="Harbinger of Father Chaos" hidden="false" collective="false" targetId="5c3b-7d58-1689-4939" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="150.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -3647,67 +3623,6 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3d99-01a4-58cf-606f" name="Stiff Upper Lip" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8718-e1da-17c3-8a16" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="57f8-a919-1f09-36b0" name="Stiff Upper Lip" hidden="false" targetId="fe57-2a39-b340-be5b" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="40cc-4b6c-a804-f4b0" name="Horns of Hubris" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c27-64a6-7d69-9969" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="b788-8509-c88c-0ff4" name="Horns of Hubris" hidden="false" targetId="5947-f429-4d50-d9e4" type="profile"/>
-        <infoLink id="a275-1803-20bd-2f71" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (6&quot;)"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="4931-e65f-55ed-87ca" name="Bronze Backbone" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a855-2b53-f44b-06ae" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="b3d8-1edc-6d2e-09f9" name="Bronze Backbone" hidden="false" targetId="7c39-709a-2feb-0e90" type="profile"/>
-        <infoLink id="3fa0-f4e4-2f17-ed29" name="Hatred" hidden="false" targetId="13c5-ce89-60ad-c572" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="d95c-3ddb-4c02-c8a0" name="Dexterous Tentacles" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac3a-714d-2746-3a74" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="7c45-ffc7-70ec-58ac" name="Dexterous Tentacles" hidden="false" targetId="068a-d6ab-ebd3-face" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="7941-5cbd-27f3-f0b4" name="Living Shield" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78f6-c154-5fd3-9a7d" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="b661-ddad-fc80-fb31" name="Living Shield" hidden="false" targetId="3851-e1b3-6ebf-7af1" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="ef58-dfc9-3863-bdc8" name="Battle Standard Bearer" hidden="false" collective="false" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="488b-9c83-3967-ae0c" type="max"/>
@@ -3718,503 +3633,6 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
       </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="1351-554d-e665-dd67" name="Incendiary Ichor" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5e4-b84e-5d49-c56e" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="9efa-634f-6827-2c69" name="Incendiary Ichor" hidden="false" targetId="b052-61f3-8b16-0758" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="9663-8903-83c6-c695" name="Red Haze" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca12-2d95-9518-b47d" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="56c9-c45d-22cd-114e" name="Red Haze" hidden="false" targetId="3bdd-051c-9412-b08f" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="e70d-a4df-3cb0-1f76" name="Whipcrack Tail" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6be-4088-0073-49d8" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="3aca-ea19-d7b1-8354" name="Whipcrack Tail" hidden="false" targetId="062b-7ae0-791e-6834" type="profile"/>
-        <infoLink id="bd9f-84e7-90dc-4495" name="Lightning Reflexes" hidden="false" targetId="f17a-c7f9-af34-a039" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="57b7-b10f-01b4-4706" name="Darkhide" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c37-3219-9f03-887f" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="60c5-a2cb-a7a0-cbc9" name="Darkhide" hidden="false" targetId="d1b9-8c8d-7b33-8ce6" type="profile"/>
-        <infoLink id="405a-2c46-89ac-d0fa" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="44ee-ff4b-bf52-34b5" name="Sorcerous Antennae" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="045b-b2ed-2d3f-1d9c" type="max"/>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d903-edb9-ff9a-8bfe" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="c2d4-84c6-73b5-06d2" name="Sorcerous Antennae" hidden="false" targetId="3677-cea0-dbd2-72b0" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="a763-c2bb-8518-9ac0" name="Mark of the Eternal Champion" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98ab-d414-d461-ac28" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="eaff-a764-ece4-2f56" name="Mark of the Eternal Champion" hidden="false" targetId="ae7e-8e5f-18d9-efda" type="profile"/>
-        <infoLink id="c762-6332-c44d-7cde" name="Spear of Infinity" hidden="false" targetId="aa87-31a3-9d33-f27d" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="6325-18bd-a3b5-fd13" name="Segmented Shell" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c9b-d9d2-c54b-1d8c" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="60ea-2677-6114-214f" name="Segmented Shell" hidden="false" targetId="804f-4ec2-1ed3-fcde" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="481e-c945-4915-29a8" name="Unnatural Roots" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c10-0df2-7076-5151" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="2397-b6f8-ffac-c8e4" name="Unnatural Roots" hidden="false" targetId="990c-770f-02ff-28ae" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="203e-ab58-28af-6ae2" name="Brimstone Secretions" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef91-482b-5e70-1c44" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="9886-9c4a-a277-c0f8" name="Brimstone Secretions" hidden="false" targetId="5a18-3066-5ef7-78cb" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="128d-02c0-1c3a-06e0" name="Venom Sacs" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aafa-de55-78d3-4f93" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="7653-8e65-3147-8413" name="Venom Sacs" hidden="false" targetId="1a63-b441-86fe-e7cc" type="profile"/>
-        <infoLink id="404b-833b-821d-29ef" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="df1d-1a9e-8623-9b6d" name="Smothering Coils" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ead0-5910-1b48-5f56" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="5f39-07f6-f1cf-e064" name="Smothering Coils" hidden="false" targetId="d366-a144-4be1-ba02" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="27db-89be-f9d3-eccf" name="Unhinging Jaw" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a511-0d8d-8695-5684" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="57be-da3b-19a7-802e" name="Unhinging Jaw" hidden="false" targetId="45cc-c307-bf76-7fa5" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="26be-8a76-e288-7d98" name="Hot Blood" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43f0-a8c3-ae10-f1ff" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="2cd4-cbe2-8678-fd8c" name="Hot Blood" hidden="false" targetId="98dd-b179-183f-1584" type="profile"/>
-        <infoLink id="105b-20f1-adc7-b042" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (+2 Agi)"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="87d5-4b2c-0629-070a" name="Kaleidoscopic Flesh" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0fd5-5486-19a4-cbbf" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="009c-6143-d347-1494" name="Kaleidoscopic Flesh" hidden="false" targetId="5276-35d7-e194-1c84" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="b40c-425b-c660-3337" name="Centipede Legs" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c27c-2195-5574-d9b5" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="d3bf-139c-10be-9e57" name="Centipede Legs" hidden="false" targetId="1740-af97-a2e8-1692" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="00e0-addb-f812-8c84" name="Grasping Proboscis" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="726b-9e6c-9781-8eb8" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="604e-6a53-035b-6366" name="Grasping Proboscis" hidden="false" targetId="99c3-cab1-f8dc-41b0" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="4b96-3e93-31dd-e02e" name="Digestive Vomit" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="718e-49e4-9961-c4c0" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="d6d3-fc14-3a6d-8c20" name="Digestive Vomit" hidden="false" targetId="ef28-7c48-3994-acec" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="020d-6dd1-8b3b-4b39" name="Divining Snout" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbdb-2085-b723-3e9b" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="b7a8-4404-0464-0db7" name="Divining Snout" hidden="false" targetId="1cf0-1f6a-8148-b789" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="119c-a130-b016-df78" name="Roaming Hands" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d451-3409-43da-80d6" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="7d7b-6f6d-3771-12f1" name="Roaming Hands" hidden="false" targetId="4517-2fff-ee9d-830f" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="b8bf-11bb-c792-32f8" name="Greenfire Eyes" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c43-890c-57a8-1416" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="d895-74d1-0003-e4c4" name="Chitinous Scales" hidden="false" targetId="ef40-b248-3ee0-1813" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2a2a-8a90-6861-b669" name="Charged Tendrils" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb5d-d5ee-b942-1a53" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="8059-51ab-1004-b6f2" name="Charged Tendrils" hidden="false" targetId="159b-a9c9-24f9-cc23" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="02d9-648f-a14f-b318" name="Tarskin - Dominant" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17af-a82d-ba5b-be9c" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="8b58-6fb9-edd0-95fc" name="Tarskin" hidden="false" targetId="400c-0a14-47ec-0756" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="4cae-33d8-153a-3190" name="Hammer Hand" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2107-285f-cab2-55ef" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="6c3e-aad7-6c00-cb7f" name="Hammerhand" hidden="false" targetId="d6b1-3259-aae4-a420" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="809c-6770-be90-46c6" name="Iron Husk" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="680b-67c6-64c8-b37b" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="aa3e-3b78-bf0a-f9e0" name="Iron Husk" hidden="false" targetId="b20b-ff41-3dc0-b3bb" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="70a1-cd61-8d36-6db3" name="Third Eye" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c63c-18cc-f268-c21c" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="7930-b1a5-a004-440b" name="Third Eye" hidden="false" targetId="555a-cfa9-c3f4-66ae" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="9fec-1349-74bd-7537" name="Cloven Hooves" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a005-001f-f643-b58b" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="c9b3-4035-a23d-913f" name="Cloven Hooves" hidden="false" targetId="def6-73b3-1c44-3b86" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="f300-8a1f-db9c-5c48" name="Withering Vapour" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e693-e80b-ea42-8a2c" type="max"/>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="208b-e7cd-59a8-bacd" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="2341-45fa-e837-85ad" name="Withering Vapour" hidden="false" targetId="c946-edc7-b517-5792" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="cccf-b217-ec9d-e09e" name="Chitinous Scales" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4df-2e2b-882d-82b7" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="73a4-317c-2f52-8907" name="Chitinous Scales" hidden="false" targetId="ef40-b248-3ee0-1813" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="1152-1f29-7f68-b7ee" name="Kuulima’s Deceiver" hidden="false" collective="false" type="unit">
-      <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b2c4-9e47-4fa9-8c9f" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="2112-beea-7a49-c7b5" name="Kuulima’s Deceiver" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive DL">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">6</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="e78b-aa1a-2ad2-7877" name="Kuulima’s Deceiver" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">6</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">5</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">5</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Know Thyself</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="365b-b9bb-030c-fd3c" name="Know Thyself" hidden="false">
-          <description>At the start of the Initiative Step in which the bearer’s Close Combat Attacks will be performed, choose one model part from each enemy model in base contact and add their Attack Value Characteristics, excluding any modifiers, to the Attack Value of Kuulima’s Deceiver.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="39e3-5c34-4f03-af9a" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
-        <infoLink id="8168-4a19-0d23-bdfb" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
-        <infoLink id="8399-6261-579d-d95e" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
-        <infoLink id="01e6-f1e1-d92b-11f4" name="Protean Magic" hidden="false" targetId="9c73-bbca-fd62-c017" type="rule"/>
-      </infoLinks>
-      <selectionEntries>
-        <selectionEntry id="2037-6a75-9cb2-ab67" name="Dominion of Envy" hidden="true" collective="false" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="6e2a-1f03-7e8d-43c3" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0bd-81c7-442e-97d2" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e2a-1f03-7e8d-43c3" type="min"/>
-          </constraints>
-          <rules>
-            <rule id="67e8-bfba-d1a6-a1c3" name="Dominion of Envy" hidden="false">
-              <description>Follows the rules for Dominion. The affected models’ Close Combat Attacks allocated towards models equipped with Close Combat Weapons other than Hand Weapons (regardless if they are using them or not) gain +2 Offensive Skill.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="6bfc-3dc6-5d7e-10d1" name="Path of Magic" hidden="false" collective="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5836-71f3-9508-7776" type="max"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5dca-2ea6-280a-cbe1" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="d936-6c7b-6a44-a5c4" name="Thaumaturgy" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aced-08b3-dd60-9c38" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5138-2a34-c068-c547" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f870-141c-a95e-91d9" name="Divination" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b08f-c44f-bf5c-db07" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="186b-790b-938a-0005" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1327-f2e7-4fd2-ba46" name="Evocation" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b6e-9546-a6f5-2c6b" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="16a2-dce6-6ba0-f520" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f3e0-96d4-12a9-cfb8" name="Witchcraft" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b3a-b033-67cd-2665" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf08-e8ca-3998-149c" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7353-4888-a516-6847" name="Wizard Level" hidden="false" collective="false" defaultSelectionEntryId="2803-a093-8866-fd91">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45b2-1bf9-ae34-0a57" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52fd-309d-8d00-1809" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="2803-a093-8866-fd91" name="Wizard Apprentice" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91cc-00c8-3321-a8ef" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="7e6f-a2c5-18e6-b3ec" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2998-8633-07c3-9412" name="Wizard Adept" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f73c-cfab-f9b0-52c0" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="3b7f-f519-87f4-cf38" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7d07-faca-ddfc-0829" name="Wizard Master" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a47-3d97-0350-f7e1" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="a2e5-c636-7782-4d61" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="190.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="389e-17f8-936e-1932" name="Manifestations" hidden="false" collective="false">
-          <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3957-09c0-dc05-19bc" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ac44-4057-2909-c5cf" name="Guiding Manifestations" hidden="false" collective="false" targetId="c7e6-73d9-a772-5640" type="selectionEntryGroup"/>
-            <entryLink id="7d07-835b-7982-51dc" name="Character Manifestations" hidden="false" collective="false" targetId="fc9f-afbc-2576-a823" type="selectionEntryGroup"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="09bd-0a86-4e24-a788" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="335.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="64e4-7952-368a-3efd" name="Piercing Spike" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e39f-ebcb-1e74-3a2c" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="45ce-1fb7-4bf5-43db" name="Piercing Spike" hidden="false" targetId="f085-9726-08c0-c5cf" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5c3b-7d58-1689-4939" name="Harbinger of Father Chaos" hidden="false" collective="false" type="unit">
@@ -4419,7 +3837,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
                 <infoLink id="b8a1-96e1-ec72-1225" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="7af0-9f42-aaa4-af75" name="Pale Horse" hidden="false" collective="false" type="upgrade">
@@ -4535,7 +3953,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
                 <infoLink id="a63c-c51a-ef42-b15a" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="947f-276c-b7b4-a906" name="Great Beast of Prophecy" hidden="false" collective="false" type="upgrade">
@@ -4636,7 +4054,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <categoryLink id="6ae5-6720-033a-d708" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ea63-a68c-9cf7-1dfc" name="Guiding - Bronze Backbone" hidden="false" collective="false" type="upgrade">
@@ -4644,7 +4062,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <categoryLink id="175b-d4c5-c3d1-44b3" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0b67-5711-5237-9d0b" name="Guiding - Broodmother" hidden="false" collective="false" type="upgrade">
@@ -4652,7 +4070,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <categoryLink id="8928-ca09-b79c-9617" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2612-a224-6aeb-79f0" name="Guiding - Dextrous Tentacles" hidden="false" collective="false" type="upgrade">
@@ -4676,7 +4094,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <categoryLink id="6ded-9f23-3858-ad2e" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0f8b-2e42-512d-02cd" name="Guiding - Hot Blood" hidden="false" collective="false" type="upgrade">
@@ -4716,7 +4134,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <categoryLink id="ff0e-6b73-309c-9582" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1eb6-6ae5-2c96-e356" name="Guiding - Kaleidoscopic Flesh" hidden="false" collective="false" type="upgrade">
@@ -4732,7 +4150,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <categoryLink id="b35f-378b-460e-20d0" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5826-3909-0c8c-2c4d" name="Guiding - Roaming Hands" hidden="false" collective="false" type="upgrade">
@@ -4764,7 +4182,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <categoryLink id="2815-c2fa-8162-ecbd" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e2a2-d153-2657-2772" name="Guiding - Segmented Shell" hidden="false" collective="false" type="upgrade">
@@ -4772,7 +4190,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <categoryLink id="d8fe-618e-e5a1-8412" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dfa2-c180-3133-bbc7" name="Guiding - Venom Sacs" hidden="false" collective="false" type="upgrade">
@@ -4807,7 +4225,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3497-45ae-7573-af46" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9dab-d62b-3266-ac7a" name="Character - Bronze Backbone" hidden="false" collective="false" type="upgrade">
@@ -4815,7 +4233,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc9e-6242-7a53-6e42" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c9ed-273c-cdf9-a642" name="Character - Broodmother" hidden="false" collective="false" type="upgrade">
@@ -4826,7 +4244,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <categoryLink id="f26e-e4ba-4692-dd2b" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a84f-6a92-0338-3335" name="Character - Centipede Legs" hidden="false" collective="false" type="upgrade">
@@ -4853,7 +4271,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <categoryLink id="2726-30ab-8dbf-edfd" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cfbd-5bd9-3216-5990" name="Character - Cloven Hooves" hidden="false" collective="false" type="upgrade">
@@ -4901,7 +4319,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02a8-6bbe-1b78-5160" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="db25-829b-af9d-6b20" name="Character - Grasping Proboscis" hidden="false" collective="false" type="upgrade">
@@ -4909,7 +4327,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1153-1d5a-935a-5280" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e786-6f8e-c9c8-712c" name="Character - Greenfire Eyes" hidden="false" collective="false" type="upgrade">
@@ -4917,7 +4335,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5d8-4f82-5b72-6ee4" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5c33-ef04-52f4-e8e5" name="Character - Hammer Hand" hidden="false" collective="false" type="upgrade">
@@ -4957,7 +4375,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b842-67ba-2ec7-47fe" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="973b-ff11-0103-3c4b" name="Character - Kaleidoscopic Flesh" hidden="false" collective="false" type="upgrade">
@@ -5000,7 +4418,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6594-4b71-97e1-0e32" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6139-a3ae-b743-8817" name="Character - Red Haze" hidden="false" collective="false" type="upgrade">
@@ -5008,7 +4426,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7201-47e5-ec6e-fd78" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2c06-f0f7-6583-02f6" name="Character - Roaming Hands" hidden="false" collective="false" type="upgrade">
@@ -5055,11 +4473,8 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c4f-b73d-ae9a-e817" type="max"/>
       </constraints>
-      <categoryLinks>
-        <categoryLink id="ad78-57d9-6f4d-5618" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
-      </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0eb1-e819-8e39-60bf" name="Character - Third Eye" hidden="false" collective="false" type="upgrade">
@@ -5083,7 +4498,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed44-5cd8-bd6c-2592" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7133-f61f-f31c-b988" name="Character - Venom Sacs" hidden="false" collective="false" type="upgrade">
@@ -5110,6 +4525,57 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="a008-0eb0-81ad-0e39" name="Guiding - Tar Skin" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="7733-f64f-0b57-8b5a" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dd82-d2e9-2966-3793" name="Guiding - Incendiary Ichor" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="7e22-120f-47d8-82f5" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ba49-8bc7-c589-c54b" name="Unit - Stiff Upper Lip" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="ed85-6fc9-ffad-b111" name="Unit - Bronze Backbone" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="6712-49f2-5348-8362" name="Unit - Smothering Coils" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="1551-a143-9262-463f" name="Unit - Chilling Yawn" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="e3be-cff3-6092-e8d1" name="Unit - Mesmerising Plumage" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="534b-7d71-737c-c912" name="Unit - Mark of the Eternal Champion" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="3e2c-0f67-7121-d0cf" name="Unit - Charged Tendrils" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="7f66-1b58-871f-1f65" name="Unit - Sorcerous Antennae" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="dc2e-45f8-578d-b084" name="Unit - Dark Hide" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="7679-cd89-0364-5aad" name="Unit - Incendiary Ichor" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="e153-94cd-6d94-7245" name="Unit - Cloven Hooves" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="a8de-e45d-4d3c-5858" name="Unit - Whipcrack Tail" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="c10c-4085-48a0-3e83" name="Unit - Unnatural Roots" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="d76e-a1e4-1dd2-738b" name="Unit - Venom Sacs" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="f5b5-176e-d138-9e9e" name="Unit - Unhinging Jaw" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="3bc5-58a2-f553-694a" name="Unit - Hot Blood" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="b964-16ff-626f-3a9b" name="Unit - Piercing Spike" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="98ea-ee0f-2037-cffd" name="Unit - Divining Snout" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="dd92-a99c-d63c-b2bf" name="Unit - Digestive Vomit" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="f137-39d8-d3f5-c363" name="Unit - Kaleidoscopic Flesh" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="1e9e-1598-a3cc-5610" name="Unit - Grasping Proboscis" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="deaa-fae6-282f-a5dd" name="Unit - Horns of Hubris" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="9014-f681-74cb-b6b6" name="Unit - Centipede Legs" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="ca78-5b27-f154-1827" name="Unit - Brimstone Secretions" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="fedb-d9a8-d699-5d44" name="Unit - Dextrous Tentacles" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="8101-3b21-c1ae-8871" name="Unit - Segmented Shell" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="6629-56f3-ec7a-1bdf" name="Unit - Roaming Hands" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="df10-be3e-95ef-f9d9" name="Unit - Greenfire Eyes" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="d44f-3ef6-47b7-c253" name="Unit - Hammer Hand" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="9571-d0e9-f227-e54f" name="Unit - Living Shield" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="5c5d-b745-4ab1-3403" name="Unit - Broodmother" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="3fe2-a165-7438-54da" name="Unit - Chitinous Scales" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="f196-5e13-bbef-20bd" name="Unit - Red Haze" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="4c48-446c-20b6-9a3d" name="Unit - Tar Skin" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="6f4b-fe91-ef41-420a" name="Unit - Aura of Despair" hidden="false" collective="false" type="upgrade"/>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="b84b-f803-e147-1f78" name="Threshing Engine" hidden="false" collective="false" defaultSelectionEntryId="a114-8dae-709b-488f">
@@ -5211,7 +4677,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
             <infoLink id="fa30-9747-c338-efe4" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="275.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="300.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="eb9a-8d37-9b1d-e715" name="Threshing Engine Horde" hidden="false" collective="false" type="model">
@@ -5259,43 +4725,37 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
             <infoLink id="e9a4-6467-e858-b095" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="220.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="235.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="b7bf-9c56-b4c2-03c0" name="Manifestations of Threshing Engine" hidden="false" collective="false">
-      <modifiers>
-        <modifier type="set" field="name" value="Manifestations"/>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f69b-fcf2-4958-2321" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="0fb9-5540-b0b4-9a2d" name="Mark of the Eternal Champion" hidden="false" collective="false" targetId="a763-c2bb-8518-9ac0" type="selectionEntry">
+        <entryLink id="9e2b-7f4f-4a11-900a" name="Unit - Divining Snout" hidden="false" collective="false" targetId="98ea-ee0f-2037-cffd" type="selectionEntry">
           <modifiers>
-            <modifier type="set" field="24fd-8af8-0c78-001c" value="35"/>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="15"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1612-fe08-70c7-f6ce" type="max"/>
-          </constraints>
         </entryLink>
-        <entryLink id="254e-0aa6-b4ff-d103" name="Horns of Hubris" hidden="false" collective="false" targetId="40cc-4b6c-a804-f4b0" type="selectionEntry">
+        <entryLink id="1c09-1471-490e-9217" name="Unit - Horns of Hubris" hidden="false" collective="false" targetId="deaa-fae6-282f-a5dd" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="24fd-8af8-0c78-001c" value="20"/>
           </modifiers>
         </entryLink>
-        <entryLink id="1be2-3cb2-5ba4-8025" name="Divining Snout" hidden="false" collective="false" targetId="020d-6dd1-8b3b-4b39" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="24fd-8af8-0c78-001c" value="20"/>
-          </modifiers>
-        </entryLink>
-        <entryLink id="0af8-a9ef-1391-c345" name="Whipcrack Tail" hidden="false" collective="false" targetId="e70d-a4df-3cb0-1f76" type="selectionEntry">
+        <entryLink id="a31a-ddb8-aff7-ae0f" name="Unit - Whipcrack Tail" hidden="false" collective="false" targetId="a8de-e45d-4d3c-5858" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="24fd-8af8-0c78-001c" value="30"/>
           </modifiers>
         </entryLink>
-        <entryLink id="12ea-21f2-3e93-9c06" name="Roaming Hands" hidden="false" collective="false" targetId="119c-a130-b016-df78" type="selectionEntry">
+        <entryLink id="83a3-a8ca-8be1-f185" name="Unit - Mark of the Eternal Champion" hidden="false" collective="false" targetId="534b-7d71-737c-c912" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="35"/>
+          </modifiers>
+        </entryLink>
+        <entryLink id="0075-5709-f3f9-a86c" name="Unit - Roaming Hands" hidden="false" collective="false" targetId="6629-56f3-ec7a-1bdf" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="24fd-8af8-0c78-001c" value="40"/>
           </modifiers>
@@ -5354,7 +4814,11 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <entryLink id="4ab7-a00d-20cd-0886" name="Character - Chitinous Scales" hidden="false" collective="false" targetId="e602-aa80-88d8-37e3" type="selectionEntry"/>
         <entryLink id="251d-ed48-6174-89bf" name="Character - Mesmerising Plumage" hidden="false" collective="false" targetId="2e10-6aba-a823-a3d7" type="selectionEntry"/>
         <entryLink id="3d0a-0ab7-f15d-0f6c" name="Character - Digestive Vomit" hidden="false" collective="false" targetId="a2ed-afc7-6077-023b" type="selectionEntry"/>
-        <entryLink id="63ef-6c47-8e02-9bf3" name="Character - Aura of Despair" hidden="false" collective="false" targetId="1224-6fae-6bbf-1f13" type="selectionEntry"/>
+        <entryLink id="63ef-6c47-8e02-9bf3" name="Character - Aura of Despair" hidden="false" collective="false" targetId="1224-6fae-6bbf-1f13" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="name" value="BLA"/>
+          </modifiers>
+        </entryLink>
         <entryLink id="7c41-5232-e388-42ce" name="Character - Mark of the Eternal Champion" hidden="false" collective="false" targetId="6934-09a2-c423-4815" type="selectionEntry"/>
         <entryLink id="b5e7-a7f9-aec3-0cb2" name="Character - Cloven Hooves" hidden="false" collective="false" targetId="cfbd-5bd9-3216-5990" type="selectionEntry"/>
         <entryLink id="9277-bc18-a6c6-831e" name="Character - Dextrous Tentacles" hidden="false" collective="false" targetId="7c75-e3b8-8f62-44e8" type="selectionEntry"/>
@@ -5369,6 +4833,38 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <entryLink id="59a7-ad1a-4f23-fd31" name="Character - Broodmother" hidden="false" collective="false" targetId="c9ed-273c-cdf9-a642" type="selectionEntry"/>
         <entryLink id="7a31-9657-401e-2b30" name="Character - Bronze Backbone" hidden="false" collective="false" targetId="9dab-d62b-3266-ac7a" type="selectionEntry"/>
         <entryLink id="65ab-3f73-f61d-a2ee" name="Character - Brimstone Secretions" hidden="false" collective="false" targetId="0194-4f3a-ba16-4882" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="01d1-9391-d85a-1f6f" name="Manifestations of Blazing Glory" hidden="false" collective="false">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="006c-eedf-6382-06f0" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="7871-1822-3e2a-68f2" name="Unit - Brimstone Secretions" hidden="false" collective="false" targetId="ca78-5b27-f154-1827" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="10"/>
+          </modifiers>
+        </entryLink>
+        <entryLink id="6691-3f31-c033-c531" name="Unit - Cloven Hooves" hidden="false" collective="false" targetId="e153-94cd-6d94-7245" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="10"/>
+          </modifiers>
+        </entryLink>
+        <entryLink id="8570-38ba-7249-d635" name="Unit - Bronze Backbone" hidden="false" collective="false" targetId="ed85-6fc9-ffad-b111" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="35"/>
+          </modifiers>
+        </entryLink>
+        <entryLink id="99e5-657c-7151-96e5" name="Unit - Horns of Hubris" hidden="false" collective="false" targetId="deaa-fae6-282f-a5dd" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="15"/>
+          </modifiers>
+        </entryLink>
+        <entryLink id="e672-c6cf-719b-e482" name="Unit - Stiff Upper Lip" hidden="false" collective="false" targetId="ba49-8bc7-c589-c54b" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="20"/>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
