@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.2" revision="20" battleScribeVersion="2.02" authorName="Artur &apos;WarX&apos; Fijalkowski, DarkSky" authorContact="wiki.warx@gmail.com" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.2" revision="21" battleScribeVersion="2.02" authorName="Artur &apos;WarX&apos; Fijalkowski, DarkSky" authorContact="wiki.warx@gmail.com" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="e6e2-5027-c8f6-da13" name="2 Defensive">
       <characteristicTypes>
@@ -105,6 +105,16 @@
         <rule id="8204-38c6-3714-222c" name="Divine Right" hidden="false">
           <description>The bearer must issue a Duel whenever possible. Duels issued by this model must (if possible) be accepted by a Character unless a Champion accepts first. In addition, when fighting a Duel, the model gains Lethal Strike and Multiple Wounds (2)</description>
         </rule>
+        <rule id="4b4f-0a81-78b0-3bde" name="Dominion of Pride" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="97b3-ca59-67ea-42ab" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <description>Follows the rules for Dominion. Units with more than half of their models affected may reroll failed Discipline Tests.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="69fe-a5a4-4bb8-e902" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
@@ -119,34 +129,6 @@
       <categoryLinks>
         <categoryLink id="2823-f566-f8e5-10c4" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="4aba-ff8a-4923-aeac" name="Dominion of Pride" hidden="true" collective="false" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0b29-cd83-1877-4c19" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="24aa-1ecb-7b52-8488" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0b29-cd83-1877-4c19" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b392-434a-aeac-1ad5" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24aa-1ecb-7b52-8488" type="min"/>
-          </constraints>
-          <rules>
-            <rule id="fd74-7824-1823-8325" name="Dominion of Pride" hidden="false">
-              <description>Follows the rules for Dominion. Units with more than half of their models affected may reroll failed Discipline Tests.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="d378-05f7-48a4-c7fb" name="Path of Magic" hidden="false" collective="false">
           <constraints>
@@ -303,7 +285,11 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0b29-cd83-1877-4c19" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry"/>
+        <entryLink id="0b29-cd83-1877-4c19" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="40"/>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="490.0"/>
@@ -845,6 +831,19 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
+        <profile id="c19c-e738-51dc-4906" name="Dominion of Sloth" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="7902-bc18-757d-a8d5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Sloth</characteristic>
+            <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain Aegis (4+, against Special Attacks).</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <rules>
         <rule id="e4f0-2982-57d4-84e2" name="Omniscience" hidden="false">
@@ -861,37 +860,6 @@
       <categoryLinks>
         <categoryLink id="c68f-85ea-739b-a4aa" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="1e89-4664-4d34-b038" name="Dominion of Sloth" hidden="true" collective="false" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="b814-d011-e236-bf99" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a613-2821-10d6-6ccd" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b814-d011-e236-bf99" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="eefa-e564-0771-538b" name="Dominion of Sloth" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
-              <characteristics>
-                <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Sloth</characteristic>
-                <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain Aegis (4+, against Special Attacks).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="1433-9d3e-156d-ef0b" name="Mount" hidden="false" collective="false">
           <constraints>
@@ -1012,7 +980,11 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="965d-2ffe-4cd2-42ab" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry"/>
+        <entryLink id="965d-2ffe-4cd2-42ab" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="30"/>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="620.0"/>
@@ -1099,6 +1071,9 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8bf-7d3f-3cda-092b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd86-150b-09c3-2432" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1467,6 +1442,19 @@
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
           </characteristics>
         </profile>
+        <profile id="9fea-9431-6e6d-503a" name="Dominion of Gluttony" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="3198-4164-0f51-4ea2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Gluttony</characteristic>
+            <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models&apos; Melee Attacks must reroll failed to-wound rolls of &apos;1&apos;.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <rules>
         <rule id="96c9-01e8-f260-3b17" name="Devour" hidden="false">
@@ -1491,37 +1479,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <categoryLinks>
         <categoryLink id="ac02-3a4e-b4ce-be3a" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="1fe9-1e2f-faaf-9b5f" name="Dominion of Gluttony" hidden="true" collective="false" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="1f7b-a95a-2eb1-42a8" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ed5-a2e9-79ee-0d10" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c7f-f43c-5dc4-d687" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f7b-a95a-2eb1-42a8" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="edfc-d490-6c27-ddf0" name="Dominion of Gluttony" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
-              <characteristics>
-                <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Gluttony</characteristic>
-                <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models&apos; Melee Attacks must reroll failed to-wound rolls of &apos;1&apos;.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="72c7-f42f-4582-03fa" name="Path of Magic" hidden="false" collective="false">
           <constraints>
@@ -1599,7 +1556,11 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="2ed5-a2e9-79ee-0d10" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry"/>
+        <entryLink id="2ed5-a2e9-79ee-0d10" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="60"/>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="570.0"/>
@@ -1739,12 +1700,123 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
+        <profile id="fc49-973b-09f2-0644" name="Dominion of Envy" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="6461-ecc2-b233-18d2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Envy</characteristic>
+            <characteristic name="Description" typeId="2945-4921-f954-c0f5"/>
+          </characteristics>
+        </profile>
       </profiles>
+      <rules>
+        <rule id="68fb-3e1c-6811-d8c2" name="Know Thyself" hidden="false">
+          <description>At the start of the Initiative Step in which the bearer’s Close Combat Attacks will be performed, choose one model part from each enemy model in base contact and add their Attack Value Characteristics, excluding any modifiers, to the Attack Value of Kuulima’s Deceiver. At the end of each Round of Combat, the bearer’s Attack Value is set to 1.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="bbc8-506b-e89d-66d1" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
+        <infoLink id="cc0c-21b9-3699-5335" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
+        <infoLink id="e601-4659-c1b1-3886" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="290a-8e96-09b1-ea0f" name="Protean Magic" hidden="false" targetId="9c73-bbca-fd62-c017" type="rule"/>
+        <infoLink id="72e2-beb7-5a37-7467" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="02d0-8446-5222-5956" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7dc2-d57a-2cb3-91cc" name="Path of Magic" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fa3-7c2c-e543-dd13" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04c0-2055-ab11-9289" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b688-b9b4-508a-f79e" name="Evocation" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cdd-a971-aa31-0121" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="00ab-8962-b0f4-c8c0" name="Witchcraft" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf14-8617-967e-f5c3" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a519-7151-b9a9-024d" name="Divination" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf0a-97a3-b0e0-21ff" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="a675-d30e-59fd-2ecf" name="Thaumaturgy" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f14c-9981-13c5-ee14" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="41ad-ae6c-84eb-a455" name="Wizard Level" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ca3-7176-9917-79de" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="904f-f1bf-6aa8-74e4" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="cd70-3261-6536-a5fd" name="Wizard Apprentice" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9d4-72ed-3505-31cd" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="6b0a-4949-5d71-abe5" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ce28-5833-a24b-445a" name="Wizard Adept" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2c4-84fc-8db0-3788" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="e477-9ac2-fbea-15f0" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="859b-a3f0-0cd3-8aaf" name="Wizard Master" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37fc-67b3-203c-4ed5" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="c0d1-572c-f744-9870" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="190.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="d445-092e-c71e-ec47" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="30"/>
+          </modifiers>
+        </entryLink>
+        <entryLink id="5f3f-7cb0-1b73-4d01" name="Guiding Manifestations" hidden="false" collective="false" targetId="c7e6-73d9-a772-5640" type="selectionEntryGroup"/>
+        <entryLink id="59af-f787-8916-dfa9" name="Character Manifestations" hidden="false" collective="false" targetId="fc9f-afbc-2576-a823" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="335.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4754-5b12-cdd0-97f5" name="Kuulima&apos;s Deceiver - Fly" hidden="false" collective="false" type="upgrade">
@@ -1758,7 +1830,25 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
+        <profile id="cee6-a581-be73-40c3" name="Dominion of Envy" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="4754-5b12-cdd0-97f5" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Envy</characteristic>
+            <characteristic name="Description" typeId="2945-4921-f954-c0f5"/>
+          </characteristics>
+        </profile>
       </profiles>
+      <rules>
+        <rule id="cf7b-97a1-da31-fcc4" name="Know Thyself" hidden="false">
+          <description>At the start of the Initiative Step in which the bearer’s Close Combat Attacks will be performed, choose one model part from each enemy model in base contact and add their Attack Value Characteristics, excluding any modifiers, to the Attack Value of Kuulima’s Deceiver. At the end of each Round of Combat, the bearer’s Attack Value is set to 1.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="e0cb-9076-c812-32ac" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
           <modifiers>
@@ -1766,13 +1856,104 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           </modifiers>
         </infoLink>
         <infoLink id="0ba7-216b-d62a-fee7" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="058a-01cb-7282-062c" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
+        <infoLink id="31e2-6e99-ced0-759a" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="9094-a988-5956-17f7" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
+        <infoLink id="1f15-1f29-67d0-4c2e" name="Protean Magic" hidden="false" targetId="9c73-bbca-fd62-c017" type="rule"/>
+        <infoLink id="54a6-5c96-079d-90b1" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a5fe-d3b0-7ed8-e30c" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
         <categoryLink id="2586-1bb1-99db-33fe" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e0af-d0da-fc4e-3d6a" name="Path of Magic" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fb0-d678-a530-b2eb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67f8-7c1f-b929-1207" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="85ad-e226-fcf1-56c2" name="Evocation" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de60-b9c1-2227-afeb" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d9d4-b433-8701-2437" name="Witchcraft" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24ee-0899-b7bd-3c5e" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8424-8365-e786-0458" name="Divination" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b21-85df-30ae-b6f8" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="3832-3cc3-2289-20cf" name="Thaumaturgy" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b363-7d78-4f84-25b5" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="4f3c-f9b3-eef3-59e5" name="Wizard Level" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c29-5410-9d84-a09b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5403-8ced-1b87-a862" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d8fa-e8ef-03cc-a5de" name="Wizard Apprentice" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ed3-f8da-a6b4-29e5" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7f0c-a0b2-ed74-84c7" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fc76-a91c-c030-0f99" name="Wizard Adept" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="692b-8545-57d2-7acf" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ff07-f852-09a8-0847" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7f19-4adf-f852-53b2" name="Wizard Master" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43c8-e25c-11fa-0840" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="5ca4-94d8-696f-fa67" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="190.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="f78f-6a47-61f5-bcef" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="30"/>
+          </modifiers>
+        </entryLink>
+        <entryLink id="cd79-c2b0-34cb-829e" name="Character Manifestations" hidden="false" collective="false" targetId="fc9f-afbc-2576-a823" type="selectionEntryGroup"/>
+        <entryLink id="fd08-8889-22c0-6e45" name="Guiding Manifestations" hidden="false" collective="false" targetId="c7e6-73d9-a772-5640" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="375.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1123-fd6a-bbf7-5006" name="Courtesan of Cibaresh" hidden="false" collective="false" type="unit">
@@ -1815,6 +1996,19 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Area Attack (1x5) (see Rules)</characteristic>
           </characteristics>
         </profile>
+        <profile id="fe32-17ef-5d58-c314" name="Dominion of Lust" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="1123-fd6a-bbf7-5006" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c682-1835-927b-d05b" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Lust</characteristic>
+            <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain +2″ March Rate and must reroll failed Charge Range rolls when Charging an enemy unit in its Flank or Rear Facing.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <rules>
         <rule id="14f9-f623-63b7-5126" name="Avert your Gaze" hidden="false">
@@ -1837,37 +2031,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <categoryLinks>
         <categoryLink id="301d-2ce4-c7dd-4787" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="eb1a-ab9b-174d-62c5" name="Dominion of Lust" hidden="true" collective="false" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="52a0-c661-1849-deb3" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1da1-76e9-7ff6-07a6" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52a0-c661-1849-deb3" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="8349-519d-6bdf-4781" name="Dominion of Lust" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
-              <characteristics>
-                <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Lust</characteristic>
-                <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain +2″ March Rate and must reroll failed Charge Range rolls when Charging an enemy unit in its Flank or Rear Facing.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="cd01-9e11-5f00-c9cf" name="Path of Magic" hidden="false" collective="false">
           <constraints>
@@ -1945,7 +2108,11 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="d889-f279-e637-7522" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry"/>
+        <entryLink id="c682-1835-927b-d05b" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="35"/>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="575.0"/>
@@ -1991,6 +2158,19 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Rules" typeId="f269-16dd-a614-0f90">For each Veil Token in the owner’s Veil Token pool, attacks against the wearer suffer −1 Armour Penetration.</characteristic>
           </characteristics>
         </profile>
+        <profile id="7627-648a-27c7-6bd0" name="Dominion of Greed" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="c758-13b6-9c8c-eb64" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Greed</characteristic>
+            <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain +2 Defensive Skill when their unit is in base contact with an enemy Scoring Unit.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <rules>
         <rule id="c9b5-6e1b-0e04-6351" name="Half Off" hidden="false">
@@ -2004,37 +2184,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <categoryLinks>
         <categoryLink id="d283-b2a4-f40f-ee1d" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="f0f2-db31-8466-4966" name="Dominion of Greed" hidden="true" collective="false" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="aea0-db26-b51f-6703" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79c1-427a-bed5-b9bd" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aea0-db26-b51f-6703" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="4ed7-af56-fea8-9ca9" name="Dominion of Greed" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
-              <characteristics>
-                <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Greed</characteristic>
-                <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain +2 Defensive Skill when their unit is in base contact with an enemy Scoring Unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="0a76-49b2-41fe-0c21" name="Path of Magic" hidden="false" collective="false">
           <constraints>
@@ -2120,7 +2269,11 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="d0e1-047c-7727-a5d9" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry"/>
+        <entryLink id="d0e1-047c-7727-a5d9" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="35"/>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="670.0"/>
@@ -3460,17 +3613,23 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Battle Focus, Devastating Charge (Distracting), Rage</characteristic>
           </characteristics>
         </profile>
+        <profile id="7cfa-3eb5-73d4-b1f7" name="Dominion of Wrath" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="a3f0-b200-8276-5593" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Wrath</characteristic>
+            <characteristic name="Description" typeId="2945-4921-f954-c0f5">Follows the rules for Dominion. The affected models cannot benefit from Parry, and their attacks ignore Parry.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <rules>
         <rule id="7cac-ae4e-78c2-312a" name="Rage" hidden="false">
           <description>Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers −1 Attack Value.</description>
-        </rule>
-        <rule id="c7d3-aa50-2e65-09a5" name="The Path of Dal-Magoth" hidden="false">
-          <description>Instead of selecting spells as normal, the model must select the following Learned Spells during Spell Selection.
-If it is a Wizard Apprentice: • Smite the Unbeliever (Thaumaturgy)
-If it is a Wizard Adept: • Know Thine Enemy (Divination) • Smite the Unbeliever (Thaumaturgy)
-If it is a Wizard Master: • Know Thine Enemy (Divination) • Spectral Blades (Evocation) • Smite the Unbeliever (Thaumaturgy)
-This replaces the normal rules for Spell Selection associated with being a Wizard Apprentice, Adept, or Master.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -3479,7 +3638,7 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <infoLink id="c6a3-db3a-71fa-056e" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
         <infoLink id="afba-7785-55df-bb86" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (6&quot;, 16&quot;)"/>
+            <modifier type="append" field="name" value=" (7&quot;, 14&quot;)"/>
           </modifiers>
         </infoLink>
         <infoLink id="2921-7ed2-953f-5887" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
@@ -3488,43 +3647,11 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
           </modifiers>
         </infoLink>
         <infoLink id="3547-7ee2-75e6-9dfd" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
-        <infoLink id="a4e3-957e-5c98-98ea" name="Rally Around the Flag" hidden="false" targetId="bf56-e3dc-41ca-292b" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5007-dbb0-d3e2-831b" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
         <categoryLink id="cc56-e30f-cce9-e3b4" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="941d-d8a9-0b16-f1eb" name="Dominion of Wrath" hidden="true" collective="false" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="bdfb-3afa-873c-367f" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bdfb-3afa-873c-367f" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1b2-4d72-1fec-e37f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3d1f-c878-52ea-a8be" name="Dominion of Wrath" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
-              <characteristics>
-                <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Wrath</characteristic>
-                <characteristic name="Description" typeId="2945-4921-f954-c0f5">Follows the rules for Dominion. The affected models cannot benefit from Parry, and their attacks ignore Parry.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="13af-d873-0aaf-a85c" name="Wizard Level" hidden="false" collective="false">
           <constraints>
@@ -3566,7 +3693,11 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0c0c-962d-e8dc-dfe9" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry"/>
+        <entryLink id="0c0c-962d-e8dc-dfe9" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="35"/>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="725.0"/>
@@ -4541,41 +4672,181 @@ This replaces the normal rules for Spell Selection associated with being a Wizar
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ba49-8bc7-c589-c54b" name="Unit - Stiff Upper Lip" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="ed85-6fc9-ffad-b111" name="Unit - Bronze Backbone" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="6712-49f2-5348-8362" name="Unit - Smothering Coils" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="1551-a143-9262-463f" name="Unit - Chilling Yawn" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="e3be-cff3-6092-e8d1" name="Unit - Mesmerising Plumage" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="534b-7d71-737c-c912" name="Unit - Mark of the Eternal Champion" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="3e2c-0f67-7121-d0cf" name="Unit - Charged Tendrils" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="7f66-1b58-871f-1f65" name="Unit - Sorcerous Antennae" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="dc2e-45f8-578d-b084" name="Unit - Dark Hide" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="7679-cd89-0364-5aad" name="Unit - Incendiary Ichor" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="e153-94cd-6d94-7245" name="Unit - Cloven Hooves" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="a8de-e45d-4d3c-5858" name="Unit - Whipcrack Tail" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="c10c-4085-48a0-3e83" name="Unit - Unnatural Roots" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="d76e-a1e4-1dd2-738b" name="Unit - Venom Sacs" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="f5b5-176e-d138-9e9e" name="Unit - Unhinging Jaw" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="3bc5-58a2-f553-694a" name="Unit - Hot Blood" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="b964-16ff-626f-3a9b" name="Unit - Piercing Spike" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="98ea-ee0f-2037-cffd" name="Unit - Divining Snout" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="dd92-a99c-d63c-b2bf" name="Unit - Digestive Vomit" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="f137-39d8-d3f5-c363" name="Unit - Kaleidoscopic Flesh" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="1e9e-1598-a3cc-5610" name="Unit - Grasping Proboscis" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="deaa-fae6-282f-a5dd" name="Unit - Horns of Hubris" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="9014-f681-74cb-b6b6" name="Unit - Centipede Legs" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="ca78-5b27-f154-1827" name="Unit - Brimstone Secretions" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="fedb-d9a8-d699-5d44" name="Unit - Dextrous Tentacles" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="8101-3b21-c1ae-8871" name="Unit - Segmented Shell" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="6629-56f3-ec7a-1bdf" name="Unit - Roaming Hands" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="df10-be3e-95ef-f9d9" name="Unit - Greenfire Eyes" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="d44f-3ef6-47b7-c253" name="Unit - Hammer Hand" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="9571-d0e9-f227-e54f" name="Unit - Living Shield" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="5c5d-b745-4ab1-3403" name="Unit - Broodmother" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="3fe2-a165-7438-54da" name="Unit - Chitinous Scales" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="f196-5e13-bbef-20bd" name="Unit - Red Haze" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="4c48-446c-20b6-9a3d" name="Unit - Tar Skin" hidden="false" collective="false" type="upgrade"/>
-    <selectionEntry id="6f4b-fe91-ef41-420a" name="Unit - Aura of Despair" hidden="false" collective="false" type="upgrade"/>
+    <selectionEntry id="ba49-8bc7-c589-c54b" name="Unit - Stiff Upper Lip" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ed85-6fc9-ffad-b111" name="Unit - Bronze Backbone" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6712-49f2-5348-8362" name="Unit - Smothering Coils" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1551-a143-9262-463f" name="Unit - Chilling Yawn" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e3be-cff3-6092-e8d1" name="Unit - Mesmerising Plumage" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="534b-7d71-737c-c912" name="Unit - Mark of the Eternal Champion" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3e2c-0f67-7121-d0cf" name="Unit - Charged Tendrils" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7f66-1b58-871f-1f65" name="Unit - Sorcerous Antennae" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dc2e-45f8-578d-b084" name="Unit - Dark Hide" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7679-cd89-0364-5aad" name="Unit - Incendiary Ichor" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e153-94cd-6d94-7245" name="Unit - Cloven Hooves" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a8de-e45d-4d3c-5858" name="Unit - Whipcrack Tail" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c10c-4085-48a0-3e83" name="Unit - Unnatural Roots" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d76e-a1e4-1dd2-738b" name="Unit - Venom Sacs" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f5b5-176e-d138-9e9e" name="Unit - Unhinging Jaw" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3bc5-58a2-f553-694a" name="Unit - Hot Blood" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b964-16ff-626f-3a9b" name="Unit - Piercing Spike" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="98ea-ee0f-2037-cffd" name="Unit - Divining Snout" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dd92-a99c-d63c-b2bf" name="Unit - Digestive Vomit" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f137-39d8-d3f5-c363" name="Unit - Kaleidoscopic Flesh" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1e9e-1598-a3cc-5610" name="Unit - Grasping Proboscis" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="deaa-fae6-282f-a5dd" name="Unit - Horns of Hubris" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9014-f681-74cb-b6b6" name="Unit - Centipede Legs" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ca78-5b27-f154-1827" name="Unit - Brimstone Secretions" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fedb-d9a8-d699-5d44" name="Unit - Dextrous Tentacles" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8101-3b21-c1ae-8871" name="Unit - Segmented Shell" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6629-56f3-ec7a-1bdf" name="Unit - Roaming Hands" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="df10-be3e-95ef-f9d9" name="Unit - Greenfire Eyes" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d44f-3ef6-47b7-c253" name="Unit - Hammer Hand" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9571-d0e9-f227-e54f" name="Unit - Living Shield" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5c5d-b745-4ab1-3403" name="Unit - Broodmother" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3fe2-a165-7438-54da" name="Unit - Chitinous Scales" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f196-5e13-bbef-20bd" name="Unit - Red Haze" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4c48-446c-20b6-9a3d" name="Unit - Tar Skin" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6f4b-fe91-ef41-420a" name="Unit - Aura of Despair" hidden="false" collective="false" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="b84b-f803-e147-1f78" name="Threshing Engine" hidden="false" collective="false" defaultSelectionEntryId="a114-8dae-709b-488f">
