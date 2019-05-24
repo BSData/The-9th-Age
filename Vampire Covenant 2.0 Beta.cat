@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2.0" revision="18" battleScribeVersion="2.02" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2.0" revision="19" battleScribeVersion="2.02" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="99a4-bb9f-a50c-678e" name="Vampiric Bloodline" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -149,27 +149,6 @@
             <modifier type="append" field="name" value=" (1)"/>
           </modifiers>
         </infoLink>
-        <infoLink id="9a4d-04cf-a928-bade" name="Distracting" hidden="false" targetId="056f-73ea-194b-1b49" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d71b-a9be-2a80-2928" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="31fe-27ba-4e40-9c68" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4109-68e2-c43f-5b27" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="e82a-e969-782b-142d" name="Gates of the Netherworld" hidden="false" targetId="9a62-c85f-1f78-e6ba" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -302,6 +281,11 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d42-67f2-3fa3-c814" type="max"/>
               </constraints>
+              <rules>
+                <rule id="242f-2eec-e2ba-eddf" name="Does not get Distracting from Lamia Bloodline" hidden="false">
+                  <description>This unit does not get Distracting via the Lamia Bloodline</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="f1f9-1929-db7b-2cd4" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
               </infoLinks>
@@ -331,6 +315,11 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="121f-f805-86fd-11a9" type="max"/>
               </constraints>
+              <rules>
+                <rule id="50ff-7a9e-de13-f2c1" name="Does not get Distracting from Lamia Bloodline" hidden="false">
+                  <description>This unit does not get Distracting via the Lamia Bloodline</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="3f07-9a3e-31b6-c0a5" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
               </infoLinks>
@@ -3054,7 +3043,6 @@ Additionally, all R&amp;F models in friendly units from Core within 6” of one 
         <infoLink id="48a5-ac17-3d71-bf97" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
         <infoLink id="1fee-2e8f-e326-6413" name="Terror" hidden="false" targetId="0b48-87f9-1467-7ef2" type="rule"/>
         <infoLink id="bf56-5548-1db6-aad7" name="Towering Presence" hidden="false" targetId="9ca4-65be-33fc-5d47" type="rule"/>
-        <infoLink id="8923-89b4-0b9b-27b8" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
         <infoLink id="1caf-f87d-a415-0d0a" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
         <infoLink id="0d41-d32e-08cd-3e73" name="Magical Attacks" hidden="false" targetId="97c6-651e-d93d-a61e" type="rule"/>
         <infoLink id="fedb-1527-d58c-c6f3" name="Inanimate" hidden="false" targetId="ca83-2dad-d908-5f4c" type="rule"/>
@@ -3065,7 +3053,7 @@ Additionally, all R&amp;F models in friendly units from Core within 6” of one 
         </infoLink>
         <infoLink id="602b-8c3f-c93d-0967" name="Undead" hidden="false" targetId="b558-1cce-fbc9-afe6" type="rule"/>
         <infoLink id="e6e4-11a7-8777-38d8" name="Ashes to Ashes" hidden="false" targetId="07db-871a-166c-cd5c" type="rule"/>
-        <infoLink id="7705-e033-2fa2-d7f5" name="Regeneration" hidden="false" targetId="faef-6f9d-ae02-d420" type="rule">
+        <infoLink id="7705-e033-2fa2-d7f5" name="Fortitude" hidden="false" targetId="faef-6f9d-ae02-d420" type="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (4+)"/>
           </modifiers>
@@ -4629,6 +4617,7 @@ Additionally, all R&amp;F models in friendly units from Core within 6” of one 
           </constraints>
           <infoLinks>
             <infoLink id="2f8b-f710-b98a-c7b1" name="Lightning Reflexes" hidden="false" targetId="f17a-c7f9-af34-a039" type="rule"/>
+            <infoLink id="f6fa-0b53-b3af-5308" name="Distracting" hidden="false" targetId="056f-73ea-194b-1b49" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
