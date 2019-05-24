@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9cd6-2c84-c59e-7dd1" name="Warriors of the Dark Gods 2.2" revision="34" battleScribeVersion="2.02" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9cd6-2c84-c59e-7dd1" name="Warriors of the Dark Gods 2.2" revision="36" battleScribeVersion="2.02" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="25f6-6ecf-2669-118b" name="8 Manifestation">
       <characteristicTypes>
@@ -8,6 +8,9 @@
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <categoryEntries>
+    <categoryEntry id="9c7a-3ec7-761f-798c" name="Doomlord General" hidden="false"/>
+  </categoryEntries>
   <selectionEntries>
     <selectionEntry id="007b-ee98-bbf2-a52a" name="Exalted Herald" hidden="false" collective="false" type="upgrade">
       <profiles>
@@ -576,34 +579,12 @@
         <categoryLink id="5384-951f-1a44-3951" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9726-def3-4ee0-3c12" name="Army General" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f45-bf3a-fe3c-0dfd" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9651-e3ca-6e7e-2db9" type="min"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="1cbb-6a19-7f73-cfa3" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-          </categoryLinks>
-          <entryLinks>
-            <entryLink id="7b4e-c2a3-26da-dda2" name="Army General" hidden="false" collective="false" targetId="c30a-4220-8c73-d69b" type="selectionEntry"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="3e63-a709-2a0c-9ab5" name="Special Equipment" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4588-9d0c-7e26-4c52" type="max"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="adf6-0dc8-2825-0206" name="Special Equipment" hidden="false" collective="false">
-              <modifiers>
-                <modifier type="set" field="bd21-adc9-104a-1629" value="200">
-                  <conditions>
-                    <condition field="selections" scope="1cbe-5e0c-13a0-d85a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9726-def3-4ee0-3c12" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bd21-adc9-104a-1629" type="max"/>
               </constraints>
@@ -1635,14 +1616,14 @@ After using the Breath Attack, the model loses a Health Point (no saves of any k
     </selectionEntry>
     <selectionEntry id="2155-30c0-9079-a1c6" name="Fallen" hidden="false" collective="false" type="upgrade">
       <modifiers>
-        <modifier type="set" field="e6b6-9295-d5a9-53dc" value="6">
+        <modifier type="set" field="e6b6-9295-d5a9-53dc" value="2">
           <conditions>
-            <condition field="selections" scope="953d-22cd-7ee1-36dc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b4e-c2a3-26da-dda2" type="equalTo"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c7a-3ec7-761f-798c" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6b6-9295-d5a9-53dc" type="max"/>
+        <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6b6-9295-d5a9-53dc" type="max"/>
       </constraints>
       <profiles>
         <profile id="f037-3d8e-09a9-20a5" name="Fallen Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -4275,6 +4256,163 @@ Only a single unit may exit the same Gateway Marker in each Player Turn.</descri
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e24f-8262-f852-8a80" name="Doomlord (General)" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="b9ad-8622-2ba7-3183" name="Doomlord Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
+            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5e66-b138-8d6c-1b3b" name="Doomlord Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5655-293b-ce43-4422" name="Doomlord Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">7</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="325f-bf08-039f-771a" name="Master of Destruction" hidden="false">
+          <description>The bearer can use a Shield (or a Spiked Shield) simultaneously with a Great Weapon or a Halberd.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="a02a-65d3-6cad-cc9b" name="Path of the Exiled" hidden="false" targetId="45c4-f6e9-92e8-a409" type="rule"/>
+        <infoLink id="f1d2-13c8-4aea-a63c" name="Hell-Forged Armour" hidden="false" targetId="4b6e-450b-00c6-c6e9" type="profile"/>
+        <infoLink id="1d5a-2a8b-21bb-bd3a" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="e24f-8262-f852-8a80" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f890-c75e-1f95-1f70" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8af2-c138-be5d-702a" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
+        <categoryLink id="e4f3-f840-867b-2a8e" name="Doomlord General" hidden="false" targetId="9c7a-3ec7-761f-798c" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="e531-02b9-0925-88c1" name="Special Equipment" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b5cd-7f39-09c8-bf65" type="max"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="aa10-8abf-d1ad-2de0" name="Special Equipment" hidden="false" collective="false">
+              <constraints>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e18a-690e-24dc-55fb" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="c6bc-44d9-fa9e-dd6b" name="Armour Enchantments" hidden="false" collective="false" targetId="f975-dd5b-da67-142e" type="selectionEntryGroup"/>
+                <entryLink id="287d-7b6f-a044-07eb" name="Weapon Enchantments" hidden="false" collective="false" targetId="cb21-fc0e-6fbe-9a3b" type="selectionEntryGroup"/>
+                <entryLink id="0c2c-fc82-243b-dbb3" name="Banner Enchantments" hidden="true" collective="false" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="e24f-8262-f852-8a80" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="49ae-a946-8772-3c98" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink id="22b3-67a4-b420-86ea" name="Artefacts" hidden="false" collective="false" targetId="17df-ad66-db37-0a37" type="selectionEntryGroup"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f890-c75e-1f95-1f70" name="Replace Shield with Spiked Shield" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ff6-33cd-594e-fb3c" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="5bc4-8727-b9da-bc84" name="Spiked Shield" hidden="false" targetId="7063-e7a2-b5ce-ea7b" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="975b-dd1b-fad9-eaec" name="Melee Weapon" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9ec-3dbe-877e-0f26" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b82b-74e3-66e9-d268" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5ce-4293-e011-83c9" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ccf4-5053-1c31-9462" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eca4-63c3-b5f1-6521" name="Great Weapon" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="259b-51ca-ef1d-080e" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="d59d-20a0-7738-0f10" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a9a9-6a27-6842-f61c" name="Halberd" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="473b-7687-af83-426a" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="284a-2f91-2bd7-c5f9" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="7d38-2c32-b471-1ad9" name="Wasteland Behemoth" hidden="false" collective="false" targetId="46d6-395a-e95c-848b" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="225"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77ad-ce87-302c-f649" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="b9bc-22e7-4110-5545" name="New CategoryLink" hidden="false" targetId="304c-a8a1-cb0f-3db5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="49ae-a946-8772-3c98" name="Trophy Rack" hidden="false" collective="false" targetId="8636-7719-69f0-0244" type="selectionEntry"/>
+        <entryLink id="a812-b0c1-074b-d1b5" name="Army General" hidden="false" collective="false" targetId="c30a-4220-8c73-d69b" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="360.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
