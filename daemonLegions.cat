@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.2" revision="22" battleScribeVersion="2.02" authorName="Artur &apos;WarX&apos; Fijalkowski, DarkSky" authorContact="wiki.warx@gmail.com" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.2" revision="23" battleScribeVersion="2.02" authorName="Artur &apos;WarX&apos; Fijalkowski, DarkSky" authorContact="wiki.warx@gmail.com" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="e6e2-5027-c8f6-da13" name="2 Defensive">
       <characteristicTypes>
@@ -51,7 +51,30 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="05ff-5a6d-e662-81c0" type="max"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry id="e6bc-b5cf-f6f6-2ac0" name="Aves (local)" hidden="false"/>
   </categoryEntries>
+  <forceEntries>
+    <forceEntry id="6375-f8e7-dd81-4625" name="Daemon Legions (local)" hidden="false">
+      <categoryLinks>
+        <categoryLink id="3d0e-8c55-cead-30d9" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
+          <constraints>
+            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="40.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="a35e-4c01-f278-0f9c" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="8702-9559-cbe8-00d9" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
+          <constraints>
+            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="25.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="89a6-907d-d7fb-1904" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3481-69ea-0de4-4e2b" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="false">
+          <constraints>
+            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="35.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="a80b-bd55-f78e-121f" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="58c2-2a6b-cc3f-1ad7" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
   <selectionEntries>
     <selectionEntry id="97b3-ca59-67ea-42ab" name="Omen of Savar" hidden="false" collective="false" type="unit">
       <constraints>
@@ -275,7 +298,7 @@
                 <infoLink id="d203-e231-001d-ed88" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
               </infoLinks>
               <categoryLinks>
-                <categoryLink id="c767-addf-0104-b530" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
+                <categoryLink id="36a4-7912-103a-f04d" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="185.0"/>
@@ -1347,8 +1370,8 @@
         </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="465b-456c-c806-8c0f" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
         <categoryLink id="1ae1-6e6d-6b0a-77b0" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
+        <categoryLink id="50b7-06d4-da13-696c" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="41e7-ed5f-20e5-bc83" name="Command Group" hidden="false" collective="false">
@@ -1870,7 +1893,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a5fe-d3b0-7ed8-e30c" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
-        <categoryLink id="2586-1bb1-99db-33fe" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
+        <categoryLink id="498f-4f38-864c-a19d" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="e0af-d0da-fc4e-3d6a" name="Path of Magic" hidden="false" collective="false">
@@ -2409,7 +2432,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <entryLink id="9f1c-a0cf-fa70-cd97" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-21.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-11.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e0cb-1ac1-75f9-5a19" name="Mageblight Gremlins" hidden="false" collective="false" type="unit">
@@ -2936,7 +2959,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ff38-8b87-7ce9-76e5" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
-        <categoryLink id="7611-5574-2209-673a" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
+        <categoryLink id="755e-c8f5-5042-50fa" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="becc-9975-8ce1-b2fa" name="Manifestations of Blazing Glory" hidden="false" collective="false" targetId="01d1-9391-d85a-1f6f" type="selectionEntryGroup"/>
@@ -3025,7 +3048,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             </rule>
           </rules>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3260,7 +3283,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="e8b5-d8cf-1d9c-30b2" name="New CategoryLink" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="true"/>
+        <categoryLink id="1618-552c-cdb5-b89b" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="fec9-abd8-770a-6892" name="Furies" hidden="false" collective="false" type="model">
@@ -3382,7 +3405,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="7e59-e9c1-0097-24d2" name="New CategoryLink" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="true"/>
+        <categoryLink id="c5bf-2a0a-baf0-4cb1" name="New CategoryLink" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7d2a-a811-df76-91a6" name="Veil Serpents" hidden="false" collective="false" type="model">
@@ -3521,7 +3544,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <infoLink id="fc6a-65ef-7153-f765" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="0eb6-811e-d43e-b4a3" name="New CategoryLink" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="true"/>
+        <categoryLink id="6bc4-be49-3ec3-b247" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7a32-7e13-ff6a-b01b" name="Bloat Flies" hidden="false" collective="false" type="model">
@@ -3662,7 +3685,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5007-dbb0-d3e2-831b" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
-        <categoryLink id="cc56-e30f-cce9-e3b4" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
+        <categoryLink id="c087-3485-ebc8-b3ac" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="13af-d873-0aaf-a85c" name="Wizard Level" hidden="false" collective="false">
@@ -3729,7 +3752,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
     <selectionEntry id="a566-a60d-5074-ec12" name="Harbinger of Father Chaos - Fly" hidden="false" collective="false" type="unit">
       <categoryLinks>
         <categoryLink id="7c8c-c1f6-e538-983a" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
-        <categoryLink id="f458-5a36-570a-660b" name="Aves" hidden="false" targetId="e5ba-9a6f-e156-4126" primary="false"/>
+        <categoryLink id="f196-d682-6d15-af9c" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="aeeb-3016-d8ec-9067" name="Harbinger of Father Chaos" hidden="false" collective="false" targetId="5c3b-7d58-1689-4939" type="selectionEntry"/>
