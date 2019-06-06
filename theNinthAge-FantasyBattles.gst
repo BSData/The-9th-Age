@@ -66,7 +66,7 @@
     <categoryEntry id="953d-22cd-7ee1-36dc" name="Characters" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="16e8-e66f-0b41-756b" name="Dummy" hidden="true"/>
+    <forceEntry id="16e8-e66f-0b41-756b" name="~ Dummy ~" hidden="true"/>
   </forceEntries>
   <sharedSelectionEntries>
     <selectionEntry id="312f-8f87-7840-0442" name="Shield Enchantement" hidden="false" collective="false" type="upgrade">
