@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.2" revision="23" battleScribeVersion="2.02" authorName="Artur &apos;WarX&apos; Fijalkowski, DarkSky" authorContact="wiki.warx@gmail.com" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.2" revision="24" battleScribeVersion="2.02" authorName="Artur &apos;WarX&apos; Fijalkowski, DarkSky" authorContact="wiki.warx@gmail.com" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="e6e2-5027-c8f6-da13" name="2 Defensive">
       <characteristicTypes>
@@ -51,10 +51,10 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="05ff-5a6d-e662-81c0" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="e6bc-b5cf-f6f6-2ac0" name="Aves (local)" hidden="false"/>
+    <categoryEntry id="e6bc-b5cf-f6f6-2ac0" name="Aves" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="6375-f8e7-dd81-4625" name="Daemon Legions (local)" hidden="false">
+    <forceEntry id="6375-f8e7-dd81-4625" name="Daemon Legions" hidden="false">
       <categoryLinks>
         <categoryLink id="3d0e-8c55-cead-30d9" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
           <constraints>
@@ -798,18 +798,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7902-bc18-757d-a8d5" name="Sentinel of Nukuja" hidden="false" collective="false" type="unit">
+      <modifiers>
+        <modifier type="decrement" field="2d5f-b100-31c6-6891" value="1">
+          <repeats>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0273-a07f-ea20-2fe2" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d5f-b100-31c6-6891" type="max"/>
       </constraints>
       <profiles>
         <profile id="508e-841d-ca5f-db76" name="Sentinel of Nukuja" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive DL">
-          <modifiers>
-            <modifier type="increment" field="61df-0ca3-17b2-f001" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="90df-341a-2961-4868" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
@@ -829,23 +829,6 @@
           </characteristics>
         </profile>
         <profile id="3e89-349f-1600-852f" name="Sentinel of Nukuja" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <modifiers>
-            <modifier type="append" field="b0d9-2dab-f10b-9b13" value=" (6&quot;)">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="90df-341a-2961-4868" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="db10-a838-f72f-3ed6" value=" (18&quot;)">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="90df-341a-2961-4868" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="2e17-9c12-bfb4-59b0" value="Gigantic">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="90df-341a-2961-4868" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot;</characteristic>
@@ -867,6 +850,34 @@
             <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain Aegis (4+, against Special Attacks).</characteristic>
           </characteristics>
         </profile>
+        <profile id="6e5b-6c51-c030-61ac" name="Throne of the Oracle" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
+            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e8f5-ca08-928b-c5ce" name="Throne of the Oracle" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive DL">
+          <characteristics>
+            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
+            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
+            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
+            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e2ce-fda3-3718-c3e6" name="Throne of the Oracle" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">4</characteristic>
+            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
+            <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
+            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">2</characteristic>
+            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <rules>
         <rule id="e4f0-2982-57d4-84e2" name="Omniscience" hidden="false">
@@ -879,79 +890,13 @@
         <infoLink id="3d71-1837-793e-182b" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
         <infoLink id="8a11-e8d0-ba5c-195d" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
         <infoLink id="f6d8-659e-807f-374d" name="Crush Attack" hidden="false" targetId="9371-5924-2a39-1652" type="rule"/>
+        <infoLink id="be6c-01a1-ee20-5240" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+        <infoLink id="af56-f968-5d38-f3c5" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c68f-85ea-739b-a4aa" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1433-9d3e-156d-ef0b" name="Mount" hidden="false" collective="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c68-a8f5-854f-a9b5" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5158-edae-e5db-184e" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="90df-341a-2961-4868" name="Strixian Spirit" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1cb4-7bd2-b261-072b" type="max"/>
-              </constraints>
-              <rules>
-                <rule id="61f7-3a84-f138-9edf" name="Strixian Spirit" hidden="false">
-                  <description>The model changes its Height to Gigantic, gains Fly (6&quot;, 18&quot;), Light Troops, and +1 Health Point.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="8de2-4139-1512-8f0e" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
-                  <modifiers>
-                    <modifier type="append" field="name" value=" (6&quot;, 18&quot;)"/>
-                  </modifiers>
-                </infoLink>
-                <infoLink id="ee7d-f9fd-0b6c-bdbd" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="41b8-0cea-512e-11ca" name="Throne of the Oracle" hidden="false" collective="false" type="upgrade">
-              <profiles>
-                <profile id="b58f-f157-65eb-09ab" name="Throne of the Oracle" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-                  <characteristics>
-                    <characteristic name="Att" typeId="e9a7-9590-af60-1be6">4</characteristic>
-                    <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
-                    <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
-                    <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
-                    <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">2</characteristic>
-                    <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="13f2-dfa3-b432-96d3" name="Throne of the Oracle" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-                  <characteristics>
-                    <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-                    <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-                    <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-                    <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                    <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="b218-e19b-a2ac-ca2c" name="Throne of the Oracle" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive DL">
-                  <characteristics>
-                    <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
-                    <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
-                    <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
-                    <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-                    <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="da25-36af-03bc-dcee" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
-                <infoLink id="561c-6c5d-ce19-a43d" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="d159-f2f8-1e88-e384" name="Manifestations" hidden="false" collective="false">
           <constraints>
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2df6-8230-5b67-1088" type="max"/>
@@ -3761,6 +3706,148 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="0273-a07f-ea20-2fe2" name="Sentinel of Nukuja - Strixian Spirit" hidden="false" collective="false" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0888-743e-ec4c-6db1" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="efda-428a-71d2-3ea6" name="Sentinel of Nukuja" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive DL">
+          <modifiers>
+            <modifier type="increment" field="61df-0ca3-17b2-f001" value="1"/>
+          </modifiers>
+          <characteristics>
+            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
+            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
+            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
+            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="15ca-92cc-25aa-7dc8" name="Sentinel of Nukuja" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
+            <characteristic name="Str" typeId="484b-4e16-7955-8837">5</characteristic>
+            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
+            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">1</characteristic>
+            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Crush Attack</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6b15-8e0a-21b6-0b57" name="Sentinel of Nukuja" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <modifiers>
+            <modifier type="append" field="b0d9-2dab-f10b-9b13" value=" (6&quot;)"/>
+            <modifier type="append" field="db10-a838-f72f-3ed6" value=" (18&quot;)"/>
+            <modifier type="set" field="2e17-9c12-bfb4-59b0" value="Gigantic"/>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
+            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1a82-9cdf-a23b-dbc9" name="Dominion of Sloth" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="9 Dominion">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="0273-a07f-ea20-2fe2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0afd-76dd-337e-129a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Sloth</characteristic>
+            <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain Aegis (4+, against Special Attacks).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="b19c-3a98-75b8-8701" name="Omniscience" hidden="false">
+          <description>In the Magic Phase, if the model did not March Move or declare a Charge this Player Turn, the cost of converting Veil Tokens into Magic Dice is decreased to 2:1 during this Player Turn (2 Veil Tokens per 1 Magic Dice).</description>
+        </rule>
+        <rule id="3c3e-559c-6912-e16b" name="Strixian Spirit" hidden="false">
+          <description>The model changes its Height to Gigantic, gains Fly (6&quot;, 18&quot;), Light Troops, and +1 Health Point.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="4724-5630-0be9-288d" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
+        <infoLink id="9276-9bb5-e75d-b370" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="3ace-af58-2214-178e" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
+        <infoLink id="024e-82b1-bdcb-badb" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
+        <infoLink id="9848-451b-5fe7-7738" name="Crush Attack" hidden="false" targetId="9371-5924-2a39-1652" type="rule"/>
+        <infoLink id="c3ac-f170-0fe9-e06a" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (6&quot;, 18&quot;)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="46fc-e3a5-023c-0d7b" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="24c4-2b7d-2692-fb80" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="false"/>
+        <categoryLink id="0fad-b9f7-928f-b133" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="252e-87cf-12e7-6bd9" name="Manifestations" hidden="false" collective="false">
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faef-d2a0-350b-7cc3" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="635d-39f7-8bd3-216b" name="Character Manifestations" hidden="false" collective="false" targetId="fc9f-afbc-2576-a823" type="selectionEntryGroup"/>
+            <entryLink id="8866-6efb-158b-4ece" name="Guiding Manifestations" hidden="false" collective="false" targetId="c7e6-73d9-a772-5640" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="263d-15f8-136b-4bd5" name="Path of Magic" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ff3-086a-4669-abdf" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8cd-d6e3-9979-0622" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="564d-aae7-20d7-547e" name="Thaumaturgy" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b8e-249a-8cde-d59d" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b8b6-6714-1a01-15fe" name="Divination" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a95-28a7-7158-6cd9" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bc5c-febe-1600-320f" name="Witchcraft" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3861-f72f-d5ab-4caf" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5b39-df68-25f7-6b84" name="Evocation" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f650-dcfa-7fa3-5d42" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="0afd-76dd-337e-129a" name="Army General" hidden="false" collective="false" targetId="82d3-0515-73cb-6df1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="30"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="640.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <rules>
     <rule id="5122-7830-9011-1a51" name="Immortal Denizens" hidden="false">
@@ -4911,7 +4998,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <modifiers>
             <modifier type="set" field="66b6-cab6-2671-ced1" value="1">
               <conditions>
-                <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e5ba-9a6f-e156-4126" type="instanceOf"/>
+                <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e6bc-b5cf-f6f6-2ac0" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
