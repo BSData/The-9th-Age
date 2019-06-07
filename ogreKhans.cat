@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b60b-8840-3461-ebf5" name="Ogre Khans 2.0" revision="19" battleScribeVersion="2.02" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b60b-8840-3461-ebf5" name="Ogre Khans 2.0" revision="21" battleScribeVersion="2.02" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="b0d2-524e-01c5-5893" name="Chained Beasts" hidden="false"/>
     <categoryEntry id="8848-ec3f-ef30-5842" name="Powder Keg" hidden="false"/>
+    <categoryEntry id="59ec-4e40-1107-fb68" name="Core" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="b4af-f743-dcfc-8c0b" name="Ogre Khans" hidden="false">
@@ -12,13 +13,20 @@
             <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="40.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="7eb7-4cba-35c3-c62c" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="5359-9d4f-dd22-a048" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
+        <categoryLink id="5359-9d4f-dd22-a048" name="Core (OK)" hidden="false" targetId="59ec-4e40-1107-fb68" primary="false">
+          <modifiers>
+            <modifier type="decrement" field="a157-c82e-f103-fee2" value="5">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="25.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="a157-c82e-f103-fee2" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="7884-3aed-ac90-9991" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false"/>
-        <categoryLink id="60aa-e248-009a-d676" name="Powder Keg (local)" hidden="false" targetId="8848-ec3f-ef30-5842" primary="false">
+        <categoryLink id="60aa-e248-009a-d676" name="Powder Keg" hidden="false" targetId="8848-ec3f-ef30-5842" primary="false">
           <constraints>
             <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="35.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="fe6b-d4c8-8dc4-36e4" type="max"/>
           </constraints>
@@ -30,41 +38,19 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="65f1-e3a5-286c-670e" name="Wildheart" hidden="false">
-      <categoryLinks>
-        <categoryLink id="873d-12a9-6b64-09bf" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
-          <constraints>
-            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="40.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="6044-7077-5c30-1b90" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="6cb6-ace3-2223-c5db" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
-          <constraints>
-            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="20.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="39bc-4996-d31a-3928" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="b1ea-1b87-5bc3-4d91" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false"/>
-        <categoryLink id="23e0-4ee5-a8db-0238" name="Powder Keg (local)" hidden="false" targetId="8848-ec3f-ef30-5842" primary="false">
-          <constraints>
-            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="35.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2c2a-edd4-6574-8a12" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="a1a2-e45b-9bdf-09e0" name="Chained Beasts (local)" hidden="false" targetId="b0d2-524e-01c5-5893" primary="false">
-          <constraints>
-            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="30.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="33b7-a204-d417-962a" type="max"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
   </forceEntries>
   <selectionEntries>
     <selectionEntry id="cd6f-3e17-f9cc-1bae" name="Great Khan" hidden="false" collective="false" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="df1b-b9d7-f458-8228" value="0.0">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="instanceOf"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df1b-b9d7-f458-8228" type="max"/>
+      </constraints>
       <profiles>
         <profile id="34ba-6a2b-f247-2f45" name="Great Khan Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -254,7 +240,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c93f-930b-8d06-40a1" name="Big Names" hidden="false" collective="false" targetId="c7bf-d07e-1bd8-3232" type="selectionEntryGroup"/>
+        <entryLink id="c93f-930b-8d06-40a1" name="Big Names for Khans" hidden="false" collective="false" targetId="c7bf-d07e-1bd8-3232" type="selectionEntryGroup"/>
         <entryLink id="1a4d-42e4-4ad6-321a" name="General" hidden="false" collective="false" targetId="de54-24fe-f876-65e6" type="selectionEntry"/>
       </entryLinks>
       <costs>
@@ -263,12 +249,15 @@
     </selectionEntry>
     <selectionEntry id="d22b-66e0-0dc6-614c" name="Khan" hidden="false" collective="false" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="1f54-2a1c-af1e-3a57" value="0">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="instanceOf"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f54-2a1c-af1e-3a57" type="max"/>
+      </constraints>
       <profiles>
         <profile id="5b2d-4ef3-e367-18b1" name="Khan Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -374,7 +363,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2173-d391-8186-a637" name="Armour" hidden="false" collective="false">
+        <selectionEntryGroup id="2173-d391-8186-a637" name="Armour" hidden="false" collective="false" defaultSelectionEntryId="3bbe-b88f-7512-6e6e">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b49c-824a-3e80-aad0" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f75-6321-545a-a5f7" type="max"/>
@@ -475,7 +464,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="db50-3693-b091-b743" name="Big Names" hidden="false" collective="false" targetId="c7bf-d07e-1bd8-3232" type="selectionEntryGroup"/>
+        <entryLink id="db50-3693-b091-b743" name="Big Names for Khans" hidden="false" collective="false" targetId="c7bf-d07e-1bd8-3232" type="selectionEntryGroup"/>
         <entryLink id="5408-19ff-9f68-3e09" name="General" hidden="false" collective="false" targetId="de54-24fe-f876-65e6" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -726,37 +715,10 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f535-b846-1587-1522" name="Big Names" hidden="false" collective="false">
-          <selectionEntries>
-            <selectionEntry id="5b32-707f-2922-4dd8" name="Firebrand" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="0354-83f8-6656-122f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="afa8-d439-50b5-c70b" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5381-db94-5044-db17" type="max"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fe3-4bbb-5235-9f12" type="max"/>
-              </constraints>
-              <rules>
-                <rule id="a740-78db-a314-47ee" name="Firebrand" hidden="false">
-                  <description>The bearer gains Flaming Attacks, Aegis (2+, against Flaming Attacks), Breath Attack (Str 4, AP 0, Flaming Attacks), and always knows Fireball (Pyromancy) in addition to its other spells.</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <entryLinks>
-            <entryLink id="b69a-8f52-3834-7005" name="Big Names" hidden="false" collective="false" targetId="c7bf-d07e-1bd8-3232" type="selectionEntryGroup"/>
-          </entryLinks>
-        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="ab2f-9422-8a1e-5279" name="General" hidden="false" collective="false" targetId="de54-24fe-f876-65e6" type="selectionEntry"/>
+        <entryLink id="74c3-0c75-a95f-2369" name="Big Names for Shaman" hidden="false" collective="false" targetId="7853-b7dd-f2bf-0839" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
@@ -832,7 +794,7 @@
               <modifiers>
                 <modifier type="set" field="3516-4bcf-d076-2a48" value="150">
                   <conditions>
-                    <condition field="selections" scope="1f91-684b-5a72-e05d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3cba-95d8-af26-79ee" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de54-24fe-f876-65e6" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1064,17 +1026,22 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="640f-27a9-341a-7578" name="Big Names" hidden="false" collective="false" targetId="c7bf-d07e-1bd8-3232" type="selectionEntryGroup"/>
+        <entryLink id="640f-27a9-341a-7578" name="Big Names for Mammoth Hunter" hidden="false" collective="false" targetId="c3a6-beb3-c8fa-b7fc" type="selectionEntryGroup"/>
         <entryLink id="3da5-8c8a-748e-2b19" name="General" hidden="false" collective="false" targetId="de54-24fe-f876-65e6" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="lessThan"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="1f91-684b-5a72-e05d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="959f-40d4-b9ed-0ba5" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="adbc-9fcd-f68e-cb6b" value="1">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1083,7 +1050,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="lessThan"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
@@ -1109,7 +1076,7 @@
         <infoLink id="881a-566d-826a-62a2" name="Sons of the Avalanche" hidden="false" targetId="caaa-36aa-3213-dd41" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="448f-3641-ffd8-df46" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
+        <categoryLink id="bd91-0746-6cc1-e39f" name="New CategoryLink" hidden="false" targetId="59ec-4e40-1107-fb68" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e6de-7cd8-d044-c848" name="Tribesman" hidden="false" collective="false" type="model">
@@ -1224,9 +1191,9 @@
     </selectionEntry>
     <selectionEntry id="356a-88fa-db57-ea45" name="Bruisers" hidden="false" collective="false" type="unit">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="fc48-26c7-a2fa-6380" value="0">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="instanceOf"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1241,7 +1208,7 @@
         <infoLink id="2536-e1b8-fffc-f617" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="06f3-7d98-0e57-3b81" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
+        <categoryLink id="9d4f-11ab-6fb4-1072" name="New CategoryLink" hidden="false" targetId="59ec-4e40-1107-fb68" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b76f-9130-9f9f-0761" name="Bruiser" hidden="false" collective="false" type="model">
@@ -1328,7 +1295,7 @@
         <infoLink id="abf4-78bd-1af3-4748" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="a246-c5ef-5cf8-a936" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
+        <categoryLink id="eb74-3497-77e8-6910" name="New CategoryLink" hidden="false" targetId="59ec-4e40-1107-fb68" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="72a7-d1ab-76b0-2019" name="Scrapling" hidden="false" collective="false" type="model">
@@ -1521,12 +1488,15 @@
     </selectionEntry>
     <selectionEntry id="4fb4-1aaa-370a-92d8" name="Mercenary Veterans" hidden="false" collective="false" type="unit">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="f662-ffcd-b0e0-bb6e" value="0">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="instanceOf"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f662-ffcd-b0e0-bb6e" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="c6de-54b8-28fd-82b0" name="Scrapling Lookout" hidden="false" targetId="acfe-1168-a223-c621" type="rule"/>
         <infoLink id="1c86-31e8-0f23-f35d" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
@@ -1811,12 +1781,15 @@
     </selectionEntry>
     <selectionEntry id="4e70-717b-ebff-d3b3" name="Mercenary Veterans with Ogre Pistols" hidden="false" collective="false" type="unit">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="d36b-dd01-dab3-f510" value="0">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="instanceOf"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d36b-dd01-dab3-f510" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="cb08-6954-31d4-0f92" name="Scrapling Lookout" hidden="false" targetId="acfe-1168-a223-c621" type="rule"/>
         <infoLink id="084d-228c-d249-1404" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
@@ -2316,7 +2289,7 @@ If an enemy unit makes an Advance Move, March Move, Reform, Pivot, Charge Move, 
       <modifiers>
         <modifier type="decrement" field="674f-7864-a23a-a893" value="1">
           <repeats>
-            <repeat field="selections" scope="4bcd-01c8-ce5e-7108" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9a70-d2d0-0891-d010" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9a70-d2d0-0891-d010" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -2387,7 +2360,7 @@ If an enemy unit makes an Advance Move, March Move, Reform, Pivot, Charge Move, 
         <infoLink id="27bd-fa90-9692-c38e" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="696a-6eb7-7b85-8252" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
+        <categoryLink id="d680-c43c-b9af-d9a4" name="New CategoryLink" hidden="false" targetId="59ec-4e40-1107-fb68" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="66dd-0981-8916-30b9" name="Sabertooth Tiger" hidden="false" collective="false" type="model">
@@ -2484,9 +2457,9 @@ If an enemy unit makes an Advance Move, March Move, Reform, Pivot, Charge Move, 
     </selectionEntry>
     <selectionEntry id="7c4f-768e-7d01-74db" name="Thunder Cannon" hidden="false" collective="false" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="b4b8-52e4-6d35-d472" value="0">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="instanceOf"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2662,9 +2635,9 @@ If an enemy unit makes an Advance Move, March Move, Reform, Pivot, Charge Move, 
     </selectionEntry>
     <selectionEntry id="050d-0138-7654-3690" name="Bombardiers" hidden="false" collective="false" type="unit">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="86df-3ef4-a659-4274" value="0">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="instanceOf"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3106,6 +3079,7 @@ The roll for the number of hits from its Stomp Attacks is subject to Maximised R
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="865a-2216-efbc-b93a" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3ed7-e723-1256-7ce2" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="21a0-7143-5229-6ec5" type="min"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adbc-9fcd-f68e-cb6b" type="min"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -3229,188 +3203,216 @@ The roll for the number of hits from its Stomp Attacks is subject to Maximised R
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3cba-95d8-af26-79ee" name="Wildheart" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f39d-bc2e-2172-f8a8" name="Trolleater - Models on foot only" hidden="false" collective="false" type="upgrade">
+      <modifiers>
+        <modifier type="decrement" field="c055-0da8-b632-dfc9" value="1">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b1b3-b15a-0ed3-a02d" type="greaterThan"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77f0-e914-b7e7-5940" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d237-4a8c-570e-c611" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="025c-61d9-1711-61a9" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c055-0da8-b632-dfc9" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d42-b03a-8763-f7c7" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="2eff-3e13-2fff-bcd7" name="Trolleater - Models on foot only" hidden="false">
+          <description>The bearer gains Fortitude (4+), Stupidity and Multiple Wounds (2, against Large Infantry).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="8d6b-ef12-2b92-0c63" name="Regeneration" hidden="false" targetId="faef-6f9d-ae02-d420" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (4+)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="cbf1-e6af-2681-4f17" name="Multiple Wounds" hidden="false" targetId="2ea2-3a42-de1e-bc0a" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (2, against Large Infantry)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="76a2-42eb-2bfe-93d9" name="Hoardmaster" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a45d-2d99-abf8-733e" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4868-aed6-b0bc-ced5" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="e500-e4dc-3dd1-b1ec" name="Hoardmaster" hidden="false">
+          <description>The bearer gains Weapon Master, Plate Armour, Iron Fist, Great Weapon, Paired Weapons, and Halberd. The bearer cannot take Weapon Enchantments.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="ac8b-14ef-1a01-1793" name="Plate Armour" hidden="false" targetId="85fa-68ac-214d-2f4b" type="profile"/>
+        <infoLink id="4c55-3b23-7bde-8cde" name="Iron Fist" hidden="false" targetId="8ad3-0e9d-3cdf-36b4" type="profile"/>
+        <infoLink id="dabd-fd8f-9c91-4bfc" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
+        <infoLink id="c74b-5309-e690-d5ce" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
+        <infoLink id="4de4-9897-bf6d-61aa" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
+        <infoLink id="2b14-02e4-2346-eeed" name="Weapon Master" hidden="false" targetId="a9a1-31b4-37a3-4138" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0711-4d52-e7f2-e777" name="Headhunter" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e317-adff-63f1-3606" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7218-9080-e3bb-6d33" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="962e-7f96-357e-24af" name="Headhunter" hidden="false">
+          <description>At the end of any Melee Phase in which the bearer has killed one or more models and is not fleeing, roll a D6. On a roll of 3+ it Recovers a single Health Point.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b02d-4389-29f0-678a" name="Rottenjaw" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a9d-4f2a-26e2-e110" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8504-92f9-5fe3-2b52" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="cc81-1cde-70b4-1433" name="Rottenjaw" hidden="false">
+          <description>The bearer gains Poison Attacks, and a;; friendly Kin-Eater units may reroll Ambush rolls of 1 and 2 while the bearer is on the Battlefield. Unless the bearer is Gigantic, all attacks against the bearer with Poison Attacks lose this Attack Attribute.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6365-25aa-871e-08b5" name="Cult Leader - General/BSB only" hidden="false" collective="false" type="upgrade">
+      <modifiers>
+        <modifier type="decrement" field="de97-63ff-03a1-dbde" value="1">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="de54-24fe-f876-65e6" type="lessThan"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="959f-40d4-b9ed-0ba5" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de97-63ff-03a1-dbde" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e1e-7158-1d40-63fa" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="899e-78f0-2a3e-9763" name="Cult Leader" hidden="false">
+          <description>The range of the bearer’s Commanding Presence or Rally Around the Flag is always 18”.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="92cb-346f-604f-e6df" name="Gut Roarer" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2bf-c711-38f3-1ff4" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bea-6850-dc5e-8ac4" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="7daa-0a5f-9d06-b663" name="Gut Roarer" hidden="false">
+          <description>The bearer gains Fear and Channel (1).
+</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="f81f-7a7a-61ae-491a" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
+        <infoLink id="6360-8fe0-fa06-9153" name="Channel" hidden="false" targetId="5a46-f1e8-f840-a1de" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (1)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7cad-3e29-84a6-b4da" name="Spinesplitter - Models on foot only" hidden="false" collective="false" type="upgrade">
+      <modifiers>
+        <modifier type="decrement" field="d2d5-1f23-eb19-804c" value="1">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b1b3-b15a-0ed3-a02d" type="greaterThan"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77f0-e914-b7e7-5940" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2d5-1f23-eb19-804c" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d983-d373-d344-9cf2" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="34e5-6e57-6bf0-893a" name="Spinesplitter" hidden="false">
+          <description>The bearer gains Devastating Charge (+1 Att, +1 Str, +1 AP). The Strength and Armour Penetration bonuses from Devastating Charge also affect Impact Hits and Stomp Attacks.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="2d63-b3fa-fdf3-1cf1" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (+1 Att, +1 Str, +1 AP)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2945-e9d3-e35d-bf35" name="Wildheart" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="28fb-3099-4bd9-2e57" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a39a-2415-c4dd-02f4" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="4802-eed2-d509-e25e" name="Wildheart" hidden="false">
+          <description>One of a Kind.
+The bearer loses Not a Leader and must be the General. Its Special Equipment allowance is increased to 150 pts. Another Mammoth Hunter in the Army may be the Battle Standard Bearer for 50pts; this Battle Standard Bearer gains Scrapling Lookout when joined
+to Yeti units. The Core limit is reduced to “at least 20%”. The Army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, Bombardiers, or Thunder Cannons.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8bdc-e24f-b730-39a5" name="Firebrand" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="047b-4431-4ea3-a9bf" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f88c-5d96-b463-1d44" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="c7bf-d07e-1bd8-3232" name="Big Names" hidden="false" collective="false">
+    <selectionEntryGroup id="c7bf-d07e-1bd8-3232" name="Big Names for Khans" hidden="false" collective="false">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d0e-52ae-4535-5b92" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="9fa9-3840-439a-894e" name="Trolleater - Models on foot only" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f436-8c46-8b4e-7c04" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cd8-d2af-64f8-ad9a" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="002c-0e84-a0cb-c81e" name="Trolleater - Models on foot only" hidden="false">
-              <description>The bearer gains Fortitude (4+), Stupidity and Multiple Wounds (2, against Large Infantry).</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink id="5758-d0ca-7696-767b" name="Regeneration" hidden="false" targetId="faef-6f9d-ae02-d420" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value=" (4+)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="84b7-2f5c-1e0a-2995" name="Multiple Wounds" hidden="false" targetId="2ea2-3a42-de1e-bc0a" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value=" (2, against Large Infantry)"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7298-bba6-c0c5-5093" name="Hoardmaster - Khan/Great Khan only" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43dd-d9fc-3287-fd85" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a662-8488-f69b-aa65" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="86ba-3d0e-c623-bacc" name="Hoardmaster" hidden="false">
-              <description>The bearer gains Weapon Master, Plate Armour, Iron Fist, Great Weapon, Paired Weapons, and Halberd. The bearer cannot take Weapon Enchantments.</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink id="318e-23bd-cdfe-53c0" name="Plate Armour" hidden="false" targetId="85fa-68ac-214d-2f4b" type="profile"/>
-            <infoLink id="5b56-fb4f-f0c9-94e6" name="Iron Fist" hidden="false" targetId="8ad3-0e9d-3cdf-36b4" type="profile"/>
-            <infoLink id="4a59-47f2-80ce-991c" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-            <infoLink id="c128-198c-a99c-bc0d" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-            <infoLink id="0cfe-dd4d-65e5-894f" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
-            <infoLink id="2955-f47c-9d6f-628d" name="Weapon Master" hidden="false" targetId="a9a1-31b4-37a3-4138" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a728-fc49-ea5a-bdff" name="Headhunter" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d5d-610d-602c-be2a" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c7d-a6fb-300b-c2b3" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="e991-9585-2c33-ffb2" name="Headhunter" hidden="false">
-              <description>At the end of any Melee Phase in which the bearer has killed one or more models and is not fleeing, roll a D6. On a roll of 3+ it Recovers a single Health Point.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bcd5-396e-f7a5-a6cb" name="Cult Leader - General/BSB only" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9aa-ce71-2939-0a6a" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5db3-00db-cfc1-fa95" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="4209-3876-52ae-c66d" name="Cult Leader" hidden="false">
-              <description>The range of the bearer’s Commanding Presence or Rally Around the Flag is always 18”.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a336-10ec-ee76-e138" name="Gut Roarer - Shaman only" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d252-bfeb-f9a1-382d" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ee3-be5c-1e68-1c71" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="7b53-e0be-73c6-5e20" name="Gut Roarer" hidden="false">
-              <description>The bearer gains Fear and Channel (1).
-</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink id="57dc-c145-2667-faaa" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
-            <infoLink id="036f-d8ca-f92a-3851" name="Channel" hidden="false" targetId="5a46-f1e8-f840-a1de" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value=" (1)"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3a3e-4c80-a66b-e692" name="Spinesplitter - Models on foot only" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3731-5206-62ee-e45d" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cab8-159b-0d9f-7f20" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="3e9c-438a-fd2b-2f61" name="Spinesplitter" hidden="false">
-              <description>The bearer gains Devastating Charge (+1 Att, +1 Str, +1 AP). The Strength and Armour Penetration bonuses from Devastating Charge also affect Impact Hits and Stomp Attacks.</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink id="66c0-0034-fa32-9d47" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value=" (+1 Att, +1 Str, +1 AP)"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="49a0-e7d3-7c77-a8d4" name="Rottenjaw" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecf6-078f-1a8c-0544" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abd7-b455-2225-dd75" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="6180-f476-8c33-204a" name="Rottenjaw" hidden="false">
-              <description>The bearer gains Poison Attacks, and a;; friendly Kin-Eater units may reroll Ambush rolls of 1 and 2 while the bearer is on the Battlefield. Unless the bearer is Gigantic, all attacks against the bearer with Poison Attacks lose this Attack Attribute.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="306e-8e28-32f7-61ff" name="Wildheart - Mammoth Hunters only" hidden="false" collective="false" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="9fd1-c07a-c529-c510" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65f1-e3a5-286c-670e" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e9d7-df12-9e7b-cfd2" type="max"/>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9fd1-c07a-c529-c510" type="min"/>
-          </constraints>
-          <rules>
-            <rule id="dcaa-4827-a773-7eac" name="Wildheart" hidden="false">
-              <description>One of a Kind.
-The bearer loses Not a Leader and must be the General. Its Special Equipment allowance is increased to 150 pts. Another Mammoth Hunter in the Army may be the Battle Standard Bearer for 50pts; this Battle Standard Bearer gains Scrapling Lookout when joined
-to Yeti units. The Core limit is reduced to “at least 20%”. The Army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, Bombardiers, or Thunder Cannons.</description>
-            </rule>
-          </rules>
-          <entryLinks>
-            <entryLink id="0f70-0bba-01b5-f940" name="Wildheart" hidden="false" collective="false" targetId="3cba-95d8-af26-79ee" type="selectionEntry"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="b7a8-5fbf-273d-e919" name="Cult Leader - General/BSB only" hidden="false" collective="false" targetId="6365-25aa-871e-08b5" type="selectionEntry"/>
+        <entryLink id="e053-c4f5-92be-361f" name="Headhunter" hidden="false" collective="false" targetId="0711-4d52-e7f2-e777" type="selectionEntry"/>
+        <entryLink id="b9f3-bdd6-2bef-f03d" name="Hoardmaster" hidden="false" collective="false" targetId="76a2-42eb-2bfe-93d9" type="selectionEntry"/>
+        <entryLink id="55aa-7d40-357b-cae1" name="Rottenjaw" hidden="false" collective="false" targetId="b02d-4389-29f0-678a" type="selectionEntry"/>
+        <entryLink id="f5cb-d9ca-60fb-b0f8" name="Trolleater - Models on foot only" hidden="false" collective="false" targetId="f39d-bc2e-2172-f8a8" type="selectionEntry"/>
+        <entryLink id="e7ef-566a-1be8-f032" name="Spinesplitter - Models on foot only" hidden="false" collective="false" targetId="7cad-3e29-84a6-b4da" type="selectionEntry"/>
+        <entryLink id="d10e-490f-b2f9-b23f" name="Firebrand" hidden="false" collective="false" targetId="8bdc-e24f-b730-39a5" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="80ba-f84b-6b53-c0fc" name="OK Weapon Enchantments" hidden="false" collective="false">
       <constraints>
@@ -3677,6 +3679,51 @@ to Yeti units. The Core limit is reduced to “at least 20%”. The Army may not
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="c3a6-beb3-c8fa-b7fc" name="Big Names for Mammoth Hunter" hidden="false" collective="false">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abc8-0b55-08ff-d936" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="be84-5c5c-2301-a51d" name="Cult Leader - General/BSB only" hidden="false" collective="false" targetId="6365-25aa-871e-08b5" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="c6a9-bb0e-46a1-0804" name="Headhunter" hidden="false" collective="false" targetId="0711-4d52-e7f2-e777" type="selectionEntry"/>
+        <entryLink id="66c3-31ea-2025-8170" name="Rottenjaw" hidden="false" collective="false" targetId="b02d-4389-29f0-678a" type="selectionEntry"/>
+        <entryLink id="ec0d-7c81-4278-8935" name="Trolleater - Models on foot only" hidden="false" collective="false" targetId="f39d-bc2e-2172-f8a8" type="selectionEntry"/>
+        <entryLink id="638c-55c0-5cfa-4066" name="Spinesplitter - Models on foot only" hidden="false" collective="false" targetId="7cad-3e29-84a6-b4da" type="selectionEntry"/>
+        <entryLink id="dae4-a1bb-c939-44ef" name="Firebrand" hidden="false" collective="false" targetId="8bdc-e24f-b730-39a5" type="selectionEntry"/>
+        <entryLink id="1928-1452-9dbc-77be" name="Gut Roarer" hidden="false" collective="false" targetId="92cb-346f-604f-e6df" type="selectionEntry"/>
+        <entryLink id="bd7e-632b-6084-c626" name="Wildheart" hidden="false" collective="false" targetId="2945-e9d3-e35d-bf35" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="7853-b7dd-f2bf-0839" name="Big Names for Shaman" hidden="false" collective="false">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3fc-871f-9686-35fc" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="8e82-ffaa-6afd-37a9" name="Cult Leader - General/BSB only" hidden="false" collective="false" targetId="6365-25aa-871e-08b5" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="0268-a648-67ed-29d8" name="Headhunter" hidden="false" collective="false" targetId="0711-4d52-e7f2-e777" type="selectionEntry"/>
+        <entryLink id="042b-da7a-5dc0-aabe" name="Rottenjaw" hidden="false" collective="false" targetId="b02d-4389-29f0-678a" type="selectionEntry"/>
+        <entryLink id="f96a-2ee2-2cd3-9472" name="Trolleater - Models on foot only" hidden="false" collective="false" targetId="f39d-bc2e-2172-f8a8" type="selectionEntry"/>
+        <entryLink id="3c42-c2d6-016e-c2b8" name="Spinesplitter - Models on foot only" hidden="false" collective="false" targetId="7cad-3e29-84a6-b4da" type="selectionEntry"/>
+        <entryLink id="767f-aaa2-6cb5-a8b9" name="Firebrand" hidden="false" collective="false" targetId="8bdc-e24f-b730-39a5" type="selectionEntry"/>
+        <entryLink id="d3af-66be-615e-b3ca" name="Wildheart" hidden="false" collective="false" targetId="2945-e9d3-e35d-bf35" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
