@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6f32-70a5-e6b1-a536" name="Åsklanders 2.2" revision="4" battleScribeVersion="2.02" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6f32-70a5-e6b1-a536" name="Åsklanders 2.2" revision="5" battleScribeVersion="2.02" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d224-066a-e928-c28c" name="Legendary Beasts" hidden="false"/>
   </categoryEntries>
@@ -502,10 +502,18 @@ The model gains Ambush. During step 8 of the Pre- ​Game Sequence nominate a un
         </selectionEntry>
         <selectionEntry id="d616-fa3a-7362-c3ee" name="Replace Heavy Armour with Shield and Berserker&apos;s Bear Pelt" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b5a1-b3e7-51f1-0825" type="atLeast"/>
-              </conditions>
+            <modifier type="set" field="3ac0-909d-d725-3f8e" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a579-15fc-17a0-cc17" type="atLeast"/>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b47c-af41-55aa-d513" type="atLeast"/>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46e-7457-4fa4-d51e" type="atLeast"/>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0d0b-54c7-9d0e-4e2e" type="atLeast"/>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c9b-b0e7-710a-8756" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -612,6 +620,21 @@ The model gains Ambush. During step 8 of the Pre- ​Game Sequence nominate a un
               </costs>
             </selectionEntry>
             <selectionEntry id="b7d2-89a3-7eb9-541c" name="Spear" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46e-7457-4fa4-d51e" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c9b-b0e7-710a-8756" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b47c-af41-55aa-d513" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a579-15fc-17a0-cc17" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0d0b-54c7-9d0e-4e2e" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ca0-8971-7628-3d25" type="max"/>
               </constraints>
@@ -625,12 +648,20 @@ The model gains Ambush. During step 8 of the Pre- ​Game Sequence nominate a un
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0ee6-acd7-190b-0951" name="Light Lance" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="0ee6-acd7-190b-0951" name="Light Lance" hidden="true" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b5a1-b3e7-51f1-0825" type="equalTo"/>
-                  </conditions>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0d0b-54c7-9d0e-4e2e" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46e-7457-4fa4-d51e" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b47c-af41-55aa-d513" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a579-15fc-17a0-cc17" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c9b-b0e7-710a-8756" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
