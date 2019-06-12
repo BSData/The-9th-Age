@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6f32-70a5-e6b1-a536" name="Makhar 2.0" revision="1" battleScribeVersion="2.02" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6f32-70a5-e6b1-a536" name="Makhar 2.0" revision="2" battleScribeVersion="2.02" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d224-066a-e928-c28c" name="Raining Death" hidden="false"/>
   </categoryEntries>
@@ -447,6 +447,7 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dae3-eae6-c07d-3d92" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="751b-e0cd-ac54-5155" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
@@ -688,20 +689,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="88b2-a098-0164-890f" name="Tamyir Vassals" hidden="false" collective="false" type="upgrade">
-      <infoLinks>
-        <infoLink id="0f16-0a60-c507-f256" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="edff-d9d8-5701-38da" name="Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
-        <infoLink id="78cb-6e9f-9633-7d11" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="88b2-a098-0164-890f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="00a1-17ac-09d2-c088" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink id="4d52-2abc-7b19-80bc" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="bc45-7a10-bdff-18e3" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
@@ -746,7 +733,7 @@
         </selectionEntry>
         <selectionEntry id="1d5c-a7a4-f23d-284f" name="Throwing Weapons (5+)" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
@@ -756,13 +743,6 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="315b-82bc-f9e8-730f" type="max"/>
             <constraint field="24fd-8af8-0c78-001c" scope="roster" value="80.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="67f5-59a9-2168-f3a7" type="max"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="9edf-9cfe-8dc8-3b41" name="Throwing Weapons" hidden="false" targetId="8c83-06ff-024f-a235" type="profile">
-              <modifiers>
-                <modifier type="append" field="name" value=" (5+)"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
           <categoryLinks>
             <categoryLink id="533f-cbf4-30c2-83f9" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
           </categoryLinks>
@@ -783,6 +763,12 @@
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e301-c6c1-0313-bf10" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -796,7 +782,7 @@
           <selectionEntries>
             <selectionEntry id="c26e-0fbc-036e-abf9" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
                     <repeat field="selections" scope="88b2-a098-0164-890f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a60-8f44-df1d-0d73" repeats="1" roundUp="false"/>
                   </repeats>
@@ -805,9 +791,6 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8965-c39b-1fc4-1cdc" type="max"/>
               </constraints>
-              <infoLinks>
-                <infoLink id="26e7-a6fb-4a23-3def" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-              </infoLinks>
               <categoryLinks>
                 <categoryLink id="c9f3-797a-dc0b-88e0" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
               </categoryLinks>
@@ -826,9 +809,6 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4323-38c4-fe85-4f60" type="max"/>
               </constraints>
-              <infoLinks>
-                <infoLink id="86cd-9081-1908-a55a" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
               <categoryLinks>
                 <categoryLink id="d3e8-6278-b028-9267" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
               </categoryLinks>
@@ -847,9 +827,6 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf0a-807b-a948-7dc5" type="max"/>
               </constraints>
-              <infoLinks>
-                <infoLink id="d998-b315-4984-1fe3" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
-              </infoLinks>
               <categoryLinks>
                 <categoryLink id="8e11-3aed-5cff-1124" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
               </categoryLinks>
@@ -972,7 +949,14 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a66d-112d-1fbf-a3f1" name="Vanguard" hidden="false" collective="false" type="upgrade"/>
+        <selectionEntry id="a66d-112d-1fbf-a3f1" name="Vanguard" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54ac-c75f-85b9-b118" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="b9f1-e352-8455-ce42" name="Beast Taker" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
@@ -981,6 +965,12 @@
               </repeats>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfa8-2241-6a48-a60e" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="b6ed-d7c1-47f5-d364" name="Light Lance" hidden="false" collective="false" type="upgrade">
           <modifiers>
@@ -990,6 +980,12 @@
               </repeats>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="217b-1658-4c24-dbfc" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1104,6 +1100,9 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c297-1961-a76a-2f6d" name="Territorial Hunter" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77fa-5d93-feb6-eeeb" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
@@ -1122,13 +1121,23 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="1920-5273-62d7-1875" name="One choice only" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="566b-ee71-ddd5-f3c2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f53-f52d-9aac-b6ce" type="min"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="8c63-8911-1013-1286" name="Fist of the Makhar (4+)" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6e0-0832-9308-fda6" type="max"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="ae9f-56e2-017b-0775" name="Rally Around the Flag" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf2c-5d9e-e17f-c2ce" type="max"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
               </costs>
@@ -1158,22 +1167,28 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           </costs>
         </selectionEntry>
         <selectionEntry id="34ae-b800-6158-a41b" name="Vanguard" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c58-1d4d-f0fd-18ef" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="0078-a213-2836-94f3" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="25d9-6762-55ff-d6d2" name="Command Group" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3044-039b-7783-43a1" type="max"/>
+          </constraints>
           <selectionEntries>
-            <selectionEntry id="aa02-c979-e894-c088" name="Musician" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="fd04-fd4c-873d-c8aa" name="Musician" hidden="false" collective="false" type="upgrade">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
-        </entryLink>
-      </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
@@ -1196,19 +1211,18 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           </costs>
         </selectionEntry>
         <selectionEntry id="7b4c-45d5-4e29-8a12" name="Banner Enchantment" hidden="false" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="64e6-0778-b8d9-1bf9" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e7bf-64dd-8ea9-1df4" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="c35e-5543-df02-9cd7" name="Banner Enchantments" hidden="false" collective="false" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="64e6-0778-b8d9-1bf9" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink id="c35e-5543-df02-9cd7" name="Banner Enchantments" hidden="false" collective="false" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -1279,19 +1293,17 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="6423-fab3-7a85-9557" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
-        <entryLink id="e327-8df8-e887-fcce" name="Vanguard" hidden="false" collective="false" targetId="4aa1-fb25-b3c5-57bc" type="selectionEntry"/>
+        <entryLink id="e327-8df8-e887-fcce" name="Vanguard" hidden="false" collective="false" targetId="4aa1-fb25-b3c5-57bc" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1376-2832-fd2e-0f4b" type="max"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8c2f-5b72-4ebe-90ed" name="Tamyir Vassals - Bows" hidden="false" collective="false" type="upgrade">
-      <infoLinks>
-        <infoLink id="5e73-7f51-10ef-ce6e" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="3cdd-312a-012f-326a" name="Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
-        <infoLink id="c048-c458-f5a6-38a5" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-        <infoLink id="2e58-6c0d-5f8c-a2ae" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="930a-995e-1ca4-5fef" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
         <categoryLink id="cdc0-d831-91cf-b9bf" name="Raining Death" hidden="false" targetId="d224-066a-e928-c28c" primary="false"/>
@@ -1303,9 +1315,6 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <constraint field="selections" scope="parent" value="40.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0574-2659-7d6e-7a14" type="max"/>
             <constraint field="selections" scope="roster" value="80.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cd32-61ae-8bbb-3625" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="0f2d-99bb-d0b6-ab08" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
-          </categoryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="9.0"/>
           </costs>
@@ -1321,9 +1330,6 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d7d-cb08-6411-1ec6" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="74c0-cb43-e1c5-ffff" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
-          </categoryLinks>
           <entryLinks>
             <entryLink id="8251-ec9a-411f-02e7" name="Banner Enchantments" hidden="false" collective="false" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup">
               <constraints>
@@ -1340,7 +1346,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
         </selectionEntry>
         <selectionEntry id="8258-e57b-369f-1650" name="Throwing Weapons (5+)" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
@@ -1350,16 +1356,6 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e29-61ba-bd3b-1135" type="max"/>
             <constraint field="24fd-8af8-0c78-001c" scope="roster" value="80.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eff0-b96a-c9fe-5085" type="max"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="8877-efb5-72dc-3c82" name="Throwing Weapons" hidden="false" targetId="8c83-06ff-024f-a235" type="profile">
-              <modifiers>
-                <modifier type="append" field="name" value=" (5+)"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink id="796b-af6d-6b39-1348" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
-          </categoryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="2.0"/>
           </costs>
@@ -1377,6 +1373,12 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c7b-f6bb-c2cb-3b94" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1384,9 +1386,6 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f8a-1afa-ca39-f1eb" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="4c38-46ca-caf6-1515" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
-          </categoryLinks>
           <selectionEntries>
             <selectionEntry id="e97e-98f0-9126-8da3" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
               <modifiers>
@@ -1399,9 +1398,6 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="228a-bb1a-8d9f-3047" type="max"/>
               </constraints>
-              <infoLinks>
-                <infoLink id="4136-8e28-648e-8ed7" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-              </infoLinks>
               <categoryLinks>
                 <categoryLink id="7363-f1e3-48cb-4b3b" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
               </categoryLinks>
@@ -1420,9 +1416,6 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb80-744c-f641-def9" type="max"/>
               </constraints>
-              <infoLinks>
-                <infoLink id="6997-ac17-b8f2-7454" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
               <categoryLinks>
                 <categoryLink id="1bab-a4f7-9c8a-90b0" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
               </categoryLinks>
@@ -1441,9 +1434,6 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03dc-4628-30d6-7e7f" type="max"/>
               </constraints>
-              <infoLinks>
-                <infoLink id="a9d0-a0ed-2fc4-27ac" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
-              </infoLinks>
               <categoryLinks>
                 <categoryLink id="6f19-1cb8-5203-207c" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
               </categoryLinks>
@@ -1462,7 +1452,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e7d6-dc5f-37cc-b4f7" name="Makhar Lancers - Bows" hidden="false" collective="false" type="upgrade">
@@ -1487,23 +1477,22 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50fe-e776-d39a-72aa" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="18.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6a15-de4b-727c-5e10" name="Banner Enchantment" hidden="false" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="e7d6-dc5f-37cc-b4f7" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c2b4-9063-9bff-a6e7" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="ec6a-6a96-4744-0237" name="Banner Enchantments" hidden="false" collective="false" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink id="ec6a-6a96-4744-0237" name="Banner Enchantments" hidden="false" collective="false" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -1574,7 +1563,11 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="652c-c58d-5ccd-9381" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
-        <entryLink id="0970-b477-22e1-172d" name="Vanguard" hidden="false" collective="false" targetId="4aa1-fb25-b3c5-57bc" type="selectionEntry"/>
+        <entryLink id="0970-b477-22e1-172d" name="Vanguard" hidden="false" collective="false" targetId="4aa1-fb25-b3c5-57bc" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bf3-5518-5603-73f6" type="max"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
@@ -1606,22 +1599,28 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           </costs>
         </selectionEntry>
         <selectionEntry id="f9a3-f041-7570-d86b" name="Vanguard" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d5f-7e0a-7c98-1b04" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="42a2-b38a-ed2d-81aa" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4b17-38eb-f4b5-189a" name="Command Group" hidden="false" collective="false">
           <selectionEntries>
-            <selectionEntry id="a3b9-043f-66ed-b4db" name="Musician" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="04a5-476d-3d59-2c5d" name="Musician" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b35-4f2f-bd8c-5a6a" type="max"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
-        </entryLink>
-      </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
@@ -1642,6 +1641,9 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="59cb-a3ca-89a3-58ab" name="Big Brother" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="728d-5e49-75fb-ddfb" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
@@ -1649,13 +1651,22 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="59af-3113-da66-f997" name="Weapon" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6526-2848-ccd5-10ce" type="max"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="334a-a188-7985-999c" name="Giant Club" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c4b-9843-c6e4-a1ab" type="max"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="524f-2622-e9ac-3363" name="Tribal Warspear" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d9d-da38-29b9-4d6a" type="max"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
@@ -1677,6 +1688,9 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3166-53f7-cabe-6bb7" name="Big Brother" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fe3-b8d4-837e-4b86" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
@@ -1729,7 +1743,14 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e756-ea40-c73f-5119" name="Vanguard" hidden="false" collective="false" type="upgrade"/>
+        <selectionEntry id="e756-ea40-c73f-5119" name="Vanguard" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b4a-545a-b408-2606" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="633b-af44-2e37-77ff" name="Beast Taker" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
@@ -1738,6 +1759,12 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               </repeats>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="131e-32ff-8725-074e" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="068c-1a82-606a-59a0" name="Light Lance" hidden="false" collective="false" type="upgrade">
           <modifiers>
@@ -1747,6 +1774,12 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               </repeats>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04f2-f4ef-fc6a-d427" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1815,6 +1848,9 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
       <constraints>
         <constraint field="selections" scope="roster" value="35.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1c77-b0bc-5323-7896" type="max"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
