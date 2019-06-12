@@ -4952,6 +4952,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
     <selectionEntry id="8acc-ba3f-25f3-21bf" name="Character - Sorcerous Antennae" hidden="false" collective="false" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1977-d26a-b857-0a59" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b204-ac28-d078-af1a" type="max"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
@@ -5107,6 +5108,16 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       </costs>
     </selectionEntry>
     <selectionEntry id="7f66-1b58-871f-1f65" name="Unit - Sorcerous Antennae" hidden="false" collective="false" type="upgrade">
+      <modifiers>
+        <modifier type="decrement" field="d80b-331d-6d51-2379" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8acc-ba3f-25f3-21bf" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d80b-331d-6d51-2379" type="max"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
