@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2.0" revision="22" battleScribeVersion="2.02" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2.0" revision="23" battleScribeVersion="2.02" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="dc98-3346-9b99-6af4" name="The Suffering" hidden="false"/>
     <categoryEntry id="eda3-1b96-c963-9650" name="Swift Death" hidden="false"/>
@@ -232,6 +232,29 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="4554-f0a0-b374-690f" name="Shield" hidden="false" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4bd-bf0c-bd1e-303e" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="607b-80de-9011-c337" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="8536-c3e8-0488-f01c" name="Does not get Distracting from Lamia Bloodline" hidden="false">
+              <description>This unit does not get Distracting via the Lamia Bloodline</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="a9f1-3e9b-b3d2-23e4" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="32a3-4614-e635-00eb" name="Wizard Level" hidden="false" collective="false">
@@ -309,30 +332,10 @@
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1140-21bd-be0a-2f9b" type="max"/>
+          </constraints>
           <selectionEntries>
-            <selectionEntry id="31fe-27ba-4e40-9c68" name="Shield" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4bd-bf0c-bd1e-303e" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d42-67f2-3fa3-c814" type="max"/>
-              </constraints>
-              <rules>
-                <rule id="242f-2eec-e2ba-eddf" name="Does not get Distracting from Lamia Bloodline" hidden="false">
-                  <description>This unit does not get Distracting via the Lamia Bloodline</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="f1f9-1929-db7b-2cd4" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="aec5-f145-0a6b-38c1" name="Light Armour" hidden="false" collective="false" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a800-081e-e8b1-058e" type="max"/>
@@ -374,14 +377,8 @@
                     <condition field="selections" scope="3b36-98dd-f57e-3d11" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b915-debd-759a-b19a" type="equalTo"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" field="596c-bea3-bd13-d684" value="1">
-                  <conditions>
-                    <condition field="selections" scope="3b36-98dd-f57e-3d11" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b915-debd-759a-b19a" type="equalTo"/>
-                  </conditions>
-                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="596c-bea3-bd13-d684" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b59a-1edb-0406-a356" type="max"/>
               </constraints>
               <infoLinks>
@@ -808,7 +805,7 @@
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="5b95-c805-8b50-1156" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7208-3e1e-48e4-7fec" type="equalTo"/>
+                        <condition field="selections" scope="5b95-c805-8b50-1156" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be4a-9f87-8919-0e96" type="equalTo"/>
                         <condition field="selections" scope="5b95-c805-8b50-1156" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="83a1-0dec-9582-ad63" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
@@ -879,6 +876,24 @@
           </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="be4a-9f87-8919-0e96" name="Shield" hidden="false" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4bd-bf0c-bd1e-303e" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9cee-4053-ba08-aaef" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="cae8-777b-e4fc-5fbb" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -958,25 +973,10 @@
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2d1-20a8-a7bc-f902" type="max"/>
+          </constraints>
           <selectionEntries>
-            <selectionEntry id="7208-3e1e-48e4-7fec" name="Shield" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4bd-bf0c-bd1e-303e" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7710-1147-65fc-920f" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="78d9-dce6-89a1-7d3c" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="4ff3-bb61-53d6-d17b" name="Light Armour" hidden="false" collective="false" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a2a3-776e-e631-50fe" type="max"/>
@@ -1013,14 +1013,8 @@
                     <condition field="selections" scope="5b95-c805-8b50-1156" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b915-debd-759a-b19a" type="equalTo"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" field="8f72-601a-8d76-ed4d" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="5b95-c805-8b50-1156" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b915-debd-759a-b19a" type="equalTo"/>
-                  </conditions>
-                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8f72-601a-8d76-ed4d" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f0d2-6336-94a7-4f75" type="max"/>
               </constraints>
               <infoLinks>
