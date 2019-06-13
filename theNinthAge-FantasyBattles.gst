@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.0" revision="24" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.0" revision="25" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -91,7 +91,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7155-2463-ebaa-8001" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2d3d-c4fc-c6f2-23a2" name="Titanic Might" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="2d3d-c4fc-c6f2-23a2" name="Titanic Might" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this enchanted weapon gain +3 Strength and Magical Attacks.</characteristic>
@@ -108,7 +108,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c5ae-726c-f925-b6b3" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c829-3241-7dd4-d4b0" name="Blessed Inscriptions" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="c829-3241-7dd4-d4b0" name="Blessed Inscriptions" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this enchanted weapon gain Divine Attacks and failed to-wound rolls must be rerolled.</characteristic>
@@ -125,7 +125,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6056-7200-eae6-1b0a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="42bb-c25a-0a67-996e" name="King Slayer" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="42bb-c25a-0a67-996e" name="King Slayer" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder of the enchanted weapon gains +X Strength, +X Armour Penetration, +X Attack Value and Magical Attacks when attacking with it, where X is equal to the number of enemy Characters in base contact with the wielder&apos;s unit. This bonus is calculated and effective at the Initiative Step when such attacks are made.</characteristic>
@@ -142,7 +142,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bd3d-4ce1-4c98-08d4" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9a7c-9b63-6b74-8be6" name="Shield Breaker" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="9a7c-9b63-6b74-8be6" name="Shield Breaker" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this enchanted weapon gain +6 Armour Penetration, Magical Attacks ,and can never wound on to-wound rolls better than 3+.</characteristic>
@@ -159,7 +159,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e9c8-cacb-f16c-ea7f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3d1e-95aa-7268-83fe" name="Hero&apos;s Heart" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="3d1e-95aa-7268-83fe" name="Hero&apos;s Heart" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon and Paired Weapon Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder of this enchanted weapon gains +1 Attack Value when using it. Attacks made with this enchanted weapon gain Magical Attacks and always have at least Strength 5 and at least Armour Penetration 3.</characteristic>
@@ -176,7 +176,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bdfd-aea5-96d4-e00e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3dae-893d-ab4b-a760" name="Touch of Greatness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="3dae-893d-ab4b-a760" name="Touch of Greatness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this enchanted weapon gain +1 Strength, +1 Armour Penetration and Magical Attacks. Strength modifiers from this weapon (combining both mundane and Weapon Enchantment modifiers) cannot exceed +2 (but can exceed +2 through modifiers from other sources, such as spells).</characteristic>
@@ -193,7 +193,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3957-a352-00de-cdb4" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6b28-248c-7f19-1ca9" name="Supernatural Dexterity" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="6b28-248c-7f19-1ca9" name="Supernatural Dexterity" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder of this enchanted weapon gains +2 Offensive Skill and +2 Agility while using it, and attacks made with it gain Magical Attacks.</characteristic>
@@ -210,7 +210,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7f1d-9ac8-6dfe-3129" type="max"/>
           </constraints>
           <profiles>
-            <profile id="72e2-3e89-1f4a-9ee7" name="Cleansing Light" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="72e2-3e89-1f4a-9ee7" name="Cleansing Light" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">At the start of each Round of Combat, the wielder may choose to give attacks made with this enchanted weapon Flaming Attacks and Magical Attacks.</characteristic>
@@ -241,7 +241,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f35-b562-da41-9760" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7c15-67c1-c277-8e10" name="Death Cheater" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="7c15-67c1-c277-8e10" name="Death Cheater" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Fortitude (4+) and +1 Armour.</characteristic>
@@ -258,7 +258,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0e2b-9907-9ea4-d178" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a13e-d783-fe7e-a520" name="Destiny&apos;s Call" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="a13e-d783-fe7e-a520" name="Destiny&apos;s Call" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Aegis (4+) and its Armour is set to 3 and cannot be improved beyond this. Standard Size Models only.</characteristic>
@@ -275,7 +275,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6fa2-0f38-156f-ee4a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c829-9786-d674-d45b" name="Essence of Mithril" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="c829-9786-d674-d45b" name="Essence of Mithril" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +5 Armour, to a maximum of 5. Standard Sized models only.</characteristic>
@@ -292,7 +292,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1921-ec96-a8dc-4557" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7b4e-d308-4ef4-94b8" name="Dusk Forged" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="7b4e-d308-4ef4-94b8" name="Dusk Forged" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Shield Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer may choose to reroll its failed Armour Saves while using this Shield. If it does, it automatically fails all special saves.</characteristic>
@@ -312,7 +312,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9249-4aac-5dfe-3aed" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c2e1-b4dc-de38-780d" name="Ghostly Guard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="c2e1-b4dc-de38-780d" name="Ghostly Guard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Heavy Armour and Plate Armour enchantment.</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +2 Armour against non-Magical Attacks.</characteristic>
@@ -329,7 +329,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7b69-16ab-2e7a-30e2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="cfba-2d26-2f91-cef7" name="Basalt Infusion" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="cfba-2d26-2f91-cef7" name="Basalt Infusion" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and Aegis (3+, against Flaming Attacks). The wearer automatically fails all Fortitude saves.</characteristic>
@@ -346,7 +346,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="61e7-82cc-cd4c-25ca" type="max"/>
           </constraints>
           <profiles>
-            <profile id="b6f2-047a-b02a-955f" name="Willow&apos;s Ward" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="b6f2-047a-b02a-955f" name="Willow&apos;s Ward" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Shield Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer cannot use Parry and gains +1 Armour. Impact Hits distributed towards the bearer suffer -2 Armour Penetration.</characteristic>
@@ -366,7 +366,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bbdf-bd24-eaaf-5e18" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ae69-9a05-d1bd-4aec" name="Alchemist&apos;s Alloy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="ae69-9a05-d1bd-4aec" name="Alchemist&apos;s Alloy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and suffers -2 Offensive Skill.</characteristic>
@@ -390,7 +390,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1aa6-7e20-0164-c612" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a6dd-7059-e971-9d29" name="Crown of the Wizard King" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="a6dd-7059-e971-9d29" name="Crown of the Wizard King" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">During Spell Selection, randomise a magic Path (from all Paths in The 9th Age: Fantasy Battles - Paths of Magic). The bearer is a Wizard Apprentice using the randomised Path. It cannot select the Hereditary Spell.</characteristic>
@@ -407,7 +407,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="18ac-5821-ca08-dd8f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="1fda-2a73-aee7-500b" name="Book of Arcane Power" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="1fda-2a73-aee7-500b" name="Book of Arcane Power" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The Bearer&apos;s first casting attempt in each magic phase gains +2 to cast. When using a single magic dice for this casting attempt, a natural roll of 1 or 2 on the magic dice is always a failed casting attempt, regardless of any modifiers.</characteristic>
@@ -424,7 +424,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5125-775d-b84e-6817" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7543-e866-afe8-638b" name="Crown of Autocracy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="7543-e866-afe8-638b" name="Crown of Autocracy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains +1 Discipline. If taken by the General, the opponent doubles the Victory Points bonus for killing this General (normally +400 instead of +200).</characteristic>
@@ -441,7 +441,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5080-ee94-c94e-0aa7" type="max"/>
           </constraints>
           <profiles>
-            <profile id="4ddc-e339-1a1d-5a53" name="Obsidian Rock" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="4ddc-e339-1a1d-5a53" name="Obsidian Rock" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Magic Resistance (2).</characteristic>
@@ -458,7 +458,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="af3a-1b52-6284-4d23" type="max"/>
           </constraints>
           <profiles>
-            <profile id="e46d-4704-b518-21c0" name="Rod of Battle" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="e46d-4704-b518-21c0" name="Rod of Battle" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/9): Type: Augment. Range 12&quot;. Duration: Lasts One Turn. The target gains +1 to hit with its Close Combat Attacks.</characteristic>
@@ -475,7 +475,7 @@
             <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d25c-e7c0-d71c-3dce" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fba1-ac53-2f35-b932" name="Binding Scroll" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="fba1-ac53-2f35-b932" name="Binding Scroll" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated after siphon the veil. When activated, pick an enemy model and select one of its spells (including Attribute and Bound Spells). The chosen model cannot cast the selected spell during this Magic Phase. Only a single Binding Scroll may be activated during the same Phase.</characteristic>
@@ -491,7 +491,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8378-ef9c-921c-fea8" type="max"/>
           </constraints>
           <profiles>
-            <profile id="b34f-2059-16a0-6fd3" name="Essence of a Free Mind" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="b34f-2059-16a0-6fd3" name="Essence of a Free Mind" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A Wizard with this Artefact may select up to two Paths on its Army List instead of one (from the ones normally available to it). Select which of the two Paths to use during Spell Selection.</characteristic>
@@ -508,7 +508,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2703-475f-873e-b2f1" type="max"/>
           </constraints>
           <profiles>
-            <profile id="dd94-8d4f-6397-58b3" name="Potion of Strength" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="dd94-8d4f-6397-58b3" name="Potion of Strength" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cannot be taken by models with Towering Presence. One use only. May be activated at the start of any Phase or Round of Combat. Until the end of the Player Turn the bearer gains Crush Attack.</characteristic>
@@ -525,7 +525,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="11b8-e8e5-75ac-cc04" type="max"/>
           </constraints>
           <profiles>
-            <profile id="32bd-cf16-0584-92c6" name="Lightning Vambraces" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="32bd-cf16-0584-92c6" name="Lightning Vambraces" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/8): Type: Hex, Missile, Damage. Range 24&quot;. Duration: Instant. The target suffers 2D6 hits with Strength 3 and Armour Penetration 0.</characteristic>
@@ -542,7 +542,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c45-575d-827d-5f11" type="max"/>
           </constraints>
           <profiles>
-            <profile id="47a8-7f16-d5aa-59a6" name="Talisman of Shielding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="47a8-7f16-d5aa-59a6" name="Talisman of Shielding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (5+).</characteristic>
@@ -558,7 +558,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ed0c-4ab2-0724-619c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7249-1714-fbf6-bb29" name="Ranger&apos;s Boots" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="7249-1714-fbf6-bb29" name="Ranger&apos;s Boots" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Standard size models on foot only. The bearer gains Strider and, unless using Flying Movement, gains +2 Advance Rate up to a maximum of 10, and +4 March Rate up to a maximum of 20.</characteristic>
@@ -575,7 +575,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="193f-1692-0888-0fff" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3497-5e1f-9856-0786" name="Magical Heirloom" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="3497-5e1f-9856-0786" name="Magical Heirloom" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A Wizard with this Artefact knows the Hereditary Spell in addition to its other spells.</characteristic>
@@ -591,7 +591,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3294-ac54-84bc-d29c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f4a8-989f-6404-cbf3" name="Scepter of Power" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="f4a8-989f-6404-cbf3" name="Scepter of Power" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. A Wizard with this Artefact may add a single Magic Dice from its Dice Pool to one of its casting rolls or dispel rolls, after seeing the casting or dispel froll. (Note that casting rolls cannot exceed the limit of max 5 Magic Dice.)</characteristic>
@@ -608,7 +608,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f2d-8ddc-0968-d37d" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d25b-ed80-d5be-3c6c" name="Talisman of the Void" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="d25b-ed80-d5be-3c6c" name="Talisman of the Void" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Channel (+1)</characteristic>
@@ -625,7 +625,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2913-1a61-649c-7864" type="max"/>
           </constraints>
           <profiles>
-            <profile id="24d8-2a7f-1927-2789" name="Dragon Staff" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="24d8-2a7f-1927-2789" name="Dragon Staff" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Breath Attack (Strength 3, Armour Penetration 0, Flaming Attacks).</characteristic>
@@ -642,7 +642,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99e1-e740-4f1a-e979" type="max"/>
           </constraints>
           <profiles>
-            <profile id="65cc-2129-2fd3-d85d" name="Crystal Ball" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="65cc-2129-2fd3-d85d" name="Crystal Ball" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">After Spell Selection (at the end of step 7 of the Pre-Game Sequence), mark a single enemy model in the opponent’s Army List. All dispelling attempts of spells cast by that model gain a +1 dispelling modifier, provided the bearer is on the battlefield.</characteristic>
@@ -659,7 +659,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d924-778a-9d6c-8f3a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="1aa2-6132-c8f1-0550" name="Dragonfire Gem" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="1aa2-6132-c8f1-0550" name="Dragonfire Gem" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (2+, against Flaming Attacks). The bearer automatically fails all Fortitude Saves.</characteristic>
@@ -676,7 +676,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9973-8d34-ffe4-a7d6" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2e95-0bf0-8e9a-2173" name="Potion of Swiftness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="2e95-0bf0-8e9a-2173" name="Potion of Swiftness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Phase or Round of Combat. Until the end of the Player Turn, the bearer gains +3 Agility.</characteristic>
@@ -693,7 +693,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="45b9-6475-d8be-2fd2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="703e-dc0f-bc53-0e7e" name="Lucky Charm" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="703e-dc0f-bc53-0e7e" name="Lucky Charm" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated when the bearer&apos;s model fails an Armour Save. This failed Armour Save may be rerolled.</characteristic>
@@ -717,7 +717,7 @@
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6f86-7262-dd94-d986" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6dcd-6b2e-3175-42ef" name="Rending Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="6dcd-6b2e-3175-42ef" name="Rending Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of a Round of Combat. Close Combat Attacks from R&amp;F models in the bearer&apos;s unit gain +1 Armour Penetration until they are no longer engaged in combat. A model can only be affected by a single Rending Banner at the same time.</characteristic>
@@ -734,7 +734,7 @@
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab92-8898-f49d-2e42" type="max"/>
           </constraints>
           <profiles>
-            <profile id="b298-db20-e285-f084" name="Banner of Speed" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="b298-db20-e285-f084" name="Banner of Speed" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A unit with one or more Banners of Speed gains +1 Advance Rate and +2 March Rate.</characteristic>
@@ -751,7 +751,7 @@
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a988-bc77-7669-58f0" type="max"/>
           </constraints>
           <profiles>
-            <profile id="88fb-50d8-970f-65b2" name="Stalker&apos;s Standard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="88fb-50d8-970f-65b2" name="Stalker&apos;s Standard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer&apos;s unit gains Strider</characteristic>
@@ -768,7 +768,7 @@
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ac8-5d6c-8439-7620" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c5ed-8a31-f738-9f2b" name="Banner of Discipline" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="c5ed-8a31-f738-9f2b" name="Banner of Discipline" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer&apos;s unit may reroll failed Panic Tests and Decimated Tests. If the Battle Standard Bearer or the General is part of the bearer’s unit, it automatically passes all its Panic Tests and Decimated Tests instead.</characteristic>
@@ -785,7 +785,7 @@
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b09f-a35b-70d7-2b9f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ef17-6448-332f-a446" name="Aether Icon" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="ef17-6448-332f-a446" name="Aether Icon" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit gains Magic Resistance (1). If the unit already had Magic Resistance, it instead increases the Magic Resistance value by 1.</characteristic>
@@ -802,7 +802,7 @@
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4902-c868-a2e0-52a8" type="max"/>
           </constraints>
           <profiles>
-            <profile id="e2f3-7783-39bd-d955" name="Banner of the Relentless Company" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="e2f3-7783-39bd-d955" name="Banner of the Relentless Company" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated during the controlling player’s Movement Phase. All Infantry models in thebearer’s unit always have March Rate 15”, until the end of the Player Turn. Only a single Banner of the Relentless Company may be activated during the same Phase.</characteristic>
@@ -819,7 +819,7 @@
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e072-9a53-d5c8-39ad" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0456-5897-1a62-1bca" name="Fire Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="0456-5897-1a62-1bca" name="Fire Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of a Round of Combat or before shooting with the bearer’s unit. The bearer&apos;s unit gains Flaming Attacks. If activated when Engaged in Combat, effects lasts until the bearer’s unit is no longer Engaged in Combat. If activated before Shooting with the bearer’s unit, this effect lasts until end of the Phase. </characteristic>
@@ -836,7 +836,7 @@
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c5f-5d36-da6c-3028" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a3f3-727b-5877-7be7" name="Legion Standard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="Artefact">
+            <profile id="a3f3-727b-5877-7be7" name="Legion Standard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
                 <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A unit with one Legion Standard increases the maximum of its Rank Bonus by +1 (normally this means the unit can add up to 4 Full Ranks to its Combat Score). A unit with two Legion Standards increases the maximum of its Rank Bonus by +2 instead.</characteristic>
@@ -880,63 +880,89 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="2dda-ee2f-cfce-7f16" name="Ambush" hidden="false">
-      <description>You may choose to not deploy units with Ambush, but instead let them Ambush by bringing them into play later on.
-Declare which units will be Ambushing during step 8 of the Pre-Game Sequence
-(after Spell Selection), starting with the player that picked the Deployment Zone. Deploy your army as usual, but without the Ambushing units. Starting with your Player Turn 2, at the end of step 2 of the Movement Phase Sequence (after moving units with Random Movement), roll a dice for each Ambushing unit. After rolling for all Ambushing units, all units that rolled 3+ enter the Battlefield from any Board Edge. Place the arriving units with their entire rear ranks touching the Board Edge.
-- Ambushing models can neither March Move during the Movement Phase in which they arrive, nor can they voluntarily end that Movement Phase further away from the Board Edge than their March Rate.
-- If an Ambushing unit has not entered the Battlefield before the end of the game (e.g. due to failing all its 3+ rolls), the unit counts as destroyed.
-- An Ambushing unit that enters the Battlefield on Game Turn 4 or later loses Scoring.
-- An Ambushing Character may be deployed within an Ambushing unit that it is allowed to join (declare this when declaring which units are Ambushing). Roll only one dice for the combined unit.
-- Until arriving on the Battlefield, Ambushing units follow the rules for units that have Pursued off the Table.</description>
+      <description>Units with Ambush may be deployed using Special Deployment rules. All units that will be deployed using the Ambush rule must be declared at step 8 of the Pre-Game Sequence (after Spell Selection), starting with the player that chose their Deployment Zone. Deploy your army as usual, but without the Ambushing units. Starting with your Player Turn 2, immediately after step 2 of the Movement Phase Sequence (after moving units with Random Movement), roll a dice for each of your Ambushing units. After rolling for all Ambushing units, all units that rolled 3+ enter the Battlefield from any Board Edge. Place the arriving units with their Rear Facing in contact and aligned with the Board Edge. Ambushers are subject to the following rules and restrictions:
+
+• Ambushing models can neither March Move during the Movement Phase in which they arrive, nor can they voluntarily end that Movement Phase farther away from the Board Edge that they arrived from than their March Rate.
+• Ambushing models count as having moved during the turn they arrive on the Battlefield.
+• If an Ambushing unit has not entered the Battlefield before the end of the game (e.g. due to failing all its 3+ rolls), the unit counts as destroyed.
+• An Ambushing unit that enters the Battlefield on Game Turn 4 or later loses Scoring.
+• An Ambushing Character may Ambush within an Ambushing unit that it is allowed to join (declare this when declaring which units are Ambushing). Roll only one dice for the Combined Unit.
+• Until arriving on the Battlefield, Ambushing units cannot perform any actions at all, and all their Special Items, rules, and abilities don’t work while off the board.</description>
     </rule>
     <rule id="3ef6-167b-7d0f-b484" name="Battle Standard Bearer" hidden="false">
       <description>An army may only include a single Battle Standard Bearer. The model gains Rally Around the Flag and Not a Leader. If the model has the option to buy Special Equipment, it is allowed to purchase up to two Banner Enchantments.</description>
     </rule>
     <rule id="1d4a-2ada-4edb-0363" name="Bodyguard" hidden="false">
-      <description>When a Character is joined to a unit in which at least one model has Bodyguard, that Character gains Stubborn. When Characters or Character types are stated in brackets, Bodyguard only works for the specified Characters or Character types.</description>
+      <description>While a Character is joined to a unit in which at least one model has Bodyguard, that Character gains Stubborn. When Characters or Character types are stated in brackets, Bodyguard only works for the specified Characters or Character types.</description>
     </rule>
     <rule id="5a46-f1e8-f840-a1de" name="Channel" hidden="false">
-      <description>During step 3 of the Magic Phase Sequence, each of the Active Player’s models with Channel may add X Veil Tokens to the Veil Token Pool. If X is given as a modifier (e.g. Channel (+1)), the model gains this as a modifier to its Channel value (the value in brackets).</description>
+      <description>During step 3 of the Magic Phase Sequence , each of the Active Player’s models with Channel may add X Veil Tokens to its owner’s Veil Token pool. This Universal Rule is cumulative, adding the X of each instance of Channel to the model’s total Channel value (e.g. a model with Channel (1) and Channel (2) is treated like a model with Channel (3)).</description>
     </rule>
     <rule id="8583-d413-d1ef-ec61" name="Chariot" hidden="false">
-      <description>The model must roll an additional D6 when taking Dangerous Terrain Tests. A model with Chariot can only be part of a unit consisting entirely of models with Chariot, unless noted otherwise.</description>
+      <description>The model must roll an additional D6 when taking Dangerous Terrain Tests. A model with Chariot can only be part of a unit consisting entirely of models with Chariot, unless specifically stated otherwise.</description>
     </rule>
     <rule id="4d9a-1dea-1661-4083" name="Supernal" hidden="false">
       <description>The model gains Unstable. When a unit consisting entirely of models with Supernal loses a combat, the unit must take a Break Test (Stubborn or Steadfast units ignore modifiers from Combat Score difference as normal). If the Break Test is passed, ignore all Health Points that would be lost due to Unstable. If the Break Test is failed, follow the rules for Unstable as normal.</description>
     </rule>
     <rule id="c16c-8e9f-3d9c-7a2a" name="Engineer" hidden="false">
-      <description>Once per Shooting Phase, an unengaged Engineer may select a single War Machine
-within 6″ that has not fired yet to gain the following effects:
-- Replace the Aim of one of the War Machine’s Artillery Weapons with the value given in brackets (X+).
-- You may reroll the roll on the Misfire Table .
-- You may reroll the dice (all of them or none) for determining the number of hits of a Flamethrower Artillery Weapon.</description>
+      <description>Once per Shooting Phase, an unengaged Engineer may select a single War Machine within 6″ that has not fired yet to gain the following effects:
+• Set the Aim of one of the War Machine’s Artillery Weapons to the value given in brackets (X+).
+• You may reroll the roll on the Misfire Table.
+• You may reroll the dice (all of them or none) for determining the number of hits of a Flamethrower Artillery Weapon.</description>
     </rule>
     <rule id="06e4-3c2b-0e6d-e48f" name="Feigned Flight" hidden="false">
-      <description>Models in a unit consisting solely of models with Feigned Flight do not become Shaken
-if their unit voluntarily chooses Flee as Charge Reaction and passes its Rally Test in its next Player Turn. The Reform after Rallying in this case does not prevent the unit from moving nor from shooting (but it still counts as having moved). This rule does not apply if a unit fails to rally on the next friendly Player Turn or involuntarily Flees (e.g. as a result of a failed Panic Test or if it was already Fleeing when being charged).</description>
+      <description>Models in a unit consisting solely of models with Feigned Flight do not become Shaken if their unit voluntarily chooses Flee as Charge Reaction and passes its Rally Test in its next Player Turn. The Reform after Rallying in this case does not prevent the unit from moving nor from shooting (but it still counts as having moved). This rule does not apply if a unit fails to rally on the next friendly Player Turn or involuntarily Flees (e.g. as a result of a failed Panic Test or if it was already Fleeing when being charged).</description>
     </rule>
     <rule id="229b-fa84-b9fe-b1ff" name="Tall" hidden="false">
       <description>Line of Sight drawn to or from a model with Tall is not blocked by models of the same size (as the model with Tall), unless the intervening model also has Tall. Remember that this also affects Cover (if a model blocks Line of Sight it contributes to Hard Cover, otherwise only to Soft Cover).</description>
     </rule>
     <rule id="ed2a-e8b3-cc1a-cce0" name="Fear" hidden="false">
-      <description>Models in units in base contact with one or more enemy models with Fear suffer -1 Discipline. At the start of each Round of Combat, such units must take a Discipline Test
-, called a Fear Test. If this test is failed, the models in the unit are Shaken and Close Combat Attacks made by the models in the unit suffer -1 to hit, while Close Combat Attacks allocated against the models in the unit gain +1 to hit. These effects apply until the end of the Round of Combat.
-Models that have Fear themselves are immune to the effects of Fear.</description>
+      <description>Models in units in base contact with one or more enemy models with Fear suffer -1 Discipline. At the start of each Round of Combat, such units must take a Discipline Test, called a Fear Test. If this test is failed, the models in the unit are Shaken and Close Combat Attacks made by the models in the unit suffer -1 to hit, while Close Combat Attacks allocated against the models in the unit gain +1 to hit. These effects apply until the end of the Round of Combat. Models that have Fear themselves are immune to the effects of Fear.</description>
     </rule>
     <rule id="4a5a-48a4-b2f9-f6ed" name="Fly" hidden="false">
-      <description>The model gains Light Troops and Swiftstride. Units composed entirely of models with Fly may use Flying Movement during Move Chargers moves, Advance Moves
-, and March Moves. When a unit uses Flying Movement, substitute its
-models’ Advance Rate with the first value given in brackets (X), and their March Rate with the second value given in brackets (Y). A unit using Flying Movement ignores all Terrain Features and units during the Flying Movement. Note that:
-- It must abide by the Unit Spacing rule at the end of the move (unless charging, when the normal exceptions to the Unit Spacing rule apply).
-- It is affected by the Terrain Features from which it takes off and in which it lands.
-- All modifiers to ground movement values also apply to a model’s Fly values (unless specified otherwise).
-- When Declaring a Charge with a unit with Fly, you must declare if the unit will use Flying Movement for the Charge Move.</description>
+      <description>Units composed entirely of models with Fly may use Flying Movement during Charge Moves, Failed Charge Moves, Advance Moves, and March Moves. When a unit uses Flying Movement, substitute its models’ Advance Rate with the first value given in brackets (X), and their March Rate with the second value given in brackets (Y). A unit using Flying Movement ignores all Terrain Features and units during the Flying Movement. Note that:
+
+• It must follow the Unit Spacing rule at the end of the move.
+• It is affected by the Terrain Features from which it takes off and in which it lands.
+• All modifiers to ground movement values also apply to a model’s Fly values, unless specifically stated otherwise.
+• When declaring a Charge with a unit with Fly, you must declare if the unit will not use Flying Movement for the Charge Move.
+• A Failed Charge Move of a unit with Fly must use the type of movement (ground or Flying) that was chosen when the Charge was declared. If the unit would end its Failed Charge Move inside another unit’s Unit Boundary or inside Impassable Terrain, backtrack the move to the unit’s last legal position where it follows the Unit Spacing rule.</description>
     </rule>
     <rule id="d3a1-728e-7e9f-992d" name="Front Rank" hidden="false">
-      <description>The model must always be placed as far forward as possible in its unit. Normally this means that it must be placed in the first rank, but if the first rank is full of other models with Front Rank, it is placed in the second rank instead. If this rank is also full of models with the Front Rank rule, it is placed in the 3rd rank, and so on. When moving a unit that includes models with Front Rank, these models can be reorganised into a new position (still as far forward as possible) as part of the move. This can be done as a part of an Advance move, March, or Reform move, and counts
-towards the distance moved by the unit (measure this from the starting position to the ending position of the centre of the model with Front Rank to determine how far it has moved).
+      <description>Front Rank specifies where in a unit the model may be placed and how the model moves inside its unit.
 
-If a model with Front Rank leaves a unit or is removed as a casualty, the gap it leaves must be filled with models from other ranks, possibly moving up models with the Front Rank rule, if this means they are moved to positions further forward. If more than one model with Front Rank could move forward, the owner of the models decides which model is moved forward. If all models with the Front Rank rule already are as far forward as possible, fill any empty gaps with R&amp;F models from the back ranks. Sometimes Front Rank models must be redistributed in order for all such models to be as far forward as possible. When this happens, move as few models as possible in order to always have all models with the Front Rank rule as far forward as possible</description>
+A model with Front Rank must always be placed as far forwards as possible in its unit. This normally means that it must be placed in the first rank unless specifically stated otherwise.
+
+When making an Advance Move, March Move, or Reform with a unit that includes models with Front Rank, these models can be reorganised into a new position (still as far forwards as possible) as part of the move. This counts towards the distance moved by the unit (measure the distance from the starting position to the ending position of the centre of the model with Front Rank to determine how far it has moved). A model with Front Rank can either have a Matching Base or a Mismatching Base.
+
+MATCHING BASES
+
+In Combined Units containing Characters and R&amp;F models, a Character is considered to have a Matching Base if:
+• The model has the same base size as the R&amp;F models.
+• The model’s base is the same size as a multiple of the R&amp;F models’ bases (such as a 40×40 mm base in a 20×20 mm unit).
+
+For Combined Units consisting entirely of Characters, Matching Bases are determined differently as these units do not contain any R&amp;F models. The R&amp;F base size for the purposes of Matching Bases must:
+
+• Correspond to the base size of at least one of the Characters
+• Result in as few Characters as possible having Mismatching Bases; the owner chooses in case of a tie
+
+For example, in a unit consisting of a 25×25mm Character and two 25×50mm Characters, that base size is 25×25mm, as it does not result in any Mismatching Bases in the unit.
+
+If the first rank is occupied by models with Front Rank, a model with Matching Base is placed in the second rank instead. If this rank is also occupied by models with Front Rank, it is placed in the third rank, and so on. Matching Bases are subject to the following rules and restrictions:
+
+• If the model has a larger base than the R&amp;F models, it is considered to be in all ranks its base occupies for the purposes of calculating Full Ranks . For calculating the number of models in the unit’s ranks (e.g. for Full Ranks, Line Formation, Area Attack), the large base counts as the number of models it replaces.
+• If a model with a Matching Base has a longer base than the R&amp;F models in the unit, the unit is allowed to have more than one incomplete rank if all incomplete ranks after the first consist entirely of models with such bases (for instance the rear parts of long bases such as War Platforms are allowed to form several incomplete ranks).
+• A model cannot join a unit that has more than one rank if its base is wider than the unit it wishes to join, nor can a unit Reform into a formation that is narrower than any model joined to the unit.
+
+If a model with Front Rank moves inside or leaves a unit that has more than one rank, or if it is removed from such a unit as a casualty, the gap the model leaves must be filled with models without Front Rank. If there aren’t any models without Front Rank available, move models with Front Rank instead. After filling a gap, sometimes models with Front Rank must be redistributed in order for all such models to be as far forwards as possible. When this happens, move as few models as possible in order to have all models with Front Rank as far forwards as possible.
+
+If a model with Front Rank moves inside or leaves a unit that has a single rank, or if it is removed from such a unit as a casualty, gaps may be created in the unit. If this leads to an illegal formation (there can only be gaps in an incomplete rear rank; see “Units”, page 8 ), slide as few models as possible to fill the now empty spot. In case of a draw, i.e. if the model was positioned in the middle of the rank, the owner decides which half of the remaining models to slide.
+
+MISMATCHING BASES
+
+Anything that is not a Matching Base is a Mismatching Base (such as a 50×75mm base inside a 25×50mm unit). A model with Mismatching Base is always placed in base contact to the side of the unit, aligned with its front. Only two Mismatching Bases can be joined to a single unit (one at each side). These models are considered to be only in the first rank, but are ignored when counting the number of models in each rank in order to establish the number of Full Ranks and whether or not a unit is in Line Formation. They form a file of one model each.
+
+During Advance Moves, March Moves, or Reforms, models with Mismatching Bases can only be moved to the other side of the unit as part of the move.</description>
     </rule>
     <rule id="ccc1-4db1-6ef8-8bc7" name="Stand Behind" hidden="false">
       <description>The model can be placed anywhere in its unit, it doesn’t have to be placed as far forward as possible, even if it has Front Rank. Among models with Front Rank, models without Stand Behind have priority over Stand Behind models to be placed as far forward as possible.</description>
@@ -952,7 +978,7 @@ If a model with Front Rank leaves a unit or is removed as a casualty, the gap it
 Insignificant. Only Insignificant Characters can join units with Insignificant R&amp;F models.</description>
     </rule>
     <rule id="2304-d0e4-f97b-c4e5" name="Commanding Presence" hidden="false">
-      <description>All Generals have the Commanding Presence Universal Rule. All units within 12&quot; of a friendly non-Fleeing model with Commanding Presence may borrow the Discipline of the model with Commanding Presence, instead of using their own Discipline (t his ability follows all the normal rules for using a Borrowed Characteristic, meaning that effects modifying the Discipline of the model with Commanding Presence are applied before borrowing the model’s Discipline ; this borrowed Discipline may then be further modified ) .</description>
+      <description>All Generals have the Commanding Presence Universal Rule. The Discipline of all units within 12′′ of a friendly non-Fleeing model with Commanding Presence may be set to the Discipline value of that model (this ability follows the normal rules for “Values Set to a Fixed Number”, page 16, meaning that effects modifying the Discipline of the model with Commanding Presence are applied before setting the recipient model’s Discipline to that value; this value may then be further modified).</description>
     </rule>
     <rule id="8b75-3cd5-bd70-6210" name="Light Troops" hidden="false">
       <description>A unit composed entirely of models with Light Troops may shoot even after March Moving or Reforming earlier that Player Turn, and it may Reform any number of times during Advance Moves and March Moves. No model can end its movement with its centre further away from its starting position than its March Rate.
@@ -985,11 +1011,16 @@ Insignificant. Only Insignificant Characters can join units with Insignificant R
       <description>The Wizard gains Channel (1) and a +1 modifier to its casting rolls, and selects its spells as described in Spell Selection.</description>
     </rule>
     <rule id="b6f2-241f-8379-3327" name="Frenzy" hidden="false">
-      <description>The model gains Fearless. At the start of the Charge Phase, each of your units with at least one model with Frenzy that could Declare a Charge against an enemy unit within the unit’s Advance Rate +7″ must take a Discipline Test, called a Frenzy Test. If the test is failed, the whole unit must Declare a Charge this Player Turn if possible. When a unit with at least one model with Frenzy takes a Frenzy Test or Discipline Test to restrain from Pursuing, the test is subject to Maximised Roll.
-- When measuring if a unit must take a Frenzy Test, use the lowest available Advance Rate among the unit’s models.
-- If the unit has Fly and there is more than one Advance Rate available, you must use the type of movement (ground or Fly) that has the highest chance of completing the charge.
-- When a unit is forced to Declare a Charge due to a failed Frenzy Test, it is not forced to charge the enemy unit that triggered the Frenzy Test.
-- Characters are never forced to charge out of their units due to failed Frenzy Tests.</description>
+      <description>At the start of the Charge Phase, each of your units with at least one model with Frenzy that could declare a Charge against an enemy unit within the unit’s Advance Rate +7′′ must take a Discipline Test , called a Frenzy Test. If the test is failed, the whole unit must declare a Charge this Player Turn if possible.
+
+Frenzy Tests and Restrain Pursuit Tests taken by units with at least one model with Frenzy are subject to Maximised Roll.
+
+If there are different Advance Rates available in the unit, the Advance Rate used for the Frenzy Test and for the Charge Range is determined as follows:
+
+• If a model has more than one Advance Rate (e.g. due to Fly), the model must use the Advance Rate that has the highest chance of completing the Charge.
+• If a unit contains models with different Advance Rates, the unit must use the highest Advance Rate that all models in the unit can use (which will usually be the lowest Advance Rate in the unit).
+
+For example, a model with Advance Rate 2′′ and Fly (8′′, 16′′) must use the Advance Rate from Fly. And if a Character in a Combined Unit has Advance Rate 4′′ while the R&amp;F models have 6′′, the Combined Unit must use Advance Rate 4′′. Note that when a unit is forced to declare a Charge due to a failed Frenzy Test, it is not forced to Charge the enemy unit that triggered the Frenzy Test.</description>
     </rule>
     <rule id="33ac-93f2-47f5-d0f0" name="Massive Bulk" hidden="false">
       <description>If a model with Massive Bulk is mounted by a Character, ignore the rider’s Armour Equipment (including Armour Enchantments) and Personal Protections, unless specifically stated otherwise (such as Armour Enchantments that affect the bearer’s model).</description>
@@ -1026,7 +1057,9 @@ Units with at least one R&amp;F model with Skirmisher are formed into a skirmish
 Units in skirmish formation can only be joined by Characters that have both the same Type and the same Size as the unit. Unless a Character has the exact same base size as all R&amp;F models in the unit, it is considered Mismatched for the purpose of placement within the unit. The unit ceases to be in skirmish formation when all R&amp;F models with Skirmisher are wiped out: immediately contract their skirmish formation into a normal formation, without moving the centre of the front rank. Nudge any unit as normal to maintain base contact if possible.</description>
     </rule>
     <rule id="36f9-836f-d687-5d43" name="Ghost Step" hidden="false">
-      <description>The model treats all Terrain Features as Open Terrain for movement purposes, but must abide by the Unit Spacing rule upon the completion of its moves.</description>
+      <description>The model may choose to treat all Terrain Features as Open Terrain for movement purposes, but must follow the Unit Spacing rule upon the completion of its moves. It can never end its move inside Impassable Terrain. If this would be the case, backtrack the move to the unit’s last legal position (unless Fleeing, in which case the normal rules for “Flee Moves”, page 50 apply).
+
+In addition, the model automatically passes Dangerous Terrain Tests taken due to Terrain.</description>
     </rule>
     <rule id="df36-dc35-ead5-1719" name="Strider" hidden="false">
       <description>The model automatically passes Dangerous Terrain Tests taken due to Terrain. If more than half of a unit&apos;s models have Strider, the unit never loses their Steadfast or Rank Bonus due to Terrain. Sometimes Strider is linked to a specific type of Terrain, stated in brackets. In this case, models with Strider are considered Striders only when interacting with such type of Terrain.</description>
@@ -1108,11 +1141,23 @@ be placed in either of these positions. If the War Platform cannot be placed in 
       <description>The attack doesn&apos;t suffer the -1 to-hit modifier for shooting at Long Range.</description>
     </rule>
     <rule id="542e-121d-e448-b51e" name="Area Attack" hidden="false">
-      <description>When the attack hits a unit, chose up to X different ranks of this unit; these must be the ranks resulting in the maximum amount of hits. For each rank selected this way: the unit suffers X hits, to a maximum equal to the number of models in this rank. A single Area Attack can never cause more hits than there are models in the unit.
-Some Area Attacks have a higher Strength and/or additional Attack Attributes stated in square brackets (such as Strength 3 [7], [Multiple Wounds (D3)]). If so, a single hit from this attack, chosen by the attacker, uses the Strength value and Attack Attributes in brackets. The bracketed values and Attack Attributes are not applied to any other hits.</description>
+      <description>When the attack hits, determine the position of the attacker’s base:
+• In case of a Ranged Attack, determine which Arc of the target the attacker’s base is Located in.
+• In case of a Melee Attack, determine which Facing of the target the attacker is Engaged in.
+
+Front or Rear: Choose up to Y different ranks of the target.
+Flank: Choose up to Y different files of the target.
+
+For each rank/file selected this way, the unit suffers X hits, to a maximum equal to the number of models in this rank/file. A single Area Attack can never cause more hits than there are models in the unit.
+
+Some Area Attacks have a higher Strength, Armour Penetration, and/or additional Attack Attributes stated in square brackets (e.g. Strength 3 [7], Armour Penetration 0 [4], [Multiple Wounds (D3) ]). If so, a single hit from this attack, chosen by the attacker (following the normal rules for Distributing Hits ), uses the Strength, Armour Penetration, and Attack Attributes in brackets. The bracketed values and Attack Attributes are not applied to any other hits.</description>
     </rule>
     <rule id="9371-5924-2a39-1652" name="Crush Attack" hidden="false">
-      <description>At the end of step 4 of the Round of Combat Sequence (just after Issue and Accept Duels), the model part may announce that it will use its Crush Attack this Round of Combat. It performs a single Close Combat Attack, which cannot be made as a Supporting Attack , is resolved at Initiative Step 0, has Strength 10, Armour Penetration 10 (regardless of user’s Agility, Strength, and Armour Penetration), and Multiple Wounds (D3+1). Crush Attacks never benefit from any Weapons or other Attack Attributes the model part may have. The model part cannot make any other Close Combat Attacks during this Round of Combat (but can still use its Special Attacks such as Stomp Attacks or Impact Hits).</description>
+      <description>At the end of step 4 of the Round of Combat Sequence (just after issuing and accepting Duels), the model part may declare that it will use its Crush Attack this Round of Combat. It performs a single Close Combat Attack at Initiative Step 0, with Strength 10, Armour Penetration 10 (regardless of the user’s Agility, Strength, and Armour Penetration), and Multiple Wounds (D3+1). The following restrictions apply to Crush Attacks:
+
+• They cannot be made as Supporting Attacks .
+• They never benefit from any weapons or other Attack Attributes the model part may have.
+• The model part cannot make any other Close Combat Attacks during this Round of Combat (including other Crush Attacks, but can still use its Special Attacks such as Stomp Attacks or Impact Hits).</description>
     </rule>
     <rule id="030a-8283-3ebb-93f1" name="Divine Attacks" hidden="false">
       <description>Successful Aegis Saves taken against the attack must be rerolled .</description>
@@ -1121,29 +1166,31 @@ Some Area Attacks have a higher Strength and/or additional Attack Attributes sta
       <description>Model parts with Fight in Extra Rank, or using a Weapon with Fight in Extra Rank, can make Supporting Attacks from an additional Rank (normally, this means that models with Fight in Extra Rank will be able to make Supporting Attacks from the third rank). This rule is cumulative, allowing an additional rank to make Supporting Attacks for each instance of Fight in Extra Rank.</description>
     </rule>
     <rule id="49e5-2d9a-1ecc-101f" name="Flaming Attacks" hidden="false">
-      <description>The attack doesn’t have any special effect. However, it interacts with other rules, such as Flammable and Regeneration.</description>
+      <description>The attack ignores Fortitude Saves and must reroll failed to-wound rolls against models with Flammable.</description>
     </rule>
     <rule id="13c5-ce89-60ad-c572" name="Hatred" hidden="false">
       <description>During the first Round of Combat, failed to-hit rolls from attacks with Hatred must be rerolled.</description>
     </rule>
     <rule id="cc29-65f2-796b-52e2" name="Battle Focus" hidden="false">
-      <description>If the attack hits with a natural to-hit roll of ‘6’, the attack causes two hits instead of one.</description>
+      <description>If the attack hits with a natural to-hit roll of ‘6’, the attack causes one additional hit (i.e. usually two hits instead of one).</description>
     </rule>
     <rule id="f433-7645-0332-97a4" name="Lethal Strike" hidden="false">
-      <description>An attack with Lethal Strike that wounds with a natural to-wound roll of ‘6’ has its Armour Penetration set to 10 and ignores Regeneration saves.</description>
+      <description>An attack with Lethal Strike that wounds with a natural to-wound roll of ‘6’ has its Armour Penetration set to 10 and ignores Fortitude saves.</description>
     </rule>
     <rule id="f17a-c7f9-af34-a039" name="Lightning Reflexes" hidden="false">
-      <description>The attack gains a +1 to-hit modifier if it is a Close Combat Attack. Model parts with this Attack Attribute wielding Great Weapons do not gain this +1 to-hit modifier, but strike with the Great Weapon at the Initiative Step corresponding to their normal Agility instead of always striking at Initiative Step 0.</description>
+      <description>A Close Combat Attack with Lightning Reflexes gains a +1 to-hit modifier. Model parts with this Attack Attribute wielding Great Weapons do not gain this +1 to-hit modifier, but strike with the Great Weapon at the Initiative Step corresponding to their Agility instead of always striking at Initiative Step 0.</description>
     </rule>
     <rule id="97c6-651e-d93d-a61e" name="Magical Attacks" hidden="false">
-      <description>The attack doesn’t have any special effects. However, it interacts with other rules, such as Aegis (X, against Magical Attacks). Model parts with Magical Attacks apply it also to their Special Attacks (such as Stomp Attacks , Impact Hits and Breath Attack).</description>
+      <description>The Attack Attribute doesn’t confer any additional effects. However, the Attack Attribute interacts with other rules, such as Aegis (X, against Magical Attacks).</description>
     </rule>
     <rule id="6475-e063-0070-f6cc" name="Move or Fire" hidden="false">
-      <description>The attack may not be used if the attacking model moved during the current Player Turn .</description>
+      <description>The attack may not be used if the attacking model has made an Advance Move, March Move, Random Movement, Reform, or Pivot during the current Player Turn. Note that the normal limitations still apply (e.g. no shooting after a Failed Charge Move ).</description>
     </rule>
     <rule id="2ea2-3a42-de1e-bc0a" name="Multiple Wounds" hidden="false">
-      <description>Unsaved wounds caused by the attacks are multiplied into the value given in brackets (X). If the value is a dice (e.g. Multiple Wounds (D3)), roll one dice for each unsaved wound with Multiple Wounds. The amount of wounds that the attack is multiplied into can never be higher than the Health Points Characteristic of the target (excluding Health Points lost previously in the battle). For example, if a Multiple Wounds (D6) attack wounds a unit of Trolls (HP 3) and rolls a ‘5&apos; for the multiplier, the number of unsaved wounds is reduced to 3, even if the Troll unit has already lost
-one or two Health Points previously in battle .
+      <description>Unsaved wounds caused by the attacks are multiplied into the value given in brackets (X). If the value is a dice (e.g. Multiple Wounds (D3)), roll one dice for each unsaved wound with Multiple Wounds. The amount of wounds that the attack is multiplied into can never be higher than the Health Points Characteristic of the target (excluding Health Points lost previously in the battle).
+
+For example, if a Multiple Wounds (D6) attack wounds a unit of Trolls (HP 3) and rolls a ‘5&apos; for the multiplier, the number of unsaved wounds is reduced to 3, even if the Troll unit has already lost one or two Health Points previously in battle .
+
 If Clipped Wings is stated after the X value in brackets, any unsaved wound caused by the attack against a model with Fly is multiplied into X+1 instead of X.</description>
     </rule>
     <rule id="64e2-a7c4-41ba-fbf9" name="Penetrating" hidden="false">
@@ -1151,7 +1198,11 @@ If Clipped Wings is stated after the X value in brackets, any unsaved wound caus
 Some Penetrating attacks have a higher Strength and/or additional Attack Attributes stated in square brackets (e.g. Strength 3 [6], [Multiple Wounds (D3)]). If so, a single hit from this attack, chosen by the attacker, uses the Strength value and Attack Attributes in brackets. The bracketed values and Attack Attributes are not applied to any other hits.</description>
     </rule>
     <rule id="f2fe-a751-2161-8c76" name="Poison Attacks" hidden="false">
-      <description>If the attack successfully hits with a natural to-hit roll of ‘6’, it automatically wounds with no to-wound roll needed. Shooting Attacks using the Hopeless Shot can only automatically wound if the first to-hit roll is a natural ‘6’. Note that the second to-hit roll must still be successful in order to hit the target. If the Attack can be turned into more than one hit (e.g. a hit with Penetrating, Area Attack or Battle Focus) , only a single hit, chosen by the attacker, automatically wounds. All other hits must roll to wound as normal.</description>
+      <description>If the attack successfully hits with a natural to-hit roll of ‘6’, it automatically wounds with no to-wound roll needed.
+
+Shooting Attacks using the Hopeless Shot can only automatically wound if the first to-hit roll is a natural ‘6’. Note that the second to-hit roll must still be successful in order to hit the target.
+
+If the Attack can be turned into more than one hit (e.g. a hit with Penetrating, Area Attack or Battle Focus), only a single hit, chosen by the attacker, automatically wounds. All other hits must roll to wound as normal.</description>
     </rule>
     <rule id="5a08-d3bf-06f9-3034" name="Quick to Fire" hidden="false">
       <description>The attack doesn&apos;t suffer the -1 to-hit modifier for Moving and Shooting.</description>
@@ -1166,10 +1217,16 @@ Some Penetrating attacks have a higher Strength and/or additional Attack Attribu
       <description>Model parts with Inanimate cannot make Close Combat Attacks and cannot use Shooting Weapons. Shooting Weapons carried by model parts with Inanimate can be used by other model parts of the same model (and do not have Restraints or Inanimate).</description>
     </rule>
     <rule id="c66c-e69e-a4f1-0351" name="Devastating Charge" hidden="false">
-      <description>A charging model part with Devastating Charge, or using a weapon with Devastating Charge, gains the Model Rules and Characteristic modifiers stated in brackets. For example, a charging model part with Devastating Charge (+1 Strength, Poison Attacks) gains +1 Strength and Poison Attacks when it is charging. This rule is cumulative: a model part with several instances of Devastating Charge applies all Attack Attributes and Characteristics modifiers from all of them when charging.</description>
+      <description>A Charging model part with Devastating Charge, or using a weapon with Devastating Charge, gains the Model Rules and Characteristic modifiers stated in brackets.
+
+For example, a model part with Devastating Charge (+1 Strength, Poison Attacks) gains +1 Strength and Poison Attacks when it is Charging.
+
+Remember that Special Attacks cannot be affected by Attack Attributes, so the Model Rules and Characteristic modifiers gained from Devastating Charge are not applied to Special Attacks, like Impact Hits and Stomp Attacks, unless specifically stated otherwise.
+
+This rule is cumulative: a model part with several instances of Devastating Charge applies all Attack Attributes and Characteristic modifiers from all of them when Charging.</description>
     </rule>
     <rule id="3472-76a4-0c76-5d27" name="Toxic Attacks" hidden="false">
-      <description>The attack has its Strength always set to 3 and its Armour Penetration always set to 10 .</description>
+      <description>The attack has its Strength always set to 3 and its Armour Penetration always set to 10.</description>
     </rule>
     <rule id="c545-6ef2-4618-4d0f" name="Unwieldy" hidden="false">
       <description>The attack suffers an additional -1 to-hit modifier for Moving and Shooting (for a total of -2). When combined with Quick to Fire, the attack can only ignore the normal -1 to-hit modifier from Moving and Shooting, not the additional -1 to-hit modifier from Unwieldy.</description>
@@ -1182,106 +1239,135 @@ In addition, unless making a Stand and Shoot Charge Reaction, models in a unit i
       <description>At the beginning of each Round of Combat, model parts with Weapon Master may choose which weapon they fight with. This includes selecting to use a Hand Weapon even if they have other weapons. If armed with a weapon with a Weapon Enchantment , the model part must still use it.</description>
     </rule>
     <rule id="3be7-d693-e8e8-6b1e" name="Breath Attack" hidden="false">
-      <description>A model part with Breath Attack can use it only once during the game. If a model has more than one Breath Attack, it can only use one Breath Attack in a single phase. It can be used either as a Shooting Attack or as a Melee Attack .
-● As a Shooting Attack (normally in the Shooting Phase): choose a target using the normal rules for Shooting Attacks (it is allowed for a Stand and Shoot Charge Reaction), except it can be used even if the model Marched previously in this Player Turn. A model with both a Breath Attack and a Shooting Weapon can use both in the same Shooting Phase, however only against the same target . The attack has a range of 6&quot;.
-● As a Melee Attack (normally in the Melee Phase) : the attack is made at the model part&apos;s Agility. Declare that you are using the Breath Attack when allocating attacks, and choose a unit in base contact to attack with it. 
-No matter if it is used as a Shooting or Melee Attack, the target of the Breath Attack suffers 2D6 hits. The Strength, Armour Penetration and Attack Attributes (if any) of these hits are given within brackets, such as in Breath Attack (Strength 4, Armour Penetration 1, Flaming Attacks). When several model parts in the same unit have this Special Attack , roll for the number of hits separately for each model part .</description>
+      <description>A model part with Breath Attack can use it only once during the game. If a model has more than one Breath Attack, it can only use one Breath Attack in a single phase. It can be used either as a Shooting Attack or as a Special Attack when Engaged in Combat.
+
+• As a Shooting Attack with March and Shoot: choose a target using the normal rules for Shooting Attacks (it can be used for a Stand and Shoot Charge Reaction). The attack has a range of 6′′. A model part with both a Breath Attack and a Shooting Weapon can use both in the same Shooting Phase, however only against the same target.
+• As a Special Attack when Engaged in Combat: the attack is made at the model part’s Agility. Declare that you are using the Breath Attack at the start of the Initiative Step (before rolling to hit), and choose a unit in base contact as a target.
+
+No matter if it is used as a Shooting or Melee Attack, the target of the Breath Attack suffers 2D6 hits. The Strength, Armour Penetration, and Attack Attributes (if any) of these hits are given within brackets, such as in Breath Attack (Str 4, AP 1, Flaming Attacks ). If several models in the same unit have this Special Attack, roll for the number of hits separately for each model.</description>
     </rule>
     <rule id="1728-908f-7383-29d6" name="Grind Attacks" hidden="false">
-      <description>At the Agility of the model part with Grind Attacks Agility, it must choose an enemy unit in base contact with it. The chosen enemy unit suffers a number of hits equal to the value stated in brackets (X). These hits are resolved with the model part &apos;s own Strength and Armour Penetration .
-If a model has both Grind Attacks and Impact Hits, it may only use one of these rules in the same Round of Combat (its controlling player may choose which). When several model parts in the same unit have Grind Attacks and when X is a random number (e.g. Grind Attacks (2D3)), roll for the number of hits separately for each model part .</description>
+      <description>A model part with Grind Attacks resolves these attacks at its Agility. It must choose an enemy unit in base contact with it. The chosen enemy unit suffers a number of hits equal to the value stated in brackets (X). These hits are resolved with the model part’s Strength and Armour Penetration.
+
+If a model has both Grind Attacks and Impact Hits, it may only use one of these rules in the same Round of Combat (the owner may choose which). If several model parts in a unit have Grind Attacks and if X is a random number (e.g. Grind Attacks (2D3)), roll for the number of hits separately for each model part.</description>
     </rule>
     <rule id="197f-58cf-73ad-ac42" name="Impact Hits" hidden="false">
       <description>At Initiative Step 10, a Charging model part with Impact Hits must choose an enemy unit that is in base contact with the attacking model&apos;s Front Facing. This unit suffers a number of hits equal to the value stated in brackets (X). These hits are resolved with the attacking model part&apos;s Strength and Armour Penetration.
+
 If a model has both Grind Attacks and Impact Hits, it may only use one of these rules in the same Round of Combat (its controlling player may choose which). In multipart models, only model parts that also have Restraints or Inanimate can use their Impact Hits. When several models in the same unit have Impact Hits, and when X is a random number (e.g. Impact Hits (D6)), roll for the number of hits separately for each model part.</description>
     </rule>
     <rule id="4810-6726-807b-e78e" name="Stomp Attacks" hidden="false">
       <description>At Initiative Step 0 a model part with Stomp Attacks must choose an enemy model of Standard Size in base contact with it. The chosen model’s unit suffers a number of hits equal to the value stated in brackets (X). These hits can only be distributed onto models of Standard Size (ignore models of a different Size when distributing hits). They are resolved with the model part’s own Strength and Armour Penetration.
+
 In multipart models, only model parts that also have Restraints can use Stomp Attacks. When several models in the same unit have this Special Attack, and when X is a random number (e.g. Stomp Attacks (D6)), roll for the number of hits separately.</description>
     </rule>
     <rule id="3fff-f85c-3747-6634" name="Sweeping Attack" hidden="false">
       <description>This attack may be used by units consisting of models with Sweeping Attack. When the unit Advance Moves or March Moves, you may nominate a single unengaged enemy unit that the unit with Sweeping Attack moved through or over during this move (meaning their Bases were Overlapping, even partially). The whole unit makes the Sweeping Attack against the nominated enemy unit, which is resolved when the March or Advance Move is completed. Follow the description in the unit profile. These attacks hit automatically and count as Ranged Attacks. When a model performs a Sweeping At tack, the distance moved is counted from its starting position to the point on the Battlefield where it performed the attack, and then to its final position. Each Sweeping Attack can only be performed once per Player Turn.</description>
     </rule>
+    <rule id="f166-e6b4-13de-aa22" name="March and Shoot" hidden="false">
+      <description>March Moving in the same Player Turn does not prevent the attack from being performed, unless the attack is also subject to Move or Fire.</description>
+    </rule>
+    <rule id="b248-945b-ab64-5bb3" name="Two-Handed" hidden="false">
+      <description>A model using a weapon with Two-Handed cannot simultaneously use a Shield against Melee Attacks.</description>
+    </rule>
+    <rule id="721f-164e-89e1-57a7" name="Matching Bases" hidden="false">
+      <description>In Combined Units containing Characters and R&amp;F models, a Character is considered to have a Matching Base if:
+• The model has the same base size as the R&amp;F models.
+• The model’s base is the same size as a multiple of the R&amp;F models’ bases (such as a 40×40 mm base in a 20×20 mm unit).
+
+For Combined Units consisting entirely of Characters, Matching Bases are determined differently as these units do not contain any R&amp;F models. The R&amp;F base size for the purposes of Matching Bases must:
+
+• Correspond to the base size of at least one of the Characters
+• Result in as few Characters as possible having Mismatching Bases; the owner chooses in case of a tie
+
+For example, in a unit consisting of a 25×25mm Character and two 25×50mm Characters, that base size is 25×25mm, as it does not result in any Mismatching Bases in the unit.
+
+If the first rank is occupied by models with Front Rank, a model with Matching Base is placed in the second rank instead. If this rank is also occupied by models with Front Rank, it is placed in the third rank, and so on. Matching Bases are subject to the following rules and restrictions:
+
+• If the model has a larger base than the R&amp;F models, it is considered to be in all ranks its base occupies for the purposes of calculating Full Ranks . For calculating the number of models in the unit’s ranks (e.g. for Full Ranks, Line Formation , Area Attack ), the large base counts as the number of models it replaces.
+• If a model with a Matching Base has a longer base than the R&amp;F models in the unit, the unit is allowed to have more than one incomplete rank if all incomplete ranks after the first consist entirely of models with such bases (for instance the rear parts of long bases such as War Platforms are allowed to form several incomplete ranks).
+• A model cannot join a unit that has more than one rank if its base is wider than the unit it wishes to join, nor can a unit Reform into a formation that is narrower than any model joined to the unit.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="1da1-0128-4bf2-cf8d" name="Shield" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="Armour">
+    <profile id="1da1-0128-4bf2-cf8d" name="Shield" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="4 Armour">
       <characteristics>
         <characteristic name="Type" typeId="017b-143b-0520-bdc1">Shield</characteristic>
         <characteristic name="Save" typeId="4ca3-2498-f356-f056">+1</characteristic>
         <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Parry</characteristic>
       </characteristics>
     </profile>
-    <profile id="ceb4-e216-c1ec-56a4" name="Light Armour" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="Armour">
+    <profile id="ceb4-e216-c1ec-56a4" name="Light Armour" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="4 Armour">
       <characteristics>
         <characteristic name="Type" typeId="017b-143b-0520-bdc1">Suit of Armour</characteristic>
         <characteristic name="Save" typeId="4ca3-2498-f356-f056">+1</characteristic>
         <characteristic name="Rules" typeId="f269-16dd-a614-0f90">A model part can only wear a single Suit of Armour.</characteristic>
       </characteristics>
     </profile>
-    <profile id="37ab-dde5-6b99-7c67" name="Heavy Armour" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="Armour">
+    <profile id="37ab-dde5-6b99-7c67" name="Heavy Armour" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="4 Armour">
       <characteristics>
         <characteristic name="Type" typeId="017b-143b-0520-bdc1">Suit of Armour</characteristic>
         <characteristic name="Save" typeId="4ca3-2498-f356-f056">+2</characteristic>
         <characteristic name="Rules" typeId="f269-16dd-a614-0f90">A model part can only wear a single Suit of Armour.</characteristic>
       </characteristics>
     </profile>
-    <profile id="85fa-68ac-214d-2f4b" name="Plate Armour" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="Armour">
+    <profile id="85fa-68ac-214d-2f4b" name="Plate Armour" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="4 Armour">
       <characteristics>
         <characteristic name="Type" typeId="017b-143b-0520-bdc1">Suit of Armour</characteristic>
         <characteristic name="Save" typeId="4ca3-2498-f356-f056">+3</characteristic>
         <characteristic name="Rules" typeId="f269-16dd-a614-0f90">A model part can only wear a single Suit of Armour.</characteristic>
       </characteristics>
     </profile>
-    <profile id="2d01-b358-db9b-3b99" name="Hand Weapon" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="Melee Weapon">
+    <profile id="2d01-b358-db9b-3b99" name="Hand Weapon" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">As User</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">As User</characteristic>
         <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">If a model has any Melee Weapon other than a Hand Weapon, it cannot choose to use the Hand Weapon (unless specifically stated). Hand Weapons wielded by models on foot can be used alongside a Shield, then giving the Parry Personal Protection .</characteristic>
       </characteristics>
     </profile>
-    <profile id="ce6c-6fd5-c795-da76" name="Great Weapon" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="Melee Weapon">
+    <profile id="ce6c-6fd5-c795-da76" name="Great Weapon" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+2</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">+2</characteristic>
         <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Always strike at Initiative Step 0 (regardless of the wielder’s Agility ). A model using this weapon cannot simultaneously use a Shield against Melee Attacks.</characteristic>
       </characteristics>
     </profile>
-    <profile id="680b-8e56-dff9-240c" name="Halberd" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="Melee Weapon">
+    <profile id="680b-8e56-dff9-240c" name="Halberd" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+1</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
         <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">A model using this weapon cannot simultaneously use a Shield against Melee Attacks .</characteristic>
       </characteristics>
     </profile>
-    <profile id="06d7-e62c-0123-95ec" name="Paired Weapons" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="Melee Weapon">
+    <profile id="06d7-e62c-0123-95ec" name="Paired Weapons" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">As User</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">As User</characteristic>
         <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">The wielder gains +1 Attack Value when using this weapon. Attacks made with Paired Weapons gain +1 Offensive Skill and ignore Parry. A model using this weapon cannot simultaneously use a Shield against Melee Attacks .</characteristic>
       </characteristics>
     </profile>
-    <profile id="f1a1-62ad-69ea-9d18" name="Lance" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="Melee Weapon">
+    <profile id="f1a1-62ad-69ea-9d18" name="Lance" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+2</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">+2</characteristic>
         <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Attacks made with a Lance and allocated toward models in the wielders’ Front Facing gain Devastating Charge (+ 2 Strength, +2 Armour Penetration). Infantry cannot use Lances.</characteristic>
       </characteristics>
     </profile>
-    <profile id="8460-7bb5-aa92-d6ee" name="Light Lance" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="Melee Weapon">
+    <profile id="8460-7bb5-aa92-d6ee" name="Light Lance" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+1</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
         <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Attacks made with a Lance and allocated toward models in the wielders’ Front Facing gain Devastating Charge (+1 Strength, +1 Armour Penetration). Infantry cannot use Lances.</characteristic>
       </characteristics>
     </profile>
-    <profile id="c18a-75bb-fa2f-f7cf" name="Spear" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="Melee Weapon">
+    <profile id="c18a-75bb-fa2f-f7cf" name="Spear" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">As User</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
         <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Attacks made with a Spear gain Fight in Extra Rank and +1 Armour Penetration. Close Combat Attacks from model parts wielding a Spear gain +2 Agility and an additional +1 Armour Penetration in the first Round of Combat provided their unit is not Charging and is not Engaged either in their Flank or Rear Facing. Cavalry, Beasts and Constructs cannot use Spears.</characteristic>
       </characteristics>
     </profile>
-    <profile id="a564-30bf-f33f-f20d" name="Bow" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="Ranged Weapon">
+    <profile id="a564-30bf-f33f-f20d" name="Bow" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
       <characteristics>
         <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">24&quot;</characteristic>
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
@@ -1290,7 +1376,7 @@ In multipart models, only model parts that also have Restraints can use Stomp At
         <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Volley Fire</characteristic>
       </characteristics>
     </profile>
-    <profile id="245b-baaf-f5ec-e168" name="Longbow" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="Ranged Weapon">
+    <profile id="245b-baaf-f5ec-e168" name="Longbow" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
       <characteristics>
         <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">30&quot;</characteristic>
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
@@ -1299,7 +1385,7 @@ In multipart models, only model parts that also have Restraints can use Stomp At
         <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Volley Fire</characteristic>
       </characteristics>
     </profile>
-    <profile id="fdf6-3c15-644b-1ced" name="Crossbow" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="Ranged Weapon">
+    <profile id="fdf6-3c15-644b-1ced" name="Crossbow" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
       <characteristics>
         <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">30&quot;</characteristic>
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
@@ -1308,7 +1394,7 @@ In multipart models, only model parts that also have Restraints can use Stomp At
         <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Unwieldy</characteristic>
       </characteristics>
     </profile>
-    <profile id="b092-dbc5-4c60-9a80" name="Handgun" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="Ranged Weapon">
+    <profile id="b092-dbc5-4c60-9a80" name="Handgun" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
       <characteristics>
         <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">24&quot;</characteristic>
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
@@ -1317,7 +1403,7 @@ In multipart models, only model parts that also have Restraints can use Stomp At
         <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Unwieldy</characteristic>
       </characteristics>
     </profile>
-    <profile id="12c1-3184-6230-c142" name="Pistol" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="Ranged Weapon">
+    <profile id="12c1-3184-6230-c142" name="Pistol" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
       <characteristics>
         <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">12&quot;</characteristic>
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
@@ -1326,7 +1412,7 @@ In multipart models, only model parts that also have Restraints can use Stomp At
         <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire</characteristic>
       </characteristics>
     </profile>
-    <profile id="8c83-06ff-024f-a235" name="Throwing Weapons" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="Ranged Weapon">
+    <profile id="8c83-06ff-024f-a235" name="Throwing Weapons" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
       <characteristics>
         <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">8&quot;</characteristic>
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">2</characteristic>
