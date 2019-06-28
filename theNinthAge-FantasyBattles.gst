@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.0" revision="25" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.0" revision="26" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -902,7 +902,9 @@
       <description>The model must roll an additional D6 when taking Dangerous Terrain Tests. A model with Chariot can only be part of a unit consisting entirely of models with Chariot, unless specifically stated otherwise.</description>
     </rule>
     <rule id="4d9a-1dea-1661-4083" name="Supernal" hidden="false">
-      <description>The model gains Unstable. When a unit consisting entirely of models with Supernal loses a combat, the unit must take a Break Test (Stubborn or Steadfast units ignore modifiers from Combat Score difference as normal). If the Break Test is passed, ignore all Health Points that would be lost due to Unstable. If the Break Test is failed, follow the rules for Unstable as normal.</description>
+      <description>All attacks made by the model become Magical Attacks, including Special Attacks and Crush Attacks. In addition, the model gains Unstable, with the following exception: when a unit consisting entirely of models with Supernal loses a combat, it must take a Break Test (Stubborn or Steadfast units ignore Discipline modifiers from the Combat Score difference as normal):
+• If the Break Test is passed, ignore all Health Points that would be lost due to Unstable.
+• If the Break Test is failed, follow the rules for Unstable as normal.</description>
     </rule>
     <rule id="c16c-8e9f-3d9c-7a2a" name="Engineer" hidden="false">
       <description>Once per Shooting Phase, an unengaged Engineer may select a single War Machine within 6″ that has not fired yet to gain the following effects:
@@ -965,7 +967,7 @@ Anything that is not a Matching Base is a Mismatching Base (such as a 50×75mm b
 During Advance Moves, March Moves, or Reforms, models with Mismatching Bases can only be moved to the other side of the unit as part of the move.</description>
     </rule>
     <rule id="ccc1-4db1-6ef8-8bc7" name="Stand Behind" hidden="false">
-      <description>The model can be placed anywhere in its unit, it doesn’t have to be placed as far forward as possible, even if it has Front Rank. Among models with Front Rank, models without Stand Behind have priority over Stand Behind models to be placed as far forward as possible.</description>
+      <description>The model can be placed anywhere inside its unit (it doesn’t have to be placed as far forwards as possible, even if it has Front Rank). It cannot be placed farther forwards inside a unit than any model with Front Rank but without Stand Behind. Ignore Stand Behind for models with Mismatching Bases.</description>
     </rule>
     <rule id="bf56-e3dc-41ca-292b" name="Rally Around the Flag" hidden="false">
       <description>All units within 12&quot; of a friendly non-Fleeing model with Rally Around the Flag may reroll failed Discipline Tests.</description>
@@ -974,19 +976,22 @@ During Advance Moves, March Moves, or Reforms, models with Mismatching Bases can
       <description>If more than half of a unit&apos;s models are Fearless, the unit automatically passes Panic Tests and cannot declare a Flee Charge Reaction (unless already Fleeing). Models that are Fearless are also immune to the effects of Fear.</description>
     </rule>
     <rule id="10f4-4cf9-f713-7351" name="Insignificant" hidden="false">
-      <description>Units consisting entirely of models with Insignificant do not cause Panic Tests on friendly units without
-Insignificant. Only Insignificant Characters can join units with Insignificant R&amp;F models.</description>
+      <description>Units consisting entirely of Insignificant models only cause Panic Tests on friendly units in which half the models or more are Insignificant. Units with Insignificant R&amp;F models can only be joined by Insignificant Characters.</description>
     </rule>
     <rule id="2304-d0e4-f97b-c4e5" name="Commanding Presence" hidden="false">
       <description>All Generals have the Commanding Presence Universal Rule. The Discipline of all units within 12′′ of a friendly non-Fleeing model with Commanding Presence may be set to the Discipline value of that model (this ability follows the normal rules for “Values Set to a Fixed Number”, page 16, meaning that effects modifying the Discipline of the model with Commanding Presence are applied before setting the recipient model’s Discipline to that value; this value may then be further modified).</description>
     </rule>
     <rule id="8b75-3cd5-bd70-6210" name="Light Troops" hidden="false">
-      <description>A unit composed entirely of models with Light Troops may shoot even after March Moving or Reforming earlier that Player Turn, and it may Reform any number of times during Advance Moves and March Moves. No model can end its movement with its centre further away from its starting position than its March Rate.
-- For measuring the distance travelled by a model, check the path the model would have taken if it was alone and measure the movement around any obstructions (abiding by the Unit Spacing rule). Note that the unit nevertheless must abide by the Unit Spacing rule (including all Reforms).
-- If a model performed any action during the movement (such as a Sweeping Attack), the distance moved is measured from its starting position to the point on the Battlefield where it performed that action and then to its final position.
-- Units with more than half of their models with Light Troops always count as having 0 Full Rank.
-- Characters lose Light Troops while joined to units with one or more models without Light Troops (if they had it).
-- Infantry Characters gain Light Troops while joined to Infantry units of the same Size with Light Troops.</description>
+      <description>A unit composed entirely of models with Light Troops applies the following rules for Advance Moves and March Moves:
+
+• The unit may perform any number of Reforms, at any time during the move, and in any order. This does not prevent models with Light Troops from shooting this Player Turn.
+• The unit can move backwards and sideways as if moving forwards (i.e. up to its Advance/March Rate), but cannot leave the board with any part of its Unit Boundary.
+• The unit cannot perform any Wheels.
+
+In addition:
+• Units composed entirely of models with Light Troops gain March and Shoot.
+• Units with more than half of their models with Light Troops always count as having 0 Full Ranks.
+• Infantry Characters gain Light Troops while joined to Infantry units of the same Height with Light Troops.</description>
     </rule>
     <rule id="f611-6165-ada9-0d7d" name="Not a Leader" hidden="false">
       <description>The model cannot be the General	</description>
@@ -998,8 +1003,7 @@ Insignificant. Only Insignificant Characters can join units with Insignificant R
       <description>The Wizard may swap any of its Learned Spells for any other Learned Spell in the same Path and/or the Hereditary Spell. This rule overrides the Spell Selection rules connected to being Wizard Apprentice, Apprentice or Master.</description>
     </rule>
     <rule id="9c73-bbca-fd62-c017" name="Protean Magic" hidden="false">
-      <description>During Spell Selection, the Wizard must select its spells between the Learned Spell
-1 of the Paths it has access to and the Hereditary Spell of its army. This rule overrides the Spell Selection rules connected to being Wizard Apprentice, Adept or Master.</description>
+      <description>During Spell Selection, the Wizard must select its spells from the Learned Spell 1 of each Path it has access to, as well as the Hereditary Spell of its army. This rule overrides the Spell Selection rules for Wizard Apprentices, Adepts, and Masters.</description>
     </rule>
     <rule id="0d8a-3fd8-a61d-5b74" name="Wizard Apprentice" hidden="false">
       <description>The Wizard selects its spells as described in Spell Selection.</description>
@@ -1023,38 +1027,45 @@ If there are different Advance Rates available in the unit, the Advance Rate use
 For example, a model with Advance Rate 2′′ and Fly (8′′, 16′′) must use the Advance Rate from Fly. And if a Character in a Combined Unit has Advance Rate 4′′ while the R&amp;F models have 6′′, the Combined Unit must use Advance Rate 4′′. Note that when a unit is forced to declare a Charge due to a failed Frenzy Test, it is not forced to Charge the enemy unit that triggered the Frenzy Test.</description>
     </rule>
     <rule id="33ac-93f2-47f5-d0f0" name="Massive Bulk" hidden="false">
-      <description>If a model with Massive Bulk is mounted by a Character, ignore the rider’s Armour Equipment (including Armour Enchantments) and Personal Protections, unless specifically stated otherwise (such as Armour Enchantments that affect the bearer’s model).</description>
+      <description>If the model is mounted by a Character, ignore the rider’s Armour Equipment (including Armour Enchantments) and Personal Protections, unless specifically stated otherwise (such as Armour Enchantments that affect the bearer’s model).</description>
     </rule>
     <rule id="6e49-e056-5845-4b66" name="Random Movement" hidden="false">
-      <description>At the end of step 2 of the Movement Phase sequence (after Rally Fleeing Units), the unit moves using the rules for Pursuing units, with the following exceptions:
-- It moves the distance stated in brackets (X), which is also used for Flee Distance and Pursue Distance (including Overruns).
-- It can choose which direction to rotate towards before rolling the Pursuit Distance.
-- It cannot move off the Board Edge.
-- It only takes Dangerous Terrain Tests if it charges (it still tests as normal when Fleeing, Pursuing, and Overrunning).
-- For units with several instances of Random Movement, use the one with the lowest average (choose in case of a tie).
+      <description>At the end of step 2 of the Movement Phase Sequence (after Rallying Fleeing Units), a non-Fleeing unit with Random Movement must move using the rules for Pursuing units, with the following exceptions, which only apply in the Movement Phase, unless specifically stated otherwise:
+• It always moves the distance stated in brackets (X), which is also used for Flee Distance and Pursuit Distance (including Overruns).
+• It can choose which direction to Pivot in before rolling the Pursuit Distance.
+• It cannot move off the Board Edge.
+• It does not take Dangerous Terrain Tests unless Charging.
+
 There are several restrictions connected with Random Movement:
-- The unit cannot move normally in the Movement Phase (Advance, March, Reform) and cannot Declare Charges. Whenever it needs a March Rate (e.g. when Post-Combat Reforming), use the potential maximum value of X as its March Rate.
-- The unit cannot perform Magical Moves.
-- The unit loses Swiftstride and can never gain it.
-- Characters with Random Movement can only join units with Random Movement (by moving into contact with them during the Movement Phase or by being deployed inside), and units with Random Movement can only be joined by Characters with Random Movement.
-- Units with Random Movement cannot enter Buildings .
-- A unit with Random Movement cannot move in the same phase as it arrives on the Battlefield as Reinforcement (Dawn Assault) or Ambusher.</description>
+• The unit cannot move normally in the Movement Phase (Advance, March, Reform) and cannot declare Charges in the Charge Phase. Whenever it requires a March Rate (e.g. when Post-Combat Reforming), use the potential maximum value of X as its March Rate.
+• The unit cannot perform Magical Moves.
+• The unit loses Swiftstride and can never gain it (but X can be affected by Maximised/Minimised Roll from other sources).
+• Characters with Random Movement cannot join units, and units with Random Movement cannot be joined by Characters. Note that Characters that are part of a Combined Unit when the unit gains Random Movement will gain Random Movement too as they are already part of that unit.
+• If the unit has several instances of Random Movement, use the one with the lowest average (the owner chooses in case of a tie).</description>
     </rule>
     <rule id="188e-05fb-8a95-60c8" name="Scoring" hidden="false">
-      <description>Units with at least one model with Scoring are considered to be Scoring Units, which are used for winning Secondary Objectives. Every army needs a few Scoring units to be able to complete Secondary Objectives, which is why units with Scoring are marked in the Army Books with a special pennant icon. 
+      <description>Units with at least one model with Scoring are considered to be Scoring Units, which are used for winning Secondary Objectives. Every army needs Scoring Units to be able to complete Secondary Objectives, which is why units with Scoring are marked in the Army Books with a special pennant icon.
+
 Scoring can be lost during the game:
-● A unit that is Fleeing loses Scoring for as long as it if Fleeing.
-● An Ambushing unit that enters the Battlefield on Game Turn 4 or later loses Scoring.
-● A unit that has performed a Post-Combat Reform loses Scoring until the end of the current Player Turn.</description>
+• A unit that is Fleeing loses Scoring for as long as it is Fleeing.
+• An Ambushing unit that enters the Battlefield on Game Turn 4 or later loses Scoring for the rest of the game.
+• A unit that has performed a Post-Combat Reform loses Scoring until the start of the following Player Turn.
+• A Vanguarding model loses Scoring until the end of Game Turn 1.</description>
     </rule>
     <rule id="1c9f-ec16-529b-e3ca" name="Scout" hidden="false">
-      <description>At step 8 of the Pre- Game Sequence (after Spell Selection) an army that includes units with Scout must state which of its units with Scout will use it, starting with the player that picked the Deployment Zone. Deploy your army as usual, but without deploying any of the Scouting units. These units are placed after all other non-Scouting units have been deployed. They can either be deployed in your Deployment Zone, using the normal rules, or they can be deployed outside the Deployment Zone, but must be more than 18&quot; away from any enemy units. This is decreased to 12&quot; if the Scouting unit is deployed entirely within a Forest, Ruins, Field, Building or Water Terrain Feature. Scouting units that are deployed outside their player’s Deployment Zone may not Declare Charges in the first Player Turn (if their side has the first turn). If both players have Scouting units, alternate deploying one unit at a time, starting with the player that finished deploying first.</description>
+      <description>Units with Scout may be deployed using Special Deployment rules. All units that will be deployed using the Scout rule must be declared at step 8 of the Pre-Game Sequence (after Spell Selection), starting with the player that chose their Deployment Zone. Scout deployment is conducted on Step 5 of the Deployment Phase (Deploy Scouting Units). If both players have Scouting units, alternate unit placement (one unit at a time), starting with the player who first completed their normal deployment. Scouting units have three deployment options:
+• Fully inside your Deployment Zone, using the normal deployment rules
+• Anywhere on the Battlefield at least 18′′ away from enemy units
+• Anywhere on the Battlefield fully inside a Field, Forest, Ruins, or Water Terrain Feature and at least 12′′ away from enemy units
+
+Scouting units that aren’t placed fully inside their Deployment Zone may not declare Charges in the first Player Turn of the first Game Turn (there are no Scout Charge restrictions after the first Player Turn).</description>
     </rule>
     <rule id="2ce4-ece5-068c-4d20" name="Skirmisher" hidden="false">
-      <description>A model with Skirmisher can always use Shooting Attacks from any rank (they are not limited to shooting from first and second rank).
-Units with at least one R&amp;F model with Skirmisher are formed into a skirmish formation. They are not placed in base to base contact with each other. Instead, models are placed with a 12.5mm distance between them. This gap is considered part of the unit for Cover purposes, and will have the same Size as the models in the unit. Other than this gap between models, units with Skirmisher follow the normal rules for forming units and therefore have a Front, two Flanks, a Rear, can perform Supporting Attacks, and so on. Units in skirmish formation gain Light Troops and Hard Target, never block Line of Sight (remember that this also affects Cover and that they can never contribute to Hard Cover.
+      <description>The model can always use Shooting Attacks from any rank (models with Skirmisher are not limited to shooting from first and second rank).
 
-Units in skirmish formation can only be joined by Characters that have both the same Type and the same Size as the unit. Unless a Character has the exact same base size as all R&amp;F models in the unit, it is considered Mismatched for the purpose of placement within the unit. The unit ceases to be in skirmish formation when all R&amp;F models with Skirmisher are wiped out: immediately contract their skirmish formation into a normal formation, without moving the centre of the front rank. Nudge any unit as normal to maintain base contact if possible.</description>
+Units with at least one R&amp;F model with Skirmisher are formed into a skirmish formation. They are not placed in base contact with each other. Instead, models are placed with a 12.5 mm distance (roughly half an inch) between them. This gap is considered part of the unit for Cover purposes, and will have the same Height as the models in the unit. Other than this gap between models, units with Skirmisher follow the normal rules for forming units and therefore have a Front, two Flank, and a Rear Facing, can perform Supporting Attacks, and so on. Units in skirmish formation never block Line of Sight (remember that this also affects Cover as they can never contribute to Hard Cover).
+
+Units in skirmish formation can only be joined by Characters that have both the same Type and the same Height as the unit. Unless a Character has the exact same base size as all R&amp;F models in the unit, it is considered Mismatched for the purpose of placement within the unit. The unit ceases to be in skirmish formation when all R&amp;F models with Skirmisher are removed as a casualty: immediately contract their skirmish formation into a normal formation, without moving the centre of the first rank. Nudge any unit as normal to maintain base contact if possible.</description>
     </rule>
     <rule id="36f9-836f-d687-5d43" name="Ghost Step" hidden="false">
       <description>The model may choose to treat all Terrain Features as Open Terrain for movement purposes, but must follow the Unit Spacing rule upon the completion of its moves. It can never end its move inside Impassable Terrain. If this would be the case, backtrack the move to the unit’s last legal position (unless Fleeing, in which case the normal rules for “Flee Moves”, page 50 apply).
@@ -1062,7 +1073,7 @@ Units in skirmish formation can only be joined by Characters that have both the 
 In addition, the model automatically passes Dangerous Terrain Tests taken due to Terrain.</description>
     </rule>
     <rule id="df36-dc35-ead5-1719" name="Strider" hidden="false">
-      <description>The model automatically passes Dangerous Terrain Tests taken due to Terrain. If more than half of a unit&apos;s models have Strider, the unit never loses their Steadfast or Rank Bonus due to Terrain. Sometimes Strider is linked to a specific type of Terrain, stated in brackets. In this case, models with Strider are considered Striders only when interacting with such type of Terrain.</description>
+      <description>The model automatically passes Dangerous Terrain Tests caused by Terrain. If more than half of a unit’s models have Strider, the unit never loses Steadfast due to Terrain. Sometimes Strider is linked to a specific type of Terrain, stated in brackets. In this case, Strider only applies when interacting with this type of Terrain.</description>
     </rule>
     <rule id="51bf-5c8d-5b95-e33c" name="Stubborn" hidden="false">
       <description>A unit with at least one model with Stubborn ignores any Combat Score penalties to its Discipline when taking Break Tests or Combat Reform Discipline Tests.</description>
@@ -1071,50 +1082,57 @@ In addition, the model automatically passes Dangerous Terrain Tests taken due to
       <description>If a unit is composed entirely of models with Swiftstride, its rolls for Charge Range, Flee Distance, Pursuit Distance, and Overrun Distance are subject to Maximised Roll</description>
     </rule>
     <rule id="0b48-87f9-1467-7ef2" name="Terror" hidden="false">
-      <description>The model gains Fear and is immune to the effects of Terror. When a unit with one or more models with Terror Declares a Charge, its target must take a Panic Test. If the test is failed, the target of the charge must declare a Flee Charge Reaction , if able to do so.</description>
+      <description>The model is immune to the effects of Terror. When a unit with one or more models with Terror declares a Charge, its target must immediately take a Panic Test before declaring its Charge Reaction. If the test is failed, the target of the Charge must declare a Flee Charge Reaction if able to do so.</description>
     </rule>
     <rule id="9ca4-65be-33fc-5d47" name="Towering Presence" hidden="false">
       <description>The model gains Tall and can never be joined or join a unit (unless it is a War Platform). A model with Towering Presence increases its Rally Around the Flag and Commanding Presence ranges by 6&quot;.</description>
     </rule>
     <rule id="99ef-69e8-164b-3335" name="Unbreakable" hidden="false">
-      <description>The model gains Fearless and its unit automatically passes all Break Tests. Characters with Unbreakable can only join units consisting entirely of models with Unbreakable. Units with one or more Unbreakable models can only be joined by Unbreakable Characters .</description>
+      <description>The model’s unit automatically passes all Break Tests. Models with Unbreakable can only join or be joined by models with Unbreakable.</description>
     </rule>
     <rule id="b558-1cce-fbc9-afe6" name="Undead" hidden="false">
-      <description>The model gains Unstable. Undead models cannot perform March Moves, unless their unit starts the March Move within the range of a friendly model’s Commanding Presence. The only Charge Reaction a unit with one or more Undead models can make is Hold .
-When units consisting entirely of models with Undead lose Health Points due to Unstable, the number of lost Health Points can be reduced in some situations. Apply the modifiers in the following order:
-1. If the unit is Stubborn, halve the number of lost Health Points (round fractions up).
-2. If the unit is Steadfast, reduce all lost Health Points above 12 to 12.
-3. If the unit receives Rally Around the Flag, reduce the number of lost Health Points with the unit’s current Rank Bonus. Units with no Rank Bonus reduce the number of Health Points lost by 1 instead.
-4. Apply all other modifiers (from Artefacts, Model Rules, spells, etc.) afterward.</description>
+      <description>The model gains Unstable. Models with Undead cannot perform March Moves, unless their unit starts the March Move within the range of a friendly model’s Commanding Presence. The only Charge Reaction a unit with one or more models with Undead can perform is Hold.
+
+When units consisting entirely of models with Undead lose Health Points due to Unstable, the number of lost Health Points can be reduced in certain situations. Apply the modifiers in the following order:
+1. If the unit contains at least one model with Stubborn, halve the number of lost Health Points, rounding fractions up.
+2. If the unit is Steadfast, ignore any excess Health Point losses above 12.
+3. If the unit receives Rally Around the Flag, reduce the number of lost Health Points by the unit’s current Rank Bonus. Units without any Rank Bonus reduce the number of lost Health Points by 1 instead.
+4. Apply all other modifiers (from Special Items, Model Rules, spells, etc.) afterwards.</description>
     </rule>
     <rule id="b642-5b33-158d-421b" name="Unstable" hidden="false">
-      <description>The model gains Fearless. Units with one or more models with Unstable automatically pass all Break Tests. When a unit consisting entirely of models with Unstable loses a combat, it loses one Health Point (without any saves allowed) for each point of Combat Score by which it lost the combat.
-The Health Points l osses are distributed in the following order:
-1. R&amp;F models, excluding Champions.
-2. Champion.
-3. Characters. Distributed by the owner of the unit, as evenly as possible.
-Only Characters with Unstable can join units with one or more models with Unstable, and Characters with Unstable cannot join units with models without Unstable .</description>
+      <description>Models with Unstable can only join or be joined by models with Unstable. A unit with one or more models with Unstable does not take a Break Test when losing a Round of Combat, but instead it loses one Health Point for each point of Combat Score difference by which it lost the Round of Combat (with no saves of any kind allowed).
+
+The Health Point losses are allotted in the following order:
+1. R&amp;F models, excluding Champions
+2. Champion
+3. Characters, allotted by the owner of the unit as evenly as possible</description>
     </rule>
     <rule id="e4e4-ef11-f62f-59b6" name="Vanguard" hidden="false">
-      <description>After Deployment (including units with Scout), models with Vanguard may perform a 12&quot; move. The move is performed as an Advance Move in the Movement Phase, including any actions and restrictions the unit would normally have (such as Wheeling, Reforming, joining units, leaving units and so on). The 12&quot; distance is used instead of the unit&apos;s Advance Rate and March Rate. This move cannot be used to move within 12&quot; of enemy units. This is decreased to 6&quot; for enemy units which have either Scouted or Vanguarded. Units that have moved in this way may not Declare Charges in the first Player Turn (if their side has the first turn). If both players have units with Vanguard,
-alternate moving units one at a time, starting with the player that finished deploying last. Instead of moving a unit, a player may declare to not move any more Vanguarding units.</description>
+      <description>After Deployment (including Scouting units), models with Vanguard may perform a 12′′ move. This move is performed as a combination of Advance Move and/or Reforms , as in the Movement Phase, including any actions and restrictions that normally apply to the unit (e.g. Wheeling , joining units, leaving units, and so on). The 12′′ distance is used instead of the unit’s Advance Rate and March Rate. In case a figure is stated in brackets, this distance is X′′ instead. This move cannot be used to move within 12′′ of enemy units. This is decreased to 6′′ for enemy units that have either Scouted or Vanguarded.
+
+If both players have units with Vanguard, alternate moving units one at a time, starting with the player that finished deploying last (note that this is an exception to the rules for Simultaneous Effects). A Combined Unit counts as a single unit for this purpose even if parts of the unit perform separate Vanguard moves (like two Characters Vanguarding out of a Combined Unit). Any game effects that would affect the Combined Unit (such as Banner Enchantments) remain in effect for all parts of the Combined Unit until all parts of the Combined Unit have finished their Vanguard move (even if a Character leaves the unit). Instead of moving a unit, a player may declare to not move any more Vanguarding units.
+
+Units that have moved this way lose Scoring until the end of Game Turn 1 and may not declare Charges in the first Player Turn (if their side has the first turn).</description>
     </rule>
     <rule id="610e-d71e-0439-9e7f" name="War Machine" hidden="false">
-      <description>The Model gains Move or Fire. The model cannot Pursue, Declare Charges or Declare Flee as Charge Reaction. Characters can never join units with one or more War Machines.
-When a War Machine fails a Panic Test, instead of Fleeing it is Shaken until the end of the next Player Turn. War Machines that fail a Break Test are automatically destroyed. War Machines and units Engaged in Combat with them cannot make Combat Reforms.
-When a unit charges a War Machine, it can move into base contact by having its Front Facing contact any point of the War Machine’s base (it must still maximise the number of models in base contact, see Bases and Base Contact). No Align Move is allowed. Ignore the War Machine’s Facing, as it does not have any due to its round base.</description>
+      <description>The model cannot Pursue (which does not prevent it from being affected by Random Movement), declare Charges, or declare Flee Charge Reactions. Characters can never join units with War Machine, and Characters with War Machine cannot join units.
+When a War Machine fails a Panic Test , instead of Fleeing it is Shaken until the end of the next Player Turn. War Machines that fail a Break Test are automatically destroyed. War Machines on round bases and units Engaged in Combat with them cannot make Combat Reforms.
+When a unit Charges a War Machine on a round base, it can move into base contact by having its Front Facing contact any point of the War Machine’s base (it must still maximise the number of models in base contact, see “Contact between Objects”, page 11 and figure 31, page 68). No align move is allowed.
+When a unit Breaks from Combat and Flees away from a War Machine on a round base, always Pivot the Fleeing unit 180°, so that it’s Rear Facing is in contact with the War Machine’s base. Otherwise follow the normal rules for units Breaking from Combat and Fleeing.</description>
     </rule>
     <rule id="ccef-5d47-fa0a-8bdf" name="War Platform" hidden="false">
-      <description>Unless selected as a mount for a Character, a model with War Platform gains Not a Leader and Character, with the following exceptions:
-- It does not count as Characters when Deploying Units (It may still be deployed inside Units)
-- It cannot Issue Duels, Accept Duels or Make Way.
-- It can perform Swirling Melee.
-- It does not count as Character regarding Bodyguard and Multiple Wounds.
-The model can join units even if it has Towering Presence, and having Chariot does not prevent it from joining units without Chariot. Additionally, it does not prevent Characters without Chariot from joining a unit containing a model with War Platform and Chariot. When joined to a unit, it must always be placed in the centre of the front rank, possibly pushing back other models with Front Rank, and must keep its position in the centre of the front rank at all times (as long as it is joined to the unit). If two positions are equally central (this may e.g. be the case in a unit with an even number of models in the first rank and a War Platform replacing an uneven number of models per rank), the War Platform can
-be placed in either of these positions. If the War Platform cannot be placed in the centre of the the front rank (e.g. due to Mismatching bases or the front rank being too narrow), the model cannot join the unit. This means that a War Platform can never join a unit with Mismatching bases and that only a single War Platform can normally be in the same unit .</description>
+      <description>Unless selected as a mount for a Character, a model with War Platform gains Character with the following exceptions:
+• It does not count towards the Characters Army Category (for Army List creation).
+• It does not count as Character when Deploying Units (it may still be deployed inside units).
+• It cannot issue Duels, accept Duels, or Make Way.
+• It can perform Swirling Melee.
+• It does not count as Character regarding Bodyguard and Multiple Wounds, unless the War Platform is specifically mentioned in the Bodyguard rule.
+
+The model can join units even if it has Towering Presence, and having Chariot does not prevent it from joining units without Chariot. Additionally, it does not prevent Characters without Chariot from joining a unit containing a model with War Platform and Chariot. When joined to a unit, it must always be placed in the centre of the first rank, possibly pushing back other models with Front Rank, and must keep its position in the centre of the first rank at all times (as long as it is joined to the unit). If two positions are equally central (e.g. in a unit with an even number of models in the first rank and a War Platform replacing an uneven number of models per rank), the War Platform can be placed in either of these positions. If the War Platform cannot be placed in the centre of the the first rank, the model cannot
+join the unit. A War Platform with Mismatching Base can never join a unit, and only a single War Platform can be in the same unit unless specifically stated otherwise.</description>
     </rule>
     <rule id="7455-f914-028b-3359" name="Wizard Conclave" hidden="false">
-      <description>The Champion of a unit with Wizard Conclave gains +1 Health Point in addition to the normal Characteristics increases associated with being a Champion, and is a Wizard Adept . This Champion may select up to two spells from predetermined spells given in brackets after Wizard Conclave. This overrides the Spell Selection rules connected to being a Wizard Adept.</description>
+      <description>The Champion of a unit with Wizard Conclave is a Wizard Adept and gains +1 Health Point in addition to the normal Attack Value increase associated with being a Champion. This Champion may select up to two spells from predetermined spells given in the unit entry. This overrides the Spell Selection rules for Wizard Adepts.</description>
     </rule>
     <rule id="0919-4c3c-87d8-78a8" name="Cannot be Stomped" hidden="false">
       <description>For the purposes of Stomp Attacks from enemy model, a model with Cannot be Stomped is never considered Standard Size.</description>
@@ -1287,6 +1305,12 @@ If the first rank is occupied by models with Front Rank, a model with Matching B
 • If the model has a larger base than the R&amp;F models, it is considered to be in all ranks its base occupies for the purposes of calculating Full Ranks . For calculating the number of models in the unit’s ranks (e.g. for Full Ranks, Line Formation , Area Attack ), the large base counts as the number of models it replaces.
 • If a model with a Matching Base has a longer base than the R&amp;F models in the unit, the unit is allowed to have more than one incomplete rank if all incomplete ranks after the first consist entirely of models with such bases (for instance the rear parts of long bases such as War Platforms are allowed to form several incomplete ranks).
 • A model cannot join a unit that has more than one rank if its base is wider than the unit it wishes to join, nor can a unit Reform into a formation that is narrower than any model joined to the unit.</description>
+    </rule>
+    <rule id="246c-9d3a-5c5b-501a" name="Swift Reform" hidden="false">
+      <description>During the Movement Phase, a unit containing one or more models with Swift Reform may execute a Swift Reform instead of a Reform. The unit makes a Reform with the following exceptions:
+• The unit is not prohibited from shooting in the next Shooting Phase (but will still suffer the to-hit modifier for moving and shooting).
+• The unit can perform an Advance Move after the Reform. For the purpose of no model being able to end its movement with its centre farther away than its Advance Rate from its starting position, measure this distance after the Reform.
+• No model can end its movement (after an Advance Move) with its centre farther away than its March Rate from its starting position before the Reform.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
