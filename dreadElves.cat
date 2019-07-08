@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e864-7507-1f0d-3ea2" name="Dread Elves 2.0" revision="16" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e864-7507-1f0d-3ea2" name="Dread Elves 2.0" revision="18" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="3a14-99d4-8059-140f" name="The Menagerie" hidden="false"/>
     <categoryEntry id="2611-7f11-a4ea-5807" name="Destroyers" hidden="false"/>
@@ -38,7 +38,7 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="41a8-2f33-d82e-8d8c" name="Dread Prince" hidden="false" collective="false" type="model">
+    <selectionEntry id="41a8-2f33-d82e-8d8c" name="Dread Prince" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="0125-0bf7-fd7a-a500" name="Dread Prince Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -126,6 +126,17 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="b29b-607b-485b-cbdd" name="Shield" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a10b-9389-8ced-d22c" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="efe4-999e-00f2-e444" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="92d8-9fcb-41d0-3b84" name="Alliance" hidden="false" collective="false">
@@ -204,7 +215,11 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="565a-f075-08da-8cfc" name="Armour" hidden="false" collective="false">
+        <selectionEntryGroup id="565a-f075-08da-8cfc" name="Armour" hidden="false" collective="false" defaultSelectionEntryId="41f3-2166-d68b-fe64">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d76-1c25-7e13-889a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2eb2-e660-4b4b-a54b" type="max"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="41f3-2166-d68b-fe64" name="Light Armour" hidden="false" collective="false" type="upgrade">
               <constraints>
@@ -226,17 +241,6 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4895-13e8-ebb8-d787" name="Shield" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6753-591a-0416-021b" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="8c58-2833-0522-0f50" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -422,7 +426,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="240.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cb62-2ea5-8a04-b654" name="Captain" hidden="false" collective="false" type="model">
+    <selectionEntry id="cb62-2ea5-8a04-b654" name="Captain" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="5021-9130-8b55-d4d2" name="Captain Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -499,7 +503,7 @@
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="985e-97a4-6d23-c93b" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="a291-d2a5-fb82-b5ac" name="DE Aretefacts" hidden="false" collective="false" targetId="94d1-de93-b133-3e3d" type="selectionEntryGroup"/>
+                    <entryLink id="a291-d2a5-fb82-b5ac" name="DE Artefacts" hidden="false" collective="false" targetId="94d1-de93-b133-3e3d" type="selectionEntryGroup"/>
                     <entryLink id="bb40-102e-fb71-f801" name="Artefacts" hidden="false" collective="false" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -514,9 +518,6 @@
                   <constraints>
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b4b0-180e-a7f9-b87f" type="max"/>
                   </constraints>
-                  <categoryLinks>
-                    <categoryLink id="eb25-39de-e2e1-03e1" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-                  </categoryLinks>
                   <entryLinks>
                     <entryLink id="fdd2-1d8f-e3dd-2ae7" name="Banner Enchantments" hidden="false" collective="false" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
                     <entryLink id="ada9-06db-9a16-b246" name="DE Banner Enchantments" hidden="false" collective="false" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
@@ -545,6 +546,17 @@
           </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4100-b1cf-7a6f-b5dd" name="Shield" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d0e-6fe5-96bb-e9ec" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="2c3b-cbf6-7e87-0c96" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -625,7 +637,11 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f5a3-4600-5526-83c6" name="Armour" hidden="false" collective="false">
+        <selectionEntryGroup id="f5a3-4600-5526-83c6" name="Armour" hidden="false" collective="false" defaultSelectionEntryId="464a-15cd-d3d9-463b">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="46af-f402-9091-7135" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acaf-85a0-d796-5a4d" type="min"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="464a-15cd-d3d9-463b" name="Light Armour" hidden="false" collective="false" type="upgrade">
               <constraints>
@@ -647,17 +663,6 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c79d-b245-353c-b4ae" name="Shield" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a7c-8132-9732-6544" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="8bd0-d60d-c89b-7847" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -837,7 +842,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="155.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="73e5-464d-9665-0b4b" name="Cult Priest" hidden="false" collective="false" type="model">
+    <selectionEntry id="73e5-464d-9665-0b4b" name="Cult Priest" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="af71-bf60-41b7-4cbf" name="Cult Priest Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -945,7 +950,7 @@
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e7df-7412-8a87-b94d" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="dc9f-ad78-f9f0-1736" name="DE Aretefacts" hidden="false" collective="false" targetId="94d1-de93-b133-3e3d" type="selectionEntryGroup"/>
+                    <entryLink id="dc9f-ad78-f9f0-1736" name="DE Artefacts" hidden="false" collective="false" targetId="94d1-de93-b133-3e3d" type="selectionEntryGroup"/>
                     <entryLink id="ef1d-8b20-73be-ed4d" name="Artefacts" hidden="false" collective="false" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -960,9 +965,6 @@
                   <constraints>
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8e6-f1c0-be9e-7bcf" type="max"/>
                   </constraints>
-                  <categoryLinks>
-                    <categoryLink id="bc4c-ff29-362e-9b0e" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-                  </categoryLinks>
                   <entryLinks>
                     <entryLink id="d9af-5be9-135e-4ecf" name="Banner Enchantments" hidden="false" collective="false" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
                     <entryLink id="0c31-4c1e-9f95-a2fc" name="DE Banner Enchantments" hidden="false" collective="false" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
@@ -1073,9 +1075,6 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4416-b2bb-4649-46c0" type="max"/>
               </constraints>
-              <categoryLinks>
-                <categoryLink id="2dcb-b07a-f0d7-27d5" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-              </categoryLinks>
               <selectionEntries>
                 <selectionEntry id="d495-64cc-09cc-f023" name="Light Lance" hidden="false" collective="false" type="upgrade">
                   <constraints>
@@ -1477,6 +1476,9 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bbd6-11ae-7cfd-48a0" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink id="3f2b-9fab-242e-7070" name="The Menagerie" hidden="false" targetId="3a14-99d4-8059-140f" primary="false"/>
+              </categoryLinks>
               <entryLinks>
                 <entryLink id="eb4f-f96d-c19b-017d" name="Manticore" hidden="false" collective="false" targetId="b9e4-b91d-d874-f3c5" type="selectionEntry"/>
               </entryLinks>
@@ -1495,6 +1497,9 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="89d2-b49e-ae72-c39a" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink id="323c-d976-36ca-2eea" name="The Menagerie" hidden="false" targetId="3a14-99d4-8059-140f" primary="false"/>
+              </categoryLinks>
               <entryLinks>
                 <entryLink id="54be-cd79-5b7a-6449" name="Dragon" hidden="false" collective="false" targetId="409d-6c5e-5489-d2cd" type="selectionEntry"/>
               </entryLinks>
@@ -1504,11 +1509,11 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="2220-6840-dca2-4702" name="Path" hidden="false" collective="false">
+        <selectionEntryGroup id="2220-6840-dca2-4702" name="Magic Path" hidden="false" collective="false">
           <modifiers>
-            <modifier type="set" field="5ac1-2d27-9a85-2928" value="2">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1573,6 +1578,75 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="407f-bbf1-3877-576c" name="Magic Path" hidden="true" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5976-e062-1e8e-e908" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b9d-4312-7a7a-d915" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="17aa-da56-a33f-b453" name="Alchemy" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="b8ec-e80c-02c4-e61d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c5a-f96e-c359-e526" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="34de-019e-f2f4-3d71" name="Witchcraft" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a906-a363-24c0-846e" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="26ae-3515-83b5-a39c" name="Divination" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c2d-b8be-54ac-7d28" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="30d9-67f5-874c-b809" name="Cosmology" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="217d-b2fa-d65e-1589" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="24e3-15c3-e447-5865" name="Occultism" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="b8ec-e80c-02c4-e61d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a708-92e0-e5d6-c279" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="12f4-4ee7-8c51-f6d7" name="Army General" hidden="false" collective="false" targetId="6f48-ba88-921e-d57e" type="selectionEntry"/>
@@ -1581,7 +1655,7 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="170.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="aa61-381b-d9c8-24f2" name="Assassin" hidden="false" collective="false" type="model">
+    <selectionEntry id="aa61-381b-d9c8-24f2" name="Assassin" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="57bc-f0f0-9da4-1879" name="Assassin Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -1664,7 +1738,7 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fff8-2ef8-884d-6156" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="f5f9-61eb-de94-eb59" name="DE Aretefacts" hidden="false" collective="false" targetId="94d1-de93-b133-3e3d" type="selectionEntryGroup"/>
+                    <entryLink id="f5f9-61eb-de94-eb59" name="DE Artefacts" hidden="false" collective="false" targetId="94d1-de93-b133-3e3d" type="selectionEntryGroup"/>
                     <entryLink id="f428-4ac3-2986-bfd3" name="Artefacts" hidden="false" collective="false" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -1695,69 +1769,15 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7386-6d50-3d01-b3af" name="Master Poisoner" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c347-f04f-a0c4-bfe3" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="4047-cec5-94ef-5817" name="Poison" hidden="false" collective="false">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7947-2632-907c-71d2" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="d4e9-53ed-ac02-38fe" name="Nightshade" hidden="false" collective="false" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a83-e33d-05b8-af48" type="max"/>
-                  </constraints>
-                  <rules>
-                    <rule id="14c0-bdb6-5640-ca4a" name="Nightshade" hidden="false">
-                      <description>The attack always​ w​ ounds on at least 3+</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="3eb9-899f-ec81-3179" name="Wolfsbane" hidden="false" collective="false" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d46c-6593-568c-5a3c" type="max"/>
-                  </constraints>
-                  <rules>
-                    <rule id="fbd5-93c3-31f5-90ad" name="Wolfsbane" hidden="false">
-                      <description>The attack has its Armour Penetration set​ ​to 10.</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="2e1b-23ec-e694-7ce5" name="Bloodroot" hidden="false" collective="false" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="885b-f53e-fe3f-e8de" type="max"/>
-                  </constraints>
-                  <rules>
-                    <rule id="3d0d-beb9-7e88-461f" name="Bloodroot" hidden="false">
-                      <description>The attack gains +1 Strength, +1 Armour Penetration, and Multiple Wounds (2,
-against Character).</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="f889-7006-944e-0d02" name="Master Poisoner" hidden="false" collective="false" targetId="3ae3-3950-7fea-2697" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="155.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3e1e-e56a-4cbd-6928" name="Assassin - Path of Silent Death" hidden="false" collective="false" type="model">
+    <selectionEntry id="3e1e-e56a-4cbd-6928" name="Assassin - Path of Silent Death" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="fb03-1135-97db-f5f9" name="Assassin Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -1861,66 +1881,10 @@ against Character).</description>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="000f-417e-cf27-89c0" name="Master Poisoner" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0dda-eca6-69fb-9b46" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="e315-545e-e94c-8ff0" name="Poison" hidden="false" collective="false">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f91f-bba1-50c4-8204" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="06d9-2702-e863-cad8" name="Nightshade" hidden="false" collective="false" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="589c-3fb0-5b49-f2f6" type="max"/>
-                  </constraints>
-                  <rules>
-                    <rule id="84e5-fc5d-218b-2a71" name="Nightshade" hidden="false">
-                      <description>The attack always​ w​ ounds on at least 3+</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="a64c-62d2-5a05-73a3" name="Wolfsbane" hidden="false" collective="false" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8279-f967-a78e-16c0" type="max"/>
-                  </constraints>
-                  <rules>
-                    <rule id="da3d-4d4f-87b3-fb81" name="Wolfsbane" hidden="false">
-                      <description>The attack has its Armour Penetration set​ ​to 10.</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="1447-3b44-54c5-269b" name="Bloodroot" hidden="false" collective="false" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eba0-f0b0-befa-da4b" type="max"/>
-                  </constraints>
-                  <rules>
-                    <rule id="8d72-36d2-943c-056b" name="Bloodroot" hidden="false">
-                      <description>The attack gains +1 Strength, +1 Armour Penetration, and Multiple Wounds (2,
-against Character).</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="344f-727d-e393-dbfb" name="Cadaron" hidden="false" collective="false" targetId="957d-879f-c8bb-d5e5" type="selectionEntry"/>
+        <entryLink id="9b41-24e7-a899-5290" name="Master Poisoner" hidden="false" collective="false" targetId="3ae3-3950-7fea-2697" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="190.0"/>
@@ -2029,7 +1993,7 @@ against Character).</description>
               </constraints>
               <entryLinks>
                 <entryLink id="2162-99e4-33f3-dd08" name="Banner Enchantments" hidden="false" collective="false" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="77b8-65a7-4d43-c8cb" name="DE Banner Enchantments" hidden="false" collective="false" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
+                <entryLink id="77b8-65a7-4d43-c8cb" name="DE Banner Enchantments (Academy)" hidden="false" collective="false" targetId="96c2-57c6-3c77-5606" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -2039,9 +2003,9 @@ against Character).</description>
         </selectionEntry>
         <selectionEntry id="134c-4c41-96c0-52c9" name="Spears" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
               <repeats>
-                <repeat field="selections" scope="2e23-a9ea-2f6a-dc58" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dae9-d585-642e-0751" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2166,7 +2130,7 @@ against Character).</description>
               </constraints>
               <entryLinks>
                 <entryLink id="abe5-630f-6a6a-a035" name="Banner Enchantments" hidden="false" collective="false" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="e572-cdf0-543c-e312" name="DE Banner Enchantments" hidden="false" collective="false" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
+                <entryLink id="e572-cdf0-543c-e312" name="DE Banner Enchantments (Academy)" hidden="false" collective="false" targetId="96c2-57c6-3c77-5606" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -2176,9 +2140,9 @@ against Character).</description>
         </selectionEntry>
         <selectionEntry id="4f39-cb10-aca7-5c58" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
               <repeats>
-                <repeat field="selections" scope="1b6f-5b02-13ad-c245" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35a2-39f4-c550-b6dd" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2194,20 +2158,20 @@ against Character).</description>
         </selectionEntry>
         <selectionEntry id="d5b6-6811-3347-ca92" name="Repeater Handbow (4+)" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
               <repeats>
-                <repeat field="selections" scope="1b6f-5b02-13ad-c245" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35a2-39f4-c550-b6dd" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
               <repeats>
-                <repeat field="selections" scope="1b6f-5b02-13ad-c245" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35a2-39f4-c550-b6dd" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="085e-e665-bf32-6e2b" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="1d05-dd9a-1120-446b" value="175">
+            <modifier type="set" field="1d05-dd9a-1120-446b" value="175.0">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="085e-e665-bf32-6e2b" type="equalTo"/>
               </conditions>
@@ -2231,9 +2195,9 @@ against Character).</description>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5298-cbec-35c4-6f30" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
               <repeats>
-                <repeat field="selections" scope="1b6f-5b02-13ad-c245" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35a2-39f4-c550-b6dd" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" field="cf75-7cb5-4167-487e" value="1">
@@ -2329,7 +2293,7 @@ against Character).</description>
               </constraints>
               <entryLinks>
                 <entryLink id="6332-5e4c-7467-e8ad" name="Banner Enchantments" hidden="false" collective="false" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="8db9-515a-2e1d-00aa" name="DE Banner Enchantments" hidden="false" collective="false" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
+                <entryLink id="8db9-515a-2e1d-00aa" name="DE Banner Enchantments (Core)" hidden="false" collective="false" targetId="8f63-b258-8e49-9545" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -2379,7 +2343,7 @@ against Character).</description>
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="3ef1-d67a-ca51-58b5" name="Cadaron" hidden="false" targetId="b1da-1f0c-f7fc-7b0a" type="rule">
+        <infoLink id="6fc1-7c0e-3854-2806" name="Cadaron" hidden="false" targetId="b1da-1f0c-f7fc-7b0a" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -2396,9 +2360,9 @@ against Character).</description>
       <selectionEntries>
         <selectionEntry id="df42-8c83-b308-c4cc" name="Repeater Auxilliary" hidden="false" collective="false" type="model">
           <modifiers>
-            <modifier type="set" field="24fd-8af8-0c78-001c" value="22">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="085e-e665-bf32-6e2b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="085e-e665-bf32-6e2b" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2456,7 +2420,7 @@ against Character).</description>
               </constraints>
               <entryLinks>
                 <entryLink id="0ccf-2a3d-5777-2fbe" name="Banner Enchantments" hidden="false" collective="false" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="87c6-a81b-d3f7-8968" name="DE Banner Enchantments" hidden="false" collective="false" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
+                <entryLink id="87c6-a81b-d3f7-8968" name="DE Banner Enchantments (Academy)" hidden="false" collective="false" targetId="96c2-57c6-3c77-5606" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -2466,9 +2430,9 @@ against Character).</description>
         </selectionEntry>
         <selectionEntry id="87e7-99f8-45bb-ac31" name="Shields" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
               <repeats>
-                <repeat field="selections" scope="68c2-b161-9a0c-d91d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df42-8c83-b308-c4cc" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2557,9 +2521,9 @@ against Character).</description>
         </selectionEntry>
         <selectionEntry id="474a-6ecf-4bac-de3e" name="Repeater Crossbows (4+)" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="8.0">
               <repeats>
-                <repeat field="selections" scope="5717-ed5e-648d-d59e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7879-ebbe-0cf5-03a9" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2567,7 +2531,7 @@ against Character).</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="49be-d27f-9861-08e7" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="f54e-4b00-d2a2-a41e" name="Repeater Crossbow (4+)" hidden="false" targetId="3018-73dd-db99-f8e4" type="profile"/>
+            <infoLink id="f54e-4b00-d2a2-a41e" name="Repeater Crossbow" hidden="false" targetId="3018-73dd-db99-f8e4" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -2575,9 +2539,9 @@ against Character).</description>
         </selectionEntry>
         <selectionEntry id="ec84-d731-54f0-43f7" name="Shield" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
               <repeats>
-                <repeat field="selections" scope="5717-ed5e-648d-d59e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7879-ebbe-0cf5-03a9" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2670,9 +2634,9 @@ against Character).</description>
           <selectionEntries>
             <selectionEntry id="e794-e947-f2b5-c477" name="Great Weapon" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
                   <repeats>
-                    <repeat field="selections" scope="24c3-4461-446f-26e1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5230-31d2-908c-b727" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -2688,9 +2652,9 @@ against Character).</description>
             </selectionEntry>
             <selectionEntry id="b048-4c28-5d56-58d9" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="24c3-4461-446f-26e1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5230-31d2-908c-b727" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -2777,7 +2741,7 @@ against Character).</description>
           <selectionEntryGroups>
             <selectionEntryGroup id="5d39-fedd-735f-cc9b" name="Banner Enchantment" hidden="false" collective="false">
               <modifiers>
-                <modifier type="set" field="8376-4004-5b5f-fb30" value="2">
+                <modifier type="set" field="8376-4004-5b5f-fb30" value="2.0">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb78-a955-08a6-15a8" type="equalTo"/>
                   </conditions>
@@ -2786,9 +2750,6 @@ against Character).</description>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8376-4004-5b5f-fb30" type="max"/>
               </constraints>
-              <categoryLinks>
-                <categoryLink id="b600-de0b-7f51-d5d8" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
-              </categoryLinks>
               <entryLinks>
                 <entryLink id="c33c-b66d-422a-3baf" name="Banner Enchantments" hidden="false" collective="false" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup">
                   <modifiers>
@@ -2798,11 +2759,8 @@ against Character).</description>
                       </conditions>
                     </modifier>
                   </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="9213-9ecf-d1ba-b587" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
-                  </categoryLinks>
                 </entryLink>
-                <entryLink id="1e3b-4280-3dfc-6d2c" name="DE Banner Enchantments" hidden="false" collective="false" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup">
+                <entryLink id="1e3b-4280-3dfc-6d2c" name="DE Banner Enchantments (Special)" hidden="false" collective="false" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup">
                   <modifiers>
                     <modifier type="set" field="c4ad-a5f3-a2ec-4d36" value="2">
                       <conditions>
@@ -2810,9 +2768,6 @@ against Character).</description>
                       </conditions>
                     </modifier>
                   </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="e431-832a-1d07-844d" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
-                  </categoryLinks>
                 </entryLink>
               </entryLinks>
             </selectionEntryGroup>
@@ -2980,7 +2935,7 @@ against Character).</description>
       <infoLinks>
         <infoLink id="f3e8-bbca-9fed-7dd4" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
         <infoLink id="9f5a-c5e0-f4fa-c77c" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
-        <infoLink id="ad99-ecdd-8d18-bb78" name="Repeater Crossbow (4+)" hidden="false" targetId="3018-73dd-db99-f8e4" type="profile"/>
+        <infoLink id="ad99-ecdd-8d18-bb78" name="Repeater Crossbow" hidden="false" targetId="3018-73dd-db99-f8e4" type="profile"/>
         <infoLink id="dc30-c14e-7a33-8366" name="Killer Instinct" hidden="false" targetId="e599-edc2-acea-74ec" type="rule"/>
         <infoLink id="6428-2e26-8c4e-bb47" name="Lightning Reflexes" hidden="false" targetId="f17a-c7f9-af34-a039" type="rule"/>
         <infoLink id="887b-98e2-12c3-7e55" name="Scent of Blood" hidden="false" targetId="061b-d5e1-3d70-4c82" type="rule"/>
@@ -3129,7 +3084,7 @@ against Character).</description>
               </constraints>
               <entryLinks>
                 <entryLink id="ae28-4d0b-67bb-0678" name="Banner Enchantments" hidden="false" collective="false" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="3907-9270-cfec-1975" name="DE Banner Enchantments" hidden="false" collective="false" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
+                <entryLink id="3907-9270-cfec-1975" name="DE Banner Enchantments (Special)" hidden="false" collective="false" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -3236,9 +3191,9 @@ against Character).</description>
                 <condition field="selections" scope="1f43-69a8-c175-3fad" value="15.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="391d-e796-d822-3848" type="greaterThan"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
               <repeats>
-                <repeat field="selections" scope="1f43-69a8-c175-3fad" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="391d-e796-d822-3848" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -3440,9 +3395,9 @@ In addition, friendly Standard Size units with at least one Full Rank that are E
         </selectionEntry>
         <selectionEntry id="cf8e-712b-8642-7c54" name="Cult of Yema" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
               <repeats>
-                <repeat field="selections" scope="068d-721b-2af4-f099" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efd0-9602-e8f9-7887" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -3461,7 +3416,7 @@ In addition, friendly Standard Size units with at least one Full Rank that are E
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ab5c-9542-314b-8887" name="Divine Altar" hidden="false" collective="false" type="model">
+    <selectionEntry id="ab5c-9542-314b-8887" name="Divine Altar" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c5fd-b9b1-1fe1-a87b" type="max"/>
       </constraints>
@@ -3580,7 +3535,7 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="385.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="41f1-3cf4-27ca-d38a" name="Hunting Chariot" hidden="false" collective="false" type="model">
+    <selectionEntry id="41f1-3cf4-27ca-d38a" name="Hunting Chariot" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="4ca9-779a-1c09-60bd" name="Hunting Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -3651,7 +3606,7 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
         <infoLink id="435c-dd12-d739-5cb4" name="Inanimate" hidden="false" targetId="ca83-2dad-d908-5f4c" type="rule"/>
         <infoLink id="7337-58fe-0212-cc23" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (D6+1)"/>
+            <modifier type="append" field="name" value=" (D6)"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -3662,7 +3617,7 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="210.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4c53-b497-1c21-c8bf" name="Dread Reaper" hidden="false" collective="false" type="model">
+    <selectionEntry id="4c53-b497-1c21-c8bf" name="Dread Reaper" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dac6-3a6d-7cf7-cabf" type="max"/>
       </constraints>
@@ -3812,7 +3767,7 @@ Models with Towering Presence other than the Divine Altar cannot benefit from Di
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="ea46-a008-453e-3547" name="Regeneration" hidden="false" targetId="faef-6f9d-ae02-d420" type="rule">
+        <infoLink id="ea46-a008-453e-3547" name="Fortitude" hidden="false" targetId="faef-6f9d-ae02-d420" type="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (4+)"/>
           </modifiers>
@@ -4325,6 +4280,57 @@ Shooting Attacks made by the model part gain +1 to hit when shooting from Short 
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="1b10-b5ec-90ee-aec7" name="Academy Banner" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e101-50fe-675d-ea49" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7f20-733f-ed32-596d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9bc1-5209-7946-7092" name="Academy Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">R&amp;F models in the bearer&apos;s unit gain +1 AP in the first round of combat. Dread Legionnaires, Repeater Auxiliaries, and Corsairs in units within 6&quot; of one or more other unit with Academy Banner gain +1 AP in the first round of combat.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c52f-787d-8819-6ef0" name="Banner of Blood" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bc30-eefb-69f0-d117" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="725b-3874-dfc5-1a88" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="600f-bac8-c49e-e831" name="Banner of Blood" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Model parts without Harnessed in the bearer&apos;s unit gains Devastating Charge (+1 Att).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="26c2-af64-354c-2410" name="Banner of Gar Daecos" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6322-cfcf-6f37-568f" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4d4f-3ed5-b732-59ef" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3635-4f9f-7f5b-33a8" name="Banner of Gar Daecos" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">All friendly units Engaged in the same Combat as the bearer gain Death Trance.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="7cbc-441d-4afe-9539" name="DE Weapon Enchantments" hidden="false" collective="false">
@@ -4562,63 +4568,78 @@ Shooting Attacks made by the model part gain +1 to hit when shooting from Short 
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="1395-1a1a-49a0-9c1b" name="DE Banner Enchantments" hidden="false" collective="false">
+    <selectionEntryGroup id="1395-1a1a-49a0-9c1b" name="DE Banner Enchantments (Special)" hidden="false" collective="false">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c4ad-a5f3-a2ec-4d36" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink id="6b8d-0d22-b533-b3a5" name="Banner of Blood" hidden="false" collective="false" targetId="c52f-787d-8819-6ef0" type="selectionEntry"/>
+        <entryLink id="7a87-4011-1e03-2875" name="Banner of Gar Daecos" hidden="false" collective="false" targetId="26c2-af64-354c-2410" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="3ae3-3950-7fea-2697" name="Master Poisoner" hidden="false" collective="false">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ae8-f783-cee2-ac33" type="max"/>
+      </constraints>
       <selectionEntries>
-        <selectionEntry id="d8d7-3d24-646c-4383" name="Banner of Gar Daecos - Cannot be taken by Core units" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="4dfd-6f75-7f2f-7553" name="Bloodroot" hidden="false" collective="false" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b5db-5370-52fc-d457" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ac9c-ce9e-b1b8-f023" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="86b7-0cdc-f280-d732" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="aea0-c82e-20ef-9619" name="Banner of Gar Daecos" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">All friendly units Engaged in the same Combat as the bearer gain Death Trance.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3686-e125-70b4-795b" name="Banner of Blood" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6125-afe1-735b-b9e9" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f7ba-562d-7ec8-48fc" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="cb5a-7e8b-ddf9-ff95" name="Banner of Blood" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Model parts without Harnessed in the bearer&apos;s unit gains Devastating Charge (+1 Att).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <rules>
+            <rule id="7c2d-7a02-1a06-51e5" name="Bloodroot" hidden="false">
+              <description>The attack gains +1 Strength, +1 Armour Penetration, and Multiple Wounds (2,
+against Character).</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7171-67ac-3e5a-19a8" name="Academy Banner - Dread Legionnaires, Repeater Auxilliaries and Corsairs only" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="ad23-c1a4-cb45-357a" name="Nightshade" hidden="false" collective="false" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d197-ef9b-36d7-12bf" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="81a8-176c-7acb-5f94" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe27-aa62-2060-520b" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="9062-a526-819c-36bc" name="Academy Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">R&amp;F models in the bearer&apos;s unit gain +1 AP in the first round of combat. Dread Legionnaires, Repeater Auxiliaries, and Corsairs in units within 6&quot; of one or more other unit with Academy Banner gain +1 AP in the first round of combat.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <rules>
+            <rule id="c665-e46b-7bfc-84f7" name="Nightshade" hidden="false">
+              <description>The attack always​ w​ ounds on at least 3+</description>
+            </rule>
+          </rules>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a1bd-48a7-3494-c39f" name="Wolfsbane" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f69b-cc7f-d07e-679a" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="f501-2b45-af09-9842" name="Wolfsbane" hidden="false">
+              <description>The attack has its Armour Penetration set​ ​to 10.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="96c2-57c6-3c77-5606" name="DE Banner Enchantments (Academy)" hidden="false" collective="false">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d49d-1856-1941-9595" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="4236-1cc7-f3c4-0c96" name="Banner of Blood" hidden="false" collective="false" targetId="c52f-787d-8819-6ef0" type="selectionEntry"/>
+        <entryLink id="e2cf-0898-00da-31b7" name="Academy Banner" hidden="false" collective="false" targetId="1b10-b5ec-90ee-aec7" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="8f63-b258-8e49-9545" name="DE Banner Enchantments (Core)" hidden="false" collective="false">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8a90-78be-6eac-a4a6" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="d1fb-fde1-2e03-65d1" name="Banner of Blood" hidden="false" collective="false" targetId="c52f-787d-8819-6ef0" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
