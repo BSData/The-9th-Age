@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6f32-70a5-e6b1-a536" name="Åsklanders 2.2" revision="7" battleScribeVersion="2.02" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6f32-70a5-e6b1-a536" name="Åsklanders 2.2" revision="8" battleScribeVersion="2.02" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d224-066a-e928-c28c" name="Legendary Beasts" hidden="false"/>
   </categoryEntries>
@@ -261,7 +261,7 @@
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
             <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
@@ -715,11 +715,21 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
           </characteristics>
         </profile>
+        <profile id="d6f9-f6dc-271d-099e" name="Spiked Shield" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="4 Armour">
+          <characteristics>
+            <characteristic name="Type" typeId="017b-143b-0520-bdc1">Shield</characteristic>
+            <characteristic name="Save" typeId="4ca3-2498-f356-f056">+1 Arm</characteristic>
+            <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Shields (can be enchanted as if it was a Shield). For each successful Armour Save roll of 4+ made by the bearer against a Melee Attack while using a Spiked Shield, the model that caused the wound immediately suffers 1 hit with the bearer’s Strength and Armour Penetration, before any casualties are removed, distributed onto the model’s Health Pool. This is considered a Special Attack.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <rules>
+        <rule id="1816-61b3-a0e6-18d0" name="Path of the Favoured" hidden="false">
+          <description>Units with more than half of their models with Path of the Favoured must reroll failed Break Tests. In addition, model parts with Path of the Favoured upgraded to a Champion additionally gain +1 Health Point to a maximum of 3, and their Discipline is set to 9.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="a80b-c3b2-7ab1-3bfe" name="Hell-Forged Armour" hidden="false" targetId="4b6e-450b-00c6-c6e9" type="profile"/>
-        <infoLink id="9eaf-57c9-823b-c273" name="Path of the Favoured" hidden="false" targetId="ad22-35cb-7d05-aea3" type="rule"/>
-        <infoLink id="9636-b5a7-e68d-69e8" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
         <infoLink id="188f-36fd-c50e-a38a" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -862,7 +872,7 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
       </profiles>
       <infoLinks>
         <infoLink id="0f16-0a60-c507-f256" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="edff-d9d8-5701-38da" name="Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
+        <infoLink id="edff-d9d8-5701-38da" name="Åsklander Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
         <infoLink id="78cb-6e9f-9633-7d11" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -1110,12 +1120,6 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="5a5c-d849-6b2e-4739" name="As One" hidden="false">
-          <description>Defensive Trait.
-If the unit has at least 2 Full ranks and a majority of its models have Shields and As One, all models of Standard Size in the unit gains +1 Armour against Ranged Attacks and in the first Round of Combat.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="672e-6f3e-1baf-30b5" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
         <infoLink id="8e77-de73-41b6-c348" name="Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
@@ -1263,7 +1267,7 @@ If the unit has at least 2 Full ranks and a majority of its models have Shields 
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">-</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
           </characteristics>
         </profile>
         <profile id="aedb-04ca-f085-75c6" name="Wargs Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1958,6 +1962,9 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
               <description>The model’s Armour is set​ to 2. Flaming Attacks must reroll successful to-wound rolls against the model.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -2005,7 +2012,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
       </profiles>
       <infoLinks>
         <infoLink id="046a-ff6a-7219-f4d0" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-        <infoLink id="ed38-a79c-4f93-6e69" name="Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
+        <infoLink id="ed38-a79c-4f93-6e69" name="Åsklander Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
         <infoLink id="25b7-83ef-584e-e4fe" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
         <infoLink id="0281-19fd-71b7-914e" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
       </infoLinks>
@@ -2353,7 +2360,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
             <profile id="0f93-0edc-6865-99ec" name="Eyratöki" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon gains Magical Attacks, and wound automatically</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder gains Crush Attack, and can perform two Crush Attacks instead of one (provided it declared the use of its Crush Attack at the end of step 4 of the Round of Combat Sequence as usual).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2450,7 +2457,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
             <profile id="e93a-dce6-a04b-a7ea" name="Raven Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Bearer’s unit gains Fear.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit gains Battle Focus, Fearless, and Frenzy.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2521,15 +2528,6 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="ad22-35cb-7d05-aea3" name="Path of the Favoured" hidden="false">
-      <description>The model can make one more Supporting Attack than normal from the second rank, and when it fights in a Duel it gains +1 Discipline until the end of the Melee Phase. Units with one or more models with Path of the Favoured cannot add Rank Bonus to their Combat Score.</description>
-    </rule>
-    <rule id="45c4-f6e9-92e8-a409" name="Path of the Exiled" hidden="false">
-      <description>The model gains Stubborn in the first Round of Combat provided its unit does not have more ranks than files and it is Engaged in Combat in its Front Facing with an enemy unit. Units with Path of the Exiled cannot join or be joined by units without Path of the Exiled. </description>
-    </rule>
-    <rule id="381d-6b94-16aa-dcab" name="Irredeemable" hidden="false">
-      <description>The model cannot use Stomp Attacks and can use Grind Attacks as Supporting Attacks (ignoring the maximum number of Supporting Attacks). When a model with Irredeemable is killed by a Melee Attack, remove it as a casualty only at Initiative Step 0. A unit with at least one model with Irredeemable may never have more ranks than files. </description>
-    </rule>
     <rule id="f24d-4987-95ae-9ed9" name="The Reckoning" hidden="false">
       <description>Whenever a friendly model with Hell-Forged Armour or Irredeemable is removed as a casualty, if its unit was within 8” of a friendly model with The Reckoning, you gain one Soul Token to your Soul Token pool for each Health Point the model (that was removed as a casualty) started the game with. The number of Soul Tokens in this pool cannot exceed 4. Before a model with The Reckoning casts a non-Bound Spell you may discard up to two Soul Tokens from your Soul Token pool for the following effects (declare which effects are used before the Casting Attempt):
 1 Soul Token:
@@ -2537,8 +2535,11 @@ If this Casting Attempt results in a Miscast, roll a D6 before any Dispel Attemp
 X Soul Tokens:
 For each Soul Token discarded for this purpose, the Spell gains +3” Range.</description>
     </rule>
-    <rule id="0e05-c2ea-20d5-5859" name="Battle Fever" hidden="false">
-      <description>Units consisting entirely of models with Battle Fever must reroll any natural rolls of ‘1’ when rolling for Charge Range. </description>
+    <rule id="0e05-c2ea-20d5-5859" name="Åsklander Battle Fever" hidden="false">
+      <description>Infantry models in units with at least 10 models gain either:
+• Fight in Extra Rank if using a Close Combat Weapon with Two-Handed
+• +1 Armour if using a Shield
+This cannot be used while the model’s unit is engaged in its Flank or Rear Facing.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
