@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4079-b3c9-934f-ce79" name="Undying Dynasties 2.0" revision="15" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4079-b3c9-934f-ce79" name="Undying Dynasties 2.0" revision="16" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <profileTypes>
+    <profileType id="45a2-75ed-6496-6965" name="1 Global (UD)">
+      <characteristicTypes>
+        <characteristicType id="4f8b-6407-7aac-ef3d" name="Adv"/>
+        <characteristicType id="ac44-5866-8f7f-2916" name="Mar"/>
+        <characteristicType id="ece0-e224-8160-4466" name="Dis"/>
+        <characteristicType id="ab32-abc7-c725-5fae" name="Rsr"/>
+        <characteristicType id="f424-8987-a4fb-1cd3" name="Size"/>
+        <characteristicType id="517f-3bc6-e401-5f27" name="Type"/>
+        <characteristicType id="2f65-17e9-629a-47e1" name="Base"/>
+      </characteristicTypes>
+    </profileType>
+  </profileTypes>
   <categoryEntries>
     <categoryEntry id="d18e-d0ac-d05f-3410" name="Entombed" hidden="false"/>
     <categoryEntry id="d425-7690-6b20-5848" name="Mason&apos;s Menagerie" hidden="false"/>
@@ -38,7 +51,7 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="a4cb-cb6a-43f6-f087" name="Pharaoh" hidden="false" collective="false" type="model">
+    <selectionEntry id="a4cb-cb6a-43f6-f087" name="Pharaoh" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
           <conditions>
@@ -47,16 +60,18 @@
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="6872-0fbc-342b-d016" name="Pharaoh Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="6872-0fbc-342b-d016" name="Pharaoh Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">9</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">1</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
           </characteristics>
         </profile>
-        <profile id="4751-8a59-68fe-cd45" name="Pharaoh Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="4751-8a59-68fe-cd45" name="Pharaoh Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <modifiers>
             <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
               <conditions>
@@ -71,7 +86,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="ffde-3ecd-2936-3686" name="Pharaoh Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="ffde-3ecd-2936-3686" name="Pharaoh Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <modifiers>
             <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
               <conditions>
@@ -110,11 +125,6 @@
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
               </conditions>
             </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink id="6e5b-28b9-ee6b-8734" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (1)"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -157,9 +167,20 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="cd49-18ca-486e-0ea3" name="Shield" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1df6-1988-612d-65d2" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="78fb-fc64-b985-28a7" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="344e-9a1f-6584-73ed" name="Upgrade" hidden="false" collective="false">
+        <selectionEntryGroup id="344e-9a1f-6584-73ed" name="Monarch of Undeath" hidden="false" collective="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e788-a264-f0f6-b791" type="max"/>
           </constraints>
@@ -168,7 +189,11 @@
             <entryLink id="800d-cf29-abcd-71e3" name="Lord of the Barrow Legion" hidden="false" collective="false" targetId="3a8c-d985-1004-5a32" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="227d-3b08-10a3-1a02" name="Armour" hidden="false" collective="false">
+        <selectionEntryGroup id="227d-3b08-10a3-1a02" name="Armour" hidden="false" collective="false" defaultSelectionEntryId="7cbd-445a-b7f9-b93a">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c935-69a1-43e2-92bb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab23-7a2a-0b2b-f357" type="min"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="7cbd-445a-b7f9-b93a" name="Light Armour" hidden="false" collective="false" type="upgrade">
               <constraints>
@@ -193,17 +218,6 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7949-13b7-ded1-6da1" name="Shield" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d071-843c-a70d-4d68" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="5fd8-adcc-5060-ccc6" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -331,7 +345,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="295.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="15af-b6f6-f9fc-7ad0" name="Nomarch" hidden="false" collective="false" type="model">
+    <selectionEntry id="15af-b6f6-f9fc-7ad0" name="Nomarch" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
           <conditions>
@@ -340,16 +354,18 @@
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="a2f7-5308-2e85-58fe" name="Nomarch Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="a2f7-5308-2e85-58fe" name="Nomarch Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">9</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">1</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
           </characteristics>
         </profile>
-        <profile id="b8e5-c6b9-ea14-f964" name="Nomarch Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="b8e5-c6b9-ea14-f964" name="Nomarch Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <modifiers>
             <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
               <conditions>
@@ -364,7 +380,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="3789-37e6-b5ed-e48d" name="Nomarch Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="3789-37e6-b5ed-e48d" name="Nomarch Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <modifiers>
             <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
               <conditions>
@@ -403,11 +419,6 @@
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
               </conditions>
             </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink id="63a8-469d-469f-d4c8" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (1)"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -603,7 +614,7 @@
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c87d-1b71-cfe8-9296" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="e6ec-925b-ed38-3810" value="1">
+            <modifier type="set" field="e6ec-925b-ed38-3810" value="1.0">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c87d-1b71-cfe8-9296" type="equalTo"/>
               </conditions>
@@ -615,7 +626,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="140.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6eec-ddf1-1864-f6e7" name="Death Cult Hierarch" hidden="false" collective="false" type="model">
+    <selectionEntry id="6eec-ddf1-1864-f6e7" name="Death Cult Hierarch" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
           <conditions>
@@ -624,16 +635,18 @@
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="5bb1-6889-bbf6-d022" name="Death Cult Hierarch Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="5bb1-6889-bbf6-d022" name="Death Cult Hierarch Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">7</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">1</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
           </characteristics>
         </profile>
-        <profile id="2181-6d67-ecca-4d0d" name="Death Cult Hierarch Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="2181-6d67-ecca-4d0d" name="Death Cult Hierarch Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <modifiers>
             <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
               <conditions>
@@ -648,7 +661,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="e5fe-cb54-ec86-a54a" name="Death Cult Hierarch Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="e5fe-cb54-ec86-a54a" name="Death Cult Hierarch Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <modifiers>
             <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
               <conditions>
@@ -675,11 +688,6 @@
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
               </conditions>
             </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink id="ecfa-ac50-579b-d1d8" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (1)"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -902,7 +910,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="125.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ecce-b473-cab9-b80b" name="Tomb Harbinger" hidden="false" collective="false" type="model">
+    <selectionEntry id="ecce-b473-cab9-b80b" name="Tomb Harbinger" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
           <conditions>
@@ -911,16 +919,18 @@
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="da38-ec35-dcc3-2103" name="Tomb Harbinger Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="da38-ec35-dcc3-2103" name="Tomb Harbinger Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">7</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">1</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
           </characteristics>
         </profile>
-        <profile id="e9b6-9178-e9e6-c8d8" name="Tomb Harbinger Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="e9b6-9178-e9e6-c8d8" name="Tomb Harbinger Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <modifiers>
             <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
               <conditions>
@@ -935,7 +945,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="fae6-e677-6650-538d" name="Tomb Harbinger Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="fae6-e677-6650-538d" name="Tomb Harbinger Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <modifiers>
             <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
               <conditions>
@@ -983,11 +993,6 @@
         </infoLink>
         <infoLink id="78ab-c56e-cb3b-d1b4" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
         <infoLink id="97b2-ca84-3a8a-3ecf" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
-        <infoLink id="5f36-6297-987b-69fd" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (1)"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ff9b-4762-7264-7928" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -1210,7 +1215,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3eca-3140-0e69-47e7" name="Tomb Harbinger with Banner of the Entombed" hidden="false" collective="false" type="model">
+    <selectionEntry id="3eca-3140-0e69-47e7" name="Tomb Harbinger with Banner of the Entombed" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
           <conditions>
@@ -1229,16 +1234,18 @@
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="1bd1-c37f-4418-98a6" name="Tomb Harbinger Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="1bd1-c37f-4418-98a6" name="Tomb Harbinger Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">7</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">1</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
           </characteristics>
         </profile>
-        <profile id="a12c-c6ef-cc45-3a46" name="Tomb Harbinger Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="a12c-c6ef-cc45-3a46" name="Tomb Harbinger Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <modifiers>
             <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
               <conditions>
@@ -1253,7 +1260,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="d3bc-4c4a-0e5d-d059" name="Tomb Harbinger Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="d3bc-4c4a-0e5d-d059" name="Tomb Harbinger Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <modifiers>
             <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
               <conditions>
@@ -1301,11 +1308,6 @@
         </infoLink>
         <infoLink id="7f3b-df84-cbda-1e29" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
         <infoLink id="fbb0-e784-11b1-3737" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
-        <infoLink id="9a60-766c-6245-061b" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (1)"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a76e-bc21-a337-0299" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -1525,7 +1527,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2947-11e2-19bb-d336" name="Tomb Architect" hidden="false" collective="false" type="model">
+    <selectionEntry id="2947-11e2-19bb-d336" name="Tomb Architect" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
           <conditions>
@@ -1534,16 +1536,18 @@
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="455e-6631-e735-caa2" name="Tomb Architect Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="455e-6631-e735-caa2" name="Tomb Architect Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">7</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">1</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
           </characteristics>
         </profile>
-        <profile id="8666-9f26-8451-6361" name="Tomb Architect Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="8666-9f26-8451-6361" name="Tomb Architect Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <modifiers>
             <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
               <conditions>
@@ -1558,7 +1562,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="d246-047d-825a-fff6" name="Tomb Architect Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="d246-047d-825a-fff6" name="Tomb Architect Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <modifiers>
             <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
               <conditions>
@@ -1602,11 +1606,6 @@
           </modifiers>
         </infoLink>
         <infoLink id="4af9-d254-e557-987b" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="7b4a-ce0a-1a51-ca4f" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (1)"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b310-3ea6-089f-37b1" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -1732,7 +1731,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2de9-5cd2-dbd7-122b" name="Casket of Phatep" hidden="false" collective="false" type="model">
+    <selectionEntry id="2de9-5cd2-dbd7-122b" name="Casket of Phatep" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
           <conditions>
@@ -1744,16 +1743,18 @@
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4410-b0ba-d73c-8f30" type="max"/>
       </constraints>
       <profiles>
-        <profile id="3478-42de-d4d8-d0ec" name="Casket of Phatep Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="3478-42de-d4d8-d0ec" name="Casket of Phatep Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">4&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">2</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Construct</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">75mm Ø</characteristic>
           </characteristics>
         </profile>
-        <profile id="d16c-7b42-af19-1910" name="Casket of Phatep Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="d16c-7b42-af19-1910" name="Casket of Phatep Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <modifiers>
             <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
               <conditions>
@@ -1768,7 +1769,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="a1c2-6f9c-db43-c3ac" name="Necropolis Guards Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="a1c2-6f9c-db43-c3ac" name="Necropolis Guards Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <modifiers>
             <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
               <conditions>
@@ -1824,16 +1825,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="0d67-d0ce-ab6e-6f5c" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2)"/>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c2ae-418d-4061-ce53" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -1874,20 +1865,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="1439-fd0c-c798-19fc" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (7)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="745b-47d1-943a-c74c" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -1920,16 +1897,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="60.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3566-28dc-5cda-0ba1" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a0d8-4dba-b60c-b965" name="Skeleton Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="a0d8-4dba-b60c-b965" name="Skeleton Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">4</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">4</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">7</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
               </characteristics>
             </profile>
-            <profile id="ef70-c5bd-07fd-dfc4" name="Skeleton Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="ef70-c5bd-07fd-dfc4" name="Skeleton Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <modifiers>
                 <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
                   <conditions>
@@ -1944,7 +1923,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="84e1-e027-53ae-8fdb" name="Skeleton Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="84e1-e027-53ae-8fdb" name="Skeleton Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -2051,15 +2030,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="db69-a44f-4839-d745" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="5a42-e7d2-b74b-429a" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
         <infoLink id="0ffe-a1bf-c961-c638" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-        <infoLink id="0ed5-e29b-391c-8cb1" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (7)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4524-bf1e-8b6c-a346" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
@@ -2084,16 +2054,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f11-37c9-0770-f012" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ccf0-5031-5ac5-068b" name="Skeleton Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="ccf0-5031-5ac5-068b" name="Skeleton Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">4</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">4</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">7</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
               </characteristics>
             </profile>
-            <profile id="c919-f41e-3484-a3ab" name="Skeleton Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="c919-f41e-3484-a3ab" name="Skeleton Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <modifiers>
                 <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
                   <conditions>
@@ -2108,7 +2080,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="6b8e-0a9c-4854-e4a5" name="Skeleton Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="6b8e-0a9c-4854-e4a5" name="Skeleton Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -2172,20 +2144,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="915d-ba3d-15c8-8a49" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (6)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="52f8-adf4-fdd0-78e4" name="Aspen Bow" hidden="false" targetId="efbc-4974-e8d4-c4c9" type="profile">
           <modifiers>
             <modifier type="append" field="name" value=" (5+)"/>
@@ -2224,16 +2182,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d4d2-6966-12ff-1d81" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7b3b-a74a-cfb8-6206" name="Skeleton  Archer Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="7b3b-a74a-cfb8-6206" name="Skeleton  Archer Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">4</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">4</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">6</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
               </characteristics>
             </profile>
-            <profile id="7979-6d62-1177-d343" name="Skeleton Archer Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="7979-6d62-1177-d343" name="Skeleton Archer Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <modifiers>
                 <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
                   <conditions>
@@ -2248,7 +2208,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="0114-4dc0-f0b4-6bf8" name="Skeleton  Archer Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="0114-4dc0-f0b4-6bf8" name="Skeleton  Archer Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -2313,11 +2273,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="f3da-5e9a-39ca-841b" name="Dust to Dust" hidden="false" targetId="8d07-0aa4-6c27-79a6" type="rule"/>
         <infoLink id="3260-edb5-8890-aae5" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="3eb9-eaef-157b-6f6d" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="ce30-89ec-0223-64e3" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (6)"/>
-          </modifiers>
-        </infoLink>
         <infoLink id="d894-075b-7d03-ca38" name="Aspen Bow" hidden="false" targetId="efbc-4974-e8d4-c4c9" type="profile">
           <modifiers>
             <modifier type="append" field="name" value=" (5+)"/>
@@ -2336,16 +2291,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5f20-2ea1-3611-304f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="188f-41ec-88f5-e7b9" name="Skeleton  Archer Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="188f-41ec-88f5-e7b9" name="Skeleton  Archer Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">4</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">4</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">6</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
               </characteristics>
             </profile>
-            <profile id="b687-6e65-b082-7818" name="Skeleton Archer Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="b687-6e65-b082-7818" name="Skeleton Archer Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
@@ -2353,7 +2310,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="c7a3-0ddf-3ef4-1f03" name="Skeleton  Archer Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="c7a3-0ddf-3ef4-1f03" name="Skeleton  Archer Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -2402,20 +2359,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="2c15-932b-6675-d98b" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (4)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="403f-31d0-d166-89f0" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -2445,28 +2388,30 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="24.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e1b-16f9-3546-75b2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c238-a1b3-0c8b-1937" name="Skeleton Cavalry Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="c238-a1b3-0c8b-1937" name="Skeleton Cavalry Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <modifiers>
-                <modifier type="set" field="b0d9-2dab-f10b-9b13" value="7&quot;">
+                <modifier type="set" field="4f8b-6407-7aac-ef3d" value="7&quot;">
                   <conditions>
                     <condition field="selections" scope="f209-a01d-0ab9-d6ca" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="590b-02f9-c9a0-baf1" type="equalTo"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" field="db10-a838-f72f-3ed6" value="14&quot;">
+                <modifier type="set" field="ac44-5866-8f7f-2916" value="14&quot;">
                   <conditions>
                     <condition field="selections" scope="f209-a01d-0ab9-d6ca" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="590b-02f9-c9a0-baf1" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">8&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">16&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">6</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">4</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Cavalry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">25×50</characteristic>
               </characteristics>
             </profile>
-            <profile id="5c76-809c-cae5-2496" name="Skeleton Cavalry Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="5c76-809c-cae5-2496" name="Skeleton Cavalry Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <modifiers>
                 <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
                   <conditions>
@@ -2481,7 +2426,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
               </characteristics>
             </profile>
-            <profile id="fae6-2ee5-e7e8-3fbf" name="Skeleton Rider Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="fae6-2ee5-e7e8-3fbf" name="Skeleton Rider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -2497,7 +2442,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="aab4-506e-85b4-a54c" name="Skeletal Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="aab4-506e-85b4-a54c" name="Skeletal Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -2614,11 +2559,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="5816-215e-1b77-7bae" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="06d3-72ac-c5bf-2e9b" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
         <infoLink id="4d48-324d-3059-9b44" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-        <infoLink id="81bc-0f9e-f58d-adce" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (4)"/>
-          </modifiers>
-        </infoLink>
         <infoLink id="aca7-ae9f-dbf7-9f24" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
         <infoLink id="b429-93e4-9ec0-afce" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
         <infoLink id="04e8-2499-db75-6f52" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
@@ -2634,16 +2574,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d11e-9490-9fb5-9dd3" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ba73-0b6f-db59-7e6e" name="Skeleton Cavalry Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="ba73-0b6f-db59-7e6e" name="Skeleton Cavalry Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">8&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">16&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">6</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">4</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Cavalry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">25×50</characteristic>
               </characteristics>
             </profile>
-            <profile id="7e12-fd54-fe5e-b6e4" name="Skeleton Cavalry Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="7e12-fd54-fe5e-b6e4" name="Skeleton Cavalry Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -2651,7 +2593,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="3aae-4451-ae05-96db" name="Skeleton Rider Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="3aae-4451-ae05-96db" name="Skeleton Rider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2660,7 +2602,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="6a72-1e68-185a-600d" name="Skeletal Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="6a72-1e68-185a-600d" name="Skeletal Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -2702,20 +2644,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink id="d3b1-6793-0df0-2ff7" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (4)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2764,16 +2692,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="730c-d9cd-0bcf-8162" type="max"/>
           </constraints>
           <profiles>
-            <profile id="65d6-4e12-bfc9-e4a9" name="Skeleton Scout Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="65d6-4e12-bfc9-e4a9" name="Skeleton Scout Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">8&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">16&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">6</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">4</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Cavalry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">25×50</characteristic>
               </characteristics>
             </profile>
-            <profile id="385f-ff87-4300-72f4" name="Skeleton Scout Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="385f-ff87-4300-72f4" name="Skeleton Scout Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <modifiers>
                 <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
                   <conditions>
@@ -2788,7 +2718,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
               </characteristics>
             </profile>
-            <profile id="8605-3619-d93a-b481" name="Skeleton Scout Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="8605-3619-d93a-b481" name="Skeleton Scout Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -2804,7 +2734,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="8cbf-feb0-1166-080a" name="Skeletal Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="8cbf-feb0-1166-080a" name="Skeletal Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -2884,20 +2814,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="8390-03b1-92d5-2398" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (4)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="2d27-5b79-bfae-4be5" name="Aspen Bow" hidden="false" targetId="efbc-4974-e8d4-c4c9" type="profile">
           <modifiers>
             <modifier type="append" field="name" value=" (5+)"/>
@@ -2943,16 +2859,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2763-e104-221e-7aca" type="max"/>
           </constraints>
           <profiles>
-            <profile id="16c6-a395-4138-1879" name="Skeleton Scout Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="16c6-a395-4138-1879" name="Skeleton Scout Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">8&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">16&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">6</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">4</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Cavalry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">25×50</characteristic>
               </characteristics>
             </profile>
-            <profile id="1a15-d9e4-b08e-4ba0" name="Skeleton Scout Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="1a15-d9e4-b08e-4ba0" name="Skeleton Scout Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <modifiers>
                 <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
                   <conditions>
@@ -2967,7 +2885,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
               </characteristics>
             </profile>
-            <profile id="2d61-efb6-fe31-1b22" name="Skeleton Scout Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="2d61-efb6-fe31-1b22" name="Skeleton Scout Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -2983,7 +2901,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="6ce6-854b-e394-b057" name="Skeletal Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="6ce6-854b-e394-b057" name="Skeletal Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -3041,20 +2959,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink id="568b-bda0-237f-cdac" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (4)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3119,16 +3023,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2951-4882-0b8d-b474" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c866-299c-dbf7-20d9" name="Skeleton Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="c866-299c-dbf7-20d9" name="Skeleton Chariot Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large </characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">8&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">10&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">7</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">3</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large </characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Construct</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×100</characteristic>
               </characteristics>
             </profile>
-            <profile id="e4c3-79aa-87e7-aaf8" name="Skeleton Chariot Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="e4c3-79aa-87e7-aaf8" name="Skeleton Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <modifiers>
                 <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
                   <conditions>
@@ -3143,7 +3049,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
               </characteristics>
             </profile>
-            <profile id="eaeb-109a-ead4-aa32" name="Charioteer (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="eaeb-109a-ead4-aa32" name="Charioteer (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -3159,7 +3065,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="88a0-8d6d-105a-e2c9" name="Skeletal Horse (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="88a0-8d6d-105a-e2c9" name="Skeletal Horse (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -3175,7 +3081,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="64fe-5d12-1c67-70ed" name="Chassis Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="64fe-5d12-1c67-70ed" name="Chassis Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">-</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">-</characteristic>
@@ -3299,11 +3205,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="f49f-3402-04ff-896f" name="Undead" hidden="false" targetId="b558-1cce-fbc9-afe6" type="rule"/>
         <infoLink id="f822-1a3c-758a-ac93" name="Dust to Dust" hidden="false" targetId="8d07-0aa4-6c27-79a6" type="rule"/>
         <infoLink id="5698-2f95-3290-5b73" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-        <infoLink id="d89c-49c6-8834-26b7" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (4)"/>
-          </modifiers>
-        </infoLink>
         <infoLink id="7e1c-3385-ddfc-c61f" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
         <infoLink id="5c66-3846-cd42-6dd9" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
         <infoLink id="9287-e763-f3f2-ac8b" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
@@ -3331,16 +3232,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7daf-52ee-c190-9118" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f5ee-aec8-3646-47df" name="Skeleton Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="f5ee-aec8-3646-47df" name="Skeleton Chariot Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large </characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">8&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">10&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">7</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">3</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large </characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Construct</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×100</characteristic>
               </characteristics>
             </profile>
-            <profile id="9c14-deff-4b35-5ecc" name="Skeleton Chariot Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="9c14-deff-4b35-5ecc" name="Skeleton Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -3348,7 +3251,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4+</characteristic>
               </characteristics>
             </profile>
-            <profile id="8f15-d02b-e272-a5e0" name="Charioteer (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="8f15-d02b-e272-a5e0" name="Charioteer (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -3357,7 +3260,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="61e0-251a-434a-c835" name="Skeletal Horse (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="61e0-251a-434a-c835" name="Skeletal Horse (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -3366,7 +3269,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="200d-f86d-2f1e-5e86" name="Chassis Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="200d-f86d-2f1e-5e86" name="Chassis Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">-</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">-</characteristic>
@@ -3444,20 +3347,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="39e7-1579-56d5-56c4" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (3)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="f991-909d-8787-a26d" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -3500,16 +3389,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="40.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a484-000b-2a84-dfea" type="max"/>
           </constraints>
           <profiles>
-            <profile id="57d9-4743-0b3e-e940" name="Necropolis Guard Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="57d9-4743-0b3e-e940" name="Necropolis Guard Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">8&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">3</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">20×20</characteristic>
               </characteristics>
             </profile>
-            <profile id="64ca-477b-ca4c-bd6a" name="Necropolis Guard Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="64ca-477b-ca4c-bd6a" name="Necropolis Guard Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <modifiers>
                 <modifier type="increment" field="ec15-bc66-645e-db5d" value="1">
                   <conditions>
@@ -3524,7 +3415,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="6c2f-edc5-b363-799f" name="Necropolis Guard Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="6c2f-edc5-b363-799f" name="Necropolis Guard Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <modifiers>
                 <modifier type="decrement" field="2a23-367f-8828-c297" value="1">
                   <conditions>
@@ -3547,9 +3438,9 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         </selectionEntry>
         <selectionEntry id="4d9b-314f-5d9f-0be5" name="Shield" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
               <repeats>
-                <repeat field="selections" scope="4882-75a0-ab38-7a04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b613-a8ec-0f78-5a3d" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -3659,20 +3550,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="b722-12e6-19a6-4e0f" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
         <infoLink id="3492-1484-656b-b960" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
         <infoLink id="6450-65cb-f211-6e06" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
-        <infoLink id="3e2f-1e31-5067-53a3" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (3)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1e30-6920-d908-1a6d" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -3684,16 +3561,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="664a-2e67-62be-863f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="55f1-335d-11cd-d62a" name="Tomb Cataphract Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="55f1-335d-11cd-d62a" name="Tomb Cataphract Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">7&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">14&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">2</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Cavalry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×100</characteristic>
               </characteristics>
             </profile>
-            <profile id="f45a-f9dd-ec82-b631" name="Tomb Cataphract Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="f45a-f9dd-ec82-b631" name="Tomb Cataphract Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -3701,7 +3580,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
               </characteristics>
             </profile>
-            <profile id="3e5b-2df2-e996-99d5" name="Rider Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="3e5b-2df2-e996-99d5" name="Rider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -3710,7 +3589,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
               </characteristics>
             </profile>
-            <profile id="cdf6-b510-4983-f909" name="Amuut Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="cdf6-b510-4983-f909" name="Amuut Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -3784,20 +3663,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="fab2-82ab-edcc-5c5b" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
         <infoLink id="d638-4a90-ef12-f08a" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
         <infoLink id="3202-d42f-a19f-86e0" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
-        <infoLink id="6350-5768-b2bb-976b" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="a9a5-23ad-be32-5ae0" name="Underground Ambush" hidden="false" targetId="1127-ca1a-3b4b-0aad" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -3811,16 +3676,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="71f3-8cc3-1a2c-e4d4" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ad5b-9a4b-30e3-2ef3" name="Tomb Cataphract Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="ad5b-9a4b-30e3-2ef3" name="Tomb Cataphract Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">7&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">14&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">2</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Cavalry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×100</characteristic>
               </characteristics>
             </profile>
-            <profile id="8c73-92fb-aeef-9229" name="Tomb Cataphract Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="8c73-92fb-aeef-9229" name="Tomb Cataphract Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -3828,7 +3695,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
               </characteristics>
             </profile>
-            <profile id="38f1-326d-fd7a-49b7" name="Rider Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="38f1-326d-fd7a-49b7" name="Rider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -3837,7 +3704,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
               </characteristics>
             </profile>
-            <profile id="df1b-a40d-e79d-5634" name="Amuut Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="df1b-a40d-e79d-5634" name="Amuut Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -3886,16 +3753,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="5c46-a9e0-cacd-7fe8" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="3c94-ba90-1e2c-1974" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
         <infoLink id="8665-9a63-5f26-e284" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="9792-a50a-a6eb-7a12" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2)"/>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5556-9a19-bda3-45cb" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -3907,16 +3764,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2bc2-f5a3-a5c7-c2bb" type="min"/>
           </constraints>
           <profiles>
-            <profile id="4d9e-8a36-e925-f31d" name="Shabti Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="4d9e-8a36-e925-f31d" name="Shabti Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large </characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">6&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">12&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">2</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large </characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">40×40</characteristic>
               </characteristics>
             </profile>
-            <profile id="f864-45d8-7cf0-c6af" name="Shabti Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="f864-45d8-7cf0-c6af" name="Shabti Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -3924,7 +3783,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="912e-5fe2-0579-1b88" name="Shabti Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="912e-5fe2-0579-1b88" name="Shabti Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -3965,9 +3824,9 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
           <selectionEntries>
             <selectionEntry id="5264-f3fe-4772-bf1e" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="12">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="12.0">
                   <repeats>
-                    <repeat field="selections" scope="f615-f584-60ce-13a4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b0d-aa9b-a038-f794" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -3983,9 +3842,9 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             </selectionEntry>
             <selectionEntry id="d42c-6852-077b-293c" name="Halberds" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="18">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="18.0">
                   <repeats>
-                    <repeat field="selections" scope="f615-f584-60ce-13a4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b0d-aa9b-a038-f794" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -4025,16 +3884,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="0fbc-2071-5617-3680" name="Dust to Dust" hidden="false" targetId="8d07-0aa4-6c27-79a6" type="rule"/>
         <infoLink id="6b1f-fb1b-dcdc-a89c" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule"/>
         <infoLink id="4020-4b06-acc6-a33b" name="Skirmisher" hidden="false" targetId="2ce4-ece5-068c-4d20" type="rule"/>
-        <infoLink id="063e-798a-7ee7-2971" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (3)"/>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="318c-ea71-df61-ffeb" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -4046,16 +3895,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="88b7-6efa-7dbb-1b66" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7088-9bc2-e10d-770f" name="Great Vulture Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="7088-9bc2-e10d-770f" name="Great Vulture Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (9&quot;)</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (18&quot;)</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">4</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">2&quot; (9&quot;)</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">4&quot; (18&quot;)</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">4</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">3</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Beast</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">40×40</characteristic>
               </characteristics>
             </profile>
-            <profile id="32bd-c2b7-7718-8d22" name="Great Vulture Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="32bd-c2b7-7718-8d22" name="Great Vulture Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">2</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -4063,7 +3914,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="a2ee-7753-6e6b-d58b" name="Great Vulture Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="a2ee-7753-6e6b-d58b" name="Great Vulture Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -4109,25 +3960,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="856c-5aa6-ba0a-b750" name="Skirmisher" hidden="false" targetId="2ce4-ece5-068c-4d20" type="rule"/>
         <infoLink id="5d7e-a299-ccb4-b845" name="Distracting" hidden="false" targetId="056f-73ea-194b-1b49" type="rule"/>
         <infoLink id="c214-44a3-267a-07b4" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
-        <infoLink id="92dc-6952-05d1-053f" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (5)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value=" (1)">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3a8c-d985-1004-5a32" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="b9c1-7284-434a-f89c" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (5+, 3+ Against non-Magical Attacks)"/>
@@ -4176,16 +4008,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3e9-2732-a48f-2827" type="max"/>
           </constraints>
           <profiles>
-            <profile id="5393-d560-f57b-dcc8" name="Scarab Swarm Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="5393-d560-f57b-dcc8" name="Scarab Swarm Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">10</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">5&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">10&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">10</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">5</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Beast</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">40×40</characteristic>
               </characteristics>
             </profile>
-            <profile id="f1a8-479b-cfb7-05f2" name="Scarab Swarm Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="f1a8-479b-cfb7-05f2" name="Scarab Swarm Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -4193,7 +4027,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="feb2-8851-c079-50e2" name="Scarab Swarm Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="feb2-8851-c079-50e2" name="Scarab Swarm Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -4244,15 +4078,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="2e50-d40c-a6d3-8cb3" name="Skirmisher" hidden="false" targetId="2ce4-ece5-068c-4d20" type="rule"/>
         <infoLink id="b9bd-7918-32b2-7b04" name="Distracting" hidden="false" targetId="056f-73ea-194b-1b49" type="rule"/>
         <infoLink id="c493-32d2-e286-e3d6" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
-        <infoLink id="bcb6-a57e-016a-4255" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (5)">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="75ff-99ee-d966-523c" name="Underground Ambush" hidden="false" targetId="1127-ca1a-3b4b-0aad" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -4266,16 +4091,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0aff-044b-dd2b-14cb" type="max"/>
           </constraints>
           <profiles>
-            <profile id="eba4-1b97-0969-3073" name="Scarab Swarm Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="eba4-1b97-0969-3073" name="Scarab Swarm Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">10</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">5&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">10&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">10</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">5</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Standard</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Beast</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">40×40</characteristic>
               </characteristics>
             </profile>
-            <profile id="37c5-f848-b563-934f" name="Scarab Swarm Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="37c5-f848-b563-934f" name="Scarab Swarm Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -4283,7 +4110,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="d9a6-d25c-7626-fdb8" name="Scarab Swarm Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="d9a6-d25c-7626-fdb8" name="Scarab Swarm Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -4311,16 +4138,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="77ea-d91f-7594-b184" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="3ed0-a136-e584-37c3" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
         <infoLink id="7c75-0415-b87e-2736" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="e3c2-eabf-1225-ced4" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2)"/>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="2359-9179-4b25-4334" name="Great Aspen Bow" hidden="false" targetId="6509-0400-a54d-c254" type="profile">
           <modifiers>
             <modifier type="append" field="name" value=" (5+)"/>
@@ -4337,16 +4154,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f9d-4760-633c-99c9" type="min"/>
           </constraints>
           <profiles>
-            <profile id="b08d-0f43-ce0d-fa54" name="Shabti Archer Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="b08d-0f43-ce0d-fa54" name="Shabti Archer Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large </characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">6&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">12&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">2</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large </characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">40×40</characteristic>
               </characteristics>
             </profile>
-            <profile id="6157-2910-b174-4a2d" name="Shabti Archer Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="6157-2910-b174-4a2d" name="Shabti Archer Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -4354,7 +4173,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="ecc2-0ee7-56a1-d10f" name="Shabti Archer Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="ecc2-0ee7-56a1-d10f" name="Shabti Archer Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -4421,16 +4240,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="199b-7427-706f-a05b" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
         <infoLink id="7c44-e1d9-c572-d6ad" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
         <infoLink id="4043-c17d-b78c-22f9" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
-        <infoLink id="72fa-a8b5-2656-957f" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2)"/>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="7313-1ff3-42cf-3b47" name="New CategoryLink" hidden="false" targetId="edea-d85f-5b4e-838d" primary="true"/>
@@ -4442,16 +4251,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c0df-7942-dda1-3226" type="max"/>
           </constraints>
           <profiles>
-            <profile id="5af0-b768-cd5b-8236" name="Sand Stalker Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="5af0-b768-cd5b-8236" name="Sand Stalker Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">7&quot;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">14&quot;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">2</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Beast</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×100</characteristic>
               </characteristics>
             </profile>
-            <profile id="bc0b-9859-a25f-385a" name="Sand Stalker Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="bc0b-9859-a25f-385a" name="Sand Stalker Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -4459,7 +4270,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="ee6b-5e32-e76c-333c" name="Sand Stalker Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="ee6b-5e32-e76c-333c" name="Sand Stalker Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -4513,16 +4324,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <infoLink id="fd1c-e993-96d3-7634" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
         <infoLink id="5373-765c-93b8-913e" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
         <infoLink id="9bc0-6cee-05df-a7ee" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
-        <infoLink id="2030-3bdf-6b9e-243d" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2)"/>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="bdf5-11e6-c40a-21c7" name="Underground Ambush" hidden="false" targetId="1127-ca1a-3b4b-0aad" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -4536,16 +4337,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="59ec-3f4c-096b-58db" type="max"/>
           </constraints>
           <profiles>
-            <profile id="25f7-e96c-3068-ea6e" name="Sand Stalker Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="25f7-e96c-3068-ea6e" name="Sand Stalker Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">7&apos;&apos;</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">14&apos;&apos;</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">2</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Beast</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×100</characteristic>
               </characteristics>
             </profile>
-            <profile id="d789-0a6f-ec50-cad2" name="Sand Stalker Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="d789-0a6f-ec50-cad2" name="Sand Stalker Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -4553,7 +4356,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="cff1-26b8-764f-e766" name="Sand Stalker Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="cff1-26b8-764f-e766" name="Sand Stalker Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -4580,7 +4383,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e056-32c9-5771-f76c" name="Charnel Catapult" hidden="false" collective="false" type="model">
+    <selectionEntry id="e056-32c9-5771-f76c" name="Charnel Catapult" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="set" field="24fd-8af8-0c78-001c" value="210">
           <conditions>
@@ -4592,16 +4395,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="357d-c5f9-f957-6c70" type="max"/>
       </constraints>
       <profiles>
-        <profile id="28f1-8278-41f8-fe91" name="Charnel Catapult Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="28f1-8278-41f8-fe91" name="Charnel Catapult Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">4</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">4&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">4</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">2</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Construct</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">75mm Ø</characteristic>
           </characteristics>
         </profile>
-        <profile id="b404-4dcd-ce86-204e" name="Charnel Catapult Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="b404-4dcd-ce86-204e" name="Charnel Catapult Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
@@ -4609,7 +4414,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="0b5b-be7c-5c3a-de49" name="Crew Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="0b5b-be7c-5c3a-de49" name="Crew Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -4649,21 +4454,23 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ea10-c39a-1aeb-c7cc" name="Sand Scorpion" hidden="false" collective="false" type="model">
+    <selectionEntry id="ea10-c39a-1aeb-c7cc" name="Sand Scorpion" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7b39-9c31-5613-f0a8" type="max"/>
       </constraints>
       <profiles>
-        <profile id="f209-1d66-38b8-b2a0" name="Sand Scorpion Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="f209-1d66-38b8-b2a0" name="Sand Scorpion Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">7&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">14&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">2</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Beast</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×50</characteristic>
           </characteristics>
         </profile>
-        <profile id="376d-cc4b-01ca-8d5b" name="Sand Scorpion Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="376d-cc4b-01ca-8d5b" name="Sand Scorpion Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -4671,7 +4478,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
           </characteristics>
         </profile>
-        <profile id="0579-5eb5-f111-5a3e" name="Sand Scorpion Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="0579-5eb5-f111-5a3e" name="Sand Scorpion Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -4700,16 +4507,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         </infoLink>
         <infoLink id="fa7a-d042-4db6-99e4" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
         <infoLink id="1485-ce53-fe12-5a89" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
-        <infoLink id="939f-69c6-9da6-7a02" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2)"/>
-            <modifier type="append" field="name" value=" (1)">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f564-93b2-b0d9-a4b7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b11d-c833-9e78-ff04" name="New CategoryLink" hidden="false" targetId="d18e-d0ac-d05f-3410" primary="true"/>
@@ -4718,7 +4515,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="25f7-6aa7-8fec-0876" name="Battle Sphinx" hidden="false" collective="false" type="model">
+    <selectionEntry id="25f7-6aa7-8fec-0876" name="Battle Sphinx" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -4730,16 +4527,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="226e-8f82-9fab-987c" type="max"/>
       </constraints>
       <profiles>
-        <profile id="f5b9-aae0-a820-3dfa" name="Battle Sphinx Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="f5b9-aae0-a820-3dfa" name="Battle Sphinx Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">5&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">12&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">1</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Gigantic</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Beast</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×100</characteristic>
           </characteristics>
         </profile>
-        <profile id="3788-d9c7-793f-555d" name="Battle Sphinx Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="3788-d9c7-793f-555d" name="Battle Sphinx Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -4747,7 +4546,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
           </characteristics>
         </profile>
-        <profile id="073d-1240-9601-cb8f" name="Battle Sphinx Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="073d-1240-9601-cb8f" name="Battle Sphinx Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -4756,10 +4555,10 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="bd07-5204-4f77-be58" name="Rider (4) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="bd07-5204-4f77-be58" name="Rider (4) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
@@ -4777,11 +4576,6 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         </infoLink>
         <infoLink id="7ccf-defe-5f25-9a4e" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
         <infoLink id="ff6f-c060-c6e1-c568" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="20b8-7514-06a6-b13b" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (1)"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1228-2845-41e4-83f3" name="New CategoryLink" hidden="false" targetId="d425-7690-6b20-5848" primary="true"/>
@@ -4790,7 +4584,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="480.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0a31-d401-976d-3a8e" name="Dread Sphinx" hidden="false" collective="false" type="model">
+    <selectionEntry id="0a31-d401-976d-3a8e" name="Dread Sphinx" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -4802,39 +4596,32 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="42b3-9b38-2cfb-a2e5" type="max"/>
       </constraints>
       <profiles>
-        <profile id="2c98-a2fe-c2f6-e134" name="Battle Sphinx Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="2c98-a2fe-c2f6-e134" name="Battle Sphinx Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot; (6&quot;)</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot; (12&quot;)</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">6&quot; (6&quot;)</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">12&quot; (12&quot;)</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">1</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Gigantic</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Beast</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×100</characteristic>
           </characteristics>
         </profile>
-        <profile id="1a7b-682f-8ae9-35fd" name="Battle Sphinx Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="1a7b-682f-8ae9-35fd" name="Battle Sphinx Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">8</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
           </characteristics>
         </profile>
-        <profile id="a2a0-c0ec-8387-2c6d" name="Battle Sphinx Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="a2a0-c0ec-8387-2c6d" name="Battle Sphinx Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7ff5-3488-9b2f-17f4" name="Rider (4) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">0</characteristic>
           </characteristics>
         </profile>
         <profile id="c951-c434-ecb5-cb57" name="Colossal Kopesh" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
@@ -4847,16 +4634,10 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
       </profiles>
       <infoLinks>
         <infoLink id="b16d-50ff-3c3c-fac1" name="Ensouled Statue" hidden="false" targetId="20df-ea5e-7ab6-6613" type="rule"/>
-        <infoLink id="28e0-8e81-e62f-2221" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
         <infoLink id="cb04-34b8-8cd3-c18a" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
         <infoLink id="e515-acc9-7872-0ecd" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
         <infoLink id="4bc9-0f3f-83f1-2d90" name="Autonomous" hidden="false" targetId="d95c-2fec-ef44-1a3b" type="rule"/>
         <infoLink id="679c-89ca-4f5c-4bb1" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule"/>
-        <infoLink id="dd43-e031-3e80-8ab9" name="Resurrected" hidden="false" targetId="5fa7-01d3-9aa2-2756" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (1)"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8a8d-5454-f081-6967" name="New CategoryLink" hidden="false" targetId="d425-7690-6b20-5848" primary="true"/>
@@ -4893,16 +4674,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="06ff-71f2-9ff2-3f4e" type="min"/>
           </constraints>
           <profiles>
-            <profile id="ff6f-ca5d-7454-66f9" name="Tomb Reaper Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="ff6f-ca5d-7454-66f9" name="Tomb Reaper Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot; (6&quot;)</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot; (12&quot;)</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">10</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+                <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">6&quot; (6&quot;)</characteristic>
+                <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">12&quot; (12&quot;)</characteristic>
+                <characteristic name="Dis" typeId="ece0-e224-8160-4466">10</characteristic>
+                <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">2</characteristic>
+                <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Large</characteristic>
+                <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+                <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×75</characteristic>
               </characteristics>
             </profile>
-            <profile id="a1e0-60f2-c548-6f1e" name="Tomb Reaper Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="a1e0-60f2-c548-6f1e" name="Tomb Reaper Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -4910,7 +4693,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="c5be-efa1-53b2-5524" name="Tomb Reaper Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="c5be-efa1-53b2-5524" name="Tomb Reaper Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -4974,7 +4757,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-20.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b46c-cac5-39e1-e373" name="Colossus" hidden="false" collective="false" type="model">
+    <selectionEntry id="b46c-cac5-39e1-e373" name="Colossus" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -4986,16 +4769,18 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1067-f844-cd03-6152" type="max"/>
       </constraints>
       <profiles>
-        <profile id="baaf-8d2e-24d2-8226" name="Colossus Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="baaf-8d2e-24d2-8226" name="Colossus Global" hidden="false" typeId="45a2-75ed-6496-6965" typeName="1 Global (UD)">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+            <characteristic name="Adv" typeId="4f8b-6407-7aac-ef3d">6&quot;</characteristic>
+            <characteristic name="Mar" typeId="ac44-5866-8f7f-2916">12&quot;</characteristic>
+            <characteristic name="Dis" typeId="ece0-e224-8160-4466">8</characteristic>
+            <characteristic name="Rsr" typeId="ab32-abc7-c725-5fae">1</characteristic>
+            <characteristic name="Size" typeId="f424-8987-a4fb-1cd3">Gigantic</characteristic>
+            <characteristic name="Type" typeId="517f-3bc6-e401-5f27">Infantry</characteristic>
+            <characteristic name="Base" typeId="2f65-17e9-629a-47e1">50×50</characteristic>
           </characteristics>
         </profile>
-        <profile id="c8ea-5b3c-088d-a26c" name="Colossus Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="c8ea-5b3c-088d-a26c" name="Colossus Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <modifiers>
             <modifier type="decrement" field="597b-8735-3dd1-0e70" value="1">
               <conditions>
@@ -5010,7 +4795,7 @@ The target must take a Discipline Test rolling an additional D6. If failed, the 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
           </characteristics>
         </profile>
-        <profile id="85a4-dbe2-7dad-a2ac" name="Colossus Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="85a4-dbe2-7dad-a2ac" name="Colossus Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <modifiers>
             <modifier type="decrement" field="8265-800f-bc87-d00a" value="1">
               <conditions>
@@ -5185,7 +4970,7 @@ The model has two Bound Spells:
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="9de1-e102-8dd0-640d" name="Skeletal Horse Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="9de1-e102-8dd0-640d" name="Skeletal Horse Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -5193,7 +4978,7 @@ The model has two Bound Spells:
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
           </characteristics>
         </profile>
-        <profile id="d547-19bf-1788-50b0" name="Skeletal Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="d547-19bf-1788-50b0" name="Skeletal Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -5225,7 +5010,7 @@ The model has two Bound Spells:
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
-        <profile id="95c4-7232-c8b7-5af0" name="Skeleton Chariot Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="95c4-7232-c8b7-5af0" name="Skeleton Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -5233,7 +5018,7 @@ The model has two Bound Spells:
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
           </characteristics>
         </profile>
-        <profile id="7f95-1434-d360-eac4" name="Chassis Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="7f95-1434-d360-eac4" name="Chassis Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">-</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">-</characteristic>
@@ -5266,7 +5051,7 @@ The model has two Bound Spells:
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="767f-ed29-f290-170f" type="max"/>
               </constraints>
               <profiles>
-                <profile id="0428-65f2-56b0-af70" name="Skeletal Horse (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+                <profile id="0428-65f2-56b0-af70" name="Skeletal Horse (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
                   <characteristics>
                     <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                     <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -5285,7 +5070,7 @@ The model has two Bound Spells:
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb36-62a9-6a4f-169a" type="max"/>
               </constraints>
               <profiles>
-                <profile id="a16c-5c8b-d8f8-6d40" name="Skeletal Horse (4) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+                <profile id="a16c-5c8b-d8f8-6d40" name="Skeletal Horse (4) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
                   <characteristics>
                     <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                     <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -5321,7 +5106,7 @@ The model has two Bound Spells:
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="5cef-0b0c-7d67-b0cf" name="Sha Guardian Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="5cef-0b0c-7d67-b0cf" name="Sha Guardian Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -5329,7 +5114,7 @@ The model has two Bound Spells:
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
           </characteristics>
         </profile>
-        <profile id="d772-6024-4e5d-f05a" name="Sha Guardian Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="d772-6024-4e5d-f05a" name="Sha Guardian Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -5369,7 +5154,7 @@ The model has two Bound Spells:
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
-        <profile id="9ec7-dc17-ead3-b1d5" name="Ark of Ages Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="9ec7-dc17-ead3-b1d5" name="Ark of Ages Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -5377,7 +5162,7 @@ The model has two Bound Spells:
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
           </characteristics>
         </profile>
-        <profile id="ee8f-b6d4-d5f4-817e" name="Guard (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="ee8f-b6d4-d5f4-817e" name="Guard (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -5386,7 +5171,7 @@ The model has two Bound Spells:
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
           </characteristics>
         </profile>
-        <profile id="b460-9ab9-b91d-5d29" name="Bound Spirits Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="b460-9ab9-b91d-5d29" name="Bound Spirits Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -5462,7 +5247,7 @@ When making a casting roll with 3 or more Magic Dice, all doubles count as tripl
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="950e-6c6f-a147-81af" name="Amuut Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="950e-6c6f-a147-81af" name="Amuut Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -5470,7 +5255,7 @@ When making a casting roll with 3 or more Magic Dice, all doubles count as tripl
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
           </characteristics>
         </profile>
-        <profile id="c6c8-9eb6-bb9d-5468" name="Amuut Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="c6c8-9eb6-bb9d-5468" name="Amuut Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -5818,9 +5603,6 @@ When making a casting roll with 3 or more Magic Dice, all doubles count as tripl
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="5fa7-01d3-9aa2-2756" name="Resurrected" hidden="false">
-      <description>The number in brackets (), determines the number of Health Points Raised with Death is Only the Beginning (Hereditary Attribute Spell).</description>
-    </rule>
     <rule id="61b8-31b1-d20f-6334" name="Hierophant" hidden="false">
       <description>One of a Kind. An Undying Dynasties Army must include a single model with this Universal Rule. When a Hierophant casts Death is Only the Beginning as a non-bound spell, it may choose to target a friendly unit within 18&quot; (instead of the spells normal target restrictions).</description>
     </rule>
