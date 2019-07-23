@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="66f6-8610-3962-63fa" name="Highborn Elves 2.0" revision="25" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="66f6-8610-3962-63fa" name="Highborn Elves 2.0" revision="26" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7eaf-eaa2-9211-8018" name="Ancient Allies" hidden="false"/>
     <categoryEntry id="3eec-2473-17c3-c831" name="Naval Ordnance" hidden="false"/>
@@ -68,7 +68,7 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="3979-e311-2b38-8142" name="High Prince" hidden="false" collective="false" type="model">
+    <selectionEntry id="3979-e311-2b38-8142" name="High Prince" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="57eb-6b38-b4c6-bf8c" name="High Prince Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -79,7 +79,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="db46-d344-a6b6-2133" name="High Prince Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="db46-d344-a6b6-2133" name="High Prince Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">7</characteristic>
@@ -87,7 +87,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="ba65-46e7-234d-33dc" name="High Prince Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="ba65-46e7-234d-33dc" name="High Prince Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">7</characteristic>
@@ -560,6 +560,55 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="300.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="e66f-3fa1-71ca-6e7a" name="Ancient Dragon" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8ff2-b891-bc06-6a88" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9450-b91e-2984-b06e" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="bc70-acb0-369f-1809" name="Ancient Dragon Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+                  <characteristics>
+                    <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot; (7&quot;)</characteristic>
+                    <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot; (16&quot;)</characteristic>
+                    <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+                    <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
+                    <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="e699-50a1-8658-f00b" name="Ancient Dragon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+                  <characteristics>
+                    <characteristic name="HP" typeId="f381-7850-7fa8-3440">8</characteristic>
+                    <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
+                    <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
+                    <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="9429-99db-7209-8264" name="Ancient Dragon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+                  <characteristics>
+                    <characteristic name="Att" typeId="8265-800f-bc87-d00a">6</characteristic>
+                    <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
+                    <characteristic name="Str" typeId="4d4a-2100-804f-99e5">7</characteristic>
+                    <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">4</characteristic>
+                    <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="924b-298d-4d87-03d3" name="Breath Attack" hidden="false" targetId="3be7-d693-e8e8-6b1e" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (Str 4, AP1, Flaming Attacks)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="be62-7167-c9fb-dbf2" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule"/>
+                <infoLink id="3de6-45c7-d84f-29ed" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="ccc7-fe50-95e7-eeda" name="Ancient Allies" hidden="false" targetId="7eaf-eaa2-9211-8018" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="660.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -570,7 +619,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="250.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="feba-b90c-ff10-7f72" name="Commander" hidden="false" collective="false" type="model">
+    <selectionEntry id="feba-b90c-ff10-7f72" name="Commander" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="18ed-85af-6547-a088" name="Commander Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -581,7 +630,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="78ce-5ad3-74d5-6977" name="Commander Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="78ce-5ad3-74d5-6977" name="Commander Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
@@ -589,7 +638,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="8ce0-0747-c868-dc2f" name="Commander Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="8ce0-0747-c868-dc2f" name="Commander Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
@@ -1089,7 +1138,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="150.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1e35-ad25-73d4-961b" name="Mage" hidden="false" collective="false" type="model">
+    <selectionEntry id="1e35-ad25-73d4-961b" name="Mage" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="a1b3-ed4a-7158-86a6" name="Mage Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -1100,7 +1149,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="4856-fe02-c0fe-c074" name="Mage Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="4856-fe02-c0fe-c074" name="Mage Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -1108,7 +1157,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="e7dc-bc6c-b6b0-1132" name="Mage Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="e7dc-bc6c-b6b0-1132" name="Mage Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -1127,17 +1176,6 @@
         <categoryLink id="58a0-957f-9e06-0188" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="2706-8539-6f13-a55a" name="Light Armour" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="814f-e793-b66e-eff8" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="e616-8cb7-a894-42b4" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="e6ac-bcf1-e85c-29b0" name="Special Equipment" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bde-b91b-8628-78a7" type="max"/>
@@ -1170,10 +1208,8 @@
                       <conditionGroups>
                         <conditionGroup type="or">
                           <conditions>
-                            <condition field="selections" scope="1e35-ad25-73d4-961b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2706-8539-6f13-a55a" type="equalTo"/>
-                            <condition field="selections" scope="1e35-ad25-73d4-961b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a7f9-bdd7-7a83-796e" type="equalTo"/>
                             <condition field="selections" scope="1e35-ad25-73d4-961b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc77-7c95-8714-f2d4" type="equalTo"/>
-                            <condition field="selections" scope="1e35-ad25-73d4-961b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="79d7-25c8-07a5-29bd" type="equalTo"/>
+                            <condition field="selections" scope="1e35-ad25-73d4-961b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e30-6592-d910-39c1" type="equalTo"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -1247,9 +1283,9 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f671-295d-2fca-a7ab" name="Path" hidden="false" collective="false">
+        <selectionEntryGroup id="f671-295d-2fca-a7ab" name="Path of Magic" hidden="false" collective="false">
           <modifiers>
-            <modifier type="set" field="5de2-4a1a-5b96-62fe" value="2">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
               </conditions>
@@ -1343,28 +1379,6 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a7f9-bdd7-7a83-796e" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e099-4c24-a78a-5362" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="d52d-4a15-db7d-9208" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="79d7-25c8-07a5-29bd" name="Dragonforged Armour" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="078d-d2be-6dc9-26a7" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="8554-bf15-4415-6692" name="Dragonforged Armour" hidden="false" targetId="0605-22a2-3f43-283b" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0333-f3bf-e1dd-892a" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
@@ -1557,6 +1571,128 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="0e30-6592-d910-39c1" name="Armour" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f58f-8130-57cd-4d84" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="aff2-2a69-702a-675b" name="Light Armour" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e6b-1922-80cc-5f6d" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="4e62-e77e-f6c6-5ee8" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ed32-ef16-7c59-a28e" name="Dragonforged Armour" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9313-7e5d-0656-101c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbfe-b1b4-d94f-3bb9" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="d3d4-6cee-beb9-6856" name="Dragonforged Armour" hidden="false" targetId="0605-22a2-3f43-283b" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4e0f-8cea-fe40-dc05" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9313-7e5d-0656-101c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d016-3a74-fe00-598c" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="bf5e-d9ed-0140-3ebb" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6c2d-003f-02ec-23a4" name="Path of Magic" hidden="true" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="761b-8627-04c5-d33b" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3a7-86f3-973b-ca16" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="95dd-caf8-7e7d-4f91" name="Pyromancy" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fc1-59d0-b386-025f" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="427d-c5cd-b09e-d3ca" name="Divination" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9313-7e5d-0656-101c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8be6-9e49-c6a3-7622" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="307d-09ac-6b36-43d3" name="Cosmology" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9313-7e5d-0656-101c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01e8-aa10-5693-8447" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="14df-8b22-5165-1ff3" name="Alchemy" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9313-7e5d-0656-101c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c0d-6335-98b9-4d4c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="b533-bd92-1846-12df" name="Army General" hidden="false" collective="false" targetId="0594-306e-6847-ad1c" type="selectionEntry"/>
@@ -1579,7 +1715,7 @@
         <categoryLink id="b0c3-a901-1696-e09a" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="af5c-bce3-798e-499a" name="Citizen Spear" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="af5c-bce3-798e-499a" name="Citizen Spear" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70ad-8caa-09f7-e29b" type="min"/>
             <constraint field="selections" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a43-969f-e035-6023" type="max"/>
@@ -1594,7 +1730,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="c177-117a-6dea-1b9e" name="Citizen Spear Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="c177-117a-6dea-1b9e" name="Citizen Spear Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -1602,7 +1738,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="abea-8d2d-4bfd-8a68" name="Citizen Spear Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="abea-8d2d-4bfd-8a68" name="Citizen Spear Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -1667,7 +1803,7 @@
         <categoryLink id="9d80-9934-1ed7-03d8" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="2a13-05d4-b8cc-9f3e" name="Highborn Lancer" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2a13-05d4-b8cc-9f3e" name="Highborn Lancer" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d3d-8c9d-e95e-6a6c" type="min"/>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a95-5685-c781-86ad" type="max"/>
@@ -1682,7 +1818,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="9206-1cf3-5cc1-1512" name="Highborn Lancer Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="9206-1cf3-5cc1-1512" name="Highborn Lancer Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -1690,7 +1826,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="5260-b416-9e67-530f" name="Highborn Lancer Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="5260-b416-9e67-530f" name="Highborn Lancer Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -1699,7 +1835,7 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
               </characteristics>
             </profile>
-            <profile id="f47c-e136-d8e8-bef8" name="Elven Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="f47c-e136-d8e8-bef8" name="Elven Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -1753,14 +1889,14 @@
         <infoLink id="72cb-7d5e-87de-cc67" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="f2f7-79a6-5e74-f272" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
         <infoLink id="7fd9-605d-f1fd-3497" name="Lightning Reflexes" hidden="false" targetId="f17a-c7f9-af34-a039" type="rule"/>
-        <infoLink id="66e6-41fb-d334-9b44" name="Longbow (3+)" hidden="false" targetId="245b-baaf-f5ec-e168" type="profile"/>
+        <infoLink id="66e6-41fb-d334-9b44" name="Longbow" hidden="false" targetId="245b-baaf-f5ec-e168" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2b88-0789-94dd-e659" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
         <categoryLink id="7362-4819-94ec-2de7" name="Queen&apos;s Bows (local)" hidden="false" targetId="0bd4-287b-6755-4532" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="d0da-fe31-b07f-b1c7" name="Citizen Archer" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="d0da-fe31-b07f-b1c7" name="Citizen Archer" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3aa8-5aa7-da4b-c330" type="min"/>
             <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3162-aaf2-e7ed-e685" type="max"/>
@@ -1775,7 +1911,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="9f51-8f26-a4c2-4d55" name="Citizen Archer Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="9f51-8f26-a4c2-4d55" name="Citizen Archer Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -1783,7 +1919,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="65ff-3482-aac4-9ed9" name="Citizen Archer Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="65ff-3482-aac4-9ed9" name="Citizen Archer Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -1859,7 +1995,7 @@
         <categoryLink id="04f5-f0f4-5d9b-3945" name="Queen&apos;s Bows (local)" hidden="false" targetId="0bd4-287b-6755-4532" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9fb6-af24-dcc7-9d7a" name="Sea Guard" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="9fb6-af24-dcc7-9d7a" name="Sea Guard" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0b79-ae82-2b89-7551" type="min"/>
             <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9cb2-9f5a-6356-7146" type="max"/>
@@ -1874,7 +2010,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="9a3a-1fa7-9d12-90e6" name="Sea Guard Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="9a3a-1fa7-9d12-90e6" name="Sea Guard Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -1882,7 +2018,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="9a18-0509-7b81-f8ba" name="Sea Guard Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="9a18-0509-7b81-f8ba" name="Sea Guard Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -1958,7 +2094,7 @@
         <categoryLink id="2d49-b629-ffae-87aa" name="Queen&apos;s Bows (local)" hidden="false" targetId="0bd4-287b-6755-4532" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="654b-77e5-cc9d-d4ce" name="Elein Reaver" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="654b-77e5-cc9d-d4ce" name="Elein Reaver" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64f9-0045-0094-8232" type="min"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="626b-9be7-67f5-7b41" type="max"/>
@@ -1973,7 +2109,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
-            <profile id="c048-98d4-bee8-647e" name="Elein Reaver Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="c048-98d4-bee8-647e" name="Elein Reaver Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -1981,7 +2117,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
               </characteristics>
             </profile>
-            <profile id="9e71-13cd-8991-a700" name="Elein Reaver Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="9e71-13cd-8991-a700" name="Elein Reaver Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -1990,7 +2126,7 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
               </characteristics>
             </profile>
-            <profile id="e800-88d4-ae6a-98cd" name="Elven Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="e800-88d4-ae6a-98cd" name="Elven Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2006,9 +2142,9 @@
         </selectionEntry>
         <selectionEntry id="bd99-7065-aacb-4423" name="Bow (3+)" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
               <repeats>
-                <repeat field="selections" scope="db73-defa-403c-7942" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="654b-77e5-cc9d-d4ce" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2016,7 +2152,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="513b-faa7-ff59-cc1d" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="000e-920c-2c72-ee91" name="Bow (3+)" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
+            <infoLink id="000e-920c-2c72-ee91" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -2061,7 +2197,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="655e-53e6-ffdf-c86d" name="Sword Master Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="655e-53e6-ffdf-c86d" name="Sword Master Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
@@ -2069,7 +2205,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="8a88-d465-01da-1bd8" name="Sword Master Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="8a88-d465-01da-1bd8" name="Sword Master Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
@@ -2172,7 +2308,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="34a4-2384-7156-740e" name="Lion Guard Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="34a4-2384-7156-740e" name="Lion Guard Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -2180,7 +2316,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="ba37-17e4-4f48-58eb" name="Lion Guard Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="ba37-17e4-4f48-58eb" name="Lion Guard Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -2220,16 +2356,16 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3a83-918c-d757-53bf" name="Gain Skirmish" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="3a83-918c-d757-53bf" name="Skirmishers" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
               <repeats>
-                <repeat field="selections" scope="3306-b0a4-3283-2494" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d94c-c889-ee37-1f90" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="3306-b0a4-3283-2494" value="15.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d94c-c889-ee37-1f90" type="greaterThan"/>
+                <condition field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2289,7 +2425,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="d3b9-5634-62a4-f409" name="Flame Warden Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="d3b9-5634-62a4-f409" name="Flame Warden Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -2297,7 +2433,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="2399-e394-3e16-c6bb" name="Flame Warden Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="2399-e394-3e16-c6bb" name="Flame Warden Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -2367,7 +2503,7 @@
         <categoryLink id="6323-0047-7736-dc6d" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="e4cc-e4bc-6b8a-8cf2" name="Knight of Ryma" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="e4cc-e4bc-6b8a-8cf2" name="Knight of Ryma" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cddd-e92d-105c-4515" type="min"/>
             <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="163c-07e0-91e1-e11f" type="max"/>
@@ -2382,7 +2518,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
-            <profile id="a179-4b14-e034-6d4c" name="Knight of Ryma Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="a179-4b14-e034-6d4c" name="Knight of Ryma Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -2390,7 +2526,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="963d-e7aa-868e-338a" name="Knight of Ryma Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="963d-e7aa-868e-338a" name="Knight of Ryma Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -2399,7 +2535,7 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
               </characteristics>
             </profile>
-            <profile id="f47a-d4ee-2b2b-ae08" name="Elven Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="f47a-d4ee-2b2b-ae08" name="Elven Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2484,7 +2620,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
               </characteristics>
             </profile>
-            <profile id="4517-67eb-deff-f0c8" name="Reaver Chariot Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="4517-67eb-deff-f0c8" name="Reaver Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -2492,7 +2628,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="11f2-d4db-a1d4-b6e2" name="Reaver Chariot Crew (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="11f2-d4db-a1d4-b6e2" name="Reaver Chariot Crew (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -2510,7 +2646,7 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
               </characteristics>
             </profile>
-            <profile id="faa0-dfa9-8da3-73ef" name="Reaver Chariot Horse (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="faa0-dfa9-8da3-73ef" name="Reaver Chariot Horse (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2532,7 +2668,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ead3-55f2-a6dc-82eb" name="Lion Chariot" hidden="false" collective="false" type="model">
+    <selectionEntry id="ead3-55f2-a6dc-82eb" name="Lion Chariot" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe41-674a-0556-c2f2" type="max"/>
       </constraints>
@@ -2546,7 +2682,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
-        <profile id="6b45-f737-1c17-556e" name="Lion Chariot Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="6b45-f737-1c17-556e" name="Lion Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -2554,7 +2690,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
           </characteristics>
         </profile>
-        <profile id="b6e7-9e36-41b6-13f7" name="Lion Chariot Crew (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="b6e7-9e36-41b6-13f7" name="Lion Chariot Crew (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -2563,7 +2699,7 @@
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
           </characteristics>
         </profile>
-        <profile id="e39c-c6f0-1476-f96b" name="Lion (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="e39c-c6f0-1476-f96b" name="Lion (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -2634,7 +2770,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
-            <profile id="d96a-af53-a1ee-1501" name="Giant Eagle Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="d96a-af53-a1ee-1501" name="Giant Eagle Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -2642,7 +2778,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="51b1-0656-d52c-aa36" name="Giant Eagle Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="51b1-0656-d52c-aa36" name="Giant Eagle Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -2693,7 +2829,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="a7c8-b5ce-51bf-be49" name="Queen&apos;s Guard Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="a7c8-b5ce-51bf-be49" name="Queen&apos;s Guard Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -2701,7 +2837,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="b1d5-8241-55b3-0493" name="Queen&apos;s Guard Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="b1d5-8241-55b3-0493" name="Queen&apos;s Guard Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -2743,9 +2879,9 @@
         </selectionEntry>
         <selectionEntry id="e122-3a91-c30e-d378" name="Spear" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
               <repeats>
-                <repeat field="selections" scope="c428-47f9-f508-8db3" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c066-1826-9f40-b92a" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2796,7 +2932,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="ea60-ebcf-e559-deec" name="Grey Watcher Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="ea60-ebcf-e559-deec" name="Grey Watcher Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -2804,7 +2940,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="2698-7153-5430-f982" name="Grey Watcher Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="2698-7153-5430-f982" name="Grey Watcher Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -2820,9 +2956,9 @@
         </selectionEntry>
         <selectionEntry id="0c21-9ed1-f1e5-f1e3" name="Scout" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
               <repeats>
-                <repeat field="selections" scope="e951-be7d-a4aa-3031" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e64-eae4-7e7b-6d1b" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2847,9 +2983,9 @@
         </selectionEntry>
         <selectionEntry id="ea94-543f-50f2-17e6" name="Shield" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
               <repeats>
-                <repeat field="selections" scope="e951-be7d-a4aa-3031" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e64-eae4-7e7b-6d1b" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2865,9 +3001,9 @@
         </selectionEntry>
         <selectionEntry id="1bd4-6e9e-da3e-cf49" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
               <repeats>
-                <repeat field="selections" scope="e951-be7d-a4aa-3031" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e64-eae4-7e7b-6d1b" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2886,7 +3022,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d480-0b26-57d3-a886" name="Sea Guard Reaper" hidden="false" collective="false" type="model">
+    <selectionEntry id="d480-0b26-57d3-a886" name="Sea Guard Reaper" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="98eb-2e82-b4b8-f207" type="max"/>
       </constraints>
@@ -2900,7 +3036,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
-        <profile id="7e12-13d4-ea37-6cba" name="Sea Guard Reaper Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="7e12-13d4-ea37-6cba" name="Sea Guard Reaper Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
@@ -2908,7 +3044,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="0299-955a-edc2-ae48" name="Sea Guard Reaper Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="0299-955a-edc2-ae48" name="Sea Guard Reaper Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -2949,7 +3085,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="db8c-e27a-4364-612b" name="Sky Sloop" hidden="false" collective="false" type="model">
+    <selectionEntry id="db8c-e27a-4364-612b" name="Sky Sloop" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c0b-4105-6248-c614" type="max"/>
       </constraints>
@@ -2963,7 +3099,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
-        <profile id="b480-5991-2424-5066" name="Sky Sloop Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="b480-5991-2424-5066" name="Sky Sloop Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
@@ -2980,7 +3116,7 @@
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
           </characteristics>
         </profile>
-        <profile id="c84c-84b5-accf-1217" name="Hawk Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="c84c-84b5-accf-1217" name="Hawk Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -2989,7 +3125,7 @@
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
           </characteristics>
         </profile>
-        <profile id="ba9d-2f71-cdde-9986" name="Sky Sloop Crew (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="ba9d-2f71-cdde-9986" name="Sky Sloop Crew (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -3028,7 +3164,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="265.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b63c-836b-5fba-8c49" name="Phoenix" hidden="false" collective="false" type="model">
+    <selectionEntry id="b63c-836b-5fba-8c49" name="Phoenix" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="83e5-2882-580e-555d" type="max"/>
       </constraints>
@@ -3049,7 +3185,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="1ebd-f66a-17c6-5656" name="Phoenix Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="1ebd-f66a-17c6-5656" name="Phoenix Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -3057,7 +3193,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
           </characteristics>
         </profile>
-        <profile id="29f0-1d25-7ec8-90bf" name="Phoenix Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="29f0-1d25-7ec8-90bf" name="Phoenix Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -3366,7 +3502,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="8bd8-a48d-3e7f-5d1f" name="Elven Horse Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="8bd8-a48d-3e7f-5d1f" name="Elven Horse Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3374,7 +3510,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
           </characteristics>
         </profile>
-        <profile id="a60f-576d-6ed8-f54e" name="Elven Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="a60f-576d-6ed8-f54e" name="Elven Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -3406,7 +3542,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="06a5-0f12-bf8a-9389" name="Giant Eagle Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="06a5-0f12-bf8a-9389" name="Giant Eagle Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3414,7 +3550,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
           </characteristics>
         </profile>
-        <profile id="7524-01fc-f355-0290" name="Giant Eagle Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="7524-01fc-f355-0290" name="Giant Eagle Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -3447,7 +3583,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="4143-8d52-fd76-4f75" name="Griffon Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="4143-8d52-fd76-4f75" name="Griffon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3455,7 +3591,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
           </characteristics>
         </profile>
-        <profile id="e18c-bc6e-685f-9d00" name="Griffon Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="e18c-bc6e-685f-9d00" name="Griffon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -3496,7 +3632,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="d6b7-3868-7a4e-648e" name="Young Dragon Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="d6b7-3868-7a4e-648e" name="Young Dragon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3504,7 +3640,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
           </characteristics>
         </profile>
-        <profile id="76f2-d172-f414-a55f" name="Young Dragon Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="76f2-d172-f414-a55f" name="Young Dragon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -3536,9 +3672,14 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
     </selectionEntry>
     <selectionEntry id="17f6-887c-55b0-d586" name="Dragon" hidden="false" collective="false" type="upgrade">
       <modifiers>
-        <modifier type="set" field="04d9-f0ab-8c63-10f9" value="2">
+        <modifier type="increment" field="04d9-f0ab-8c63-10f9" value="1.0">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="903c-ad61-5d7b-1be7" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" field="04d9-f0ab-8c63-10f9" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e66f-3fa1-71ca-6e7a" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3549,13 +3690,6 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
       </constraints>
       <profiles>
         <profile id="fecf-f6e9-6a89-3fab" name="Dragon Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <modifiers>
-            <modifier type="set" field="db10-a838-f72f-3ed6" value="12&quot; (16&quot;)">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab72-199b-87f3-a94e" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot; (7&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot; (14&quot;)</characteristic>
@@ -3564,14 +3698,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="d35e-250b-09d0-8444" name="Dragon Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <modifiers>
-            <modifier type="set" field="f381-7850-7fa8-3440" value="8">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab72-199b-87f3-a94e" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="d35e-250b-09d0-8444" name="Dragon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">6</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -3579,7 +3706,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
           </characteristics>
         </profile>
-        <profile id="dacb-f8d9-13a0-d879" name="Dragon Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="dacb-f8d9-13a0-d879" name="Dragon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -3598,16 +3725,6 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
           </modifiers>
         </infoLink>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry id="ab72-199b-87f3-a94e" name="Ancient Dragon (High Prince only)" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce6a-7e8c-8d38-2f2a" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -3627,7 +3744,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
-        <profile id="e009-3b79-ab4e-560b" name="Reaver Chariot Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="e009-3b79-ab4e-560b" name="Reaver Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3635,7 +3752,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
           </characteristics>
         </profile>
-        <profile id="d5b9-57be-4d90-e92e" name="Reaver Chariot Crew (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="d5b9-57be-4d90-e92e" name="Reaver Chariot Crew (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -3644,7 +3761,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
           </characteristics>
         </profile>
-        <profile id="9c29-bc4b-e624-6a5b" name="Reaver Chariot Horse (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="9c29-bc4b-e624-6a5b" name="Reaver Chariot Horse (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -3696,7 +3813,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
-        <profile id="52f7-1e37-6857-6a7b" name="Lion Chariot Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="52f7-1e37-6857-6a7b" name="Lion Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3704,7 +3821,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
           </characteristics>
         </profile>
-        <profile id="98af-3963-de3c-be40" name="Lion Chariot Crew (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="98af-3963-de3c-be40" name="Lion Chariot Crew (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -3713,7 +3830,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
           </characteristics>
         </profile>
-        <profile id="a935-0dc6-4f04-1255" name="Lion (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="a935-0dc6-4f04-1255" name="Lion (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -3769,7 +3886,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
-        <profile id="4274-6992-71fb-d8ab" name="Sky Sloop Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="4274-6992-71fb-d8ab" name="Sky Sloop Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3786,7 +3903,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
           </characteristics>
         </profile>
-        <profile id="13a3-aa78-d8dd-ec5d" name="Hawk Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="13a3-aa78-d8dd-ec5d" name="Hawk Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -3795,7 +3912,7 @@ The first time in each Magic Phase that the bearer successfully casts a Learned 
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
           </characteristics>
         </profile>
-        <profile id="f247-aca6-c099-2724" name="Sky Sloop Crew (2) Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="f247-aca6-c099-2724" name="Sky Sloop Crew (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
