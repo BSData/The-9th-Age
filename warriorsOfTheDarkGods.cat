@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9cd6-2c84-c59e-7dd1" name="Warriors of the Dark Gods 2.2" revision="43" battleScribeVersion="2.02" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9cd6-2c84-c59e-7dd1" name="Warriors of the Dark Gods 2.2.3" revision="44" battleScribeVersion="2.02" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="25f6-6ecf-2669-118b" name="8 Manifestation">
       <characteristicTypes>
@@ -724,37 +724,6 @@
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
           </characteristics>
         </profile>
-        <profile id="3810-48ed-139f-8606" name="Sorcerer Global" hidden="true" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="6de7-3d7b-8973-aa1c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5734-ced8-7f12-7815" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="21df-1ce9-e813-f3d0" name="Sorcerer Defensive" hidden="true" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="6de7-3d7b-8973-aa1c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5734-ced8-7f12-7815" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="e6fa-729a-eb03-19ad" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
@@ -887,7 +856,7 @@
         </selectionEntryGroup>
         <selectionEntryGroup id="dae8-e584-148c-03e6" name="Path of Magic" hidden="false" collective="false">
           <modifiers>
-            <modifier type="set" field="0306-d94a-1af8-3e57" value="2">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
               </conditions>
@@ -997,6 +966,45 @@
               </constraints>
             </entryLink>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f0a1-41a1-7138-dc44" name="Path of Magic" hidden="true" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9287-de44-add2-7256" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e489-cbf7-dfc2-5edb" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1d38-f1fd-7483-9abc" name="Alchemy" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f956-12b2-0352-c432" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e997-51d6-afa3-1aaa" name="Occultism" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="813c-5f00-7227-851b" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="155f-e981-edab-6c93" name="Evocation" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf08-bf5c-08f9-a4a5" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -2157,7 +2165,7 @@ After using the Breath Attack, the model loses a Health Point (no saves of any k
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">2</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3+</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
           </characteristics>
         </profile>
         <profile id="09fb-7ae1-a586-eb33" name="Chosen Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3241,43 +3249,6 @@ After using the Breath Attack, the model loses a Health Point (no saves of any k
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c433-7a15-f5a7-d8fa" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="a13f-e0c3-500b-c1a7" name="Flayers Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">50&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="591a-8ff7-0f06-402f" name="Flayers Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="fa73-f695-c014-28f7" name="Flayers Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7dd0-428a-eb6f-ddfb" name="Shadow Chaser Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="e488-f597-5f31-6145" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
         <infoLink id="d292-76fa-a557-8ba7" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule"/>
@@ -3300,6 +3271,43 @@ After using the Breath Attack, the model loses a Health Point (no saves of any k
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15c6-e759-bfd0-a21c" type="min"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7965-d5f3-e7fe-2b05" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="5f46-3a52-1f9a-e078" name="Flayer Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">20&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
+                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="bcc9-7ed1-85c7-c66b" name="Flayer Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+              <characteristics>
+                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
+                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f206-26a6-7b86-95d9" name="Flayer Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f755-d97d-f75d-e0b8" name="Shadow Chaser Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="19.0"/>
           </costs>
@@ -3733,7 +3741,7 @@ During their owner’s first Player Turn, Warhounds gain +8” March Rate and De
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">6</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">-</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
         <profile id="38e4-99d3-2adc-5a0d" name="Forsaken One Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4406,7 +4414,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">-</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
           </characteristics>
         </profile>
         <profile id="1639-7a13-5c33-6f8a" name="Chimera Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4460,7 +4468,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             </modifier>
           </modifiers>
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">17&quot;</characteristic>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
             <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
@@ -4469,7 +4477,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         </profile>
         <profile id="360c-580c-4028-e829" name="Wasteland Behemoth Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <modifiers>
-            <modifier type="set" field="597b-8735-3dd1-0e70" value="4+">
+            <modifier type="set" field="597b-8735-3dd1-0e70" value="3">
               <conditions>
                 <condition field="selections" scope="46d6-395a-e95c-848b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="137a-5479-f46c-8016" type="equalTo"/>
               </conditions>
@@ -4479,7 +4487,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3+</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
           </characteristics>
         </profile>
         <profile id="efd0-ddf4-c626-743d" name="Wasteland Behemoth Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4580,7 +4588,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
           </characteristics>
         </profile>
         <profile id="56d6-dbd4-d7f2-610a" name="Horse (2)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4849,6 +4857,23 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8faf-d47e-32ac-48fe" name="Battleshrine Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&apos;&apos;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&apos;&apos;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
+            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f02f-6098-ee5d-753c" name="Battleshrine Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
           </characteristics>
         </profile>
       </profiles>
