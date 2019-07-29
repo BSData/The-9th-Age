@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a0dc-734f-ea5e-2f6f" name="Kingdom of Equitaine 2.0" revision="16" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a0dc-734f-ea5e-2f6f" name="Kingdom of Equitaine 2.0" revision="18" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8733-41f5-7948-a83c" name="Airbourne Gallantry" hidden="false"/>
   </categoryEntries>
@@ -26,7 +26,7 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="79c9-6c50-8761-e161" name="Duke" hidden="false" collective="false" type="model">
+    <selectionEntry id="79c9-6c50-8761-e161" name="Duke" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="493c-00f4-cda6-1aff" name="Duke Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -37,7 +37,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="dca0-7219-8bfe-602f" name="Duke Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="dca0-7219-8bfe-602f" name="Duke Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
@@ -45,7 +45,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="34ab-e56d-1322-8647" name="Duke Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="34ab-e56d-1322-8647" name="Duke Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
@@ -197,6 +197,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="bfb9-b26c-dd84-b4ca" name="Lance" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eaeb-f8d8-b8a6-2f56" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9e8-ccdd-af13-be2c" type="max"/>
               </constraints>
@@ -247,7 +254,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="170.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fdbe-e3d9-ff9b-0d1d" name="Duke on Pegasus" hidden="false" collective="false" type="model">
+    <selectionEntry id="fdbe-e3d9-ff9b-0d1d" name="Duke on Pegasus" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="61aa-3de2-26ff-0182" name="Duke Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -258,7 +265,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="406b-197b-ac85-d200" name="Duke Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="406b-197b-ac85-d200" name="Duke Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
@@ -266,7 +273,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="725e-6407-fdcb-a602" name="Duke Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="725e-6407-fdcb-a602" name="Duke Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
@@ -451,7 +458,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="300.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a17b-d69e-22e7-a453" name="Paladin" hidden="false" collective="false" type="model">
+    <selectionEntry id="a17b-d69e-22e7-a453" name="Paladin" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="20e1-39ec-73eb-d096" name="Paladin Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -462,7 +469,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="e7b1-ea65-dcde-aa20" name="Paladin Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="e7b1-ea65-dcde-aa20" name="Paladin Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -470,7 +477,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="f290-0725-7809-4af0" name="Paladin Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="f290-0725-7809-4af0" name="Paladin Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -568,17 +575,6 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="32f0-eeec-5a64-12ca" name="Barded Warhorse" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b266-8c90-2364-d8f1" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4e2a-22a5-1ddf-0bbc" name="Barded Warhorse" hidden="false" collective="false" targetId="da96-1b71-21da-e286" type="selectionEntry"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="0a44-ddb9-c895-9646" name="Oath" hidden="false" collective="false">
@@ -661,6 +657,21 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="659d-9c37-ce56-cc2d" name="Mount" hidden="false" collective="false">
+          <selectionEntries>
+            <selectionEntry id="7118-0aa5-4f14-6f17" name="Barded Warhorse" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="078e-4dc1-e049-b8ba" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="ab0e-8733-22d3-a896" name="Barded Warhorse" hidden="false" collective="false" targetId="da96-1b71-21da-e286" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="2744-1dbe-7061-d6c7" name="Army General" hidden="false" collective="false" targetId="5c0a-db00-56fb-0063" type="selectionEntry">
@@ -675,7 +686,7 @@
         <entryLink id="16c8-e32f-5b84-462f" name="Virtues" hidden="false" collective="false" targetId="d39e-1d67-5d01-ebaa" type="selectionEntryGroup"/>
         <entryLink id="16d9-f128-4466-94be" name="Battle Standard Bearer" hidden="false" collective="false" targetId="12f6-b26a-6480-42e0" type="selectionEntry">
           <modifiers>
-            <modifier type="set" field="24fd-8af8-0c78-001c" value="50"/>
+            <modifier type="set" field="24fd-8af8-0c78-001c" value="50.0"/>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c0a-db00-56fb-0063" type="equalTo"/>
@@ -688,7 +699,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5cee-3019-c20c-4ac7" name="Paladin on Pegasus" hidden="false" collective="false" type="model">
+    <selectionEntry id="5cee-3019-c20c-4ac7" name="Paladin on Pegasus" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="0db7-268b-c189-977f" name="Paladin Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -699,7 +710,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="2e82-33ba-1aef-d334" name="Paladin Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="2e82-33ba-1aef-d334" name="Paladin Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -707,7 +718,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="faf9-b0d8-f90a-c19b" name="Paladin Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="faf9-b0d8-f90a-c19b" name="Paladin Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -916,7 +927,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="230.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="aab7-e10a-759b-6236" name="Damsel" hidden="false" collective="false" type="model">
+    <selectionEntry id="aab7-e10a-759b-6236" name="Damsel" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="8d58-b3aa-62d6-7ab8" name="Damsel Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -927,7 +938,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="eccc-d66d-d938-88bd" name="Damsel Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="eccc-d66d-d938-88bd" name="Damsel Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -935,7 +946,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="1580-c4e2-d93e-b8d1" name="Damsel Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="1580-c4e2-d93e-b8d1" name="Damsel Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -1052,9 +1063,9 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="49bc-044e-a785-bb79" name="Path" hidden="false" collective="false">
+        <selectionEntryGroup id="49bc-044e-a785-bb79" name="Path of Magic" hidden="false" collective="false">
           <modifiers>
-            <modifier type="set" field="fe37-b1dd-3619-22bf" value="2">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
               </conditions>
@@ -1127,6 +1138,45 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="2247-fe91-ec9f-bede" name="Path of Magic" hidden="true" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f15-62d7-b6ba-7a4e" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c58d-9162-52a2-3ccb" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a5b8-fab6-0b97-3d5f" name="Druidism" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d88-3dbe-5985-6af4" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f58f-f365-5912-92ee" name="Shamanism" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9748-8254-e861-def6" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e363-98ad-1254-bae6" name="Divination" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99eb-4899-6c1b-4683" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="8614-9d86-e3c5-8e3f" name="Army General" hidden="false" collective="false" targetId="5c0a-db00-56fb-0063" type="selectionEntry"/>
@@ -1135,7 +1185,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="03af-b794-d8e9-d1a2" name="Castellan" hidden="false" collective="false" type="model">
+    <selectionEntry id="03af-b794-d8e9-d1a2" name="Castellan" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73cc-07c7-38a1-e1f4" type="max"/>
       </constraints>
@@ -1149,7 +1199,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="e1cc-6570-279f-e290" name="Castellan Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="e1cc-6570-279f-e290" name="Castellan Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -1157,7 +1207,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="15ca-99c2-32e6-f059" name="Castellan Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="15ca-99c2-32e6-f059" name="Castellan Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <modifiers>
             <modifier type="set" field="8265-800f-bc87-d00a" value="3">
               <conditions>
@@ -1196,47 +1246,6 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1723-d317-8f8c-acaa" name="Horse" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="178f-e405-ac5b-c9e9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="22d7-014b-a863-7c5a" name="Horse Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="4c5f-04f3-f08c-1113" name="Horse Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="8680-4471-21a6-a6b1" name="Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="1153-7757-a11c-fd24" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-            <infoLink id="88cc-8a2e-154e-ca22" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
-            <infoLink id="2a7b-49b0-5b13-7268" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3426-4d83-6a91-e675" name="Weapon Enchantment" hidden="false" collective="false" type="upgrade">
@@ -1302,7 +1311,7 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="03af-b794-d8e9-d1a2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1723-d317-8f8c-acaa" type="equalTo"/>
+                    <condition field="selections" scope="03af-b794-d8e9-d1a2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d4d8-030e-f154-ab68" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1353,6 +1362,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="0c7f-90ce-1117-75b3" name="Spear" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d4d8-030e-f154-ab68" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b301-1355-5703-4f09" type="max"/>
               </constraints>
@@ -1375,6 +1391,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="25bc-16db-00ba-a527" name="Light Lance" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d4d8-030e-f154-ab68" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b8c-7f6b-0adb-0913" type="max"/>
               </constraints>
@@ -1398,7 +1421,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="d9fc-e489-6f3c-e123" name="Upgrade" hidden="false" collective="false">
+        <selectionEntryGroup id="d9fc-e489-6f3c-e123" name="Profession" hidden="false" collective="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2adb-05af-0e30-669b" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="611b-e793-d3f4-33ab" type="max"/>
@@ -1434,6 +1457,54 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ebb9-7630-d8d0-f0a9" name="Mount" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2770-6743-fd0d-3c79" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d4d8-030e-f154-ab68" name="Horse" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e371-5af9-57eb-47ae" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="c319-f848-e1e3-c9ef" name="Horse Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+                  <characteristics>
+                    <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+                    <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+                    <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+                    <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
+                    <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="b607-f822-2b6a-c955" name="Horse Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+                  <characteristics>
+                    <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
+                    <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+                    <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
+                    <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="0b48-84e5-8d75-d318" name="Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+                  <characteristics>
+                    <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                    <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+                    <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+                    <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                    <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="2d50-9f4c-e501-db71" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+                <infoLink id="839f-4b7e-4c15-65a1" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
+                <infoLink id="f386-512d-618a-b954" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1483,7 +1554,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
-            <profile id="3c44-8f36-c3f1-fcdd" name="Knight Aspirant Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="3c44-8f36-c3f1-fcdd" name="Knight Aspirant Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -1491,7 +1562,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="355c-faef-1f34-b6a9" name="Knight Aspirant Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="355c-faef-1f34-b6a9" name="Knight Aspirant Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -1500,7 +1571,7 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
               </characteristics>
             </profile>
-            <profile id="08e2-3d66-a476-2fa3" name="Warhorse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="08e2-3d66-a476-2fa3" name="Warhorse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -1580,7 +1651,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
-            <profile id="59e5-0d29-3f97-9ca2" name="Knight of the Realm Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="59e5-0d29-3f97-9ca2" name="Knight of the Realm Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -1588,7 +1659,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="0125-6da2-0d33-3c4c" name="Knight of the Realm Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="0125-6da2-0d33-3c4c" name="Knight of the Realm Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -1597,7 +1668,7 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
               </characteristics>
             </profile>
-            <profile id="d279-9d8e-4fec-a5d1" name="Warhorse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="d279-9d8e-4fec-a5d1" name="Warhorse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -1672,7 +1743,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="2946-068d-df27-c55b" name="Peasant Levy Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="2946-068d-df27-c55b" name="Peasant Levy Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
@@ -1680,7 +1751,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="df69-1ace-95dd-3ba2" name="Peasant Levy Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="df69-1ace-95dd-3ba2" name="Peasant Levy Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -1703,9 +1774,9 @@
           <selectionEntries>
             <selectionEntry id="3904-ce9e-3295-4005" name="Spear" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="d675-3326-25fc-ca6b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ae8-e1ab-903e-d25b" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -1721,9 +1792,9 @@
             </selectionEntry>
             <selectionEntry id="0f05-8e92-82e7-331b" name="Halberd" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="d675-3326-25fc-ca6b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ae8-e1ab-903e-d25b" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -1769,7 +1840,7 @@
           <constraints>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4647-d9a7-539d-26b2" type="min"/>
             <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d53e-485a-4ad8-94ea" type="max"/>
-            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="1100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="858a-81b6-cf67-56d2" type="max"/>
+            <constraint field="selections" scope="roster" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="858a-81b6-cf67-56d2" type="max"/>
           </constraints>
           <profiles>
             <profile id="d19a-a05c-cfc9-ddaa" name="Peasant Bowman Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -1781,7 +1852,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="3b3d-24e5-c4f7-5525" name="Peasant Bowman Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="3b3d-24e5-c4f7-5525" name="Peasant Bowman Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
@@ -1789,7 +1860,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="2aee-5542-23df-7e62" name="Peasant Bowman Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="2aee-5542-23df-7e62" name="Peasant Bowman Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -1805,7 +1876,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="55a0-ccbc-091f-7e89" name="Weapon Options" hidden="false" collective="false" defaultSelectionEntryId="2e83-8612-e2a8-d8e6">
+        <selectionEntryGroup id="55a0-ccbc-091f-7e89" name="Shooting Weapon" hidden="false" collective="false" defaultSelectionEntryId="2e83-8612-e2a8-d8e6">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9765-4941-8b5e-5b43" type="max"/>
           </constraints>
@@ -1828,9 +1899,9 @@
             </selectionEntry>
             <selectionEntry id="0351-cbad-3d51-73de" name="Crossbow (4+)" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
                   <repeats>
-                    <repeat field="selections" scope="577c-ffde-b318-5cf5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47e9-e5b9-a5c9-e0dc" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -1892,7 +1963,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
-            <profile id="9813-5369-72cd-9998" name="Knight of the Quest Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="9813-5369-72cd-9998" name="Knight of the Quest Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -1900,7 +1971,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="82cd-3634-1b2d-61e5" name="Knight of the Quest Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="82cd-3634-1b2d-61e5" name="Knight of the Quest Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -1909,7 +1980,7 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
               </characteristics>
             </profile>
-            <profile id="7f3d-a904-797b-9b7c" name="Warhorse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="7f3d-a904-797b-9b7c" name="Warhorse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -1998,7 +2069,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="9c7e-6f83-e894-fdfc" name="Knight Forlorn Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="9c7e-6f83-e894-fdfc" name="Knight Forlorn Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -2006,7 +2077,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="eb34-a6af-5dc1-7c77" name="Knight Forlorn Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="eb34-a6af-5dc1-7c77" name="Knight Forlorn Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -2056,7 +2127,7 @@
     </selectionEntry>
     <selectionEntry id="1db3-be14-2942-7eb1" name="Knights of the Grail" hidden="false" collective="false" type="unit">
       <modifiers>
-        <modifier type="set" field="bdf9-d45f-ca2d-a848" value="1">
+        <modifier type="set" field="bdf9-d45f-ca2d-a848" value="1.0">
           <conditions>
             <condition field="selections" scope="f8f1-3d4f-12bf-73cd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e34-9e27-d390-af4e" type="atLeast"/>
           </conditions>
@@ -2109,7 +2180,7 @@
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
-            <profile id="188e-fea2-2587-44c8" name="Knight of the Grail Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="188e-fea2-2587-44c8" name="Knight of the Grail Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
@@ -2117,7 +2188,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="6db6-a074-ada2-3bba" name="Knight of the Grail Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="6db6-a074-ada2-3bba" name="Knight of the Grail Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
@@ -2126,7 +2197,7 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
               </characteristics>
             </profile>
-            <profile id="eda4-36e0-4a8e-5920" name="Warhorse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="eda4-36e0-4a8e-5920" name="Warhorse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2174,7 +2245,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-32.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1e34-9e27-d390-af4e" name="Siege War Machine" hidden="false" collective="false" type="model">
+    <selectionEntry id="1e34-9e27-d390-af4e" name="Siege War Machine" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a0b3-d19e-e085-a1e1" type="max"/>
       </constraints>
@@ -2195,7 +2266,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
-        <profile id="814e-99b5-aa10-a97e" name="Siege War Machine Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="814e-99b5-aa10-a97e" name="Siege War Machine Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">6</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
@@ -2203,7 +2274,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="a7eb-dc3d-a568-9aa1" name="Siege War Machine Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="a7eb-dc3d-a568-9aa1" name="Siege War Machine Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -2272,7 +2343,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b4ba-d469-036f-a794" name="The Green Knight" hidden="false" collective="false" type="model">
+    <selectionEntry id="b4ba-d469-036f-a794" name="The Green Knight" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ea4e-b787-9c21-84f5" type="max"/>
       </constraints>
@@ -2286,7 +2357,7 @@
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="b8ae-9b74-207d-26c7" name="The Green Knight Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="b8ae-9b74-207d-26c7" name="The Green Knight Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
@@ -2294,7 +2365,7 @@
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
           </characteristics>
         </profile>
-        <profile id="50ea-9678-5cd5-f9db" name="The Green Knight Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="50ea-9678-5cd5-f9db" name="The Green Knight Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
@@ -2303,7 +2374,7 @@
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
           </characteristics>
         </profile>
-        <profile id="1f16-a4de-6803-c06c" name="Spectral Stallion Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="1f16-a4de-6803-c06c" name="Spectral Stallion Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -2378,7 +2449,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
-            <profile id="52a7-e401-3db3-dcf8" name="Yeoman Outrider Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="52a7-e401-3db3-dcf8" name="Yeoman Outrider Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -2386,7 +2457,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
               </characteristics>
             </profile>
-            <profile id="13ce-d585-a725-751e" name="Yeoman Outrider Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="13ce-d585-a725-751e" name="Yeoman Outrider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2395,7 +2466,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
               </characteristics>
             </profile>
-            <profile id="bf9a-4575-48af-376c" name="Horse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="bf9a-4575-48af-376c" name="Horse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2411,9 +2482,9 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         </selectionEntry>
         <selectionEntry id="3f4f-dc89-5577-c09b" name="Shield" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
               <repeats>
-                <repeat field="selections" scope="e784-439f-80be-f121" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7988-f02b-547d-f35b" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2429,9 +2500,9 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         </selectionEntry>
         <selectionEntry id="a1bf-2d2d-2d3b-be5a" name="Light Armour" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
               <repeats>
-                <repeat field="selections" scope="e784-439f-80be-f121" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7988-f02b-547d-f35b" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2447,7 +2518,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2341-8ccf-9121-af60" name="Ranged Weapon" hidden="false" collective="false">
+        <selectionEntryGroup id="2341-8ccf-9121-af60" name="Ranged Weapon" hidden="false" collective="false" defaultSelectionEntryId="87bb-5651-ec7f-4630">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3139-3d32-87b0-8107" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6123-a9c3-1e10-ef0e" type="max"/>
@@ -2466,9 +2537,9 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             </selectionEntry>
             <selectionEntry id="6bce-cb89-0c81-d175" name="Throwing Weapons (5+)" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="e784-439f-80be-f121" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7988-f02b-547d-f35b" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -2523,7 +2594,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="6722-e6eb-dad7-ad3a" name="Brigand Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="6722-e6eb-dad7-ad3a" name="Brigand Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
@@ -2531,7 +2602,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="a8ea-aa43-f64c-fe43" name="Brigand Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="a8ea-aa43-f64c-fe43" name="Brigand Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -2562,15 +2633,6 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
           </modifiers>
         </infoLink>
         <infoLink id="b992-9dbb-f7a7-eb90" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="b540-b445-6edc-1946" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="0932-327c-2547-a70e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="42cf-0df1-cc18-b67b" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="4ecd-033c-2d54-4d88" name="Hatred" hidden="false" targetId="13c5-ce89-60ad-c572" type="rule"/>
         <infoLink id="d19e-d2db-72a4-28fd" name="Impetuous" hidden="false" targetId="6190-c357-5cbe-fb08" type="rule"/>
         <infoLink id="7903-86a0-c5b8-16f8" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
@@ -2598,7 +2660,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="cc99-8577-65bb-339d" name="Peasant Crusader Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="cc99-8577-65bb-339d" name="Peasant Crusader Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
@@ -2606,7 +2668,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
               </characteristics>
             </profile>
-            <profile id="1f3b-7524-3592-d915" name="Peasant Crusader Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="1f3b-7524-3592-d915" name="Peasant Crusader Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2646,18 +2708,33 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="42cf-0df1-cc18-b67b" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6393-1c94-4e93-95da" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="266d-15c9-7e47-a68f" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="18cd-7f6a-0db9-b2d3" name="Equipment" hidden="false" collective="false" defaultSelectionEntryId="6f01-ff7f-2a19-de48">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b477-04b8-f626-9c68" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ea8-421a-d8fb-12d8" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6f01-ff7f-2a19-de48" name="Shield" hidden="false" collective="false" type="upgrade">
+              <infoLinks>
+                <infoLink id="4450-71dd-c3fd-3073" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="af2d-d46e-4050-1143" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ea93-e9c8-ff3b-77c4" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="f437-978f-261c-8c69" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="15d1-a01a-5618-ea62" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
@@ -2665,7 +2742,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-50.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b835-a0d2-4a96-646c" name="Sacred Reliquary" hidden="false" collective="false" type="model">
+    <selectionEntry id="b835-a0d2-4a96-646c" name="Sacred Reliquary" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c9b6-a023-6304-8ac9" type="max"/>
       </constraints>
@@ -2679,7 +2756,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="5339-8b33-95f7-fc99" name="Sacred Reliquary Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="5339-8b33-95f7-fc99" name="Sacred Reliquary Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -2687,7 +2764,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
           </characteristics>
         </profile>
-        <profile id="cd20-1f33-0d5e-ded1" name="Sacred Reliquary Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="cd20-1f33-0d5e-ded1" name="Sacred Reliquary Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2739,6 +2816,11 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         <infoLink id="2aef-ffc5-a927-d9a8" name="Oath of Fealty" hidden="false" targetId="9b72-e4ef-0883-424c" type="rule"/>
         <infoLink id="ec70-94c9-426c-0e80" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
         <infoLink id="981f-5e41-5a0c-2c69" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+        <infoLink id="b251-337e-ea8c-ec6d" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (+1 Att)"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ab40-aca6-3551-a933" name="New CategoryLink" hidden="false" targetId="8733-41f5-7948-a83c" primary="true"/>
@@ -2759,7 +2841,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
-            <profile id="408a-a34b-24b9-5ef1" name="Pegasus Knight Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="408a-a34b-24b9-5ef1" name="Pegasus Knight Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">2</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -2767,7 +2849,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
               </characteristics>
             </profile>
-            <profile id="10d4-886a-d432-1bf4" name="Pegasus Knight Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="10d4-886a-d432-1bf4" name="Pegasus Knight Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -2776,7 +2858,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
               </characteristics>
             </profile>
-            <profile id="3df9-eb93-cb69-8a2b" name="Young Pegasus Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="3df9-eb93-cb69-8a2b" name="Young Pegasus Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2792,9 +2874,9 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         </selectionEntry>
         <selectionEntry id="77c2-1fc0-099d-b22b" name="Vanguard" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="7">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="7.0">
               <repeats>
-                <repeat field="selections" scope="266b-72e2-1234-2994" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ebc-00da-763a-4b4a" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2834,11 +2916,11 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="11df-fdcd-3465-3f13" name="Skirmisher" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="11df-fdcd-3465-3f13" name="Loose Formation" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
               <repeats>
-                <repeat field="selections" scope="266b-72e2-1234-2994" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ebc-00da-763a-4b4a" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2847,6 +2929,11 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
           </constraints>
           <infoLinks>
             <infoLink id="3ba8-c7fc-148e-0d05" name="Skirmisher" hidden="false" targetId="2ce4-ece5-068c-4d20" type="rule"/>
+            <infoLink id="c361-8f08-e578-bf4c" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (1)"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -2860,7 +2947,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4c3e-4796-f33a-458e" name="Damsel on Pegasus" hidden="false" collective="false" type="model">
+    <selectionEntry id="4c3e-4796-f33a-458e" name="Damsel on Pegasus" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="c0fe-a050-ba9b-8cde" name="Damsel Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -2871,7 +2958,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="9912-f205-6094-349b" name="Damsel Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="9912-f205-6094-349b" name="Damsel Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
@@ -2879,7 +2966,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
           </characteristics>
         </profile>
-        <profile id="3448-7f4c-6b12-1791" name="Damsel Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="3448-7f4c-6b12-1791" name="Damsel Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -2903,6 +2990,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         </infoLink>
         <infoLink id="7eea-e56d-99c4-8219" name="The Blessing" hidden="false" targetId="f4b8-68e0-86ef-c252" type="rule"/>
         <infoLink id="2068-284c-60d4-77fe" name="Lance Formation" hidden="false" targetId="b53e-e733-517e-8c2d" type="rule"/>
+        <infoLink id="afbb-04ff-12eb-81d0" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="0a96-26e0-d6ec-238b" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -2944,67 +3032,79 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cf26-d581-e62c-a3ef" name="Pegasus" hidden="false" collective="false" type="upgrade">
-          <entryLinks>
-            <entryLink id="8780-8355-8a31-48a7" name="Pegasus" hidden="false" collective="false" targetId="f5b1-b3eb-ae5e-3db6" type="selectionEntry"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e5c4-5bf2-d132-8318" name="Wizard Level" hidden="false" collective="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a42-c494-10d5-344c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e7a-01ad-7fd6-68d6" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="16e4-f45e-77d9-5b47" name="Wizard Master" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a891-5bc1-e9d3-e18f" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="a03d-8334-8342-58f2" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="225.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="a175-3c0f-eca4-e6f5" name="Path" hidden="false" collective="false">
+        <selectionEntryGroup id="7185-322a-628b-fed8" name="Path of Magic" hidden="true" collective="false">
           <modifiers>
-            <modifier type="set" field="3bc5-22fb-a7ad-e7c9" value="2">
+            <modifier type="set" field="hidden" value="false">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4037-cadd-aa60-f2b0" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bc5-22fb-a7ad-e7c9" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de19-9444-3faf-8e37" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af03-766b-e41d-08f8" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="6b48-407e-b0af-a25f" name="Druidism" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="88c4-79ef-e4ce-f5a0" name="Druidism" hidden="false" collective="false" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53a8-b1a1-9f6f-650e" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3319-d08e-73a3-9a0d" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="f127-c958-e6b9-b978" name="Shamanism" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="ba3c-9d6d-512b-3a4f" name="Shamanism" hidden="false" collective="false" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d58-dbc2-d16e-ef01" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0517-d9af-0712-69b3" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="47d4-08f6-2564-66a6" name="Divination" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="d2e8-23c4-ff1b-c0d4" name="Divination" hidden="false" collective="false" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6284-c54f-939d-aeed" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e530-86a0-3fec-4d84" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="4732-d805-e26b-c7e6" name="Path of Magic" hidden="false" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="46e2-51cf-c563-fd06" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c82-3d54-dc8e-3f3e" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f1e0-1845-51c9-e976" name="Druidism" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5153-6bdc-cd85-d0cc" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2ac1-7823-c4bd-a9ca" name="Shamanism" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22ac-e193-e922-0848" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="78da-3e17-79d6-6c83" name="Divination" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9a9-e2f3-8a86-4a5f" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -3015,9 +3115,10 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="78a2-aec0-0355-0508" name="Army General" hidden="false" collective="false" targetId="5c0a-db00-56fb-0063" type="selectionEntry"/>
+        <entryLink id="9af6-d699-99e3-ba2b" name="Pegasus" hidden="false" collective="false" targetId="f5b1-b3eb-ae5e-3db6" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="405.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -3081,7 +3182,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="f341-fead-db99-fd76" name="Barded Warhorse Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="f341-fead-db99-fd76" name="Barded Warhorse Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3089,7 +3190,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
           </characteristics>
         </profile>
-        <profile id="b50a-102f-e456-197a" name="Barded Warhorse Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="b50a-102f-e456-197a" name="Barded Warhorse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
@@ -3127,7 +3228,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="df61-2c88-0a14-8a09" name="Hippogriff Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="df61-2c88-0a14-8a09" name="Hippogriff Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3135,7 +3236,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
           </characteristics>
         </profile>
-        <profile id="6fb0-80ac-7f98-64a1" name="Hippogriff Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="6fb0-80ac-7f98-64a1" name="Hippogriff Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -3175,7 +3276,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="1b25-1cb3-898e-2822" name="Pegasus Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="1b25-1cb3-898e-2822" name="Pegasus Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3183,7 +3284,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
           </characteristics>
         </profile>
-        <profile id="7de4-3b7c-8db9-e764" name="Pegasus Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="7de4-3b7c-8db9-e764" name="Pegasus Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -3222,7 +3323,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
-        <profile id="3a3f-4aab-b408-e9c0" name="Equitan Unicorn Defence" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="3a3f-4aab-b408-e9c0" name="Equitan Unicorn Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
@@ -3230,7 +3331,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
           </characteristics>
         </profile>
-        <profile id="174b-d4d9-8612-6b6a" name="Equitan Unicorn Offence" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="174b-d4d9-8612-6b6a" name="Equitan Unicorn Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
