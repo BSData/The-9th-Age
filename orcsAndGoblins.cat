@@ -565,6 +565,9 @@
               <infoLinks>
                 <infoLink id="b10f-443c-6168-7b8e" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1398,15 +1401,6 @@
       </profiles>
       <infoLinks>
         <infoLink id="9ef9-01c4-e54d-6134" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="4999-a331-fb17-ffe7" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="92e7-d9d8-c21d-b118" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b47-ebaf-5050-8aff" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="8fa5-2fd2-3354-2c19" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
       </infoLinks>
       <categoryLinks>
@@ -1513,37 +1507,28 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c5cd-c2b9-3045-7c77" name="Greenhide Race" hidden="false" collective="false" defaultSelectionEntryId="2171-ffaa-b812-fda2">
+        <selectionEntryGroup id="c5cd-c2b9-3045-7c77" name="Greenhide Race" hidden="false" collective="false" defaultSelectionEntryId="4bf8-b628-5956-e62e">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0f4-ec20-21f6-855c" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3900-5d3f-95a8-c0fa" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="5b47-ebaf-5050-8aff" name="Forest Goblin" hidden="false" collective="false" targetId="2f0f-ec4f-b30c-c225" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="80"/>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1d5-00c0-40d4-8e01" type="max"/>
-              </constraints>
-            </entryLink>
-            <entryLink id="2171-ffaa-b812-fda2" name="Common Goblin" hidden="false" collective="false" targetId="d834-36fc-8be8-cec5" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="70"/>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35e8-d41e-d18b-53a4" type="max"/>
-              </constraints>
-            </entryLink>
-            <entryLink id="bde9-7f91-6c6f-e1be" name="Cave Goblin" hidden="false" collective="false" targetId="64d8-0040-c30f-c791" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="70"/>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4457-16a4-c8b8-1508" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
+          <selectionEntries>
+            <selectionEntry id="5451-2940-887a-917b" name="Forest Goblin" hidden="false" collective="false" type="upgrade">
+              <infoLinks>
+                <infoLink id="e190-2ef4-26e1-6f5b" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (Forest)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="a2cc-e245-3cc0-7377" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a9d0-a82f-5c23-ecc1" name="Cave Goblin" hidden="false" collective="false" type="upgrade"/>
+            <selectionEntry id="4bf8-b628-5956-e62e" name="Common Goblin" hidden="false" collective="false" type="upgrade"/>
+          </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="e0cf-4624-f15c-4d46" name="Mounts" hidden="false" collective="false">
           <constraints>
@@ -1555,7 +1540,7 @@
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="50"/>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="92e7-d9d8-c21d-b118" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2171-ffaa-b812-fda2" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bf8-b628-5956-e62e" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1568,7 +1553,7 @@
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="60"/>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="92e7-d9d8-c21d-b118" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2171-ffaa-b812-fda2" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bf8-b628-5956-e62e" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1581,7 +1566,7 @@
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="65"/>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="92e7-d9d8-c21d-b118" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bde9-7f91-6c6f-e1be" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9d0-a82f-5c23-ecc1" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1594,7 +1579,7 @@
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="25"/>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="92e7-d9d8-c21d-b118" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b47-ebaf-5050-8aff" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5451-2940-887a-917b" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1607,7 +1592,7 @@
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="40"/>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="92e7-d9d8-c21d-b118" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b47-ebaf-5050-8aff" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5451-2940-887a-917b" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1684,7 +1669,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="72b8-5864-ab83-b1a0" name="Goblin Witch Doctor" hidden="false" collective="false" type="unit">
@@ -2134,6 +2119,9 @@
                 <infoLink id="2e8c-60d6-8a3a-09e1" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
                 <infoLink id="41ab-a6ef-7426-5096" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="a5a7-ddd6-6a19-6f3b" name="Common Orc" hidden="false" collective="false" type="upgrade">
               <profiles>
@@ -2149,6 +2137,9 @@
               <infoLinks>
                 <infoLink id="3222-6894-b467-c41f" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4279,12 +4270,13 @@ Gnasher Dashers gain Impact Hits with the following exception from the normal ru
         <infoLink id="c020-e161-4e1d-a2eb" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="920e-e90e-c12f-2272" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
         <infoLink id="5812-4b26-1960-78b6" name="Oi it bites!" hidden="false" targetId="9a66-5dc3-9d5a-3404" type="rule"/>
+        <infoLink id="5766-b1e7-89c7-6d91" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="775a-25aa-a770-d1a0" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="b8ff-8daf-e20c-5d5e" name="Gnasher Dasher" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b8ff-8daf-e20c-5d5e" name="Gnasher Dasher" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ddf-d530-b8ed-7b4b" type="min"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b91f-507e-b89b-11dd" type="max"/>
@@ -4294,14 +4286,6 @@ Gnasher Dashers gain Impact Hits with the following exception from the normal ru
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="61a1-09a9-faab-3c4e" name="Cave Goblin" hidden="false" collective="false" targetId="64d8-0040-c30f-c791" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6faa-9dec-b0b5-cb1e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3bf-063b-9a1b-6bd3" type="min"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
@@ -4352,7 +4336,7 @@ Gnasher Dashers gain Impact Hits with the following exception from the normal ru
         <categoryLink id="475f-393e-348f-e368" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="98c2-54a7-199b-6cd4" name="Gnasher" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="98c2-54a7-199b-6cd4" name="Gnasher" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6119-92e2-233b-0f40" type="min"/>
             <constraint field="selections" scope="parent" value="40.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="61e5-5fb0-4ac3-1e28" type="max"/>
@@ -4978,6 +4962,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
             <modifier type="append" field="name" value=" (4+)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="fa1c-3412-e82f-150b" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ed8b-830e-bccc-a5d5" name="New CategoryLink" hidden="false" targetId="82d5-126d-e31a-aa94" primary="true"/>
@@ -5004,14 +4989,6 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="9baf-c2c8-6ce9-1b1a" name="Forest Goblin" hidden="false" collective="false" targetId="2f0f-ec4f-b30c-c225" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95c1-e15c-2296-1647" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38f6-3d29-9115-935f" type="max"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="510.0"/>
       </costs>
