@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="baa8-f7ce-e46d-ad72" name="Cultists" revision="1" battleScribeVersion="2.02" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry id="93a9-b195-fea7-12ff" name="Summoned Daemons" hidden="false"/>
+  </categoryEntries>
+  <forceEntries>
+    <forceEntry id="2792-3989-3c15-f69e" name="Cultists" hidden="false">
+      <categoryLinks>
+        <categoryLink id="b829-c09a-a184-cc19" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
+          <constraints>
+            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="35.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="49b3-8f26-9d69-9b49" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f144-f750-6204-4b4d" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
+          <constraints>
+            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="25.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="2932-582e-a9c5-7d7f" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3172-644b-0ef7-1019" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false"/>
+        <categoryLink id="ea59-9d27-78ca-1733" name="Summoned Daemons" hidden="false" targetId="93a9-b195-fea7-12ff" primary="false">
+          <constraints>
+            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="45.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="18b8-555f-6916-61e4" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
+  <selectionEntries>
+    <selectionEntry id="b44a-4bdd-a4fe-2e78" name="Cult Leader" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="8a95-6251-99b3-abfc" name="Cult Leader Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <modifiers>
+            <modifier type="increment" field="be28-67a6-2280-9eaf" value="1">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="68a3-5585-1749-d935" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">20x20</characteristic>
+            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1bb1-d5be-9834-8c0f" name="Cult Leader Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="def0-7ea8-1647-ca83" name="Cult Leader Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="cd8b-affb-fdb2-118d" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="434c-b944-7f0f-7c02" name="Unstable" hidden="false" targetId="b642-5b33-158d-421b" type="rule"/>
+        <infoLink id="826c-ff8f-f960-5f38" name="Pledged to Darkness" hidden="false" targetId="573e-bde4-9daf-3ef0" type="rule"/>
+        <infoLink id="3638-781f-aaba-5175" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="a8e0-21df-4f4f-c4f8" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="68a3-5585-1749-d935" name="Master of Ritual" hidden="false" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab3e-14b7-3428-4b49" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="697e-0a6f-6af7-907f" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="f10e-ba77-5ad8-563c" name="Master of Ritual" hidden="false">
+              <description></description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="bdb1-2ef5-193d-a07c" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
+            <infoLink id="249a-53a5-43a7-b72f" name="Daemonic Summon" hidden="false" targetId="d43d-525d-83ec-eab1" type="rule"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="e2c9-70d7-a9bd-c570" name="Gift from Divine Entity " hidden="false" collective="false">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1881-144a-1d5d-acce" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="2523-13b7-fa82-8f16" name="Veil Walker" hidden="false" collective="false" type="upgrade"/>
+                <selectionEntry id="7697-398d-a284-6f61" name="Tablet of Ashuruk" hidden="false" collective="false" type="upgrade"/>
+                <selectionEntry id="3b1a-7e4e-cdee-5fb4" name="Amulet of Spite" hidden="false" collective="false" type="upgrade"/>
+                <selectionEntry id="5a85-e88f-e2b5-acce" name="Ledger of Souls" hidden="false" collective="false" type="upgrade"/>
+                <selectionEntry id="72f0-f5ed-2262-d426" name="Ancient Plaque" hidden="false" collective="false" type="upgrade"/>
+                <selectionEntry id="b7b5-217b-e4bb-de1e" name="Second Awakening" hidden="false" collective="false" type="upgrade"/>
+                <selectionEntry id="02a4-592f-799e-1176" name="Skull Fetish" hidden="false" collective="false" type="upgrade"/>
+                <selectionEntry id="5f51-513a-479f-f3c5" name="Unholy Tome" hidden="false" collective="false" type="upgrade"/>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0e0b-207e-9f33-2602" name="Army General" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49d6-14e2-18ea-2ad5" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0f3-893f-398c-6681" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="4a94-83b1-a57f-eb65" name="Army General" hidden="false" collective="false" targetId="ab3e-14b7-3428-4b49" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry id="16f9-bf20-54e3-40f2" name="Darkness Pledge" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="715c-cd6b-3135-01ef" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="c7a8-dbe8-b3f6-9308" name="Darkness Pledge" hidden="false" collective="false" targetId="228f-5a3b-06dc-4c23" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry id="6f22-dccf-1916-de83" name="Special Equipment" hidden="false" collective="false" type="upgrade">
+          <selectionEntryGroups>
+            <selectionEntryGroup id="d20c-282e-7e0e-f9a2" name="Special Equipment" hidden="false" collective="false">
+              <modifiers>
+                <modifier type="set" field="c324-c7d8-e332-0fb2" value="200.0">
+                  <conditions>
+                    <condition field="selections" scope="b44a-4bdd-a4fe-2e78" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48a4-566d-41a0-48c3" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c324-c7d8-e332-0fb2" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="ac76-72f2-ffdc-84e8" name="Armour Enchantments" hidden="false" collective="false" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
+                <entryLink id="2646-6ab3-4d92-38cd" name="Artefacts" hidden="false" collective="false" targetId="c7c8-eb2b-b77f-5f5d" type="selectionEntryGroup"/>
+                <entryLink id="8a3a-1cb5-d3fe-e773" name="Weapon Enchantments" hidden="false" collective="false" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="17b2-9fd8-2311-d830" name="Wizard Level" hidden="false" collective="false" defaultSelectionEntryId="b807-75a8-e396-c39c">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8524-e944-3399-4fb9" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="824a-badc-ab69-379e" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b807-75a8-e396-c39c" name="Wizard Adept" hidden="false" collective="false" type="upgrade"/>
+            <selectionEntry id="48a4-566d-41a0-48c3" name="Wizard Master" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="150.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6a77-de2e-ce67-2080" name="Path of Magic" hidden="false" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3ea-d3f7-e44b-8557" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8ccb-c172-9b63-642b" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="39b6-72d0-833a-9d00" name="Occultism" hidden="false" collective="false" type="upgrade"/>
+            <selectionEntry id="691e-92d9-0515-7328" name="Thaumaturgy" hidden="false" collective="false" type="upgrade"/>
+            <selectionEntry id="bd86-4198-abaa-e2b4" name="Witchcraft" hidden="false" collective="false" type="upgrade"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5886-14c5-2975-7d7b" name="Path of Magic" hidden="true" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8796-150e-cd35-a682" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="24e1-8e59-7b41-f2e2" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6853-108b-67eb-f140" name="Occultism" hidden="false" collective="false" type="upgrade"/>
+            <selectionEntry id="5aba-a143-47f4-e73a" name="Thaumaturgy" hidden="false" collective="false" type="upgrade"/>
+            <selectionEntry id="a1cd-d0d6-ad3c-3962" name="Witchcraft" hidden="false" collective="false" type="upgrade"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0775-a642-0a1c-5651" name="Daemonic Symbiote" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="024e-4230-2abd-f38c" name="Daemonic Symbiote Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">20×20</characteristic>
+            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ace9-9976-9fb3-c1ef" name="Daemonic Symbiote Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fe70-1935-6bd5-2d4b" name="Daemonic Symbiote Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c34b-f881-c04a-3887" name="Pledged to Darkness" hidden="false" targetId="573e-bde4-9daf-3ef0" type="rule"/>
+        <infoLink id="e1f4-e3e3-eb5e-41f5" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="0a6d-079f-5681-67aa" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
+        <infoLink id="fcd6-39e3-3581-8b9c" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (5+)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="35e2-21b9-78c2-118d" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="43e8-77c1-fdab-9ba6" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="50a7-101d-9663-39c8" name="Shield" hidden="false" collective="false" type="upgrade">
+          <infoLinks>
+            <infoLink id="a212-227b-cabe-3985" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3f76-f63d-923b-0abc" name="Darkness Pledge" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4a2-8832-926e-fa30" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="d08c-fc60-4150-ed7a" name="Darkness Pledge" hidden="false" collective="false" targetId="228f-5a3b-06dc-4c23" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry id="e4de-0ddc-e3cc-8b06" name="Special Equipment" hidden="false" collective="false" type="upgrade">
+          <selectionEntryGroups>
+            <selectionEntryGroup id="116d-4adf-f6ca-1781" name="Special Equipment" hidden="false" collective="false">
+              <constraints>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0d29-d48f-de66-1f42" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="770d-ff53-7ff5-9a66" name="Armour Enchantments" hidden="false" collective="false" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
+                <entryLink id="9384-c485-a335-79f9" name="Artefacts" hidden="false" collective="false" targetId="c7c8-eb2b-b77f-5f5d" type="selectionEntryGroup"/>
+                <entryLink id="9798-f286-1371-2e4b" name="Weapon Enchantments" hidden="false" collective="false" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="63ce-0137-b1ee-cebe" name="Melee Weapon" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="70af-b603-322f-57b1" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ec24-44fd-ec61-602d" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d6cb-c4db-14ac-f6d2" name="Great Weapon" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="44be-0688-2c04-ec5e" name="Spear" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b402-9725-838c-bd92" name="Halberd" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9269-4096-e382-ac67" name="Wizard Level" hidden="false" collective="false" defaultSelectionEntryId="0616-b51e-e4f7-2b12">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ff8-50f5-429a-a51a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="485d-8547-7e4e-dbdb" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="84b9-d92f-3365-9f99" name="Wizard Adept" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0616-b51e-e4f7-2b12" name="Wizard Apprentice" hidden="false" collective="false" type="upgrade"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="02e7-d47b-1788-3e7b" name="Path of Magic" hidden="false" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="347c-7c9f-f8ae-16d5" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab33-10b7-7ca1-8cc7" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b7ce-ae87-8b16-29a1" name="Evocation" hidden="false" collective="false" type="upgrade"/>
+            <selectionEntry id="fb63-28b3-f657-3d78" name="Witchcraft" hidden="false" collective="false" type="upgrade"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="cae6-7748-1741-b3e6" name="Manifestation" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d25a-4d9d-3071-b8ad" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b57d-317e-d13e-fdb1" type="max"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="215.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e3d3-2848-cc87-c647" name="Cultists" hidden="false" collective="false" type="unit">
+      <selectionEntries>
+        <selectionEntry id="598d-ca6a-5793-8e6b" name="Cultist" hidden="false" collective="false" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="049b-c948-2199-c40d" type="max"/>
+            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cad7-a9ff-c113-1743" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="1e73-0f1b-27c8-0838" name="Cultist Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3c5b-979b-60d9-5bae" name="Cultist Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+              <characteristics>
+                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
+                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="cafc-ea4f-2ef6-26ae" name="Cultist Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">20×20</characteristic>
+                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4fc6-5636-9fba-e07a" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+            <infoLink id="cfb1-f1a5-4d56-2074" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
+            <infoLink id="52cf-3bba-0ff3-1984" name="Unstable" hidden="false" targetId="b642-5b33-158d-421b" type="rule"/>
+            <infoLink id="45f7-b104-fdd8-cab7" name="Pledged to Darkness" hidden="false" targetId="573e-bde4-9daf-3ef0" type="rule"/>
+            <infoLink id="6eca-00fe-61b0-62b9" name="Sacrifical Offerings" hidden="false" targetId="58ab-7b3c-c7b7-3f5b" type="rule"/>
+            <infoLink id="5d4a-9631-a2e9-2607" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (Battle Focus)"/>
+              </modifiers>
+            </infoLink>
+            <infoLink id="89ec-63de-233b-09d4" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7745-e20a-2055-02fc" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="3.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2f80-f21a-5f85-c571" name="Musician" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cedb-75f9-7d57-cc3c" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8d92-fd14-571f-d6bb" name="Darkness Pledge" hidden="false" collective="false" type="upgrade"/>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2310-df43-b6ef-763e" name="Cult Operation" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="086d-4f2a-c615-6563" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="219c-d3ab-b52f-901b" name="Eldritch Tome" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e39-a366-4148-37dc" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="54f4-bfb6-65fb-e2c6" name="Wizard Conclave" hidden="false" targetId="7455-f914-028b-3359" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2686-1c0f-3451-cd1f" name="Unholy Conduit" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="88a8-a88e-bbd3-c295" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="d8ca-f48d-8752-342a" name="Daemonic Summon" hidden="false" targetId="d43d-525d-83ec-eab1" type="rule"/>
+                <infoLink id="734b-fefd-98b1-7247" name="Channel" hidden="false" targetId="5a46-f1e8-f840-a1de" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (1)"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7745-e20a-2055-02fc" name="Infiltrators" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="69ab-62c0-bad7-8a68" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="026c-484e-f6b8-a3a6" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e09d-b0d9-7d42-2aa9" name="Possessed" hidden="false" collective="false" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90d3-ff08-9f92-c3af" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="8ec0-8399-162e-11b1" name="Possessed" hidden="false" collective="false" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7748-83a7-bf3b-8407" type="max"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8d4-44d5-dbd7-fb56" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="8e94-6539-4f30-f5d1" name="Possessed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="92ae-470f-930c-21d2" name="Possessed Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+              <characteristics>
+                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
+                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="60cd-ea40-80e4-ab2e" name="Possessed Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">20×20</characteristic>
+                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="fd42-3150-1ff1-654a" name="Pledged to Darkness" hidden="false" targetId="573e-bde4-9daf-3ef0" type="rule"/>
+            <infoLink id="430d-442f-f814-2a68" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+            <infoLink id="06bb-a7b2-b4d5-e6f2" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
+            <infoLink id="413a-158d-c1ae-fe65" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+            <infoLink id="82ee-c5e6-6b2a-4811" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+            <infoLink id="0775-33c8-f56e-4ff5" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (5+)"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="13.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4b2c-c145-530f-c639" name="Command Group" hidden="false" collective="false">
+          <selectionEntries>
+            <selectionEntry id="4b78-1a7f-6b56-d144" name="Champion" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ed7b-269c-a2c7-627c" name="Musician" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="7b0e-0c25-f1d2-a6bb" name="Melee Weapon" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f9b-ffbc-832c-de5c" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d489-bc56-3205-7e71" name="Spear" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="caba-824a-3bdc-808f" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="1839-04a8-6f4b-fd6a" name="Great Weapon" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="d145-4e07-82ba-c997" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="50d9-de62-ef5e-b3a5" name="Paired Weapons" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="5346-bede-6e90-12ce" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="effa-4679-4ea7-d3fd" name="Manifestation" hidden="false" collective="false">
+          <selectionEntries>
+            <selectionEntry id="a8c0-9cfe-c3cb-0484" name="Centipede Legs" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry id="123c-bf6e-bd4a-2e43" name="Red Haze" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry id="76b7-c5f3-a56e-3a70" name="Chitinous Scales" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="014a-2b3a-e59c-4e48" name="Darkness Pledge" hidden="false" collective="false">
+          <entryLinks>
+            <entryLink id="f1f3-2359-00c5-badd" name="Darkness Pledge" hidden="false" collective="false" targetId="228f-5a3b-06dc-4c23" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e5dd-5d75-3434-f290" name="Ritual Altar" hidden="false" collective="false" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9616-b5c0-3923-f5fe" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="86af-6d8f-60be-daf9" name="Ritual Altar Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c8b8-de61-10ea-ad82" name="Ritual Altar Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">7</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9685-5564-d309-cf3c" name="Ritual Altar Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">100×100</characteristic>
+            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="cbd2-975d-ed1c-6c51" name="The End is Nigh!" hidden="false">
+          <description>The model must select Wrath of God (Thaumaturgy) and Pentagram of Pain (Occultism) during Spell Selection. This overrides the Spell Selection rules connected to being a Wizard Adept. If the model performed any kind of move during the current Player Turn, it cannot cast Spells. The Range for spells cast by this model are doubled.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="f9ec-daed-cd71-1383" name="Sacrifical Offerings" hidden="false" targetId="58ab-7b3c-c7b7-3f5b" type="rule"/>
+        <infoLink id="9e9b-4e1b-9e2d-5f64" name="Unstable" hidden="false" targetId="b642-5b33-158d-421b" type="rule"/>
+        <infoLink id="1f25-01b7-88fa-41eb" name="Daemonic Summon" hidden="false" targetId="d43d-525d-83ec-eab1" type="rule"/>
+        <infoLink id="5fa0-b04d-467b-9fa5" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="17dc-fda4-ba66-6201" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule"/>
+        <infoLink id="5aff-fd9c-7033-401f" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (5+)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="210.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5705-6e70-8fc8-7d8f" name="Profane Idol" hidden="false" collective="false" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e3c-0d20-7fa6-15ac" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9e41-8d1f-8b5b-9dd0" name="Profane Idol Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1019-b60e-1fd7-fef8" name="Profane Idol Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7602-b2d6-28d7-b8cb" name="Profane Idol Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">50×75</characteristic>
+            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="73e6-c1c0-9b89-6872" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="6aa8-4ff9-4067-d8e5" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (5+)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="afa7-c375-2d70-765c" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="31e6-86c4-7026-d246" name="Doomsday Colossus" hidden="false" collective="false" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="41d2-984d-9927-a3a8" name="Material" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6915-d736-6d7a-d78b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="736e-84db-be22-6cb5" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f28b-770a-9660-734b" name="Wicker Man" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="53f0-e0f1-6d91-8cdf" name="Heretic Golem" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fe8a-f9c4-63e0-dba9" name="Apostate Automaton" hidden="false" collective="false" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="320.0"/>
+      </costs>
+    </selectionEntry>
+  </selectionEntries>
+  <sharedSelectionEntries>
+    <selectionEntry id="ab3e-14b7-3428-4b49" name="Army General" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4dda-5ea4-3498-4cab" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="585d-2fbb-891a-b7b8" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f144-8662-f5ae-9438" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c93-b4b9-e7f3-db48" type="min"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="38bc-3189-6078-4e3e" name="Commanding Presence" hidden="false" targetId="2304-d0e4-f97b-c4e5" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="aa89-fdcc-1027-8a9c" name="Battle Standard Bearer" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b756-5c72-13dd-7c58" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2ce8-e68b-5208-0001" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d481-947c-3034-d7d7" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="1ca3-fd36-b47a-3c48" name="Rally Around the Flag" hidden="false" targetId="bf56-e3dc-41ca-292b" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup id="c7c8-eb2b-b77f-5f5d" name="Artefacts" hidden="false" collective="false">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6fbf-e190-abff-6afc" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="002f-b174-2324-2422" name="Artefacts" hidden="false" collective="false" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+        <entryLink id="f7fa-d511-c446-41e0" name="Artefacts – Cultists" hidden="false" collective="false" targetId="b342-eecd-13c4-8ec9" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="b342-eecd-13c4-8ec9" name="Artefacts – Cultists" hidden="false" collective="false">
+      <selectionEntries>
+        <selectionEntry id="e242-5bb2-f893-5bc1" name="Lifeforce Talisman" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="accc-54a6-8c6d-ed5c" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="208e-3087-7904-4c72" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cb5d-69e0-f1e4-72d2" name="Brimstone Brazier (Dominant)" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a3f-c4c1-2c2d-5b9c" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d80e-dea3-5e64-b839" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="228f-5a3b-06dc-4c23" name="Darkness Pledge" hidden="false" collective="false">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c31-497f-89ae-b9e3" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="76ef-e4ac-6e86-3476" name="Fallen Heroes" hidden="false" collective="false" type="upgrade"/>
+        <selectionEntry id="a311-e206-df61-f87f" name="Kinslayers" hidden="false" collective="false" type="upgrade"/>
+        <selectionEntry id="d468-6362-93d9-f1b4" name="The Dishonoured" hidden="false" collective="false" type="upgrade"/>
+        <selectionEntry id="3235-a1eb-ca32-c692" name="Wayward Children" hidden="false" collective="false" type="upgrade"/>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+  <sharedRules>
+    <rule id="573e-bde4-9daf-3ef0" name="Pledged to Darkness" hidden="false"/>
+    <rule id="d43d-525d-83ec-eab1" name="Daemonic Summon" hidden="false"/>
+    <rule id="58ab-7b3c-c7b7-3f5b" name="Sacrifical Offerings" hidden="false"/>
+  </sharedRules>
+</catalogue>
