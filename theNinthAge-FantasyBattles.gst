@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.0" revision="26" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.1" revision="27" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -9,8 +9,6 @@
         <characteristicType id="b0d9-2dab-f10b-9b13" name="Adv"/>
         <characteristicType id="db10-a838-f72f-3ed6" name="Mar"/>
         <characteristicType id="be28-67a6-2280-9eaf" name="Dis"/>
-        <characteristicType id="2e17-9c12-bfb4-59b0" name="Size"/>
-        <characteristicType id="3145-83b1-14d6-8023" name="Type"/>
       </characteristicTypes>
     </profileType>
     <profileType id="154c-6605-1486-e1da" name="3 Offensive">
@@ -59,6 +57,13 @@
         <characteristicType id="048a-df92-bb5b-6de9" name="Attributes"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="7733-ad26-4b46-6a5a" name="0 Size">
+      <characteristicTypes>
+        <characteristicType id="0d1d-aeaf-8f31-fd17" name="Height"/>
+        <characteristicType id="1176-4910-e04b-f1c5" name="Type"/>
+        <characteristicType id="7bbb-3d47-ed57-284d" name="Base"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="4bcd-01c8-ce5e-7108" name="Core" hidden="false"/>
@@ -99,7 +104,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="311e-5a0b-83f2-9069" name="Blessed Inscriptions" hidden="false" collective="false" type="upgrade">
@@ -133,7 +138,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="51f1-66e8-4022-9d8b" name="Shield Breaker" hidden="false" collective="false" type="upgrade">
@@ -150,7 +155,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="eedf-4585-d0c1-f613" name="Hero&apos;s Heart" hidden="false" collective="false" type="upgrade">
@@ -201,7 +206,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="81c6-6663-7fd4-18f7" name="Cleansing Light" hidden="false" collective="false" type="upgrade">
@@ -283,7 +288,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7826-dc11-ac6b-51c3" name="Dusk Forged" hidden="false" collective="false" type="upgrade">
@@ -303,7 +308,7 @@
             <entryLink id="6a8b-1ded-cff0-9a28" name="Shield Enchantement" hidden="false" collective="false" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="16c0-7108-a6a7-f2b6" name="Ghostly Guard" hidden="false" collective="false" type="upgrade">
@@ -320,7 +325,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="38fa-9d02-70a4-fd41" name="Basalt Infusion" hidden="false" collective="false" type="upgrade">
@@ -415,7 +420,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy" hidden="false" collective="false" type="upgrade">
@@ -432,7 +437,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="717c-cdd1-f368-649a" name="Obsidian Rock" hidden="false" collective="false" type="upgrade">
@@ -466,7 +471,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3f7d-5a54-b1ca-550f" name="Binding Scroll" hidden="false" collective="false" type="upgrade">
@@ -499,7 +504,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="589f-da5c-20ba-5f1a" name="Potion of Strength - Cannot be taken by Towering Presence" hidden="false" collective="false" type="upgrade">
@@ -533,7 +538,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8cca-6eee-ecd5-1620" name="Talisman of Shielding" hidden="false" collective="false" type="upgrade">
@@ -566,7 +571,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1a15-8ac5-586b-1b94" name="Magical Heirloom - Dominant" hidden="false" collective="false" type="upgrade">
@@ -650,7 +655,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="57fe-c8e7-f786-132c" name="Dragonfire Gem" hidden="false" collective="false" type="upgrade">
@@ -684,7 +689,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ebd9-2cee-402a-4ff4" name="Lucky Charm" hidden="false" collective="false" type="upgrade">
@@ -725,7 +730,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c7f0-afd2-df8b-2008" name="Banner of Speed" hidden="false" collective="false" type="upgrade">
@@ -759,7 +764,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="719b-6dee-2a2a-8e74" name="Banner of Discipline" hidden="false" collective="false" type="upgrade">
@@ -776,7 +781,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c287-b3cd-82d4-ba3d" name="Aether Icon" hidden="false" collective="false" type="upgrade">
@@ -793,7 +798,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5bf4-2476-8235-9323" name="Banner of the Relentless Company" hidden="false" collective="false" type="upgrade">
@@ -844,7 +849,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
