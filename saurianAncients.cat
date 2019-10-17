@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3557-241b-5999-a3b1" name="Saurian Ancients 2.0" revision="22" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3557-241b-5999-a3b1" name="Saurian Ancients 2.1" revision="23" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="0a69-f7af-e4da-3ad0" name="Jungle Guerrilla" hidden="false"/>
     <categoryEntry id="634f-0995-844c-451a" name="Thunder Lizards" hidden="false"/>
@@ -32,15 +32,13 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="46e2-fcb1-5337-a50e" name="Saurian Warlord" hidden="false" collective="false" type="model">
+    <selectionEntry id="46e2-fcb1-5337-a50e" name="Saurian Warlord" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="4a9b-bc8e-01e6-a248" name="Saurian Warlord Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="20e4-7ef2-8f64-24c5" name="Saurian Warlord Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -58,6 +56,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c332-3994-af43-2ee0" name="Saurian Warlord Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -158,7 +163,7 @@
                 <entryLink id="cf52-9038-1169-4137" name="Carnosaur" hidden="false" collective="false" targetId="f48b-b975-d560-7aa5" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="260.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="230.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="dd98-6047-314b-fbc4" name="Raptor" hidden="false" collective="false" type="upgrade">
@@ -183,14 +188,21 @@
                 <entryLink id="85de-63ad-d894-fdb4" name="Alpha Carnosaur" hidden="false" collective="false" targetId="1a35-f5d6-d8da-bdbe" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="490.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="520.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="fe1b-5fd7-ea68-1faa" name="Armour" hidden="false" collective="false">
           <selectionEntries>
-            <selectionEntry id="aae6-b719-01ab-6e12" name="Heavy Armour (Foot only)" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="aae6-b719-01ab-6e12" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="376d-7dfb-a4d0-abd1" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8882-67eb-bb59-1253" type="max"/>
               </constraints>
@@ -242,6 +254,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="7519-5f76-3fad-997f" name="Lance" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="376d-7dfb-a4d0-abd1" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="689d-7495-ea12-b7cb" type="max"/>
               </constraints>
@@ -253,6 +272,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="5fe9-0881-37ec-cb21" name="Spear" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="376d-7dfb-a4d0-abd1" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8e8-004b-14b6-c032" type="max"/>
               </constraints>
@@ -281,15 +307,13 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="260.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c995-c5a3-27fd-4fef" name="Saurian Veteran" hidden="false" collective="false" type="model">
+    <selectionEntry id="c995-c5a3-27fd-4fef" name="Saurian Veteran" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="840b-ef00-c9a5-19f4" name="Saurian Veteran Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="4a14-c150-2cfe-f8f9" name="Saurian Veteran Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -307,6 +331,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a198-af8f-04df-f1a6" name="Saurian Veteran Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -448,7 +479,7 @@
                 <entryLink id="a49b-af57-be60-c1f1" name="Carnosaur" hidden="false" collective="false" targetId="f48b-b975-d560-7aa5" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="270.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="245.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="a741-daf8-ebf3-350f" name="Raptor" hidden="false" collective="false" type="upgrade">
@@ -459,7 +490,7 @@
                 <entryLink id="e506-459d-caad-b1fd" name="Raptor" hidden="false" collective="false" targetId="72ce-5533-a7d3-7d9f" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -492,6 +523,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="5b80-d186-15b0-5c2b" name="Lance" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3aca-5920-ab41-01c7" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99eb-7dde-7971-3ff8" type="max"/>
               </constraints>
@@ -503,6 +541,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="5eeb-0989-33bd-0eda" name="Spear" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3aca-5920-ab41-01c7" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7bbe-b445-6b22-bf5c" type="max"/>
               </constraints>
@@ -528,7 +573,14 @@
         </selectionEntryGroup>
         <selectionEntryGroup id="ebe4-98c1-63c3-0542" name="Armour" hidden="false" collective="false">
           <selectionEntries>
-            <selectionEntry id="9bd4-63d6-c489-977f" name="Heavy Armour (Foot only)" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="9bd4-63d6-c489-977f" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3aca-5920-ab41-01c7" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8365-be8b-b23f-aeb4" type="max"/>
               </constraints>
@@ -554,18 +606,16 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="175.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0193-48cd-e080-e2c8" name="Cuatl Lord" hidden="false" collective="false" type="model">
+    <selectionEntry id="0193-48cd-e080-e2c8" name="Cuatl Lord" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="8757-eddf-8e49-30ca" name="Cuatl Lord Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="78af-1e10-1564-c06d" name="Cuatl Lord Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -583,6 +633,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7331-45f9-e47d-cbd7" name="Cuatl Lord Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -642,8 +699,8 @@
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c89f-b8d1-e7f6-0ea1" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="7cdd-e3a6-9162-548d" name="Charms" hidden="false" collective="false" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
-                    <entryLink id="b67b-77e5-5e51-898c" name="SA Charms" hidden="false" collective="false" targetId="a0e3-1a30-8bc0-a21b" type="selectionEntryGroup"/>
+                    <entryLink id="7cdd-e3a6-9162-548d" name="Artefacts" hidden="false" collective="false" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+                    <entryLink id="b67b-77e5-5e51-898c" name="SA Artefacts" hidden="false" collective="false" targetId="a0e3-1a30-8bc0-a21b" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="6586-595f-4c43-e987" name="Weapon Enchantments" hidden="false" collective="false">
@@ -682,10 +739,16 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="5717-f516-180d-d8e9" name="Magic Path" hidden="false" collective="false">
           <modifiers>
-            <modifier type="set" field="4e17-2496-467f-c53a" value="2">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
-              </conditions>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d1c0-33bd-8434-25c4" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="95c3-d71a-20c9-7653" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -725,21 +788,6 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="73de-21f6-35b4-a017" name="Druidism" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="0193-48cd-e080-e2c8" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d1c0-33bd-8434-25c4" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52f1-530f-58bb-cb77" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="94b5-b7c6-bd0c-e61a" name="Disciplines" hidden="false" collective="false">
@@ -758,7 +806,7 @@
                 </rule>
               </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="135.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0ade-1e54-8877-cfa9" name="Grasp of the Immortal" hidden="false" collective="false" type="upgrade">
@@ -772,17 +820,10 @@
                 </rule>
               </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="95c3-d71a-20c9-7653" name="Ancient Knowledge" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="0193-48cd-e080-e2c8" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="422f-04be-9820-bb97" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="361b-a053-9e09-ebb7" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a93e-3ca9-1e6e-6ea3" type="max"/>
@@ -793,10 +834,22 @@
                 </rule>
               </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d1c0-33bd-8434-25c4" name="Protean Potentate" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9cd3-1be3-7559-0fcb" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="95c3-d71a-20c9-7653" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84ad-8531-970b-ad28" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8803-d40c-0281-f184" type="max"/>
@@ -807,7 +860,7 @@
                 </rule>
               </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0528-729c-7d28-c9d0" name="Soulfire Weaver" hidden="false" collective="false" type="upgrade">
@@ -821,7 +874,7 @@
                 </rule>
               </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="150.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1eb6-0c10-2df5-4a6a" name="Breaker of Spells" hidden="false" collective="false" type="upgrade">
@@ -835,10 +888,17 @@
                 </rule>
               </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9690-4a10-f0e2-7a44" name="Trained from Birth" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d1c0-33bd-8434-25c4" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34bd-c1d0-5960-0ec9" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="58f4-3af8-98f0-bef5" type="max"/>
@@ -868,12 +928,65 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="5639-49be-6b73-a424" name="Magic Path" hidden="true" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d1c0-33bd-8434-25c4" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="95c3-d71a-20c9-7653" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b10a-d37c-d0f2-dde6" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35c5-60aa-37d4-beab" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c17c-df2e-3cf1-9b5b" name="Alchemy" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4315-3d87-8903-8a3d" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e169-a911-c8d1-c8bc" name="Divination" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b8f-6b68-d08c-edd0" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e682-fd9d-a778-cd7f" name="Evocation" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3007-d426-eee4-90d3" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="19ff-975c-c875-9b0f" name="Pyromancy" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0886-bef2-826c-a741" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="470.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bb82-02bc-5d73-8912" name="Skink Captain" hidden="false" collective="false" type="model">
+    <selectionEntry id="bb82-02bc-5d73-8912" name="Skink Captain" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="decrement" field="834f-1ba5-2c62-2a7d" value="1">
           <repeats>
@@ -890,8 +1003,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="a7cd-5b3e-1b74-fa98" name="Skink Captain Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -909,6 +1020,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6b8c-e18c-8fa9-bba9" name="Skink Captain Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1098,6 +1216,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="df5b-6eec-6fda-95e5" name="Light Lance" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b2dc-8e23-4fac-17a0" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fff-8a5e-f9cb-6d18" type="max"/>
               </constraints>
@@ -1126,25 +1251,23 @@
                 <entryLink id="ec46-3e8e-4e7e-d372" name="Taurosaur" hidden="false" collective="false" targetId="dcca-3010-963b-204c" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="435.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="420.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b5d3-df16-0c28-471b" name="Skink Priest" hidden="false" collective="false" type="model">
+    <selectionEntry id="b5d3-df16-0c28-471b" name="Skink Priest" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="1970-5e4a-1dc6-527a" name="Skink Priest Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="5d57-f635-a9ad-7562" name="Skink Priest Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1162,6 +1285,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="738e-e383-1aac-1c1b" name="Skink Priest Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1253,37 +1383,6 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="bc4d-d7c1-f07f-afae" name="Path" hidden="false" collective="false">
-          <modifiers>
-            <modifier type="set" field="f6b9-84e8-1de9-91fe" value="2">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77ec-fc60-a56e-3a89" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6b9-84e8-1de9-91fe" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="9111-cb98-3ede-e32b" name="Druidism" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3f4-34be-e853-48d2" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="72ce-a47b-ded1-fd96" name="Shamanism" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ea6-0127-db5a-4701" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="953f-de0f-4aa6-745e" name="Wizard Level" hidden="false" collective="false" defaultSelectionEntryId="7982-7cb3-5c5c-36a1">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="612b-b5e7-0dfc-fc72" type="min"/>
@@ -1346,20 +1445,49 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="b66a-a5c2-c881-e3d5" name="Magic Path" hidden="false" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b0b-1704-5af2-0211" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="640e-486a-47ec-6001" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c64e-19db-74f0-1e85" name="Druidism" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b80c-c819-d7d4-eed3" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5c8b-a41d-93cf-c5a8" name="Shamanism" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f46-efbc-026c-2c09" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b408-00c4-1454-0ccb" name="Caiman Ancient" hidden="false" collective="false" type="model">
+    <selectionEntry id="b408-00c4-1454-0ccb" name="Caiman Ancient" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="7247-f4e8-9fda-4c14" name="Caiman Ancient Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="c516-25d5-8b59-76a5" name="Caiman Ancient Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1377,6 +1505,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="88a1-0082-86b8-cbb7" name="Caiman Ancient Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1532,7 +1667,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="210.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec7c-18f7-71ee-668a" name="Saurian Warriors" hidden="false" collective="false" type="unit">
@@ -1557,8 +1692,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="3695-c766-8954-ec3d" name="Saurian Warrior Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1583,6 +1716,13 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="bde0-90ec-c4c5-5e64" name="Saurian Warrior Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1643,14 +1783,20 @@
           <selectionEntries>
             <selectionEntry id="aafc-520d-c77c-310c" name="Piranha" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="ec7c-18f7-71ee-668a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0977-d6db-94fa-f6e9" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
+                </modifier>
+                <modifier type="set" field="3376-1737-c922-d448" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aafc-520d-c77c-310c" type="atLeast"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4415-1531-51a9-adb3" type="max"/>
+                <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3376-1737-c922-d448" type="min"/>
               </constraints>
               <rules>
                 <rule id="20d8-a7ca-5329-8e3c" name="Piranha" hidden="false">
@@ -1666,14 +1812,20 @@
             </selectionEntry>
             <selectionEntry id="6cd6-0aa4-1ea3-9361" name="Serpent" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
                   <repeats>
-                    <repeat field="selections" scope="ec7c-18f7-71ee-668a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0977-d6db-94fa-f6e9" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
+                </modifier>
+                <modifier type="set" field="9d16-1e57-7444-04f5" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6cd6-0aa4-1ea3-9361" type="atLeast"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4708-7745-8d97-55c7" type="max"/>
+                <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d16-1e57-7444-04f5" type="min"/>
               </constraints>
               <rules>
                 <rule id="4713-c55c-c075-2a79" name="Serpent" hidden="false">
@@ -1689,14 +1841,20 @@
             </selectionEntry>
             <selectionEntry id="0653-8ee0-35f4-a39b" name="Jaguar" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="ec7c-18f7-71ee-668a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0977-d6db-94fa-f6e9" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
+                </modifier>
+                <modifier type="set" field="2a25-6aa2-d558-b813" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0653-8ee0-35f4-a39b" type="atLeast"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0d2-28ed-2c83-6bde" type="max"/>
+                <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a25-6aa2-d558-b813" type="min"/>
               </constraints>
               <rules>
                 <rule id="711e-4c87-45a4-95a9" name="Jaguar" hidden="false">
@@ -1709,14 +1867,20 @@
             </selectionEntry>
             <selectionEntry id="e159-6644-282e-e8ec" name="Crocodile" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
                   <repeats>
-                    <repeat field="selections" scope="ec7c-18f7-71ee-668a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0977-d6db-94fa-f6e9" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
+                </modifier>
+                <modifier type="set" field="a96d-2a73-90a2-82bf" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e159-6644-282e-e8ec" type="atLeast"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93fb-193a-d746-dfbe" type="max"/>
+                <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a96d-2a73-90a2-82bf" type="min"/>
               </constraints>
               <rules>
                 <rule id="2035-7c76-30a8-0c83" name="Crocodile" hidden="false">
@@ -1772,8 +1936,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="7ff1-0cf0-100c-243e" name="Skink Brave Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1793,9 +1955,16 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
               </characteristics>
             </profile>
+            <profile id="3d63-1b43-d666-b9f9" name="Skink Brave Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="8.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="7.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dee4-4137-3f7d-da2d" name="Caiman" hidden="false" collective="false" type="model">
@@ -1815,8 +1984,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="f63e-bc10-b3dc-67c8" name="Caiman Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1836,6 +2003,13 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
+            <profile id="86c4-aec9-b0bd-07c1" name="Caiman Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <rules>
             <rule id="0d51-7039-ebc4-0a73" name="Combined Strength" hidden="false">
@@ -1851,7 +2025,7 @@
             <infoLink id="d6ec-3864-0cb8-57ec" name="Born Predator" hidden="false" targetId="dc2d-109e-9221-8880" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4c8e-77ed-4d4d-eb5a" name="Banner Enchantments" hidden="false" collective="false" type="upgrade">
@@ -1925,7 +2099,7 @@
         <entryLink id="a67e-6d58-8e33-effb" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f841-4839-8388-1b9c" name="Skink Braves with Poisoned Javelins" hidden="false" collective="false" type="unit">
@@ -1970,8 +2144,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="74f3-2fdf-9cdf-efee" name="Skink Brave Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1991,9 +2163,16 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
               </characteristics>
             </profile>
+            <profile id="e292-819a-7e2d-bfa6" name="Skink Brave Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="12.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="11.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2ca1-a6f0-7ede-2223" name="Caiman" hidden="false" collective="false" type="model">
@@ -2013,8 +2192,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="6c9a-079a-7228-6b43" name="Caiman Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2034,6 +2211,13 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
+            <profile id="830a-8251-c7fc-b70f" name="Caiman Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <rules>
             <rule id="909d-bc9c-deb8-7722" name="Combined Strength" hidden="false">
@@ -2049,7 +2233,7 @@
             <infoLink id="565e-84c9-1366-6783" name="Born Predator" hidden="false" targetId="dc2d-109e-9221-8880" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d6ca-b49a-4664-224d" name="Banner Enchantments" hidden="false" collective="false" type="upgrade">
@@ -2083,7 +2267,7 @@
         <entryLink id="5bd4-bbfc-2b1b-0d11" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9dd1-eabb-2bae-1eaa" name="Temple Guard" hidden="false" collective="false" type="unit">
@@ -2124,8 +2308,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="54d5-7bf6-d8b9-d062" name="Temple Guard Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2145,12 +2327,19 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
+            <profile id="8582-8fa0-fa2e-6243" name="Temple Guard Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <categoryLinks>
             <categoryLink id="41b1-099f-7dff-cdb4" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false"/>
           </categoryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="32.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="33.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7459-c625-7b4e-3eda" name="Banner Enchantments" hidden="false" collective="false" type="upgrade">
@@ -2184,7 +2373,7 @@
         <entryLink id="7034-f2c9-76d2-ba90" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-115.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="307e-bcd7-0a5a-1fa9" name="Raptor Riders" hidden="false" collective="false" type="unit">
@@ -2214,8 +2403,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
             <profile id="796b-f5f3-1992-8d12" name="Raptor Rider Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2244,12 +2431,19 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
+            <profile id="f16c-64db-91bf-193b" name="Raptor Rider Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <categoryLinks>
             <categoryLink id="9cae-a84e-f2fc-823b" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false"/>
           </categoryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1192-6bc7-db61-2e67" name="Banner Enchantments" hidden="false" collective="false" type="upgrade">
@@ -2283,7 +2477,7 @@
         <entryLink id="59f8-ba2c-6e86-c202" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="56f2-0046-f90a-d2cf" name="Caimans" hidden="false" collective="false" type="unit">
@@ -2312,8 +2506,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="7887-ea77-1811-804a" name="Caiman Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2331,6 +2523,13 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="465f-fdb4-33aa-145a" name="Caiman Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2359,9 +2558,9 @@
             </selectionEntry>
             <selectionEntry id="16f9-8004-7d66-99ae" name="Great Weapon" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="6">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
                   <repeats>
-                    <repeat field="selections" scope="56f2-0046-f90a-d2cf" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5e05-40b7-db4a-4e7f" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -2382,7 +2581,7 @@
         <entryLink id="5cd3-f1cd-210e-53db" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-30.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="889f-5702-f98f-1605" name="Snake Swarms" hidden="false" collective="false" type="unit">
@@ -2416,8 +2615,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">10</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="620c-f3b3-0052-0608" name="Snake Swarm Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2437,16 +2634,23 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
               </characteristics>
             </profile>
+            <profile id="76fa-4463-f050-fac8" name="Snake Swarms Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4127-dc90-b37a-bb7b" name="Scout" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="12">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="7.0">
               <repeats>
-                <repeat field="selections" scope="889f-5702-f98f-1605" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2258-f13c-792c-80aa" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2462,7 +2666,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6b51-ef75-d0bd-20d6" name="Skink Hunters" hidden="false" collective="false" type="unit">
@@ -2499,8 +2703,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="362e-4672-db3c-6dc0" name="Skink Hunter Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2520,9 +2722,16 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
               </characteristics>
             </profile>
+            <profile id="98f5-97e7-7062-b408" name="Skink Hunter Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="14.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="12.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3eaa-51fa-7cb8-eede" name="Champion" hidden="false" collective="false" type="upgrade">
@@ -2589,7 +2798,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c47d-f1d3-eaf7-54e1" name="Chameleons" hidden="false" collective="false" type="unit">
@@ -2626,16 +2835,14 @@
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="805b-d297-fb25-c2cf" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0a08-a9fe-e6d6-d2c4" name="Skink Hunter Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="0a08-a9fe-e6d6-d2c4" name="Chameleon Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
               <characteristics>
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="2b8a-f455-3360-9554" name="Skink Hunter Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="2b8a-f455-3360-9554" name="Chameleon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
@@ -2643,7 +2850,7 @@
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
               </characteristics>
             </profile>
-            <profile id="6bf7-ccbf-406b-cfbe" name="Skink Hunter Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="6bf7-ccbf-406b-cfbe" name="Chameleon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
@@ -2652,9 +2859,16 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
               </characteristics>
             </profile>
+            <profile id="9324-0312-8350-2e25" name="Chameleon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="18.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="083a-b4e4-f1b9-226e" name="Champion" hidden="false" collective="false" type="upgrade">
@@ -2667,41 +2881,13 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b559-dce8-c95d-fc08" name="Weapon Beasts" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5df-1edf-4f29-797a" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="d298-188b-b40f-65ff" name="Weapon Beasts Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9324-cace-82a6-ff5c" name="Weapon Beasts Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2532-ec6d-57c9-b74b" name="Weapon Beasts Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="b52c-9103-b617-b372" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
         <infoLink id="42e3-b6df-ff42-1e67" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
@@ -2715,61 +2901,100 @@
         <categoryLink id="3df6-9bef-04de-85bd" name="New CategoryLink" hidden="false" targetId="0a69-f7af-e4da-3ad0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="865f-aebd-d259-dbf7" name="Spearback" hidden="false" collective="false" type="model">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="b559-dce8-c95d-fc08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a0cf-fa78-91ab-de9d" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="6ed8-9821-4c5e-f77d" name="Weapon Beast" hidden="false" collective="false" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="976e-8b8c-4465-a72c" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74bf-d8b6-f558-e00d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19ee-bc5a-de6a-5310" type="min"/>
           </constraints>
           <profiles>
-            <profile id="e144-8211-ff12-b26b" name="Shoot Spikes" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+            <profile id="a57a-b25b-2f97-2313" name="Weapon Beast Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
-                <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">18&quot;</characteristic>
-                <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">2D6</characteristic>
-                <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
-                <characteristic name="AP" typeId="857a-4ce1-d134-8701">2</characteristic>
-                <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire. Cannot be used if the model performed a March move. Must declare Stand and Shoot as a Charge Reaction if possible, but does not suffer -1 to hit modifier.</characteristic>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="e020-c01e-e3ea-658c" name="Weapon Beast Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+              <characteristics>
+                <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
+                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f4c1-972e-5827-0870" name="Weapon Beast Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="c53f-15a7-6089-695c" name="Weapon Beast Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a0cf-fa78-91ab-de9d" name="Salamander" hidden="false" collective="false" type="model">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="b559-dce8-c95d-fc08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="865f-aebd-d259-dbf7" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b9c-8799-0f33-a805" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fdc3-be71-dd09-b27c" name="Spout Flames" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">8&quot;</characteristic>
-                <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-                <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
-                <characteristic name="AP" typeId="857a-4ce1-d134-8701">1</characteristic>
-                <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Flame Thrower Artillery Weapon, Flaming Attacks. If a Misfire is rolled, the Salamander always counts as rolling the 5+ Malfunction result.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="aaa4-9efe-afcb-3f38" name="Species" hidden="false" collective="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1fa-fa8a-add1-684e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fda-e95a-1556-e306" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8f22-e3f1-d323-568e" name="Spearback" hidden="false" collective="false" type="model">
+              <constraints>
+                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e7e-78dd-894c-2c94" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2321-26e8-f887-dfe3" name="Shoot Spikes" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">18&quot;</characteristic>
+                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">2D6</characteristic>
+                    <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
+                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">2</characteristic>
+                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire. Cannot be used if the model performed a March move. Must declare Stand and Shoot as a Charge Reaction if possible, but does not suffer -1 to hit modifier.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="6cc5-659f-6409-a35e" name="Salamander" hidden="false" collective="false" type="model">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="30.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="feee-af53-4787-e95f" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="a20f-b5c2-9053-0cd2" name="Spout Flames" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">8&quot;</characteristic>
+                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
+                    <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
+                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">1</characteristic>
+                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Flame Thrower Artillery Weapon, Flaming Attacks. If a Misfire is rolled, the Salamander always counts as rolling the 5+ Malfunction result.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e0b7-f470-5bd9-2343" name="Pteradon Sentries" hidden="false" collective="false" type="unit">
@@ -2806,8 +3031,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (9&quot;)</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (18&quot;)</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
             <profile id="2598-29f9-5ae8-c488" name="Pteradon Sentry Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2836,16 +3059,23 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
               </characteristics>
             </profile>
+            <profile id="36c4-4b8a-97cb-d09b" name="Pteradon Sentry Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5c36-96fc-cc98-7910" name="Shield" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
               <repeats>
-                <repeat field="selections" scope="e0b7-f470-5bd9-2343" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74e7-e743-41a4-a508" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2892,9 +3122,9 @@
             </selectionEntry>
             <selectionEntry id="16fd-bf48-8a19-27ac" name="Fire Bola (4+)" hidden="false" collective="false" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
                   <repeats>
-                    <repeat field="selections" scope="e0b7-f470-5bd9-2343" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="74e7-e743-41a4-a508" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -2920,7 +3150,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6e90-3f58-5696-193e" name="Ramphodon Riders" hidden="false" collective="false" type="unit">
@@ -2966,8 +3196,6 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (8&quot;)</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (16&quot;)</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
               </characteristics>
             </profile>
             <profile id="07e7-509f-2d95-53d2" name="Ramphodon Rider Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2996,16 +3224,23 @@
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
               </characteristics>
             </profile>
+            <profile id="7de5-e0e5-9f16-c0b4" name="Ramphodon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="62.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3228-1b46-622d-e3ed" name="Shield" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="8">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="9.0">
               <repeats>
-                <repeat field="selections" scope="6e90-3f58-5696-193e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c9bd-3e81-e42d-c4e1" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -3029,10 +3264,10 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="29.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7aec-c5e2-0281-0b84" name="Taurosaur" hidden="false" collective="false" type="model">
+    <selectionEntry id="7aec-c5e2-0281-0b84" name="Taurosaur" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="774b-1fa0-6a9b-9082" type="max"/>
       </constraints>
@@ -3042,8 +3277,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="b3e5-b4e5-0ce6-de85" name="Taurosaur Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3070,6 +3303,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e1e7-2039-fbca-fd60" name="Taurosaur Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3141,9 +3381,6 @@
                   </characteristics>
                 </profile>
               </profiles>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-              </costs>
             </selectionEntry>
             <selectionEntry id="13c6-218c-5392-bed0" name="Engine of the Ancients" hidden="false" collective="false" type="upgrade">
               <constraints>
@@ -3153,17 +3390,17 @@
                 <infoLink id="c774-989e-48d9-2203" name="Engine of the Ancients" hidden="false" targetId="bca6-c3cb-3ba2-61f1" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="450.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="455.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5f37-052e-e523-e174" name="Stygiosaur" hidden="false" collective="false" type="model">
+    <selectionEntry id="5f37-052e-e523-e174" name="Stygiosaur" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3af8-829a-02f1-cab5" type="max"/>
       </constraints>
@@ -3173,8 +3410,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
         <profile id="4149-3fc6-f1a8-caca" name="Stygiosaur Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3201,6 +3436,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ed78-5eab-bfd2-9ed4" name="Stygiosaur Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3245,10 +3487,10 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="305.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="295.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4c39-d252-7c8a-162b" name="Thyroscutus" hidden="false" collective="false" type="model">
+    <selectionEntry id="4c39-d252-7c8a-162b" name="Thyroscutus" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b9f7-fb1c-2df0-d105" type="max"/>
       </constraints>
@@ -3258,8 +3500,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
         <profile id="18d7-3e50-fdb1-9dd1" name="Thyroscutus Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3286,6 +3526,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="720e-e380-deb5-cd96" name="Thyroscutus Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3347,17 +3594,17 @@
                 </rule>
               </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="320.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="280.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="31c1-8fb9-67db-b5b9" name="Skink Captain on Flying Mount" hidden="false" collective="false" type="model">
+    <selectionEntry id="31c1-8fb9-67db-b5b9" name="Skink Captain on Flying Mount" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="decrement" field="3265-ec6d-5129-c6f7" value="1">
           <repeats>
@@ -3374,8 +3621,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="d666-2987-4dd4-203c" name="Skink Captain Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3393,6 +3638,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="695d-5740-16df-c4fe" name="Skink Captain Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3620,14 +3872,14 @@
                 <entryLink id="47f8-25ac-2586-777b" name="Alpha Ramphodon" hidden="false" collective="false" targetId="966e-fff0-4a98-0db0" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -3643,8 +3895,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
         <profile id="20da-1fb4-2a77-edc4" name="Carnosaur Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3662,6 +3912,13 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="355d-094c-6802-b25f" name="Carnosaur Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3693,8 +3950,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="9e3e-348f-6b9e-19ca" name="Alpha Carnosaur Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3712,6 +3967,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">7</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">4</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b48a-69a4-1043-afbe" name="Alpha Carnosaur Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3744,8 +4006,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard </characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
         <profile id="9085-8056-662f-f5f4" name="Raptor Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3763,6 +4023,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2d15-95b3-4516-e8fc" name="Raptor Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3811,8 +4078,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (9&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (18&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
         <profile id="5523-5147-0f8d-f946" name="Alpha Pteradon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3830,6 +4095,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ff4a-ed47-308a-f7e3" name="Alpha Pteradon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3861,8 +4133,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (8&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (16&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
         <profile id="afc2-f8c0-e41d-d4a0" name="Alpha Ramphodon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3880,6 +4150,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0265-0b95-c3df-ac86" name="Alpha Ramphodon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3913,8 +4190,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="1174-3591-782b-fbc4" name="Taurosaur Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3941,6 +4216,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c4cb-e970-21d6-58a5" name="Taurosaur Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4042,8 +4324,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="1edd-bc2e-a277-2d1b" name="Skink Palanquin Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -4061,6 +4341,20 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5"/>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6"/>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
+          </characteristics>
+        </profile>
+        <profile id="55ad-0fe6-4ab2-a572" name="Skink Palanquin Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <modifiers>
+            <modifier type="set" field="7bbb-3d47-ed57-284d" value="40×40">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="768f-08f7-625a-b582" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4091,6 +4385,11 @@
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="768f-08f7-625a-b582" name="Shrink" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6ba-eb1c-7054-e803" type="max"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -4145,7 +4444,7 @@
             <entryLink id="0026-296e-f7be-d205" name="Shield Enchantement" hidden="false" collective="false" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4186,7 +4485,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4210,7 +4509,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3be5-23e9-c563-1149" name="Spirit of the Stampede" hidden="false" collective="false" type="upgrade">
@@ -4261,7 +4560,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5c28-afe3-e354-1ff1" name="Ancient Plaque - Dominant" hidden="false" collective="false" type="upgrade">
@@ -4278,7 +4577,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b076-fc34-9bc5-edc8" name="Obsidian Tesseract" hidden="false" collective="false" type="upgrade">
@@ -4295,7 +4594,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c756-6eeb-7d35-a790" name="Sphere of Shielding" hidden="false" collective="false" type="upgrade">
@@ -4312,7 +4611,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9cd3-1be3-7559-0fcb" name="Sun Tablet" hidden="false" collective="false" type="upgrade">
@@ -4329,7 +4628,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0372-9675-c91d-0b92" name="Raptor Spirit - Models on foot only" hidden="false" collective="false" type="upgrade">
