@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.2.2" revision="36" battleScribeVersion="2.02" authorName="Artur &apos;WarX&apos; Fijalkowski, DarkSky, koniu699" authorContact="wiki.warx@gmail.com" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.2.2" revision="37" battleScribeVersion="2.02" authorName="Artur &apos;WarX&apos; Fijalkowski, DarkSky, koniu699" authorContact="wiki.warx@gmail.com" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="3f95-f87e-5df2-4102" name="T9A – Daemon Legions"/>
   </publications>
   <profileTypes>
-    <profileType id="e6e2-5027-c8f6-da13" name="2 Defensive">
+    <profileType id="e6e2-5027-c8f6-da13" name="2 Defensive (DL)">
       <characteristicTypes>
         <characteristicType id="61df-0ca3-17b2-f001" name="HP"/>
         <characteristicType id="5b8d-8753-654e-d9f8" name="Def"/>
         <characteristicType id="f988-a51e-9e65-0291" name="Res"/>
         <characteristicType id="fdeb-4a6f-8679-2769" name="Arm"/>
         <characteristicType id="9820-1785-03cb-9eae" name="Aeg"/>
+        <characteristicType id="8f52-4c60-7457-72bf" name="Rules"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="946f-2c1a-ffab-293b" name="3 Offensive">
+    <profileType id="946f-2c1a-ffab-293b" name="3 Offensive (DL)">
       <characteristicTypes>
         <characteristicType id="e9a7-9590-af60-1be6" name="Att"/>
         <characteristicType id="b767-2d7a-52d9-f1ba" name="Off"/>
@@ -77,39 +78,24 @@
         <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4005-01cc-8d70-8f98" type="max"/>
       </constraints>
       <profiles>
-        <profile id="d9b0-f273-1467-c27f" name="Omen of Savar" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="97b3-ca59-67ea-42ab" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b792-274a-14b1-0986" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="d9b0-f273-1467-c27f" name="Omen of Savar Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="49ff-8f89-7fe6-aaf0" name="Omen of Savar" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="97b3-ca59-67ea-42ab" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b792-274a-14b1-0986" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="49ff-8f89-7fe6-aaf0" name="Omen of Savar Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">8</characteristic>
+            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">7</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">6+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Aegis (4+, against Magical Attacks)</characteristic>
           </characteristics>
         </profile>
-        <profile id="bdf0-c06d-54ef-9c92" name="Omen of Savar" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="bdf0-c06d-54ef-9c92" name="Omen of Savar Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">D6+2</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">D6+5</characteristic>
@@ -117,6 +103,13 @@
             <characteristic name="AP" typeId="6779-0c09-2d7f-5077">3</characteristic>
             <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">6</characteristic>
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
+          </characteristics>
+        </profile>
+        <profile id="a727-4e89-d613-da54" name="Omen of Savar Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -227,20 +220,19 @@
                     <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot; (9&quot;)</characteristic>
                     <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">9&quot; (9&quot;)</characteristic>
                     <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-                    <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                    <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="594a-efc8-3135-b1e1" name="Throne of Overwhelming Splendour" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+                <profile id="594a-efc8-3135-b1e1" name="Throne of Overwhelming Splendour" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
                   <characteristics>
                     <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
                     <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">8</characteristic>
                     <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
                     <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
                     <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+                    <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
                   </characteristics>
                 </profile>
-                <profile id="3814-df9c-1c64-f298" name="Writhing Majesties" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+                <profile id="3814-df9c-1c64-f298" name="Writhing Majesties" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
                   <characteristics>
                     <characteristic name="Att" typeId="e9a7-9590-af60-1be6">4</characteristic>
                     <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
@@ -250,7 +242,7 @@
                     <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="8b18-8fbb-df40-a533" name="Chasis Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+                <profile id="8b18-8fbb-df40-a533" name="Chasis Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
                   <characteristics>
                     <characteristic name="Att" typeId="e9a7-9590-af60-1be6"/>
                     <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba"/>
@@ -327,33 +319,6 @@
     </selectionEntry>
     <selectionEntry id="e7fc-b37b-7e58-d098" name="Imps" hidden="false" collective="false" type="unit">
       <profiles>
-        <profile id="8231-1457-b9d9-edd1" name="Imp" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="52f6-e4c5-5abd-56ba" name="Imp" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">2</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">2</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d8ed-713c-e2c3-cf60" name="Imp" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">2</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-          </characteristics>
-        </profile>
         <profile id="01a6-ab51-f634-7221" name="Energy Bolts (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
           <characteristics>
             <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">24&quot;</characteristic>
@@ -384,12 +349,48 @@
         <categoryLink id="50cd-15d0-53e2-4a8e" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="61cf-25a0-3b8d-9a50" name="Imps" hidden="false" collective="false" type="model">
+        <selectionEntry id="61cf-25a0-3b8d-9a50" name="Imp" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fde-43a6-20c9-45d0" type="max"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0118-8b80-ee81-a683" type="min"/>
             <constraint field="selections" scope="roster" value="40.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ec66-39dd-c797-1de5" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="4c74-a262-4b60-d224" name="Imp Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="55a9-c877-d737-a9a0" name="Imp Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">2</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">2</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Aegis (3+, against Shooting Attacks)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="779d-334e-9716-2af0" name="Imp Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">2</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">2</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Energy Bolts (4+)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="99da-85c4-e056-68ba" name="Imp Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
@@ -470,36 +471,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f464-9fb4-b866-0a3e" name="Lemures" hidden="false" collective="false" type="unit">
-      <profiles>
-        <profile id="0a09-3507-8c57-3f47" name="Lemure" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4edd-84b9-1fdc-3239" name="Lemure" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="78d9-5494-a9ba-4d81" name="Lemure" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">2</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Parry</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="0bc7-c686-9c44-66d7" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
         <infoLink id="6231-2180-5cb8-8773" name="Parry" hidden="false" targetId="b828-8719-4807-b047" type="rule"/>
@@ -510,11 +481,47 @@
         <categoryLink id="a408-905f-c366-0adb" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="eb3a-85d3-8c64-d176" name="Lemures" hidden="false" collective="false" type="model">
+        <selectionEntry id="eb3a-85d3-8c64-d176" name="Lemure" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="054b-0021-8bca-6cf9" type="min"/>
             <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d055-aea5-d101-b4e0" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="7669-849e-2829-c10b" name="Lemure Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2d38-f18c-d37a-660a" name="Lemure Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Parry</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="1bc6-cd35-333d-b254" name="Lemure Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">2</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"></characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a3b5-24ef-dbd5-8b5d" name="Lemure Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="27.0"/>
           </costs>
@@ -582,36 +589,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="9587-d4f8-d13d-12e6" name="Succubi" hidden="false" collective="false" type="unit">
-      <profiles>
-        <profile id="29ca-0f62-9dcc-d353" name="Succubi" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1750-d2c8-3005-a234" name="Succubi" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">3</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="316d-18c8-4144-5c7e" name="Succubi" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">5</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule id="974b-f29c-de6a-385c" name="Talon Scythes" hidden="false">
           <description>Attacks made with Talon Scythes ignore Parry and, if allocated towards Standard or Large Infantry, gain a +1 to-hit modifier.</description>
@@ -626,11 +603,47 @@
         <categoryLink id="e62e-71c8-629e-1f4e" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="7fbc-2a84-e5fb-2935" name="Succubi" hidden="false" collective="false" type="model">
+        <selectionEntry id="7fbc-2a84-e5fb-2935" name="Succubus" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fabd-7378-6768-ca1a" type="max"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a86e-51a2-c433-0078" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="5f83-8107-fa9f-cfea" name="Succubus Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">3</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
+              </characteristics>
+            </profile>
+            <profile id="7452-3ac9-7ed4-0337" name="Succubus Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b37c-9c61-ac45-92ff" name="Succubi Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">5</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Talon Scythes</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="637e-9481-023a-84aa" name="Succubus Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="19.0"/>
           </costs>
@@ -698,26 +711,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8951-670c-406a-6f6e" name="Myrmidons" hidden="false" collective="false" type="unit">
-      <profiles>
-        <profile id="740a-253a-aab6-80d9" name="Myrmidon" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="e589-628d-af80-45ee" name="Myrmidon" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">3</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="5510-75f6-9ebc-b22b" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="13f8-c3f0-a237-b31b" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
@@ -727,17 +720,52 @@
             <modifier type="append" field="name" value=" (Battle Focus)"/>
           </modifiers>
         </infoLink>
-        <infoLink id="95ea-5bb7-376f-a8b3" name="Myrmidon" hidden="false" targetId="971c-d3b1-52c3-e841" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1665-eb0f-e32b-fc71" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9e7a-a418-15c8-4607" name="Myrmidons" hidden="false" collective="false" type="model">
+        <selectionEntry id="9e7a-a418-15c8-4607" name="Myrmidon" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afcf-34df-9114-1d25" type="max"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4f7-a6d6-0c3e-c31e" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="7cf9-bbfa-dda7-0f64" name="Myrmidon Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4a9a-466b-a79e-d756" name="Myrmidon Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">3</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
+              </characteristics>
+            </profile>
+            <profile id="5710-4139-be4d-54a1" name="Myrmidon Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">5</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Devastating Charge (Battle Focus), Fight in Extra Rank</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8c19-d10d-e9f9-54da" name="Myrmidon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="22.0"/>
           </costs>
@@ -806,7 +834,7 @@
     </selectionEntry>
     <selectionEntry id="7902-bc18-757d-a8d5" name="Sentinel of Nukuja" hidden="false" collective="false" type="unit">
       <modifiers>
-        <modifier type="decrement" field="2d5f-b100-31c6-6891" value="1">
+        <modifier type="decrement" field="2d5f-b100-31c6-6891" value="1.0">
           <repeats>
             <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0273-a07f-ea20-2fe2" repeats="1" roundUp="false"/>
           </repeats>
@@ -816,16 +844,17 @@
         <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d5f-b100-31c6-6891" type="max"/>
       </constraints>
       <profiles>
-        <profile id="508e-841d-ca5f-db76" name="Sentinel of Nukuja" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="508e-841d-ca5f-db76" name="Sentinel of Nukuja Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
-        <profile id="2003-9a62-d593-04d0" name="Sentinel of Nukuja" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="2003-9a62-d593-04d0" name="Sentinel of Nukuja Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
@@ -835,13 +864,11 @@
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Crush Attack</characteristic>
           </characteristics>
         </profile>
-        <profile id="3e89-349f-1600-852f" name="Sentinel of Nukuja" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="3e89-349f-1600-852f" name="Sentinel of Nukuja Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="c19c-e738-51dc-4906" name="Dominion of Sloth" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
@@ -857,25 +884,24 @@
             <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain Aegis (4+, against Special Attacks).</characteristic>
           </characteristics>
         </profile>
-        <profile id="6e5b-6c51-c030-61ac" name="Throne of the Oracle" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="6e5b-6c51-c030-61ac" name="Throne of the Oracle Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
           </characteristics>
         </profile>
-        <profile id="e8f5-ca08-928b-c5ce" name="Throne of the Oracle" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="e8f5-ca08-928b-c5ce" name="Throne of the Oracle Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">C</characteristic>
+            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">C</characteristic>
+            <characteristic name="Res" typeId="f988-a51e-9e65-0291">C</characteristic>
+            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">C</characteristic>
+            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">C</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
-        <profile id="e2ce-fda3-3718-c3e6" name="Throne of the Oracle" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="e2ce-fda3-3718-c3e6" name="Throne of the Oracle Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">4</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
@@ -883,6 +909,13 @@
             <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
             <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">2</characteristic>
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f13b-e404-edca-48d0" name="Sentinel of Nukuja Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -989,36 +1022,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="eb16-a4aa-0483-bc03" name="Eidolons" hidden="false" collective="false" type="unit">
-      <profiles>
-        <profile id="aefb-194d-8efa-4354" name="Eidolon" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="28d2-e11e-f210-b72f" name="Eidolon" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">2</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769"/>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">6+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3a3e-dc3e-d87a-2e0f" name="Eidolon" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">2</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">2</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Dark Fire (4+)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="a47d-96f8-2655-74f7" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
         <infoLink id="21d3-0577-cdb6-c319" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
@@ -1047,12 +1050,48 @@
         <categoryLink id="df5d-8e01-3087-d0bc" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="cde6-6ea0-a46e-445e" name="Eidolons" hidden="false" collective="false" type="model">
+        <selectionEntry id="cde6-6ea0-a46e-445e" name="Eidolon" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d616-103c-6a84-3da5" type="min"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3562-9931-d8fa-9a42" type="max"/>
             <constraint field="selections" scope="roster" value="18.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d02-da18-e6d3-fe87" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="b086-8ae8-cf33-ef29" name="Eidolon Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="ecab-3f14-fc9e-70d9" name="Eidolon Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">2</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">6+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Aegis (4+, against Magical Attacks), Hard Target (1)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4d57-a2fa-88c5-aaf5" name="Eidolon Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">2</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">2</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Dark Fire (4+)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="9a08-16a0-c435-547e" name="Eidolon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="33.0"/>
           </costs>
@@ -1191,36 +1230,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="3a0d-aa65-df02-01df" name="Hellhounds" hidden="false" collective="false" type="unit">
-      <profiles>
-        <profile id="8808-a9eb-e0fc-c429" name="Hellhound" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3509-b390-c384-4af3" name="Hellhound" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="90c6-617f-58aa-eae3" name="Hellhound" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Lethal Strike</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule id="37f6-deb6-cb08-b871" name="Hellish Growl" hidden="false">
           <description>At the start of each Round of Combat, enemy units in base contact with one or more models with Hellish Growl must take a Discipline Test with a -1 Discipline modifier. Units that fail this test suffer -1 Strength, and attacks from models with Hellish Growl against them must reroll failed to-wound rolls. The effects last until the end of the Round of Combat.</description>
@@ -1235,11 +1244,47 @@
         <categoryLink id="a239-039b-1384-8e6a" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="1565-65f1-fc22-8702" name="Hellhounds" hidden="false" collective="false" type="model">
+        <selectionEntry id="1565-65f1-fc22-8702" name="Hellhound" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d573-058c-6ae4-881c" type="max"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="674f-9432-07bf-aaf5" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="3722-164b-9481-7b39" name="Hellhound Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="75a4-392d-6995-d7ee" name="Hellhound Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
+              </characteristics>
+            </profile>
+            <profile id="a103-3303-24da-8975" name="Hellhound Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Lethal Strike</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="6982-b642-441e-fbe8" name="Hellhound Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
@@ -1334,8 +1379,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot; (9&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot; (9&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1380,8 +1423,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1420,20 +1461,19 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="8541-f8b5-5d56-7ab0" name="Maw of Akaan" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="8541-f8b5-5d56-7ab0" name="Maw of Akaan" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">9</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae"/>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
-        <profile id="db8b-4167-2f0c-5d28" name="Maw of Akaan" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="db8b-4167-2f0c-5d28" name="Maw of Akaan" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">6</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
@@ -1595,25 +1635,24 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b286-571e-4871-0c4e" type="max"/>
       </constraints>
       <profiles>
-        <profile id="9b5b-7aa7-3320-b0fa" name="Titanslayer Chariot" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="9b5b-7aa7-3320-b0fa" name="Titanslayer Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">6&quot;</characteristic>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">7&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
-        <profile id="5f83-eabf-1c8b-52a6" name="Titanslayer Chariot" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="5f83-eabf-1c8b-52a6" name="Titanslayer Chariot Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
-        <profile id="345e-ba1e-af30-1811" name="Cthonic Machinator" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="345e-ba1e-af30-1811" name="Cthonic Machinator Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
@@ -1623,14 +1662,31 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
           </characteristics>
         </profile>
-        <profile id="7b94-40ee-4baf-ff45" name="Titanslayer Chariot" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="7b94-40ee-4baf-ff45" name="Titanslayer Chariot Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6"/>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba"/>
             <characteristic name="Str" typeId="484b-4e16-7955-8837">7</characteristic>
             <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
             <characteristic name="Agi" typeId="b053-1905-7bef-a4b3"/>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Inanimate, Impact Hits</characteristic>
+            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Inanimate, Impact Hits (D3+1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f483-ccc7-949a-b4c5" name="Titanslayer Chariot Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a776-92d3-4618-fa5a" name="Myrmidon (2) Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+          <characteristics>
+            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
+            <characteristic name="Str" typeId="484b-4e16-7955-8837">5</characteristic>
+            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
+            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
+            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Devastating Charge (Battle Focus)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1652,11 +1708,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <infoLink id="780e-c3e6-edfd-3948" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (+2 Str, Battle Focus)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="9b76-b5a5-327f-7ffa" name="Myrmidon" hidden="false" targetId="971c-d3b1-52c3-e841" type="profile">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2)"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1715,13 +1766,11 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
     </selectionEntry>
     <selectionEntry id="6461-ecc2-b233-18d2" name="Kuulima&apos;s Deceiver" hidden="false" collective="false" type="upgrade">
       <profiles>
-        <profile id="3c66-977f-1b7a-e689" name="Kuulima’s Deceiver" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="3c66-977f-1b7a-e689" name="Kuulima’s Deceiver Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="fc49-973b-09f2-0644" name="Dominion of Envy" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
@@ -1735,6 +1784,33 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <characteristics>
             <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Envy</characteristic>
             <characteristic name="Description" typeId="2945-4921-f954-c0f5"/>
+          </characteristics>
+        </profile>
+        <profile id="ea3c-eca1-deb2-75fc" name="Kuulima&apos;s Deceiver Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4ffb-80d7-25b7-6517" name="Kuulima&apos;s Deceiver Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+          <characteristics>
+            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
+            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">6</characteristic>
+            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
+            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
+          </characteristics>
+        </profile>
+        <profile id="0f8c-7e4c-eed5-9a6e" name="Kuulima&apos;s Deceiver Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+          <characteristics>
+            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">6</characteristic>
+            <characteristic name="Str" typeId="484b-4e16-7955-8837">5</characteristic>
+            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
+            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">5</characteristic>
+            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Know Thyself, Poison Attacks</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1786,46 +1862,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7dc2-d57a-2cb3-91cc" name="Path of Magic" hidden="false" collective="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fa3-7c2c-e543-dd13" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04c0-2055-ab11-9289" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="b688-b9b4-508a-f79e" name="Evocation" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cdd-a971-aa31-0121" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="00ab-8962-b0f4-c8c0" name="Witchcraft" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf14-8617-967e-f5c3" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a519-7151-b9a9-024d" name="Divination" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf0a-97a3-b0e0-21ff" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a675-d30e-59fd-2ecf" name="Thaumaturgy" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f14c-9981-13c5-ee14" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="41ad-ae6c-84eb-a455" name="Wizard Level" hidden="false" collective="false" defaultSelectionEntryId="cd70-3261-6536-a5fd">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ca3-7176-9917-79de" type="max"/>
@@ -1881,13 +1917,11 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
     </selectionEntry>
     <selectionEntry id="4754-5b12-cdd0-97f5" name="Kuulima&apos;s Deceiver - Fly" hidden="false" collective="false" type="upgrade">
       <profiles>
-        <profile id="14b0-343b-1a70-08c4" name="Kuulima’s Deceiver - Fly" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="14b0-343b-1a70-08c4" name="Kuulima’s Deceiver Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot; (7&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot; (14&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="cee6-a581-be73-40c3" name="Dominion of Envy" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
@@ -1901,6 +1935,33 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <characteristics>
             <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Envy</characteristic>
             <characteristic name="Description" typeId="2945-4921-f954-c0f5"/>
+          </characteristics>
+        </profile>
+        <profile id="a2f5-1313-358f-884c" name="Kuulima&apos;s Deceiver Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e5c8-0167-3103-8e97" name="Kuulima&apos;s Deceiver Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+          <characteristics>
+            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
+            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">6</characteristic>
+            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
+            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
+          </characteristics>
+        </profile>
+        <profile id="c8bd-aab7-a8c5-fe2e" name="Kuulima&apos;s Deceiver Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+          <characteristics>
+            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">6</characteristic>
+            <characteristic name="Str" typeId="484b-4e16-7955-8837">5</characteristic>
+            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
+            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">5</characteristic>
+            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Know Thyself, Poison Attacks</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1959,46 +2020,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e0af-d0da-fc4e-3d6a" name="Path of Magic" hidden="false" collective="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fb0-d678-a530-b2eb" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67f8-7c1f-b929-1207" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="85ad-e226-fcf1-56c2" name="Evocation" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de60-b9c1-2227-afeb" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d9d4-b433-8701-2437" name="Witchcraft" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24ee-0899-b7bd-3c5e" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8424-8365-e786-0458" name="Divination" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b21-85df-30ae-b6f8" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3832-3cc3-2289-20cf" name="Thaumaturgy" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b363-7d78-4f84-25b5" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="4f3c-f9b3-eef3-59e5" name="Wizard Level" hidden="false" collective="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c29-5410-9d84-a09b" type="max"/>
@@ -2058,25 +2079,24 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b71d-bdfa-63a2-c262" type="max"/>
       </constraints>
       <profiles>
-        <profile id="2641-567e-23ed-4a27" name="Courtesan of Cibaresh" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="2641-567e-23ed-4a27" name="Courtesan of Cibaresh Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="5b29-01b3-7799-49dc" name="Courtesan of Cibaresh" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="5b29-01b3-7799-49dc" name="Courtesan of Cibaresh Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">6</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">7</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Distracting, Hard Target (1)</characteristic>
           </characteristics>
         </profile>
-        <profile id="daf7-d22d-151d-43ac" name="Courtesan of Cibaresh" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="daf7-d22d-151d-43ac" name="Courtesan of Cibaresh Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">6</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">7</characteristic>
@@ -2104,6 +2124,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <characteristics>
             <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Lust</characteristic>
             <characteristic name="Description" typeId="2945-4921-f954-c0f5">The model gains Strider. Units consisting entirely of models with Dominion of Lust must reroll failed Charge Range rolls if they are Located in the Charged unit’s Flank or Rear Facing when rolling their Charge Range in the Charge Phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d334-1e36-d438-7d06" name="Courtesan of Cibaresh Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2243,25 +2270,24 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="824f-2d48-1d03-0ebd" type="max"/>
       </constraints>
       <profiles>
-        <profile id="88dc-dd7a-9d8f-6514" name="Miser of Sugulag" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="88dc-dd7a-9d8f-6514" name="Miser of Sugulag Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="d6d5-a19d-169b-b847" name="Miser of Sugulag" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="d6d5-a19d-169b-b847" name="Miser of Sugulag Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">6</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">8</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">7</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Half Off, Abyssal Armour</characteristic>
           </characteristics>
         </profile>
-        <profile id="87bf-9a67-f1bd-3b2e" name="Miser of Sugulag" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="87bf-9a67-f1bd-3b2e" name="Miser of Sugulag Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">5</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
@@ -2289,6 +2315,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <characteristics>
             <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Greed</characteristic>
             <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain +2 Defensive Skill when their unit is in base contact with an enemy Scoring Unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="68b0-226d-91b5-d13f" name="Miser of Sugulag Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2426,26 +2459,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5912-346d-a32c-17ec" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="6eb3-8da6-2370-8410" name="Clawed Fiends" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="54e0-9823-7e08-168c" name="Clawed Fiends" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">3</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule id="5447-51f4-72fe-d52e" name="Smother" hidden="false">
           <description>If the attack is allocated towards a Large model, it gains +1 to hit and +1 to wound.</description>
@@ -2460,13 +2473,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <categoryLink id="dbed-65b7-ba16-bedc" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="3877-f472-efe1-5305" name="Clawed Fiends" hidden="false" collective="false" type="model">
+        <selectionEntry id="3877-f472-efe1-5305" name="Clawed Fiend" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7133-e79c-e6ac-b565" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff6c-dcc6-fc97-aa5c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="5017-bd4c-c8dc-fae7" name="Clawed Fiend" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+            <profile id="5017-bd4c-c8dc-fae7" name="Clawed Fiend Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
               <characteristics>
                 <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
                 <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
@@ -2474,6 +2487,30 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
                 <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
                 <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
                 <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Smother</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7c90-9e81-7b43-ee20" name="Clawed Fiend Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="19ad-6ee6-e268-ffd0" name="Clawed Fiend Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">3</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
+              </characteristics>
+            </profile>
+            <profile id="d48a-723c-1a0f-09f0" name="Clawed Fiend Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2550,20 +2587,19 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="3d88-0c2e-50fd-1daa" name="Mageblight Gremlins" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="3d88-0c2e-50fd-1daa" name="Mageblight Gremlins" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">3</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
-        <profile id="50b7-6421-9722-eec0" name="Mageblight Gremlin" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="50b7-6421-9722-eec0" name="Mageblight Gremlin" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">5</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
@@ -2667,36 +2703,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       </costs>
     </selectionEntry>
     <selectionEntry id="b36b-33b7-cfde-46c5" name="Hoarders" hidden="false" collective="false" type="unit">
-      <profiles>
-        <profile id="75ff-d318-0ce0-6b60" name="Hoarders" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="569f-d903-c4c9-1239" name="Hoarders" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">6</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="281a-6700-4a8f-e783" name="Hoarder" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">2</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Tightening Grasp</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule id="cba1-30b9-14db-6951" name="Tightening Grasp" hidden="false">
           <description>The model gains Grind Attacks (X), and can make Grind Attacks as Supporting Attacks. When the model is not Engaged in Combat, X is set to 0. At the end of each Round of Combat of a combat the model was Engaged in, X is increased by +1 (e.g. Grind Attacks (0) becomes Grind Attacks (1)).</description>
@@ -2712,11 +2718,47 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <categoryLink id="8cc2-a59d-c762-c0ac" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="dd73-9489-a20d-26cb" name="Hoarders" hidden="false" collective="false" type="model">
+        <selectionEntry id="dd73-9489-a20d-26cb" name="Hoarder" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="860c-dca8-33a7-dd02" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2aa-8b7b-366a-3297" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="4560-f3f3-a981-068c" name="Hoarder Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2c56-3c13-7e21-469b" name="Hoarder Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">6</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
+              </characteristics>
+            </profile>
+            <profile id="bfba-fa23-bf0e-05ad" name="Hoarder Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">2</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Tightening Grasp</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="57b4-c74b-73d5-6203" name="Hoarder" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="118.0"/>
           </costs>
@@ -2814,46 +2856,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a0fc-09a0-369a-1846" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="ec10-5a70-ebab-c4fc" name="Sirens" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4d87-a8bf-f55c-fac5" name="Sirens" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">3</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9dbe-16fe-eaf3-a06b" name="Siren" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">2</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
-          </characteristics>
-        </profile>
-        <profile id="ea99-ee1c-da55-015d" name="Pale Steed" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="141b-4199-2cfc-1a3c" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="d1a8-587a-4306-fb14" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
@@ -2876,11 +2878,57 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <categoryLink id="c60a-5ad1-f2c7-f036" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="31ca-045a-1cae-9f44" name="Sirens" hidden="false" collective="false" type="model">
+        <selectionEntry id="31ca-045a-1cae-9f44" name="Siren" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a80-3b42-1252-17b7" type="min"/>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fdb-c53b-d3dc-3475" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="2c20-f824-5e30-40f2" name="Siren Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="efba-3d66-e5e6-924e" name="Siren Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">3</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Hard Target (1)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a112-9535-971e-4624" name="Pale Steed Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f499-836f-c30b-9792" name="Siren Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">2</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
+              </characteristics>
+            </profile>
+            <profile id="e61d-aa35-2e69-b4ce" name="Siren Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="28.0"/>
           </costs>
@@ -2959,25 +3007,24 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ad7c-694b-1248-8aa7" type="max"/>
       </constraints>
       <profiles>
-        <profile id="5ea5-776f-69a8-f15c" name="Blazing Glory" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="5ea5-776f-69a8-f15c" name="Blazing Glory Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="6898-0438-7574-198f" name="Blazing Glory" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="6898-0438-7574-198f" name="Blazing Glory Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">*</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
-        <profile id="1249-f19c-026e-eeb1" name="Blazing Glory" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="1249-f19c-026e-eeb1" name="Blazing Glory Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">5</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">*</characteristic>
@@ -2985,6 +3032,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="AP" typeId="6779-0c09-2d7f-5077">5</characteristic>
             <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">5</characteristic>
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
+          </characteristics>
+        </profile>
+        <profile id="88a9-b492-1dfd-74ad" name="Blazing Glory Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3021,7 +3075,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="01eb-821e-8d4e-f4ae" type="max"/>
       </constraints>
       <profiles>
-        <profile id="0be1-9f06-058d-fd82" name="Blazing Glory" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="0be1-9f06-058d-fd82" name="Blazing Glory Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <modifiers>
             <modifier type="append" field="b0d9-2dab-f10b-9b13" value=" (7&quot;)"/>
             <modifier type="append" field="db10-a838-f72f-3ed6" value=" (14&quot;)"/>
@@ -3030,20 +3084,19 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="6751-6c7d-042b-33eb" name="Blazing Glory" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="6751-6c7d-042b-33eb" name="Blazing Glory Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">*</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
-        <profile id="4b36-6aa5-6e31-be4e" name="Blazing Glory" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="4b36-6aa5-6e31-be4e" name="Blazing Glory Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">5</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">*</characteristic>
@@ -3051,6 +3104,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="AP" typeId="6779-0c09-2d7f-5077">5</characteristic>
             <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">5</characteristic>
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
+          </characteristics>
+        </profile>
+        <profile id="3bff-542f-a0b0-81c0" name="Blazing Glory Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3082,32 +3142,31 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8139-c90d-3d0d-ca45" type="max"/>
       </constraints>
       <profiles>
-        <profile id="cce8-0c11-f188-17ec" name="Hope Harvester" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="cce8-0c11-f188-17ec" name="Hope Harvester Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="89e4-9893-1e41-b2e7" name="Hope Harvester" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="89e4-9893-1e41-b2e7" name="Hope Harvester Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">3</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
-        <profile id="c81f-5f85-a043-8aff" name="Hope Harvester" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="c81f-5f85-a043-8aff" name="Hope Harvester Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">4</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
             <characteristic name="Str" typeId="484b-4e16-7955-8837">6</characteristic>
             <characteristic name="AP" typeId="6779-0c09-2d7f-5077">3</characteristic>
             <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">1</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Aether Battery</characteristic>
+            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Aether Battery (3+)</characteristic>
           </characteristics>
         </profile>
         <profile id="7e0d-9f7b-99ee-8937" name="Aether Battery (3+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
@@ -3117,6 +3176,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
             <characteristic name="AP" typeId="857a-4ce1-d134-8701">1</characteristic>
             <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Volley Gun Artillery Weapon. Before rolling for the number of shots, the owner may choose to discard 1–3 Veil Tokens from its Veil token pool. If so, the number of shots is increased by +3 per discarded Veil Token.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="eec4-be4d-21d1-f9c0" name="Hope Harvester" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3203,46 +3269,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc02-3c06-cea5-5a1d" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="6b78-2430-6fd3-238a" name="Brazen Beasts" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1abe-c64e-8820-e19b" name="Brazen Beasts" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="c679-4687-99f8-c1c1" name="Brazen Beast" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">2</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">5</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">2</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Battle Focus, Harnessed, Impact Hits(2)</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="03ea-2cd6-6d35-977a" name="Daredevil" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Battle Focus, Devastating Charge (+2 Att, +2 Str, +2 AP)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="277d-3d20-da4c-8652" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
         <infoLink id="dee0-ce34-a781-c57b" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
@@ -3265,11 +3291,57 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <categoryLink id="734c-4b57-3f27-3574" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="7acb-110c-8915-81f5" name="Brazen Beasts" hidden="false" collective="false" type="model">
+        <selectionEntry id="7acb-110c-8915-81f5" name="Brazen Beast" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7286-f567-69f0-a791" type="max"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c29a-7b68-3ba5-9640" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="91f9-0c6a-4d41-cfe6" name="Brazen Beast Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="acc2-edad-1789-83b2" name="Brazen Beast Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
+              </characteristics>
+            </profile>
+            <profile id="f2f3-056b-62e2-5759" name="Brazen Beast Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">2</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">5</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">2</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Battle Focus, Harnessed, Impact Hits (2)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f8ca-40d7-3f79-38cc" name="Daredevil Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Battle Focus, Devastating Charge (+2 Att, +2 Str, +2 AP)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2b31-0903-8813-eb01" name="Brazen Beast Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×75</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="103.0"/>
           </costs>
@@ -3340,36 +3412,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e553-596e-9b35-0b6a" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="da09-0401-15b8-9439" name="Fury" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot; (10&quot;)</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot; (20&quot;)</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7cdf-784a-b66e-c14d" name="Fury" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">3</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">6+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="fed6-1598-9ccc-476e" name="Fury" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Devastating Charge (+1 Str)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="5fa0-a1ba-fded-28f1" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="a635-1097-8024-5f42" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
@@ -3395,11 +3437,47 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <categoryLink id="1618-552c-cdb5-b89b" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="fec9-abd8-770a-6892" name="Furies" hidden="false" collective="false" type="model">
+        <selectionEntry id="fec9-abd8-770a-6892" name="Fury" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9d4-a090-daae-94f7" type="min"/>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a182-04cd-83f4-6e93" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="2223-0540-5d92-77ed" name="Fury Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot; (10&quot;)</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot; (20&quot;)</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="5097-5a21-7136-ef09" name="Fury Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">3</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">6+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Hard Target (1)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8e70-650a-5cb2-4d92" name="Fury Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Devastating Charge (+1 Str)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2249-5c58-b6c3-8718" name="Fury Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="13.0"/>
           </costs>
@@ -3464,36 +3542,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       </costs>
     </selectionEntry>
     <selectionEntry id="6d20-3958-6227-4099" name="Veil Serpents" hidden="false" collective="false" type="unit">
-      <profiles>
-        <profile id="2b6c-0d56-cf5a-c4cd" name="Veil Serpents" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (9&quot;)</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (12&quot;)</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="b067-a12a-7d7d-caa1" name="Veil Serpents" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">3</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9df5-c8a6-5b40-1fc5" name="Veil Serpent" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule id="1bba-f834-77ff-b863" name="Morphlings" hidden="false">
           <description>During Spell Selection, each unit of Veil Serpents must choose a Manifestation from the list below and apply the effects during the game.
@@ -3517,11 +3565,47 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <categoryLink id="c5bf-2a0a-baf0-4cb1" name="New CategoryLink" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="7d2a-a811-df76-91a6" name="Veil Serpents" hidden="false" collective="false" type="model">
+        <selectionEntry id="7d2a-a811-df76-91a6" name="Veil Serpent" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="058e-3f76-f2c7-1e64" type="max"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad6e-034f-6c0b-1ca5" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="35eb-29dd-c1ee-7f1e" name="Veil Serpent Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (9&quot;)</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (12&quot;)</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2dd9-4292-c080-80fd" name="Veil Serpent Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">3</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
+              </characteristics>
+            </profile>
+            <profile id="ab9c-e807-4c6b-12cd" name="Veil Serpent Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
+              </characteristics>
+            </profile>
+            <profile id="c625-1a66-50bf-730f" name="Veil Serpent Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
@@ -3606,36 +3690,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04f5-464d-f543-f9b5" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="db8a-9523-fd14-b9b3" name="Bloat Flies" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (6&quot;)</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (12&quot;)</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5343-ee8e-1848-0258" name="Bloat Flies" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9c2d-1eef-0733-12d0" name="Bloat Fly" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="e9a7-9590-af60-1be6">4</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
-            <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
-            <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
-            <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
-            <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Acid Blood</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule id="120a-e48f-03ff-ba80" name="Acid Blood" hidden="false">
           <description>For each Health Point the model loses against Melee Attacks, the model that caused the wounding hit suffers 1 hit with Toxic Attacks.</description>
@@ -3656,11 +3710,47 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <categoryLink id="6bc4-be49-3ec3-b247" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="7a32-7e13-ff6a-b01b" name="Bloat Flies" hidden="false" collective="false" type="model">
+        <selectionEntry id="7a32-7e13-ff6a-b01b" name="Bloat Fly" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd73-b361-19ec-e61d" type="max"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bfc-5e73-cb7f-b3a2" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="3dbe-0f9c-9f46-c9f6" name="Bloat Fly Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">4</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">2</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Acid Blood</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b77f-ba42-a1c7-5254" name="Bloat Fly Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Fortitude (5+)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d5a0-445e-ad54-3692" name="Bloat Fly Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (6&quot;)</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (12&quot;)</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="1a49-1015-01c1-f55b" name="Bloat Fly Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×75</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
@@ -3729,28 +3819,27 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
     </selectionEntry>
     <selectionEntry id="a3f0-b200-8276-5593" name="Vanadra’s Scourge" hidden="false" collective="false" type="unit">
       <profiles>
-        <profile id="070c-9d8e-6df7-4629" name="Vanadra’s Scourge" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="070c-9d8e-6df7-4629" name="Vanadra’s Scourge Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot; (6&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot; (16&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="1fb1-fd4e-386a-ef9b" name="Vanadra’s Scourge" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="1fb1-fd4e-386a-ef9b" name="Vanadra’s Scourge Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">6</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">6</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Aegis (4+, against Melee Attacks)</characteristic>
           </characteristics>
         </profile>
-        <profile id="16f8-762a-6fda-e5a2" name="Vanadra’s Scourge" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="16f8-762a-6fda-e5a2" name="Vanadra’s Scourge Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">5</characteristic>
-            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">8</characteristic>
+            <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">9</characteristic>
             <characteristic name="Str" typeId="484b-4e16-7955-8837">7</characteristic>
             <characteristic name="AP" typeId="6779-0c09-2d7f-5077">4</characteristic>
             <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">0</characteristic>
@@ -3768,6 +3857,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <characteristics>
             <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Wrath</characteristic>
             <characteristic name="Description" typeId="2945-4921-f954-c0f5">Follows the rules for Dominion. The affected models cannot benefit from Parry, and their attacks ignore Parry.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a3b1-e78e-7111-b2ed" name="Vanadra’s Scourge Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3907,19 +4003,17 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0888-743e-ec4c-6db1" type="max"/>
       </constraints>
       <profiles>
-        <profile id="efda-428a-71d2-3ea6" name="Sentinel of Nukuja" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-          <modifiers>
-            <modifier type="increment" field="61df-0ca3-17b2-f001" value="1"/>
-          </modifiers>
+        <profile id="efda-428a-71d2-3ea6" name="Sentinel of Nukuja Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
+            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">6</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
-        <profile id="15ca-92cc-25aa-7dc8" name="Sentinel of Nukuja" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="15ca-92cc-25aa-7dc8" name="Sentinel of Nukuja Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
@@ -3929,18 +4023,11 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Crush Attack</characteristic>
           </characteristics>
         </profile>
-        <profile id="6b15-8e0a-21b6-0b57" name="Sentinel of Nukuja" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <modifiers>
-            <modifier type="append" field="b0d9-2dab-f10b-9b13" value=" (6&quot;)"/>
-            <modifier type="append" field="db10-a838-f72f-3ed6" value=" (18&quot;)"/>
-            <modifier type="set" field="2e17-9c12-bfb4-59b0" value="Gigantic"/>
-          </modifiers>
+        <profile id="6b15-8e0a-21b6-0b57" name="Sentinel of Nukuja Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot;</characteristic>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (6&apos;&apos;)</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (18&apos;&apos;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="1a82-9cdf-a23b-dbc9" name="Dominion of Sloth" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
@@ -3954,6 +4041,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <characteristics>
             <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Sloth</characteristic>
             <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain Aegis (4+, against Special Attacks).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a6e0-7c09-d918-1a1c" name="Sentinel of Nukuja Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4112,16 +4206,14 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b42-2ee6-e42b-5338" type="max"/>
       </constraints>
       <profiles>
-        <profile id="79af-42ba-7821-b7ff" name="Harbinger" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="79af-42ba-7821-b7ff" name="Harbinger Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
-        <profile id="62d0-e0ed-b062-a441" name="Harbinger" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+        <profile id="62d0-e0ed-b062-a441" name="Harbinger Offensive" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
           <characteristics>
             <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
             <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
@@ -4131,13 +4223,21 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
           </characteristics>
         </profile>
-        <profile id="7687-98fb-2cd7-3349" name="Harbinger" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+        <profile id="7687-98fb-2cd7-3349" name="Harbinger Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">3</characteristic>
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
+          </characteristics>
+        </profile>
+        <profile id="115a-3ae4-5632-16f9" name="Harbinger Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4445,20 +4545,19 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
                     <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                     <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                     <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                    <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                    <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="dc52-d0d2-3952-8bf1" name="Dark Pulpit" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+                <profile id="dc52-d0d2-3952-8bf1" name="Dark Pulpit" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
                   <characteristics>
                     <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
                     <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
                     <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
                     <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">1</characteristic>
                     <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+                    <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
                   </characteristics>
                 </profile>
-                <profile id="763a-8721-8acb-1b1e" name="Dark Pulpit" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+                <profile id="763a-8721-8acb-1b1e" name="Dark Pulpit" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
                   <characteristics>
                     <characteristic name="Att" typeId="e9a7-9590-af60-1be6">4</characteristic>
                     <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
@@ -4494,11 +4593,9 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
                     <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
                     <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
                     <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                    <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                    <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="4224-dd09-cbdf-7adb" name="Pale Horse" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+                <profile id="4224-dd09-cbdf-7adb" name="Pale Horse" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
                   <characteristics>
                     <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
                     <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
@@ -4508,13 +4605,14 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
                     <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="c287-a258-088e-9d12" name="Pale Horse" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+                <profile id="c287-a258-088e-9d12" name="Pale Horse" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
                   <characteristics>
                     <characteristic name="HP" typeId="61df-0ca3-17b2-f001">3</characteristic>
                     <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
                     <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
                     <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
                     <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+                    <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4550,20 +4648,19 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
                     <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (9&quot;)</characteristic>
                     <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (18&quot;)</characteristic>
                     <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                    <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                    <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="0c62-67f2-4ba1-c477" name="Burning Wheel" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+                <profile id="0c62-67f2-4ba1-c477" name="Burning Wheel" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
                   <characteristics>
                     <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
                     <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
                     <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
                     <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
                     <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+                    <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
                   </characteristics>
                 </profile>
-                <profile id="9fe2-0f55-2489-6a1a" name="Burning Wheel" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+                <profile id="9fe2-0f55-2489-6a1a" name="Burning Wheel" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
                   <characteristics>
                     <characteristic name="Att" typeId="e9a7-9590-af60-1be6">2</characteristic>
                     <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
@@ -4612,20 +4709,19 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
                     <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
                     <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
                     <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                    <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                    <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="2244-ebf2-05d9-abaf" name="Great Beast of Prophecy" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
+                <profile id="2244-ebf2-05d9-abaf" name="Great Beast of Prophecy" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
                   <characteristics>
                     <characteristic name="HP" typeId="61df-0ca3-17b2-f001">3</characteristic>
                     <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
                     <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
                     <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
                     <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
+                    <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
                   </characteristics>
                 </profile>
-                <profile id="2851-7986-766c-74be" name="Great Beast of Prophecy" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
+                <profile id="2851-7986-766c-74be" name="Great Beast of Prophecy" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
                   <characteristics>
                     <characteristic name="Att" typeId="e9a7-9590-af60-1be6">3</characteristic>
                     <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
@@ -5949,26 +6045,70 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c60e-91e9-f369-ed29" type="max"/>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66b6-cab6-2671-ced1" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="56e0-5cb9-ed5c-124b" name="Threshing Engine Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&apos;&apos;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&apos;&apos;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a949-0c93-df30-1364" name="Threshing Engine Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="84df-18ab-b3dc-b99d" name="Threshing Engine Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Hard Target (1)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f144-e08c-4f0d-433a" name="Tiller (2)" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">2</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">3</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"></characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8e04-4a95-093f-6592" name="Chassis" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6"/>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba"/>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">3</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3"/>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Impact Hits (2D3), Inanimate</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="74ce-cc3b-9dd2-e3a2" name="Draft Beast (2)" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="5da4-5cfb-ae25-fc84" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
             <infoLink id="edc6-d2c3-9210-00f9" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
-            <infoLink id="ebc8-e8d8-819e-a4ab" name="Threshing Engine" hidden="false" targetId="a49d-d4de-b22a-5daa" type="profile"/>
             <infoLink id="7533-b386-87fd-1763" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
               <modifiers>
                 <modifier type="append" field="name" value=" (1)"/>
               </modifiers>
             </infoLink>
-            <infoLink id="5aaf-f5cd-db8f-1e10" name="Tillers" hidden="false" targetId="f548-7a9f-b4f1-a1d9" type="profile">
-              <modifiers>
-                <modifier type="append" field="name" value=" (2)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="80bf-6a70-f052-f16e" name="Draft Beasts" hidden="false" targetId="dca4-19c6-fbb5-c514" type="profile">
-              <modifiers>
-                <modifier type="append" field="name" value=" (2)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="fc76-b0d5-9ea4-f981" name="Threshing Engine Chasis" hidden="false" targetId="c1b9-a025-08aa-b3b0" type="profile"/>
             <infoLink id="83f7-9d8c-624d-d71b" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
               <modifiers>
                 <modifier type="append" field="name" value=" (2D3)"/>
@@ -5995,13 +6135,63 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1f5-f6b6-254d-fab7" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="a8e4-5b3a-cb26-6735" name="Threshing Engine Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">100×150</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="1e18-2234-5f06-19ec" name="Threshing Engine Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&apos;&apos;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&apos;&apos;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="fe98-71fa-1635-a085" name="Threshing Engine Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">8</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Hard Target (1)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="e502-5034-821a-2d2b" name="Chassis" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6"/>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba"/>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">3</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3"/>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Impact Hits (4D3), Inanimate</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7f89-15d4-1690-2b45" name="Draft Beast (4)" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b5fc-35af-3563-b0ba" name="Tiller (4)" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">2</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">3</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"></characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
-            <infoLink id="5a27-f9ed-118a-6d74" name="Threshing Engine" hidden="false" targetId="a49d-d4de-b22a-5daa" type="profile">
-              <modifiers>
-                <modifier type="set" field="61df-0ca3-17b2-f001" value="8"/>
-                <modifier type="append" field="name" value=" Legion"/>
-              </modifiers>
-            </infoLink>
             <infoLink id="197d-775b-2652-3f6a" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
               <modifiers>
                 <modifier type="append" field="name" value=" (1)"/>
@@ -6009,17 +6199,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             </infoLink>
             <infoLink id="dda7-b12d-2994-cbf7" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
             <infoLink id="b1a8-21ad-0e66-1e99" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
-            <infoLink id="ab16-765f-7191-fefa" name="Tillers" hidden="false" targetId="f548-7a9f-b4f1-a1d9" type="profile">
-              <modifiers>
-                <modifier type="append" field="name" value=" (4)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="5cca-cdf2-695a-e675" name="Draft Beasts" hidden="false" targetId="dca4-19c6-fbb5-c514" type="profile">
-              <modifiers>
-                <modifier type="append" field="name" value=" (4)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="5232-bf73-9287-4c70" name="Threshing Engine Chasis" hidden="false" targetId="c1b9-a025-08aa-b3b0" type="profile"/>
             <infoLink id="b843-3e63-5228-4210" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
               <modifiers>
                 <modifier type="append" field="name" value=" (4D3)"/>
@@ -6027,6 +6206,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             </infoLink>
             <infoLink id="54c7-7fcc-143e-b312" name="Inanimate" hidden="false" targetId="ca83-2dad-d908-5f4c" type="rule"/>
             <infoLink id="fa30-9747-c338-efe4" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+            <infoLink id="74b1-d7d0-4470-d6f9" name="Colossal Stature" hidden="false" targetId="fcdf-ed43-7444-3103" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="300.0"/>
@@ -6043,13 +6223,63 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a5f-6123-2258-7891" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="6564-d13e-b2ab-aad7" name="Threshing Engine Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">100×100</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="5e38-fa24-5466-8085" name="Threshing Engine Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&apos;&apos;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&apos;&apos;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="71a3-0a50-d342-ac7d" name="Threshing Engine Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
+              <characteristics>
+                <characteristic name="HP" typeId="61df-0ca3-17b2-f001">6</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
+                <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Hard Target (1)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8e57-1d09-61b3-5821" name="Chassis" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6"/>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba"/>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">3</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3"/>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Impact Hits (3D3), Inanimate</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="62e2-da6f-5f7b-3441" name="Draft Beast (3)" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a2a8-0640-73ef-db49" name="Tiller (3)" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive (DL)">
+              <characteristics>
+                <characteristic name="Att" typeId="e9a7-9590-af60-1be6">2</characteristic>
+                <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
+                <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
+                <characteristic name="AP" typeId="6779-0c09-2d7f-5077">3</characteristic>
+                <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
+                <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"></characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
-            <infoLink id="4055-3780-ae98-8ff0" name="Threshing Engine" hidden="false" targetId="a49d-d4de-b22a-5daa" type="profile">
-              <modifiers>
-                <modifier type="set" field="61df-0ca3-17b2-f001" value="6"/>
-                <modifier type="append" field="name" value=" Horde"/>
-              </modifiers>
-            </infoLink>
             <infoLink id="8323-c11d-d634-46ec" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
               <modifiers>
                 <modifier type="append" field="name" value=" (1)"/>
@@ -6057,17 +6287,6 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             </infoLink>
             <infoLink id="b11b-f7a4-1268-16aa" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
             <infoLink id="b66e-5d4f-4854-bdd2" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
-            <infoLink id="08aa-5684-1cec-b8cd" name="Tillers" hidden="false" targetId="f548-7a9f-b4f1-a1d9" type="profile">
-              <modifiers>
-                <modifier type="append" field="name" value=" (3)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="2397-0682-c613-681d" name="Draft Beasts" hidden="false" targetId="dca4-19c6-fbb5-c514" type="profile">
-              <modifiers>
-                <modifier type="append" field="name" value=" (3)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="0e6c-4bb2-19c7-8381" name="Threshing Engine Chasis" hidden="false" targetId="c1b9-a025-08aa-b3b0" type="profile"/>
             <infoLink id="2660-1e0c-7a52-e5e5" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
               <modifiers>
                 <modifier type="append" field="name" value=" (3D3)"/>
@@ -6075,6 +6294,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             </infoLink>
             <infoLink id="35a6-0245-769b-d21f" name="Inanimate" hidden="false" targetId="ca83-2dad-d908-5f4c" type="rule"/>
             <infoLink id="e9a4-6467-e858-b095" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+            <infoLink id="dc08-4628-b873-5787" name="Colossal Stature" hidden="false" targetId="fcdf-ed43-7444-3103" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="235.0"/>
@@ -6483,6 +6703,10 @@ Multiple Wounds) is reduced by 1, to a minimum of 1.</description>
     <rule id="90cf-6591-ffa0-a360" name="Whipcrack Tail" hidden="false">
       <description>The model gains Lightning Reflexes.</description>
     </rule>
+    <rule id="fcdf-ed43-7444-3103" name="Colossal Stature" hidden="false">
+      <description>Universal Rule
+The model counts as Gigantic for the purpose of determining the number of Full Ranks.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="c6d3-8078-cdfc-c72d" name="Dark Fire" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
@@ -6492,55 +6716,6 @@ Multiple Wounds) is reduced by 1, to a minimum of 1.</description>
         <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
         <characteristic name="AP" typeId="857a-4ce1-d134-8701">0</characteristic>
         <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Accurate. Armour Save rolls of &apos;1&apos;, &apos;2&apos;, and &apos;3&apos; are always considered failed when saving wounds caused by Dark Fire.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="a49d-d4de-b22a-5daa" name="Threshing Engine" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive">
-      <characteristics>
-        <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
-        <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">4</characteristic>
-        <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
-        <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-        <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f548-7a9f-b4f1-a1d9" name="Tiller" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-      <characteristics>
-        <characteristic name="Att" typeId="e9a7-9590-af60-1be6">2</characteristic>
-        <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">4</characteristic>
-        <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
-        <characteristic name="AP" typeId="6779-0c09-2d7f-5077">3</characteristic>
-        <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
-        <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2"/>
-      </characteristics>
-    </profile>
-    <profile id="dca4-19c6-fbb5-c514" name="Draft Beast" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-      <characteristics>
-        <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
-        <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">3</characteristic>
-        <characteristic name="Str" typeId="484b-4e16-7955-8837">3</characteristic>
-        <characteristic name="AP" typeId="6779-0c09-2d7f-5077">0</characteristic>
-        <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">3</characteristic>
-        <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Harnessed</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c1b9-a025-08aa-b3b0" name="Threshing Engine" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-      <characteristics>
-        <characteristic name="Att" typeId="e9a7-9590-af60-1be6"/>
-        <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba"/>
-        <characteristic name="Str" typeId="484b-4e16-7955-8837">4</characteristic>
-        <characteristic name="AP" typeId="6779-0c09-2d7f-5077">3</characteristic>
-        <characteristic name="Agi" typeId="b053-1905-7bef-a4b3"/>
-        <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Inanimate, Impact Hits</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="971c-d3b1-52c3-e841" name="Myrmidon" hidden="false" typeId="946f-2c1a-ffab-293b" typeName="3 Offensive">
-      <characteristics>
-        <characteristic name="Att" typeId="e9a7-9590-af60-1be6">1</characteristic>
-        <characteristic name="Off" typeId="b767-2d7a-52d9-f1ba">5</characteristic>
-        <characteristic name="Str" typeId="484b-4e16-7955-8837">5</characteristic>
-        <characteristic name="AP" typeId="6779-0c09-2d7f-5077">1</characteristic>
-        <characteristic name="Agi" typeId="b053-1905-7bef-a4b3">4</characteristic>
-        <characteristic name="Rules" typeId="4713-eeae-87ae-0ef2">Devastating Charge (Battle Focus)</characteristic>
       </characteristics>
     </profile>
     <profile id="aa87-31a3-9d33-f27d" name="Spear of Infinity" hidden="false" typeId="654a-9b5c-962c-4f80" typeName="X Spell">
@@ -6607,28 +6782,6 @@ Multiple Wounds) is reduced by 1, to a minimum of 1.</description>
         <characteristic name="Type" typeId="b6ee-c0b1-7832-0e4f">Hex</characteristic>
         <characteristic name="Duration" typeId="ada6-44ac-7daa-aa57">One turn</characteristic>
         <characteristic name="Effect" typeId="7839-02e6-d607-a978">&lt;Immediately after successfully casting this spell, roll a D6.&gt; {Choose which effect to apply when casting the spell.} • &lt;If 1–3 is rolled,&gt; the target suffers −1 Resilience. • &lt;If 4–6 is rolled,&gt; the target suffers −1 Strength and −1 Armour Penetration.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="5edc-0bf7-e39d-1a55" name="Know Thine Enemy" hidden="false" typeId="654a-9b5c-962c-4f80" typeName="X Spell">
-      <characteristics>
-        <characteristic name="Path" typeId="defe-1234-5678-9123">Div</characteristic>
-        <characteristic name="()" typeId="7d29-0690-1ee2-439d">1</characteristic>
-        <characteristic name="CV" typeId="3af6-c708-7574-2df9">&lt;7+&gt; {12+}</characteristic>
-        <characteristic name="Range" typeId="c180-7151-56ab-fd5b">&lt;18&quot;&gt; &lt;6&quot; Aura&gt;</characteristic>
-        <characteristic name="Type" typeId="b6ee-c0b1-7832-0e4f">Augment</characteristic>
-        <characteristic name="Duration" typeId="ada6-44ac-7daa-aa57">One Turn</characteristic>
-        <characteristic name="Effect" typeId="7839-02e6-d607-a978">The target gains +2 Offensive Skill, +2 Defensive Skill, and +2 Agility.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e373-5fc8-7a3c-301a" name="Spectral Blades" hidden="false" typeId="654a-9b5c-962c-4f80" typeName="X Spell">
-      <characteristics>
-        <characteristic name="Path" typeId="defe-1234-5678-9123">Evo</characteristic>
-        <characteristic name="()" typeId="7d29-0690-1ee2-439d">1</characteristic>
-        <characteristic name="CV" typeId="3af6-c708-7574-2df9">&lt;5+&gt; {9+}</characteristic>
-        <characteristic name="Range" typeId="c180-7151-56ab-fd5b">18&quot;</characteristic>
-        <characteristic name="Type" typeId="b6ee-c0b1-7832-0e4f">Augment</characteristic>
-        <characteristic name="Duration" typeId="ada6-44ac-7daa-aa57">One Trun</characteristic>
-        <characteristic name="Effect" typeId="7839-02e6-d607-a978">The target must reroll failed to-wound rolls with its Melee Attacks {and gains Lethal Strike}.</characteristic>
       </characteristics>
     </profile>
     <profile id="7dd6-4e17-a494-b913" name="Evocation of Souls" hidden="false" typeId="654a-9b5c-962c-4f80" typeName="X Spell">
