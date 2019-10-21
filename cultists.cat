@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="baa8-f7ce-e46d-ad72" name="Cultists 0.1" revision="1" battleScribeVersion="2.02" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="baa8-f7ce-e46d-ad72" name="Cultists 0.1" revision="2" battleScribeVersion="2.02" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="93a9-b195-fea7-12ff" name="Summoned Daemons" hidden="false"/>
     <categoryEntry id="2f76-5aa4-554a-46bf" name="Summoned Daemons (Aves)" hidden="false"/>
+    <categoryEntry id="744c-c3fb-3ae7-392f" name="Gift from Divine Entity" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2792-3989-3c15-f69e" name="Cultists" hidden="false">
@@ -26,6 +27,18 @@
         <categoryLink id="ca5d-99e3-f571-4993" name="Summoned Aves Daemons" hidden="false" targetId="2f76-5aa4-554a-46bf" primary="false">
           <constraints>
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="663d-89b7-faaf-e066" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="87d0-7d30-b874-7c65" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false">
+          <modifiers>
+            <modifier type="increment" field="ff63-0b10-bf55-0e30" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="68a3-5585-1749-d935" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff63-0b10-bf55-0e30" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -68,11 +81,6 @@
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c1e7-71e3-168c-5e5c" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="2e17-9c12-bfb4-59b0" value="25×25">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="570e-d73a-11da-1ef9" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="decrement" field="b0d9-2dab-f10b-9b13" value="1">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
@@ -83,18 +91,11 @@
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="2e17-9c12-bfb4-59b0" value="25×25">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9254-8b1b-cd73-8912" type="equalTo"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">20x20</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="1bb1-d5be-9834-8c0f" name="Cult Leader Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -153,6 +154,25 @@
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
           </characteristics>
         </profile>
+        <profile id="64a8-8475-c4e4-2a81" name="Cult Leader Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <modifiers>
+            <modifier type="set" field="7bbb-3d47-ed57-284d" value="25×25">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="570e-d73a-11da-1ef9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7bbb-3d47-ed57-284d" value="25×25">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9254-8b1b-cd73-8912" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="cd8b-affb-fdb2-118d" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
@@ -182,55 +202,6 @@
             <infoLink id="bdb1-2ef5-193d-a07c" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
             <infoLink id="249a-53a5-43a7-b72f" name="Daemonic Summon" hidden="false" targetId="d43d-525d-83ec-eab1" type="rule"/>
           </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="e2c9-70d7-a9bd-c570" name="Gift from Divine Entity " hidden="false" collective="false">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1881-144a-1d5d-acce" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="2523-13b7-fa82-8f16" name="Veil Walker" hidden="false" collective="false" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="7697-398d-a284-6f61" name="Tablet of Ashuruk" hidden="false" collective="false" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="3b1a-7e4e-cdee-5fb4" name="Amulet of Spite" hidden="false" collective="false" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="5a85-e88f-e2b5-acce" name="Ledger of Souls" hidden="false" collective="false" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="72f0-f5ed-2262-d426" name="Ancient Plaque" hidden="false" collective="false" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="b7b5-217b-e4bb-de1e" name="Second Awakening" hidden="false" collective="false" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="02a4-592f-799e-1176" name="Skull Fetish" hidden="false" collective="false" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="5f51-513a-479f-f3c5" name="Unholy Tome" hidden="false" collective="false" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
           </costs>
@@ -272,6 +243,17 @@
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="91f0-6215-022b-b392" name="Veil Walker" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="273a-5667-d451-b352" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="1cd0-237a-c50b-fde9" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -390,11 +372,6 @@
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c1e7-71e3-168c-5e5c" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="2e17-9c12-bfb4-59b0" value="25×25">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9254-8b1b-cd73-8912" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="decrement" field="b0d9-2dab-f10b-9b13" value="1">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
@@ -405,18 +382,11 @@
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="2e17-9c12-bfb4-59b0" value="25×25">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="570e-d73a-11da-1ef9" type="equalTo"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">20×20</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="ace9-9976-9fb3-c1ef" name="Daemonic Symbiote Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -473,6 +443,25 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4736-fcc4-2069-8dda" name="Daemonic Symbiote Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <modifiers>
+            <modifier type="set" field="7bbb-3d47-ed57-284d" value="25×25">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9254-8b1b-cd73-8912" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7bbb-3d47-ed57-284d" value="25×25">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="570e-d73a-11da-1ef9" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -740,11 +729,6 @@
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c1e7-71e3-168c-5e5c" type="equalTo"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" field="2e17-9c12-bfb4-59b0" value="25×25">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
-                  </conditions>
-                </modifier>
                 <modifier type="decrement" field="b0d9-2dab-f10b-9b13" value="1">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
@@ -755,18 +739,30 @@
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" field="2e17-9c12-bfb4-59b0" value="25×25">
+              </modifiers>
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="110f-555d-4209-1e74" name="Cultist Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <modifiers>
+                <modifier type="set" field="7bbb-3d47-ed57-284d" value="25×25">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="7bbb-3d47-ed57-284d" value="25×25">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="570e-d73a-11da-1ef9" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">20×20</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -954,11 +950,6 @@
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c1e7-71e3-168c-5e5c" type="equalTo"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" field="2e17-9c12-bfb4-59b0" value="25×25">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="570e-d73a-11da-1ef9" type="equalTo"/>
-                  </conditions>
-                </modifier>
                 <modifier type="decrement" field="b0d9-2dab-f10b-9b13" value="1">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
@@ -969,18 +960,30 @@
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" field="2e17-9c12-bfb4-59b0" value="25×25">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9254-8b1b-cd73-8912" type="equalTo"/>
-                  </conditions>
-                </modifier>
               </modifiers>
               <characteristics>
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">20×20</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="ff93-d986-5079-9bcd" name="Possessed Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <modifiers>
+                <modifier type="set" field="7bbb-3d47-ed57-284d" value="25×25">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9254-8b1b-cd73-8912" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="7bbb-3d47-ed57-284d" value="25×25">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="570e-d73a-11da-1ef9" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1158,8 +1161,13 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">100×100</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="22e0-57fe-f9ea-e9a6" name="Ritual Altar Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">100×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1214,8 +1222,13 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">50×75</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fd14-4e64-2ef0-c92b" name="Profane Idol Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×75</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1277,8 +1290,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="baf6-3c2c-e565-20fd" name="Imp Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1334,6 +1345,15 @@
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="533b-f7db-bd09-5ca3" type="min"/>
             <constraint field="selections" scope="roster" value="40.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d78d-b18b-e0d0-5831" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="32ad-373a-4549-0aa2" name="Imp Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
@@ -1420,8 +1440,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="2104-5044-46f5-8919" name="Succubi" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1461,6 +1479,15 @@
             <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4065-7a19-4f69-86eb" type="max"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b32-9c2e-2c62-3f48" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="f903-9d77-6a3d-8fb4" name="Succubus Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="19.0"/>
           </costs>
@@ -1534,8 +1561,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="0952-8146-d770-071c" name="Lemure" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1571,6 +1596,15 @@
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a25-5fd4-087a-8096" type="min"/>
             <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="06bc-ea17-34c1-7437" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="178a-9d5f-dd3f-3931" name="Lemure Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="27.0"/>
           </costs>
@@ -1644,8 +1678,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="5674-946a-1969-bbbb" name="Myrmidon" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1685,6 +1717,15 @@
             <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2e2-385a-19d8-fea7" type="max"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74e1-53cc-3a77-6a2e" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="5222-112e-f49d-fab4" name="Myrmidon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="22.0"/>
           </costs>
@@ -1768,8 +1809,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="9eeb-da81-2e29-4fde" name="Blazing Glory" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1787,6 +1826,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">5</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a72e-e1bc-9906-6c09" name="Blazing Glory Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1832,8 +1878,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="ce6a-d4c4-4de8-2ace" name="Blazing Glory" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1851,6 +1895,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">5</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e5b9-a46c-6937-03fc" name="Blazing Glory Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1887,8 +1938,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (6&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (12&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="bc86-54c9-f9d7-fb50" name="Bloat Flies" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1935,6 +1984,15 @@
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="374b-7811-a70d-99ec" type="max"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d333-90e6-67d8-d593" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="4d6e-4ea5-f429-bf6e" name="Bloat Fly Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×75</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
@@ -2011,8 +2069,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
         <profile id="f5de-0ac1-410e-c885" name="Brazen Beasts" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2069,6 +2125,15 @@
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="022d-bcd8-15dc-b651" type="max"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="614d-9e4e-775b-cd83" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="bbe2-85c4-0d41-5927" name="Brazen Beast Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×75</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="103.0"/>
           </costs>
@@ -2145,8 +2210,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="bf2f-1a26-4f12-f404" name="Clawed Fiends" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2185,6 +2248,13 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="e460-c0db-0fee-6518" name="Clawed Fiend Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2261,8 +2331,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="8ad1-dfcc-03b6-ae99" name="Eidolon" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2306,12 +2374,21 @@
         <categoryLink id="806f-e40c-0bbd-d493" name="New CategoryLink" hidden="false" targetId="93a9-b195-fea7-12ff" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="0372-36ce-d75e-4ef9" name="Eidolons" hidden="false" collective="false" type="model">
+        <selectionEntry id="0372-36ce-d75e-4ef9" name="Eidolon" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="794b-d1a0-c294-4ab3" type="min"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f463-fa41-434b-2be7" type="max"/>
             <constraint field="selections" scope="roster" value="18.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dba8-eae8-36f9-b167" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="bf98-2e93-33b3-9065" name="Eidolon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="33.0"/>
           </costs>
@@ -2445,8 +2522,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot; (10&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot; (20&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="d474-2e12-ae39-335a" name="Fury" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2493,11 +2568,20 @@
         <categoryLink id="7d56-d4ba-25cd-466c" name="Summoned Aves Daemons" hidden="false" targetId="2f76-5aa4-554a-46bf" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="d474-84bf-9b7f-0cce" name="Furies" hidden="false" collective="false" type="model">
+        <selectionEntry id="d474-84bf-9b7f-0cce" name="Fury" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba1b-ece4-3df3-d88e" type="min"/>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a43f-bbdc-98f6-ba01" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="1bcc-0218-be87-1050" name="Eidolon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="13.0"/>
           </costs>
@@ -2568,8 +2652,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="3ca9-6aa3-cf69-8767" name="Hellhound" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2604,11 +2686,20 @@
         <categoryLink id="39a2-1025-659a-0e97" name="New CategoryLink" hidden="false" targetId="93a9-b195-fea7-12ff" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="1255-c576-e6ce-489f" name="Hellhounds" hidden="false" collective="false" type="model">
+        <selectionEntry id="1255-c576-e6ce-489f" name="Hellhound" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50f0-3f3c-d4e0-7296" type="max"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52ad-f287-d8c9-f19f" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="ae49-13a7-483a-f239" name="Hellhound Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
@@ -2700,8 +2791,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="79d0-e82c-9370-7e50" name="Hoarders" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2742,6 +2831,15 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="128c-48f0-bcc0-918c" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15c1-134e-0c3b-fa75" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="d9b5-0279-4149-cfd4" name="Hoarder Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="118.0"/>
           </costs>
@@ -2845,8 +2943,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="dafe-7051-77c0-a86d" name="Hope Harvester" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2873,6 +2969,13 @@
             <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
             <characteristic name="AP" typeId="857a-4ce1-d134-8701">1</characteristic>
             <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Volley Gun Artillery Weapon. Before rolling for the number of shots, the owner may choose to discard 1–3 Veil Tokens from its Veil token pool. If so, the number of shots is increased by +3 per discarded Veil Token.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dff0-a1f1-1774-4655" name="Hope Harvester Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2948,8 +3051,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="4b1b-327b-75a7-004e" name="Mageblight Gremlins" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2999,6 +3100,15 @@
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd06-3f54-4226-91d9" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1c2-d84e-a8e5-1d19" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="6b73-b836-5fe6-8ae4" name="Mageblight Gremlin Size" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">Standard</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">Beast</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">40×40</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="39.0"/>
           </costs>
@@ -3072,8 +3182,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
         <profile id="22ad-1af2-df29-c893" name="Sirens" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3129,6 +3237,15 @@
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="082c-61ee-ab08-38b0" type="min"/>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cb6-4deb-150b-fc85" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="6167-1f58-202f-8723" name="Siren Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="28.0"/>
           </costs>
@@ -3202,8 +3319,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3242,8 +3357,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot; (9&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot; (9&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3291,8 +3404,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">6&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
         <profile id="3d18-a882-a76a-02a9" name="Titanslayer Chariot" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3319,6 +3430,13 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">7</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
+          </characteristics>
+        </profile>
+        <profile id="17a9-a866-c43c-a749" name="Titanslayer Chariot Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3403,8 +3521,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (9&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (12&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="c313-45c2-69f1-2828" name="Veil Serpents" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3449,11 +3565,20 @@
         <categoryLink id="3d55-58f1-ceea-5561" name="Summoned Aves Daemons" hidden="false" targetId="2f76-5aa4-554a-46bf" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="711d-3c4a-0656-f311" name="Veil Serpents" hidden="false" collective="false" type="model">
+        <selectionEntry id="711d-3c4a-0656-f311" name="Veil Serpent" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10a1-5487-27ce-a141" type="max"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a2f-7dad-3601-f202" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="001f-dd07-10e5-f17f" name="Veil Serpent Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
@@ -3555,6 +3680,9 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8e5-4c55-ba31-e9b4" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="d20e-a72c-60b4-2d4a" name="The Dishonoured (Dwarves)" hidden="false" collective="false" type="upgrade">
               <constraints>
@@ -3575,6 +3703,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -4035,6 +4166,83 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="16a6-c8de-cbbf-94de" name="Tablet of Ashuruk" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3a9-86f3-fc2e-d957" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="a7e9-4d44-d61f-6e0d" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f4d7-f6a6-42fc-52f1" name="Amulet of Spite" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db62-fe5f-15d8-2abf" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="7688-32ba-0157-013f" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="56f5-b73b-206f-baee" name="Ledger of Souls (Dominant)" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96fa-15d7-bad9-3492" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="19d0-21a9-c44d-70e1" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5221-e174-ae7b-314d" name="Ancient Plaque (Dominant)" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="170b-d2a5-f405-bb2b" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="b923-9654-0860-ef20" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b94e-756d-0c60-faf5" name="Second Awakening" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9137-5c01-70cd-1323" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="e294-ba23-51f8-5263" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="76a4-b4f6-fe00-19f8" name="Skull Fetish (Dominant)" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3474-7998-ec12-53d6" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="311a-fd6d-7ea2-bf85" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d48a-b138-cea9-1ecc" name="Unholy Tome (Dominant)" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfd0-bbf0-6568-da66" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="55ba-9d41-2a9e-a2dd" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="bc4e-cf2c-812a-db38" name="Manifestations of Threshing Engine" hidden="false" collective="false">
@@ -4081,6 +4289,15 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d837-e159-8e86-1283" type="max"/>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d6c-c264-4332-d173" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="4eee-b2da-a3e5-781a" name="Threshing Engine Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="aaff-f32f-4739-3dc0" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
             <infoLink id="ec91-bc1f-32df-d775" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
@@ -4115,6 +4332,15 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83c6-61aa-a360-320f" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="fe69-92a3-6c6d-9d37" name="Threshing Engine Legion Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">100×150</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="0220-13be-88da-a1e1" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
               <modifiers>
@@ -4146,6 +4372,15 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="984c-b2a7-749b-f558" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="e5d3-35c7-9d35-9fb1" name="Threshing Engine Horde Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">100×100</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="530b-8352-e43e-4a0c" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
               <modifiers>
