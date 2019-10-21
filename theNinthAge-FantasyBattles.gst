@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.1" revision="27" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.1" revision="28" battleScribeVersion="2.02" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -18,6 +18,7 @@
         <characteristicType id="4d4a-2100-804f-99e5" name="Str"/>
         <characteristicType id="7a8c-adb0-d1b8-a1b6" name="AP"/>
         <characteristicType id="2a23-367f-8828-c297" name="Agi"/>
+        <characteristicType id="44e9-6a3e-7471-8b36" name="Rules"/>
       </characteristicTypes>
     </profileType>
     <profileType id="e7d3-5099-e669-c365" name="2 Defensive">
@@ -26,6 +27,7 @@
         <characteristicType id="160d-4624-273f-2114" name="Def"/>
         <characteristicType id="ec15-bc66-645e-db5d" name="Res"/>
         <characteristicType id="597b-8735-3dd1-0e70" name="Arm"/>
+        <characteristicType id="91c5-9d30-bda7-cf14" name="Rules"/>
       </characteristicTypes>
     </profileType>
     <profileType id="a00c-d586-ee68-ed21" name="6 Ranged Weapon">
