@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cb95-d0ac-2627-c23e" name="The Vermin Swarm 2.0" revision="21" battleScribeVersion="2.02" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cb95-d0ac-2627-c23e" name="The Vermin Swarm 2.1" revision="22" battleScribeVersion="2.02" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="1c57-fa6c-295c-c49c" name="Tunnel Gunners" hidden="false"/>
     <categoryEntry id="a4b6-d53f-821c-9216" name="Built and Bred" hidden="false"/>
@@ -39,7 +39,7 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="187a-c2bf-67dd-6ccb" name="Vermin Daemon" hidden="false" collective="false" type="model">
+    <selectionEntry id="187a-c2bf-67dd-6ccb" name="Vermin Daemon" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c923-a291-e316-5126" type="max"/>
       </constraints>
@@ -49,8 +49,6 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic </characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="b59b-a924-1709-d8a2" name="Vermin Daemon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -59,6 +57,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">8</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (5+), Aegis (4+, against Magical Attacks)</characteristic>
           </characteristics>
         </profile>
         <profile id="639b-d6d4-54b9-28de" name="Vermin Daemon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -68,12 +67,20 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">10</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">9</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+        <profile id="a6c7-e48e-0cfc-32aa" name="Vermin Daemon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">75×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
         <rule id="6da4-5ed5-68ab-19f3" name="Schemer" hidden="false">
-          <description>Spells cast by the model gain +3&quot; Range. The model knows an additional spell, and must select spells from Divination. If a Vermin Daemon is included in the Army, the Tunnel Gunners category is reduced to 25%.</description>
+          <description>Spells cast by the model gain +3&quot; range. The model knows one additional spell, and selects its spells from Divination and The Awakened Swarm (Hereditary Spell). If a Vermin Daemon is part of the army, the Tunnel Gunners Category is reduced to “Max. 25%”.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -99,26 +106,32 @@
         <entryLink id="1319-afbc-74e4-fcff" name="Army General" hidden="false" collective="false" targetId="335b-c901-c159-fbed" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="820.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="850.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5c78-3f78-630a-1645" name="Tyrant" hidden="false" collective="false" type="model">
+    <selectionEntry id="5c78-3f78-630a-1645" name="Tyrant" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="0574-f87a-7fc1-2fb4" name="Tyrant Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="7d93-a749-e52c-8bd3" name="Tyrant Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <modifiers>
+            <modifier type="set" field="91c5-9d30-bda7-cf14" value="Heavy Armour">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d444-4d45-e7c9-f426" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="f284-5fc6-8a7c-b61a" name="Tyrant Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -128,6 +141,14 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">7</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+        <profile id="a1b1-c8ae-3fbb-4830" name="Tyrant Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -191,18 +212,26 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="299e-6877-1693-ad27" name="Shield" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6f96-e998-6e0f-3251" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8173-6976-8305-9e35" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="cba9-ca15-fae9-8fb4" name="Armour" hidden="false" collective="false" defaultSelectionEntryId="a3a8-ac23-81ed-4a13">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52bb-b71a-6e93-c3e0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0349-d7c3-24ab-6ecf" type="min"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="a3a8-ac23-81ed-4a13" name="Light Armour" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3408-4aa2-6416-281f" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d444-4d45-e7c9-f426" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3408-4aa2-6416-281f" type="max"/>
               </constraints>
@@ -214,29 +243,11 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="d444-4d45-e7c9-f426" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3bbd-c156-e14d-5c13" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3a8-ac23-81ed-4a13" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3bbd-c156-e14d-5c13" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="1ddc-6f05-ec27-f8eb" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2d4b-0d22-9b6c-54a0" name="Shield" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f75f-bb2f-69f4-3df5" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c700-8a79-551d-c58d" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
@@ -284,7 +295,7 @@
                 <infoLink id="ace2-dd7b-cdde-7fef" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6c0a-1454-4753-676c" name="Halberd" hidden="false" collective="false" type="upgrade">
@@ -295,7 +306,7 @@
                 <infoLink id="92f9-d1b8-4807-249f" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -313,7 +324,7 @@
                 <entryLink id="0898-45bf-4fc4-6161" name="Vermin Guard Litter" hidden="false" collective="false" targetId="7cfd-df04-3e1b-e2be" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="18de-060b-79f8-054a" name="Vermin Hulk Bodyguard" hidden="false" collective="false" type="upgrade">
@@ -338,7 +349,7 @@
                 <entryLink id="d509-b8d4-e718-2211" name="Monstrous Rat" hidden="false" collective="false" targetId="6998-b2ad-5bd8-255b" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="185.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -348,10 +359,10 @@
         <entryLink id="adf3-9b63-b77d-541d" name="Army General" hidden="false" collective="false" targetId="335b-c901-c159-fbed" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="145.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7e18-69c5-daac-8d07" name="Chief" hidden="false" collective="false" type="model">
+    <selectionEntry id="7e18-69c5-daac-8d07" name="Chief" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2269-051b-87b8-5c9b" type="max"/>
       </constraints>
@@ -373,16 +384,22 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="97a7-e180-876d-31e4" name="Chief Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <modifiers>
+            <modifier type="set" field="91c5-9d30-bda7-cf14" value="Heavy Armour">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f22e-c4f4-d6db-4258" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="7410-e8d9-f966-79ee" name="Chief Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -392,6 +409,14 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+        <profile id="6505-48ba-74c7-be04" name="Chief Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -519,21 +544,29 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
             </rule>
           </rules>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="41db-663f-995a-2a5e" name="Shield" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="097c-170d-2d8f-b430" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="2e1e-fb51-5488-47d9" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9cdc-3faf-e5f7-7a73" name="Armour" hidden="false" collective="false">
+        <selectionEntryGroup id="9cdc-3faf-e5f7-7a73" name="Armour" hidden="false" collective="false" defaultSelectionEntryId="fd3d-2088-d0ee-9e5f">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6539-6446-c1ec-3797" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="622d-2a94-2f9d-d2ae" type="max"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="fd3d-2088-d0ee-9e5f" name="Light Armour" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="7540-c616-94ee-0705" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f22e-c4f4-d6db-4258" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7540-c616-94ee-0705" type="max"/>
               </constraints>
@@ -545,29 +578,11 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
               </costs>
             </selectionEntry>
             <selectionEntry id="f22e-c4f4-d6db-4258" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="6ecb-5b5e-03f6-7839" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd3d-2088-d0ee-9e5f" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6ecb-5b5e-03f6-7839" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="eacd-0efe-edc1-32e5" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c310-fc5e-aa02-ec71" name="Shield" hidden="false" collective="false" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f8a-3a5e-850a-785a" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="912f-4562-c959-2d93" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
@@ -592,7 +607,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0c2a-82b8-252b-2dc0" name="Paired Weapons and Tail Weapon" hidden="false" collective="false" type="upgrade">
@@ -604,7 +619,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
                 <infoLink id="e26c-f04c-5a13-5a08" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="b416-747d-c212-7863" name="Great Weapon" hidden="false" collective="false" type="upgrade">
@@ -615,7 +630,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
                 <infoLink id="a625-bcaf-ba2e-fe59" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="a5c6-c3f2-500a-7837" name="Halberd" hidden="false" collective="false" type="upgrade">
@@ -626,7 +641,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
                 <infoLink id="7045-89e0-d3fd-555e" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -644,7 +659,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
                 <entryLink id="ab30-bd39-0bd7-2f6f" name="Vermin Hulk Bodyguard" hidden="false" collective="false" targetId="3d1e-7361-8963-e157" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6755-5054-4bdb-a610" name="Monstrous Rat" hidden="false" collective="false" type="upgrade">
@@ -658,7 +673,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
                 <entryLink id="63d3-f6e5-0ffe-ffcd" name="Monstrous Rat" hidden="false" collective="false" targetId="6998-b2ad-5bd8-255b" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="210.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -688,15 +703,13 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dd9e-4c79-bce8-f708" name="Magister" hidden="false" collective="false" type="model">
+    <selectionEntry id="dd9e-4c79-bce8-f708" name="Magister" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="fab7-c9f3-2fc8-8017" name="Magister Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="f18d-28f1-20d8-7856" name="Magister Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -705,6 +718,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="9665-bb3b-ce2d-b7f0" name="Magister Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -714,6 +728,14 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+        <profile id="83f5-b7ea-5104-9883" name="Magister Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -734,7 +756,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
             <infoLink id="fbef-ad85-66bf-97d8" name="Dark Shards" hidden="false" targetId="ac84-f13f-40fc-c2d6" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="562d-b4fd-7ed7-7486" name="Light Armour" hidden="false" collective="false" type="upgrade">
@@ -864,9 +886,9 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="d320-0f49-30af-6628" name="Path" hidden="false" collective="false">
+        <selectionEntryGroup id="d320-0f49-30af-6628" name="Magic Path" hidden="false" collective="false">
           <modifiers>
-            <modifier type="set" field="f655-194f-ee6a-3860" value="2">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
               </conditions>
@@ -903,7 +925,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="427b-2845-8698-7818" name="Rakachit Machinist" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="427b-2845-8698-7818" name="Rakachit Machinist" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5f5c-7ecf-c3e4-135e" type="max"/>
       </constraints>
@@ -913,8 +935,6 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="bb23-cb68-062c-3dbc" name="Rakachit Machinist Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -923,6 +943,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="6631-fd41-ac72-9f98" name="Rakachit Machinist Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -932,6 +953,14 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Magical Attacks, Mechanical Limbs</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4d87-56f3-75d1-c544" name="Rakachit Machinist Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1023,7 +1052,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 <infoLink id="6a28-e0b5-2b9e-378a" name="Gas Globes" hidden="false" targetId="5741-4795-0156-40ef" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="abea-eacc-527a-0477" name="Ratlock Pistols" hidden="false" collective="false" type="upgrade">
@@ -1038,7 +1067,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e1d4-79f7-6567-c40a" name="Jezzail" hidden="false" collective="false" type="upgrade">
@@ -1053,7 +1082,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1063,18 +1092,16 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
         <entryLink id="dac5-0311-8eda-37e1" name="Army General" hidden="false" collective="false" targetId="335b-c901-c159-fbed" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="170.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8e67-3b5e-52ae-e4f6" name="Sicarra Assassin" hidden="false" collective="false" type="model">
+    <selectionEntry id="8e67-3b5e-52ae-e4f6" name="Sicarra Assassin" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="3724-4020-c6c6-7f60" name="Sicarra Assassin Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="21a8-07ee-6e62-63f0" name="Sicarra Assassin Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1083,6 +1110,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
             <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (4+)</characteristic>
           </characteristics>
         </profile>
         <profile id="fa9a-3a86-7d56-4104" name="Sicarra Assassin Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1092,6 +1120,14 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">4</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">8</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Paired Weapons, Tail Weapon, Lightning Reflexes, Poison Attacks, Multiple Wounds (D3, against Character)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d855-7068-f18f-8517" name="Sicara Assassin Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1229,7 +1265,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="280.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="260.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3a4b-d72e-d5aa-8a70" name="Plague Patriarch" hidden="false" collective="false" type="unit">
@@ -1239,8 +1275,6 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="2c21-6dad-dfee-c36e" name="Plague Patriarch Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1248,7 +1282,8 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">-</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="e363-2a51-a313-52ae" name="Plague Patriarch Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1258,6 +1293,14 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Hatred, Battle Focus</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4dc6-d82d-a6da-1d50" name="Plague Patriarch Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1357,7 +1400,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
             <entryLink id="b19e-d583-df08-2c57" name="Plague Pendulum" hidden="false" collective="false" targetId="d182-dccc-9a50-44b6" type="selectionEntry"/>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="410.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="440.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1a03-d661-1ae8-04aa" name="3 Dark Shards" hidden="false" collective="false" type="upgrade">
@@ -1427,7 +1470,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 <infoLink id="d6d3-0804-3442-8bad" name="Plague Flail" hidden="false" targetId="0791-f981-6d52-b2ef" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1462,8 +1505,6 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="483a-7773-2c27-7292" name="Rat-at-Arms Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1472,6 +1513,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour, Shield</characteristic>
               </characteristics>
             </profile>
             <profile id="8d90-3800-7d9c-59f3" name="Rat-at-Arms Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1481,6 +1523,14 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+              </characteristics>
+            </profile>
+            <profile id="2662-2a57-3646-b657" name="Rat-at-Arms Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1490,7 +1540,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
         </selectionEntry>
         <selectionEntry id="9b0d-a042-5d79-da05" name="Spears" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
@@ -1537,7 +1587,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
         <entryLink id="8edf-89ff-ccae-81bc" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="91f2-ee87-22d6-6c13" name="Vermin Guard" hidden="false" collective="false" type="unit">
@@ -1564,8 +1614,6 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="fe23-8024-a1e9-319f" name="Vermin Guard Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1574,6 +1622,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour, Shield</characteristic>
               </characteristics>
             </profile>
             <profile id="5a71-48a1-4e7d-cc05" name="Vermin Guard Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1583,11 +1632,19 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Halberd, Fight in Extra Rank</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4985-65d8-8973-731a" name="Vermin Guard Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="16.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0fe7-46b9-08aa-c6e7" name="Banner Enchantment" hidden="false" collective="false" type="upgrade">
@@ -1621,7 +1678,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
         <entryLink id="c5d7-4bab-deee-0908" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-70.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bb60-f7d0-c451-f365" name="Plague Brotherhood" hidden="false" collective="false" type="unit">
@@ -1638,36 +1695,43 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
         <categoryLink id="2a47-7733-b3de-c9cc" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="6e4b-1edd-93df-6e72" name="Plague Brotherhood" hidden="false" collective="false" type="model">
+        <selectionEntry id="6e4b-1edd-93df-6e72" name="Plague Brother" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ba5-0919-3ba6-e2df" type="min"/>
             <constraint field="selections" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c509-84c2-22b6-884e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f30a-8de6-e185-435b" name="Plague Brotherhood Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="f30a-8de6-e185-435b" name="Plague Brother Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
               <characteristics>
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
-            <profile id="98c1-ab8e-0862-abd3" name="Plague Brotherhood Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="98c1-ab8e-0862-abd3" name="Plague Brother Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
-            <profile id="0335-5a7f-e638-2d34" name="Plague Brotherhood Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="0335-5a7f-e638-2d34" name="Plague Brother Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Paired Weapons, Hatred, Battle Focus</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="26d1-247c-44c1-8e06" name="Plague Brother Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1715,7 +1779,7 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
       </constraints>
       <rules>
         <rule id="70b3-02b2-3a44-029c" name="Disposable" hidden="false">
-          <description>Units with this rule that Break from combat are immediately destroyed. 
+          <description>If the unit breaks from combat, it is immediately removed as a casualty.
 When checking if an enemy unit is Steadfast, your Slave units count as having 0 Full Ranks, unless the Slave unit is Engaged in the enemy unit’s Flank or Rear Facing. 
 When shooting into combat where the only Engaged friendly models are Slaves, the Shooting Attack gains +2 to hit and -1 to rolls for randomising which unit is hit with Callous.</description>
         </rule>
@@ -1739,8 +1803,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">2</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="b515-2b21-854e-f0f4" name="Slave Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1749,6 +1811,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">-</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="a37f-a58d-e080-de19" name="Slave Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1758,11 +1821,19 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+              </characteristics>
+            </profile>
+            <profile id="7182-7be9-a655-8800" name="Slave Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="4.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="3.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="28f7-659f-a264-a214" name="Musician" hidden="false" collective="false" type="upgrade">
@@ -1775,7 +1846,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a1ab-8952-0c83-fe01" name="Footpads" hidden="false" collective="false" type="unit">
@@ -1796,7 +1867,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
         <categoryLink id="9b4c-b041-cb49-d41e" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="c240-3a8c-b155-fdf1" name="Footpads" hidden="false" collective="false" type="model">
+        <selectionEntry id="c240-3a8c-b155-fdf1" name="Footpad" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b77a-a675-3451-6300" type="min"/>
             <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a3a-0c4e-95de-f5ee" type="max"/>
@@ -1807,8 +1878,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="2c08-07cb-5bbd-eaf4" name="Footpad Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1817,6 +1886,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="8765-0f50-fbaa-1e69" name="Footpad Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1826,11 +1896,19 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Sling (3+)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="82fb-a9f3-ec01-e729" name="Footpad Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="9.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="8.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c053-bd42-17f2-d85a" name="Banner Enchantment" hidden="false" collective="false" type="upgrade">
@@ -1900,10 +1978,10 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
         <entryLink id="ee33-6353-494a-5d0a" name="Command Group" hidden="false" collective="false" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="49d2-07c5-c497-6551" name="Giant Rats - Special" hidden="false" collective="false" type="unit">
+    <selectionEntry id="49d2-07c5-c497-6551" name="Giant Rats" hidden="false" collective="false" type="unit">
       <modifiers>
         <modifier type="decrement" field="c074-e226-b650-4f49" value="1">
           <repeats>
@@ -1935,8 +2013,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="d809-39dd-9105-8cc4" name="Giant Rat Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1945,6 +2021,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="17e8-1b51-fe97-33da" name="Giant Rat Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1954,6 +2031,14 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Fight in Extra Rank</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f6e8-978b-80d4-e813" name="Giant Rat Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1968,7 +2053,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
     </selectionEntry>
     <selectionEntry id="bd9a-316f-53f8-ab8f" name="Giant Rats - Core" hidden="false" collective="false" type="unit">
       <modifiers>
-        <modifier type="decrement" field="2e10-ab73-af52-a615" value="1">
+        <modifier type="decrement" field="2e10-ab73-af52-a615" value="1.0">
           <repeats>
             <repeat field="selections" scope="f8f1-3d4f-12bf-73cd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="49d2-07c5-c497-6551" repeats="1" roundUp="false"/>
           </repeats>
@@ -1998,8 +2083,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="5891-26b5-2ecc-980e" name="Giant Rat Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2008,6 +2091,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="8186-8b04-b57e-a150" name="Giant Rat Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2017,6 +2101,14 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Fight in Extra Rank</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="be85-7e13-893f-cb1b" name="Giant Rat Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2062,8 +2154,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="aa67-f9f3-d9f6-812f" name="Plague Disciple Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2071,7 +2161,8 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">-</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hard Target (1)</characteristic>
               </characteristics>
             </profile>
             <profile id="b91f-69b4-a2af-2787" name="Plague Disciple Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2081,6 +2172,14 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Plague Flail, Hatred, Battle Focus</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3bae-f5bf-5de1-0e3c" name="Plague Disciple Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2098,7 +2197,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="34.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="49.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="096b-b5d8-54c5-a100" name="Vermin Hulks" hidden="false" collective="false" type="unit">
@@ -2128,8 +2227,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="edf5-a4d8-b023-3e31" name="Vermin Hulk Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2138,6 +2235,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="d7ac-6c6a-b974-3ea2" name="Vermin Hulk Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2147,18 +2245,26 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Battle Focus</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="06a9-04c7-c0cf-45b8" name="Vermin Hulk Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="92dd-4dfc-fcb9-8bb1" name="Become Thunder Hulks" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="92dd-4dfc-fcb9-8bb1" name="Thunder Hulks" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="15">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="10.0">
               <repeats>
-                <repeat field="selections" scope="096b-b5d8-54c5-a100" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa5b-dacc-7107-d4f6" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2176,78 +2282,90 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f22-b615-0df5-59a4" type="max"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="319e-c92b-ea7f-547c" name="Weapon" hidden="false" collective="false">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f34f-b755-f503-0212" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="460c-3688-baf1-2012" name="Naptha Launcher" hidden="false" collective="false" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="23a1-9f6c-c406-5863" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="facd-b7f8-7ba3-a6e1" name="Naphtha Launcher" hidden="false" targetId="d95d-6b0a-ea8c-6373" type="profile">
-                      <modifiers>
-                        <modifier type="append" field="name" value=" (4+)"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="140.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="12b1-3693-bea2-05f4" name="Rotary Gun" hidden="false" collective="false" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f45-3a7f-850f-ca15" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="dd0e-cc6d-486d-10dc" name="Rotary Gun" hidden="false" targetId="0e9b-e00b-8065-4135" type="profile">
-                      <modifiers>
-                        <modifier type="append" field="name" value=" (4+)"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="4000-6dba-3dfa-c25d" name="Globe Launcher" hidden="false" collective="false" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ee66-d478-7bf7-79b2" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="3884-e3e3-b56a-2653" name="Globe Launcher" hidden="false" targetId="646e-d162-7990-7ba2" type="profile">
-                      <modifiers>
-                        <modifier type="append" field="name" value=" (4+)"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="1ae0-6e3b-04a1-ac42" name="Meat Grinder" hidden="false" collective="false" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8579-3153-4492-ec2d" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="52cd-bce9-bbb0-79c8" name="Meat Grinder" hidden="false" targetId="dc1a-c483-9ce1-9929" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5fc8-8849-47c9-0f91" name="Thunder Hulk Champion Weapon" hidden="true" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ba-6ea6-cefd-cfaa" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="92dd-4dfc-fcb9-8bb1" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3126-4bfb-7dc4-431f" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="200b-87b7-853c-e8b6" name="Naptha Launcher" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="665b-c957-ad63-fd75" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a795-a36d-1b2b-255b" name="Naphtha Launcher" hidden="false" targetId="d95d-6b0a-ea8c-6373" type="profile">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (4+)"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2e8c-c93f-c4e4-ffe7" name="Rotary Gun" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d712-2483-207b-152e" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="f362-33f5-c6c8-48be" name="Rotary Gun" hidden="false" targetId="0e9b-e00b-8065-4135" type="profile">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (4+)"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6df6-3dba-6001-06b8" name="Globe Launcher" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2a35-b31f-216a-7e7d" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="c599-c3c7-01a6-5e3c" name="Globe Launcher" hidden="false" targetId="646e-d162-7990-7ba2" type="profile">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (4+)"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6780-f81a-b918-20f4" name="Meat Grinder" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1c3f-9ce5-3589-2e74" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="2086-6822-8d64-af81" name="Meat Grinder" hidden="false" targetId="dc1a-c483-9ce1-9929" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-5.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bb83-2b19-f017-618f" name="Rat Swarms" hidden="false" collective="false" type="unit">
@@ -2280,8 +2398,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">10</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
               </characteristics>
             </profile>
             <profile id="3d06-2365-b587-672e" name="Rat Swarm Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2290,6 +2406,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">2</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hard Target (1)</characteristic>
               </characteristics>
             </profile>
             <profile id="50b5-4144-3cfc-1bc4" name="Rat Swarm Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2299,19 +2416,27 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">2</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+              </characteristics>
+            </profile>
+            <profile id="cc13-ef82-7138-03a6" name="Rat Swarm Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="28.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="34.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="92b0-b6b8-5ffd-c5df" name="Meat Grinder" hidden="false" collective="false" type="model">
+    <selectionEntry id="92b0-b6b8-5ffd-c5df" name="Meat Grinder" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="991a-2c95-83e8-ef6a" type="max"/>
       </constraints>
@@ -2321,8 +2446,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="2d8b-c191-88c2-26c9" name="Meat Grinder Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2331,6 +2454,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="84fd-182a-c3c3-e4e6" name="Meat Grinder Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2340,6 +2464,14 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Meat Grinder</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9aa5-df07-0a38-06fa" name="Meat Grinder Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×40</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2366,10 +2498,10 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
         <categoryLink id="e6a6-fe19-5809-6667" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="150.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="145.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b38b-5dbd-2414-04b9" name="Weapon Team" hidden="false" collective="false" type="model">
+    <selectionEntry id="b38b-5dbd-2414-04b9" name="Weapon Team" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d97-5cf5-2a47-0c84" type="max"/>
       </constraints>
@@ -2379,8 +2511,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="d53f-b711-f27e-e285" name="Weapon Team Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2389,6 +2519,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="fb0b-6d5c-17ea-dc8e" name="Weapon Team Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2398,6 +2529,14 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+        <profile id="fe8a-7799-d95d-5297" name="Weapon Team Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2422,7 +2561,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
         <categoryLink id="77fb-106c-0971-8f36" name="New CategoryLink" hidden="false" targetId="1c57-fa6c-295c-c49c" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c4d9-b62d-0fbf-a82a" name="Weapon" hidden="false" collective="false">
+        <selectionEntryGroup id="c4d9-b62d-0fbf-a82a" name="Shooting Weapon" hidden="false" collective="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f6dc-5564-08cd-ec84" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9424-c180-d82a-a6af" type="max"/>
@@ -2440,7 +2579,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="cebc-9f20-9530-19ff" name="Rotary Gun" hidden="false" collective="false" type="upgrade">
@@ -2516,8 +2655,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="e916-8f38-880e-8a4d" name="Jezail Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2526,6 +2663,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Pavise</characteristic>
               </characteristics>
             </profile>
             <profile id="9fb1-8a82-e848-01ff" name="Jezail Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2535,6 +2673,14 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Jezail (4+)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="027e-ca13-e6e7-067a" name="Jezail Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2578,8 +2724,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="74f0-93ad-5d16-bcd4" name="Grenadier Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2588,6 +2732,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour, Hard Target (1)</characteristic>
               </characteristics>
             </profile>
             <profile id="114e-0591-0c11-24eb" name="Grenadier Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2597,16 +2742,24 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Gas Globes (4+), Volley Fire</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b9a3-f7ae-2e73-a908" name="Grenadier Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="21.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="18.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="17.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="26.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0a51-3aff-3a1a-9b3d" name="Gutter Blades" hidden="false" collective="false" type="unit">
@@ -2635,8 +2788,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-                <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
               </characteristics>
             </profile>
             <profile id="e7ed-6372-fbf9-9c23" name="Gutter Blade Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2645,6 +2796,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hard Target (1)</characteristic>
               </characteristics>
             </profile>
             <profile id="32c4-d775-0eb7-98e9" name="Gutter Blade Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2654,32 +2806,34 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Paired Weapons, Throwing Weapons (4+), Poison Attacks</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4823-c3f7-b88f-90c1" name="Gutter Blade Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <categoryLinks>
-            <categoryLink id="8671-abdb-484e-1b6c" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false"/>
-          </categoryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="23.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f6ec-673d-7a42-4503" name="Champion" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8786-c47a-8ddc-9f35" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="ecfb-a1b5-0d53-5361" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false"/>
-          </categoryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="debf-8300-5e98-c62a" name="Scout and Ambush" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
               <repeats>
-                <repeat field="selections" scope="0a51-3aff-3a1a-9b3d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c6f-e4fa-06c4-7317" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2690,9 +2844,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <infoLink id="a519-35ac-245d-0aba" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
             <infoLink id="482b-1eeb-4904-9ed3" name="Ambush" hidden="false" targetId="2dda-ee2f-cfce-7f16" type="rule"/>
           </infoLinks>
-          <categoryLinks>
-            <categoryLink id="7fe8-5b26-7b22-e82d" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="false"/>
-          </categoryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
@@ -2705,7 +2856,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8e44-daa1-55ef-2c1c" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="d7f7-6807-09ca-2aba" name="Sling" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="d7f7-6807-09ca-2aba" name="Sling (3+)" hidden="false" collective="false" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f35a-7334-4619-8270" type="max"/>
               </constraints>
@@ -2720,7 +2871,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ddb6-fa69-3071-4c14" name="Throwing Weapons" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="ddb6-fa69-3071-4c14" name="Throwing Weapons (4+)" hidden="false" collective="false" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2f6e-48ae-dacc-01af" type="max"/>
               </constraints>
@@ -2739,10 +2890,10 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5f35-2893-76e9-ac10" name="Verminous Artillery" hidden="false" collective="false" type="model">
+    <selectionEntry id="5f35-2893-76e9-ac10" name="Verminous Artillery" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f968-5b6d-743b-36ab" type="max"/>
       </constraints>
@@ -2752,8 +2903,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">5&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large </characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
         <profile id="e721-369f-48e4-e910" name="Verminous Artillery Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2762,6 +2911,14 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="42fb-8cfc-f1fe-f6a2" name="Verminous Artillery Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">75Ø</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2803,6 +2960,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                     <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                     <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                     <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                    <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Plague Catapult (4+), Hatred, Battle Focus, Move or Fire</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2810,9 +2968,10 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <infoLink id="d841-26a5-810b-e539" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
                 <infoLink id="2cdb-645b-c0b3-3037" name="Hatred" hidden="false" targetId="13c5-ce89-60ad-c572" type="rule"/>
                 <infoLink id="4892-8b8d-c815-4144" name="Battle Focus" hidden="false" targetId="cc29-65f2-796b-52e2" type="rule"/>
+                <infoLink id="ec15-639b-76a7-090c" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="170.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="195.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6b7c-5ea6-5f44-7de4" name="Lightning Cannon" hidden="false" collective="false" type="upgrade">
@@ -2839,6 +2998,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                     <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                     <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                     <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                    <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lightning Cannon (4+), Move or Fire</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2848,7 +3008,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
                 <infoLink id="68c7-43b4-fdb3-bb6b" name="Magical Attacks" hidden="false" targetId="97c6-651e-d93d-a61e" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="265.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="250.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2858,7 +3018,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="782d-f3d3-d092-b05e" name="Dreadmill" hidden="false" collective="false" type="model">
+    <selectionEntry id="782d-f3d3-d092-b05e" name="Dreadmill" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e1f7-1f09-f3a1-8606" type="max"/>
       </constraints>
@@ -2868,8 +3028,6 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
         <profile id="8eb2-7b3f-1ded-f9bc" name="Dreadmill Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2878,15 +3036,17 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="685f-ec7a-b2ca-0d2d" name="Dreadmill Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">-</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">-</characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Electric Discharge, Grind Attacks (D3), Impact Hits (D3), Inanimate</characteristic>
           </characteristics>
         </profile>
         <profile id="f89e-b6df-9a1a-46ea" name="Electric Discharge" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
@@ -2896,6 +3056,13 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Str" typeId="f166-13ff-9227-4525">6</characteristic>
             <characteristic name="AP" typeId="857a-4ce1-d134-8701">10</characteristic>
             <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Multiple Wounds (D3), Lightning Attacks, Magical Attacks.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1371-8743-94b0-de4b" name="Dreadmill Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2927,10 +3094,10 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
         <categoryLink id="bc2a-d278-fb27-5568" name="New CategoryLink" hidden="false" targetId="1c57-fa6c-295c-c49c" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="305.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="330.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a95c-04e9-fe02-665c" name="Abomination" hidden="false" collective="false" type="model">
+    <selectionEntry id="a95c-04e9-fe02-665c" name="Abomination" hidden="false" collective="false" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="986f-a229-a668-bfdd" type="max"/>
       </constraints>
@@ -2940,8 +3107,6 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">3D6</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">-</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Beast</characteristic>
           </characteristics>
         </profile>
         <profile id="16a7-3e90-bee1-d6ea" name="Abomination Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2950,6 +3115,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Fortitude (4+)</characteristic>
           </characteristics>
         </profile>
         <profile id="31c2-2598-4b19-9856" name="Abomination Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2959,6 +3125,14 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+        <profile id="a0b4-8f88-ce26-091b" name="Abomination Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">60×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2981,7 +3155,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
         <categoryLink id="e9ef-699c-17a2-3508" name="New CategoryLink" hidden="false" targetId="a4b6-d53f-821c-9216" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="375.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="360.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -3022,8 +3196,6 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Standard</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="becc-c5df-190f-7c8e" name="Vermin Guard Litter Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3032,6 +3204,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="7cee-e355-0ee4-f14c" name="Vermin Guard Litter Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3041,12 +3214,13 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
       <rules>
         <rule id="a8fd-a579-5244-934a" name="Herding the Swarm" hidden="false">
-          <description>The model increases the range of its Commanding Presence (if available) by 6&quot;.</description>
+          <description>The model’s range of Commanding Presence (if available) is increased by 6&quot;.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -3067,8 +3241,6 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Infantry</characteristic>
           </characteristics>
         </profile>
         <profile id="11d8-5237-e875-a7d7" name="Vermin Hulk Bodyguard Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3077,6 +3249,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="f98b-2550-8d71-9c43" name="Vermin Hulk Bodyguard Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3086,6 +3259,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3108,8 +3282,6 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Large</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Cavalry</characteristic>
           </characteristics>
         </profile>
         <profile id="5a9b-f575-acf0-e7e6" name="Monstrous Rat Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3118,6 +3290,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">-</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="fccf-bf04-bbd2-0a6d" name="Monstrous Rat Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3127,6 +3300,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3162,8 +3336,6 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
         <profile id="e4e5-f6c8-9748-02d4" name="Doom Bell Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3172,6 +3344,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="fc4a-710a-82b1-b819" name="Vermin Hulk Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3181,6 +3354,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3230,8 +3404,6 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Size" typeId="2e17-9c12-bfb4-59b0">Gigantic</characteristic>
-            <characteristic name="Type" typeId="3145-83b1-14d6-8023">Construct</characteristic>
           </characteristics>
         </profile>
         <profile id="d3c2-8709-54c5-3dae" name="Plague Pendulum Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3240,6 +3412,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Def" typeId="160d-4624-273f-2114">c</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="b729-0d30-39b0-3f50" name="Crew (4) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3249,6 +3422,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="cefb-5a8a-0c4e-eb99" name="Chassis Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3258,6 +3432,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="2437-dc7d-97c7-61ba" name="Ram Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3267,6 +3442,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3318,7 +3494,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b4ff-42a4-885d-255a" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="f688-5f8c-a14d-328a" name="Secrets of the Doom Blade" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="f688-5f8c-a14d-328a" name="Secrets of the Doom Blade (Standard height Tyrant only)" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e109-b763-7c5a-8ca8" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4bb8-8402-9083-404c" type="max"/>
@@ -3327,12 +3503,12 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <profile id="218c-8d13-ec24-4257" name="Secrets of the Doom Blade - Standard size Tyrant only" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon have their Strength set to 10 and Armour Penetration set to 10, gain Multiple Wounds (D6), Magical Attacks, and Divine Attacks. At the end of each friendly Player Turn, the wielder suffers 1 hit with Toxic Attacks (which counts as a Melee Attack). </characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon gain Multiple Wounds (D6), become Magical Attacks and Divine Attacks, and their Strength and Armour Penetration are set to 10. At the end of each friendly Player Turn, the wielder suffers 1 hit with Toxic Attacks, which counts as a Melee Attack.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="185.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b50a-a17b-0d3b-538b" name="Swarm Master" hidden="false" collective="false" type="upgrade">
@@ -3349,7 +3525,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b7e0-3e26-8765-146f" name="Darkstone Shot" hidden="false" collective="false" type="upgrade">
@@ -3392,12 +3568,12 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <profile id="9b77-bc4c-6627-5126" name="Putrid Protection" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Light Armour Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +2 Armour. For each successful Armour Save made by the wearer against Melee Attacks, the Health Pool which the model that caused the wounding hit is part of suffers 1 hit with Toxic Attacks. This is considered a Special Attack.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +2 Armour. For each successful Armour Save made by the wearer against Melee Attacks, the Health Pool which the model that caused the wounding hit immediatly suffers 1 hit with Toxic Attacks, before any casualties are removed, distributed onto the model&apos;s Health Pool. This is considered a Special Attack.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b029-5d4a-7a4e-a06d" name="Seal of House Underminer" hidden="false" collective="false" type="upgrade">
@@ -3434,7 +3610,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <entryLink id="5409-3278-5eda-b90e" name="Shield Enchantement" hidden="false" collective="false" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3458,7 +3634,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="098b-b36d-dc3c-3036" name="Second Awakening" hidden="false" collective="false" type="upgrade">
@@ -3475,10 +3651,10 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2ce0-fba5-71ac-6ace" name="Crown of Succession" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2ce0-fba5-71ac-6ace" name="Crown of Succession (Cannot be taken by models with &apos;Not a Leader&apos;)" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e0f1-a6c8-0bcd-d2ab" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e0b-c9bc-27b4-e062" type="max"/>
@@ -3492,7 +3668,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d553-f792-20cd-4652" name="Scurrying Veil - Standard Size only" hidden="false" collective="false" type="upgrade">
@@ -3567,7 +3743,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0270-f056-6896-a13f" name="Banner of the Endless Swarm" hidden="false" collective="false" type="upgrade">
@@ -3587,7 +3763,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e6c0-482d-85e4-f929" name="Aquila of Ruin" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="e6c0-482d-85e4-f929" name="Aquila of Ruin (Rats-at-Arms only)" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b64d-e49c-3db3-46ca" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="471e-332e-ad5c-41ea" type="max"/>
@@ -3601,7 +3777,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3624,7 +3800,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
       <description>If the model is within 3&quot; of a non-fleeing unit with at least one Rat-at-Arms or Vermin Guard model, it gains Aegis (4+) against Ranged Attacks.</description>
     </rule>
     <rule id="3016-0b06-30a7-7484" name="Honourless" hidden="false">
-      <description>A Character with Honourless cannot be chosen by the enemy as the model that refuses a Duel. </description>
+      <description>A Character with Honourless cannot be chosen by the enemy as the model that suffers the penalties for refusing a Duel. </description>
     </rule>
     <rule id="ac84-f13f-40fc-c2d6" name="Dark Shards" hidden="false">
       <description>One use only. A model can use each of its Dark Shards once per game. Declare usage just before the model is rolling a casting roll for a non-Bound Spell. Any Dispel Attempt made against this spell suffers -D3 to its dispel roll (roll this dice directly when using the Dark Shard). If a natural ‘1’ is rolled for this D3, the model using the Dark Shards suffers 1 hit with Toxic Attacks. This is an exception to the Casting and Dispelling Modifier rule (i.e. it is allowed to modify the dispel roll by more than -2). </description>
@@ -3690,7 +3866,7 @@ Before rolling to hit, the Dreadmill may be supercharged. If supercharged, the a
     <profile id="0e9b-e00b-8065-4135" name="Rotary Gun" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
       <characteristics>
         <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">18&quot;</characteristic>
-        <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">(2D6)*2 / (3D6*2)</characteristic>
+        <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">(2D6)×2 | (3D6×2)</characteristic>
         <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
         <characteristic name="AP" typeId="857a-4ce1-d134-8701">1</characteristic>
         <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Magical Attacks, Quick to Fire.</characteristic>
