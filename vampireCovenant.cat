@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2.1" revision="26" battleScribeVersion="2.02" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2.1" revision="27" battleScribeVersion="2.02" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="8f74-301f-981a-bcf5" name="1 Global (VC)">
       <characteristicTypes>
@@ -140,6 +140,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">7</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="c29e-1cf6-0e19-ab04" name="Vampire Count Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -171,6 +172,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">7</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -578,26 +580,23 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="a59d-9087-c120-43f1" name="Path" hidden="false" collective="false">
+        <selectionEntryGroup id="a59d-9087-c120-43f1" name="Magic Path" hidden="false" collective="false">
           <modifiers>
-            <modifier type="set" field="9c5d-7cd3-41e6-092a" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32a3-4614-e635-00eb" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32a3-4614-e635-00eb" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="34c1-42c4-0fd1-d0a2" value="2">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b915-debd-759a-b19a" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32a3-4614-e635-00eb" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9c5d-7cd3-41e6-092a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9c5d-7cd3-41e6-092a" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="34c1-42c4-0fd1-d0a2" type="max"/>
           </constraints>
           <selectionEntries>
@@ -656,21 +655,6 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0f97-f481-7127-c23d" name="Shamanism" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a52a-e209-1532-9a36" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="7bc0-bd86-b47f-f1d0" name="Cosmology" hidden="true" collective="false" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
@@ -696,6 +680,81 @@
             <entryLink id="f66a-8ebe-20df-5d1f" name="Ancient Blood Powers" hidden="false" collective="false" targetId="8aaa-efe8-5149-ecb6" type="selectionEntryGroup"/>
             <entryLink id="bc1a-54cb-a848-ec7f" name="Lesser Blood Powers" hidden="false" collective="false" targetId="3e3c-20fe-5381-2e4a" type="selectionEntryGroup"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="95f2-5a07-ba52-a391" name="Magic Path" hidden="true" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4bd-bf0c-bd1e-303e" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dfa1-d325-950b-dedb" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c191-9910-853a-926f" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="264b-6953-0785-924e" name="Occultism" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d71b-a9be-2a80-2928" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="395f-fdee-02b2-06b7" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c1fd-821a-110e-9d62" name="Evocation" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b915-debd-759a-b19a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fbc8-18de-3991-072c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8bcb-028f-6f6d-4f20" name="Cosmology" hidden="true" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4bd-bf0c-bd1e-303e" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b4a8-f323-209e-5318" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -745,6 +804,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="c013-20c2-e4bb-41f5" name="Vampire Courtier Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -776,6 +836,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -1179,30 +1240,27 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="1d2a-ef3e-e314-26cd" name="Path" hidden="false" collective="false">
+        <selectionEntryGroup id="bbe7-7865-7a90-2ee6" name="Magic Path" hidden="false" collective="false">
           <modifiers>
-            <modifier type="set" field="92c8-537c-3b38-8996" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8366-ecf3-b1c8-3c87" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8366-ecf3-b1c8-3c87" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="a9b3-bd4a-3599-591d" value="2">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b915-debd-759a-b19a" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8366-ecf3-b1c8-3c87" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="92c8-537c-3b38-8996" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9b3-bd4a-3599-591d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="18ad-70e4-322a-deb4" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="902c-6845-f8de-d49e" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="3c11-a41a-f027-a6d4" name="Occultism" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="e5f6-65f0-6122-fcf0" name="Occultism" hidden="false" collective="false" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditionGroups>
@@ -1216,13 +1274,13 @@
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8495-7aaf-1ff2-eb00" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e53-89db-599a-a6a0" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="358d-af57-146f-9635" name="Evocation" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="7291-ee7e-2bc7-85c3" name="Evocation" hidden="false" collective="false" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditionGroups>
@@ -1236,13 +1294,13 @@
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7634-a8cc-915c-ffa9" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="05fa-409f-7bbd-2c2a" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="b1dc-627c-c728-2aae" name="Witchcraft" hidden="true" collective="false" type="upgrade">
+            <selectionEntry id="8772-46a7-7a3d-3200" name="Witchcraft" hidden="true" collective="false" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
@@ -1251,28 +1309,13 @@
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4596-c5e6-c8cd-16c5" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c26f-8639-866f-9c31" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7e43-b4bc-501b-441c" name="Shamanism" hidden="false" collective="false" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a0ca-ca35-d660-ad99" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="224c-de7a-ab88-88a9" name="Cosmology" hidden="true" collective="false" type="upgrade">
+            <selectionEntry id="9ff4-49a7-1830-4c50" name="Cosmology" hidden="true" collective="false" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
@@ -1281,7 +1324,82 @@
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ed94-16bb-f9b3-ad6e" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cfcf-3c4e-73f3-d440" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b9fa-86b4-5dde-82e3" name="Magic Path" hidden="true" collective="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4bd-bf0c-bd1e-303e" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0991-ee2c-86f2-f580" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ce3-c14f-8d95-ae7a" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8ae6-e011-2e59-dd27" name="Occultism" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d71b-a9be-2a80-2928" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="43d6-9c9d-3af0-8eb9" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="438b-8708-7045-4cd7" name="Evocation" hidden="false" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b915-debd-759a-b19a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6635-0236-a973-cef4" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="65ed-298f-d09d-dec7" name="Cosmology" hidden="true" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4bd-bf0c-bd1e-303e" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef21-8e65-704a-21ca" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -1327,6 +1445,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="71cc-61f6-a126-c918" name="Necromancer Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1336,6 +1455,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="2486-037e-fd03-57c3" name="Necromancer Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -1456,9 +1576,9 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8044-38e2-ff26-393b" name="Path" hidden="false" collective="false">
+        <selectionEntryGroup id="8044-38e2-ff26-393b" name="Magic Path" hidden="false" collective="false">
           <modifiers>
-            <modifier type="set" field="ef1a-db1c-53ce-4376" value="2">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
               </conditions>
@@ -1572,6 +1692,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="cafb-e6e0-bf4f-89e1" name="Barrow King Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1581,6 +1702,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="d479-e2ed-ba50-e6e6" name="Barrow King Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -1744,6 +1866,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="d8aa-6f76-e7a0-488b" name="Fell Wraith Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1753,6 +1876,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">10</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="5167-4fd1-2f9b-78a6" name="Fell Wraith Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -1842,6 +1966,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="dc89-0dae-5b1d-579e" name="Banshee Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1851,6 +1976,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="6c8f-4870-a196-b331" name="Banshee Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -1941,6 +2067,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="9a91-2dd0-5170-f80e" name="Zombie Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1950,6 +2077,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2020,6 +2148,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="a159-42f4-a09b-33b0" name="Skeleton Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2029,6 +2158,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2159,6 +2289,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="19f0-6530-7117-abce" name="Ghoul Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2168,6 +2299,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2248,6 +2380,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="1697-904f-0b3d-4d51" name="Dire Wolves Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2257,6 +2390,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="a3d2-e0c7-0584-d0e0" name="Dire Wolf Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2337,6 +2471,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="933c-9059-8c6f-2b48" name="Dire Wolves Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2346,6 +2481,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="ba73-84dd-60cd-8177" name="Dire Wolf Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2421,6 +2557,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="a598-54bd-400d-5dea" name="Barrow Guard Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2430,6 +2567,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="dd30-9b5f-31c3-52f4" name="Barrow Guard Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2591,6 +2729,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="881d-420f-c449-f9e7" name="Barrow Knight Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2600,6 +2739,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="868f-2de1-12d9-def3" name="Skeletal Steed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2609,6 +2749,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="b4ba-427c-723b-ead9" name="Barrow Knight Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2702,6 +2843,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="41bb-4828-74ac-9ff2" name="Ghast Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2711,6 +2853,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="5c11-a82b-3e5a-687e" name="Ghast Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2776,6 +2919,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="aac6-2dc6-6bc0-60bc" name="Great Bat Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2785,6 +2929,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="5010-724b-8fda-4f06" name="Great Bat Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2823,6 +2968,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="6832-130d-142a-77d4" name="Shambling Horde Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2832,6 +2978,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="7819-dae5-b2b5-f07d" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2841,6 +2988,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="58e1-57f1-28c6-9443" name="Cadaver Master Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2850,6 +2998,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="7d9d-6c55-5e6b-1111" name="Cadaver Wagon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2908,6 +3057,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="6e72-73e7-ab99-a90f" name="Paramour (3) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2917,6 +3067,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="6213-f716-c328-44ab" name="Spectral Pallbearers Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2926,6 +3077,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="caa2-9ca1-9417-b29e" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2935,6 +3087,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="b647-74ff-2201-58bc" name="Court of the Damned Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3034,6 +3187,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="e457-8388-d90a-b597" name="Dark Conductor Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3043,6 +3197,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="f854-e1a4-dfb1-1e33" name="Ghost Steeds Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3052,6 +3207,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="2448-9e8a-ec76-7fcd" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3061,6 +3217,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="3679-3453-f7f8-140c" name="Altar of Undeath Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3138,6 +3295,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="af29-5803-928e-fa27" name="Coachman Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3147,6 +3305,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">10</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="9803-d1ea-fdf6-3902" name="Vampire Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3156,6 +3315,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="d1f5-6eb7-3a60-d9f9" name="Undead Mounts (2)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3172,6 +3332,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="c0ad-463d-7fc4-c25b" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3181,6 +3342,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="4113-d17e-7a07-6fb3" name="Dark Coach Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3313,6 +3475,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="74bd-387a-d2f6-7501" name="Phantom Host Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3322,6 +3485,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3385,6 +3549,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="20d4-bf84-1169-3073" name="Wraith Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3394,6 +3559,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">10</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3484,6 +3650,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="1c5c-5f6b-30c3-5b25" name="Spectral Hunter Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3493,6 +3660,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">10</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="503e-93b8-5039-8b94" name="Ghost Steed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3502,6 +3670,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3561,6 +3730,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="86d2-bd76-16b7-cd22" name="Shrieking Horror Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3570,6 +3740,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3672,6 +3843,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="4c95-6d29-3809-2857" name="Vampire Knight Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3681,6 +3853,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="2e22-5a56-2efa-068a" name="Undead Mount Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3690,6 +3863,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3763,6 +3937,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="ad3d-d221-a6d6-7585" name="Winged Reaper Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3772,6 +3947,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3847,6 +4023,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="1e0e-670f-96cc-d3b3" name="Varkolak Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3856,6 +4033,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3932,6 +4110,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="0448-c7e1-1fdf-1eb2" name="Vampire Spawn Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3941,6 +4120,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3977,6 +4157,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="b015-2288-12cf-57d4" name="Fell Wraith Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3986,6 +4167,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">10</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="651a-0d4e-65b5-4ce9" name="Fell Wraith (MR) Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4104,6 +4286,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">2</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="b51e-06aa-850c-df3a" name="Bat Swarm Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4113,6 +4296,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">2</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="457f-5712-f726-82f4" name="Bat Swarm Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4195,6 +4379,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="6582-3d34-9959-cc2a" name="Skeletal Steed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4204,6 +4389,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4229,6 +4415,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="8c49-22f0-319d-d3c8" name="Spectral Steed Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -4244,6 +4431,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4276,6 +4464,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="df51-f5eb-f401-05e6" name="Monstrous Revenant Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4285,6 +4474,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4336,6 +4526,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="3c15-e9d7-d31a-9fc6" name="Paramour (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4345,6 +4536,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="daaa-8709-5237-b9c9" name="Spectral Pallbearers Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4354,6 +4546,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="e6c3-f7ee-07d5-fc87" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4363,6 +4556,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4445,6 +4639,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="fb74-b18b-2a54-227e" name="Shrieking Horror Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4454,6 +4649,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4503,6 +4699,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="70b9-ab9a-9240-6a60" name="Zombie Dragon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4519,6 +4716,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4570,6 +4768,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="e655-1b24-5e1d-23cd" name="Shambling Horde Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4579,6 +4778,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="51a3-a8db-b8e7-71df" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4588,6 +4788,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
       </profiles>
