@@ -244,7 +244,7 @@
                     </modifier>
                   </modifiers>
                 </entryLink>
-                <entryLink id="12ea-6000-f84b-6611" name="Artefacts" hidden="false" collective="false" import="true" targetId="17df-ad66-db37-0a37" type="selectionEntryGroup"/>
+                <entryLink id="12ea-6000-f84b-6611" name="Artefacts (CL, BC)" hidden="false" collective="false" import="true" targetId="2806-c83d-52f7-c593" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -631,14 +631,6 @@
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2845-4c69-03a0-82c5" name="Replace Shield with Spiked Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ca6-c6ce-1686-ff10" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="254b-d9c1-df68-e406" name="Army General" hidden="false" collective="false" import="true" type="upgrade">
@@ -1157,7 +1149,7 @@
                     </modifier>
                   </modifiers>
                 </entryLink>
-                <entryLink id="0dbc-ad14-e093-434e" name="Artefacts" hidden="false" collective="false" import="true" targetId="17df-ad66-db37-0a37" type="selectionEntryGroup"/>
+                <entryLink id="0dbc-ad14-e093-434e" name="Artefacts (CL, BF)" hidden="false" collective="false" import="true" targetId="2806-c83d-52f7-c593" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -4873,6 +4865,111 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="688c-1c93-1305-530a" name="Immortal Gauntlets" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="281c-9da6-aa8b-a81e" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="223c-36fb-3381-b469" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="a69e-a82d-2e7b-b670" name="Immortal Gauntlets" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">At the start of any Round of Combat, you may discard a Veil Token from your Veil Token pool. If so, choose either Divine Attacks, Flaming Attacks, or Magical Attacks. The bearer’s Close Combat Attacks gain the chosen Attack Attribute. The effects last until the end of the phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="93d7-5b1c-d423-f79e" name="Ledger of Souls" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="88d0-e350-84db-8449" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="88d0-e350-84db-8449" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6d80-c674-7448-bed3" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3e64-a80d-d129-b535" name="Ledger of Souls" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Dominant.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Whenever a friendly model without Insignificant in a unit within 9″ of the bearer’s model loses its last Health Point due to enemy attacks, you gain one Veil Token for each Health Point that model started the game with.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="00f4-2401-5c93-7651" name="Veilgate Orb" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="071f-9b36-99ad-f4b7" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="259c-93ab-32f1-88b7" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="89ec-767a-1390-7a5d" name="Veilgate Orb" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">At the end of Siphon the Veil, the army may keep up to 6 Veil Tokens instead of the normal 3.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="52b9-d217-e5b8-672f" name="Wyrd Stone" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a49a-826b-00a6-fdd9" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="780a-6b1e-5edc-b535" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e82b-bef0-7478-82db" name="Wyrd Stone" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. Must be activated when the bearer’s model suffers the first hit in the game. This hit is ignored. If the bearer is hit by several simultaneous attacks, the bearer chooses which attack to ignore.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0e7c-1987-e362-79e6" name="Lord of the Damned" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="24fd-8af8-0c78-001c" value="100.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="75a4-d324-24a1-59ba" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb05-33dc-3d52-dab3" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b3d2-76d5-9e6d-d2eb" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="476e-a792-bd62-b7fa" name="Lord of the Damned" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Sorcerers, Doomlords, and Shrine Priests only.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Any unit with Irredeemable within 18′′ of the bearer’s model may reroll the distance it moves in the Movement Phase with Random Movement.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="1524-bfe2-5e72-c097" name="Favour of the Dark Gods" hidden="false" collective="false" import="true">
@@ -5080,99 +5177,19 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         <entryLink id="98b9-706b-9d94-f2f8" name="Banner Enchantments - WotDG" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="e03c-3642-f6e6-6d33" name="Artefacts - WDG" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="e03c-3642-f6e6-6d33" name="Artefacts (WDG: DL, Sor)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b2e-d3ca-d3a2-edd6" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="4a70-1074-80d3-e147" name="Ledger of Souls" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="175f-1ffa-e7ea-11ab" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f615-6bfb-f806-6c9a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="cf15-a7b5-1a41-c870" name="Ledger of Souls" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Dominant.</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Whenever a friendly model without Insignificant in a unit within 9″ of the bearer’s model loses its last Health Point due to enemy attacks, you gain one Veil Token for each Health Point that model started the game with.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b0fa-0a10-a712-5b2e" name="Veilgate Orb" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e9b5-16cf-50df-f935" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3cc3-50eb-809c-ada5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9c8e-0be0-1e29-1ea2" name="Veilgate Orb" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">At the end of Siphon the Veil, the army may keep up to 6 Veil Tokens instead of the normal 3.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1022-4118-68c2-07cf" name="Immortal Gauntlets" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f2f1-414b-0e8e-2d31" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8f28-f8da-a88f-6430" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8e58-c21d-ae92-6ee7" name="Immortal Gauntlets" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">At the start of any Round of Combat, you may discard a Veil Token from your Veil Token pool. If so, choose either Divine Attacks, Flaming Attacks, or Magical Attacks. The bearer’s Close Combat Attacks gain the chosen Attack Attribute. The effects last until the end of the phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e908-ae27-310f-f9e6" name="Lord of the Damned" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc99-9972-19b1-031d" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dcd1-d822-90bf-dee2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a9b4-9b09-3a69-1d88" name="Lord of the Damned" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Sorcerers, Doomlords, and Shrine Priests only.</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Any unit with Irredeemable within 18′′ of the bearer’s model may reroll the distance it moves in the Movement Phase with Random Movement.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8b69-6051-a86b-f6c9" name="Wyrd Stone" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="09a0-c173-846a-6d7a" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="892b-722c-4ae7-995c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ef39-7d34-5ad7-5289" name="Wyrd Stone" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. Must be activated when the bearer’s model suffers the first hit in the game. This hit is ignored. If the bearer is hit by several simultaneous attacks, the bearer chooses which attack to ignore.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="f20d-05eb-b735-b6ce" name="Immortal Gauntlets" hidden="false" collective="false" import="true" targetId="688c-1c93-1305-530a" type="selectionEntry"/>
+        <entryLink id="117a-15df-f014-ca48" name="Ledger of Souls" hidden="false" collective="false" import="true" targetId="93d7-5b1c-d423-f79e" type="selectionEntry"/>
+        <entryLink id="8506-b884-9210-165a" name="Lord of the Damned" hidden="false" collective="false" import="true" targetId="0e7c-1987-e362-79e6" type="selectionEntry"/>
+        <entryLink id="9639-d075-e6d1-5b23" name="Veilgate Orb" hidden="false" collective="false" import="true" targetId="00f4-2401-5c93-7651" type="selectionEntry"/>
+        <entryLink id="c5cb-1cbd-5b55-bd6b" name="Wyrd Stone" hidden="false" collective="false" import="true" targetId="52b9-d217-e5b8-672f" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="17df-ad66-db37-0a37" name="Artefacts" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="17df-ad66-db37-0a37" name="Artefacts (DL, Sor)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8551-b8c7-3034-da36" type="max"/>
       </constraints>
@@ -5357,6 +5374,26 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="473c-1aad-25d4-deb0" name="Artefacts (WDG: CL, BC)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2bb4-962d-fbbb-9783" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="6544-e62e-9aa0-4760" name="Immortal Gauntlets" hidden="false" collective="false" import="true" targetId="688c-1c93-1305-530a" type="selectionEntry"/>
+        <entryLink id="1689-35c3-57b5-8365" name="Ledger of Souls" hidden="false" collective="false" import="true" targetId="93d7-5b1c-d423-f79e" type="selectionEntry"/>
+        <entryLink id="169d-47ea-6883-8ee5" name="Veilgate Orb" hidden="false" collective="false" import="true" targetId="00f4-2401-5c93-7651" type="selectionEntry"/>
+        <entryLink id="d67a-9612-b08f-7a1b" name="Wyrd Stone" hidden="false" collective="false" import="true" targetId="52b9-d217-e5b8-672f" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="2806-c83d-52f7-c593" name="Artefacts (CL, BC)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c1ff-c6c6-bc4f-e5e9" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="adde-f27e-5fe9-5a12" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+        <entryLink id="89ac-1ef6-41cf-275e" name="Artefacts (WDG: CL, BF)" hidden="false" collective="false" import="true" targetId="473c-1aad-25d4-deb0" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
