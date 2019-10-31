@@ -53,7 +53,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">7</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="6269-9737-500a-e4ef" name="Overlord Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -261,7 +261,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="d1ed-7c10-f8e4-dc4d" name="Vizier Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -486,17 +486,29 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (4+), Aegis (2+, against Flaming Attacks)</characteristic>
           </characteristics>
         </profile>
         <profile id="85f3-94f0-d5d2-9b90" name="Chosen of Lugar Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <modifiers>
+            <modifier type="set" field="44e9-6a3e-7471-8b36" value="Great Weapon, Battle Focus, Volcanic Embrace">
+              <conditions>
+                <condition field="selections" scope="7930-d759-161c-00ca" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2749-2e99-6c46-1255" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="44e9-6a3e-7471-8b36" value="Infernal Weapon, Battle Focus, Volcanic Embrace">
+              <conditions>
+                <condition field="selections" scope="7930-d759-161c-00ca" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7914-d168-0bde-7d2d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Paired Weapons, Battle Focus, Volcanic Embrace</characteristic>
           </characteristics>
         </profile>
         <profile id="09ee-475c-ddfc-1222" name="Chosen of Lugar Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -602,6 +614,7 @@
         <selectionEntryGroup id="4f89-8115-3b51-7e8b" name="Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a22f-a414-2382-cb19" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da63-fcc0-5676-d94c" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="2749-2e99-6c46-1255" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -625,6 +638,14 @@
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
+            </selectionEntry>
+            <selectionEntry id="2683-1d3b-13a8-ab65" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e29-a6e9-be7f-8fbe" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="48d7-6232-c397-8936" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -668,7 +689,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="63d3-112f-dd00-75ca" name="Prophet Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1049,7 +1070,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="34ef-f0ff-50a7-b371" name="Taurukh Subjugator Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1059,7 +1080,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Devastating Charge (+1 Arm)</characteristic>
           </characteristics>
         </profile>
         <profile id="fa36-4392-5720-7c84" name="Taurukh Subjugator Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -1261,7 +1282,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Opportunist</characteristic>
           </characteristics>
         </profile>
         <profile id="f3aa-6287-2f3d-9907" name="Hobgoblin Chieftain Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -1488,12 +1509,7 @@
       <modifiers>
         <modifier type="add" field="category" value="b519-5f8b-0ed3-9b5b">
           <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7dce-a1d6-c5fc-43a4" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" field="category" value="b519-5f8b-0ed3-9b5b">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7dce-a1d6-c5fc-43a4" type="equalTo"/>
+            <condition field="selections" scope="7f38-d686-4651-a747" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7dce-a1d6-c5fc-43a4" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1510,7 +1526,7 @@
           <modifiers>
             <modifier type="set" field="6908-24ea-089f-0d47" value="30.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7dce-a1d6-c5fc-43a4" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7dce-a1d6-c5fc-43a4" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1532,7 +1548,7 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
               </characteristics>
             </profile>
             <profile id="46a9-819e-f376-5bfb" name="Infernal Warrior Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1638,12 +1654,7 @@
       <modifiers>
         <modifier type="add" field="category" value="b519-5f8b-0ed3-9b5b">
           <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab95-ae87-46f0-38d0" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" field="category" value="b519-5f8b-0ed3-9b5b">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab95-ae87-46f0-38d0" type="equalTo"/>
+            <condition field="selections" scope="080f-10af-c5fc-3956" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab95-ae87-46f0-38d0" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1683,7 +1694,7 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour</characteristic>
               </characteristics>
             </profile>
             <profile id="09de-21e8-525d-353c" name="Citadel Guard Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1780,14 +1791,9 @@
     </selectionEntry>
     <selectionEntry id="7cc5-429b-699b-1f0f" name="Hobgoblins" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="b519-5f8b-0ed3-9b5b">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5377-f616-5fd0-ae9f" type="equalTo"/>
-          </conditions>
-        </modifier>
         <modifier type="add" field="category" value="b519-5f8b-0ed3-9b5b">
           <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5377-f616-5fd0-ae9f" type="equalTo"/>
+            <condition field="selections" scope="7cc5-429b-699b-1f0f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5377-f616-5fd0-ae9f" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1801,17 +1807,9 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ef2e-dae0-f658-0e79" name="Hobgoblin" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="df7b-c7de-a919-d403" value="60.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5377-f616-5fd0-ae9f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9353-4aa9-f990-315c" type="min"/>
             <constraint field="selections" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d00-dcb3-b6e5-77a5" type="max"/>
-            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df7b-c7de-a919-d403" type="max"/>
           </constraints>
           <profiles>
             <profile id="e886-4186-9748-d738" name="Hobgoblin Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -1827,7 +1825,7 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
               </characteristics>
             </profile>
             <profile id="b44d-9cf6-4ae0-6626" name="Hobgoblin Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1837,7 +1835,7 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Opportunist</characteristic>
               </characteristics>
             </profile>
             <profile id="56fd-ca8d-cdc3-81b4" name="Hobgoblin Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -1952,10 +1950,11 @@
       <rules>
         <rule id="f2de-bfee-6bf4-47b7" name="Slaves" hidden="false">
           <description>At the end of a phase, if there are no friendly models with Chosen of Ashuruk or Opportunist on the Battlefield, immediately remove all your Orc Slaves models as casualties.
-            At the start of a friendly Player Turn, if there aren’t any friendly units with Chosen of Ashuruk or Opportunist within 6” of an unengaged non-Fleeing Orc Slave unit, roll a D6: 
-	          1-2: The Orc Slave unit immediately flees directly towards the nearest table edge.
-	          3-4: The Orc Slave unit is Shaken until the end of the Player Turn. 
-	          5-6: No effect. The Orc Slave unit behaves normally.
+
+At the start of a friendly Player Turn, if there aren’t any friendly units with Chosen of Ashuruk or Opportunist within 6” of an unengaged non-Fleeing Orc Slave unit, roll a D6: 
+          1-2: The Orc Slave unit immediately flees directly towards the nearest table edge.
+          3-4: The Orc Slave unit is Shaken until the end of the Player Turn. 
+          5-6: No effect. The Orc Slave unit behaves normally.
           </description>
         </rule>
         <rule id="1a01-0588-a4b4-7e68" name="Born to Fight" hidden="false">
@@ -1992,7 +1991,7 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
               </characteristics>
             </profile>
             <profile id="e3e3-9aef-25c2-a05e" name="Orc Slave Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2002,7 +2001,7 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Born to Fight</characteristic>
               </characteristics>
             </profile>
             <profile id="ae6c-a8e3-3f74-6bc1" name="Orc Slave Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2027,7 +2026,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0d67-1daa-0f26-1ba7" name="Option" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="0d67-1daa-0f26-1ba7" name="Options" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b2b-8e7e-a002-13e2" type="max"/>
           </constraints>
@@ -2078,7 +2077,7 @@
     <selectionEntry id="c301-2026-2b57-1832" name="Immortals" hidden="false" collective="false" import="true" type="unit">
       <rules>
         <rule id="1200-46c6-d942-ce91" name="Blessing of Nezibkesh" hidden="false">
-          <description>All Melee Attacks from Special Attacks against models with Blessing of Nezibkesh have their Strength halved (rounding fractions up). and their Armour Penetration reduced by 2.</description>
+          <description>The Strength of all Melee Attacks from Special Attacks against models with Blessing of Nezibkesh is halved, rounding fractions up, and in addition the attacks suffer -2 Armour Penetration.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2110,17 +2109,24 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour, Blessing of Nezibkesh</characteristic>
               </characteristics>
             </profile>
             <profile id="9635-0039-7c58-d235" name="Immortal Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <modifiers>
+                <modifier type="set" field="44e9-6a3e-7471-8b36" value="Infernal Weapon">
+                  <conditions>
+                    <condition field="selections" scope="c301-2026-2b57-1832" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99b5-88df-a4dc-b6e2" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Great Weapon</characteristic>
               </characteristics>
             </profile>
             <profile id="5e71-d1ea-ae5c-05b4" name="Immortal Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2135,19 +2141,19 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="28.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="84e9-a45b-0bbf-c8d2" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3ea4-3705-acc6-6c1d" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
               <repeats>
-                <repeat field="selections" scope="c301-2026-2b57-1832" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="51b0-5703-1c9b-63cc" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="51b0-5703-1c9b-63cc" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d16a-b320-9314-d382" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10a8-84d9-dfde-c983" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="dd24-fea0-3dcf-55c6" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+            <infoLink id="a145-8e64-3d95-6e2c" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -2171,36 +2177,36 @@
             <entryLink id="d1e4-3044-0ecb-be96" name="ID Banner Enchantments" hidden="false" collective="false" import="true" targetId="213b-cce6-215f-9453" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="4d12-1071-5f95-8e45" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="3133-f22c-ea7e-d0d0">
+        <selectionEntryGroup id="8d9f-720e-5db2-7403" name="Weapon" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="212e-ccef-efb9-e0a6" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c10-38cc-64d2-dd6b" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8181-8bc3-f3f7-f6cb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a9c-cbf5-3163-736b" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="3133-f22c-ea7e-d0d0" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="917f-e71e-b5b3-8965" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7be5-67d4-6e3e-7b57" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="60de-28ac-2286-c550" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="62d4-3f2b-f826-997b" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
+                <infoLink id="8aaa-4370-6c92-2fb5" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="5129-613e-e03c-d46b" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="99b5-88df-a4dc-b6e2" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
                   <repeats>
-                    <repeat field="selections" scope="c301-2026-2b57-1832" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="51b0-5703-1c9b-63cc" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="c301-2026-2b57-1832" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b0-5703-1c9b-63cc" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="914b-1717-c200-3d04" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="121d-d27c-bd3d-66e4" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="c24c-a5f4-d8c6-6562" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
+                <infoLink id="9167-b735-57de-3a56" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -2231,7 +2237,7 @@
         <infoLink id="4e23-9f94-9f14-39ab" name="Infernal Armour" hidden="false" targetId="3c9e-ab86-99bb-7595" type="profile"/>
         <infoLink id="3a90-1d29-895c-5e15" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (+1 Armour)"/>
+            <modifier type="append" field="name" value=" (+1 Arm)"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -2258,7 +2264,7 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour</characteristic>
               </characteristics>
             </profile>
             <profile id="862b-5bfb-7ef6-7e4e" name="Taurukh Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2268,7 +2274,8 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Devastating Charge (+1 Arm)
+Options:</characteristic>
               </characteristics>
             </profile>
             <profile id="180d-f43f-8a4d-a675" name="Taurukh Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2281,24 +2288,6 @@
           </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="23.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="951d-f234-1f9c-ee11" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
-              <repeats>
-                <repeat field="selections" scope="0444-c987-7b8b-91c3" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee5c-a45f-02c8-1c64" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9731-d6f9-4092-890c" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="a5b6-631d-2803-2eec" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2319,66 +2308,90 @@
             <entryLink id="56f2-279f-9682-d448" name="ID Banner Enchantments" hidden="false" collective="false" import="true" targetId="213b-cce6-215f-9453" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="76a3-ef5c-9fa9-044b" name="Melee Weapon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a87e-7c39-2ce5-b566" type="max"/>
-          </constraints>
+        <selectionEntryGroup id="1710-4bd3-02e4-a80c" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="e825-33fc-60ec-0975" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a15b-d0df-2378-9a5e" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="0444-c987-7b8b-91c3" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ee5c-a45f-02c8-1c64" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee5c-a45f-02c8-1c64" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e8c-65d4-928e-40a7" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="993d-cb99-610d-0111" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="7acc-188d-97a5-7994" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ca97-5e97-651c-f7d1" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
-                  <repeats>
-                    <repeat field="selections" scope="0444-c987-7b8b-91c3" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ee5c-a45f-02c8-1c64" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7e3-26a1-585f-96b5" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="f123-a0e1-9db7-2037" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6e0d-3dd4-ca09-ff7e" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
-                  <repeats>
-                    <repeat field="selections" scope="0444-c987-7b8b-91c3" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ee5c-a45f-02c8-1c64" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28a7-46c5-7eb9-a7ed" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="89d4-deef-fc9f-403f" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
+                <infoLink id="4b1c-b296-f061-07a4" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="2105-de64-82b6-5f07" name="Weapon" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e79-499e-7f6e-2b39" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="457c-f391-d4eb-f546" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="24fd-8af8-0c78-001c" value="0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee5c-a45f-02c8-1c64" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2717-5734-2e60-9996" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="4f52-908c-8641-783d" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="23ff-e7ff-55c8-14fa" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee5c-a45f-02c8-1c64" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02de-2d0e-5896-a844" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="a6dd-e39b-f14b-8735" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="7967-0f64-87fe-769f" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee5c-a45f-02c8-1c64" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24fc-dc41-b76c-038d" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="04af-6dd0-2827-79d0" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -2403,7 +2416,7 @@
         <infoLink id="eb59-4e66-d294-00f5" name="Infernal Armour" hidden="false" targetId="3c9e-ab86-99bb-7595" type="profile"/>
         <infoLink id="3706-f69d-fa1f-367e" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (+1 Armour)"/>
+            <modifier type="append" field="name" value=" (+1 Arm)"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -2430,7 +2443,7 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour</characteristic>
               </characteristics>
             </profile>
             <profile id="1954-7730-9339-8361" name="Taurukh Anointed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2440,7 +2453,7 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Devastating Charge (+1 Arm)</characteristic>
               </characteristics>
             </profile>
             <profile id="8b59-f440-0182-9790" name="Taurukh Anointed Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2594,7 +2607,7 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
               </characteristics>
             </profile>
             <profile id="d60b-c6aa-0ef1-4bc0" name="Hobgoblin Rider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2604,7 +2617,7 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Opportunist</characteristic>
               </characteristics>
             </profile>
             <profile id="5cfa-095a-e1b5-15bd" name="Wolf Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2614,7 +2627,7 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
               </characteristics>
             </profile>
             <profile id="605c-bdc6-d8a5-a05c" name="Hobgoblin Wolf Rider Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2631,7 +2644,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0360-5490-eeb0-b6bd" name="May take any of the following:" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="0360-5490-eeb0-b6bd" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="fb9e-3f4b-2a71-77e1" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -2726,7 +2739,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="9bb7-f45a-3b9c-748e" name="Infernal Artillery Crew Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2743,7 +2756,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Move or Fire</characteristic>
           </characteristics>
         </profile>
         <profile id="fef1-904e-9007-27b9" name="Infernal Artillery Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2948,7 +2961,7 @@
                     <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
                     <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                     <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                    <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                    <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="c631-3d70-bd2c-b98c" name="Titan Mortar Crew Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2958,7 +2971,7 @@
                     <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                     <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                     <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                    <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                    <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Titan Mortar (4+), Move or Fire</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="50c4-b317-8758-da8d" name="Titan Mortar Ogre Slave Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3066,7 +3079,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour, Hard Target (1)</characteristic>
           </characteristics>
         </profile>
         <profile id="74b8-939e-8bc7-e79e" name="Gunnery Team Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3076,7 +3089,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Quick to Fire</characteristic>
           </characteristics>
         </profile>
         <profile id="e5ba-f215-8a2d-e659" name="Gunnery Team Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3209,7 +3222,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Hobgoblin Bolt Thrower (4+) , Move or Fire</characteristic>
           </characteristics>
         </profile>
         <profile id="269b-9dfe-0316-cd7a" name="Hobgoblin Bolt Thrower (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
@@ -3218,7 +3231,7 @@
             <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
             <characteristic name="Str" typeId="f166-13ff-9227-4525">3 [6]</characteristic>
             <characteristic name="AP" typeId="857a-4ce1-d134-8701">10</characteristic>
-            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">[Multiple Wounds (D3)]</characteristic>
+            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">[Multiple Wounds (D3)], Area Attack (1×5)</characteristic>
           </characteristics>
         </profile>
         <profile id="06cf-17a2-8cb9-035e" name="Armoured Giant Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3278,17 +3291,24 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (5+), Aegis (2+, against Flaming Attacks)</characteristic>
               </characteristics>
             </profile>
             <profile id="99fd-dea3-485e-9f8d" name="Disciple of Lugar Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <modifiers>
+                <modifier type="set" field="44e9-6a3e-7471-8b36" value="Great Weapon, Volcanic Embrace, Battle Focus">
+                  <conditions>
+                    <condition field="selections" scope="36ff-8e24-d516-6769" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eddb-c5f8-db3f-e02b" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Paired Weapons, Volcanic Embrace, Battle Focus</characteristic>
               </characteristics>
             </profile>
             <profile id="82b5-9499-10b7-09de" name="Disciple of Lugar Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3384,7 +3404,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (2+, against Flaming Attacks), Aegis (5+)</characteristic>
           </characteristics>
         </profile>
         <profile id="1b93-521a-3a69-37f4" name="Kadim Titan Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3394,7 +3414,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">7</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">4</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Volcanic Embrace, Battle Focus, Searing Rage</characteristic>
           </characteristics>
         </profile>
         <profile id="f45b-0b78-1782-5742" name="Kadim Titan Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3468,7 +3488,7 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (2+, against Flaming Attacks), Aegis (5+)</characteristic>
               </characteristics>
             </profile>
             <profile id="1c46-3e02-2809-54cd" name="Kadim Incarnate Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3478,7 +3498,7 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Volcanic Embrace, Battle Focus</characteristic>
               </characteristics>
             </profile>
             <profile id="8e22-ff02-1cf4-101b" name="Kadim Incarnate Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3544,7 +3564,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Impact Hits (D6+1), Grind Attacks (D3)</characteristic>
           </characteristics>
         </profile>
         <profile id="824f-c09a-298b-2f3c" name="Infernal Engine Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3662,7 +3682,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="f72e-bcb8-0441-b294" name="Armoured Giant Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3672,7 +3692,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Rage</characteristic>
           </characteristics>
         </profile>
         <profile id="e931-f405-137e-f122" name="Armoured Giant Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3796,8 +3816,8 @@
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">-</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (2+, against Flaming Attacks)</characteristic>
           </characteristics>
         </profile>
         <profile id="0427-0fe0-1875-9e3e" name="Bull of Shamut Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3807,7 +3827,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Volcanic Embrace, Impact Hits (1)</characteristic>
           </characteristics>
         </profile>
         <profile id="98d4-4515-d7db-08b9" name="Bull of Shamut Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3859,7 +3879,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (5+), Aegis (2+, against Flaming Attacks)</characteristic>
           </characteristics>
         </profile>
         <profile id="28ea-755b-2e36-5e29" name="Great Bull of Shamut Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3869,7 +3889,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Volcanic Embrace, Impact Hits (1), Breath Attack (Str 4, AP 1, Flaming Attacks)</characteristic>
           </characteristics>
         </profile>
         <profile id="8155-ea6e-2845-81c1" name="Great Bull of Shamut Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3935,7 +3955,7 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d96-ed24-8ac8-bd93" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f94-db8a-056e-15ad" type="max"/>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="637c-8d76-2982-2c17" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="637c-8d76-2982-2c17" type="max"/>
       </constraints>
       <profiles>
         <profile id="94fe-52f3-eaed-6826" name="Temple Lamassu Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -3951,7 +3971,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (5+)</characteristic>
           </characteristics>
         </profile>
         <profile id="4d42-32bf-015f-edaa" name="Temple Lamassu Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3961,7 +3981,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Magical Attacks, Breath Attack (Str 4, AP 1, Magical Attacks)</characteristic>
           </characteristics>
         </profile>
         <profile id="2f78-0eb8-7e1c-3633" name="Temple Lamassu Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4076,6 +4096,65 @@
       </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8cfe-6aa1-c4b9-fe18" name="Bound Daemon" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="24fd-8af8-0c78-001c" value="190.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1871-797a-785c-a45b" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="858e-354d-9705-3c1c" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a481-2dc8-8483-d0d3" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="df9c-a995-223e-a7ca" name="Bound Daemon Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cdbb-0707-6778-6f5f" name="Bound Daemon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (5+)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e196-e0ba-8901-c42d" name="Bound Daemon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Move or Fire, Daemonic Infusion</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="5d1c-f6ba-d39a-daab" name="Daemonic Fury" hidden="false">
+          <description>At the start of each friendly Player Turn, the Bound Daemon must take a Discipline Test. If the test is failed the Bound Daemon gains Random Movement (3D6”) until the end of the Player Turn. It cannot freely choose which direction to rotate towards but must move directly towards the closest enemy unit in the Movement Phase (in case the initial Pivot is impeded, the model Pivots as far as possible towards the closest enemy unit and then moves no further).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="7828-6f3f-a51c-6e67" name="Unbreakable" hidden="false" targetId="99ef-69e8-164b-3335" type="rule"/>
+        <infoLink id="607f-43d6-da9b-a9c0" name="Daemonic Infusion" hidden="false" targetId="5eca-08ce-8a5d-7a6f" type="rule"/>
+        <infoLink id="3ba8-e15a-dd60-289b" name="Move or Fire" hidden="false" targetId="6475-e063-0070-f6cc" type="rule"/>
+        <infoLink id="859a-4cc3-44ad-c40e" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (5+)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -4378,16 +4457,16 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="bd7a-2f3c-f580-7678" name="Chosen of Ashuruk" hidden="false">
-      <description>The model automatically passes all Fear Tests (but still suffers -1 Discipline from Fear) and considers all units without Chosen of Ashuruk as Insignificant. Furthermore, the model gains Battle Focus, which cannot be used during the first Round of Combat, and model parts with Harnessed cannot use it. R&amp;F models with this rule cannot be joined by Characters without it.</description>
+      <description>The model automatically passes all Fear Tests (but still suffers -1 Discipline from Fear) and considers all units without Chosen of Ashuruk as Insignificant. Furthermore, model parts without Harnessed gain Battle Focus, which cannot be used during the First Round of Combat. R&amp;F models with Chosen of Ashuruk cannot be joined by Characters without Chosen of Ashuruk.</description>
     </rule>
     <rule id="5eca-08ce-8a5d-7a6f" name="Daemonic Infusion" hidden="false">
       <description>The model part gains Magical Attacks, and any Panic Tests it causes to enemy units through 25% casualties suffer -1 Discipline</description>
     </rule>
     <rule id="2a22-a7a4-da35-4e5b" name="Opportunist" hidden="false">
-      <description>When fighting an enemy unit in the enemy&apos;s Flank or Rear facing while only being engaged in the Front Facing, a model part with this rule must re-roll failed To-Hit Rolls.</description>
+      <description>When fighting an enemy unit in the enemy’s Flank or Rear Facing while only being Engaged in the Front Facing, a model part with this rule must reroll failed to-hit rolls.</description>
     </rule>
     <rule id="02ab-566d-7f51-fee2" name="Volcanic Embrace" hidden="false">
-      <description>All Melee Attacks (including Special Attacks) made by model parts with Volcanic Embrace gain Flaming Attacks. In addition, at Initiative Step 0, all enemy models in base contact with one or more model parts with Volcanic Embrace suffer a hit with Strength 4, Armour Penetration 0, and Flaming Attacks. Models with Volcanic Embrace cannot benefir from Fortitude.</description>
+      <description>The model part gains Magical Attacks. All Melee Attacks (including Special Attacks) made by model parts with Volcanic Embrace become Flaming Attacks. In addition, at Initiative Step 0, all enemy models in base contact with one or more model parts with Volcanic Embrace suffer a hit with Strength 4, Armour Penetration 0, and Flaming Attacks. Models with Volcanic Embrace automatically fail all Fortitude Saves.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -4395,7 +4474,7 @@
       <characteristics>
         <characteristic name="Type" typeId="017b-143b-0520-bdc1">Plate Armour</characteristic>
         <characteristic name="Save" typeId="4ca3-2498-f356-f056">4+</characteristic>
-        <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Aegis (5+) against Flaming Attacks.</characteristic>
+        <characteristic name="Rules" typeId="f269-16dd-a614-0f90">The wearer gains Aegis (5+, against Flaming Attacks).</characteristic>
       </characteristics>
     </profile>
     <profile id="3ce9-1282-2e80-84d5" name="Infernal Weapon" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
@@ -4418,7 +4497,7 @@
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+1</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">0</characteristic>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">A model using this weapon cannot simultaneously use a Shield against Melee Attacks. </characteristic>
+        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">In c lose combat, this weapon is used as a Close Combat Weapon with the Two-Handed Attack Attribute.</characteristic>
       </characteristics>
     </profile>
     <profile id="7afe-6f22-2b97-27ac" name="Blunderbuss" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
@@ -4427,7 +4506,11 @@
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
         <characteristic name="Str" typeId="f166-13ff-9227-4525">5</characteristic>
         <characteristic name="AP" typeId="857a-4ce1-d134-8701">0</characteristic>
-        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire. Attacks with this weapon do not suffer negative to-hit modifiers from a Stand and Shoot Charge reaction. March Moving does not prevent from shooting this weapon. When shooting with a unit that has more than half of its models equipped with a Blunderbuss and ● exactly 3 Full Ranks, each natural successful to-hit roll of &apos;6&apos; with a Blunderbuss causes two hits instead of one. ● 4 or more Full Ranks, each successful to-hit roll with a Blunderbuss causes two hits instead of one.</characteristic>
+        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire, March and Shoot.
+Attacks with this weapon do not suffer negative to-hit modifiers from a Stand and Shoot Charge Reaction.
+When shooting with a unit that has more than half of its models equipped with a Blunderbuss and
+● exactly 3 Full Ranks, each natural successful to-hit roll of &apos;6&apos; with a Blunderbuss causes two hits instead of one.
+● 4 or more Full Ranks, each successful to-hit roll with a Blunderbuss causes two hits instead of one.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
