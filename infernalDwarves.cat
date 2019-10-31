@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dfd2-0d74-3072-b274" name="Infernal Dwarves 2.1" revision="23" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dfd2-0d74-3072-b274" name="Infernal Dwarves 2.1" revision="23" battleScribeVersion="2.03" authorName="DarkSky, Rzmoz" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="12f7-9967-08bc-2ab6" name="Barrage" hidden="false"/>
     <categoryEntry id="1464-f43f-9e7c-296c" name="Bound and Binders" hidden="false"/>
@@ -779,7 +779,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a2de-afde-7d87-7974" name="Occupation" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="a2de-afde-7d87-7974" name="Trait" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5ad-953f-1acb-b99d" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7a5-35ca-ee1c-7e5f" type="max"/>
@@ -1485,6 +1485,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7f38-d686-4651-a747" name="Infernal Warriors" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="b519-5f8b-0ed3-9b5b">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7dce-a1d6-c5fc-43a4" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="remove" field="category" value="b519-5f8b-0ed3-9b5b">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7dce-a1d6-c5fc-43a4" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="2c39-934a-3766-e7fc" name="Chosen of Ashuruk" hidden="false" targetId="bd7a-2f3c-f580-7678" type="rule"/>
         <infoLink id="653f-1dd7-39a8-260c" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
@@ -1495,6 +1507,13 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0116-6eef-c4ba-9a6a" name="Infernal Warrior" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="6908-24ea-089f-0d47" value="30.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7dce-a1d6-c5fc-43a4" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="40.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6908-24ea-089f-0d47" type="max"/>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ba6-257f-9401-6777" type="min"/>
@@ -1526,52 +1545,9 @@
                 <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
-            <profile id="e4ca-4835-f48e-b519" name="Titan Mortar Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">75Ø</characteristic>
-              </characteristics>
-            </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="12.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5834-f2d7-1750-04e3" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
-              <repeats>
-                <repeat field="selections" scope="7f38-d686-4651-a747" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0116-6eef-c4ba-9a6a" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bcf-b097-03d1-cf5d" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="7e59-bcee-5414-120b" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f6fd-f096-54ca-3e8f" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
-              <repeats>
-                <repeat field="selections" scope="7f38-d686-4651-a747" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0116-6eef-c4ba-9a6a" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="baf8-5327-995b-e32c" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="a491-ecf4-64a0-70b1" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1592,113 +1568,67 @@
             <entryLink id="0fd9-933d-0c6e-2ef8" name="ID Banner Enchantments" hidden="false" collective="false" import="true" targetId="213b-cce6-215f-9453" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup id="5be8-8b7c-02c9-2041" name="Options" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="dcd0-c2fc-9583-bb5d" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="7f38-d686-4651-a747" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0116-6eef-c4ba-9a6a" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edc9-5e35-a4e1-a099" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="bd05-4e02-ff1e-2d81" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e806-66a1-9845-ccd3" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
+                  <repeats>
+                    <repeat field="selections" scope="7f38-d686-4651-a747" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0116-6eef-c4ba-9a6a" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e69-4e90-97fb-6d91" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="f60a-4ae6-cad9-8bd5" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7dce-a1d6-c5fc-43a4" name="Blunderbuss (3+)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="8.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0116-6eef-c4ba-9a6a" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea5e-3aa4-ebd5-80ca" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a320-9eed-0a38-bad2" name="Blunderbuss" hidden="false" targetId="7afe-6f22-2b97-27ac" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="8b7f-a7e4-67a5-45d9" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="56ba-ec22-c921-3129" name="Infernal Warriors with Blunderbuss" hidden="false" collective="false" import="true" type="unit">
-      <infoLinks>
-        <infoLink id="614d-7c19-5cfb-a6c6" name="Chosen of Ashuruk" hidden="false" targetId="bd7a-2f3c-f580-7678" type="rule"/>
-        <infoLink id="9e5e-6861-03df-a212" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-        <infoLink id="06e6-c128-1961-fb27" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-        <infoLink id="d92a-705a-d438-601f" name="Blunderbuss" hidden="false" targetId="7afe-6f22-2b97-27ac" type="profile">
-          <modifiers>
-            <modifier type="append" field="name" value=" (3+)"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="546a-1b18-33fa-6cd9" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
-        <categoryLink id="89c0-b5d8-0695-4a8a" name="Hail of the Gods (local)" hidden="false" targetId="b519-5f8b-0ed3-9b5b" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="80a3-aa88-a083-d71f" name="Infernal Warrior" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce82-14d8-cf35-36b3" type="max"/>
-            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="574b-714c-5f51-d234" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="aa81-73c9-4390-361e" name="Infernal Warrior Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">3&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">9&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="663e-c990-7e96-03ba" name="Infernal Warrior Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-              </characteristics>
-            </profile>
-            <profile id="04c3-6afc-ddc2-f44b" name="Infernal Warrior Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-              </characteristics>
-            </profile>
-            <profile id="87b2-3110-d1c4-996a" name="Infernal Warrior Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5611-4cc7-1a2c-5cd6" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
-              <repeats>
-                <repeat field="selections" scope="56ba-ec22-c921-3129" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="80a3-aa88-a083-d71f" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="170b-9cef-acfa-c3b4" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="47d3-403e-79e3-0ff7" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2e92-a115-7215-a87c" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
-              <repeats>
-                <repeat field="selections" scope="56ba-ec22-c921-3129" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="80a3-aa88-a083-d71f" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e6b-e7f2-538f-1801" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="2676-fcd4-9932-0c03" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="98b2-9ce5-2b1f-a78a" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -1709,6 +1639,11 @@
         <modifier type="add" field="category" value="b519-5f8b-0ed3-9b5b">
           <conditions>
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab95-ae87-46f0-38d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="remove" field="category" value="b519-5f8b-0ed3-9b5b">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab95-ae87-46f0-38d0" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1811,6 +1746,9 @@
               <infoLinks>
                 <infoLink id="9c8b-12c6-7b03-b1e4" name="Flintlock Axe" hidden="false" targetId="1338-63b0-76a0-355b" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="852d-e082-29e8-b0a3" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -1826,6 +1764,9 @@
               <infoLinks>
                 <infoLink id="810a-cc8a-5176-7077" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1838,6 +1779,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7cc5-429b-699b-1f0f" name="Hobgoblins" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="b519-5f8b-0ed3-9b5b">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5377-f616-5fd0-ae9f" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="b519-5f8b-0ed3-9b5b">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5377-f616-5fd0-ae9f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="c04c-fa9a-df43-af28" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="2c28-394b-5e0b-f1bd" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
@@ -1848,9 +1801,17 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ef2e-dae0-f658-0e79" name="Hobgoblin" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="df7b-c7de-a919-d403" value="60.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5377-f616-5fd0-ae9f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9353-4aa9-f990-315c" type="min"/>
             <constraint field="selections" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d00-dcb3-b6e5-77a5" type="max"/>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df7b-c7de-a919-d403" type="max"/>
           </constraints>
           <profiles>
             <profile id="e886-4186-9748-d738" name="Hobgoblin Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -1895,7 +1856,6 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="38ca-ac84-0b86-b78c" name="Options" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b127-4ac1-761d-dc2c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8b2-6e6a-966b-85cd" type="min"/>
           </constraints>
           <selectionEntries>
@@ -1960,149 +1920,29 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="5377-f616-5fd0-ae9f" name="Bow (4+)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef2e-dae0-f658-0e79" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b782-bde0-883e-958d" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="0ebc-a138-5dbb-df58" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="d55b-a8ae-3010-3f03" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="a9f0-9d4c-90f1-8db2" name="Hobgoblins with Bows" hidden="false" collective="false" import="true" type="unit">
-      <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d189-eaed-79ef-7185" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="b595-049f-2e9d-acb8" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-        <infoLink id="4824-d6cb-b551-26e4" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="66f1-9c07-e6e2-dbbd" name="Opportunist" hidden="false" targetId="2a22-a7a4-da35-4e5b" type="rule"/>
-        <infoLink id="ccc1-a8db-2bd5-23a2" name="Bow (4+)" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="82e5-6265-84ce-4e79" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
-        <categoryLink id="ef76-2cec-030c-4b60" name="Hail of the Gods (local)" hidden="false" targetId="b519-5f8b-0ed3-9b5b" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="edcb-7f0a-cc2b-add3" name="Hobgoblin" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cbd-d072-cbf4-ff1e" type="min"/>
-            <constraint field="selections" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c02-649b-f3b5-e0a9" type="max"/>
-            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="540.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ec1c-ba15-b607-849d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d00c-35fb-a7eb-ac33" name="Hobgoblin Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="06ff-5e5e-ef9c-23bf" name="Hobgoblin Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-              </characteristics>
-            </profile>
-            <profile id="4a2a-792f-0862-86bc" name="Hobgoblin Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-              </characteristics>
-            </profile>
-            <profile id="ec59-7180-d91b-147c" name="Hobgoblin Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="8.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a71c-95d8-882d-c238" name="Options" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="caa8-4f1e-1e5a-fdad" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="1129-48b4-32a8-a798" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0">
-                  <repeats>
-                    <repeat field="selections" scope="a9f0-9d4c-90f1-8db2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edcb-7f0a-cc2b-add3" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="976b-7e4d-133b-56ab" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="7685-5da9-4ca6-1b61" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1d17-a857-4cb7-6afa" name="Spear &amp; Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0">
-                  <repeats>
-                    <repeat field="selections" scope="a9f0-9d4c-90f1-8db2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edcb-7f0a-cc2b-add3" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7259-f31e-fc05-1cfd" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="321c-06d5-d456-296a" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
-                <infoLink id="1b44-4c11-94e3-43bc" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c81b-517f-9eea-87ea" name="Backstabbers" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
-                  <repeats>
-                    <repeat field="selections" scope="a9f0-9d4c-90f1-8db2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edcb-7f0a-cc2b-add3" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa63-8da4-17a8-130d" type="max"/>
-              </constraints>
-              <rules>
-                <rule id="ad61-773c-0940-9662" name="Backstabbers" hidden="false">
-                  <description>The model loses all of its Weapons and Armour, and gains Paired Weapons and Poison Attacks. In addition, the model gains +2 Advance Rate when charging an enemy unit’s Flank and +4 Advance Rate when charging an enemy unit’s Rear Facing.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="10bd-8af5-b42c-cf7d" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-                <infoLink id="d8f8-22a7-c877-926f" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="5c28-3849-7100-9cc3" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
