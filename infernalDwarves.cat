@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dfd2-0d74-3072-b274" name="Infernal Dwarves 2.1" revision="23" battleScribeVersion="2.03" authorName="DarkSky, rzmoz" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dfd2-0d74-3072-b274" name="Infernal Dwarves 2.1.5" revision="24" battleScribeVersion="2.03" authorName="DarkSky, rzmoz" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="12f7-9967-08bc-2ab6" name="Barrage" hidden="false"/>
     <categoryEntry id="1464-f43f-9e7c-296c" name="Bound and Binders" hidden="false"/>
@@ -459,25 +459,13 @@
           </characteristics>
         </profile>
         <profile id="85f3-94f0-d5d2-9b90" name="Chosen of Lugar Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <modifiers>
-            <modifier type="set" field="44e9-6a3e-7471-8b36" value="Great Weapon, Battle Focus, Volcanic Embrace">
-              <conditions>
-                <condition field="selections" scope="7930-d759-161c-00ca" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2749-2e99-6c46-1255" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="44e9-6a3e-7471-8b36" value="Infernal Weapon, Battle Focus, Volcanic Embrace">
-              <conditions>
-                <condition field="selections" scope="7930-d759-161c-00ca" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7914-d168-0bde-7d2d" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Paired Weapons, Battle Focus, Volcanic Embrace</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Battle Focus, Volcanic Embrace</characteristic>
           </characteristics>
         </profile>
         <profile id="09ee-475c-ddfc-1222" name="Chosen of Lugar Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -579,7 +567,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4f89-8115-3b51-7e8b" name="Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="4f89-8115-3b51-7e8b" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="2683-1d3b-13a8-ab65">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a22f-a414-2382-cb19" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da63-fcc0-5676-d94c" type="min"/>
@@ -771,7 +759,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a2de-afde-7d87-7974" name="Trait" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="a2de-afde-7d87-7974" name="Trait" hidden="false" collective="false" import="true" defaultSelectionEntryId="f081-86dd-b659-ed88">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5ad-953f-1acb-b99d" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7a5-35ca-ee1c-7e5f" type="max"/>
@@ -1616,6 +1604,16 @@
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab95-ae87-46f0-38d0" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="append" field="name" value="with Shield">
+              <conditions>
+                <condition field="selections" scope="080f-10af-c5fc-3956" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="852d-e082-29e8-b0a3" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="append" field="name" value="with Flintlock Axe">
+              <conditions>
+                <condition field="selections" scope="080f-10af-c5fc-3956" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab95-ae87-46f0-38d0" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e33d-f77b-5162-5f17" type="min"/>
@@ -1678,7 +1676,7 @@
             <entryLink id="94b8-1104-3206-0dc2" name="ID Banner Enchantments" hidden="false" collective="false" import="true" targetId="213b-cce6-215f-9453" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="2eed-e3fe-6dbb-3fca" name="Options" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="2eed-e3fe-6dbb-3fca" name="Options" hidden="false" collective="false" import="true" defaultSelectionEntryId="852d-e082-29e8-b0a3">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36d9-4aa5-5863-2281" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ea1c-77f5-88c1-2483" type="min"/>
@@ -1997,20 +1995,13 @@ At the start of a friendly Player Turn, if there aren’t any friendly units wit
               </characteristics>
             </profile>
             <profile id="9635-0039-7c58-d235" name="Immortal Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <modifiers>
-                <modifier type="set" field="44e9-6a3e-7471-8b36" value="Infernal Weapon">
-                  <conditions>
-                    <condition field="selections" scope="c301-2026-2b57-1832" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99b5-88df-a4dc-b6e2" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Great Weapon</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
               </characteristics>
             </profile>
             <profile id="5e71-d1ea-ae5c-05b4" name="Immortal Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2061,7 +2052,7 @@ At the start of a friendly Player Turn, if there aren’t any friendly units wit
             <entryLink id="d1e4-3044-0ecb-be96" name="ID Banner Enchantments" hidden="false" collective="false" import="true" targetId="213b-cce6-215f-9453" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8d9f-720e-5db2-7403" name="Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="8d9f-720e-5db2-7403" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="917f-e71e-b5b3-8965">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8181-8bc3-f3f7-f6cb" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a9c-cbf5-3163-736b" type="min"/>
@@ -2214,7 +2205,7 @@ Options:</characteristic>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
-            <selectionEntryGroup id="2105-de64-82b6-5f07" name="Weapon" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="2105-de64-82b6-5f07" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="457c-f391-d4eb-f546">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e79-499e-7f6e-2b39" type="max"/>
               </constraints>
@@ -2647,7 +2638,7 @@ Options:</characteristic>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="4408-5c10-694b-a4c7" name="Crew" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="4408-5c10-694b-a4c7" name="Crew" hidden="false" collective="false" import="true" defaultSelectionEntryId="b303-89bc-e9cc-fb56">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e832-616b-506f-ddb8" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3d8-95ef-5b94-e4d0" type="min"/>
@@ -3075,7 +3066,7 @@ Options:</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Paired Weapons, Volcanic Embrace, Battle Focus</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Volcanic Embrace, Battle Focus</characteristic>
               </characteristics>
             </profile>
             <profile id="82b5-9499-10b7-09de" name="Disciple of Lugar Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3111,7 +3102,7 @@ Options:</characteristic>
             </selectionEntry>
             <selectionEntry id="eddb-c5f8-db3f-e02b" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
                   <repeats>
                     <repeat field="selections" scope="36ff-8e24-d516-6769" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="67e7-affd-10fb-36be" repeats="1" roundUp="false"/>
                   </repeats>
