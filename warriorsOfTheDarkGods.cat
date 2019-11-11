@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9cd6-2c84-c59e-7dd1" name="Warriors of the Dark Gods 2.2.4" revision="51" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9cd6-2c84-c59e-7dd1" name="Warriors of the Dark Gods 2.1.5" revision="52" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="25f6-6ecf-2669-118b" name="8 Manifestation">
       <characteristicTypes>
@@ -170,7 +170,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">7</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hell-Forged Armour, Shield</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hell-Forged Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="51b1-fe73-30f7-918f" name="Chosen Lord Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -218,14 +218,14 @@
           <selectionEntryGroups>
             <selectionEntryGroup id="ca9a-a322-32dc-eea5" name="Special Equipment" hidden="false" collective="false" import="true">
               <modifiers>
-                <modifier type="set" field="f116-4cd8-56b6-7bc0" value="200">
+                <modifier type="increment" field="f116-4cd8-56b6-7bc0" value="50.0">
                   <conditions>
                     <condition field="selections" scope="0e4c-6a11-1423-6af4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6eb6-db76-cd8f-8c78" type="equalTo"/>
                   </conditions>
                 </modifier>
                 <modifier type="increment" field="f116-4cd8-56b6-7bc0" value="50.0">
                   <conditions>
-                    <condition field="selections" scope="0e4c-6a11-1423-6af4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0d4f-8beb-1e8f-b03f" type="equalTo"/>
+                    <condition field="selections" scope="0e4c-6a11-1423-6af4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9db7-ac19-1b30-8de1" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -336,7 +336,7 @@
               </constraints>
               <rules>
                 <rule id="fe14-6e22-fd71-9a7e" name="Entropic Aura" hidden="false">
-                  <description>Standard and Large Size models only. Weapon Enchantments and Armour Enchantments carried by models in units that are in base contact with the bearer (including models in the bearer’s unit) cannot be used.</description>
+                  <description>Weapon Enchantments and Armour Enchantments carried by the bearer, models in the bearer’s unit, and models in units that are in base contact with the bearer are ignored.</description>
                 </rule>
               </rules>
               <costs>
@@ -421,6 +421,21 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6fe-1600-61e2-b544" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d3a-f821-6e04-42ca" type="max"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry id="9db7-ac19-1b30-8de1" name="Favour of Sugulag, God of Greed" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fef4-8e68-81f0-67c3" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="666f-77f2-9b8d-8eaf" name="Favour of Sugulag, God of Greed" hidden="false">
+                  <description>The bearer gains Great Weapon, Halberd, Paired Weapons, and Weapon Master. The Special Item allowance of Characters with this Favour is increased by 50 pts.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <entryLinks>
             <entryLink id="05bf-b8b6-fdab-f45d" name="Favour of Akaan, God of Gluttony" hidden="false" collective="false" import="true" targetId="0614-ee37-f29f-c6f0" type="selectionEntry">
               <modifiers>
@@ -440,11 +455,6 @@
             <entryLink id="0e41-e01c-7c1c-17e5" name="Favour of Vanadra, Goddess of Wrath" hidden="false" collective="false" import="true" targetId="7385-45d2-bf5f-b8ea" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="20.0"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="0d4f-8beb-1e8f-b03f" name="Favour of Sugulag, God of Greed" hidden="false" collective="false" import="true" targetId="ef34-5da0-4123-c9de" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="15.0"/>
               </modifiers>
             </entryLink>
             <entryLink id="9f86-2043-4560-052f" name="Favour of Nukuja, Goddess of Sloth" hidden="false" collective="false" import="true" targetId="517a-afbb-9d04-5381" type="selectionEntry">
@@ -566,7 +576,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">6</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hell-Forged Armour, Shield</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hell-Forged Armour</characteristic>
           </characteristics>
         </profile>
         <profile id="af38-ecff-3b01-59e8" name="Doomlord Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1440,7 +1450,7 @@
       <infoLinks>
         <infoLink id="a80b-c3b2-7ab1-3bfe" name="Hell-Forged Armour" hidden="false" targetId="4b6e-450b-00c6-c6e9" type="profile"/>
         <infoLink id="9eaf-57c9-823b-c273" name="Path of the Favoured" hidden="false" targetId="ad22-35cb-7d05-aea3" type="rule"/>
-        <infoLink id="9636-b5a7-e68d-69e8" name="Spiked Shield" hidden="false" targetId="7063-e7a2-b5ce-ea7b" type="profile"/>
+        <infoLink id="9636-b5a7-e68d-69e8" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
         <infoLink id="188f-36fd-c50e-a38a" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -1685,7 +1695,7 @@
     </selectionEntry>
     <selectionEntry id="2155-30c0-9079-a1c6" name="Fallen" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="e6b6-9295-d5a9-53dc" value="2">
+        <modifier type="set" field="e6b6-9295-d5a9-53dc" value="2.0">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="254b-d9c1-df68-e406" type="equalTo"/>
           </conditions>
@@ -1698,7 +1708,6 @@
         <infoLink id="f78f-91d8-db6b-9d53" name="Hell-Forged Armour" hidden="false" targetId="4b6e-450b-00c6-c6e9" type="profile"/>
         <infoLink id="b77e-3701-6d6b-6a34" name="Path of the Exiled" hidden="false" targetId="45c4-f6e9-92e8-a409" type="rule"/>
         <infoLink id="486d-2764-7982-aa8e" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-        <infoLink id="a5d9-3a70-2eb3-fb5e" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ac3f-0abc-5a43-5d34" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
@@ -1747,6 +1756,15 @@
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="16.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="e7f3-650b-c119-5755" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7f5-6a14-c46d-2ac1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33b2-adff-5b67-a154" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="e1b2-ebce-e7d6-b50d" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -1948,7 +1966,6 @@
       <infoLinks>
         <infoLink id="926f-20b5-22b7-d9ec" name="Hell-Forged Armour" hidden="false" targetId="4b6e-450b-00c6-c6e9" type="profile"/>
         <infoLink id="d949-ff39-67c8-62b4" name="Path of the Favoured" hidden="false" targetId="ad22-35cb-7d05-aea3" type="rule"/>
-        <infoLink id="9eb7-698d-8779-8841" name="Spiked Shield" hidden="false" targetId="7063-e7a2-b5ce-ea7b" type="profile"/>
         <infoLink id="0a69-dce7-783e-b3f4" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="1590-4371-7b6d-44e2" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
       </infoLinks>
@@ -2024,6 +2041,18 @@
           <entryLinks>
             <entryLink id="07e9-e331-847d-ab14" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
           </entryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="141c-e789-016f-a1ac" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5eba-a34a-47a2-be60" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dad9-acc0-baaa-78a4" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b7a1-0528-928f-f8e6" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
@@ -2158,7 +2187,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bb3-bd63-7c2e-532c" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d661-ed63-cc74-90da" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -3292,7 +3321,7 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
               </characteristics>
             </profile>
             <profile id="f206-26a6-7b86-95d9" name="Flayer Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4191,9 +4220,41 @@ Only a single unit may exit the same Gateway Marker in each Player Turn.</descri
             <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
+        <profile id="b2e4-7bb4-ec85-1e50" name="Wretched One (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"></characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"></characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Grind Attacks (D6+1), Harnessed</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="87d7-e44d-fdff-f95c" name="Not a Leader" hidden="false" targetId="f611-6165-ada9-0d7d" type="rule"/>
+        <infoLink id="14be-65ec-0e6b-2ca1" name="Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
+        <infoLink id="37b4-1f37-24a8-fbef" name="Channel" hidden="false" targetId="5a46-f1e8-f840-a1de" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(1)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="83cd-d20f-b813-ecba" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
+        <infoLink id="91b6-b4b8-89ad-6320" name="Towering Presence" hidden="false" targetId="9ca4-65be-33fc-5d47" type="rule"/>
+        <infoLink id="7529-dfb4-77c8-731f" name="Trophy Rack" hidden="false" targetId="a06f-390d-cf8b-795d" type="rule"/>
+        <infoLink id="b214-2864-d2ac-1724" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
+        <infoLink id="2900-589b-092b-8f84" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule"/>
+        <infoLink id="a1ef-187a-768d-9e13" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (5+)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="b8d2-f0fb-b5f4-2877" name="Grind Attacks" hidden="false" targetId="1728-908f-7383-29d6" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (D6+1)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="5956-c439-ad4e-368d" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2bf6-9e95-5d0d-47c8" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -4211,15 +4272,16 @@ Only a single unit may exit the same Gateway Marker in each Player Turn.</descri
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="8d50-18cc-0005-54b8" name="Battleshrine" hidden="false" collective="false" import="true" targetId="1b4a-aa28-6744-2c55" type="selectionEntry">
+        <selectionEntry id="cde4-8749-0bca-4c77" name="Beacon of the Dark Gods" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b316-70f8-07bf-41d7" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="32a4-283f-711c-d201" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c86a-ce8f-bfc2-6a7e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf3b-f2ff-af83-bf3c" type="min"/>
           </constraints>
-        </entryLink>
-      </entryLinks>
+          <infoLinks>
+            <infoLink id="fd34-005d-2dc3-3cdf" name="Beacon of the Dark Gods" hidden="false" targetId="2f11-4959-f8a3-c84e" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="275.0"/>
       </costs>
@@ -4389,7 +4451,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="50f0-475d-118c-ae90" name="Chimera Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4469,7 +4531,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="a741-1f07-4e2a-731e" name="Wasteland Behemoth Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4519,7 +4581,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="5fc9-7f66-50a8-2e16" name="Black Steed Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -4566,7 +4628,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6+1), Inanimate</characteristic>
           </characteristics>
         </profile>
         <profile id="fd5b-b9cd-7e96-e77a" name="Dark Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -4578,14 +4640,14 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
-        <profile id="56d6-dbd4-d7f2-610a" name="Horse (2)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="56d6-dbd4-d7f2-610a" name="Black Steed (2)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="b209-e1fa-4976-481b" name="Dark Chariot Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4629,7 +4691,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="9d9d-3885-69f3-554e" name="Karkadan Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -4676,7 +4738,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="e560-28ac-49b8-8ef2" name="Shadow Chaser Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -4724,7 +4786,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Grind Attacks (D3+1), Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="b16a-e2eb-bffc-95e0" name="Scythed Skywheel Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -4733,7 +4795,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Cannot be Stomped, Hard Target (1)</characteristic>
           </characteristics>
         </profile>
         <profile id="6d23-8493-c0b9-c771" name="Battleshrine Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4778,7 +4840,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="9272-aa10-459c-8418" name="War Dais Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -4787,7 +4849,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Cannot be Stomped</characteristic>
           </characteristics>
         </profile>
         <profile id="4cb4-9601-4684-fefe" name="War Dais Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4836,7 +4898,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Breath Attack (Str 4, AP 1, Flaming Attacks), Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="aae3-3cae-6693-c7fe" name="Wasteland Behemoth Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4870,12 +4932,9 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1b4a-aa28-6744-2c55" name="Battleshrine" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="1b4a-aa28-6744-2c55" name="Battleshrine (Mount)" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="b7f9-5c50-b902-8af9" name="Wretched One Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2)"/>
-          </modifiers>
+        <profile id="b7f9-5c50-b902-8af9" name="Wretched One (2) Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
@@ -4898,7 +4957,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (5+)</characteristic>
           </characteristics>
         </profile>
         <profile id="f5a0-b2c8-cefe-2311" name="Battleshrine Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4909,9 +4968,6 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="f480-25e3-1464-f0fd" name="Standard Bearer" hidden="false"/>
-      </rules>
       <infoLinks>
         <infoLink id="b3f1-0108-3090-a3d4" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
           <modifiers>
@@ -4925,18 +4981,26 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
             <modifier type="append" field="name" value=" (D6+1)"/>
           </modifiers>
         </infoLink>
-        <infoLink id="ec14-6a48-ab35-a6c4" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule"/>
         <infoLink id="e24d-1896-e97a-1195" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
         <infoLink id="de9f-f5af-6397-4835" name="Channel" hidden="false" targetId="5a46-f1e8-f840-a1de" type="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (1)"/>
           </modifiers>
         </infoLink>
-        <infoLink id="0e8c-e1cf-bd09-79d4" name="Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
-        <infoLink id="6c0c-7cf5-56a0-7fbb" name="Stand Behind" hidden="false" targetId="ccc1-4db1-6ef8-8bc7" type="rule"/>
         <infoLink id="d989-779d-4c03-0ccb" name="Towering Presence" hidden="false" targetId="9ca4-65be-33fc-5d47" type="rule"/>
-        <infoLink id="6271-48ea-f6f2-1303" name="Keeper of the Beacon" hidden="false" targetId="f32d-b75a-8a59-8e8e" type="rule"/>
+        <infoLink id="c695-825d-7066-d278" name="Trophy Rack" hidden="false" targetId="a06f-390d-cf8b-795d" type="rule"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="55ab-53bb-ff6c-6606" name="Keeper of the Beacon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="984b-a2d9-3160-d109" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2e7-8ec4-2937-dd5d" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b3e7-ee03-2db2-b939" name="Keeper of the Beacon" hidden="false" targetId="f32d-b75a-8a59-8e8e" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -4980,7 +5044,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         <profile id="3e64-a80d-d129-b535" name="Ledger of Souls" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Dominant.</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Whenever a friendly model without Insignificant in a unit within 9″ of the bearer’s model loses its last Health Point due to enemy attacks, you gain one Veil Token for each Health Point that model started the game with.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Immediately before removing a friendly model without Insignificant in a unit within 9″ of the bearer’s model due to enemy attacks, you gain one Veil Token for each Health Point that model had the first time it entered the Battlefield.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5517,6 +5581,12 @@ After Spell Selection, the Wizard must replace one of its non-Hereditary Learned
     </rule>
     <rule id="a06f-390d-cf8b-795d" name="Trophy Rack" hidden="false">
       <description>The bearer’s unit may reroll failed Discipline Tests, unless Fleeing, and each time the bearer’s model kills an enemy model in a Duel, the bearer’s model gains a +1 Combat Score modifier for the rest of the game. In addition, the bearer may take a single Banner Enchantment (using its Special Item allowance as normal).</description>
+    </rule>
+    <rule id="2f11-4959-f8a3-c84e" name="Beacon of the Dark Gods" hidden="false">
+      <description>Instead of selecting spells as normal, the Wizard must select one of the following spells during Spell Selection:
+• Whispers of the Veil (Evocation)
+• The Grave Calls (Occultism)
+• Hellfire (Hereditary Spell)</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
