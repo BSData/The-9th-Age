@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2.1.5" revision="29" battleScribeVersion="2.03" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2.1.5" revision="30" battleScribeVersion="2.03" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="8f74-301f-981a-bcf5" name="1 Global (VC)">
       <characteristicTypes>
@@ -1950,6 +1950,9 @@
             <entryLink id="69df-8a30-cb27-635c" name="VC Weapon Enchantments (non Vampires)" hidden="false" collective="false" import="true" targetId="0285-81b5-0a2e-deeb" type="selectionEntryGroup"/>
             <entryLink id="a52a-ac57-d821-8ee7" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
           </entryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2961,11 +2964,11 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
         </profile>
         <profile id="7819-dae5-b2b5-f07d" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a"></characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"></characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (1), Inanimate</characteristic>
           </characteristics>
         </profile>
@@ -4724,11 +4727,11 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
         </profile>
         <profile id="51a3-a8db-b8e7-71df" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a"></characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"></characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (1), Inanimate</characteristic>
           </characteristics>
         </profile>
@@ -4881,6 +4884,20 @@ One use only: Must be activated when the bearer’s model suffers the first woun
       </costs>
     </selectionEntry>
     <selectionEntry id="195b-0ec5-29cc-b32d" name="°Necromantic Staff (only on Wizard)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="1a0b-3ef8-9ae7-f8f8" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="40c7-4f38-1017-819f" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1a0b-3ef8-9ae7-f8f8" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2848-d815-5892-f009" type="max"/>
@@ -4915,6 +4932,20 @@ One use only: Must be activated when the bearer’s model suffers the first woun
       </costs>
     </selectionEntry>
     <selectionEntry id="40c7-4f38-1017-819f" name="°Unholy Tome (only on Wizard)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="5402-4e9a-9a90-74c5" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="195b-0ec5-29cc-b32d" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5402-4e9a-9a90-74c5" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b393-2a1c-45d3-24cc" type="max"/>
