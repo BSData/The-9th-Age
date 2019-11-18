@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2.1" revision="28" battleScribeVersion="2.03" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2.1.5" revision="29" battleScribeVersion="2.03" authorName="Karanadon, Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="8f74-301f-981a-bcf5" name="1 Global (VC)">
       <characteristicTypes>
@@ -133,7 +133,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">7</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Vampiric (6+)</characteristic>
           </characteristics>
         </profile>
         <profile id="8b2f-5085-850f-a893" name="Vampire Count Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -191,19 +191,42 @@
               <constraints>
                 <constraint field="24fd-8af8-0c78-001c" scope="parent" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="86ee-27d6-1cf1-ee6b" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="0c43-53f6-e09d-8fcb" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="3ced-8427-6428-c88a" type="selectionEntryGroup">
+              <selectionEntryGroups>
+                <selectionEntryGroup id="c279-8fb2-cf6b-5e6a" name="Armour Enchantments" hidden="false" collective="false" import="true">
                   <modifiers>
-                    <modifier type="set" field="hidden" value="true">
+                    <modifier type="set" field="b5df-3833-c38b-03c2" value="2.0">
                       <conditions>
-                        <condition field="selections" scope="3b36-98dd-f57e-3d11" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4da5-1adf-89d0-38cf" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
-                </entryLink>
-                <entryLink id="c9c8-08f3-d122-5e48" name="Artefacts" hidden="false" collective="false" import="true" targetId="0829-f3bd-215b-6820" type="selectionEntryGroup"/>
-                <entryLink id="450b-0590-519f-68e6" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="ab6e-ba4a-ea93-bbf2" type="selectionEntryGroup"/>
-              </entryLinks>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b5df-3833-c38b-03c2" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="7306-2454-0f5d-b6ac" name="VC Armour Enchantments" hidden="false" collective="false" import="true" targetId="b813-2849-3314-2f6e" type="selectionEntryGroup"/>
+                    <entryLink id="5a44-b105-6b25-4036" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="91ff-3951-0afc-fd0b" name="Artefacts" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f16b-fdbb-3b73-d56d" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="6f01-14e1-5811-2c91" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+                    <entryLink id="1e67-6232-9c30-6f56" name="VC Artefacts (Vampires)" hidden="false" collective="false" import="true" targetId="df96-36cc-0ce6-f2d6" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="f1aa-1fae-4986-7991" name="Weapon Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="608a-25f7-2acc-9562" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="4db1-185c-181a-8c60" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="f647-200e-c396-c784" name="VC Weapon Enchantments (Vampires)" hidden="false" collective="false" import="true" targetId="07b1-4e7f-b2cb-83ef" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -435,97 +458,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="870c-1d31-f7ec-7e1c" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="da37-6da8-d851-bd3a" name="Skeletal Steed" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff13-a632-4eec-ab29" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="71a0-6658-1c6a-5472" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b7e9-f51e-d707-836d" name="Spectral Steed" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e96-4524-2ebc-9139" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="e53e-1114-71bc-1a3c" name="Spectral Steed" hidden="false" collective="false" import="true" targetId="1ab7-28e6-a76e-680e" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4ab5-51d0-5b33-2443" name="Court of the Damned" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9970-da9c-8878-7b0b" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="e8dc-184b-1d80-4951" name="Court of the Damned" hidden="false" collective="false" import="true" targetId="480f-80cb-b650-da3f" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="330.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="380a-27c5-cbe7-2cdb" name="Shrieking Horror" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe0e-7bd9-1fa5-d087" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="5500-ff73-99b9-59bd" name="Swift Death (local)" hidden="false" targetId="eda3-1b96-c963-9650" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="152b-f3ad-dbff-bacd" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="370.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4d04-9fb5-ad85-3706" name="Zombie Dragon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f0d-0dc7-9aa9-98fa" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="3cb6-5ddd-e21c-f16a" name="Swift Death (local)" hidden="false" targetId="eda3-1b96-c963-9650" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="08b2-5861-dd03-f672" name="Zombie Dragon" hidden="false" collective="false" import="true" targetId="d516-1369-f91d-3853" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="345.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="fc02-cbee-6997-7dc3" name="Monstrous Revenant" hidden="false" collective="false" import="true" targetId="8908-1292-8a37-d207" type="selectionEntry">
               <modifiers>
@@ -540,6 +472,72 @@
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="c605-d018-802b-58d9" name="Zombie Dragon" hidden="false" collective="false" import="true" targetId="d516-1369-f91d-3853" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="4959-7733-9ecb-c76b" name="Swift Death" hidden="false" targetId="eda3-1b96-c963-9650" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="345.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="f92b-b0b0-f921-3e0b" name="Spectral Steed" hidden="false" collective="false" import="true" targetId="1ab7-28e6-a76e-680e" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="f587-1997-a318-2794" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="7b7d-f36b-8f0a-a753" name="Shrieking Horror" hidden="true" collective="false" import="true" targetId="a7c6-75ab-7e65-df3c" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="2dd3-cd33-f1fd-cd21" name="Swift Death" hidden="false" targetId="eda3-1b96-c963-9650" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="370.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="fdc1-deee-69a3-94f8" name="Court of the Damned" hidden="false" collective="false" import="true" targetId="480f-80cb-b650-da3f" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="330.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -723,9 +721,12 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="972f-e8b9-2148-4eaa" name="Army General" hidden="false" collective="false" import="true" targetId="f9bd-8831-67db-b5ec" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="24fd-8af8-0c78-001c" value="25"/>
-          </modifiers>
+          <infoLinks>
+            <infoLink id="12ca-c90e-136e-b4bd" name="The Dead Arise" hidden="false" targetId="2499-8b27-4a7b-11b0" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+          </costs>
         </entryLink>
         <entryLink id="fbb4-f3d3-b386-e49e" name="Vampiric Bloodline" hidden="true" collective="false" import="true" targetId="fa72-d202-5a3a-962a" type="selectionEntryGroup">
           <modifiers>
@@ -801,7 +802,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Vampiric (6+)</characteristic>
           </characteristics>
         </profile>
         <profile id="7522-ba8c-0c43-55d5" name="Vampire Courtier Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -876,27 +877,52 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f250-3b4c-0991-e7d8" type="max"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="0c8d-58e1-38b5-70aa" name="Special Equipment" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="9e8f-0ddf-508c-6959" name="Special Equipment" hidden="false" collective="false" import="true">
               <constraints>
-                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ceb6-0097-ae8a-6758" type="max"/>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="705e-819a-f519-2206" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="b5f8-1fbe-a662-07ee" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="3ced-8427-6428-c88a" type="selectionEntryGroup">
+              <selectionEntryGroups>
+                <selectionEntryGroup id="10bc-9502-3024-9938" name="Armour Enchantments" hidden="false" collective="false" import="true">
                   <modifiers>
-                    <modifier type="set" field="hidden" value="true">
+                    <modifier type="set" field="f1af-ff54-90cd-3589" value="2.0">
                       <conditions>
-                        <condition field="selections" scope="5b95-c805-8b50-1156" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5d41-a5c3-0b06-bfdb" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
-                </entryLink>
-                <entryLink id="dc95-4921-a9b0-7b06" name="Artefacts" hidden="false" collective="false" import="true" targetId="0829-f3bd-215b-6820" type="selectionEntryGroup"/>
-                <entryLink id="6391-1203-7f7d-cbf4" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="ab6e-ba4a-ea93-bbf2" type="selectionEntryGroup"/>
-                <entryLink id="f255-ba31-4e67-de92" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f1af-ff54-90cd-3589" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="7b1c-d76c-81c3-352a" name="VC Armour Enchantments" hidden="false" collective="false" import="true" targetId="b813-2849-3314-2f6e" type="selectionEntryGroup"/>
+                    <entryLink id="0f6e-4062-82ea-e19e" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="06b8-acaf-f9a9-1e3c" name="Artefacts" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2463-a6af-8bd6-1847" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="f6ca-f137-f8e2-e4e9" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+                    <entryLink id="0732-5132-6066-c072" name="VC Artefacts (Vampires)" hidden="false" collective="false" import="true" targetId="df96-36cc-0ce6-f2d6" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="3b88-1d5a-adcc-6fe9" name="Weapon Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0691-71f0-2dd1-140d" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="3f2f-77b0-fd67-f802" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="b7bc-ddb1-48cd-8fd0" name="VC Weapon Enchantments (Vampires)" hidden="false" collective="false" import="true" targetId="07b1-4e7f-b2cb-83ef" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <entryLinks>
+                <entryLink id="fc47-7958-17bf-c876" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup">
                   <modifiers>
-                    <modifier type="set" field="hidden" value="true">
+                    <modifier type="set" field="hidden" value="false">
                       <conditions>
-                        <condition field="selections" scope="5b95-c805-8b50-1156" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="435d-84d2-83fe-5a7d" type="equalTo"/>
+                        <condition field="selections" scope="5b95-c805-8b50-1156" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efb4-f04c-8589-ad57" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -1134,62 +1160,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2c2a-d221-9dc7-ec22" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="4818-1cba-81d6-4830" name="Skeletal Steed" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d20e-76a2-40ec-4c96" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="ee7e-4300-19a3-d1cd" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b4df-9ae8-70a1-ad90" name="Spectral Steed" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cef2-1f4e-d291-f7cb" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="6fd7-3b98-62d9-f83a" name="Spectral Steed" hidden="false" collective="false" import="true" targetId="1ab7-28e6-a76e-680e" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f775-97ac-5d47-65f0" name="Court of the Damned" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1db4-9038-da30-06a0" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="6637-0b3b-c1c5-b74d" name="Court of the Damned" hidden="false" collective="false" import="true" targetId="480f-80cb-b650-da3f" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="330.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="52b1-6204-6f82-f068" name="Monstrous Revenant" hidden="false" collective="false" import="true" targetId="8908-1292-8a37-d207" type="selectionEntry">
               <modifiers>
@@ -1204,6 +1174,42 @@
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="092f-b245-8c52-f660" name="Court of the Damned" hidden="false" collective="false" import="true" targetId="480f-80cb-b650-da3f" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="330.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="49fb-8cba-8de4-c209" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="1093-398a-6303-0968" name="Spectral Steed" hidden="false" collective="false" import="true" targetId="1ab7-28e6-a76e-680e" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -1378,9 +1384,12 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="df46-e464-7a9b-1eaf" name="Army General" hidden="false" collective="false" import="true" targetId="f9bd-8831-67db-b5ec" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="24fd-8af8-0c78-001c" value="25"/>
-          </modifiers>
+          <infoLinks>
+            <infoLink id="9ceb-cea7-6077-4220" name="The Dead Arise" hidden="false" targetId="2499-8b27-4a7b-11b0" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+          </costs>
         </entryLink>
         <entryLink id="4f75-59ce-665b-edc2" name="Lesser Blood Powers" hidden="false" collective="false" import="true" targetId="3e3c-20fe-5381-2e4a" type="selectionEntryGroup"/>
         <entryLink id="e503-879d-bb51-76bf" name="Vampiric Bloodline" hidden="true" collective="false" import="true" targetId="fa72-d202-5a3a-962a" type="selectionEntryGroup">
@@ -1468,30 +1477,45 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3299-b35a-7680-cf03" type="max"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="14cc-c369-104e-14b5" name="Special Equipment" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="4542-ecb2-6e51-e5fc" name="Special Equipment" hidden="false" collective="false" import="true">
               <modifiers>
-                <modifier type="set" field="97a8-cf78-06fc-046f" value="200">
+                <modifier type="set" field="7c7e-6616-c41e-b11f" value="200.0">
                   <conditions>
                     <condition field="selections" scope="38d9-b2df-62ca-93dc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6271-a5da-06cc-130f" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="97a8-cf78-06fc-046f" type="max"/>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7c7e-6616-c41e-b11f" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="5d27-e43f-9e19-25b0" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="3ced-8427-6428-c88a" type="selectionEntryGroup">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="38d9-b2df-62ca-93dc" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d47a-c320-219c-42b1" type="equalTo"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-                <entryLink id="2ebb-07bf-756d-a16e" name="Artefacts" hidden="false" collective="false" import="true" targetId="0829-f3bd-215b-6820" type="selectionEntryGroup"/>
-                <entryLink id="074c-e127-405c-2fda" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="ab6e-ba4a-ea93-bbf2" type="selectionEntryGroup"/>
-              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="c0b3-a2d7-8acc-76b5" name="Armour Enchantments" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b7a9-ad6f-a3e0-fc62" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="6ac4-6533-e510-087d" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="a231-71cb-962e-6743" name="Artefacts" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6f6-1121-2031-58ea" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="20a7-0648-5de4-343e" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+                    <entryLink id="08f4-f683-66d1-11ca" name="VC Artefacts (Necromancer)" hidden="false" collective="false" import="true" targetId="aa79-b74c-3107-1f43" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="8ba5-e071-912c-2d1a" name="Weapon Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8157-6df7-dac3-549a" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="d68b-9be3-9722-ec64" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="56ae-00d3-8037-e2a4" name="VC Weapon Enchantments (non Vampires)" hidden="false" collective="false" import="true" targetId="0285-81b5-0a2e-deeb" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -1579,37 +1603,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dd9d-28a4-2a6c-4819" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="9f48-d0b7-3169-6f2d" name="Skeletal Steed" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61d-df40-9fcf-4e06" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0323-54c1-8154-761a" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="2a44-3174-8156-109c" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2052-2691-2143-ee7c" name="Cadaver Wagon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6067-fdf4-a075-eb06" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="70fc-59e8-34d2-e94a" name="Cadaver Wagon" hidden="false" collective="false" import="true" targetId="f1b3-993f-1106-82c9" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="300.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="ddda-4a5e-1111-67b5" name="Monstrous Revenant" hidden="false" collective="false" import="true" targetId="8908-1292-8a37-d207" type="selectionEntry">
               <modifiers>
@@ -1626,14 +1619,27 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
               </costs>
             </entryLink>
+            <entryLink id="f93f-c67e-f370-d31e" name="Cadaver Wagon" hidden="false" collective="false" import="true" targetId="f1b3-993f-1106-82c9" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="300.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="7c26-a944-a7d1-e88f" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="9054-c398-9938-faa5" name="Army General" hidden="false" collective="false" import="true" targetId="f9bd-8831-67db-b5ec" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="24fd-8af8-0c78-001c" value="30"/>
-          </modifiers>
+          <infoLinks>
+            <infoLink id="87a0-e7d8-d26d-8d4a" name="The Dead Arise" hidden="false" targetId="2499-8b27-4a7b-11b0" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+          </costs>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1656,7 +1662,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour, Shield</characteristic>
           </characteristics>
         </profile>
         <profile id="cafb-e6e0-bf4f-89e1" name="Barrow King Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1666,7 +1672,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lethal Strike, Magical Attacks, Multiple Wounds (2, against Standard)</characteristic>
           </characteristics>
         </profile>
         <profile id="d479-e2ed-ba50-e6e6" name="Barrow King Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -1721,19 +1727,52 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9992-d57b-e10e-9578" type="max"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="e379-4a7a-49ed-36a7" name="Special Equipment" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="e1af-7eb2-2662-f177" name="Special Equipment" hidden="false" collective="false" import="true">
               <constraints>
-                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="81a1-bf5c-9599-6588" type="max"/>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1265-a2b7-5ef6-beed" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="e578-84f8-55c1-575e" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="3ced-8427-6428-c88a" type="selectionEntryGroup"/>
-                <entryLink id="e7a3-e83c-7c97-f411" name="Artefacts" hidden="false" collective="false" import="true" targetId="0829-f3bd-215b-6820" type="selectionEntryGroup"/>
-                <entryLink id="a594-ad6b-b23d-061a" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="ab6e-ba4a-ea93-bbf2" type="selectionEntryGroup"/>
-                <entryLink id="b012-059b-de5b-f4bc" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup">
+              <selectionEntryGroups>
+                <selectionEntryGroup id="d954-9e56-bb66-01e1" name="Armour Enchantments" hidden="false" collective="false" import="true">
                   <modifiers>
-                    <modifier type="set" field="hidden" value="true">
+                    <modifier type="set" field="59d1-0358-7175-469c" value="2.0">
                       <conditions>
-                        <condition field="selections" scope="8325-70e6-d4cf-7dc1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e020-fcd9-1a77-1248" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="59d1-0358-7175-469c" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="4410-256f-fc6d-5230" name="VC Armour Enchantments" hidden="false" collective="false" import="true" targetId="b813-2849-3314-2f6e" type="selectionEntryGroup"/>
+                    <entryLink id="ccf5-c791-52a6-5c04" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="6140-1225-e7cf-5c04" name="Artefacts" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4ca-7434-1594-cde0" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="1c90-3433-8826-687f" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+                    <entryLink id="332d-f843-343f-196d" name="VC Artefacts (Barrow King)" hidden="false" collective="false" import="true" targetId="da7e-ec88-8b84-29d5" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="c7ba-48e4-4fa5-df68" name="Weapon Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6ad-0f72-0d56-0364" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="fff1-d28f-2a85-5ca5" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="2ce1-292c-faa9-4905" name="VC Weapon Enchantments (non Vampires)" hidden="false" collective="false" import="true" targetId="0285-81b5-0a2e-deeb" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <entryLinks>
+                <entryLink id="af85-47e8-1680-b750" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="8325-70e6-d4cf-7dc1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efb4-f04c-8589-ad57" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -1743,17 +1782,6 @@
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a1ff-d14f-b25a-a52e" name="Skeletal Steed" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6fa-2f66-a89c-e7d3" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="c00f-3581-cbf6-acfc" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1810,6 +1838,13 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="d754-9e9d-06fa-7325" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="175.0"/>
       </costs>
@@ -1821,7 +1856,15 @@
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8908-1292-8a37-d207" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="decrement" field="24a9-6602-9a6d-134b" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b2d-bed8-c784-9d57" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="24a9-6602-9a6d-134b" type="max"/>
+      </constraints>
       <profiles>
         <profile id="b6d9-e068-3f3a-3a4d" name="Fell Wraith Global" hidden="false" typeId="8f74-301f-981a-bcf5" typeName="1 Global (VC)">
           <characteristics>
@@ -1837,7 +1880,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (3+, against non-Magical Attacks), Aegis (5+)</characteristic>
           </characteristics>
         </profile>
         <profile id="d8aa-6f76-e7a0-488b" name="Fell Wraith Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1847,7 +1890,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">10</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Reaper</characteristic>
           </characteristics>
         </profile>
         <profile id="5167-4fd1-2f9b-78a6" name="Fell Wraith Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -1880,6 +1923,7 @@
             <modifier type="append" field="name" value=" (3+, against non-Magical Attacks)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="23de-0321-418f-8107" name="Reaper" hidden="false" targetId="2d4a-2a22-2cf0-d9ed" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4029-4517-2005-353f" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -1897,22 +1941,19 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="a0b1-b053-ce6c-66dc" name="Weapon Enchantment" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce0e-1b74-a47c-d7b5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b6b-dcab-6721-0ca3" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="69df-8a30-cb27-635c" name="VC Weapon Enchantments (non Vampires)" hidden="false" collective="false" import="true" targetId="0285-81b5-0a2e-deeb" type="selectionEntryGroup"/>
+            <entryLink id="a52a-ac57-d821-8ee7" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="e967-a596-9787-93db" name="Mount" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="3f22-184c-ecb8-9ed9" name="Skeletal Steed" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b26b-3ead-343b-8b2e" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="37ac-7af6-7e40-9cf1" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="a485-e1a8-1490-dfbe" name="Monstrous Revenant" hidden="false" collective="false" import="true" targetId="8908-1292-8a37-d207" type="selectionEntry">
               <categoryLinks>
@@ -1922,22 +1963,29 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="145.0"/>
               </costs>
             </entryLink>
+            <entryLink id="8f87-1b37-53ba-a3b6" name="Skeletal Steed" hidden="false" collective="false" import="true" targetId="cee8-4ec7-c374-1b1c" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+              </costs>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="fc5b-214f-104c-fe66" name="Reaper" hidden="false" collective="false" import="true" targetId="4ae1-bf77-3f6f-bc33" type="selectionEntry"/>
-        <entryLink id="ae6c-9a49-8373-b06d" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="ab6e-ba4a-ea93-bbf2" type="selectionEntryGroup">
-          <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b88-242d-998b-6d42" type="max"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0b2d-bed8-c784-9d57" name="Banshee" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="decrement" field="a0d6-bda3-d7aa-4491" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a91-ba86-bdd7-d0e3" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a0d6-bda3-d7aa-4491" type="max"/>
+      </constraints>
       <profiles>
         <profile id="5b40-e422-aafe-fd73" name="Banshee Global" hidden="false" typeId="8f74-301f-981a-bcf5" typeName="1 Global (VC)">
           <characteristics>
@@ -1953,7 +2001,7 @@
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (3+, against non-Magical Attacks), Aegis (5+)</characteristic>
           </characteristics>
         </profile>
         <profile id="dc89-0dae-5b1d-579e" name="Banshee Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1963,7 +2011,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Reaper, Wail of Woe</characteristic>
           </characteristics>
         </profile>
         <profile id="6c8f-4870-a196-b331" name="Banshee Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2005,14 +2053,12 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <modifier type="append" field="name" value=" (5+)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="084b-4b77-a0f9-6f71" name="Reaper" hidden="false" targetId="2d4a-2a22-2cf0-d9ed" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3e06-a92c-ce52-fa73" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
         <categoryLink id="b7eb-f3ae-b24a-b77e" name="The Suffering (local)" hidden="false" targetId="dc98-3346-9b99-6af4" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink id="7316-5263-8df8-5613" name="Reaper" hidden="false" collective="false" import="true" targetId="4ae1-bf77-3f6f-bc33" type="selectionEntry"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
       </costs>
@@ -2488,7 +2534,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
               </characteristics>
             </profile>
             <profile id="a598-54bd-400d-5dea" name="Barrow Guard Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2498,7 +2544,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lethal Strike, Magical Attacks, Multiple Wounds (2, against Standard)</characteristic>
               </characteristics>
             </profile>
             <profile id="dd30-9b5f-31c3-52f4" name="Barrow Guard Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2660,7 +2706,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour, Shield</characteristic>
               </characteristics>
             </profile>
             <profile id="881d-420f-c449-f9e7" name="Barrow Knight Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2670,7 +2716,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lethal Strike, Magical Attacks, Multiple Wounds (2, against Standard), Lance</characteristic>
               </characteristics>
             </profile>
             <profile id="868f-2de1-12d9-def3" name="Skeletal Steed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2680,7 +2726,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Magical Attacks</characteristic>
               </characteristics>
             </profile>
             <profile id="b4ba-427c-723b-ead9" name="Barrow Knight Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2774,7 +2820,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Fortitude (5+)</characteristic>
               </characteristics>
             </profile>
             <profile id="41bb-4828-74ac-9ff2" name="Ghast Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2784,7 +2830,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Poison Attacks, Unholy Appetite</characteristic>
               </characteristics>
             </profile>
             <profile id="5c11-a82b-3e5a-687e" name="Ghast Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2851,7 +2897,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hard Target (1)</characteristic>
               </characteristics>
             </profile>
             <profile id="aac6-2dc6-6bc0-60bc" name="Great Bat Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2900,7 +2946,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Fortitude (4+)</characteristic>
           </characteristics>
         </profile>
         <profile id="6832-130d-142a-77d4" name="Shambling Horde Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2910,17 +2956,17 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="7819-dae5-b2b5-f07d" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">-</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">-</characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"></characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"></characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (1), Inanimate</characteristic>
           </characteristics>
         </profile>
         <profile id="58e1-57f1-28c6-9443" name="Cadaver Master Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3021,11 +3067,11 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
         </profile>
         <profile id="caa2-9ca1-9417-b29e" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a"></characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"></characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6), Inanimate</characteristic>
           </characteristics>
         </profile>
@@ -3253,11 +3299,11 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
         </profile>
         <profile id="c0ad-463d-7fc4-c25b" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a"></characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"></characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (1), Inanimate</characteristic>
           </characteristics>
         </profile>
@@ -3449,6 +3495,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
           </modifiers>
         </infoLink>
         <infoLink id="c5e3-0498-ddf7-8d29" name="Ghostly Form" hidden="false" targetId="9221-c547-a843-bdb0" type="rule"/>
+        <infoLink id="6199-0bcd-f746-b37b" name="Reaper" hidden="false" targetId="2d4a-2a22-2cf0-d9ed" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8081-03a7-e03a-33c1" name="New CategoryLink" hidden="false" targetId="dc98-3346-9b99-6af4" primary="true"/>
@@ -3522,9 +3569,6 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="23be-f9f7-00a7-b1da" name="Reaper" hidden="false" collective="false" import="true" targetId="4ae1-bf77-3f6f-bc33" type="selectionEntry"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-30.0"/>
       </costs>
@@ -3904,7 +3948,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lethal Strike</characteristic>
               </characteristics>
             </profile>
             <profile id="9794-2a8f-bf42-a1af" name="Winged Reaper Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -4168,7 +4212,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">2</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Distracting, Hard Target (1)</characteristic>
               </characteristics>
             </profile>
             <profile id="b51e-06aa-850c-df3a" name="Bat Swarm Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4244,7 +4288,6 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
     </selectionEntry>
     <selectionEntry id="cee8-4ec7-c374-1b1c" name="Skeletal Steed" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7e2e-4d75-d69d-313f" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf88-9be9-bf8c-8257" type="max"/>
       </constraints>
       <profiles>
@@ -4271,7 +4314,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Magical Attacks</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4286,7 +4329,6 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
     </selectionEntry>
     <selectionEntry id="1ab7-28e6-a76e-680e" name="Spectral Steed" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb15-8eed-03ad-a21a" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d97a-6929-f80a-8280" type="max"/>
       </constraints>
       <profiles>
@@ -4297,7 +4339,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Magical Attacks</characteristic>
           </characteristics>
         </profile>
         <profile id="8c49-22f0-319d-d3c8" name="Spectral Steed Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -4355,7 +4397,21 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Lethal Strike, Poison Attacks</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="162f-298d-2212-b2b3" name="Monstrous Revenant Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <modifiers>
+            <modifier type="set" field="7bbb-3d47-ed57-284d" value="60×100">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f873-197b-ea6e-d426" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4367,9 +4423,6 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
         <infoLink id="2361-c08c-1e72-f2b0" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
         <infoLink id="ac67-2140-ac7c-01fe" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
       </infoLinks>
-      <categoryLinks>
-        <categoryLink id="37c3-0755-3fe9-0387" name="Swift Death" hidden="false" targetId="eda3-1b96-c963-9650" primary="false"/>
-      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f873-197b-ea6e-d426" name="Great Monstrous Revenant" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4400,7 +4453,6 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0e62-308d-13f7-7e08" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="af20-7cdc-4b4d-0757" type="max"/>
       </constraints>
       <profiles>
@@ -4442,11 +4494,11 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
         </profile>
         <profile id="e6c3-f7ee-07d5-fc87" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a"></characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"></characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6), Inanimate</characteristic>
           </characteristics>
         </profile>
@@ -4499,7 +4551,6 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
     </selectionEntry>
     <selectionEntry id="a7c6-75ab-7e65-df3c" name="Shrieking Horror" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0567-e86e-a6fd-13d0" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d833-8244-7376-35ce" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb36-31ad-d716-d3db" type="max"/>
       </constraints>
@@ -4517,7 +4568,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Fortitude (5+)</characteristic>
           </characteristics>
         </profile>
         <profile id="fb74-b18b-2a54-227e" name="Shrieking Horror Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4527,7 +4578,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Chilling Shriek, Harnessed</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4547,7 +4598,6 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
     </selectionEntry>
     <selectionEntry id="d516-1369-f91d-3853" name="Zombie Dragon" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="886d-8b2f-fd32-9c31" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aa57-1076-fd80-e1b7" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e3e5-0ca3-942e-b7ab" type="max"/>
       </constraints>
@@ -4577,7 +4627,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Distracting, Fortitude (6+)</characteristic>
           </characteristics>
         </profile>
         <profile id="70b9-ab9a-9240-6a60" name="Zombie Dragon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4594,7 +4644,21 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Breath Attack (Toxic Attacks), Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ef47-dc8c-6fc5-78a1" name="Zombie Dragon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <modifiers>
+            <modifier type="set" field="7bbb-3d47-ed57-284d" value="100×150">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7423-1c20-115d-dc59" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4629,7 +4693,6 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
     </selectionEntry>
     <selectionEntry id="f1b3-993f-1106-82c9" name="Cadaver Wagon" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2379-0609-16f4-6eae" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc91-56ea-b204-1c7e" type="max"/>
       </constraints>
       <profiles>
@@ -4646,7 +4709,7 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Fortitude (4+)</characteristic>
           </characteristics>
         </profile>
         <profile id="e655-1b24-5e1d-23cd" name="Shambling Horde Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4656,17 +4719,17 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
           </characteristics>
         </profile>
         <profile id="51a3-a8db-b8e7-71df" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">-</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">-</characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"></characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"></characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">-</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (1), Inanimate</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4686,19 +4749,6 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
           </modifiers>
         </infoLink>
         <infoLink id="b41b-66ac-db6d-a9db" name="No Rest for the Wicked" hidden="false" targetId="76ee-8923-fb61-20d5" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="4ae1-bf77-3f6f-bc33" name="Reaper" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5e30-5029-ae5b-9a4c" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f46e-7fc7-d279-f4bf" type="max"/>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e02-bbeb-0688-09b0" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="3ac7-a313-1979-22b0" name="Reaper" hidden="false" targetId="2d4a-2a22-2cf0-d9ed" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -4742,6 +4792,143 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
       </constraints>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ba2f-c8fd-23e6-6aeb" name="Reaper&apos;s Harvest" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="441a-1d51-8152-6913" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="149f-25fc-93e9-323b" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="825e-f1e5-1d92-4f8e" name="Reaper&apos;s Harvest" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon always have Strength 10 and Armour Penetration 10 and gain Divine Attacks and Magical Attacks. When rolling to wound with attacks made with this weapon, use the enemy&apos;s Discipline instead of its Resilience.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6f43-cc8e-23e2-0564" name="True Thirst" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f04a-7b48-a087-493c" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0b2b-161b-2323-9874" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="7c0f-ce38-d95e-896a" name="True Thirst" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon gain +1 Strength, +1 Armour Penetration, and Magical Attacks. For each unsaved wound caused by this weapon during a Melee Phase, Raise 1 Health Point of R&amp;F models in the wielder’s unit at the end of the Melee Phase. The number of Raised Health Points in each phase cannot exceed the fixed component of the Reanimated value of the R&amp;F models in the unit, disregarding any D3 or D6 parts (e.g. you can Raise 4 Zombies in a single phase).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d507-9f70-660a-63bf" name="Cursed Medallion" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c04c-6f67-24a7-7160" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf2d-9739-5124-ab60" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="7ebe-c728-5e27-47ca" name="Cursed Medallion" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Right before the battle (during step 7 of the Deployment Phase Sequence), choose a Character, Champion, or a single model unit in the opponent&apos;s Army List. The bearer must reroll failed to-hit and to-wound rolls against the chosen model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="86e4-b959-0c26-ce90" name="Eternity Gem (not on Horror, Dragon, Court)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9642-a256-8ebe-48ef" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="369a-dd83-2e3f-1e8f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="cad3-473e-6c0c-629f" name="Eternity Gem" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks against the bearer’s model with Lethal Strike and/or Multiple Wounds lose these Attack Attributes. 
+One use only: Must be activated when the bearer’s model suffers the first wound in the game after Armour Saves. The bearer’s model gains Aegis (2+) against this wound.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="aaa3-d274-8a46-9166" name="Hypnotic Pendant" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e756-d330-bd95-9b9c" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="49f9-35d6-24ce-6d6a" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e8c9-6331-ac0e-ccd5" name="Hypnotic Pendant" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Distracting. All Standard Size R&amp;F models in the bearer&apos;s unit gain Parry.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="195b-0ec5-29cc-b32d" name="°Necromantic Staff (only on Wizard)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1a0b-3ef8-9ae7-f8f8" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2848-d815-5892-f009" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b6ef-1bf6-4ef4-1635" name="Necromantic Staff" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Dominant. The bearer gains Channel (1) and can cast the first Boosted version (6&quot; Aura) of Arise! as a Bound Spell with Power Level (4/8).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="77ba-62c0-9764-70c3" name="Night&apos;s Crown (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="117d-bd7a-c38e-ff52" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d2af-dc2e-a1e3-8106" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e0b0-0e30-35a7-0a62" name="Night&apos;s Crown" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Close Combat Attacks allocated towards the bearer&apos;s model do not gain Strength modifiers of the +X type conferred by Melee Weapons. Close Combat Attacks can never wound the bearer&apos;s model on better than 4+.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="40c7-4f38-1017-819f" name="°Unholy Tome (only on Wizard)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5402-4e9a-9a90-74c5" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b393-2a1c-45d3-24cc" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c393-1b33-ee74-6d36" name="Unholy Tome" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Dominant. The bearer can cast Danse Macabre from Evocation as a Bound Spell with Power Level (4/8).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -4986,46 +5173,14 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="07b1-4e7f-b2cb-83ef" name="VC Weapon Enchantments" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="07b1-4e7f-b2cb-83ef" name="VC Weapon Enchantments (Vampires)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb26-fe99-a7bb-6e16" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="0b0f-2655-85a4-5e93" name="Reaper&apos;s Harvest" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99ae-2a0d-9dec-d0dc" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="81a7-809f-c23c-8728" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6360-2e96-ef22-bd48" name="Reaper&apos;s Harvest" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon always have Strength 10 and Armour Penetration 10 and gain Divine Attacks and Magical Attacks. When rolling to wound with attacks made with this weapon, use the enemy&apos;s Discipline instead of its Resilience.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4906-041f-5489-9e5a" name="True Thirst - Vampire Counts and Courtiers Only" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="23c1-144d-ff66-c264" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb8f-80d0-c111-8505" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c2e6-6897-2c94-24f5" name="True Thirst" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon gain +1 Strength, +1 Armour Penetration, and Magical Attacks. For each unsaved wound caused by this weapon during a Melee Phase, Raise 1 Health Point of R&amp;F models in the wielder’s unit at the end of the Melee Phase. The number of Raised Health Points in each phase cannot exceed the fixed component of the Reanimated value of the R&amp;F models in the unit, disregarding any D3 or D6 parts (e.g. you can Raise 4 Zombies in a single phase).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="c7d2-4cf4-aaa0-39ee" name="True Thirst - Vampire Counts and Courtiers Only" hidden="false" collective="false" import="true" targetId="6f43-cc8e-23e2-0564" type="selectionEntry"/>
+        <entryLink id="16f7-653b-fe92-308c" name="Reaper&apos;s Harvest" hidden="false" collective="false" import="true" targetId="ba2f-c8fd-23e6-6aeb" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b813-2849-3314-2f6e" name="VC Armour Enchantments" hidden="false" collective="false" import="true">
       <constraints>
@@ -5051,148 +5206,17 @@ A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="df96-36cc-0ce6-f2d6" name="VC Artefacts" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="df96-36cc-0ce6-f2d6" name="VC Artefacts (Vampires)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="357c-9985-5b9d-1aa8" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="73a2-84fb-72e8-92f8" name="Hypnotic Pendant" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2550-6bb3-d105-91a0" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dded-a495-c2ab-3215" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="cba3-bb43-759e-6189" name="Hypnotic Pendant" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Distracting. All Standard Size R&amp;F models in the bearer&apos;s unit gain Parry.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="63fe-7cb6-a8f1-2cf5" name="Eternity Gem - Vampire Counts and Courtiers on Monstrous Revenant without Towering Presence only" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="61a9-ebe3-0240-acec" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d04f-9fd2-41f3-e966" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="bfb4-dc62-6578-2865" name="Eternity Gem" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks against the bearer’s model with Lethal Strike and/or Multiple Wounds lose these Attack Attributes. 
-One use only: Must be activated when the bearer’s model suffers the first wound in the game after Armour Saves. The bearer’s model gains Aegis (2+) against this wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="730c-c665-25b4-5ffc" name="Night&apos;s Crown - Standard Size Only" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a15e-99a0-41e5-9d8d" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4609-14aa-7506-bd5d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1e70-9601-9f53-8cc8" name="Night&apos;s Crown" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Close Combat Attacks allocated towards the bearer&apos;s model do not gain Strength modifiers of the +X type conferred by Melee Weapons. Close Combat Attacks can never wound the bearer&apos;s model on better than 4+.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8528-8a87-647a-5e68" name="Necromantic Staff - Wizards only - Dominant" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4bb7-7b6a-a75c-fab9" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab6a-c1e6-2d58-1b39" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7449-0815-0eee-9ade" name="Necromantic Staff" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Dominant. The bearer gains Channel (1) and can cast the first Boosted version (6&quot; Aura) of Arise! as a Bound Spell with Power Level (4/8).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9b27-e360-2d9a-4460" name="Unholy Tome - Wizards only - Dominant" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e31b-67d7-8ff0-83ad" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a7e-db30-90af-9e57" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="165c-0ba9-05aa-84d0" name="Unholy Tome" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Dominant. The bearer can cast Danse Macabre from Evocation as a Bound Spell with Power Level (4/8).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8a81-1dff-a520-d3ba" name="Cursed Medallion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5510-9700-2695-fb07" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b785-736a-ebd1-26bd" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9bfc-f027-63fa-5c3c" name="Cursed Medallion" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Right before the battle (during step 7 of the Deployment Phase Sequence), choose a Character, Champion, or a single model unit in the opponent&apos;s Army List. The bearer must reroll failed to-hit and to-wound rolls against the chosen model.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="ab6e-ba4a-ea93-bbf2" name="Weapon Enchantments" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8362-afa6-a35f-2d1f" type="max"/>
-      </constraints>
       <entryLinks>
-        <entryLink id="a9ce-dcfc-ccf3-784b" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
-        <entryLink id="5dda-9a3c-6598-fcbd" name="VC Weapon Enchantments" hidden="false" collective="false" import="true" targetId="07b1-4e7f-b2cb-83ef" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="3ced-8427-6428-c88a" name="Armour Enchantments" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="8895-01c9-b646-3a78" value="2">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8895-01c9-b646-3a78" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="7a5c-ba66-811c-6646" name="VC Armour Enchantments" hidden="false" collective="false" import="true" targetId="b813-2849-3314-2f6e" type="selectionEntryGroup"/>
-        <entryLink id="4dfb-c370-d8bf-adfc" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="0829-f3bd-215b-6820" name="Artefacts" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="233b-1c03-f59c-9526" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="1cb2-21a0-53df-3568" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
-        <entryLink id="ae29-f14b-8fef-1795" name="VC Artefacts" hidden="false" collective="false" import="true" targetId="df96-36cc-0ce6-f2d6" type="selectionEntryGroup"/>
+        <entryLink id="4f6d-aebd-34bd-0d05" name="Eternity Gem - Vampire Counts and Courtiers on Monstrous Revenant without Towering Presence only" hidden="false" collective="false" import="true" targetId="86e4-b959-0c26-ce90" type="selectionEntry"/>
+        <entryLink id="58cc-dc5b-84d5-061f" name="Necromantic Staff - Wizards only - Dominant" hidden="false" collective="false" import="true" targetId="195b-0ec5-29cc-b32d" type="selectionEntry"/>
+        <entryLink id="38d9-b5e6-3d34-5ffa" name="Hypnotic Pendant" hidden="false" collective="false" import="true" targetId="aaa3-d274-8a46-9166" type="selectionEntry"/>
+        <entryLink id="d7bb-a949-cb74-c36d" name="Night&apos;s Crown - Standard Size Only" hidden="false" collective="false" import="true" targetId="77ba-62c0-9764-70c3" type="selectionEntry"/>
+        <entryLink id="1fd0-d972-e4d9-9cd4" name="Unholy Tome - Wizards only - Dominant" hidden="false" collective="false" import="true" targetId="40c7-4f38-1017-819f" type="selectionEntry"/>
+        <entryLink id="c591-c695-be85-c899" name="Cursed Medallion" hidden="false" collective="false" import="true" targetId="d507-9f70-660a-63bf" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="3e3c-20fe-5381-2e4a" name="Lesser Blood Powers" hidden="false" collective="false" import="true">
@@ -5526,6 +5550,36 @@ One use only: Must be activated when the bearer’s model suffers the first woun
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="0285-81b5-0a2e-deeb" name="VC Weapon Enchantments (non Vampires)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f2f0-ea8d-2d40-43dd" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="e8d0-76cc-cc95-fb60" name="Reaper&apos;s Harvest" hidden="false" collective="false" import="true" targetId="ba2f-c8fd-23e6-6aeb" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="da7e-ec88-8b84-29d5" name="VC Artefacts (Barrow King)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="84f9-b020-a317-e4ab" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="2667-76d5-66bd-a7d5" name="Hypnotic Pendant" hidden="false" collective="false" import="true" targetId="aaa3-d274-8a46-9166" type="selectionEntry"/>
+        <entryLink id="8d50-0675-0bd8-53d1" name="Night&apos;s Crown - Standard Size Only" hidden="false" collective="false" import="true" targetId="77ba-62c0-9764-70c3" type="selectionEntry"/>
+        <entryLink id="e086-2f44-4091-c605" name="Cursed Medallion" hidden="false" collective="false" import="true" targetId="d507-9f70-660a-63bf" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="aa79-b74c-3107-1f43" name="VC Artefacts (Necromancer)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7611-a5e7-240d-9aa8" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="81d5-0feb-b093-7097" name="Necromantic Staff - Wizards only - Dominant" hidden="false" collective="false" import="true" targetId="195b-0ec5-29cc-b32d" type="selectionEntry"/>
+        <entryLink id="d5fb-a7e5-854e-c9e6" name="Hypnotic Pendant" hidden="false" collective="false" import="true" targetId="aaa3-d274-8a46-9166" type="selectionEntry"/>
+        <entryLink id="9868-da0d-36df-25e2" name="Night&apos;s Crown - Standard Size Only" hidden="false" collective="false" import="true" targetId="77ba-62c0-9764-70c3" type="selectionEntry"/>
+        <entryLink id="3cd7-4de2-23a8-f205" name="Unholy Tome - Wizards only - Dominant" hidden="false" collective="false" import="true" targetId="40c7-4f38-1017-819f" type="selectionEntry"/>
+        <entryLink id="8cc7-7ccb-2d7c-d2c4" name="Cursed Medallion" hidden="false" collective="false" import="true" targetId="d507-9f70-660a-63bf" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
