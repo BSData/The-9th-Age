@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.1.5" revision="30" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.1.5" revision="31" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -85,6 +85,31 @@
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="dd27-6738-aebc-192e" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="2e20-006e-1fd8-cbbd" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="c015-e52d-3852-27ea" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="f0df-0fb2-1055-6a25" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="f49b-1010-24f1-f23b" name="Plate Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="8e30-a95c-1572-f73e" name="Plate Armour" hidden="false" targetId="85fa-68ac-214d-2f4b" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="ff97-a295-86c8-76d5" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="0125-f6f2-650f-9c01" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="e79a-e00b-b0ee-6850" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="8a3d-bebe-849b-e426" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -231,7 +256,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="4c4e-146b-a165-a891" name="Armour Enchantments" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="4c4e-146b-a165-a891" name="Armour Enchantments (old)" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="757a-d5c1-6cf9-bd2f" value="2">
           <conditions>
@@ -260,7 +285,7 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f961-86c2-9c05-26b8" name="Destiny&apos;s Call - Standard Size only" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f961-86c2-9c05-26b8" name="Destiny&apos;s Call (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c632-7ea5-0f1b-e5f7" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0e2b-9907-9ea4-d178" type="max"/>
@@ -277,7 +302,7 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8595-7314-30db-51da" name="Essence of Mithril - Standard Size only" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8595-7314-30db-51da" name="Essence of Mithril (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0926-d6fb-be47-6bd2" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6fa2-0f38-156f-ee4a" type="max"/>
@@ -348,7 +373,7 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7661-e05d-8c3d-4b60" name="Willow&apos;s Ward - Models on Foot only" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7661-e05d-8c3d-4b60" name="Willow&apos;s Ward (only on Foot)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bbf3-c384-bcb9-1787" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="61e7-82cc-cd4c-25ca" type="max"/>
@@ -392,7 +417,7 @@
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e675-85da-422d-e83d" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="28c9-d1c6-a0c8-d695" name="Crown of the Wizard King - Cannot be taken by Wizards" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="28c9-d1c6-a0c8-d695" name="Crown of the Wizard King (not on Wizards)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0cd2-7a34-9c70-fcef" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1aa6-7e20-0164-c612" type="max"/>
@@ -409,16 +434,16 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="02ee-20af-e439-e56f" name="Book of Arcane Mastery - Dominant. Cannot be taken by Wizard Master." hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="02ee-20af-e439-e56f" name="°Book of Arcane Mastery (not on Wizard Master)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8b6-bd94-7030-04dc" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="18ac-5821-ca08-dd8f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="1fda-2a73-aee7-500b" name="Book of Arcane Power" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+            <profile id="1fda-2a73-aee7-500b" name="Book of Arcane Mastery" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The Bearer&apos;s first casting attempt in each magic phase gains +2 to cast. When using a single magic dice for this casting attempt, a natural roll of 1 or 2 on the magic dice is always a failed casting attempt, regardless of any modifiers.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The Bearer&apos;s first casting attempt in each magic phase gains +2 to cast. When using a single magic die for this casting attempt, a natural roll of 1 or 2 on the magic die is always a failed casting attempt, regardless of any modifiers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -494,7 +519,7 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3db5-8d52-cfe9-fbfa" name="Essence of a Free Mind - Dominant" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3db5-8d52-cfe9-fbfa" name="°Essence of a Free Mind (only on Wizard)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8378-ef9c-921c-fea8" type="max"/>
           </constraints>
@@ -510,7 +535,7 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="589f-da5c-20ba-5f1a" name="Potion of Strength - Cannot be taken by Towering Presence" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="589f-da5c-20ba-5f1a" name="Potion of Strength (not on Towering Presence)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2073-cb07-2b27-ebf2" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2703-475f-873e-b2f1" type="max"/>
@@ -561,7 +586,7 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="538d-5665-58a8-281d" name="Ranger&apos;s Boots - Standard Size models on foot only" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="538d-5665-58a8-281d" name="Ranger&apos;s Boots (only on Standard and Foot)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ed0c-4ab2-0724-619c" type="max"/>
           </constraints>
@@ -577,7 +602,7 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1a15-8ac5-586b-1b94" name="Magical Heirloom - Dominant" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1a15-8ac5-586b-1b94" name="°Magical Heirloom (only on Wizard)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e66b-513a-2178-62dd" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="193f-1692-0888-0fff" type="max"/>
@@ -714,7 +739,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="37cb-10cd-3c37-56dd" name="Banner Enchantments" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="37cb-10cd-3c37-56dd" name="Banner Enchantments (old)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0fb8-361b-f433-cc9e" type="max"/>
       </constraints>
@@ -881,6 +906,162 @@
           </constraints>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="3ca8-d93a-232c-d3b5" name="Shield Enchantments" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2c1-9afa-9cd4-c449" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="d9f9-1a95-1eb2-67ad" name="Dusk Forged" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5cb3-d375-b6fc-acfa" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7cc7-a1f9-2684-57a3" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2b3b-04d1-48d7-2c6f" name="Dusk Forged" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Shield Enchantment</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer may choose to reroll its failed Armour Saves while using this Shield. If it does, it automatically fails all special saves.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink id="91a9-1f6f-e2e7-2b86" name="Shield Enchantement" hidden="false" collective="false" import="true" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2bfe-3ab4-58c7-1482" name="Willow&apos;s Ward (only on Foot)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ee70-4a99-b902-a3a4" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef1f-4623-952e-3a04" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="82f0-b24e-6350-67ef" name="Willow&apos;s Ward" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Shield Enchantment</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer cannot use Parry and gains +1 Armour. Impact Hits distributed towards the bearer suffer -2 Armour Penetration.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink id="5435-8b8a-1b20-6084" name="Shield Enchantement" hidden="false" collective="false" import="true" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="74ad-3e59-5174-60fa" name="Armour Enchantments" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bf2-549c-6ff1-924f" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="21d0-3ae0-0a0c-7df9" name="Death Cheater" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d00b-b205-442b-4732" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f9cb-f117-8e9b-d320" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2e63-cf58-19c8-2fd5" name="Death Cheater" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Fortitude (4+) and +1 Armour.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b545-ba29-948a-c8e8" name="Destiny&apos;s Call (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bb0e-9828-dbba-6a38" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb0b-d1dd-9482-9be7" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="83de-5ded-dc3d-62fd" name="Destiny&apos;s Call" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Aegis (4+) and its Armour is set to 3 and cannot be improved beyond this. Standard Size Models only.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="713e-d60b-5beb-2d16" name="Essence of Mithril (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="343f-2a13-184a-fcda" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c7c3-9b28-64b8-7d46" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3b5f-d08e-ecb4-b4f8" name="Essence of Mithril" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +5 Armour, to a maximum of 5. Standard Sized models only.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4e96-0ab1-0125-85eb" name="Ghostly Guard" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7651-abe9-8556-b869" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a16-1359-0ca0-4927" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c21a-f6a8-fc49-f277" name="Ghostly Guard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Heavy Armour and Plate Armour enchantment.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +2 Armour against non-Magical Attacks.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b2ee-680e-b800-ace3" name="Basalt Infusion" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f369-b789-c041-ecd4" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8e3e-21b6-6f1c-d26c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9bdd-5942-6eb5-9002" name="Basalt Infusion" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and Aegis (3+, against Flaming Attacks). The wearer automatically fails all Fortitude saves.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4d24-cb79-19ed-a9ea" name="Alchemist&apos;s Alloy" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c195-de81-fc58-dc3c" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8e98-2201-0c15-8ede" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0179-42e8-cde6-a844" name="Alchemist&apos;s Alloy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and suffers -2 Offensive Skill.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
