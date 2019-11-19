@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.1" revision="29" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.1.5" revision="30" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -77,7 +77,7 @@
     <forceEntry id="16e8-e66f-0b41-756b" name="~ Dummy ~" hidden="true"/>
   </forceEntries>
   <sharedSelectionEntries>
-    <selectionEntry id="312f-8f87-7840-0442" name="Shield Enchantement" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="312f-8f87-7840-0442" name="Shield Enchantment" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="91df-2c4d-5874-4126" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1c43-11cb-de62-e40b" type="min"/>
