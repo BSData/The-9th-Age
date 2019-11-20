@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.1" revision="29" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.1.5" revision="31" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -77,13 +77,737 @@
     <forceEntry id="16e8-e66f-0b41-756b" name="~ Dummy ~" hidden="true"/>
   </forceEntries>
   <sharedSelectionEntries>
-    <selectionEntry id="312f-8f87-7840-0442" name="Shield Enchantement" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="312f-8f87-7840-0442" name="Shield Enchantment" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="91df-2c4d-5874-4126" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1c43-11cb-de62-e40b" type="min"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dd27-6738-aebc-192e" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="2e20-006e-1fd8-cbbd" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c015-e52d-3852-27ea" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="f0df-0fb2-1055-6a25" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f49b-1010-24f1-f23b" name="Plate Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="8e30-a95c-1572-f73e" name="Plate Armour" hidden="false" targetId="85fa-68ac-214d-2f4b" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ff97-a295-86c8-76d5" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="0125-f6f2-650f-9c01" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e79a-e00b-b0ee-6850" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="8a3d-bebe-849b-e426" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6a41-63a5-c5f6-66f6" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="421f-ae08-b81b-a874" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="b10f-350c-0581-f9c2" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="f3df-4e1e-c05f-04d5" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="8dad-9602-9dd1-7698" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="dd7d-4f2a-dab3-aa30" name="Crossbow" hidden="false" targetId="fdf6-3c15-644b-1ced" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="e2c0-2230-5a1a-1f08" name="Bow" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="765e-c4e1-998e-0a57" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="2837-ec0d-956f-690a" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="fdb9-447a-b77b-fb08" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="544f-9331-9cce-694d" name="Halberd" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="4750-144d-fdb2-7f3e" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="cc20-7463-8302-21b4" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="a538-8323-787c-6cde" name="Longbow" hidden="false" targetId="245b-baaf-f5ec-e168" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="bdc6-e116-53be-d2ae" name="Pistol" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="1fd0-456b-1ad2-ff1c" name="Pistol" hidden="false" targetId="12c1-3184-6230-c142" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="b672-9729-1d95-cb6d" name="Throwing Weapons" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="6178-75fa-e100-5737" name="Throwing Weapons" hidden="false" targetId="8c83-06ff-024f-a235" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="7efd-252a-dcad-fa35" name="Light Lance" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="3797-3f0b-f854-c656" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="3f7d-5a54-b1ca-550f" name="Binding Scroll" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f02-3f8e-7013-7cb4" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0533-e602-37d0-79cd" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="ddd8-7819-7e35-e366" name="Binding Scroll" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated after siphon the veil. When activated, pick an enemy model and select one of its spells (including Attribute and Bound Spells). The chosen model cannot cast the selected spell during this Magic Phase. Only a single Binding Scroll may be activated during the same Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4163-e9f4-70b3-775a" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="10ee-597b-7691-dc42" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3296-1a1d-fa61-756d" name="Crown of Autocracy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains +1 Discipline. If taken by the General, the opponent doubles the Victory Points bonus for killing this General (normally +400 instead of +200).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="28c9-d1c6-a0c8-d695" name="Crown of the Wizard King (not on Wizards)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1828-5940-a898-08ac" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7520-60ab-8f28-6061" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2982-08f1-f536-f51b" name="Crown of the Wizard King" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">During Spell Selection, randomise a magic Path (from all Paths in The 9th Age: Fantasy Battles - Paths of Magic). The bearer is a Wizard Apprentice using the randomised Path. It cannot select the Hereditary Spell.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ef67-0a29-6d5c-687c" name="Crystal Ball" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="89dc-15b7-96ab-ea9f" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2893-a2ca-9621-f623" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3f5d-84aa-6629-c4e6" name="Crystal Ball" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">After Spell Selection (at the end of step 7 of the Pre-Game Sequence), mark a single enemy model in the opponent’s Army List. All dispelling attempts of spells cast by that model gain a +1 dispelling modifier, provided the bearer is on the battlefield.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b996-d7ae-e854-2601" name="Dragon Staff" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf4d-573e-5b14-f5df" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bbd3-3550-c358-b9e9" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="121b-db3e-587a-ec4c" name="Dragon Staff" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Breath Attack (Strength 3, Armour Penetration 0, Flaming Attacks).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="57fe-c8e7-f786-132c" name="Dragonfire Gem" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0cc1-fa28-1661-956f" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d77-0788-23ea-166c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d275-4b93-adb6-e803" name="Dragonfire Gem" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (2+, against Flaming Attacks). The bearer automatically fails all Fortitude Saves.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3d77-9d65-58c3-9e7d" name="Lightning Vambraces" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0111-aed8-93df-9973" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b190-6df3-1803-f935" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2806-17d8-e125-0f85" name="Lightning Vambraces" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/8): Type: Hex, Missile, Damage. Range 24&quot;. Duration: Instant. The target suffers 2D6 hits with Strength 3 and Armour Penetration 0.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ebd9-2cee-402a-4ff4" name="Lucky Charm" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d5c0-6e49-2bc3-cab3" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f5c6-2684-9a12-e8c2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1023-7aaa-0f49-6c33" name="Lucky Charm" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated when the bearer&apos;s model fails an Armour Save. This failed Armour Save may be rerolled.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="717c-cdd1-f368-649a" name="Obsidian Rock" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3df8-0966-ed17-ee75" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c67b-4d65-7959-fcad" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d78a-cd47-7008-aded" name="Obsidian Rock" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Magic Resistance (2).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="589f-da5c-20ba-5f1a" name="Potion of Strength (not on Towering Presence)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb32-3b95-1e6c-9a05" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9bac-fc91-af4b-e93d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="542b-248a-3536-5381" name="Potion of Strength" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cannot be taken by models with Towering Presence. One use only. May be activated at the start of any Phase or Round of Combat. Until the end of the Player Turn the bearer gains Crush Attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fc3e-7023-b3ce-8579" name="Potion of Swiftness" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="579c-0a47-7f43-2f98" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b81-fea2-1f62-ddf9" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8994-59fe-6b49-825f" name="Potion of Swiftness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Phase or Round of Combat. Until the end of the Player Turn, the bearer gains +3 Agility.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="538d-5665-58a8-281d" name="Ranger&apos;s Boots (only on Standard and Foot)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ffa-67cd-68eb-1267" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6a20-41d9-409c-9020" name="Ranger&apos;s Boots" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Standard size models on foot only. The bearer gains Strider and, unless using Flying Movement, gains +2 Advance Rate up to a maximum of 10, and +4 March Rate up to a maximum of 20.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2078-81dc-eac0-b856" name="Rod of Battle" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4632-77ba-878a-d216" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0b86-31b2-574f-645e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2578-ad31-a24c-3915" name="Rod of Battle" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/9): Type: Augment. Range 12&quot;. Duration: Lasts One Turn. The target gains +1 to hit with its Close Combat Attacks.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="52aa-545b-5fc8-64fe" name="Scepter of Power" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5967-7f82-f3fb-1325" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="75d6-dab9-6135-972d" name="Scepter of Power" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. A Wizard with this Artefact may add a single Magic Dice from its Dice Pool to one of its casting rolls or dispel rolls, after seeing the casting or dispel froll. (Note that casting rolls cannot exceed the limit of max 5 Magic Dice.)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8cca-6eee-ecd5-1620" name="Talisman of Shielding" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c4d9-6201-993c-7c61" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8fda-8f2c-9c0f-c4d5" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="13bb-bdd6-edab-0da3" name="Talisman of Shielding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (5+).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bc10-9582-1642-6f0e" name="Talisman of the Void" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4093-7621-0d1b-0dfa" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f56f-401d-a2b5-14a1" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="dba4-fd02-72e4-9881" name="Talisman of the Void" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Channel (+1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="02ee-20af-e439-e56f" name="°Book of Arcane Mastery (not on Wizard Master)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="d9d0-13ea-3f62-0d61" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d9d0-13ea-3f62-0d61" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fd14-0482-e23a-ef29" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="25e1-86d3-6929-6ea0" name="Book of Arcane Mastery" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The Bearer&apos;s first casting attempt in each magic phase gains +2 to cast. When using a single magic die for this casting attempt, a natural roll of 1 or 2 on the magic die is always a failed casting attempt, regardless of any modifiers.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3db5-8d52-cfe9-fbfa" name="°Essence of a Free Mind (only on Wizard)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="73b8-f867-8841-bdf9" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73b8-f867-8841-bdf9" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0816-fdf4-0942-c0f5" name="Essence of a Free Mind" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A Wizard with this Artefact may select up to two Paths on its Army List instead of one (from the ones normally available to it). Select which of the two Paths to use during Spell Selection.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1a15-8ac5-586b-1b94" name="°Magical Heirloom (only on Wizard)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="09fb-61bf-d2b2-eb15" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="09fb-61bf-d2b2-eb15" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a514-8cb4-1139-9905" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2816-552b-a5ad-0be7" name="Magical Heirloom" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A Wizard with this Artefact knows the Hereditary Spell in addition to its other spells.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8a96-40ff-7fb6-54a0" name="Aether Icon" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e301-4817-97c9-61ee" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3290-f93c-4203-1ed8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="16ae-d3dc-ae73-6dd9" name="Aether Icon" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit gains Magic Resistance (1). If the unit already had Magic Resistance, it instead increases the Magic Resistance value by 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bd1e-b521-5357-bc0e" name="Banner of Discipline" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a2e6-5898-c18e-073d" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0f3d-dc64-2d8e-fea1" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8b19-2cd0-d82f-8cd0" name="Banner of Discipline" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer&apos;s unit may reroll failed Panic Tests and Decimated Tests. If the Battle Standard Bearer or the General is part of the bearer’s unit, it automatically passes all its Panic Tests and Decimated Tests instead.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c253-ce04-6c42-8bf6" name="Banner of Speed" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b8ec-88fe-1802-034c" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d519-ce01-461a-a9f0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="fa8a-e1b3-e78b-31f1" name="Banner of Speed" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A unit with one or more Banners of Speed gains +1 Advance Rate and +2 March Rate.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6454-0e64-e88b-0afa" name="Banner of the Relentless Company" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="65fc-77a6-bc7d-708b" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="18d3-e6b2-9af0-18e2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d633-f98b-a73c-30dd" name="Banner of the Relentless Company" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated during the controlling player’s Movement Phase. All Infantry models in thebearer’s unit always have March Rate 15”, until the end of the Player Turn. Only a single Banner of the Relentless Company may be activated during the same Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="58a9-c83f-8819-4bfa" name="Flaming Standard" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5ac7-02ae-0ab4-ee85" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7194-2105-0fb1-913d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="df84-d89e-d616-b9c0" name="Fire Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of a Round of Combat or before shooting with the bearer’s unit. The bearer&apos;s unit gains Flaming Attacks. If activated when Engaged in Combat, effects lasts until the bearer’s unit is no longer Engaged in Combat. If activated before Shooting with the bearer’s unit, this effect lasts until end of the Phase. </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e2f6-29ee-8b26-9f6e" name="Legion Standard" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0554-097b-043f-0296" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a5f4-90b2-83e6-606e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="221d-73a7-1abc-a35b" name="Legion Standard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A unit with one Legion Standard increases the maximum of its Rank Bonus by +1 (normally this means the unit can add up to 4 Full Ranks to its Combat Score). A unit with two Legion Standards increases the maximum of its Rank Bonus by +2 instead.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d276-08bb-7326-4146" name="Rending Banner" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a197-cee8-e0be-6a88" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="483b-11bc-457b-5097" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8d44-0648-8c76-8d65" name="Rending Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of a Round of Combat. Close Combat Attacks from R&amp;F models in the bearer&apos;s unit gain +1 Armour Penetration until they are no longer engaged in combat. A model can only be affected by a single Rending Banner at the same time.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1339-adda-070d-906c" name="Stalker&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d603-9133-33a0-7df8" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ae1-5497-4f16-c5b7" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="15df-81ad-6235-983b" name="Stalker&apos;s Standard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer&apos;s unit gains Strider</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="98fe-a333-8a21-dcb0" name="Alchemist&apos;s Alloy" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe44-8d00-aa93-3344" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="22bb-70bd-571d-6017" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="63b1-1708-e7a2-6a08" name="Alchemist&apos;s Alloy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and suffers -2 Offensive Skill.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5348-8c71-c793-57f3" name="Basalt Infusion" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a676-50d6-34dd-4c20" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5490-f0a4-8106-e9b5" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f1e5-a0ac-15a9-364c" name="Basalt Infusion" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and Aegis (3+, against Flaming Attacks). The wearer automatically fails all Fortitude saves.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cba2-e616-5486-217b" name="Death Cheater" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="680d-7f06-0c0a-06c5" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="472d-0bff-19ad-b513" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="157a-0217-8e2b-f6be" name="Death Cheater" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Fortitude (4+) and +1 Armour.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b8a1-4182-3aba-ffd8" name="Destiny&apos;s Call (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d9e-0dd9-9c03-22c9" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="441f-cdc3-2641-5eb4" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5d46-d0b1-afa4-c50b" name="Destiny&apos;s Call" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Aegis (4+) and its Armour is set to 3 and cannot be improved beyond this. Standard Size Models only.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="47b1-c334-2935-e4f4" name="Essence of Mithril (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8a8-87ba-b529-c97d" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="567d-e1e4-0a5d-1bbc" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="aacf-0135-b153-71bd" name="Essence of Mithril" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +5 Armour, to a maximum of 5. Standard Sized models only.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="08dd-2bd2-1e5a-1f39" name="Ghostly Guard" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="148f-f6ba-c045-3317" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ee96-f598-71db-f5e8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="393e-2415-1ffa-d6d1" name="Ghostly Guard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Heavy Armour and Plate Armour enchantment.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +2 Armour against non-Magical Attacks.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="97f7-20ef-fc6c-63a7" name="Dusk Forged" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="93db-9a6d-1119-f5c5" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8fb-29d0-debc-809d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3907-6e2e-f2cc-915f" name="Dusk Forged" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Shield Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer may choose to reroll its failed Armour Saves while using this Shield. If it does, it automatically fails all special saves.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink id="d645-209a-d8a9-d9f3" name="Shield Enchantement" hidden="false" collective="false" import="true" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="41fe-d2cc-82ef-381a" name="Willow&apos;s Ward (only on Foot)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="213f-7fe0-7bf6-4d56" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a232-f363-a538-7798" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1a51-a0e3-e43a-7f08" name="Willow&apos;s Ward" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Shield Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer cannot use Parry and gains +1 Armour. Impact Hits distributed towards the bearer suffer -2 Armour Penetration.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink id="af3a-4b38-83b8-35f1" name="Shield Enchantement" hidden="false" collective="false" import="true" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -231,7 +955,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="4c4e-146b-a165-a891" name="Armour Enchantments" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="4c4e-146b-a165-a891" name="Armour Enchantments (old)" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="757a-d5c1-6cf9-bd2f" value="2">
           <conditions>
@@ -242,620 +966,57 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="757a-d5c1-6cf9-bd2f" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="9e1c-64e0-ee91-9065" name="Death Cheater" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cba1-99f6-8291-b0e2" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f35-b562-da41-9760" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7c15-67c1-c277-8e10" name="Death Cheater" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Fortitude (4+) and +1 Armour.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f961-86c2-9c05-26b8" name="Destiny&apos;s Call - Standard Size only" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c632-7ea5-0f1b-e5f7" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0e2b-9907-9ea4-d178" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a13e-d783-fe7e-a520" name="Destiny&apos;s Call" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Aegis (4+) and its Armour is set to 3 and cannot be improved beyond this. Standard Size Models only.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8595-7314-30db-51da" name="Essence of Mithril - Standard Size only" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0926-d6fb-be47-6bd2" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6fa2-0f38-156f-ee4a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c829-9786-d674-d45b" name="Essence of Mithril" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +5 Armour, to a maximum of 5. Standard Sized models only.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7826-dc11-ac6b-51c3" name="Dusk Forged" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9cb5-506c-6234-6e46" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1921-ec96-a8dc-4557" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7b4e-d308-4ef4-94b8" name="Dusk Forged" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Shield Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer may choose to reroll its failed Armour Saves while using this Shield. If it does, it automatically fails all special saves.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <entryLinks>
-            <entryLink id="6a8b-1ded-cff0-9a28" name="Shield Enchantement" hidden="false" collective="false" import="true" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="16c0-7108-a6a7-f2b6" name="Ghostly Guard" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5b89-fcea-fb74-4fae" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9249-4aac-5dfe-3aed" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c2e1-b4dc-de38-780d" name="Ghostly Guard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Heavy Armour and Plate Armour enchantment.</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +2 Armour against non-Magical Attacks.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="38fa-9d02-70a4-fd41" name="Basalt Infusion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d267-e48c-526c-bae3" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7b69-16ab-2e7a-30e2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="cfba-2d26-2f91-cef7" name="Basalt Infusion" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and Aegis (3+, against Flaming Attacks). The wearer automatically fails all Fortitude saves.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7661-e05d-8c3d-4b60" name="Willow&apos;s Ward - Models on Foot only" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bbf3-c384-bcb9-1787" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="61e7-82cc-cd4c-25ca" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b6f2-047a-b02a-955f" name="Willow&apos;s Ward" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Shield Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer cannot use Parry and gains +1 Armour. Impact Hits distributed towards the bearer suffer -2 Armour Penetration.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <entryLinks>
-            <entryLink id="f2a6-8c8c-d8b1-852f" name="Shield Enchantement" hidden="false" collective="false" import="true" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a341-4e62-97af-a426" name="Alchemist&apos;s Alloy" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b56-9d49-7c24-8daf" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bbdf-bd24-eaaf-5e18" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ae69-9a05-d1bd-4aec" name="Alchemist&apos;s Alloy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and suffers -2 Offensive Skill.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="24b8-1985-bb44-4a8f" name="Alchemist&apos;s Alloy" hidden="false" collective="false" import="true" targetId="98fe-a333-8a21-dcb0" type="selectionEntry"/>
+        <entryLink id="6335-add0-41cb-4e60" name="Basalt Infusion" hidden="false" collective="false" import="true" targetId="5348-8c71-c793-57f3" type="selectionEntry"/>
+        <entryLink id="4315-4a67-9211-a92d" name="Death Cheater" hidden="false" collective="false" import="true" targetId="cba2-e616-5486-217b" type="selectionEntry"/>
+        <entryLink id="ba50-8d85-adaa-e8f6" name="Destiny&apos;s Call (only on Standard)" hidden="false" collective="false" import="true" targetId="b8a1-4182-3aba-ffd8" type="selectionEntry"/>
+        <entryLink id="d532-be6a-76fe-d573" name="Essence of Mithril (only on Standard)" hidden="false" collective="false" import="true" targetId="47b1-c334-2935-e4f4" type="selectionEntry"/>
+        <entryLink id="3615-f40d-12bd-2888" name="Ghostly Guard" hidden="false" collective="false" import="true" targetId="08dd-2bd2-1e5a-1f39" type="selectionEntry"/>
+        <entryLink id="3f09-a408-a10f-c93f" name="Dusk Forged" hidden="false" collective="false" import="true" targetId="97f7-20ef-fc6c-63a7" type="selectionEntry"/>
+        <entryLink id="5282-3734-eff4-aa12" name="Willow&apos;s Ward (only on Foot)" hidden="false" collective="false" import="true" targetId="41fe-d2cc-82ef-381a" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="a755-929f-7067-ae6e" name="Artefacts" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="a755-929f-7067-ae6e" name="Artefacts (old)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e675-85da-422d-e83d" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="28c9-d1c6-a0c8-d695" name="Crown of the Wizard King - Cannot be taken by Wizards" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0cd2-7a34-9c70-fcef" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1aa6-7e20-0164-c612" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a6dd-7059-e971-9d29" name="Crown of the Wizard King" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">During Spell Selection, randomise a magic Path (from all Paths in The 9th Age: Fantasy Battles - Paths of Magic). The bearer is a Wizard Apprentice using the randomised Path. It cannot select the Hereditary Spell.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="02ee-20af-e439-e56f" name="Book of Arcane Mastery - Dominant. Cannot be taken by Wizard Master." hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8b6-bd94-7030-04dc" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="18ac-5821-ca08-dd8f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1fda-2a73-aee7-500b" name="Book of Arcane Power" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The Bearer&apos;s first casting attempt in each magic phase gains +2 to cast. When using a single magic dice for this casting attempt, a natural roll of 1 or 2 on the magic dice is always a failed casting attempt, regardless of any modifiers.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="346d-2d02-3ad1-fa6a" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5125-775d-b84e-6817" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7543-e866-afe8-638b" name="Crown of Autocracy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains +1 Discipline. If taken by the General, the opponent doubles the Victory Points bonus for killing this General (normally +400 instead of +200).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="717c-cdd1-f368-649a" name="Obsidian Rock" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c136-48fb-10d1-af14" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5080-ee94-c94e-0aa7" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4ddc-e339-1a1d-5a53" name="Obsidian Rock" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Magic Resistance (2).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2078-81dc-eac0-b856" name="Rod of Battle" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a580-173e-542f-c205" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="af3a-1b52-6284-4d23" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e46d-4704-b518-21c0" name="Rod of Battle" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/9): Type: Augment. Range 12&quot;. Duration: Lasts One Turn. The target gains +1 to hit with its Close Combat Attacks.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3f7d-5a54-b1ca-550f" name="Binding Scroll" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6c83-b58e-1f17-6ad6" type="max"/>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d25c-e7c0-d71c-3dce" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fba1-ac53-2f35-b932" name="Binding Scroll" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated after siphon the veil. When activated, pick an enemy model and select one of its spells (including Attribute and Bound Spells). The chosen model cannot cast the selected spell during this Magic Phase. Only a single Binding Scroll may be activated during the same Phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3db5-8d52-cfe9-fbfa" name="Essence of a Free Mind - Dominant" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8378-ef9c-921c-fea8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b34f-2059-16a0-6fd3" name="Essence of a Free Mind" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A Wizard with this Artefact may select up to two Paths on its Army List instead of one (from the ones normally available to it). Select which of the two Paths to use during Spell Selection.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="589f-da5c-20ba-5f1a" name="Potion of Strength - Cannot be taken by Towering Presence" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2073-cb07-2b27-ebf2" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2703-475f-873e-b2f1" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dd94-8d4f-6397-58b3" name="Potion of Strength" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cannot be taken by models with Towering Presence. One use only. May be activated at the start of any Phase or Round of Combat. Until the end of the Player Turn the bearer gains Crush Attack.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3d77-9d65-58c3-9e7d" name="Lightning Vambraces" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00cd-e544-918b-a19a" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="11b8-e8e5-75ac-cc04" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="32bd-cf16-0584-92c6" name="Lightning Vambraces" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/8): Type: Hex, Missile, Damage. Range 24&quot;. Duration: Instant. The target suffers 2D6 hits with Strength 3 and Armour Penetration 0.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8cca-6eee-ecd5-1620" name="Talisman of Shielding" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4d0f-cb2b-a4f7-78e2" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c45-575d-827d-5f11" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="47a8-7f16-d5aa-59a6" name="Talisman of Shielding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (5+).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="538d-5665-58a8-281d" name="Ranger&apos;s Boots - Standard Size models on foot only" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ed0c-4ab2-0724-619c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7249-1714-fbf6-bb29" name="Ranger&apos;s Boots" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Standard size models on foot only. The bearer gains Strider and, unless using Flying Movement, gains +2 Advance Rate up to a maximum of 10, and +4 March Rate up to a maximum of 20.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1a15-8ac5-586b-1b94" name="Magical Heirloom - Dominant" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e66b-513a-2178-62dd" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="193f-1692-0888-0fff" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3497-5e1f-9856-0786" name="Magical Heirloom" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A Wizard with this Artefact knows the Hereditary Spell in addition to its other spells.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="52aa-545b-5fc8-64fe" name="Scepter of Power" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3294-ac54-84bc-d29c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f4a8-989f-6404-cbf3" name="Scepter of Power" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. A Wizard with this Artefact may add a single Magic Dice from its Dice Pool to one of its casting rolls or dispel rolls, after seeing the casting or dispel froll. (Note that casting rolls cannot exceed the limit of max 5 Magic Dice.)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bc10-9582-1642-6f0e" name="Talisman of the Void" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3cf3-fbc4-bfb4-b266" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f2d-8ddc-0968-d37d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d25b-ed80-d5be-3c6c" name="Talisman of the Void" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Channel (+1)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b996-d7ae-e854-2601" name="Dragon Staff" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d841-22a8-95d7-d0b3" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2913-1a61-649c-7864" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="24d8-2a7f-1927-2789" name="Dragon Staff" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Breath Attack (Strength 3, Armour Penetration 0, Flaming Attacks).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ef67-0a29-6d5c-687c" name="Crystal Ball" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="96ec-66a7-2069-fc16" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99e1-e740-4f1a-e979" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="65cc-2129-2fd3-d85d" name="Crystal Ball" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">After Spell Selection (at the end of step 7 of the Pre-Game Sequence), mark a single enemy model in the opponent’s Army List. All dispelling attempts of spells cast by that model gain a +1 dispelling modifier, provided the bearer is on the battlefield.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="57fe-c8e7-f786-132c" name="Dragonfire Gem" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b06d-57b2-7d61-c148" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d924-778a-9d6c-8f3a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1aa2-6132-c8f1-0550" name="Dragonfire Gem" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (2+, against Flaming Attacks). The bearer automatically fails all Fortitude Saves.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fc3e-7023-b3ce-8579" name="Potion of Swiftness" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d945-451b-7fc4-4571" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9973-8d34-ffe4-a7d6" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2e95-0bf0-8e9a-2173" name="Potion of Swiftness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Phase or Round of Combat. Until the end of the Player Turn, the bearer gains +3 Agility.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ebd9-2cee-402a-4ff4" name="Lucky Charm" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0600-edd1-77df-ed4f" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="45b9-6475-d8be-2fd2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="703e-dc0f-bc53-0e7e" name="Lucky Charm" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated when the bearer&apos;s model fails an Armour Save. This failed Armour Save may be rerolled.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="8c4d-8ad5-7020-f54d" name="Binding Scroll" hidden="false" collective="false" import="true" targetId="3f7d-5a54-b1ca-550f" type="selectionEntry"/>
+        <entryLink id="ee0b-42b4-721b-fe5d" name="Crystal Ball" hidden="false" collective="false" import="true" targetId="ef67-0a29-6d5c-687c" type="selectionEntry"/>
+        <entryLink id="c290-6c05-9ec3-22ed" name="Crown of Autocracy" hidden="false" collective="false" import="true" targetId="f996-0dd2-7d1f-17fe" type="selectionEntry"/>
+        <entryLink id="8ade-5aba-998c-859e" name="Crown of the Wizard King (not on Wizards)" hidden="false" collective="false" import="true" targetId="28c9-d1c6-a0c8-d695" type="selectionEntry"/>
+        <entryLink id="db67-ed3b-305e-b0d4" name="Dragon Staff" hidden="false" collective="false" import="true" targetId="b996-d7ae-e854-2601" type="selectionEntry"/>
+        <entryLink id="9edd-3cfd-ab2d-e97b" name="Dragonfire Gem" hidden="false" collective="false" import="true" targetId="57fe-c8e7-f786-132c" type="selectionEntry"/>
+        <entryLink id="2dec-aa37-1015-9e2f" name="Lucky Charm" hidden="false" collective="false" import="true" targetId="ebd9-2cee-402a-4ff4" type="selectionEntry"/>
+        <entryLink id="5a84-c8f4-34e2-fc8b" name="Lightning Vambraces" hidden="false" collective="false" import="true" targetId="3d77-9d65-58c3-9e7d" type="selectionEntry"/>
+        <entryLink id="6c66-587d-a5c8-287b" name="Obsidian Rock" hidden="false" collective="false" import="true" targetId="717c-cdd1-f368-649a" type="selectionEntry"/>
+        <entryLink id="718f-cba8-9bc5-13ad" name="Potion of Strength (not on Towering Presence)" hidden="false" collective="false" import="true" targetId="589f-da5c-20ba-5f1a" type="selectionEntry"/>
+        <entryLink id="08aa-4442-9469-8cc8" name="Potion of Swiftness" hidden="false" collective="false" import="true" targetId="fc3e-7023-b3ce-8579" type="selectionEntry"/>
+        <entryLink id="915d-4453-62a7-333d" name="Ranger&apos;s Boots (only on Standard and Foot)" hidden="false" collective="false" import="true" targetId="538d-5665-58a8-281d" type="selectionEntry"/>
+        <entryLink id="bf07-0666-e1a8-6025" name="Rod of Battle" hidden="false" collective="false" import="true" targetId="2078-81dc-eac0-b856" type="selectionEntry"/>
+        <entryLink id="9df5-8f31-8061-fe7d" name="Scepter of Power" hidden="false" collective="false" import="true" targetId="52aa-545b-5fc8-64fe" type="selectionEntry"/>
+        <entryLink id="e5e0-8c94-44c8-3db2" name="Talisman of Shielding" hidden="false" collective="false" import="true" targetId="8cca-6eee-ecd5-1620" type="selectionEntry"/>
+        <entryLink id="ba54-91b1-6b12-009b" name="Talisman of the Void" hidden="false" collective="false" import="true" targetId="bc10-9582-1642-6f0e" type="selectionEntry"/>
+        <entryLink id="4a50-e3c6-0ef3-0854" name="°Book of Arcane Mastery (not on Wizard Master)" hidden="false" collective="false" import="true" targetId="02ee-20af-e439-e56f" type="selectionEntry"/>
+        <entryLink id="7593-6717-0a84-5178" name="°Essence of a Free Mind (only on Wizard)" hidden="false" collective="false" import="true" targetId="3db5-8d52-cfe9-fbfa" type="selectionEntry"/>
+        <entryLink id="b06f-7ffa-648c-9a36" name="°Magical Heirloom (only on Wizard)" hidden="false" collective="false" import="true" targetId="1a15-8ac5-586b-1b94" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="37cb-10cd-3c37-56dd" name="Banner Enchantments" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="37cb-10cd-3c37-56dd" name="Banner Enchantments (old)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0fb8-361b-f433-cc9e" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="1695-cfaf-06fb-fe34" name="Rending Banner" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0350-9e05-ca07-ed9c" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6f86-7262-dd94-d986" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6dcd-6b2e-3175-42ef" name="Rending Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of a Round of Combat. Close Combat Attacks from R&amp;F models in the bearer&apos;s unit gain +1 Armour Penetration until they are no longer engaged in combat. A model can only be affected by a single Rending Banner at the same time.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c7f0-afd2-df8b-2008" name="Banner of Speed" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="50fe-79c3-0999-f3d2" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab92-8898-f49d-2e42" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b298-db20-e285-f084" name="Banner of Speed" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A unit with one or more Banners of Speed gains +1 Advance Rate and +2 March Rate.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bcfc-01a2-69fe-e5e7" name="Stalker&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="97b9-5262-fc24-0608" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a988-bc77-7669-58f0" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="88fb-50d8-970f-65b2" name="Stalker&apos;s Standard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer&apos;s unit gains Strider</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="719b-6dee-2a2a-8e74" name="Banner of Discipline" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0dbb-f9a9-a6bf-f7df" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ac8-5d6c-8439-7620" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c5ed-8a31-f738-9f2b" name="Banner of Discipline" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer&apos;s unit may reroll failed Panic Tests and Decimated Tests. If the Battle Standard Bearer or the General is part of the bearer’s unit, it automatically passes all its Panic Tests and Decimated Tests instead.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c287-b3cd-82d4-ba3d" name="Aether Icon" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e3c7-a190-7c17-3f30" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b09f-a35b-70d7-2b9f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ef17-6448-332f-a446" name="Aether Icon" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit gains Magic Resistance (1). If the unit already had Magic Resistance, it instead increases the Magic Resistance value by 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5bf4-2476-8235-9323" name="Banner of the Relentless Company" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9245-eb29-5a53-326c" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4902-c868-a2e0-52a8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e2f3-7783-39bd-d955" name="Banner of the Relentless Company" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated during the controlling player’s Movement Phase. All Infantry models in thebearer’s unit always have March Rate 15”, until the end of the Player Turn. Only a single Banner of the Relentless Company may be activated during the same Phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="59ec-00bd-1953-e80a" name="Flaming Standard" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ee51-134a-e6b2-13c8" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e072-9a53-d5c8-39ad" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0456-5897-1a62-1bca" name="Fire Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of a Round of Combat or before shooting with the bearer’s unit. The bearer&apos;s unit gains Flaming Attacks. If activated when Engaged in Combat, effects lasts until the bearer’s unit is no longer Engaged in Combat. If activated before Shooting with the bearer’s unit, this effect lasts until end of the Phase. </characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ef5a-692b-1b30-d5d5" name="Legion Standard" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e800-e25e-5784-8e38" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c5f-5d36-da6c-3028" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a3f3-727b-5877-7be7" name="Legion Standard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A unit with one Legion Standard increases the maximum of its Rank Bonus by +1 (normally this means the unit can add up to 4 Full Ranks to its Combat Score). A unit with two Legion Standards increases the maximum of its Rank Bonus by +2 instead.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="4c28-2aeb-3bff-5cd1" name="Aether Icon" hidden="false" collective="false" import="true" targetId="8a96-40ff-7fb6-54a0" type="selectionEntry"/>
+        <entryLink id="e529-2c96-5897-fb92" name="Banner of Discipline" hidden="false" collective="false" import="true" targetId="bd1e-b521-5357-bc0e" type="selectionEntry"/>
+        <entryLink id="d64e-6c33-1357-afe5" name="Banner of Speed" hidden="false" collective="false" import="true" targetId="c253-ce04-6c42-8bf6" type="selectionEntry"/>
+        <entryLink id="89ef-285e-98aa-aeeb" name="Banner of the Relentless Company" hidden="false" collective="false" import="true" targetId="6454-0e64-e88b-0afa" type="selectionEntry"/>
+        <entryLink id="42cb-fade-e35f-1910" name="Rending Banner" hidden="false" collective="false" import="true" targetId="d276-08bb-7326-4146" type="selectionEntry"/>
+        <entryLink id="bd5a-dd97-17a4-df25" name="Flaming Standard" hidden="false" collective="false" import="true" targetId="58a9-c83f-8819-4bfa" type="selectionEntry"/>
+        <entryLink id="28e7-4305-d5fe-bf9c" name="Stalker&apos;s Standard" hidden="false" collective="false" import="true" targetId="1339-adda-070d-906c" type="selectionEntry"/>
+        <entryLink id="fdd3-f455-3f45-fca8" name="Legion Standard" hidden="false" collective="false" import="true" targetId="e2f6-29ee-8b26-9f6e" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b4c3-e840-1bd5-b746" name="Command Group" hidden="false" collective="false" import="true">
       <selectionEntries>
@@ -884,6 +1045,106 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="3ca8-d93a-232c-d3b5" name="Shield Enchantments" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2c1-9afa-9cd4-c449" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="a527-0e68-b768-0605" name="Willow&apos;s Ward (only on Foot)" hidden="false" collective="false" import="true" targetId="41fe-d2cc-82ef-381a" type="selectionEntry"/>
+        <entryLink id="8f6b-f430-a99d-3f55" name="Dusk Forged" hidden="false" collective="false" import="true" targetId="97f7-20ef-fc6c-63a7" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="74ad-3e59-5174-60fa" name="Armour Enchantments" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bf2-549c-6ff1-924f" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="a49f-7ced-15b0-6f93" name="Ghostly Guard" hidden="false" collective="false" import="true" targetId="08dd-2bd2-1e5a-1f39" type="selectionEntry"/>
+        <entryLink id="4fd0-f307-0c59-29ee" name="Death Cheater" hidden="false" collective="false" import="true" targetId="cba2-e616-5486-217b" type="selectionEntry"/>
+        <entryLink id="0c22-f5d2-8ec4-32d6" name="Destiny&apos;s Call (only on Standard)" hidden="false" collective="false" import="true" targetId="b8a1-4182-3aba-ffd8" type="selectionEntry"/>
+        <entryLink id="8f1f-af40-4d07-36dc" name="Alchemist&apos;s Alloy" hidden="false" collective="false" import="true" targetId="98fe-a333-8a21-dcb0" type="selectionEntry"/>
+        <entryLink id="e4b5-8e70-ea45-e148" name="Essence of Mithril (only on Standard)" hidden="false" collective="false" import="true" targetId="47b1-c334-2935-e4f4" type="selectionEntry"/>
+        <entryLink id="047f-7951-775b-18cf" name="Basalt Infusion" hidden="false" collective="false" import="true" targetId="5348-8c71-c793-57f3" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="ab25-3916-e8af-98cb" name="Artefacts (Wizards)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c9f3-ddeb-b459-fd84" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="f855-25f0-1af9-28bd" name="Binding Scroll" hidden="false" collective="false" import="true" targetId="3f7d-5a54-b1ca-550f" type="selectionEntry"/>
+        <entryLink id="c6ce-2fd6-5c78-614b" name="Crystal Ball" hidden="false" collective="false" import="true" targetId="ef67-0a29-6d5c-687c" type="selectionEntry"/>
+        <entryLink id="c240-9717-2327-5664" name="Crown of Autocracy" hidden="false" collective="false" import="true" targetId="f996-0dd2-7d1f-17fe" type="selectionEntry"/>
+        <entryLink id="1997-2b6d-0cc0-51b6" name="Dragon Staff" hidden="false" collective="false" import="true" targetId="b996-d7ae-e854-2601" type="selectionEntry"/>
+        <entryLink id="4bed-fd99-bde0-fb34" name="Dragonfire Gem" hidden="false" collective="false" import="true" targetId="57fe-c8e7-f786-132c" type="selectionEntry"/>
+        <entryLink id="d25d-4963-04f5-d40a" name="Lucky Charm" hidden="false" collective="false" import="true" targetId="ebd9-2cee-402a-4ff4" type="selectionEntry"/>
+        <entryLink id="9c52-685a-ea1f-851b" name="Lightning Vambraces" hidden="false" collective="false" import="true" targetId="3d77-9d65-58c3-9e7d" type="selectionEntry"/>
+        <entryLink id="e5b3-c6fd-9f9c-e5f5" name="Obsidian Rock" hidden="false" collective="false" import="true" targetId="717c-cdd1-f368-649a" type="selectionEntry"/>
+        <entryLink id="04b1-0131-0954-3657" name="Potion of Strength (not on Towering Presence)" hidden="false" collective="false" import="true" targetId="589f-da5c-20ba-5f1a" type="selectionEntry"/>
+        <entryLink id="e018-9964-afdf-9bc1" name="Potion of Swiftness" hidden="false" collective="false" import="true" targetId="fc3e-7023-b3ce-8579" type="selectionEntry"/>
+        <entryLink id="374d-13e0-e992-65c1" name="Ranger&apos;s Boots (only on Standard and Foot)" hidden="false" collective="false" import="true" targetId="538d-5665-58a8-281d" type="selectionEntry"/>
+        <entryLink id="9c96-9af8-4a32-0a6c" name="Rod of Battle" hidden="false" collective="false" import="true" targetId="2078-81dc-eac0-b856" type="selectionEntry"/>
+        <entryLink id="c99f-7a35-cf73-7091" name="Scepter of Power" hidden="false" collective="false" import="true" targetId="52aa-545b-5fc8-64fe" type="selectionEntry"/>
+        <entryLink id="855c-aa12-d776-3c72" name="Talisman of Shielding" hidden="false" collective="false" import="true" targetId="8cca-6eee-ecd5-1620" type="selectionEntry"/>
+        <entryLink id="a61e-39d9-adad-c6d4" name="Talisman of the Void" hidden="false" collective="false" import="true" targetId="bc10-9582-1642-6f0e" type="selectionEntry"/>
+        <entryLink id="528f-bdd2-7b6e-dad2" name="°Book of Arcane Mastery (not on Wizard Master)" hidden="false" collective="false" import="true" targetId="02ee-20af-e439-e56f" type="selectionEntry"/>
+        <entryLink id="c548-93ab-2b61-8dd5" name="°Essence of a Free Mind (only on Wizard)" hidden="false" collective="false" import="true" targetId="3db5-8d52-cfe9-fbfa" type="selectionEntry"/>
+        <entryLink id="c878-11af-72e0-9412" name="°Magical Heirloom (only on Wizard)" hidden="false" collective="false" import="true" targetId="1a15-8ac5-586b-1b94" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="6e26-c5df-c19e-83d4" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4658-33b0-7815-0832" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="52ab-e17a-06e6-21aa" name="Binding Scroll" hidden="false" collective="false" import="true" targetId="3f7d-5a54-b1ca-550f" type="selectionEntry"/>
+        <entryLink id="0f68-9471-ae81-25d4" name="Crystal Ball" hidden="false" collective="false" import="true" targetId="ef67-0a29-6d5c-687c" type="selectionEntry"/>
+        <entryLink id="38b9-dae1-95af-302d" name="Crown of Autocracy" hidden="false" collective="false" import="true" targetId="f996-0dd2-7d1f-17fe" type="selectionEntry"/>
+        <entryLink id="17f0-336d-10ca-7207" name="Crown of the Wizard King (not on Wizards)" hidden="false" collective="false" import="true" targetId="28c9-d1c6-a0c8-d695" type="selectionEntry"/>
+        <entryLink id="84a2-6c9c-d927-2874" name="Dragon Staff" hidden="false" collective="false" import="true" targetId="b996-d7ae-e854-2601" type="selectionEntry"/>
+        <entryLink id="c86d-2524-de8b-a975" name="Dragonfire Gem" hidden="false" collective="false" import="true" targetId="57fe-c8e7-f786-132c" type="selectionEntry"/>
+        <entryLink id="e66e-7a88-71b6-bf51" name="Lucky Charm" hidden="false" collective="false" import="true" targetId="ebd9-2cee-402a-4ff4" type="selectionEntry"/>
+        <entryLink id="992d-fc17-1169-86f2" name="Lightning Vambraces" hidden="false" collective="false" import="true" targetId="3d77-9d65-58c3-9e7d" type="selectionEntry"/>
+        <entryLink id="9f4f-62ff-d10a-ed99" name="Obsidian Rock" hidden="false" collective="false" import="true" targetId="717c-cdd1-f368-649a" type="selectionEntry"/>
+        <entryLink id="a0e5-90bf-7371-4098" name="Potion of Strength (not on Towering Presence)" hidden="false" collective="false" import="true" targetId="589f-da5c-20ba-5f1a" type="selectionEntry"/>
+        <entryLink id="50f0-12d3-23a7-a020" name="Potion of Swiftness" hidden="false" collective="false" import="true" targetId="fc3e-7023-b3ce-8579" type="selectionEntry"/>
+        <entryLink id="3118-3fe0-8ace-7a01" name="Ranger&apos;s Boots (only on Standard and Foot)" hidden="false" collective="false" import="true" targetId="538d-5665-58a8-281d" type="selectionEntry"/>
+        <entryLink id="0c97-c012-9c3d-fb71" name="Rod of Battle" hidden="false" collective="false" import="true" targetId="2078-81dc-eac0-b856" type="selectionEntry"/>
+        <entryLink id="6367-79f1-3140-ff39" name="Scepter of Power" hidden="false" collective="false" import="true" targetId="52aa-545b-5fc8-64fe" type="selectionEntry"/>
+        <entryLink id="6451-e6e5-bb4e-c8ab" name="Talisman of Shielding" hidden="false" collective="false" import="true" targetId="8cca-6eee-ecd5-1620" type="selectionEntry"/>
+        <entryLink id="0b0c-697c-57fe-998b" name="Talisman of the Void" hidden="false" collective="false" import="true" targetId="bc10-9582-1642-6f0e" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="6f44-7811-b1d1-1d86" name="Banner Enchantments (BSB)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0a59-9bfc-d3ed-891d" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="0198-6415-6613-85e5" name="Aether Icon" hidden="false" collective="false" import="true" targetId="8a96-40ff-7fb6-54a0" type="selectionEntry"/>
+        <entryLink id="df6b-d277-de58-63c7" name="Banner of Discipline" hidden="false" collective="false" import="true" targetId="bd1e-b521-5357-bc0e" type="selectionEntry"/>
+        <entryLink id="d4a1-a7e4-c789-6347" name="Banner of Speed" hidden="false" collective="false" import="true" targetId="c253-ce04-6c42-8bf6" type="selectionEntry"/>
+        <entryLink id="bb2c-8475-bb19-83e7" name="Banner of the Relentless Company" hidden="false" collective="false" import="true" targetId="6454-0e64-e88b-0afa" type="selectionEntry"/>
+        <entryLink id="f767-ec69-425a-3086" name="Rending Banner" hidden="false" collective="false" import="true" targetId="d276-08bb-7326-4146" type="selectionEntry"/>
+        <entryLink id="3046-d937-6007-f9a9" name="Flaming Standard" hidden="false" collective="false" import="true" targetId="58a9-c83f-8819-4bfa" type="selectionEntry"/>
+        <entryLink id="6fda-106b-c998-3348" name="Stalker&apos;s Standard" hidden="false" collective="false" import="true" targetId="1339-adda-070d-906c" type="selectionEntry"/>
+        <entryLink id="0992-5c15-3353-133d" name="Legion Standard" hidden="false" collective="false" import="true" targetId="e2f6-29ee-8b26-9f6e" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="4eb1-cabb-a838-a005" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d478-5a11-0230-7a8c" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="cdc1-5f96-e5ca-0215" name="Aether Icon" hidden="false" collective="false" import="true" targetId="8a96-40ff-7fb6-54a0" type="selectionEntry"/>
+        <entryLink id="b485-d7a5-7901-04c6" name="Banner of Discipline" hidden="false" collective="false" import="true" targetId="bd1e-b521-5357-bc0e" type="selectionEntry"/>
+        <entryLink id="7270-a619-9d01-bab9" name="Banner of Speed" hidden="false" collective="false" import="true" targetId="c253-ce04-6c42-8bf6" type="selectionEntry"/>
+        <entryLink id="2314-1e37-1921-1a3a" name="Banner of the Relentless Company" hidden="false" collective="false" import="true" targetId="6454-0e64-e88b-0afa" type="selectionEntry"/>
+        <entryLink id="f23c-a9bf-a036-2b1b" name="Rending Banner" hidden="false" collective="false" import="true" targetId="d276-08bb-7326-4146" type="selectionEntry"/>
+        <entryLink id="0621-a3d6-4ab0-3240" name="Flaming Standard" hidden="false" collective="false" import="true" targetId="58a9-c83f-8819-4bfa" type="selectionEntry"/>
+        <entryLink id="a381-eb39-4e82-c6b5" name="Stalker&apos;s Standard" hidden="false" collective="false" import="true" targetId="1339-adda-070d-906c" type="selectionEntry"/>
+        <entryLink id="1984-fb34-d302-dc22" name="Legion Standard" hidden="false" collective="false" import="true" targetId="e2f6-29ee-8b26-9f6e" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
