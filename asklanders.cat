@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6f32-70a5-e6b1-a536" name="Åsklanders 2.4" revision="13" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6f32-70a5-e6b1-a536" name="Åsklanders 2.1.5" revision="14" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d224-066a-e928-c28c" name="Legendary Beasts" hidden="false"/>
   </categoryEntries>
@@ -33,6 +33,7 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="580a-c784-47fc-fc19" name="Seidhkennar Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -93,23 +94,35 @@
               <categoryLinks>
                 <categoryLink id="0d25-8611-da36-7393" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
               </categoryLinks>
-              <entryLinks>
-                <entryLink id="4148-a419-dc00-5054" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="f975-dd5b-da67-142e" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="10a0-406f-bb8c-045b" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="faa6-1f52-45e7-9d0c" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="cb21-fc0e-6fbe-9a3b" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="8a24-4eb4-b517-e560" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="b1ae-b0eb-839c-e313" name="Artefacts" hidden="false" collective="false" import="true" targetId="17df-ad66-db37-0a37" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="4710-3d29-25ab-1d87" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="0acd-f0a5-77a3-67d2" name="Artefacts" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1562-080c-c76e-1a2a" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="ee6d-6cef-adb5-2ab3" name="Artefacts (Wizards)" hidden="false" collective="false" import="true" targetId="ab25-3916-e8af-98cb" type="selectionEntryGroup"/>
+                    <entryLink id="fa89-4173-e829-b917" name="Åsk Artefacts (Seidhkennar)" hidden="false" collective="false" import="true" targetId="e03c-3642-f6e6-6d33" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="a1dd-2f00-4215-5bcf" name="Armour Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="36a7-2441-bb76-a2a4" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="5fbb-dc70-b366-b916" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
+                    <entryLink id="2c63-7977-c482-8844" name="Åsk Armour Enchantment" hidden="false" collective="false" import="true" targetId="e473-0818-1abb-3348" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="4a03-c16d-3659-ecac" name="Weapon Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f447-a24c-2a46-8d42" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="547f-aa42-1584-2691" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="877a-e944-16f0-cda9" name="Åsk Weapon Enchantments (Seidhkennar)" hidden="false" collective="false" import="true" targetId="2eb2-5755-d708-4c4c" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -136,14 +149,6 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f214-ce78-dc3e-ce5e" name="Dark Chariot" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b732-96dd-64fb-6b62" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -267,6 +272,18 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="83ed-0b8c-c2ef-1a4e" name="Mount" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2532-9809-40ac-71b9" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="6aa5-eac9-bda1-d205" name="Dark Chariot" hidden="false" collective="false" import="true" targetId="e963-36f3-544d-99a1" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="135.0"/>
@@ -279,6 +296,7 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="69db-ce5a-7d76-92b0" name="Åsklander Chief Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -372,70 +390,83 @@ The model part gains Battle Focus and Hatred when joined to one or more R&amp;F 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="23c2-2bd6-c413-0126" type="max"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="8853-7cb3-714d-be44" name="Special Equipment" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="f49f-4fde-5dff-49c1" name="Special Equipment" hidden="false" collective="false" import="true">
               <modifiers>
-                <modifier type="set" field="5438-04a2-ef67-acbe" value="150">
+                <modifier type="set" field="78e8-a3c7-2e0f-846b" value="200.0">
+                  <conditions>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f3f-b0dd-49d8-9cfa" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="78e8-a3c7-2e0f-846b" value="150.0">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="faf6-284f-65c1-1113" type="equalTo"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c30a-4220-8c73-d69b" type="equalTo"/>
                         <condition field="selections" scope="75a4-d324-24a1-59ba" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f3f-b0dd-49d8-9cfa" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" field="5438-04a2-ef67-acbe" value="200">
-                  <conditions>
-                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f3f-b0dd-49d8-9cfa" type="equalTo"/>
-                  </conditions>
-                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5438-04a2-ef67-acbe" type="max"/>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="78e8-a3c7-2e0f-846b" type="max"/>
               </constraints>
               <categoryLinks>
-                <categoryLink id="8d03-5861-226e-f33c" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
+                <categoryLink id="4583-5d56-159e-8706" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
               </categoryLinks>
-              <entryLinks>
-                <entryLink id="b8e8-74a5-e073-de8d" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="f975-dd5b-da67-142e" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="78c6-3954-49b6-3deb" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="2eca-9493-ee1e-d4d9" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="cb21-fc0e-6fbe-9a3b" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="5e83-4b5e-4626-fb3a" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="8324-7582-79a5-9b9f" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup">
+              <selectionEntryGroups>
+                <selectionEntryGroup id="c054-7cb1-e278-d51a" name="Artefacts" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e2f-8f64-6c7a-a5e6" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="4b41-2c24-70c2-f95e" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
+                    <entryLink id="a910-e75c-3538-18af" name="Åsk Artefacts (Chief)" hidden="false" collective="false" import="true" targetId="cf91-760f-d45d-6ac7" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="1996-94ac-1a0b-d2bd" name="Armour Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1df9-9824-9f0e-93ee" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="11e9-61e1-ad10-1c8c" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
+                    <entryLink id="0c60-c002-52f3-fbdc" name="Åsk Armour Enchantment" hidden="false" collective="false" import="true" targetId="e473-0818-1abb-3348" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="68b7-1229-3a0a-6680" name="Weapon Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="306f-2ed1-3100-6eb7" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="54ad-d235-971d-eaee" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="46d3-1871-a688-6d22" name="Åsk Weapon Enchantments (Chief)" hidden="false" collective="false" import="true" targetId="bf65-6705-874a-591a" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="1891-813f-45bb-9972" name="Shield Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7c34-af11-5331-2eb2" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="1f76-349a-e92d-24eb" name="Shield Enchantments" hidden="false" collective="false" import="true" targetId="3ca8-d93a-232c-d3b5" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="979a-d57e-9fef-3cc9" name="Banner Enchantments" hidden="true" collective="false" import="true">
                   <modifiers>
                     <modifier type="set" field="hidden" value="false">
                       <conditions>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c5f-b007-95f6-fab4" type="equalTo"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50b0-92f9-2390-fe6b" type="equalTo"/>
                       </conditions>
                     </modifier>
-                    <modifier type="set" field="7c23-f7e2-e8ad-eb43" value="2">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="3aae-74a2-893f-ba5a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2eca-9493-ee1e-d4d9" type="equalTo"/>
-                            <condition field="selections" scope="3aae-74a2-893f-ba5a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8e8-74a5-e073-de8d" type="equalTo"/>
-                            <condition field="selections" scope="3aae-74a2-893f-ba5a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0dbc-ad14-e093-434e" type="equalTo"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
                   </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="1243-1f28-0991-aa4a" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="0dbc-ad14-e093-434e" name="Artefacts" hidden="false" collective="false" import="true" targetId="17df-ad66-db37-0a37" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="dda9-608e-79f6-ab80" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a1dd-e33c-af79-fd6e" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="916e-7e21-b4fe-9984" name="Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="6f44-7811-b1d1-1d86" type="selectionEntryGroup"/>
+                    <entryLink id="8603-dc31-fe9f-0122" name="Åsk Banner Enchantment" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -509,11 +540,11 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a579-15fc-17a0-cc17" type="atLeast"/>
-                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b47c-af41-55aa-d513" type="atLeast"/>
-                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46e-7457-4fa4-d51e" type="atLeast"/>
-                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0d0b-54c7-9d0e-4e2e" type="atLeast"/>
-                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c9b-b0e7-710a-8756" type="atLeast"/>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dc02-5dc7-0b2b-7b69" type="atLeast"/>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e47-ba56-a68a-ea97" type="atLeast"/>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f9ed-0874-a860-f8cc" type="atLeast"/>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8233-515d-89fb-2307" type="atLeast"/>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59b3-034c-bf52-9da1" type="atLeast"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -527,7 +558,7 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
               <characteristics>
                 <characteristic name="Type" typeId="017b-143b-0520-bdc1">Light Armour</characteristic>
                 <characteristic name="Save" typeId="4ca3-2498-f356-f056">+1</characteristic>
-                <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Light Armour (can be enchanted as Light armor). In addition, at the start of any of your Player Turns all models with Berserker’s Bear Pelt in a unit may choose to lose its Shield and gain ​Frenzy ​, Fearless ​, ​Battle Focus ​, ​Lightning Reflexes ​, and ​+1 Strength ​. Effects lasts for the remainder of the game.</characteristic>
+                <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Light Armour (can be enchanted as Light armor). In addition, at the start of any of your Player Turns all models with Berserker's Bear Pelt in a unit may choose to lose its Shield and gain Frenzy, Fearless, Battle Focus, Lightning Reflexes, and +1 Strength. Effects lasts for the remainder of the game.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -544,44 +575,44 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6027-6255-771a-8497" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="f89d-8519-7da2-f605" name="War Dais" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a579-15fc-17a0-cc17" name="Shadow Chaser" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1c9b-b0e7-710a-8756" name="Black Stallion" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="91df-d508-517f-bdeb" name="Black Stallion" hidden="false" collective="false" import="true" targetId="1e47-ba56-a68a-ea97" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="e46e-7457-4fa4-d51e" name="Dark Chariot" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0d0b-54c7-9d0e-4e2e" name="Chimera" hidden="false" collective="false" import="true" type="upgrade">
+            </entryLink>
+            <entryLink id="7563-40bc-4694-feec" name="Chimera" hidden="false" collective="false" import="true" targetId="59b3-034c-bf52-9da1" type="selectionEntry">
               <categoryLinks>
-                <categoryLink id="6ffd-8df5-6418-0d26" name="Legendary Beasts (local)" hidden="false" targetId="d224-066a-e928-c28c" primary="false"/>
+                <categoryLink id="4b12-a0b3-7779-b0f5" name="Legendary Beasts" hidden="false" targetId="d224-066a-e928-c28c" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="b47c-af41-55aa-d513" name="Wasteland Behemoth" hidden="false" collective="false" import="true" type="upgrade">
+            </entryLink>
+            <entryLink id="710f-5851-4a94-ab19" name="Dark Chariot" hidden="false" collective="false" import="true" targetId="e963-36f3-544d-99a1" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="5f48-f972-872e-849d" name="Shadow Chaser" hidden="false" collective="false" import="true" targetId="f9ed-0874-a860-f8cc" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="3e53-0e87-cadc-3c79" name="War Dais" hidden="false" collective="false" import="true" targetId="8233-515d-89fb-2307" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="650e-8a09-b937-7e1f" name="Wasteland Behemoth" hidden="false" collective="false" import="true" targetId="dc02-5dc7-0b2b-7b69" type="selectionEntry">
               <categoryLinks>
-                <categoryLink id="14de-e990-005a-3cc7" name="Legendary Beasts (local)" hidden="false" targetId="d224-066a-e928-c28c" primary="false"/>
+                <categoryLink id="87cb-ad33-17e2-ac80" name="Legendary Beasts" hidden="false" targetId="d224-066a-e928-c28c" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="365.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="6d5d-9499-3ffa-f85e" name="Melee Weapon" hidden="false" collective="false" import="true">
           <constraints>
@@ -616,11 +647,11 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46e-7457-4fa4-d51e" type="atLeast"/>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c9b-b0e7-710a-8756" type="atLeast"/>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b47c-af41-55aa-d513" type="atLeast"/>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a579-15fc-17a0-cc17" type="atLeast"/>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0d0b-54c7-9d0e-4e2e" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f9ed-0874-a860-f8cc" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59b3-034c-bf52-9da1" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dc02-5dc7-0b2b-7b69" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8233-515d-89fb-2307" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e47-ba56-a68a-ea97" type="atLeast"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -642,11 +673,11 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0d0b-54c7-9d0e-4e2e" type="atLeast"/>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46e-7457-4fa4-d51e" type="atLeast"/>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b47c-af41-55aa-d513" type="atLeast"/>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a579-15fc-17a0-cc17" type="atLeast"/>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c9b-b0e7-710a-8756" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dc02-5dc7-0b2b-7b69" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e47-ba56-a68a-ea97" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59b3-034c-bf52-9da1" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f9ed-0874-a860-f8cc" type="atLeast"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8233-515d-89fb-2307" type="atLeast"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -706,6 +737,7 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="31cb-5ce5-757e-d363" name="Warrior Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -737,24 +769,6 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
           </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="24.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="667a-df61-068f-d8e4" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="522f-48d5-8f28-cca3" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="33ec-23eb-2e6d-2c59" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6aac-f32c-7683-65ac" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -848,6 +862,22 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="c7b4-a6de-81b8-2a47" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="522f-48d5-8f28-cca3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f52-4db5-39b7-4003" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="6445-31fc-a5ab-f7a6" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="4519-dc38-41af-1dc0" name="Åsk Banner Enchantment" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-30.0"/>
@@ -890,6 +920,7 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="f71a-5386-fb6f-d9dd" name="Åsklander Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -908,34 +939,12 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="7.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b339-fc1f-18bd-68e9" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="88b2-a098-0164-890f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce00-7842-b5f8-a6cc" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="cf7d-8abc-7d30-4b8a" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup">
-              <categoryLinks>
-                <categoryLink id="80c1-b1cd-b94a-60a4" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1d5c-a7a4-f23d-284f" name="Throwing Weapons (5+)" hidden="false" collective="false" import="true" type="upgrade">
@@ -1071,6 +1080,22 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="9da1-5a3d-ccfb-a2f3" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1956-9891-3faa-3ae6" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b7c1-68ee-b298-9c36" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="ec5f-5997-0c00-e1c1" name="Åsk Banner Enchantment" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="cf57-395c-201e-771a" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
@@ -1124,6 +1149,7 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="7cea-3ff9-4695-aadf" name="Huskarl Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1148,24 +1174,6 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
           </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="16.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="11c8-67e7-506e-4c8a" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ba61-979e-71cb-5c60" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0597-6a3f-b95f-7c8a" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="31ab-3526-29f5-6504" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="19f5-ae31-e684-83f3" name="Throwing Weapons (4+)" hidden="false" collective="false" import="true" type="upgrade">
@@ -1234,6 +1242,22 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="390b-327c-dba9-99b8" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="927d-0de7-7ccd-0053" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b765-86ee-d1ab-68c2" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="1527-586a-f03f-4147" name="Åsk Banner Enchantment" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="8974-534d-09d8-187d" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
@@ -1270,6 +1294,7 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="2191-8ab5-f814-3cc3" name="Wargs Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1348,6 +1373,7 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="8e66-1bde-fdd0-fb58" name="Horseman Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1382,24 +1408,6 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
           </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="18.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8c8f-1a1e-1c49-a062" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="7f4a-4b90-a2a9-4071" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f439-b088-8cd3-7ffb" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="08a7-aa48-2208-83a0" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1458,6 +1466,22 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="669c-400c-081e-a5b5" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8294-ca6c-0200-700d" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="be9c-5b0c-a9c2-e796" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="5fe4-d656-1e72-f66e" name="Åsk Banner Enchantment" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="4f0e-ba89-bb9c-522e" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
@@ -1492,6 +1516,7 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">20&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="dcfa-69a4-d739-4d59" name="Flayer Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1681,6 +1706,7 @@ During their owner’s first Player Turn, Warhounds gain +8” March Rate and De
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="5be5-ca55-f9ba-ae9a" name="Warhound Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1729,6 +1755,7 @@ During their owner’s first Player Turn, Warhounds gain +8” March Rate and De
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="df00-8668-7886-12ae" name="Giant Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1865,6 +1892,7 @@ During their owner’s first Player Turn, Warhounds gain +8” March Rate and De
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="71d6-5aab-a405-570d" name="Jötunn Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1895,7 +1923,7 @@ During their owner’s first Player Turn, Warhounds gain +8” March Rate and De
         </profile>
       </profiles>
       <rules>
-        <rule id="5d84-612b-a8d0-4914" name="​Freezing Mist" hidden="false">
+        <rule id="5d84-612b-a8d0-4914" name="Freezing Mist" hidden="false">
           <description>Universal Rule.
 Attacks with Flaming Attacks must reroll successful to-wound rolls against the model.
 All enemy units in base contact with the Jötunn suffers:
@@ -1951,6 +1979,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">4</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="31e0-f8fc-edf4-4525" name="Troll Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2018,7 +2047,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
           <characteristics>
             <characteristic name="Type" typeId="017b-143b-0520-bdc1">Light Armour</characteristic>
             <characteristic name="Save" typeId="4ca3-2498-f356-f056">+1</characteristic>
-            <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Light Armour (can be enchanted as Light armor). In addition, at the start of any of your Player Turns all models with Berserker’s Bear Pelt in a unit may choose to lose its Shield and gain ​Frenzy ​, Fearless ​, ​Battle Focus ​, ​Lightning Reflexes ​, and ​+1 Strength ​. Effects lasts for the remainder of the game.</characteristic>
+            <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Light Armour (can be enchanted as Light armor). In addition, at the start of any of your Player Turns all models with Berserker's Bear Pelt in a unit may choose to lose its Shield and gain Frenzy, Fearless, Battle Focus, Lightning Reflexes, and +1 Strength. Effects lasts for the remainder of the game.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2043,6 +2072,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="d3f2-d55e-e3b9-c5d9" name="Berserker Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2157,6 +2187,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="b7f6-386e-4b5c-98dd" name="Kraken Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2237,47 +2268,394 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-  </sharedSelectionEntries>
-  <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="2eb2-5755-d708-4c4c" name="Weapon Enchantments - Åsklanders" hidden="false" collective="false" import="true">
+    <selectionEntry id="1e47-ba56-a68a-ea97" name="Black Stallion" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c88-5795-55e5-6b93" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ebb0-5aa8-c334-e44f" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="3970-3e99-a536-b4f0" name="Black Stallion Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e404-6cd6-81c6-bd8d" name="Black Stallion Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+        <profile id="c2ec-9234-28ce-09cf" name="Black Stallion Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="255c-2d68-e079-e3f4" name="Black Stallion Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="5f22-0a5c-d315-0448" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="f9ed-0874-a860-f8cc" name="Shadow Chaser" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b24-bbcf-db5b-39de" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d7b5-e085-deeb-d54c" name="Shadow Chaser Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="64bb-4850-0b86-bfa4" name="Shadow Chaser Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f2cf-061b-b909-773c" name="Shadow Chaser Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="2764-9aff-9529-f115" name="Shadow Chaser Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">20&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="7b11-d703-db65-9e0f" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+        <infoLink id="6959-ea88-6c52-e4ee" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="7397-dd9e-d0e0-dff7" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule"/>
+        <infoLink id="2f95-03c9-1e2d-0459" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (6&quot;)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="8233-515d-89fb-2307" name="War Dais" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4931-5306-8b4e-5af5" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f696-f401-b96d-347e" name="War Dais Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0338-493a-d66e-c663" name="War Dais Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Cannot be Stomped</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7d7e-1980-2345-385e" name="War Dais Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">C</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">C</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+        <profile id="8b6e-b3ab-aad5-6fe9" name="War Dais Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="f6b1-402e-55c1-5ef1" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+        <infoLink id="5f4f-c6dc-a685-b0c0" name="Cannot be Stomped" hidden="false" targetId="0919-4c3c-87d8-78a8" type="rule"/>
+        <infoLink id="b455-b692-4c40-3684" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="e963-36f3-544d-99a1" name="Dark Chariot" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b1f-2659-91a8-ec48" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="195f-e94b-185b-e08d" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6+1), Inanimate</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c551-b3ee-8a67-94cb" name="Black Steed (2)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ca34-d9d0-c1b5-0ce8" name="Dark Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="3d31-2aef-ad3a-b62e" name="Dark Chariot Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ddb2-7aa6-2c65-a894" name="Dark Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6968-9503-534b-aac1" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
+        <infoLink id="75b7-7e41-d1dd-6e3c" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule"/>
+        <infoLink id="0e06-bbb7-c5e9-9552" name="Inanimate" hidden="false" targetId="ca83-2dad-d908-5f4c" type="rule"/>
+        <infoLink id="f518-cee9-cbf6-d345" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="59b3-034c-bf52-9da1" name="Chimera" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f8c2-fe71-0481-0e1e" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8454-6daf-8bbf-8c27" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="cc65-c3c1-bf9a-9128" name="Chimera Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a6da-eeed-fb57-9f49" name="Chimera Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="0f07-2cc8-7813-ace4" name="Chimera Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="feb4-18cc-088f-dc13" name="Chimera Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <modifiers>
+            <modifier type="set" field="db10-a838-f72f-3ed6" value="16&quot;">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b22-b179-8bc0-c8b5" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">20&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="abfe-592a-c6b4-49ab" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
+        <infoLink id="dd11-ecd8-f923-37fc" name="Towering Presence" hidden="false" targetId="9ca4-65be-33fc-5d47" type="rule"/>
+        <infoLink id="1bfd-d8a3-bf84-e3a2" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+      </infoLinks>
       <selectionEntries>
-        <selectionEntry id="0a30-afbb-4ce6-f5a2" name="Bjargfylli" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7526-86ec-a9b0-4ef4" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de97-71b2-7546-36cf" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6bea-afd1-e0bc-cb2c" name="Bjargfylli" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Spear enchantment.</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon gains Divine Attacks, Lightning Reflexes, Lethal Strike, and Magical Attacks.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+        <selectionEntry id="3b22-b179-8bc0-c8b5" name="Wings" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="91e1-cab2-2db7-5680" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+            <infoLink id="f979-3eeb-aa8e-fe22" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (8&quot;, 16&quot;)"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cefd-3232-dc53-2e02" name="Eyratöki" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2831-a77c-f90c-ea84" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="68de-d7d7-ef15-3d80" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0f93-0edc-6865-99ec" name="Eyratöki" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder gains Crush Attack, and can perform two Crush Attacks instead of one (provided it declared the use of its Crush Attack at the end of step 4 of the Round of Combat Sequence as usual).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="dc02-5dc7-0b2b-7b69" name="Wasteland Behemoth" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a530-8bcd-fe3e-221e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f9e2-28da-3510-2865" name="Wasteland Behemoth Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <modifiers>
+            <modifier type="set" field="597b-8735-3dd1-0e70" value="3">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="60de-a645-3c25-398f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4041-ac09-e729-0831" name="Wasteland Behemoth Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">6</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="345d-885d-d1f8-3245" name="Wasteland Behemoth Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <modifiers>
+            <modifier type="set" field="db10-a838-f72f-3ed6" value="20&quot;">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="60de-a645-3c25-398f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+        <profile id="0340-195d-201b-6e0c" name="Wasteland Behemoth Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">100×150</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry id="60de-a645-3c25-398f" name="Additional Limbs" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="43bf-78bd-58b8-bf49" name="Bjargfylli" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d1c-2617-33cd-9ad6" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d076-c5d5-05f1-626d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c384-76af-044a-45bd" name="Bjargfylli" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Spear enchantment.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon gains Divine Attacks, Lightning Reflexes, Lethal Strike, and Magical Attacks.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6672-ef43-2587-de8b" name="Eyratöki" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3a70-a7b0-62f2-b538" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5e3c-98f4-8560-55ee" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e3c5-5f8b-5099-c8d6" name="Eyratöki" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder gains Crush Attack, and can perform two Crush Attacks instead of one (provided it declared the use of its Crush Attack at the end of step 4 of the Round of Combat Sequence as usual).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b5c0-c661-55fb-a01d" name="Symbol of Slaughter" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dfd6-cad9-7000-b253" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f1b0-020f-16e7-5103" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6960-275a-8a00-90b4" name="Symbol of Slaughter" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon and Paired Weapons enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks with this weapon become Magical Attacks. When using this weapon, the wielder gains +2 Attack Value and +2 Agility. Close Combat Attacks made
+against the wielder’s model gain +1 to hit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup id="2eb2-5755-d708-4c4c" name="Åsk Weapon Enchantments (Seidhkennar)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c88-5795-55e5-6b93" type="max"/>
+      </constraints>
+      <selectionEntries>
         <selectionEntry id="b7bc-c981-b934-04ab" name="Symbol of Slaughter" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="974e-2945-3d37-7468" type="max"/>
@@ -2287,8 +2665,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
             <profile id="cd82-88cd-f0bd-76e8" name="Symbol of Slaughter" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon and Paired Weapons enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks with this weapon become Magical Attacks. When using this weapon, the wielder gains +2 Attack Value and +2 Agility. Close Combat Attacks made
-against the wielder’s model gain +1 to hit.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks with this weapon become Magical Attacks. When using this weapon, the wielder gains +2 Attack Value and +2 Agility. Close Combat Attacks made against the wielder’s model gain +1 to hit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2298,28 +2675,12 @@ against the wielder’s model gain +1 to hit.</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="cb21-fc0e-6fbe-9a3b" name="Weapon Enchantments" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65a2-1ac0-b18c-2272" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="f099-ea11-080f-4cad" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
-        <entryLink id="259c-2107-04ee-1e50" name="Weapon Enchantments - WotDG" hidden="false" collective="false" import="true" targetId="2eb2-5755-d708-4c4c" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="e473-0818-1abb-3348" name="Armour Enchantments - Åsklanders" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="86f0-a61d-6b25-4bf7" value="2">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntryGroup id="e473-0818-1abb-3348" name="Åsk Armour Enchantment" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86f0-a61d-6b25-4bf7" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="e177-2f3f-26bb-20cc" name="Gunagr&apos;s Armour" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e177-2f3f-26bb-20cc" name="Gunagr&apos;s Armour (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f905-d5c8-0e2e-2467" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="34db-1d0e-2f11-9c4f" type="max"/>
@@ -2328,7 +2689,7 @@ against the wielder’s model gain +1 to hit.</characteristic>
             <profile id="07e0-b056-050a-6c13" name="Gunagr&apos;s Armour" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour enchantment.</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Fearless and can ​never be wounded on better than 4+.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Fearless and can never be wounded on better than 4+.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2338,25 +2699,9 @@ against the wielder’s model gain +1 to hit.</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="f975-dd5b-da67-142e" name="Armour Enchantments" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="0c88-1c64-2172-a8f4" value="2">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntryGroup id="f1be-ccdc-db5b-9013" name="Åsk Banner Enchantment" hidden="false" collective="false" import="true">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c88-1c64-2172-a8f4" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="e0b1-6fcb-d315-6a03" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
-        <entryLink id="c218-2d61-1d5c-8646" name="Armour Enchantments - WotDG" hidden="false" collective="false" import="true" targetId="e473-0818-1abb-3348" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="f1be-ccdc-db5b-9013" name="Banner Enchantments - Åsklanders" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="94b4-570b-cc84-f031" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="94b4-570b-cc84-f031" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="5930-30d8-5b72-1755" name="Raven Banner" hidden="false" collective="false" import="true" type="upgrade">
@@ -2378,16 +2723,7 @@ against the wielder’s model gain +1 to hit.</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="ec38-a844-0013-74ac" name="Banner Enchantments" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c23-f7e2-e8ad-eb43" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="83c2-a0ba-e098-79c0" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-        <entryLink id="98b9-706b-9d94-f2f8" name="Banner Enchantments - WotDG" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="e03c-3642-f6e6-6d33" name="Artefacts - Åsklanders" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="e03c-3642-f6e6-6d33" name="Åsk Artefacts (Seidhkennar)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b2e-d3ca-d3a2-edd6" type="max"/>
       </constraints>
@@ -2418,7 +2754,7 @@ against the wielder’s model gain +1 to hit.</characteristic>
             <profile id="ef39-7d34-5ad7-5289" name="Harp of Bragi" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The range of the bearer’s Commanding Presence or Rally Around the Flag is always 18”.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The range of the bearer’s Commanding Presence or Rally Around the Flag is always 18".</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2428,14 +2764,39 @@ against the wielder’s model gain +1 to hit.</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="17df-ad66-db37-0a37" name="Artefacts" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="bf65-6705-874a-591a" name="Åsk Weapon Enchantments (Chief)" hidden="false" collective="false" import="true">
       <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8551-b8c7-3034-da36" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2536-e768-c426-aab2" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="c87b-afc6-0550-8cb1" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
-        <entryLink id="e978-d40f-3797-8a07" name="Artefacts - WotDG" hidden="false" collective="false" import="true" targetId="e03c-3642-f6e6-6d33" type="selectionEntryGroup"/>
+        <entryLink id="2e1f-4466-8d10-62f1" name="Bjargfylli" hidden="false" collective="false" import="true" targetId="43bf-78bd-58b8-bf49" type="selectionEntry"/>
+        <entryLink id="161c-d842-0410-92ab" name="Eyratöki" hidden="false" collective="false" import="true" targetId="6672-ef43-2587-de8b" type="selectionEntry"/>
+        <entryLink id="ba50-2ce7-8da8-89e6" name="Symbol of Slaughter" hidden="false" collective="false" import="true" targetId="b5c0-c661-55fb-a01d" type="selectionEntry"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="cf91-760f-d45d-6ac7" name="Åsk Artefacts (Chief)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4534-b119-5378-e0b8" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="fd3c-6e2c-0b51-70f7" name="Harp of Bragi" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e91-0974-30f0-9c79" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2233-ab7c-dce8-b7d1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="49ad-1306-fc01-0952" name="Harp of Bragi" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The range of the bearer’s Commanding Presence or Rally Around the Flag is always 18".</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
