@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f4f2-a5a5-873e-1b18" name="Makhar 2.2" revision="10" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f4f2-a5a5-873e-1b18" name="Makhar 2.2" revision="11" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d224-066a-e928-c28c" name="Raining Death" hidden="false"/>
   </categoryEntries>
@@ -51,7 +51,7 @@
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="a42d-4ce3-2601-a0a4" name="Enaree Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -373,11 +373,6 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="23c2-2bd6-c413-0126" type="max"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="8853-7cb3-714d-be44" name="Special Equipment" hidden="false" collective="false" import="true">
-              <categoryLinks>
-                <categoryLink id="8d03-5861-226e-f33c" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false"/>
-              </categoryLinks>
-            </selectionEntryGroup>
             <selectionEntryGroup id="26a4-7bab-012e-dba6" name="Special Equipment" hidden="false" collective="false" import="true">
               <modifiers>
                 <modifier type="increment" field="fd05-a49f-cca4-f10b" value="50.0">
@@ -438,7 +433,7 @@
                   </constraints>
                   <entryLinks>
                     <entryLink id="7717-04f2-c6d9-c9da" name="Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="6f44-7811-b1d1-1d86" type="selectionEntryGroup"/>
-                    <entryLink id="95e5-933c-eecf-83f9" name="Mak Banner Enchantment (Units)" hidden="false" collective="false" import="true" targetId="3977-dc87-5313-cfc8" type="selectionEntryGroup"/>
+                    <entryLink id="95e5-933c-eecf-83f9" name="Mak Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="a53c-c08e-6b40-0b9e" name="Shield Enchantment" hidden="false" collective="false" import="true">
@@ -663,6 +658,18 @@
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6dcc-741d-a5c6-a412" type="max"/>
       </constraints>
+      <rules>
+        <rule id="4d45-c563-7241-3d9d" name="Path of the Favored" hidden="false">
+          <description>Universal Rule.
+Units with more than half of their models with Path of the Favoured must reroll failed Break Tests. In addition, model parts with Path of the Favoured upgraded to a Champion additionally gain +1 Health Point to a maximum of 3, and their Discipline is set to 9.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="f37a-2f65-0462-5127" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="0a85-b768-3c22-0291" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+        <infoLink id="c88c-1a5e-ef0a-b840" name="Hell-Forged Armour" hidden="false" targetId="4b6e-450b-00c6-c6e9" type="profile"/>
+        <infoLink id="452a-defe-ed5b-b363" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="d860-188f-d8f2-79ba" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -696,7 +703,7 @@
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="f4ca-fa27-c684-9143" name="Black Steed" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -714,7 +721,7 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
           </profiles>
@@ -740,6 +747,9 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="828c-d424-c6fa-f905" type="max"/>
               </constraints>
+              <infoLinks>
+                <infoLink id="1476-46e3-5bde-5dd4" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -755,6 +765,9 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c217-3bbb-c5db-0f59" type="max"/>
               </constraints>
+              <infoLinks>
+                <infoLink id="bba8-43e4-002b-481b" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -774,7 +787,7 @@
           </constraints>
           <entryLinks>
             <entryLink id="aeef-c19d-d209-cc6b" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="f793-4041-faf8-b550" name="Mak Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+            <entryLink id="f793-4041-faf8-b550" name="Mak Banner Enchantment (Units)" hidden="false" collective="false" import="true" targetId="3977-dc87-5313-cfc8" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="1b32-d42b-5048-3d90" name="Command Group" hidden="false" collective="false" import="true">
@@ -818,6 +831,11 @@
           </conditions>
         </modifier>
       </modifiers>
+      <infoLinks>
+        <infoLink id="a089-03b0-99ad-a2a0" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
+        <infoLink id="7ec1-ca3e-bb17-e59d" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+        <infoLink id="f0f4-0530-7bd9-1d33" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="bc45-7a10-bdff-18e3" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
@@ -860,7 +878,7 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
           </profiles>
@@ -915,6 +933,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8285-e807-9592-e3ed" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -983,7 +1004,7 @@
           </constraints>
           <entryLinks>
             <entryLink id="7eef-3ab1-b506-96e5" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="b30d-2ff0-f8b0-1309" name="Mak Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+            <entryLink id="b30d-2ff0-f8b0-1309" name="Mak Banner Enchantment (Units)" hidden="false" collective="false" import="true" targetId="3977-dc87-5313-cfc8" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -998,6 +1019,31 @@
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c007-6522-33e3-fc55" type="max"/>
       </constraints>
+      <rules>
+        <rule id="8abd-595d-d180-fc68" name="Follow The Herd" hidden="false">
+          <description>Universal Rule.
+The unit can never benefit from Commanding Presence or Rally Around the Flag. The unit gains +1 Discipline for each Full Rank.</description>
+        </rule>
+        <rule id="09ea-9a3e-1ea1-2497" name="Stampede" hidden="false">
+          <description>Attack Attribute.
+If the model’s unit has at least one Full Rank, the model’s Impact Hits cause an additional D3 hits for each model in the same file behind it (normally 2D3/3D3/etc. instead of D3).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="79d2-c2b8-cb3b-513a" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="24d3-f4e0-ea34-a976" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
+        <infoLink id="6073-e90e-a085-0051" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
+        <infoLink id="3646-9949-7269-d313" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (Terror)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="f23e-12bd-59b2-17af" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (D3)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="c61c-9768-a2eb-7bad" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1021,7 +1067,7 @@
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="c35b-6e45-fe3a-cac4" name="Karkadan Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1039,7 +1085,7 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1056,6 +1102,17 @@
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b2d-4498-d679-55fb" type="max"/>
       </constraints>
+      <infoLinks>
+        <infoLink id="feaa-97d2-6a28-4567" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
+        <infoLink id="eaba-c833-b372-c533" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="ca76-4e2d-65a5-70cf" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
+        <infoLink id="6af5-ec81-c019-dad8" name="Parting Shot" hidden="false" targetId="381d-6b94-16aa-dcab" type="rule"/>
+        <infoLink id="d927-b90c-69fd-e442" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
+        <infoLink id="070e-3975-edd2-0f99" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+        <infoLink id="feb3-71bb-2a69-6a84" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
+        <infoLink id="37b6-9258-a978-8b54" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
+        <infoLink id="f98a-9214-66d0-bf56" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="079a-8e9e-444c-301c" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
         <categoryLink id="424d-d6d6-4432-9882" name="Raining Death" hidden="false" targetId="d224-066a-e928-c28c" primary="false"/>
@@ -1131,7 +1188,7 @@
           </constraints>
           <entryLinks>
             <entryLink id="7af2-80c6-63ac-6d24" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="84e0-0e97-9b63-841a" name="Mak Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+            <entryLink id="84e0-0e97-9b63-841a" name="Mak Banner Enchantment (Units)" hidden="false" collective="false" import="true" targetId="3977-dc87-5313-cfc8" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1153,6 +1210,21 @@
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c433-7a15-f5a7-d8fa" type="max"/>
       </constraints>
+      <rules>
+        <rule id="9f3c-176e-63c8-f492" name="Beast Taker" hidden="false">
+          <description>Universal.
+Close Combat Attacks and Shooting Attacks from Short Range made by the rider gain Lethal Strike (against Beasts and Cavalry).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="2046-34dc-79d7-e4bd" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
+        <infoLink id="272b-aac2-f914-c78f" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="bfaa-5c11-8164-b168" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
+        <infoLink id="53c0-25b6-913d-5b4e" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule"/>
+        <infoLink id="d23b-ddba-dd9b-1f05" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
+        <infoLink id="427e-04d9-ff0c-8b39" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+        <infoLink id="8a60-9e65-7e3c-e60b" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="9ba6-6e81-633a-a1dc" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1307,6 +1379,9 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               <infoLinks>
                 <infoLink id="fa9b-b30e-62d8-caaf" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="a5a9-98a9-37c9-c878" name="Recurve Bow (3+)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -1320,6 +1395,9 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
                 <infoLink id="8d6c-d26a-4c8f-71ad" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
                 <infoLink id="e709-6553-cba7-bfe8" name="Parting Shot" hidden="false" targetId="381d-6b94-16aa-dcab" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1379,7 +1457,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
               </characteristics>
             </profile>
             <profile id="59ba-4616-5257-7774" name="Steppe Wolfhound Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1428,7 +1506,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="c95f-22f8-31fe-5044" name="Turul Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1438,7 +1516,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="d04c-31fb-1ef2-9f27" name="Turul Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -1446,10 +1524,20 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot; (8&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot; (16&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="5d3c-6268-00e4-fcf7" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
+        <infoLink id="2eaf-74aa-7b55-bc1a" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (8&quot;, 16&quot;)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="806b-8827-757f-f38a" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="2dc3-1b45-1749-e8a7" name="Towering Presence" hidden="false" targetId="9ca4-65be-33fc-5d47" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="448a-5493-ede4-8495" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1458,6 +1546,15 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77fa-5d93-feb6-eeeb" type="max"/>
           </constraints>
+          <rules>
+            <rule id="c431-8d0f-4f09-41a3" name="Territorial Hunter" hidden="false">
+              <description>Universal Rule.
+The model gains Ambush. In addition, when declaring if the model will Ambush (during step 8 of the Pre-Game Sequence), you may declare that the model Ambushes from an Impassable Terrain Feature instead of the Board Edge. If so, follow the rules for Ambush but replace all instances of “Board Edge” in the rules for Ambush with “edge of any Impassable Terrain”.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="20e5-aacc-432b-cae9" name="Ambush" hidden="false" targetId="2dda-ee2f-cfce-7f16" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
@@ -1485,7 +1582,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="c258-4b01-2d4a-1cb3" name="Steppe Mammoth" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -1524,6 +1621,18 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="4832-1d09-832f-2fb1" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
+        <infoLink id="7ec3-06ba-3fc0-64fe" name="Parting Shot" hidden="false" targetId="381d-6b94-16aa-dcab" type="rule"/>
+        <infoLink id="82cc-56c9-de21-85ad" name="Makhar Lance" hidden="false" targetId="2654-300e-cfee-3ac9" type="profile"/>
+        <infoLink id="ae53-3a6d-9d3c-1058" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
+        <infoLink id="34f1-9e2e-f528-7aa8" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+        <infoLink id="faff-f004-ca7a-f8b2" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (D3)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="e1d5-2185-9106-078a" name="New CategoryLink" hidden="false" targetId="d224-066a-e928-c28c" primary="true"/>
       </categoryLinks>
@@ -1537,6 +1646,17 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6e0-0832-9308-fda6" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="4b40-6a7d-65e1-2999" name="Fist of the Makhar (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">12&quot; – 48&quot;</characteristic>
+                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
+                    <characteristic name="Str" typeId="f166-13ff-9227-4525">3 [7]</characteristic>
+                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">0 [4]</characteristic>
+                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Artillery Weapon, Catapult (4×4), [Mult</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
@@ -1545,6 +1665,9 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf2c-5d9e-e17f-c2ce" type="max"/>
               </constraints>
+              <infoLinks>
+                <infoLink id="935f-72e5-9775-3b57" name="Rally Around the Flag" hidden="false" targetId="bf56-e3dc-41ca-292b" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
               </costs>
@@ -1567,6 +1690,19 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6d4b-8156-d476-f9fb" type="max"/>
       </constraints>
+      <infoLinks>
+        <infoLink id="07ce-0af5-e6f4-79ff" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="b139-66d2-14de-8b36" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
+        <infoLink id="9b9d-dae6-741e-f78c" name="Parting Shot" hidden="false" targetId="381d-6b94-16aa-dcab" type="rule"/>
+        <infoLink id="5f69-5aea-c76e-14bb" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
+        <infoLink id="e2b5-2f21-0b23-25bc" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+        <infoLink id="8a77-65b6-a3a1-78f8" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (D6+1)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="f5eb-77a8-a5cd-9764" name="Inanimate" hidden="false" targetId="ca83-2dad-d908-5f4c" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="601a-e705-26e0-5cf3" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1599,7 +1735,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
                 <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6), Inanimate</characteristic>
               </characteristics>
             </profile>
@@ -1620,7 +1756,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="7175-58d4-a6e2-f923" name="Mahkar Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -1640,6 +1776,13 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c58-1d4d-f0fd-18ef" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="5645-a90c-ec64-826e" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (6&quot;)"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
@@ -1668,11 +1811,25 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54aa-0056-c285-f013" type="max"/>
               </constraints>
+              <infoLinks>
+                <infoLink id="e8c7-46c4-4ac3-1324" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
+                <infoLink id="b630-5326-016a-0a26" name="Makhar Lance" hidden="false" targetId="2654-300e-cfee-3ac9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="2932-a8df-0659-f2c2" name="Recurve Bow (3+) &amp; Light Lance" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9344-b9f5-5ab8-fa46" type="max"/>
               </constraints>
+              <infoLinks>
+                <infoLink id="8bb1-29a5-f193-6683" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
+                <infoLink id="a6ac-5ec9-0581-74df" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1692,6 +1849,12 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="03be-5428-e77c-fdf4" type="max"/>
       </constraints>
+      <infoLinks>
+        <infoLink id="d096-2f93-c81c-c6d3" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
+        <infoLink id="f498-b0ff-fb33-87d7" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+        <infoLink id="6eb0-12fc-317e-8dae" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+        <infoLink id="3c8c-9da0-08cf-ea96" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="9977-ccbd-8efc-1acd" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
@@ -1725,7 +1888,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="e002-6596-89cf-90f0" name="Makhar Lancer Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -1788,6 +1951,9 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           <infoLinks>
             <infoLink id="f760-cc5e-16d9-b196" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1864,7 +2030,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           </constraints>
           <entryLinks>
             <entryLink id="24c4-10f6-7b38-f0d6" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="9e12-6804-d87c-114f" name="Mak Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+            <entryLink id="9e12-6804-d87c-114f" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1927,6 +2093,16 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="28e0-3641-4fbe-8a29" name="Giant See, Giant Do" hidden="false">
+          <description>Universal Rule.
+The model gains Makhar Battle Fever.</description>
+        </rule>
+        <rule id="7aa1-5964-2c0e-fd26" name="Rage" hidden="false">
+          <description>Attack Attribute – Close Combat.
+Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers −1 Attack Value.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="cd84-001a-f45d-2885" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1935,6 +2111,12 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="728d-5e49-75fb-ddfb" type="max"/>
           </constraints>
+          <rules>
+            <rule id="8236-b80e-e62a-8c20" name="Big Brother" hidden="false">
+              <description>Universal Rule.
+The model’s Health Points are set to 8, and its base size is changed to 75×100 mm. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
@@ -1950,6 +2132,15 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c4b-9843-c6e4-a1ab" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="f328-309e-e216-6e18" name="Giant Club" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
+                  <characteristics>
+                    <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">C+1</characteristic>
+                    <characteristic name="AP" typeId="646b-1e72-1589-5083">C+1</characteristic>
+                    <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9"></characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
               </costs>
@@ -1958,6 +2149,18 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d9d-da38-29b9-4d6a" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="09e9-8253-1d40-91ef" name="Tribal Warspear" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
+                  <characteristics>
+                    <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">C+1</characteristic>
+                    <characteristic name="AP" typeId="646b-1e72-1589-5083"/>
+                    <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Multiple Wounds (D3, against Towering Presence). Charging enemy units in base contact with the wielder suffer −1 Agility. The wielder follows the rules for War Platforms with the following exception: It can only join Infantry units that include at least one R&amp;F Barbarian Infantry model.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="1af0-4ba0-c2c4-02f0" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
@@ -1966,6 +2169,17 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
               <constraints>
                 <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="194b-e6c6-7aff-5535" type="max"/>
               </constraints>
+              <profiles>
+                <profile id="56d2-a96e-34cf-6e7d" name="Giant Recurve Bow (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">48&quot;</characteristic>
+                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
+                    <characteristic name="Str" typeId="f166-13ff-9227-4525">3 [6]</characteristic>
+                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">10</characteristic>
+                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Area Attack (1×5), [Mulitple Wounds (D3)]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
               </costs>
@@ -2036,7 +2250,37 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
           </characteristics>
         </profile>
+        <profile id="a7df-1786-d421-730e" name="Black Stallion Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+          </characteristics>
+        </profile>
+        <profile id="61f0-7472-5c6d-2546" name="Black Stallion Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bbc0-105c-d59e-3dd0" name="Black Stallion Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
       </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="f730-732b-fe6b-47bb" name="Chimera" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2051,14 +2295,56 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
+        <profile id="0512-6874-1863-ae42" name="Chimera Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">20&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+        <profile id="3e33-f306-2db7-d235" name="Chimera Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="9223-b144-216f-3050" name="Chimera Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="1883-c41a-fd2c-37a9" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
+        <infoLink id="fa50-3dfc-1c67-151b" name="Towering Presence" hidden="false" targetId="9ca4-65be-33fc-5d47" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="2d73-9442-d2f9-b02c" name="Wings" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="e9bb-d42e-0307-56e1" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (8&quot;, 16&quot;)"/>
+              </modifiers>
+            </infoLink>
+            <infoLink id="e4fa-9248-0635-f8ad" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="a8e1-4953-953b-507e" name="Dark Chariot" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2072,7 +2358,47 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
           </characteristics>
         </profile>
+        <profile id="1b12-0f4c-c421-024c" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6+1), Inanimate</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="38ef-f9af-b459-892c" name="Black Steed (2)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c53a-1fb9-ab61-fe3f" name="Dark Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5529-64d9-68e7-f987" name="Dark Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
       </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3971-6450-4139-3827" name="War Dais" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2086,7 +2412,42 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
           </characteristics>
         </profile>
+        <profile id="e392-2062-0287-089a" name="War Dais Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0337-8b09-8b29-1b7f" name="War Dais Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Cannot be Stomped</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9462-b786-4760-dd3c" name="War Dais Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">C</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">C</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="a0a2-5141-b202-4d51" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
+        <infoLink id="9596-b6f5-f4da-19c5" name="Cannot be Stomped" hidden="false" targetId="0919-4c3c-87d8-78a8" type="rule"/>
+        <infoLink id="44ca-3f23-fb45-54dd" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e8b5-5e05-803c-0b3a" name="Great Elk" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2100,7 +2461,44 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
           </characteristics>
         </profile>
+        <profile id="b604-89c5-cf97-c6eb" name="Great Elk Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+        <profile id="a407-77a8-b188-bacc" name="Great Elk Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="8d06-c504-d3ad-6d7e" name="Great Elk Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="6774-0d89-1552-12ac" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (Forest)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e8ae-4ee6-35cc-e9a2" name="Shadow Chaser" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2114,7 +2512,37 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
           </characteristics>
         </profile>
+        <profile id="242e-c468-2488-b1d7" name="Shadow Chaser Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">20&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+        <profile id="a42a-0e7c-7bbd-5e2f" name="Shadow Chaser Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">C</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="aad0-810f-26dd-1718" name="Shadow Chaser Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="ef34-43df-9d62-5f0b" name="Wasteland Behemoth" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2128,6 +2556,40 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">100×150</characteristic>
           </characteristics>
         </profile>
+        <profile id="996e-dbf6-8235-148c" name="Wasteland Behemoth Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="d682-e447-fb8c-38ea" name="Wasteland Behemoth Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">6</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="86e5-dfd9-9713-157f" name="Wasteland Behemoth Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <modifiers>
+            <modifier type="set" field="db10-a838-f72f-3ed6" value="20&quot;">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93ac-eab6-27dc-6e0b" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
       </profiles>
       <selectionEntries>
         <selectionEntry id="93ac-eab6-27dc-6e0b" name="Additional Limbs" hidden="false" collective="false" import="true" type="upgrade">
@@ -2136,6 +2598,9 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -2196,7 +2661,7 @@ Attacks made with this weapon gain Devastating Charge (+2 Str, +2 AP) and become
       <selectionEntries>
         <selectionEntry id="5930-30d8-5b72-1755" name="Wasteland Torch" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d36-98ef-b132-60de" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d36-98ef-b132-60de" type="max"/>
             <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="133b-19dd-6b34-05ca" type="max"/>
           </constraints>
           <costs>
