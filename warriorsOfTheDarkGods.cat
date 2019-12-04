@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9cd6-2c84-c59e-7dd1" name="Warriors of the Dark Gods 2.1.6" revision="55" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky, rzmoz" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9cd6-2c84-c59e-7dd1" name="Warriors of the Dark Gods 2.1.6" revision="56" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky, rzmoz" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="25f6-6ecf-2669-118b" name="8 Manifestation">
       <characteristicTypes>
@@ -234,20 +234,44 @@
               <constraints>
                 <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f116-4cd8-56b6-7bc0" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="dcaf-cbd1-84ab-79b6" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="f975-dd5b-da67-142e" type="selectionEntryGroup"/>
-                <entryLink id="7e22-ac30-d84c-0f06" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="cb21-fc0e-6fbe-9a3b" type="selectionEntryGroup"/>
-                <entryLink id="0ced-2bfb-6bc9-2ba3" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup">
+              <selectionEntryGroups>
+                <selectionEntryGroup id="b2ed-79ed-c4be-4388" name="Armour Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="6939-1d40-008e-f20f" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
+                    <entryLink id="08c1-08d6-1605-363a" name="WDG Armour Enchantments" hidden="false" collective="false" import="true" targetId="e473-0818-1abb-3348" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="de6d-d04b-6033-cc4c" name="Weapon Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="3ea7-4357-ce33-0a4e" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="c4cd-6898-6271-9c5d" name="WDG Weapon Enchantments" hidden="false" collective="false" import="true" targetId="2eb2-5755-d708-4c4c" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="bcb7-41b3-0024-10f3" name="Shield Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="943f-7862-a747-2dac" name="Shield Enchantments" hidden="false" collective="false" import="true" targetId="3ca8-d93a-232c-d3b5" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="b319-0efd-150c-88ac" name="Artefacts" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="2b80-b554-e3b0-01f0" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
+                    <entryLink id="24fc-efa8-6207-15d1" name="WDG Artefacts (Chosen Lord, Chieftain)" hidden="false" collective="false" import="true" targetId="473c-1aad-25d4-deb0" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="5c6d-5ef4-de6b-c183" name="Banner Enchantment" hidden="true" collective="false" import="true">
                   <modifiers>
                     <modifier type="set" field="hidden" value="false">
                       <conditions>
-                        <condition field="selections" scope="0e4c-6a11-1423-6af4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8636-7719-69f0-0244" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8636-7719-69f0-0244" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
-                </entryLink>
-                <entryLink id="12ea-6000-f84b-6611" name="Artefacts (CL, BC)" hidden="false" collective="false" import="true" targetId="2806-c83d-52f7-c593" type="selectionEntryGroup"/>
-              </entryLinks>
+                  <entryLinks>
+                    <entryLink id="c84e-6a73-0a8c-1d24" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+                    <entryLink id="ba22-3173-5097-7010" name="WDG Banner Enchantments" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -618,31 +642,55 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4588-9d0c-7e26-4c52" type="max"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="adf6-0dc8-2825-0206" name="Special Equipment" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="56d0-aaca-d79e-e581" name="Special Equipment" hidden="false" collective="false" import="true">
               <modifiers>
-                <modifier type="set" field="bd21-adc9-104a-1629" value="200.0">
+                <modifier type="set" field="ddde-0b6b-74e0-c677" value="200.0">
                   <conditions>
-                    <condition field="selections" scope="1cbe-5e0c-13a0-d85a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="254b-d9c1-df68-e406" type="equalTo"/>
+                    <condition field="selections" scope="1cbe-5e0c-13a0-d85a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c30a-4220-8c73-d69b" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bd21-adc9-104a-1629" type="max"/>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddde-0b6b-74e0-c677" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="a174-78a6-c286-7ae7" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="f975-dd5b-da67-142e" type="selectionEntryGroup"/>
-                <entryLink id="8d35-a60b-7f9e-3ea0" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="cb21-fc0e-6fbe-9a3b" type="selectionEntryGroup"/>
-                <entryLink id="f911-82f4-a46e-ca34" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup">
+              <selectionEntryGroups>
+                <selectionEntryGroup id="81c9-54a7-8e54-66db" name="Armour Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="3f52-a514-649c-8350" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
+                    <entryLink id="6a02-b7c3-3e8f-da78" name="WDG Armour Enchantments" hidden="false" collective="false" import="true" targetId="e473-0818-1abb-3348" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="ce2b-5761-70e9-19b1" name="Weapon Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="4e3d-3cd4-2868-b9cc" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="f556-3821-66e5-e36f" name="WDG Weapon Enchantments" hidden="false" collective="false" import="true" targetId="2eb2-5755-d708-4c4c" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="5056-4918-1674-9f6f" name="Shield Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="f2cb-0b5f-1c66-caee" name="Shield Enchantments" hidden="false" collective="false" import="true" targetId="3ca8-d93a-232c-d3b5" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="e624-1252-5368-d5ff" name="Artefacts" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="2bee-fbef-8e6c-a7fa" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
+                    <entryLink id="c7d4-c9f5-a764-db03" name="WDG Artefacts (Doomlord, Sorceror)" hidden="false" collective="false" import="true" targetId="e03c-3642-f6e6-6d33" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="07a4-94ea-f3d7-2aa2" name="Banner Enchantment" hidden="true" collective="false" import="true">
                   <modifiers>
                     <modifier type="set" field="hidden" value="false">
                       <conditions>
-                        <condition field="selections" scope="1cbe-5e0c-13a0-d85a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8636-7719-69f0-0244" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8636-7719-69f0-0244" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
-                </entryLink>
-                <entryLink id="899a-5cd8-0769-12d7" name="Artefacts" hidden="false" collective="false" import="true" targetId="17df-ad66-db37-0a37" type="selectionEntryGroup"/>
-              </entryLinks>
+                  <entryLinks>
+                    <entryLink id="0f4e-c0b8-b7bb-9409" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+                    <entryLink id="68d7-45d2-ab73-7bdd" name="WDG Banner Enchantments" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -811,31 +859,37 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aa8a-fff7-8f2b-80c4" type="max"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="4961-0e52-691c-a32c" name="Special Equipment" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="1914-26bf-b79e-d952" name="Special Equipment" hidden="false" collective="false" import="true">
               <modifiers>
-                <modifier type="set" field="123e-d587-f998-a353" value="200">
+                <modifier type="set" field="b0df-d5a8-35b7-c634" value="200.0">
                   <conditions>
-                    <condition field="selections" scope="6de7-3d7b-8973-aa1c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d289-06aa-9dc4-24fb" type="equalTo"/>
+                    <condition field="selections" scope="6de7-3d7b-8973-aa1c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c30a-4220-8c73-d69b" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="123e-d587-f998-a353" type="max"/>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b0df-d5a8-35b7-c634" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="4148-a419-dc00-5054" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="f975-dd5b-da67-142e" type="selectionEntryGroup"/>
-                <entryLink id="faa6-1f52-45e7-9d0c" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="cb21-fc0e-6fbe-9a3b" type="selectionEntryGroup"/>
-                <entryLink id="b1ae-b0eb-839c-e313" name="Artefacts" hidden="false" collective="false" import="true" targetId="17df-ad66-db37-0a37" type="selectionEntryGroup"/>
-                <entryLink id="d717-8f60-e3f1-efa2" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="false">
-                      <conditions>
-                        <condition field="selections" scope="6de7-3d7b-8973-aa1c" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2179-8bca-59a3-9600" type="equalTo"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="16da-6646-6ad1-ca5f" name="Armour Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="6ac0-4368-2346-91b8" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
+                    <entryLink id="5a0f-f5f2-a453-90e1" name="WDG Armour Enchantments" hidden="false" collective="false" import="true" targetId="e473-0818-1abb-3348" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="0e65-cd9c-4b32-6528" name="Weapon Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="9192-fe31-26c5-db57" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="7d72-3691-8d4a-eb28" name="WDG Weapon Enchantments" hidden="false" collective="false" import="true" targetId="2eb2-5755-d708-4c4c" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="60be-ecd9-8ad7-6280" name="Artefacts" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="9f5b-7088-aa6a-5c1d" name="Artefacts (Wizards)" hidden="false" collective="false" import="true" targetId="ab25-3916-e8af-98cb" type="selectionEntryGroup"/>
+                    <entryLink id="a64f-4adf-8b23-9512" name="WDG Artefacts (Doomlord, Sorceror)" hidden="false" collective="false" import="true" targetId="e03c-3642-f6e6-6d33" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -865,6 +919,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="6485-38ad-08bc-1252" name="Veil Walker" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5414-d0e4-dca1-156c" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="9b97-288d-68a9-92aa" name="Veil Walker" hidden="false" targetId="b7cb-b6cc-e85c-df27" type="rule"/>
           </infoLinks>
@@ -1221,31 +1278,55 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="23c2-2bd6-c413-0126" type="max"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="8853-7cb3-714d-be44" name="Special Equipment" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="47d0-b14b-f661-fba6" name="Special Equipment" hidden="false" collective="false" import="true">
               <modifiers>
-                <modifier type="set" field="5438-04a2-ef67-acbe" value="150">
+                <modifier type="set" field="c53f-df9d-94d3-8f37" value="150.0">
                   <conditions>
-                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="faf6-284f-65c1-1113" type="equalTo"/>
+                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c30a-4220-8c73-d69b" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5438-04a2-ef67-acbe" type="max"/>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c53f-df9d-94d3-8f37" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="b8e8-74a5-e073-de8d" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="f975-dd5b-da67-142e" type="selectionEntryGroup"/>
-                <entryLink id="2eca-9493-ee1e-d4d9" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="cb21-fc0e-6fbe-9a3b" type="selectionEntryGroup"/>
-                <entryLink id="8324-7582-79a5-9b9f" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup">
+              <selectionEntryGroups>
+                <selectionEntryGroup id="326b-0d2c-82ef-7251" name="Armour Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="a39d-7d68-77ed-3e89" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
+                    <entryLink id="3a66-b41c-8232-917b" name="WDG Armour Enchantments" hidden="false" collective="false" import="true" targetId="e473-0818-1abb-3348" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="f80c-4fb2-28d8-5cdc" name="Weapon Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="f7bf-9c4f-049d-b5d1" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="4267-41f9-d00f-cc47" name="WDG Weapon Enchantments" hidden="false" collective="false" import="true" targetId="2eb2-5755-d708-4c4c" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="c483-4d0b-299d-3dc0" name="Shield Enchantment" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="6f1b-f2ec-ac2b-ec21" name="Shield Enchantments" hidden="false" collective="false" import="true" targetId="3ca8-d93a-232c-d3b5" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="cada-7bbb-ea27-b1b1" name="Artefacts" hidden="false" collective="false" import="true">
+                  <entryLinks>
+                    <entryLink id="d889-f86d-2e1d-5cd2" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
+                    <entryLink id="e099-2a57-80bb-09b6" name="WDG Artefacts (Chosen Lord, Chief)" hidden="false" collective="false" import="true" targetId="473c-1aad-25d4-deb0" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="2c60-b8f9-5127-4301" name="Banner Enchantment" hidden="true" collective="false" import="true">
                   <modifiers>
                     <modifier type="set" field="hidden" value="false">
                       <conditions>
-                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8636-7719-69f0-0244" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8636-7719-69f0-0244" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
-                </entryLink>
-                <entryLink id="0dbc-ad14-e093-434e" name="Artefacts (CL, BF)" hidden="false" collective="false" import="true" targetId="2806-c83d-52f7-c593" type="selectionEntryGroup"/>
-              </entryLinks>
+                  <entryLinks>
+                    <entryLink id="b349-7418-9815-edcc" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+                    <entryLink id="b509-8e27-6a06-5ed9" name="WDG Banner Enchantments" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -1589,24 +1670,6 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="24.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="667a-df61-068f-d8e4" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45a1-a566-400f-9aa1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="33ec-23eb-2e6d-2c59" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6aac-f32c-7683-65ac" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="55ef-3b11-32aa-a4fe" name="Melee Weapon" hidden="false" collective="false" import="true">
@@ -1769,6 +1832,22 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="2a9e-7631-d79e-3911" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45a1-a566-400f-9aa1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a118-541e-28f6-ade2" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="ac70-4d8e-129a-e7c0" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="0689-5f5d-f6ec-6e70" name="WDG Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="e935-ff7a-f2d2-2394" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-25.0"/>
@@ -1911,24 +1990,6 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="7.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b339-fc1f-18bd-68e9" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="88b2-a098-0164-890f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce00-7842-b5f8-a6cc" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="cf7d-8abc-7d30-4b8a" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="00a1-17ac-09d2-c088" name="Equipment" hidden="false" collective="false" import="true">
@@ -2040,6 +2101,22 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntryGroup>
+        <selectionEntryGroup id="f5c7-610b-e96b-78b6" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="949a-ef96-e47d-eef5" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b87c-8788-5968-e38e" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="6029-5c26-687a-a794" name="WDG Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="e935-ff7a-f2d2-2394" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="cf57-395c-201e-771a" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
@@ -2112,24 +2189,6 @@
           </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a072-9525-137e-2d7a" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d661-ed63-cc74-90da" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4118-5efe-f674-2fa7" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="07e9-e331-847d-ab14" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="141c-e789-016f-a1ac" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -2295,6 +2354,22 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="69a4-e2d3-7eec-224f" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2377-19df-d571-942a" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="fa13-4420-cfe1-fef0" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="ae67-96a9-6a77-2f32" name="WDG Banner Enchantments" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
@@ -2439,24 +2514,6 @@
           </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="11c8-67e7-506e-4c8a" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c979-9800-10d6-6ecf" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0597-6a3f-b95f-7c8a" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="31ab-3526-29f5-6504" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2613,6 +2670,22 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="d5ff-4e34-358c-ca8d" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb7e-e658-4446-dd2b" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="2029-0837-6f4a-844b" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="4132-f85a-506d-7422" name="WDG Banner Enchantments" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-35.0"/>
@@ -2685,24 +2758,6 @@
           </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="125.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8d73-ddf6-1436-dc5b" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0ae3-c2f9-a346-5926" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="334e-b4df-513c-92d9" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5d59-fa94-e26a-09e1" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2797,6 +2852,22 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="950a-4746-fa19-fb1e" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="531c-b4f1-1a98-a438" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="c2f2-3040-9311-e2f2" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="2b0e-b014-8a36-073e" name="WDG Banner Enchantments" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -2995,24 +3066,6 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0f11-e24e-5ead-f390" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="aa07-68b3-7328-2209" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5d26-1593-8c59-46a0" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6229-1461-1834-ca68" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="b004-dee9-b400-7d5b" name="Spiked Shield" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="increment" field="24fd-8af8-0c78-001c" value="15.0">
@@ -3120,6 +3173,22 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="4c07-166c-4d2c-aaee" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de44-1740-6cee-86ba" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b797-26ec-1d07-1fcb" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="5713-1eae-f8be-9900" name="WDG Banner Enchantments" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="b2b2-9a82-6a6b-6489" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
@@ -3208,10 +3277,10 @@
     </selectionEntry>
     <selectionEntry id="7f4a-4b90-a2a9-4071" name="Barbarian Horsemen" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="4bcd-01c8-ce5e-7108">
-          <conditions>
-            <condition field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
+        <modifier type="decrement" field="1b2d-4498-d679-55fb" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c9dc-5509-75af-685a" repeats="1" roundUp="false"/>
+          </repeats>
         </modifier>
       </modifiers>
       <constraints>
@@ -3230,7 +3299,7 @@
         <selectionEntry id="c7b4-507d-baf9-6dbf" name="Barbarian Horseman" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b25-3765-86d0-bd7b" type="min"/>
-            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82c0-334b-4de3-b4d9" type="max"/>
+            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82c0-334b-4de3-b4d9" type="max"/>
           </constraints>
           <profiles>
             <profile id="ddde-6b3c-0979-6a15" name="Barbarian Horseman Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -3280,24 +3349,6 @@
           </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="18.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8c8f-1a1e-1c49-a062" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="7f4a-4b90-a2a9-4071" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f439-b088-8cd3-7ffb" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="08a7-aa48-2208-83a0" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="abb2-4e57-c393-41dd" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -3366,6 +3417,22 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f03a-a41c-af73-8a7b" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="47d7-79da-46ab-8f23" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="eca1-ef54-59ff-0893" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="7004-5a48-255e-ceee" name="WDG Banner Enchantments" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -3582,10 +3649,10 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
     </selectionEntry>
     <selectionEntry id="be95-9a87-b729-bcad" name="Warhounds" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="4bcd-01c8-ce5e-7108">
-          <conditions>
-            <condition field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
+        <modifier type="decrement" field="fe6d-151e-fbc4-5dd4" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fde4-2f75-cd75-5ad8" repeats="1" roundUp="false"/>
+          </repeats>
         </modifier>
       </modifiers>
       <constraints>
@@ -3607,7 +3674,7 @@ During their owner’s first Player Turn, Warhounds gain +8” March Rate and De
         <selectionEntry id="644d-7a8d-f834-184b" name="Warhound" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f0b-5918-ab5e-7bb3" type="min"/>
-            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a70f-0ad9-36f4-bfca" type="max"/>
+            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a70f-0ad9-36f4-bfca" type="max"/>
           </constraints>
           <profiles>
             <profile id="08e7-3edf-309b-bf17" name="Warhounds Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -3715,24 +3782,6 @@ During their owner’s first Player Turn, Warhounds gain +8” March Rate and De
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cecb-9664-268a-f71a" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0fe2-0383-3317-6dc0" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1a7d-e33f-9ec1-0de8" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="ec38-a844-0013-74ac" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="84bc-7f45-ea17-65f3" name="Melee Weapon" hidden="false" collective="false" import="true">
@@ -3795,6 +3844,22 @@ During their owner’s first Player Turn, Warhounds gain +8” March Rate and De
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="291e-42a6-f6e0-5142" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e896-06da-891b-5d28" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="8838-c795-87cc-f6b3" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="e155-5d4e-4cde-8dd8" name="WDG Banner Enchantments" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -4390,6 +4455,247 @@ Only a single unit may exit the same Gateway Marker in each Player Turn.</descri
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="275.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c9dc-5509-75af-685a" name="Barbarian Horsemen (Core)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="decrement" field="c038-32a8-99db-9704" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f4a-4b90-a2a9-4071" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c038-32a8-99db-9704" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="16f9-26fe-ee1c-697f" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
+        <infoLink id="55ee-9848-f14d-f546" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+        <infoLink id="dc3d-06e0-8fc2-aa83" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+        <infoLink id="bedc-d38f-8215-07a0" name="Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="523d-3209-dbae-e661" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a13b-2cd2-1803-40cd" name="Barbarian Horseman" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52d8-3952-0862-d5cd" type="min"/>
+            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0fcd-4d51-b527-d23e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a710-f660-78d2-c18f" name="Barbarian Horseman Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+              </characteristics>
+            </profile>
+            <profile id="1834-ace8-51eb-50c0" name="Barbarian Horseman Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+              <characteristics>
+                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
+                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="6285-eb50-8ec5-7610" name="Barbarian Horseman Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+              </characteristics>
+            </profile>
+            <profile id="4e6f-ee2d-7176-e0c6" name="Black Steed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3459-4c7c-7b01-dd0b" name="Barbarian Horseman Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="18.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4848-abb6-c942-2565" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c74-c711-ad38-e266" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7935-649a-4ec8-65ff" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2dac-089e-79a0-1501" name="Melee Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6bd-18f0-e912-ddce" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0e3b-5d77-18cf-4361" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4b3-b068-2c50-8dcf" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="70f0-3807-49f1-75ee" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a94a-3837-c060-7f10" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41fc-597c-f8b4-a4cd" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="315a-68a0-4f3f-d9c9" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a34b-bd14-8f82-6f43" name="Light Lance" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e8e6-0804-be3f-1279" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1ba8-a187-be95-e4eb" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e8df-aae3-8dbc-793b" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="348d-7695-eea6-0947" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="4116-e8de-1da8-2ea3" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="7b44-3629-6f1c-95f1" name="WDG Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="e935-ff7a-f2d2-2394" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="fe2f-0864-fdc9-ecfb" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fde4-2f75-cd75-5ad8" name="Warhounds (Core)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="decrement" field="ac0b-37b2-f47d-fc31" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be95-9a87-b729-bcad" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ac0b-37b2-f47d-fc31" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="573f-34c1-eca4-e747" name="Release the Hounds" hidden="false">
+          <description>Universal Rule.
+During their owner’s first Player Turn, Warhounds gain +8” March Rate and Devastating Charge (+1 Att, +1 Off, +1 Str, +1 AP).</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="655a-cb5d-2be3-c433" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="19c0-0d44-2d97-6770" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4d46-3738-00ac-3ea3" name="Warhound" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19d7-40ad-2e54-abe5" type="min"/>
+            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1de7-16a4-aa6c-5591" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="29d9-aec7-b242-f5bf" name="Warhounds Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+              </characteristics>
+            </profile>
+            <profile id="87c3-4a19-cf90-f28a" name="Warhounds Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+              <characteristics>
+                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
+                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+              </characteristics>
+            </profile>
+            <profile id="6588-f884-c6d9-fe6f" name="Warhounds Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+              </characteristics>
+            </profile>
+            <profile id="6b71-842c-75e0-d783" name="Warhound Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="8.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -5066,7 +5372,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="93d7-5b1c-d423-f79e" name="Ledger of Souls" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="93d7-5b1c-d423-f79e" name="°Ledger of Souls" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="88d0-e350-84db-8449" value="0.0">
           <conditionGroups>
@@ -5154,6 +5460,56 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="73e0-0ce0-9015-96f5" name="Icon of the Infinite" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b763-ef2a-f2e3-6954" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2598-f6bd-d691-a8e8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8d7d-957b-2bf4-aecd" name="Icon of the Infinite" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast Hellfire (Hereditary Spell) as a Bound Spell with Power Level (4/8).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ef91-1871-882b-f507" name="Wasteland Torch" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e708-e914-c2e9-cb54" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="553a-2ef3-4b55-98dc" name="Wasteland Torch" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit gains Strider (Ruins). After determining Deployment Zones (at the end of step 6 of the Pre-Game Sequence), you may choose a single Field or Forest Terrain Feature that becomes Ruins. The bearer’s unit gains Flaming Attacks in the First Round of Combat.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="209a-84ed-1592-c27d" name="Zealots Banner" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="05ae-0b3d-9e18-5358" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f322-4fa0-0e4d-69a0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0671-2cee-9d4e-3d84" name="Zealots Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Chosen, Chosen Knights, and Chosen Lords only.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The maximum number of Supporting Attacks that models in the second rank of the bearer&apos;s unit can perform is increased by 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="1524-bfe2-5e72-c097" name="Favour of the Dark Gods" hidden="false" collective="false" import="true">
@@ -5170,7 +5526,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         <entryLink id="fffa-313b-d909-4b74" name="Favour of Cibaresh, God of Lust" hidden="false" collective="false" import="true" targetId="d299-ca1e-7b60-c9fd" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="2eb2-5755-d708-4c4c" name="Weapon Enchantments - WDG" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="2eb2-5755-d708-4c4c" name="WDG Weapon Enchantments" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c88-5795-55e5-6b93" type="max"/>
       </constraints>
@@ -5211,23 +5567,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="cb21-fc0e-6fbe-9a3b" name="Weapon Enchantments" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65a2-1ac0-b18c-2272" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="f099-ea11-080f-4cad" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
-        <entryLink id="259c-2107-04ee-1e50" name="Weapon Enchantments - WotDG" hidden="false" collective="false" import="true" targetId="2eb2-5755-d708-4c4c" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="e473-0818-1abb-3348" name="Armour Enchantments - WDG" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="86f0-a61d-6b25-4bf7" value="2">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntryGroup id="e473-0818-1abb-3348" name="WDG Armour Enchantments" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86f0-a61d-6b25-4bf7" type="max"/>
       </constraints>
@@ -5268,100 +5608,17 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="f975-dd5b-da67-142e" name="Armour Enchantments" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="0c88-1c64-2172-a8f4" value="2">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c88-1c64-2172-a8f4" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="e0b1-6fcb-d315-6a03" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
-        <entryLink id="c218-2d61-1d5c-8646" name="Armour Enchantments - WotDG" hidden="false" collective="false" import="true" targetId="e473-0818-1abb-3348" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="f1be-ccdc-db5b-9013" name="Banner Enchantments - WDG" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="f1be-ccdc-db5b-9013" name="WDG Banner Enchantments" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="94b4-570b-cc84-f031" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="2802-e66b-9e9b-7e29" name="Icon of the Infinite" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="4b97-e580-2734-7a6b" value="0.0">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4bcd-01c8-ce5e-7108" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b97-e580-2734-7a6b" type="max"/>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="558b-0e65-4723-ca51" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="308b-2f2e-5a3b-406b" name="Icon of the Infinite" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast Hellfire (Hereditary Spell) as a Bound Spell with Power Level (4/8).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="44a9-6288-1402-83fe" name="Zealots Banner" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f2c0-d219-ad53-5b4e" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2b6e-e5b9-4fa1-151d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9dbe-a28a-36e0-7d33" name="Zealots Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Chosen, Chosen Knights, and Chosen Lords only.</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The maximum number of Supporting Attacks that models in the second rank of the bearer&apos;s unit can perform is increased by 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5930-30d8-5b72-1755" name="Wasteland Torch" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d36-98ef-b132-60de" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e93a-dce6-a04b-a7ea" name="Wasteland Torch" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit gains Strider (Ruins). After determining Deployment Zones (at the end of step 6 of the Pre-Game Sequence), you may choose a single Field or Forest Terrain Feature that becomes Ruins. The bearer’s unit gains Flaming Attacks in the First Round of Combat.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="ec38-a844-0013-74ac" name="Banner Enchantments" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7c23-f7e2-e8ad-eb43" type="max"/>
-      </constraints>
       <entryLinks>
-        <entryLink id="83c2-a0ba-e098-79c0" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="067b-2697-54eb-58f9" type="max"/>
-          </constraints>
-        </entryLink>
-        <entryLink id="98b9-706b-9d94-f2f8" name="Banner Enchantments - WotDG" hidden="false" collective="false" import="true" targetId="f1be-ccdc-db5b-9013" type="selectionEntryGroup"/>
+        <entryLink id="d502-775c-0b38-40cc" name="Icon of the Infinite" hidden="false" collective="false" import="true" targetId="73e0-0ce0-9015-96f5" type="selectionEntry"/>
+        <entryLink id="5a4d-918f-a262-4c75" name="Wasteland Torch" hidden="false" collective="false" import="true" targetId="ef91-1871-882b-f507" type="selectionEntry"/>
+        <entryLink id="46c4-9b97-bb2c-63de" name="Zealots Banner" hidden="false" collective="false" import="true" targetId="209a-84ed-1592-c27d" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="e03c-3642-f6e6-6d33" name="Artefacts (WDG: DL, Sor)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="e03c-3642-f6e6-6d33" name="WDG Artefacts (Doomlord, Sorceror)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b2e-d3ca-d3a2-edd6" type="max"/>
       </constraints>
@@ -5373,16 +5630,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         <entryLink id="c5cb-1cbd-5b55-bd6b" name="Wyrd Stone" hidden="false" collective="false" import="true" targetId="52b9-d217-e5b8-672f" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="17df-ad66-db37-0a37" name="Artefacts (DL, Sor)" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8551-b8c7-3034-da36" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="c87b-afc6-0550-8cb1" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
-        <entryLink id="e978-d40f-3797-8a07" name="Artefacts - WotDG" hidden="false" collective="false" import="true" targetId="e03c-3642-f6e6-6d33" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="8c6a-0295-d8c8-7ded" name="Weapon Enchantments - Feldrak" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="8c6a-0295-d8c8-7ded" name="Weapon Enchantments (Feldrak)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="365a-83c5-289c-e33c" type="max"/>
       </constraints>
@@ -5559,7 +5807,7 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="473c-1aad-25d4-deb0" name="Artefacts (WDG: CL, BC)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="473c-1aad-25d4-deb0" name="WDG Artefacts (Chosen Lord, Chief)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2bb4-962d-fbbb-9783" type="max"/>
       </constraints>
@@ -5570,13 +5818,13 @@ The model part gains Lightning Reflexes and +1 Agility. Close Combat Attacks all
         <entryLink id="d67a-9612-b08f-7a1b" name="Wyrd Stone" hidden="false" collective="false" import="true" targetId="52b9-d217-e5b8-672f" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="2806-c83d-52f7-c593" name="Artefacts (CL, BC)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="e935-ff7a-f2d2-2394" name="WDG Banner Enchantments (Core)" hidden="false" collective="false" import="true">
       <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c1ff-c6c6-bc4f-e5e9" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ed59-9224-5dfb-327d" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="adde-f27e-5fe9-5a12" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
-        <entryLink id="89ac-1ef6-41cf-275e" name="Artefacts (WDG: CL, BF)" hidden="false" collective="false" import="true" targetId="473c-1aad-25d4-deb0" type="selectionEntryGroup"/>
+        <entryLink id="cc55-8099-5f89-aaf1" name="Wasteland Torch" hidden="false" collective="false" import="true" targetId="ef91-1871-882b-f507" type="selectionEntry"/>
+        <entryLink id="c629-d15a-bb88-b431" name="Zealots Banner" hidden="false" collective="false" import="true" targetId="209a-84ed-1592-c27d" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

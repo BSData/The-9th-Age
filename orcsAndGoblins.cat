@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fb15-9166-d400-2894" name="Orcs and Goblins 2.1.5" revision="25" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fb15-9166-d400-2894" name="Orcs and Goblins 2.1.5" revision="26" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="82d5-126d-e31a-aa94" name="Big &apos;n Nasty" hidden="false"/>
     <categoryEntry id="213d-78ab-6a2f-1664" name="Death from Above" hidden="false"/>
@@ -3861,10 +3861,10 @@ Resolve released Mad Gits one at a time. Place the released Mad Git just outside
     </selectionEntry>
     <selectionEntry id="18b1-f44c-2247-7a7e" name="Goblin Raiders" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="4bcd-01c8-ce5e-7108">
-          <conditions>
-            <condition field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
+        <modifier type="decrement" field="3f14-01c6-3450-7d4e" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2b4a-a9f4-37fc-28eb" repeats="1" roundUp="false"/>
+          </repeats>
         </modifier>
       </modifiers>
       <constraints>
@@ -3884,7 +3884,7 @@ Resolve released Mad Gits one at a time. Place the released Mad Git just outside
         <selectionEntry id="b9d7-d709-ceb3-6cbd" name="Goblin Raider" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e648-d0d5-042d-16cd" type="min"/>
-            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5679-0de4-d0b6-bcfd" type="max"/>
+            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5679-0de4-d0b6-bcfd" type="max"/>
           </constraints>
           <profiles>
             <profile id="67be-cdef-e0ad-665c" name="Goblin Raider Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -5245,6 +5245,237 @@ The roll for the number of hits from its Stomp Attacks is subject to Maximised R
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="285.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2b4a-a9f4-37fc-28eb" name="Goblin Raiders (Core)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="decrement" field="82f0-cca9-d455-8db5" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b1-f44c-2247-7a7e" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="82f0-cca9-d455-8db5" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="51c0-758c-6051-b08c" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
+        <infoLink id="3d22-f696-2285-565f" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
+        <infoLink id="71b9-8929-c890-51ad" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+        <infoLink id="3771-1223-b913-d8a5" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="5c98-9a23-2c77-60c2" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="890d-5ef1-e851-8277" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b566-e2c6-6c17-0bd0" name="Goblin Raider" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14fd-b13b-11c2-d6db" type="min"/>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e89-3ad9-dc49-7d6c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2d73-d3d9-ea82-ea9f" name="Goblin Raider Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0b7a-58ef-0629-04b2" name="Goblin Raider Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+              <characteristics>
+                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
+                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+              </characteristics>
+            </profile>
+            <profile id="5f07-9271-96e0-6a6d" name="Goblin Raider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1f8a-f542-3211-a406" name="Greenhide Race" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9dfa-3b49-b6dd-d5f1" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d314-31ef-8498-2577" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ba68-ca53-8ade-dfa6" name="Forest Goblin" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="50a4-7fc3-e696-f91f" name="Forest Goblin Raider Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+                  <characteristics>
+                    <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
+                    <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
+                    <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+                    <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+                  </characteristics>
+                </profile>
+                <profile id="9141-14e7-8d5f-a0ce" name="Scuttler Spider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+                  <characteristics>
+                    <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                    <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+                    <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+                    <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                    <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                    <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Poison Attacks</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="dbde-3207-6b30-aee5" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
+                <infoLink id="e08d-c66b-ea9a-9511" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule"/>
+                <infoLink id="fc4f-16f0-696d-d261" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7833-f428-bfc6-9607" name="Common Goblin" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="965e-b5a2-08d8-4cde" name="Common Goblin Raider Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+                  <characteristics>
+                    <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
+                    <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
+                    <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+                    <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+                  </characteristics>
+                </profile>
+                <profile id="b4a3-cde0-f982-005d" name="Wolf Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+                  <characteristics>
+                    <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                    <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+                    <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+                    <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                    <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                    <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="0505-45e6-932a-36b1" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ad28-57e5-1f9d-0560" name="Equipment" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="4715-110c-7713-2e62" name="Light Lance" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43cb-2aca-5a58-ed10" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1b22-ae92-8a7a-e15e" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="50f7-ebe5-83b7-b610" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="755e-7a8d-c4ef-6f2e" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7954-913b-25a1-1211" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1302-b6ec-5d19-b56a" name="Bow (4+)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d890-8a9d-dbc9-3691" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="0f0b-0409-ee4f-5fea" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (4+)"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8ff5-98f9-aeae-5b03" name="Throwing Weapons (5+)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba68-ca53-8ade-dfa6" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4466-402e-0db7-cde1" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="741c-742e-a329-06c6" name="Throwing Weapons" hidden="false" targetId="8c83-06ff-024f-a235" type="profile">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (5+)"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="f9d3-6902-809a-79ee" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
