@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.1.5" revision="31" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.2" revision="32" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -130,51 +130,81 @@
       <infoLinks>
         <infoLink id="421f-ae08-b81b-a874" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="b10f-350c-0581-f9c2" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="f3df-4e1e-c05f-04d5" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="8dad-9602-9dd1-7698" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="dd7d-4f2a-dab3-aa30" name="Crossbow" hidden="false" targetId="fdf6-3c15-644b-1ced" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e2c0-2230-5a1a-1f08" name="Bow" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="765e-c4e1-998e-0a57" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="2837-ec0d-956f-690a" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="fdb9-447a-b77b-fb08" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="544f-9331-9cce-694d" name="Halberd" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="4750-144d-fdb2-7f3e" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="cc20-7463-8302-21b4" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="a538-8323-787c-6cde" name="Longbow" hidden="false" targetId="245b-baaf-f5ec-e168" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="bdc6-e116-53be-d2ae" name="Pistol" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="1fd0-456b-1ad2-ff1c" name="Pistol" hidden="false" targetId="12c1-3184-6230-c142" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="b672-9729-1d95-cb6d" name="Throwing Weapons" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="6178-75fa-e100-5737" name="Throwing Weapons" hidden="false" targetId="8c83-06ff-024f-a235" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="7efd-252a-dcad-fa35" name="Light Lance" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="3797-3f0b-f854-c656" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3f7d-5a54-b1ca-550f" name="Binding Scroll" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -210,7 +240,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="28c9-d1c6-a0c8-d695" name="Crown of the Wizard King (not on Wizards)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="28c9-d1c6-a0c8-d695" name="Crown of the Wizard King" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1828-5940-a898-08ac" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7520-60ab-8f28-6061" type="max"/>
@@ -472,10 +502,10 @@
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3db5-8d52-cfe9-fbfa" name="°Essence of a Free Mind (only on Wizard)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="3db5-8d52-cfe9-fbfa" name="°Essence of a Free Mind" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="73b8-f867-8841-bdf9" value="0.0">
           <conditionGroups>
@@ -495,15 +525,15 @@
         <profile id="0816-fdf4-0942-c0f5" name="Essence of a Free Mind" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A Wizard with this Artefact may select up to two Paths on its Army List instead of one (from the ones normally available to it). Select which of the two Paths to use during Spell Selection.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A Wizard with this Artefact may select up to two Paths on its Army List instead of one (from the ones normally available to it). Select which of the two Paths to use during Spell Selection. The bearer cannot select from the Learned Spells 5 and 6 of its chosen Path.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1a15-8ac5-586b-1b94" name="°Magical Heirloom (only on Wizard)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="1a15-8ac5-586b-1b94" name="°Magical Heirloom" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="09fb-61bf-d2b2-eb15" value="0.0">
           <conditionGroups>
@@ -810,6 +840,47 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="9dfd-528a-2991-3f75" name="Wizard Apprentice" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="0f9c-5f81-6d50-7462" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="6d2e-3a7c-b8c4-2589" name="Wizard Adept" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="7b4e-3543-3ebf-e443" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="e7ab-249b-e180-109d" name="Wizard Master" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="61c4-b109-670c-b621" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="51ae-9fb7-612f-486c" name="On Foot" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="72cf-05b4-9722-db20" name="Mounted" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="bdd9-f8c9-ecf3-a968" name="Height: Standard" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b57e-255c-21bf-8b47" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="43ec-35c1-9df7-bfca" type="max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="2a59-2c65-b97f-5915" name="Height: Large" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c7ea-c0d8-8bb5-10dd" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="539d-2d69-4173-b656" type="max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="1479-d308-7303-9097" name="Height: Gigantic" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c35d-5cd8-6edb-e100" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4871-9ea9-1f2c-71af" type="max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="2b83-1551-c2b3-cafd" name="Height: Towering Presence" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9141-7319-cc33-a32f" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99ff-f356-e31f-67f0" type="max"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f853-d3c3-4165-d5ab" name="Weapon Enchantments" hidden="false" collective="false" import="true">
@@ -831,7 +902,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="311e-5a0b-83f2-9069" name="Blessed Inscriptions" hidden="false" collective="false" import="true" type="upgrade">
