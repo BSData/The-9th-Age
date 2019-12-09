@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a0dc-734f-ea5e-2f6f" name="Kingdom of Equitaine 2.1.5" revision="22" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a0dc-734f-ea5e-2f6f" name="Kingdom of Equitaine 2.2" revision="23" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8733-41f5-7948-a83c" name="Airbourne Gallantry" hidden="false"/>
   </categoryEntries>
@@ -40,6 +40,7 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="dca0-7219-8bfe-602f" name="Duke Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -89,7 +90,7 @@
                 <constraint field="24fd-8af8-0c78-001c" scope="parent" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8139-a5ac-590f-592c" type="max"/>
               </constraints>
               <selectionEntryGroups>
-                <selectionEntryGroup id="32dd-8f41-cf65-b70e" name="Weapon Enchantments" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="32dd-8f41-cf65-b70e" name="Weapon Enchantment" hidden="false" collective="false" import="true">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c8e-9643-4b91-ffda" type="max"/>
                   </constraints>
@@ -98,20 +99,13 @@
                     <entryLink id="941e-72a3-1c2b-6f88" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
-                <selectionEntryGroup id="7c43-6cae-7c68-61d4" name="Armour Enchantments" hidden="false" collective="false" import="true">
-                  <modifiers>
-                    <modifier type="set" field="5494-97af-2d08-657c" value="2">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
+                <selectionEntryGroup id="7c43-6cae-7c68-61d4" name="Armour Enchantment" hidden="false" collective="false" import="true">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5494-97af-2d08-657c" type="max"/>
                   </constraints>
                   <entryLinks>
                     <entryLink id="8a35-fc0f-8e03-5833" name="KoE Armour Enchantments" hidden="false" collective="false" import="true" targetId="9cc7-7c08-5df1-35cf" type="selectionEntryGroup"/>
-                    <entryLink id="0299-2925-7651-97eb" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
+                    <entryLink id="0299-2925-7651-97eb" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="11e9-a71c-e274-ed33" name="Artefacts" hidden="false" collective="false" import="true">
@@ -120,7 +114,16 @@
                   </constraints>
                   <entryLinks>
                     <entryLink id="e41f-f1c4-9058-e2bd" name="KoE Artefacts" hidden="false" collective="false" import="true" targetId="e28f-aa60-832d-0a57" type="selectionEntryGroup"/>
-                    <entryLink id="0f51-a744-7d98-0a73" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+                    <entryLink id="0f51-a744-7d98-0a73" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="6b1e-36fc-f427-f0ac" name="Shield Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dab3-8f51-b488-b247" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="eda5-0e98-ee34-3099" name="Shield Enchantments" hidden="false" collective="false" import="true" targetId="3ca8-d93a-232c-d3b5" type="selectionEntryGroup"/>
+                    <entryLink id="0c07-bfd1-a018-ed2f" name="KoE Shield Enchantments" hidden="false" collective="false" import="true" targetId="e7fc-99b5-e687-7cd2" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -128,17 +131,6 @@
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6a1b-ffd5-3d5c-45e1" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="635f-aabe-dc2e-5bd1" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="c2b6-3b9a-7999-5703" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -170,7 +162,7 @@
                 <entryLink id="1638-090e-cb1e-a36a" name="Grail Oath" hidden="false" collective="false" import="true" targetId="6b02-0dc0-9533-4770" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -240,7 +232,7 @@
                 <categoryLink id="3adb-43d7-27a9-8bbd" name="Airbourne Gallantry" hidden="false" targetId="8733-41f5-7948-a83c" primary="false"/>
               </categoryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="205.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
               </costs>
             </entryLink>
             <entryLink id="7593-de62-bea2-ac32" name="Barded Warhorse" hidden="false" collective="false" import="true" targetId="da96-1b71-21da-e286" type="selectionEntry">
@@ -259,9 +251,17 @@
       <entryLinks>
         <entryLink id="61a4-5a8f-d6d4-d385" name="Army General" hidden="false" collective="false" import="true" targetId="5c0a-db00-56fb-0063" type="selectionEntry"/>
         <entryLink id="1ae1-875a-c34f-5c3a" name="Virtues" hidden="false" collective="false" import="true" targetId="d39e-1d67-5d01-ebaa" type="selectionEntryGroup"/>
+        <entryLink id="cfb6-7fc7-42fd-7ff0" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7be8-8696-fd48-c52f" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="155.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a17b-d69e-22e7-a453" name="Paladin" hidden="false" collective="false" import="true" type="unit">
@@ -278,6 +278,7 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="e7b1-ea65-dcde-aa20" name="Paladin Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -337,18 +338,11 @@
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="5ea6-ff78-0f26-b1e4" name="Armour Enchantments" hidden="false" collective="false" import="true">
-                  <modifiers>
-                    <modifier type="set" field="6133-1318-807a-7e60" value="2">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6133-1318-807a-7e60" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="7fc2-2dad-06bd-dd58" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
+                    <entryLink id="7fc2-2dad-06bd-dd58" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
                     <entryLink id="6123-83e4-8f58-35b1" name="KoE Armour Enchantments" hidden="false" collective="false" import="true" targetId="9cc7-7c08-5df1-35cf" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -358,7 +352,7 @@
                   </constraints>
                   <entryLinks>
                     <entryLink id="eab8-478e-2037-6692" name="KoE Artefacts" hidden="false" collective="false" import="true" targetId="e28f-aa60-832d-0a57" type="selectionEntryGroup"/>
-                    <entryLink id="8eea-70da-15a0-f891" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+                    <entryLink id="8eea-70da-15a0-f891" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="c393-5d4e-5ccc-070c" name="Banner Enchantment" hidden="false" collective="false" import="true">
@@ -373,8 +367,17 @@
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4640-476b-a964-5644" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="95bf-f56f-beb3-5eb5" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
+                    <entryLink id="95bf-f56f-beb3-5eb5" name="Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="6f44-7811-b1d1-1d86" type="selectionEntryGroup"/>
                     <entryLink id="0747-6e4d-6b5a-dce7" name="KoE Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="268f-e281-2268-d55a" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="9a1a-7c93-9644-e4bf" name="Shield Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3706-884a-a1a5-7b23" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="63a1-d40c-85c8-e53b" name="Shield Enchantments" hidden="false" collective="false" import="true" targetId="3ca8-d93a-232c-d3b5" type="selectionEntryGroup"/>
+                    <entryLink id="fb59-25c2-8774-2c49" name="KoE Shield Enchantments" hidden="false" collective="false" import="true" targetId="e7fc-99b5-e687-7cd2" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -382,17 +385,6 @@
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="902f-e87b-0726-16ef" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7906-409f-d6be-c490" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="1986-09f6-3ae7-41f9" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -516,9 +508,17 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="a8e0-41c5-3363-1267" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1159-0b94-528c-a669" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="aab7-e10a-759b-6236" name="Damsel" hidden="false" collective="false" import="true" type="unit">
@@ -535,6 +535,7 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="eccc-d66d-d938-88bd" name="Damsel Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -615,7 +616,7 @@
                   </constraints>
                   <entryLinks>
                     <entryLink id="6c81-3415-3b6c-d689" name="KoE Artefacts (Damsel)" hidden="false" collective="false" import="true" targetId="0e79-72ac-e1b9-e628" type="selectionEntryGroup"/>
-                    <entryLink id="d1a5-fc7c-4016-cc57" name="Artefacts" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+                    <entryLink id="d1a5-fc7c-4016-cc57" name="Artefacts (Wizards)" hidden="false" collective="false" import="true" targetId="ab25-3916-e8af-98cb" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -803,6 +804,7 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="e1cc-6570-279f-e290" name="Castellan Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -852,17 +854,6 @@
         <categoryLink id="c6e6-f1b3-4c2b-3634" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="e1ef-3a8b-9648-6566" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dee6-23a4-be51-96fa" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="0bdb-ff6d-1c20-ef64" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="3426-4d83-6a91-e675" name="Weapon Enchantment" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9728-7a83-ad11-942b" type="max"/>
@@ -895,7 +886,7 @@
               </constraints>
               <entryLinks>
                 <entryLink id="e8c2-9a44-002b-6001" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
-                <entryLink id="2ecd-1aca-4488-b675" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
+                <entryLink id="2ecd-1aca-4488-b675" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -1091,6 +1082,7 @@
                     <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
                     <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
                     <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+                    <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
                   </characteristics>
                 </profile>
                 <profile id="b607-f822-2b6a-c955" name="Horse Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1134,6 +1126,14 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="47a9-dae0-9cb7-4683" name="Army General" hidden="false" collective="false" import="true" targetId="5c0a-db00-56fb-0063" type="selectionEntry"/>
+        <entryLink id="9bbd-23c4-641b-2546" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4a39-02a6-6752-73ec" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
@@ -1172,6 +1172,7 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="3c44-8f36-c3f1-fcdd" name="Knight Aspirant Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1212,10 +1213,12 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="33.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fbb8-a402-1b96-8eee" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0913-f6d9-70f0-5df8" name="Banner Enchantment" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1224,29 +1227,19 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d0a-10bb-0b4d-ebbe" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="54d2-71b3-91ee-88ad" type="max"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="68e6-4a57-77bb-8916" name="Banner Enchantment" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d91-e3a6-04eb-8a93" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="0608-c0cd-b34d-5c44" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="2ffa-34fd-67c8-92dd" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="0a34-b9d7-dd66-4516" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <entryLinks>
+            <entryLink id="d314-c7e1-995e-adae" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="c68a-1ea2-2d20-c1fe" name="KoE Banner Enchantments (Core Units)" hidden="false" collective="false" import="true" targetId="0a34-b9d7-dd66-4516" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="cdf9-1bec-abe2-8c81" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="84a4-2b85-eeaf-3f6e" name="Knights of the Realm" hidden="false" collective="false" import="true" type="unit">
@@ -1277,6 +1270,7 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="59e5-0d29-3f97-9ca2" name="Knight of the Realm Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1317,10 +1311,12 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="48.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="47.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c0d0-210f-3f64-0c3c" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b61b-7198-91bc-7883" name="Banner Enchantment" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1329,29 +1325,19 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f990-da65-ab2c-ac54" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c8c2-bd61-fe46-2333" type="max"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="cad1-ba7e-8625-74b9" name="Banner Enchantment" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04b1-aeef-4b95-bd9b" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="ba44-9849-e81c-a2f6" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="78eb-c6d1-a744-1393" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="0a34-b9d7-dd66-4516" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <entryLinks>
+            <entryLink id="a165-2ed8-a2ad-c918" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="9770-fcd8-7456-862f" name="KoE Banner Enchantments (Core Units)" hidden="false" collective="false" import="true" targetId="0a34-b9d7-dd66-4516" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="583f-2d81-8e07-29fe" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-28.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-27.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d675-3326-25fc-ca6b" name="Peasant Levy" hidden="false" collective="false" import="true" type="unit">
@@ -1377,6 +1363,7 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="2946-068d-df27-c55b" name="Peasant Levy Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1419,7 +1406,7 @@
           <selectionEntries>
             <selectionEntry id="3904-ce9e-3295-4005" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1437,7 +1424,7 @@
             </selectionEntry>
             <selectionEntry id="0f05-8e92-82e7-331b" name="Halberd" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1493,6 +1480,7 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="3b3d-24e5-c4f7-5525" name="Peasant Bowman Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1523,7 +1511,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="9.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="8.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1574,7 +1562,7 @@
         <entryLink id="ab6a-633a-3b44-a1ba" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2362-6ca3-41eb-95f9" name="Knights of the Quest" hidden="false" collective="false" import="true" type="unit">
@@ -1611,6 +1599,7 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="9813-5369-72cd-9998" name="Knight of the Quest Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1654,7 +1643,9 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a7a3-246c-b5d3-926c" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6712-e690-6d31-8ac5" name="Banner Enchantment" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1663,29 +1654,19 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6a2-1655-956f-38c5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="584c-531d-6807-0cbf" type="max"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="c83c-0fb1-85f9-7e37" name="Banner Enchantment" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efba-fff4-75b0-1eb8" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="cf79-67c1-f0e1-b5e7" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="8c00-92ee-da91-a190" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <entryLinks>
+            <entryLink id="33b2-a495-d8b4-5465" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="87c6-6124-abc3-821d" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="9a07-f1f0-e2c0-5231" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="884d-ea09-0f82-1d02" name="Knights Forlorn" hidden="false" collective="false" import="true" type="unit">
@@ -1725,6 +1706,7 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="9c7e-6f83-e894-fdfc" name="Knight Forlorn Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1755,10 +1737,12 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="24.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c971-2400-a846-e8b9" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="f814-8ca2-f57a-6145" name="Banner Enchantment" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1767,29 +1751,19 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ca7-e78d-7932-9627" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d80d-9c3a-504b-601b" type="max"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="b0bf-ee9a-d5e2-acbf" name="Banner Enchantment" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d072-7276-f1d9-37ad" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="b69b-cb1c-593f-2d04" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="6207-ea07-1695-1ed6" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <entryLinks>
+            <entryLink id="cd4e-48d4-dce5-c3f9" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="cfc8-a3de-762e-3e01" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="3532-3096-7a9c-49c6" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-75.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1db3-be14-2942-7eb1" name="Knights of the Grail" hidden="false" collective="false" import="true" type="unit">
@@ -1848,6 +1822,7 @@
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="188e-fea2-2587-44c8" name="Knight of the Grail Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1888,10 +1863,12 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="86.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e157-8886-02fc-9a52" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a040-f177-805c-d519" name="Banner Enchantment" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1900,29 +1877,19 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8578-4d4f-3942-7981" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf61-2acd-9f8e-8918" type="max"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="a9e8-4371-442c-3d1e" name="Banner Enchantment" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="767e-8f4a-4b5d-cc95" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="53ba-459e-d7ee-e1d7" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="6cb6-5450-f985-5e0a" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <entryLinks>
+            <entryLink id="1f04-aff6-e6f0-5e22" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="64eb-a252-b8c5-8964" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="7139-2c0f-7f15-979d" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-48.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b4ba-d469-036f-a794" name="The Green Knight" hidden="false" collective="false" import="true" type="unit">
@@ -1935,6 +1902,7 @@
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="b8ae-9b74-207d-26c7" name="The Green Knight Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2035,6 +2003,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="52a7-e401-3db3-dcf8" name="Yeoman Outrider Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2151,7 +2120,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         <entryLink id="3c84-ff3d-0429-7c04" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e649-c8c7-5520-dece" name="Brigands" hidden="false" collective="false" import="true" type="unit">
@@ -2181,6 +2150,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="6722-e6eb-dad7-ad3a" name="Brigand Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2211,7 +2181,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="11.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="12.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2254,6 +2224,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="cc99-8577-65bb-339d" name="Peasant Crusader Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2287,32 +2258,6 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="9.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="86a8-b78b-99e9-9e2f" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bb7-9559-e056-83bd" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="ea5d-2843-3a34-82cc" name="Banner Enchantment" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="18f0-49b1-95cc-2f3a" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="622a-91fb-90ba-2eba" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="82db-570e-7841-a0fc" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="18cd-7f6a-0db9-b2d3" name="Equipment" hidden="false" collective="false" import="true" defaultSelectionEntryId="6f01-ff7f-2a19-de48">
@@ -2342,6 +2287,22 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="f80a-eb38-90e9-0703" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="000b-e728-79f1-df1b" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="f7d6-9fd4-97ec-1b1d" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="2883-0786-5677-d7bf" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="15d1-a01a-5618-ea62" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
@@ -2360,6 +2321,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="5339-8b33-95f7-fc99" name="Sacred Reliquary Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2452,6 +2414,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot; (8&quot;)</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot; (16&quot;)</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="408a-a34b-24b9-5ef1" name="Pegasus Knight Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2492,7 +2455,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="77c2-1fc0-099d-b22b" name="Vanguard" hidden="false" collective="false" import="true" type="upgrade">
@@ -2513,35 +2476,9 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="65dd-cc85-2d18-6705" name="Banner Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e73-ddf8-d8b0-2e2a" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="f92b-1f6d-d0b7-f662" name="Banner Enchantment" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11b3-8511-8f49-62ee" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="9c14-25d6-864c-2eb3" name="Banner Enchantments" hidden="false" collective="false" import="true" targetId="37cb-10cd-3c37-56dd" type="selectionEntryGroup"/>
-                <entryLink id="e295-477d-544c-54b8" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="11df-fdcd-3465-3f13" name="Loose Formation" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="6.0">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
@@ -2563,11 +2500,29 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="77a0-a2c6-a960-d0a8" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5320-da21-eaf3-3409" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="dc48-f1a2-2832-dbcc" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="5244-863c-bd45-39f4" name="KoE Banner Enchantments" hidden="false" collective="false" import="true" targetId="2fdc-d6a3-82fa-2c83" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="aa5c-cb66-b4a1-ed65" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4988-6f57-2bac-cd91" name="Scorpion" hidden="false" collective="false" import="true" type="unit">
@@ -2598,7 +2553,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="c312-6af7-5c2c-fa74" name="Scorpion Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -2606,6 +2561,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">0&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">0&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="f04d-ad2a-e5da-3374" name="Scorpion Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2665,7 +2621,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="9c34-269c-6f4f-7187" name="Trebuchet Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -2673,6 +2629,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">0&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">0&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="b44f-688d-b7cc-552f" name="Trebuchet Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2701,7 +2658,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         <categoryLink id="de24-7c80-bc84-34cc" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="265.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="260.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -2760,6 +2717,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="f341-fead-db99-fd76" name="Barded Warhorse Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2812,6 +2770,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot; (8&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot; (16&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="df61-2c88-0a14-8a09" name="Hippogriff Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2869,6 +2828,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot; (8&quot;)</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot; (16&quot;)</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="1b25-1cb3-898e-2822" name="Pegasus Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2922,6 +2882,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">20&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="3a3f-4aab-b408-e9c0" name="Equitan Unicorn Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2988,7 +2949,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dc9c-8173-a1eb-df49" name="Tristan&apos;s Resolve" hidden="false" collective="false" import="true" type="upgrade">
@@ -3059,7 +3020,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c84d-a6dc-36e9-1e7a" name="°Faith of Percival (not with Towering Presence)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c84d-a6dc-36e9-1e7a" name="°Faith of Percival (not on Towering Presence)" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="4b85-0e43-378f-000e" value="0.0">
           <conditionGroups>
@@ -3317,7 +3278,7 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
             </rule>
           </rules>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f8d1-2ebe-1f44-5f78" name="Valour" hidden="false" collective="false" import="true" type="upgrade">
@@ -3417,21 +3378,12 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="9cc7-7c08-5df1-35cf" name="KoE Armour Enchantments" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="b98c-a11a-7cc1-4893" value="2.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b98c-a11a-7cc1-4893" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="3ccc-590d-73d6-7d51" name="Fortress of Faith" hidden="false" collective="false" import="true" targetId="46fc-6612-cd92-52da" type="selectionEntry"/>
         <entryLink id="f0f2-a02d-5255-90c6" name="Uther&apos;s Conviction" hidden="false" collective="false" import="true" targetId="facc-df60-5cd6-e145" type="selectionEntry"/>
         <entryLink id="3c13-7803-b80b-f964" name="°Crusader&apos;s Salvation" hidden="false" collective="false" import="true" targetId="7fe0-ccd8-f4cc-c61f" type="selectionEntry"/>
-        <entryLink id="47e3-7000-e260-d4e4" name="°Faith of Percival (not with Towering Presence)" hidden="false" collective="false" import="true" targetId="c84d-a6dc-36e9-1e7a" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="e28f-aa60-832d-0a57" name="KoE Artefacts (Duke, Paladin)" hidden="false" collective="false" import="true">
@@ -3493,6 +3445,15 @@ While The Green Knight is within 12” of a friendly Damsel, it gains Stubborn a
         <entryLink id="c999-6314-0526-e1aa" name="Banner of the Green Knight" hidden="false" collective="false" import="true" targetId="6952-fa8e-173e-82c4" type="selectionEntry"/>
         <entryLink id="ce4a-35f4-dfe9-dc8c" name="Banner of the Last Charge" hidden="false" collective="false" import="true" targetId="b95d-cbea-3309-ac81" type="selectionEntry"/>
         <entryLink id="c6eb-659e-3a51-47cf" name="Oriflamme - Cannot be taken by Core Units" hidden="false" collective="false" import="true" targetId="5d04-5be5-2187-b3cc" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="e7fc-99b5-e687-7cd2" name="KoE Shield Enchantments" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5f0d-ab8a-f57f-8ad7" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="aa65-83ce-fe2a-5c4b" name="°Faith of Percival (not with Towering Presence)" hidden="false" collective="false" import="true" targetId="c84d-a6dc-36e9-1e7a" type="selectionEntry"/>
+        <entryLink id="1e25-1589-1ae9-ed7d" name="Fortress of Faith" hidden="false" collective="false" import="true" targetId="46fc-6612-cd92-52da" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
