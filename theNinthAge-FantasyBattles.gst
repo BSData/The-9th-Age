@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.2" revision="32" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.2" revision="33" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -77,15 +77,6 @@
     <forceEntry id="16e8-e66f-0b41-756b" name="~ Dummy ~" hidden="true"/>
   </forceEntries>
   <sharedSelectionEntries>
-    <selectionEntry id="312f-8f87-7840-0442" name="Shield Enchantment" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="91df-2c4d-5874-4126" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1c43-11cb-de62-e40b" type="min"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="dd27-6738-aebc-192e" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="2e20-006e-1fd8-cbbd" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
@@ -813,9 +804,6 @@
           </characteristics>
         </profile>
       </profiles>
-      <entryLinks>
-        <entryLink id="d645-209a-d8a9-d9f3" name="Shield Enchantement" hidden="false" collective="false" import="true" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
@@ -833,9 +821,6 @@
           </characteristics>
         </profile>
       </profiles>
-      <entryLinks>
-        <entryLink id="af3a-4b38-83b8-35f1" name="Shield Enchantement" hidden="false" collective="false" import="true" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
@@ -844,42 +829,79 @@
       <infoLinks>
         <infoLink id="0f9c-5f81-6d50-7462" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="6d2e-3a7c-b8c4-2589" name="Wizard Adept" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="7b4e-3543-3ebf-e443" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e7ab-249b-e180-109d" name="Wizard Master" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="61c4-b109-670c-b621" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
-    <selectionEntry id="51ae-9fb7-612f-486c" name="On Foot" hidden="false" collective="false" import="true" type="upgrade"/>
-    <selectionEntry id="72cf-05b4-9722-db20" name="Mounted" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="51ae-9fb7-612f-486c" name="On Foot" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92c6-25da-c52d-2a7c" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aef7-74e7-a303-c986" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="72cf-05b4-9722-db20" name="Mounted" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dea0-f560-9258-5eef" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d927-b7af-5c5b-b2ab" type="min"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
     <selectionEntry id="bdd9-f8c9-ecf3-a968" name="Height: Standard" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b57e-255c-21bf-8b47" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="43ec-35c1-9df7-bfca" type="max"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="2a59-2c65-b97f-5915" name="Height: Large" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c7ea-c0d8-8bb5-10dd" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="539d-2d69-4173-b656" type="max"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="1479-d308-7303-9097" name="Height: Gigantic" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c35d-5cd8-6edb-e100" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4871-9ea9-1f2c-71af" type="max"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="2b83-1551-c2b3-cafd" name="Height: Towering Presence" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9141-7319-cc33-a32f" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99ff-f356-e31f-67f0" type="max"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -1025,69 +1047,6 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="4c4e-146b-a165-a891" name="Armour Enchantments (old)" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="757a-d5c1-6cf9-bd2f" value="2">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="312f-8f87-7840-0442" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="757a-d5c1-6cf9-bd2f" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="24b8-1985-bb44-4a8f" name="Alchemist&apos;s Alloy" hidden="false" collective="false" import="true" targetId="98fe-a333-8a21-dcb0" type="selectionEntry"/>
-        <entryLink id="6335-add0-41cb-4e60" name="Basalt Infusion" hidden="false" collective="false" import="true" targetId="5348-8c71-c793-57f3" type="selectionEntry"/>
-        <entryLink id="4315-4a67-9211-a92d" name="Death Cheater" hidden="false" collective="false" import="true" targetId="cba2-e616-5486-217b" type="selectionEntry"/>
-        <entryLink id="ba50-8d85-adaa-e8f6" name="Destiny&apos;s Call (only on Standard)" hidden="false" collective="false" import="true" targetId="b8a1-4182-3aba-ffd8" type="selectionEntry"/>
-        <entryLink id="d532-be6a-76fe-d573" name="Essence of Mithril (only on Standard)" hidden="false" collective="false" import="true" targetId="47b1-c334-2935-e4f4" type="selectionEntry"/>
-        <entryLink id="3615-f40d-12bd-2888" name="Ghostly Guard" hidden="false" collective="false" import="true" targetId="08dd-2bd2-1e5a-1f39" type="selectionEntry"/>
-        <entryLink id="3f09-a408-a10f-c93f" name="Dusk Forged" hidden="false" collective="false" import="true" targetId="97f7-20ef-fc6c-63a7" type="selectionEntry"/>
-        <entryLink id="5282-3734-eff4-aa12" name="Willow&apos;s Ward (only on Foot)" hidden="false" collective="false" import="true" targetId="41fe-d2cc-82ef-381a" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="a755-929f-7067-ae6e" name="Artefacts (old)" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e675-85da-422d-e83d" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="8c4d-8ad5-7020-f54d" name="Binding Scroll" hidden="false" collective="false" import="true" targetId="3f7d-5a54-b1ca-550f" type="selectionEntry"/>
-        <entryLink id="ee0b-42b4-721b-fe5d" name="Crystal Ball" hidden="false" collective="false" import="true" targetId="ef67-0a29-6d5c-687c" type="selectionEntry"/>
-        <entryLink id="c290-6c05-9ec3-22ed" name="Crown of Autocracy" hidden="false" collective="false" import="true" targetId="f996-0dd2-7d1f-17fe" type="selectionEntry"/>
-        <entryLink id="8ade-5aba-998c-859e" name="Crown of the Wizard King (not on Wizards)" hidden="false" collective="false" import="true" targetId="28c9-d1c6-a0c8-d695" type="selectionEntry"/>
-        <entryLink id="db67-ed3b-305e-b0d4" name="Dragon Staff" hidden="false" collective="false" import="true" targetId="b996-d7ae-e854-2601" type="selectionEntry"/>
-        <entryLink id="9edd-3cfd-ab2d-e97b" name="Dragonfire Gem" hidden="false" collective="false" import="true" targetId="57fe-c8e7-f786-132c" type="selectionEntry"/>
-        <entryLink id="2dec-aa37-1015-9e2f" name="Lucky Charm" hidden="false" collective="false" import="true" targetId="ebd9-2cee-402a-4ff4" type="selectionEntry"/>
-        <entryLink id="5a84-c8f4-34e2-fc8b" name="Lightning Vambraces" hidden="false" collective="false" import="true" targetId="3d77-9d65-58c3-9e7d" type="selectionEntry"/>
-        <entryLink id="6c66-587d-a5c8-287b" name="Obsidian Rock" hidden="false" collective="false" import="true" targetId="717c-cdd1-f368-649a" type="selectionEntry"/>
-        <entryLink id="718f-cba8-9bc5-13ad" name="Potion of Strength (not on Towering Presence)" hidden="false" collective="false" import="true" targetId="589f-da5c-20ba-5f1a" type="selectionEntry"/>
-        <entryLink id="08aa-4442-9469-8cc8" name="Potion of Swiftness" hidden="false" collective="false" import="true" targetId="fc3e-7023-b3ce-8579" type="selectionEntry"/>
-        <entryLink id="915d-4453-62a7-333d" name="Ranger&apos;s Boots (only on Standard and Foot)" hidden="false" collective="false" import="true" targetId="538d-5665-58a8-281d" type="selectionEntry"/>
-        <entryLink id="bf07-0666-e1a8-6025" name="Rod of Battle" hidden="false" collective="false" import="true" targetId="2078-81dc-eac0-b856" type="selectionEntry"/>
-        <entryLink id="9df5-8f31-8061-fe7d" name="Scepter of Power" hidden="false" collective="false" import="true" targetId="52aa-545b-5fc8-64fe" type="selectionEntry"/>
-        <entryLink id="e5e0-8c94-44c8-3db2" name="Talisman of Shielding" hidden="false" collective="false" import="true" targetId="8cca-6eee-ecd5-1620" type="selectionEntry"/>
-        <entryLink id="ba54-91b1-6b12-009b" name="Talisman of the Void" hidden="false" collective="false" import="true" targetId="bc10-9582-1642-6f0e" type="selectionEntry"/>
-        <entryLink id="4a50-e3c6-0ef3-0854" name="°Book of Arcane Mastery (not on Wizard Master)" hidden="false" collective="false" import="true" targetId="02ee-20af-e439-e56f" type="selectionEntry"/>
-        <entryLink id="7593-6717-0a84-5178" name="°Essence of a Free Mind (only on Wizard)" hidden="false" collective="false" import="true" targetId="3db5-8d52-cfe9-fbfa" type="selectionEntry"/>
-        <entryLink id="b06f-7ffa-648c-9a36" name="°Magical Heirloom (only on Wizard)" hidden="false" collective="false" import="true" targetId="1a15-8ac5-586b-1b94" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="37cb-10cd-3c37-56dd" name="Banner Enchantments (old)" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0fb8-361b-f433-cc9e" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="4c28-2aeb-3bff-5cd1" name="Aether Icon" hidden="false" collective="false" import="true" targetId="8a96-40ff-7fb6-54a0" type="selectionEntry"/>
-        <entryLink id="e529-2c96-5897-fb92" name="Banner of Discipline" hidden="false" collective="false" import="true" targetId="bd1e-b521-5357-bc0e" type="selectionEntry"/>
-        <entryLink id="d64e-6c33-1357-afe5" name="Banner of Speed" hidden="false" collective="false" import="true" targetId="c253-ce04-6c42-8bf6" type="selectionEntry"/>
-        <entryLink id="89ef-285e-98aa-aeeb" name="Banner of the Relentless Company" hidden="false" collective="false" import="true" targetId="6454-0e64-e88b-0afa" type="selectionEntry"/>
-        <entryLink id="42cb-fade-e35f-1910" name="Rending Banner" hidden="false" collective="false" import="true" targetId="d276-08bb-7326-4146" type="selectionEntry"/>
-        <entryLink id="bd5a-dd97-17a4-df25" name="Flaming Standard" hidden="false" collective="false" import="true" targetId="58a9-c83f-8819-4bfa" type="selectionEntry"/>
-        <entryLink id="28e7-4305-d5fe-bf9c" name="Stalker&apos;s Standard" hidden="false" collective="false" import="true" targetId="1339-adda-070d-906c" type="selectionEntry"/>
-        <entryLink id="fdd3-f455-3f45-fca8" name="Legion Standard" hidden="false" collective="false" import="true" targetId="e2f6-29ee-8b26-9f6e" type="selectionEntry"/>
-      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b4c3-e840-1bd5-b746" name="Command Group" hidden="false" collective="false" import="true">
       <selectionEntries>
