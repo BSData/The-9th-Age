@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3557-241b-5999-a3b1" name="Saurian Ancients 2.2" revision="28" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, rzmoz, hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3557-241b-5999-a3b1" name="Saurian Ancients 2.2" revision="29" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, rzmoz, hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="0a69-f7af-e4da-3ad0" name="Jungle Guerrilla" hidden="false"/>
     <categoryEntry id="634f-0995-844c-451a" name="Thunder Lizards" hidden="false"/>
@@ -72,15 +72,6 @@
       <infoLinks>
         <infoLink id="c5f0-6795-3cae-3d5a" name="Born Predator" hidden="false" targetId="dc2d-109e-9221-8880" type="rule"/>
         <infoLink id="41ac-df0b-34e1-ebd3" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
-        <infoLink id="b8f8-089e-ae17-34a8" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="46e2-fcb1-5337-a50e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae6-b719-01ab-6e12" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="daa8-d2c6-d600-3a02" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -198,39 +189,6 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="fe1b-5fd7-ea68-1faa" name="Armour" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="aae6-b719-01ab-6e12" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="376d-7dfb-a4d0-abd1" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8882-67eb-bb59-1253" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="bfd6-043c-4bbc-d95e" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6842-78a8-549a-033e" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2021-7a8e-26e9-5980" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="71a5-c607-a89d-3225" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="bc85-1c50-0a1b-44bb" name="Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9bbc-402b-65ba-ff47" type="max"/>
@@ -307,7 +265,35 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="01e1-f8d6-1610-2962" name="Armour" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9de9-8a15-915d-ff50" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b323-6a14-4fcd-4d61" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="28fe-553a-8e9f-c6e0" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="c015-e52d-3852-27ea" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="376d-7dfb-a4d0-abd1" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="e9c3-6855-88ea-1862" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="cf3c-2260-5216-334c" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="260.0"/>
       </costs>
@@ -352,15 +338,6 @@
       <infoLinks>
         <infoLink id="b059-73a0-1738-020d" name="Born Predator" hidden="false" targetId="dc2d-109e-9221-8880" type="rule"/>
         <infoLink id="4eaa-8934-5800-4eb2" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
-        <infoLink id="c241-3452-c4b5-a777" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="c995-c5a3-27fd-4fef" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9bd4-63d6-c489-977f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="653a-f69a-fc9a-1e6f" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -581,9 +558,13 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="ebe4-98c1-63c3-0542" name="Armour" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="9bd4-63d6-c489-977f" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntryGroup id="ebe4-98c1-63c3-0542" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="41a4-3070-687a-81c0">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ccc-8a91-ed04-cc1f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="069a-e064-4243-d49d" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="ce57-eae4-74f5-0316" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="c015-e52d-3852-27ea" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -591,30 +572,21 @@
                   </conditions>
                 </modifier>
               </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8365-be8b-b23f-aeb4" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="0298-f6b3-4f61-d495" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="9c2b-fb45-8e26-fc30" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2cb2-5208-b70d-6107" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="dd87-54ac-ee50-23b5" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink id="41a4-3070-687a-81c0" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="8d3c-1d02-43be-f88b" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="170.0"/>
       </costs>
@@ -994,6 +966,13 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="b50a-3bba-0af7-8ace" name="Unarmoured" hidden="false" collective="false" import="true" targetId="3d08-4e50-5ccc-bda0" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d58-325e-ada5-40fe" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="445.0"/>
       </costs>
@@ -1167,17 +1146,6 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2655-3941-58fc-19c3" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9483-2946-f57d-7dad" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="f0da-787b-a825-d5e9" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="87d7-9e58-f810-3167" name="Ranged Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="c712-cecb-794f-45fa">
@@ -1301,6 +1269,18 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="c764-d35c-2654-318c" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="ad22-be2b-9b36-586b" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27b9-a736-5068-e362" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
       </costs>
@@ -1355,17 +1335,6 @@
         <categoryLink id="4de9-0b90-09d4-6092" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="d000-af26-404b-cb90" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fc6-673f-652e-479c" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="ae99-c20f-2245-a6c5" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="5a56-6409-339c-8f2c" name="Special Equipment" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="67fa-758c-4034-cdbc" type="max"/>
@@ -1377,19 +1346,12 @@
               </constraints>
               <selectionEntryGroups>
                 <selectionEntryGroup id="aa09-d188-14bb-1176" name="Armour Enchantments" hidden="false" collective="false" import="true">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="b5d3-df16-0c28-471b" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d000-af26-404b-cb90" type="equalTo"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="619a-0701-0cbb-f8a4" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="cb15-ad4d-713c-31bb" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="4c4e-146b-a165-a891" type="selectionEntryGroup"/>
                     <entryLink id="13d9-d919-16ca-864a" name="SA Armour Enchantments" hidden="false" collective="false" import="true" targetId="6fe8-04b0-a5d9-54c8" type="selectionEntryGroup"/>
+                    <entryLink id="dfe5-82c5-01dc-4be2" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="dd3e-9826-cf74-4265" name="Artefacts" hidden="false" collective="false" import="true">
@@ -1397,7 +1359,7 @@
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e86f-5a0d-92d8-02b2" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="5b1c-4deb-3e69-4db3" name="Charms" hidden="false" collective="false" import="true" targetId="a755-929f-7067-ae6e" type="selectionEntryGroup"/>
+                    <entryLink id="5b1c-4deb-3e69-4db3" name="Artefacts (Wizards)" hidden="false" collective="false" import="true" targetId="ab25-3916-e8af-98cb" type="selectionEntryGroup"/>
                     <entryLink id="744a-0511-9dd7-3892" name="SA Charms" hidden="false" collective="false" import="true" targetId="a0e3-1a30-8bc0-a21b" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -1555,6 +1517,20 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9023-99cc-4f39-b402" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="c2fd-53b7-d131-b55b">
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="195a-5c31-7131-eab6" type="max"/>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78db-e10e-9ede-ce21" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="cdde-b899-e34e-3d55" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="c2fd-53b7-d131-b55b" name="Unarmoured" hidden="false" collective="false" import="true" targetId="3d08-4e50-5ccc-bda0" type="selectionEntry"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -1741,6 +1717,13 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="2364-e4a4-38c9-8451" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ee2-608a-d809-1b62" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="195.0"/>
       </costs>
@@ -4439,9 +4422,6 @@
               </characteristics>
             </profile>
           </profiles>
-          <entryLinks>
-            <entryLink id="5367-f221-da57-b6e6" name="Shield Enchantement" hidden="false" collective="false" import="true" targetId="312f-8f87-7840-0442" type="selectionEntry"/>
-          </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>

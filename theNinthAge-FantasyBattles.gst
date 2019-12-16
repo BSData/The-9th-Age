@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.2" revision="33" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2.2" revision="35" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -78,6 +78,9 @@
   </forceEntries>
   <sharedSelectionEntries>
     <selectionEntry id="dd27-6738-aebc-192e" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c162-a646-5acd-5058" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="2e20-006e-1fd8-cbbd" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
       </infoLinks>
@@ -86,6 +89,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="c015-e52d-3852-27ea" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f485-3ff7-1641-4829" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="f0df-0fb2-1055-6a25" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
       </infoLinks>
@@ -94,6 +100,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f49b-1010-24f1-f23b" name="Plate Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faa0-e44c-e408-c61f" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="8e30-a95c-1572-f73e" name="Plate Armour" hidden="false" targetId="85fa-68ac-214d-2f4b" type="profile"/>
       </infoLinks>
@@ -102,6 +111,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ff97-a295-86c8-76d5" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d158-aeff-6968-2615" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="0125-f6f2-650f-9c01" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
       </infoLinks>
@@ -110,6 +122,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e79a-e00b-b0ee-6850" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a37-3686-46d8-6eb0" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="8a3d-bebe-849b-e426" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
       </infoLinks>
@@ -118,6 +133,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="6a41-63a5-c5f6-66f6" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="236a-7e57-0706-fc14" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="421f-ae08-b81b-a874" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
       </infoLinks>
@@ -126,6 +144,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="b10f-350c-0581-f9c2" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ff1-d7f1-dfdc-8762" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="f3df-4e1e-c05f-04d5" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
       </infoLinks>
@@ -134,6 +155,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8dad-9602-9dd1-7698" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dece-abfb-1646-28f2" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="dd7d-4f2a-dab3-aa30" name="Crossbow" hidden="false" targetId="fdf6-3c15-644b-1ced" type="profile"/>
       </infoLinks>
@@ -142,6 +166,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e2c0-2230-5a1a-1f08" name="Bow" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4382-0938-eb2f-87d2" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="765e-c4e1-998e-0a57" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
       </infoLinks>
@@ -150,6 +177,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2837-ec0d-956f-690a" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c73d-37e8-2340-287d" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="fdb9-447a-b77b-fb08" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
       </infoLinks>
@@ -158,6 +188,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="544f-9331-9cce-694d" name="Halberd" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b311-493d-9678-8b90" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="4750-144d-fdb2-7f3e" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
       </infoLinks>
@@ -166,6 +199,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="cc20-7463-8302-21b4" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb60-f5ed-2fc9-4921" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="a538-8323-787c-6cde" name="Longbow" hidden="false" targetId="245b-baaf-f5ec-e168" type="profile"/>
       </infoLinks>
@@ -174,6 +210,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="bdc6-e116-53be-d2ae" name="Pistol" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f540-01da-46f0-6811" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="1fd0-456b-1ad2-ff1c" name="Pistol" hidden="false" targetId="12c1-3184-6230-c142" type="profile"/>
       </infoLinks>
@@ -182,6 +221,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="b672-9729-1d95-cb6d" name="Throwing Weapons" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e829-ad61-66b7-5b70" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="6178-75fa-e100-5737" name="Throwing Weapons" hidden="false" targetId="8c83-06ff-024f-a235" type="profile"/>
       </infoLinks>
@@ -190,6 +232,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7efd-252a-dcad-fa35" name="Light Lance" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7cd-87e0-ef2f-540a" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="3797-3f0b-f854-c656" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
       </infoLinks>
@@ -826,6 +871,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="9dfd-528a-2991-3f75" name="Wizard Apprentice" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98e7-37b2-b6a7-13ce" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="0f9c-5f81-6d50-7462" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule"/>
       </infoLinks>
@@ -834,6 +882,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="6d2e-3a7c-b8c4-2589" name="Wizard Adept" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c80-09df-b71b-762a" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="7b4e-3543-3ebf-e443" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule"/>
       </infoLinks>
@@ -842,6 +893,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e7ab-249b-e180-109d" name="Wizard Master" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecac-fac9-9f47-edc2" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="61c4-b109-670c-b621" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
       </infoLinks>
@@ -902,6 +956,11 @@
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="3d08-4e50-5ccc-bda0" name="Unarmoured" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3568-f94a-3055-aa50" type="max"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
