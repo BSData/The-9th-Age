@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="66f6-8610-3962-63fa" name="Highborn Elves 2.2" revision="39" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="66f6-8610-3962-63fa" name="Highborn Elves 2.2" revision="40" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7eaf-eaa2-9211-8018" name="Ancient Allies" hidden="false"/>
     <categoryEntry id="3eec-2473-17c3-c831" name="Naval Ordnance" hidden="false"/>
@@ -147,7 +147,24 @@
                   </constraints>
                   <entryLinks>
                     <entryLink id="7b7c-a4cd-32d8-5a11" name="HE Artefacts" hidden="false" collective="false" import="true" targetId="8bcf-f60e-eb31-1ec0" type="selectionEntryGroup"/>
-                    <entryLink id="640d-cdbf-201f-9014" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
+                    <entryLink id="640d-cdbf-201f-9014" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditions>
+                            <condition field="selections" scope="3979-e311-2b38-8142" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="378a-7742-6b0d-d086" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink id="d394-e76f-d52f-3942" name="Artefacts (Wizards)" hidden="true" collective="false" import="true" targetId="ab25-3916-e8af-98cb" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="false">
+                          <conditions>
+                            <condition field="selections" scope="3979-e311-2b38-8142" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="378a-7742-6b0d-d086" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="0c5b-f4cb-1cf1-be30" name="Shield Enchantment" hidden="false" collective="false" import="true">
@@ -164,21 +181,6 @@
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="90d1-ffec-5d1d-a11a" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d0f-48a2-5a26-6609" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e365-c5b5-fbbb-19ff" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e8e5-26df-b27e-9ad1" name="Longbow (0+)" hidden="false" collective="false" import="true" type="upgrade">
@@ -574,25 +576,11 @@
           </constraints>
           <entryLinks>
             <entryLink id="ae01-a687-2fbc-e749" name="Dragonforged Armour" hidden="false" collective="false" import="true" targetId="dbc8-9d4a-3d73-62b8" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9313-7e5d-0656-101c" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
             </entryLink>
             <entryLink id="cd5a-cf87-ca97-a5a8" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="c015-e52d-3852-27ea" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9313-7e5d-0656-101c" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
@@ -692,7 +680,24 @@
                   </constraints>
                   <entryLinks>
                     <entryLink id="61ae-6f47-e279-7520" name="HE Artefacts" hidden="false" collective="false" import="true" targetId="8bcf-f60e-eb31-1ec0" type="selectionEntryGroup"/>
-                    <entryLink id="afcc-6c92-4dc2-ee69" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
+                    <entryLink id="afcc-6c92-4dc2-ee69" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditions>
+                            <condition field="selections" scope="feba-b90c-ff10-7f72" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="378a-7742-6b0d-d086" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink id="0cea-27b5-a13d-0878" name="Artefacts (Wizards)" hidden="true" collective="false" import="true" targetId="ab25-3916-e8af-98cb" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="false">
+                          <conditions>
+                            <condition field="selections" scope="feba-b90c-ff10-7f72" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="378a-7742-6b0d-d086" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="ad50-51ea-33fb-2af0" name="Banner Enchantments" hidden="false" collective="false" import="true">
@@ -908,7 +913,7 @@
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="450.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="420.0"/>
               </costs>
             </entryLink>
             <entryLink id="1e50-0160-8929-c7b7" name="Elven Horse" hidden="false" collective="false" import="true" targetId="55a1-2dd1-f1fc-bb21" type="selectionEntry">
@@ -1040,25 +1045,11 @@
           </constraints>
           <entryLinks>
             <entryLink id="4d83-6d23-f1c8-1191" name="Dragonforged Armour" hidden="false" collective="false" import="true" targetId="dbc8-9d4a-3d73-62b8" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9313-7e5d-0656-101c" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </entryLink>
             <entryLink id="13fb-4618-07ef-62ab" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="c015-e52d-3852-27ea" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9313-7e5d-0656-101c" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
@@ -4202,6 +4193,9 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
