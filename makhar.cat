@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f4f2-a5a5-873e-1b18" name="Makhar 2.2" revision="11" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f4f2-a5a5-873e-1b18" name="Makhar 2.2" revision="12" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d224-066a-e928-c28c" name="Raining Death" hidden="false"/>
   </categoryEntries>
@@ -180,14 +180,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="dae8-e584-148c-03e6" name="Path of Magic" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup id="dae8-e584-148c-03e6" name="Magic Path" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0306-d94a-1af8-3e57" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71de-c992-e6a4-5d3c" type="min"/>
@@ -246,7 +239,7 @@
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="fc83-9b6b-85d7-58f9" name="Path of Magic" hidden="true" collective="false" import="true">
+        <selectionEntryGroup id="fc83-9b6b-85d7-58f9" name="Essence of a Free Mind Magic Path" hidden="true" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -255,11 +248,18 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3423-265e-0e50-205d" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c18-97ce-4441-79bd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3423-265e-0e50-205d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c18-97ce-4441-79bd" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="ca1b-ed14-f980-819f" name="Shamanism" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35c5-36a5-194e-97d3" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b19-8b09-74e2-a257" type="max"/>
               </constraints>
@@ -268,6 +268,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="c207-235d-71bd-edbc" name="Pyromancy" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bacb-b36a-7976-3fab" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e263-14fd-8f2f-1708" type="max"/>
               </constraints>
@@ -276,6 +283,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="4ed4-84b0-c348-3ce1" name="Thaumaturgy" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c556-524d-7cd0-3c6f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8fc-2621-0bcb-e600" type="max"/>
               </constraints>
@@ -2137,7 +2151,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                   <characteristics>
                     <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">C+1</characteristic>
                     <characteristic name="AP" typeId="646b-1e72-1589-5083">C+1</characteristic>
-                    <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9"></characteristic>
+                    <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2256,7 +2270,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="61f0-7472-5c6d-2546" name="Black Stallion Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2364,7 +2378,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6+1), Inanimate</characteristic>
           </characteristics>
         </profile>
@@ -2384,7 +2398,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+2</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="5529-64d9-68e7-f987" name="Dark Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
