@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6f32-70a5-e6b1-a536" name="Åsklanders 2.1.5" revision="14" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6f32-70a5-e6b1-a536" name="Åsklanders 2.1.5" revision="15" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d224-066a-e928-c28c" name="Legendary Beasts" hidden="false"/>
   </categoryEntries>
@@ -194,14 +194,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="dae8-e584-148c-03e6" name="Path of Magic" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup id="dae8-e584-148c-03e6" name="Magic Path" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0306-d94a-1af8-3e57" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71de-c992-e6a4-5d3c" type="min"/>
@@ -233,7 +226,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="148c-1c14-36d6-8fce" name="Path of Magic" hidden="true" collective="false" import="true">
+        <selectionEntryGroup id="148c-1c14-36d6-8fce" name="Essence of a Free Mind Magic Path" hidden="true" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -242,11 +235,18 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da41-eba8-a3b9-da71" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a6f-027f-2384-abbb" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da41-eba8-a3b9-da71" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a6f-027f-2384-abbb" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="1d61-002e-6d9d-418c" name="Shamanism" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35c5-36a5-194e-97d3" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0579-c3a0-140b-98db" type="max"/>
               </constraints>
@@ -255,6 +255,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="0a84-c4f2-4961-1ba0" name="Witchcraft" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bacb-b36a-7976-3fab" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c02d-1094-3de7-3796" type="max"/>
               </constraints>
@@ -263,6 +270,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="791f-04b9-b5ed-5dcd" name="Thaumaturgy" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c556-524d-7cd0-3c6f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4d4-8ddb-0623-537f" type="max"/>
               </constraints>
@@ -558,7 +572,7 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
               <characteristics>
                 <characteristic name="Type" typeId="017b-143b-0520-bdc1">Light Armour</characteristic>
                 <characteristic name="Save" typeId="4ca3-2498-f356-f056">+1</characteristic>
-                <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Light Armour (can be enchanted as Light armor). In addition, at the start of any of your Player Turns all models with Berserker's Bear Pelt in a unit may choose to lose its Shield and gain Frenzy, Fearless, Battle Focus, Lightning Reflexes, and +1 Strength. Effects lasts for the remainder of the game.</characteristic>
+                <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Light Armour (can be enchanted as Light armor). In addition, at the start of any of your Player Turns all models with Berserker&apos;s Bear Pelt in a unit may choose to lose its Shield and gain Frenzy, Fearless, Battle Focus, Lightning Reflexes, and +1 Strength. Effects lasts for the remainder of the game.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -939,7 +953,7 @@ The model gains Ambush. During step 8 of the Pre-Game Sequence nominate a unit o
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2047,7 +2061,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
           <characteristics>
             <characteristic name="Type" typeId="017b-143b-0520-bdc1">Light Armour</characteristic>
             <characteristic name="Save" typeId="4ca3-2498-f356-f056">+1</characteristic>
-            <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Light Armour (can be enchanted as Light armor). In addition, at the start of any of your Player Turns all models with Berserker's Bear Pelt in a unit may choose to lose its Shield and gain Frenzy, Fearless, Battle Focus, Lightning Reflexes, and +1 Strength. Effects lasts for the remainder of the game.</characteristic>
+            <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Light Armour (can be enchanted as Light armor). In addition, at the start of any of your Player Turns all models with Berserker&apos;s Bear Pelt in a unit may choose to lose its Shield and gain Frenzy, Fearless, Battle Focus, Lightning Reflexes, and +1 Strength. Effects lasts for the remainder of the game.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2311,6 +2325,9 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
       <infoLinks>
         <infoLink id="5f22-0a5c-d315-0448" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="f9ed-0874-a860-f8cc" name="Shadow Chaser" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2362,6 +2379,9 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
           </modifiers>
         </infoLink>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="8233-515d-89fb-2307" name="War Dais" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2408,6 +2428,9 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
         <infoLink id="5f4f-c6dc-a685-b0c0" name="Cannot be Stomped" hidden="false" targetId="0919-4c3c-87d8-78a8" type="rule"/>
         <infoLink id="b455-b692-4c40-3684" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e963-36f3-544d-99a1" name="Dark Chariot" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2420,7 +2443,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297"></characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6+1), Inanimate</characteristic>
           </characteristics>
         </profile>
@@ -2465,6 +2488,9 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
         <infoLink id="0e06-bbb7-c5e9-9552" name="Inanimate" hidden="false" targetId="ca83-2dad-d908-5f4c" type="rule"/>
         <infoLink id="f518-cee9-cbf6-d345" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="59b3-034c-bf52-9da1" name="Chimera" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2534,6 +2560,9 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="dc02-5dc7-0b2b-7b69" name="Wasteland Behemoth" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2553,7 +2582,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="4041-ac09-e729-0831" name="Wasteland Behemoth Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2596,6 +2625,9 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="43bf-78bd-58b8-bf49" name="Bjargfylli" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2754,7 +2786,7 @@ against the wielder’s model gain +1 to hit.</characteristic>
             <profile id="ef39-7d34-5ad7-5289" name="Harp of Bragi" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The range of the bearer’s Commanding Presence or Rally Around the Flag is always 18".</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The range of the bearer’s Commanding Presence or Rally Around the Flag is always 18&quot;.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2788,7 +2820,7 @@ against the wielder’s model gain +1 to hit.</characteristic>
             <profile id="49ad-1306-fc01-0952" name="Harp of Bragi" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The range of the bearer’s Commanding Presence or Rally Around the Flag is always 18".</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The range of the bearer’s Commanding Presence or Rally Around the Flag is always 18&quot;.</characteristic>
               </characteristics>
             </profile>
           </profiles>
