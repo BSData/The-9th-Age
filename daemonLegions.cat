@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2.4" revision="45" battleScribeVersion="2.03" authorName="WarX, DarkSky, koniu699, Hebus" authorContact="" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2020 beta 3" revision="46" battleScribeVersion="2.03" authorName="WarX, DarkSky, koniu699, Hebus" authorContact="" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="3f95-f87e-5df2-4102" name="T9A – Daemon Legions"/>
   </publications>
@@ -302,6 +302,18 @@
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="6364-fd0b-036f-fae4" name="Manifestations" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="54ef-0d4d-8596-cb63" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a140-2ffe-986f-189b" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ccdd-424b-6dc7-01c1" type="max"/>
           </constraints>
@@ -319,6 +331,38 @@
           <entryLinks>
             <entryLink id="9baa-4792-41a0-1e17" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
             <entryLink id="9949-67e5-3f7c-3277" name="Manifestations of Pride" hidden="false" collective="false" import="true" targetId="db1f-51cf-c20c-cdbd" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9aa0-a7de-e259-c954" name="Manifestations of General" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="54ef-0d4d-8596-cb63" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a140-2ffe-986f-189b" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="175.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df7b-f642-137c-3500" type="max"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="4d6c-002b-faa5-7a22" name="Guiding Manifestation" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a5d-a4ea-cb9b-28e3" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="a13c-563c-faec-86bf" name="Guiding Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="c7e6-73d9-a772-5640" type="selectionEntryGroup"/>
+                <entryLink id="fcc0-392c-2f0c-ba58" name="Guiding Manifestations of Pride" hidden="false" collective="false" import="true" targetId="7bcf-c4e3-ce50-bee0" type="selectionEntryGroup"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="1254-e2d0-8624-4ac6" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
+            <entryLink id="125b-91d3-0397-de6a" name="Manifestations of Pride" hidden="false" collective="false" import="true" targetId="db1f-51cf-c20c-cdbd" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -346,9 +390,8 @@
         </profile>
       </profiles>
       <rules>
-        <rule id="ff84-86d5-f7a5-3174" name="Firestarter" hidden="false">
-          <description>A Standard Bearer with this rule can cast the chosen spell* as a Bound Spell with Power Level (5/8).
-* Hand of Heaven or Spear of Infinity</description>
+        <rule id="ff84-86d5-f7a5-3174" name="Firestarter (X)" hidden="false">
+          <description>A Standard Bearer with this rule can cast the spell stated in brackets as a Bound Spell with Power Level (5/8).</description>
         </rule>
       </rules>
       <infoLinks>
@@ -385,7 +428,7 @@
               <characteristics>
                 <characteristic name="HP" typeId="61df-0ca3-17b2-f001">1</characteristic>
                 <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">2</characteristic>
-                <characteristic name="Res" typeId="f988-a51e-9e65-0291">2</characteristic>
+                <characteristic name="Res" typeId="f988-a51e-9e65-0291">3</characteristic>
                 <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
                 <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
                 <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Aegis (3+, against Shooting Attacks)</characteristic>
@@ -410,7 +453,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="14.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -428,12 +471,12 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edb2-7fe9-f972-46f4" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="b8af-dfbd-0e7a-ab28" name="Hand of Heaven" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b8af-dfbd-0e7a-ab28" name="Firestarter (Hand of Heaven (Thaumaturgy))" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="eb13-cea8-6161-6683" name="Spear of Infinity" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="eb13-cea8-6161-6683" name="Firestarter (Spear of Infinity (Hereditary Spell))" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
@@ -492,7 +535,7 @@
         <entryLink id="d75d-5057-a0ba-d4f5" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f464-9fb4-b866-0a3e" name="Lemures" hidden="false" collective="false" import="true" type="unit">
@@ -1003,7 +1046,7 @@
             <infoLink id="208f-ef8c-cad3-e689" name="Dark Fire" hidden="false" targetId="c6d3-8078-cdfc-c72d" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1049,6 +1092,18 @@
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="0380-6ecd-4150-6e6b" name="Manifestations" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7155-97de-aff3-942f" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8832-1de9-83b4-ea5d" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7d0-ec26-7357-543e" type="max"/>
           </constraints>
@@ -1079,12 +1134,44 @@
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c67e-3998-f834-71b8" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
             <entryLink id="ea67-ba0f-3909-372f" name="Dark Pulpit" hidden="false" collective="false" import="true" targetId="1a8f-9690-4918-f76e" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="2686-ffe2-9d9e-6c69" name="Manifestations of General" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7155-97de-aff3-942f" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8832-1de9-83b4-ea5d" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="175.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="533d-ddd3-acc0-2071" type="max"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="0663-d38f-d0b7-cc38" name="Guiding Manifestation" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96ab-e899-7348-e299" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="4d0c-b86f-36a2-3fa0" name="Guiding Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="c7e6-73d9-a772-5640" type="selectionEntryGroup"/>
+                <entryLink id="a65a-0772-731c-fa88" name="Guiding Manifestations of Sloth" hidden="false" collective="false" import="true" targetId="4b7b-831a-f98b-7648" type="selectionEntryGroup"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="e1c5-a15c-cbfc-3f89" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
+            <entryLink id="1eb8-00e8-42e7-2b7d" name="Manifestations of Sloth" hidden="false" collective="false" import="true" targetId="1d5d-3c34-1529-e9f4" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1114,7 +1201,7 @@
         <infoLink id="e69b-7543-7ad8-59d7" name="Wizard Conclave" hidden="false" targetId="7455-f914-028b-3359" type="rule"/>
         <infoLink id="e4bc-fdb2-f7c9-0902" name="Dark Fire" hidden="false" targetId="c6d3-8078-cdfc-c72d" type="profile">
           <modifiers>
-            <modifier type="append" field="name" value=" (4+)"/>
+            <modifier type="append" field="name" value=" (3+)"/>
           </modifiers>
         </infoLink>
         <infoLink id="47fa-c364-886e-1410" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
@@ -1172,7 +1259,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="28.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="31.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f520-ac4d-3bf3-181f" name="Scout" hidden="false" collective="false" import="true" type="upgrade">
@@ -1305,7 +1392,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3a0d-aa65-df02-01df" name="Hellhounds" hidden="false" collective="false" import="true" type="unit">
@@ -1769,8 +1856,7 @@
       </profiles>
       <rules>
         <rule id="96c9-01e8-f260-3b17" name="Devour" hidden="false">
-          <description>For each unsaved wound the model causes with Close Combat Attacks, roll a D6 at the end of the Initiative Step. For each rolled 4+, the model
-gains +1 Health Point. When the model has 18 Health Points, all units within 9&quot; immediately suffer 2D6 hits with Toxic Attacks, and the model is removed as a casualty.</description>
+          <description>For each unsaved wound the model causes with Close Combat Attacks against enemy units, roll a D6 at the end of the Initiative Step. For each rolled 4+, the model gains +1 Health Point. When the model has 18 Health Points, all units within 9&quot; immediately suffer 2D6 hits with Toxic Attacks, and the model is removed as a casualty.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1803,7 +1889,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1874,6 +1960,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="910d-b140-6855-1324" name="Manifestations" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d37c-0e8d-0111-0340" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a6f-87b1-cbab-5589" type="max"/>
           </constraints>
@@ -1891,6 +1984,33 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <entryLinks>
             <entryLink id="fd7f-aba0-6625-8203" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
             <entryLink id="daa1-3bc7-b314-6262" name="Manifestations of Gluttony" hidden="false" collective="false" import="true" targetId="00c6-893d-47ed-ce5d" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="bdde-f792-b882-b323" name="Manifestations of General" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d37c-0e8d-0111-0340" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="175.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63f8-d8b1-a3b6-576f" type="max"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="7b1f-0a26-16db-faeb" name="Guiding Manifestation" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01f4-b86e-9d5d-302c" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="3450-806c-cb0a-ecd6" name="Guiding Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="c7e6-73d9-a772-5640" type="selectionEntryGroup"/>
+                <entryLink id="6b77-d707-4e4f-7e1c" name="Guiding Manifestations of Gluttony" hidden="false" collective="false" import="true" targetId="4c49-6390-3bb3-108a" type="selectionEntryGroup"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="7580-3857-573e-bb67" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
+            <entryLink id="8c0c-561f-7c40-b747" name="Manifestations of Gluttony" hidden="false" collective="false" import="true" targetId="00c6-893d-47ed-ce5d" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1968,7 +2088,7 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
       </profiles>
       <rules>
         <rule id="b497-3e5f-0da6-39a0" name="Mountain Breaker" hidden="false">
-          <description>The model gains +D3&quot; Advance Rate when rolling for Charge Range against units that consist entirely of models with Towering Presence. In addition, the model&apos;s Impact Hits gain Multiple Wounds (D3, against Towering Presence).</description>
+          <description>The model gains +D3&quot; Advance Rate when rolling for Charge Range against units that consist entirely of models with Towering Presence in the Charge Phase. In addition, the model&apos;s Impact Hits gain Multiple Wounds (D3, against Towering Presence).</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2391,6 +2511,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="92e6-1f1d-691a-8441" name="Manifestations" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b12c-474c-d958-db6b" type="max"/>
           </constraints>
@@ -2408,6 +2535,33 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <entryLinks>
             <entryLink id="0eb5-e3b1-2879-287f" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
             <entryLink id="30c8-f0ca-49e2-e096" name="Manifestations of Lust" hidden="false" collective="false" import="true" targetId="66ed-8359-1045-d414" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3f31-f068-3775-0ba4" name="Manifestations of General" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="175.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cbe-c83a-b7fc-ec60" type="max"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="fe38-8780-eb0a-6c4e" name="Guiding Manifestation" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e669-5cc8-e5e8-d553" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="6876-91c9-e635-2f0c" name="Guiding Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="c7e6-73d9-a772-5640" type="selectionEntryGroup"/>
+                <entryLink id="16aa-2e94-c17c-2e9d" name="Guiding Manifestations of Lust" hidden="false" collective="false" import="true" targetId="8fc6-2d33-86fb-da06" type="selectionEntryGroup"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="81b4-327d-116e-1715" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
+            <entryLink id="59d0-30c3-13f6-ff3e" name="Manifestations of Lust" hidden="false" collective="false" import="true" targetId="66ed-8359-1045-d414" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2587,6 +2741,13 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="c959-9717-4c48-1efb" name="Manifestations" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="175.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b485-a403-1aff-885c" type="max"/>
           </constraints>
@@ -2604,6 +2765,33 @@ gains +1 Health Point. When the model has 18 Health Points, all units within 9&q
           <entryLinks>
             <entryLink id="f4e3-cf83-873d-d0f6" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
             <entryLink id="b5e6-b730-2dce-0b75" name="Manifestations of Greed" hidden="false" collective="false" import="true" targetId="6098-90d8-dc8c-c477" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="7508-27c5-b2c3-ba1d" name="Manifestations of General" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="200.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c320-6cc8-11f5-10b8" type="max"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="5002-dcfa-1b2e-7d7a" name="Guiding Manifestation" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6df4-24d0-5614-1ae0" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="89a5-a728-8935-94b4" name="Guiding Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="c7e6-73d9-a772-5640" type="selectionEntryGroup"/>
+                <entryLink id="f356-1a2d-9795-a524" name="Guiding Manifestations of Greed" hidden="false" collective="false" import="true" targetId="617c-ed2f-0d72-99f1" type="selectionEntryGroup"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="e1b2-521d-0bca-fb59" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
+            <entryLink id="5422-79bb-aa39-a85e" name="Manifestations of Greed" hidden="false" collective="false" import="true" targetId="6098-90d8-dc8c-c477" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3897,7 +4085,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
         <infoLink id="d736-fb2c-e608-28e0" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
         <infoLink id="f233-e106-7557-ed72" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (8&quot;, 12&quot;)"/>
+            <modifier type="append" field="name" value=" (6&quot;, 14&quot;)"/>
           </modifiers>
         </infoLink>
         <infoLink id="fc6a-65ef-7153-f765" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
@@ -3914,10 +4102,10 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
           <profiles>
             <profile id="3dbe-0f9c-9f46-c9f6" name="Bloat Fly Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
                 <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Acid Blood</characteristic>
               </characteristics>
@@ -3925,17 +4113,17 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             <profile id="b77f-ba42-a1c7-5254" name="Bloat Fly Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
               <characteristics>
                 <characteristic name="HP" typeId="61df-0ca3-17b2-f001">4</characteristic>
-                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
+                <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">2</characteristic>
                 <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
                 <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Fortitude (5+)</characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae"></characteristic>
+                <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Aegis (5+, against Magical Attacks), Fortitude (5+)</characteristic>
               </characteristics>
             </profile>
             <profile id="d5a0-445e-ad54-3692" name="Bloat Fly Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
               <characteristics>
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (6&quot;)</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (12&quot;)</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (14&quot;)</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
                 <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
@@ -3949,7 +4137,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3970,7 +4158,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             </entryLink>
             <entryLink id="ffc3-1767-0312-b5e7" name="Unit - Unhinging Jaw" hidden="false" collective="false" import="true" targetId="f5b5-176e-d138-9e9e" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="6.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -3979,7 +4167,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             </entryLink>
             <entryLink id="f74d-8873-3655-ae02" name="Unit - Digestive Vomit" hidden="false" collective="false" import="true" targetId="dd92-a99c-d63c-b2bf" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="12.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="6.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -4010,9 +4198,6 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
       <entryLinks>
         <entryLink id="3c29-c3ec-a3dc-d661" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="a3f0-b200-8276-5593" name="Vanadra’s Scourge" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -4147,6 +4332,13 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="02aa-45fc-5291-e191" name="Manifestations" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="480b-ed42-4af5-889b" type="max"/>
           </constraints>
@@ -4164,6 +4356,33 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
           <entryLinks>
             <entryLink id="9060-4d8d-feeb-5f92" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
             <entryLink id="9b07-f404-16da-fdf4" name="Manifestations of Wrath" hidden="false" collective="false" import="true" targetId="1666-f30b-8828-0996" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="37a2-a716-990d-bea8" name="Manifestations of General" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82d3-0515-73cb-6df1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="175.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d5e-2a4c-167d-34d2" type="max"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="c0d9-a637-f8e1-6d74" name="Guiding Manifestation" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f77b-46fb-a569-166b" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="bcb0-545e-74a8-cbdc" name="Guiding Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="c7e6-73d9-a772-5640" type="selectionEntryGroup"/>
+                <entryLink id="d9e9-752c-9a99-5687" name="Guiding Manifestations of Wrath" hidden="false" collective="false" import="true" targetId="c05a-a52e-1185-57b8" type="selectionEntryGroup"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="c803-7ba4-ea05-8b16" name="Manifestations of Father Chaos" hidden="false" collective="false" import="true" targetId="b400-d8e4-ecce-9431" type="selectionEntryGroup"/>
+            <entryLink id="c1d0-1b99-1e30-ec3c" name="Manifestations of Wrath" hidden="false" collective="false" import="true" targetId="1666-f30b-8828-0996" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -4257,7 +4476,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b81-ad48-256c-6b97" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -6245,7 +6464,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
       <description>Attacks that are Divine Attacks made against the model lose this Attack Attribute.</description>
     </rule>
     <rule id="b464-caac-eb5a-e188" name="Cloven Hooves" hidden="false">
-      <description>The model gains Impact Hits (D3). These Impact Hits are resolved with Strength 5 and Armour Penetration 2.</description>
+      <description>Unless the model already has Impact Hits (X), it gains Impact Hits (D3+1). These Impact Hits are resolved with Strength 5 and Armour Penetration 2.</description>
     </rule>
     <rule id="a361-9ff9-d38c-2ae8" name="Brimstone Secretions (Guiding)" hidden="false">
       <description>Dominant. Attacks that are Divine Attacks made against the model and against R&amp;F models in its unit lose this Attack Attribute.</description>
@@ -6269,7 +6488,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
       <description>One use only. Must be activated when the model’s unit fails its first Charge Range roll. The unit must reroll the Charge Range roll.</description>
     </rule>
     <rule id="280f-0f0b-5ea6-a75c" name="Roaming Hands" hidden="false">
-      <description>When the unit is Engaged with an enemy unit’s Flank or Rear Facing, the model gains +1 Strength and +1 Armour Penetration.</description>
+      <description>While the unit is Engaged with an enemy unit’s Flank or Rear Facing, the model gains +1 Strength and +1 Armour Penetration.</description>
     </rule>
     <rule id="28b0-b249-7513-c1c8" name="Mesmerising Plumage" hidden="false">
       <description>Dominant. Enemy units in base contact with one or more models with this Manifestation suffer −1 Offensive Skill and −1 Defensive Skill.</description>
@@ -6287,10 +6506,10 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
       <description>The model gains +1 to-wound with Close Combat Attacks against models with Scoring.</description>
     </rule>
     <rule id="332d-f18e-f808-ee41" name="Grasping Proboscis (Guiding)" hidden="false">
-      <description>Dominant. At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and the model and R&amp;F model in its unit caused at least three Health Point losses with Melee Attacks, the owner gains D3 Veil Tokens to their Veil Token pool.</description>
+      <description>Dominant. At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and the model and R&amp;F model in its unit caused at least three Health Point losses against enemy units with Melee Attacks, the owner gains D3 Veil Tokens to their Veil Token pool.</description>
     </rule>
     <rule id="e980-5c7d-2eed-185f" name="Grasping Proboscis" hidden="false">
-      <description>At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and the model caused at least three Health Point losses with Melee Attacks, the owner gains D3 Veil Tokens to their Veil Token pool.</description>
+      <description>At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and the model caused at least three Health Point losses against enemy units with Melee Attacks, the owner gains D3 Veil Tokens to their Veil Token pool.</description>
     </rule>
     <rule id="a327-0702-2d00-a321" name="Unhinging Jaw (Guiding)" hidden="false">
       <description>Dominant. Failed to-wound rolls from Close Combat Attacks against Large or Gigantic models made by the model and each R&amp;F model in its unit must be re-rolled.</description>
@@ -6306,11 +6525,10 @@ its unit gains +1 Strength and +1 Armour Penetration until the end of the game.<
       <description>One use only. Must be activated the first time the model’s unit performs a Post-Combat Pivot or a Post-Combat Reform. The model gains +1 Strength and +1 Armour Penetration until the end of the game.</description>
     </rule>
     <rule id="ef3b-cd0e-ac78-b679" name="Broodmother (Guiding)" hidden="false">
-      <description>Dominant. At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and during which the model and R&amp;F models in its
-unit caused at least three Health Point losses with Close Combat Attacks, the unit Raises D3 Health Points.</description>
+      <description>Dominant. At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and during which the model caused at least three Health Point losses against enemy units with Close Combat Attacks, the unit Raises D3 Health Points.</description>
     </rule>
     <rule id="5864-c9bc-5aa0-2996" name="Broodmother" hidden="false">
-      <description>Dominant. At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and during which the model caused at least three Health Point losses with Close Combat Attacks, the unit Raises D3 Health Points.</description>
+      <description>Dominant. At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and during which the model caused at least three Health Point losses against enemy units with Close Combat Attacks, the unit Raises D3 Health Points.</description>
     </rule>
     <rule id="03ec-e4ff-5b7e-009e" name="Venom Sacs (Guiding)" hidden="false">
       <description>Dominant. The model and each R&amp;F model in its unit gains Poison Attacks. If the model’s Close Combat Attacks or those from R&amp;F models in its unit already were Poison
@@ -6326,7 +6544,7 @@ Attacks from another source than this Manifestation, the attack will automatical
       <description>Close Combat Attacks made by the model gain +1 Armour Penetration.</description>
     </rule>
     <rule id="e889-67b0-7efc-9d09" name="Roaming Hands (Guiding)" hidden="false">
-      <description>Dominant. When the unit is Engaged with an enemy unit’s Flank or Rear Facing, the model and each R&amp;F model in its unit gains +1 Strength and +1 Armour Penetration.</description>
+      <description>Dominant. While the unit is Engaged with an enemy unit’s Flank or Rear Facing, the model and each R&amp;F model in its unit gains +1 Strength and +1 Armour Penetration.</description>
     </rule>
     <rule id="fad0-dcaf-7a4b-0e0d" name="Incendiary Ichor (Guiding)" hidden="false">
       <description>Dominant. The model and each R&amp;F model in its unit gains Aegis (2+, against Flaming Attacks). All Melee Attacks (including Special Attacks) and Shooting Attacks made by the model with Incendiary Ichor and each R&amp;F model in its unit become Flaming Attacks. The model and each R&amp;F model in its unit automatically fails all Fortitude Saves.</description>
@@ -6338,7 +6556,7 @@ Attacks from another source than this Manifestation, the attack will automatical
       <description>When the model suffers a wound from an attack with Multiple Wounds (X), reduce X by 1, to a minimum of 1.</description>
     </rule>
     <rule id="6c21-6c4d-93b5-7fee" name="Aura of Despair" publicationId="3f95-f87e-5df2-4102" page="5" hidden="false">
-      <description>Dominant. Enemy units suffer −2′′ Advance Rate to a minimum of 1′′ when rolling for Charge Range against units with at least one model with this Manifestation.</description>
+      <description>Dominant. Enemy units suffer −2′′ Advance Rate to a minimum of 1′′ when rolling for Charge Range against units with at least one model with this Manifestation in the Charge Phase.</description>
     </rule>
     <rule id="5ed6-5249-9ce8-cde8" name="Chilling Yawn" hidden="false">
       <description>Dominant. Enemy units in base contact with one or more models with this Manifestation suffer −2 Agility.</description>
@@ -6387,11 +6605,11 @@ The model counts as Gigantic for the purpose of determining the number of Full R
   <sharedProfiles>
     <profile id="c6d3-8078-cdfc-c72d" name="Dark Fire" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">24&quot;</characteristic>
+        <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">18&quot;</characteristic>
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">2</characteristic>
         <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
         <characteristic name="AP" typeId="857a-4ce1-d134-8701">0</characteristic>
-        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Armour Save rolls of &apos;1&apos;, &apos;2&apos;, and &apos;3&apos; are always considered failed when saving wounds caused by Dark Fire.</characteristic>
+        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Armour Save rolls of &apos;1&apos;, &apos;2&apos;, &apos;3&apos; and &apos;4&apos; are always considered failed when saving wounds caused by Dark Fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="aa87-31a3-9d33-f27d" name="Spear of Infinity" hidden="false" typeId="654a-9b5c-962c-4f80" typeName="X Spell">
