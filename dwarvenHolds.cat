@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="041b-e72b-1f30-5a89" name="Dwarven Holds 2020" revision="29" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="041b-e72b-1f30-5a89" name="Dwarven Holds 2020" revision="30" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="1101-0d1e-0830-2bbb" name="Clan&apos;s Thunder" hidden="false"/>
     <categoryEntry id="d027-973a-954e-3377" name="Engines of War" hidden="false"/>
@@ -204,27 +204,18 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d953-f992-cb07-6703" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="1659-7fcb-72fe-201a" name="Shield Bearers" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6108-00b9-e0b6-afec" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="105.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7163-86c5-013c-3176" name="War Throne" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9e6-fc93-1c3d-8a48" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="31bc-84b0-ca20-272a" name="War Throne" hidden="false" collective="false" import="true" targetId="06e9-e094-a2d1-b804" type="selectionEntry"/>
-              </entryLinks>
+          <entryLinks>
+            <entryLink id="0ddf-4caa-ec68-8ba3" name="War Throne" hidden="false" collective="false" import="true" targetId="06e9-e094-a2d1-b804" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="235.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink id="7ce9-949b-d5b8-48dd" name="Shield Bearers" hidden="false" collective="false" import="true" targetId="6dc5-a7b2-9231-8851" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="105.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -2137,18 +2128,18 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="0a9d-f5d6-000b-036b" name="Shooting Weapon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99b4-257f-2051-60c1" type="max"/>
-          </constraints>
           <selectionEntries>
             <selectionEntry id="2898-10e7-11a0-3396" name="Throwing Weapons (4+)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="e1e0-e897-4085-58ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="861c-dcb2-7ca1-fcac" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0687-bbf5-7814-cefd" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="78c7-78b5-c3b8-8fc2" name="Throwing Weapons" hidden="false" targetId="8c83-06ff-024f-a235" type="profile">
                   <modifiers>
@@ -2164,10 +2155,13 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
                   <repeats>
-                    <repeat field="selections" scope="e1e0-e897-4085-58ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="861c-dcb2-7ca1-fcac" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01a8-f311-d5c5-6382" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="b4ce-dca6-7a8f-baa7" name="Crossbow" hidden="false" targetId="fdf6-3c15-644b-1ced" type="profile">
                   <modifiers>
@@ -3068,7 +3062,6 @@ The model gains Scout with the following exception: It must be deployed within t
     <selectionEntry id="6dc5-a7b2-9231-8851" name="Shield Bearers" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="957b-93a8-d364-4cb9" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa42-d1ef-bd37-8f21" type="min"/>
       </constraints>
       <profiles>
         <profile id="e94c-09fd-051f-7497" name="Shield Bearers Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -3118,7 +3111,6 @@ The model gains Scout with the following exception: It must be deployed within t
     <selectionEntry id="06e9-e094-a2d1-b804" name="War Throne" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ee5-439b-7963-ba45" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8eb-cfe9-c2dc-dba7" type="min"/>
       </constraints>
       <profiles>
         <profile id="8679-39d5-b79e-db9b" name="War Throne Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
