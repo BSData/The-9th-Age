@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2020 beta3" revision="46" battleScribeVersion="2.03" authorName="WarX, DarkSky, koniu699, Hebus" authorContact="" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2020 beta3" revision="47" battleScribeVersion="2.03" authorName="WarX, DarkSky, koniu699, Hebus" authorContact="" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="3f95-f87e-5df2-4102" name="T9A – Daemon Legions"/>
   </publications>
@@ -3072,7 +3072,7 @@
       </constraints>
       <rules>
         <rule id="cba1-30b9-14db-6951" name="Tightening Grasp" hidden="false">
-          <description>The model gains Grind Attacks (X), and can make Grind Attacks as Supporting Attacks. When the model is not Engaged in Combat, X is set to 0. At the end of each Round of Combat of a combat the model was Engaged in, X is increased by +1 (e.g. Grind Attacks (0) becomes Grind Attacks (1)).</description>
+          <description>The model gains Grind Attacks (X), and can make Grind Attacks as Supporting Attacks. When the model is not Engaged in Combat, X is set to 1. At the end of each Round of Combat of a combat the model was Engaged in, X is increased by +1 (e.g. Grind Attacks (1) becomes Grind Attacks (2)).</description>
         </rule>
       </rules>
       <infoLinks>
@@ -3080,6 +3080,7 @@
         <infoLink id="cdb1-27e8-2ac6-f487" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="6059-9189-1ab3-aa15" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
         <infoLink id="a4b7-2793-c8c6-6d28" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule"/>
+        <infoLink id="b975-6f2a-1a15-c1c1" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8cc2-a59d-c762-c0ac" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -4116,7 +4117,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
                 <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">2</characteristic>
                 <characteristic name="Res" typeId="f988-a51e-9e65-0291">4</characteristic>
                 <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae"></characteristic>
+                <characteristic name="Aeg" typeId="9820-1785-03cb-9eae"/>
                 <characteristic name="Rules" typeId="8f52-4c60-7457-72bf">Aegis (5+, against Magical Attacks), Fortitude (5+)</characteristic>
               </characteristics>
             </profile>
@@ -4198,6 +4199,9 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
       <entryLinks>
         <entryLink id="3c29-c3ec-a3dc-d661" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="a3f0-b200-8276-5593" name="Vanadra’s Scourge" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -4690,24 +4694,18 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="701b-8145-5edd-3c5d" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="5c1d-b16c-62e8-e28c" name="Wizard Apprentice" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb75-289c-d6f5-41ac" type="max"/>
-              </constraints>
+          <entryLinks>
+            <entryLink id="6e91-3793-2a4a-9202" name="Wizard Adept" hidden="false" collective="false" import="true" targetId="6d2e-3a7c-b8c4-2589" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="32b2-b54e-f2e8-6e7f" name="Wizard Apprentice" hidden="false" collective="false" import="true" targetId="9dfd-528a-2991-3f75" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="3d94-4d72-4f91-704e" name="Wizard Adept" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c386-d99d-dba0-0401" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="57cc-0dd4-07ad-c0bc" name="Magic Path" hidden="true" collective="false" import="true">
           <modifiers>
