@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1aa5-c442-6972-b551" name="Empire of Sonnstahl 2020" revision="23" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1aa5-c442-6972-b551" name="Empire of Sonnstahl 2020" revision="24" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="ecde-c284-9850-23e1" name="Imperial Armoury" hidden="false"/>
     <categoryEntry id="77b5-bf3a-88ad-b176" name="Imperial Auxiliaries" hidden="false"/>
@@ -189,6 +189,13 @@
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="4b54-62a4-9e82-5db1" name="Shield Enchantment" hidden="false" collective="false" import="true">
+                  <modifiers>
+                    <modifier type="set" field="5a6d-cddb-79bc-ff35" value="0.0">
+                      <conditions>
+                        <condition field="selections" scope="028f-4f2d-1812-7479" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff97-a295-86c8-76d5" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a6d-cddb-79bc-ff35" type="max"/>
                   </constraints>
@@ -489,6 +496,13 @@
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="1f51-7aeb-4a61-49b9" name="Shield Enchantment" hidden="false" collective="false" import="true">
+                  <modifiers>
+                    <modifier type="set" field="f977-60d0-c7bb-8e95" value="0.0">
+                      <conditions>
+                        <condition field="selections" scope="11c8-5e24-f965-a22b" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff97-a295-86c8-76d5" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f977-60d0-c7bb-8e95" type="max"/>
                   </constraints>
@@ -688,6 +702,13 @@
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="6e52-3d36-4ca2-6a79" name="Shield Enchantment" hidden="false" collective="false" import="true">
+                  <modifiers>
+                    <modifier type="set" field="3da5-ae4e-1d58-bbb4" value="0.0">
+                      <conditions>
+                        <condition field="selections" scope="1e69-caa4-e244-5abf" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff97-a295-86c8-76d5" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3da5-ae4e-1d58-bbb4" type="max"/>
                   </constraints>
@@ -877,6 +898,13 @@
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="c496-72dd-0117-a9eb" name="Armour Enchantment" hidden="false" collective="false" import="true">
+                  <modifiers>
+                    <modifier type="set" field="8e56-8cf0-eaba-cc70" value="0.0">
+                      <conditions>
+                        <condition field="selections" scope="53b0-be9b-6101-a832" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3d08-4e50-5ccc-bda0" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e56-8cf0-eaba-cc70" type="max"/>
                   </constraints>
@@ -1094,9 +1122,10 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="08cd-07e4-8be6-dde0" name="Armour" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="08cd-07e4-8be6-dde0" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="82ed-9341-eba3-9fcc">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef61-b747-428b-d3f8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a31-12c1-b8e7-0a3e" type="min"/>
           </constraints>
           <entryLinks>
             <entryLink id="9f25-6235-8101-35ff" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
@@ -1104,6 +1133,7 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
+            <entryLink id="82ed-9341-eba3-9fcc" name="Unarmoured" hidden="false" collective="false" import="true" targetId="3d08-4e50-5ccc-bda0" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1207,6 +1237,13 @@
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="aa27-0d5c-f146-a3c0" name="Shield Enchantment" hidden="false" collective="false" import="true">
+                  <modifiers>
+                    <modifier type="set" field="07bc-4a54-77a0-b46e" value="0.0">
+                      <conditions>
+                        <condition field="selections" scope="cc6a-e224-1943-b715" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff97-a295-86c8-76d5" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07bc-4a54-77a0-b46e" type="max"/>
                   </constraints>
