@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dfd2-0d74-3072-b274" name="Infernal Dwarves 2020" revision="37" battleScribeVersion="2.03" authorName="DarkSky, rzmoz, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dfd2-0d74-3072-b274" name="Infernal Dwarves 2020" revision="38" battleScribeVersion="2.03" authorName="DarkSky, rzmoz, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="12f7-9967-08bc-2ab6" name="Barrage" hidden="false"/>
     <categoryEntry id="1464-f43f-9e7c-296c" name="Bound and Binders" hidden="false"/>
@@ -87,17 +87,6 @@
         <categoryLink id="70dd-8c91-c733-ed24" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9384-8e97-452d-963d" name="Blunderbuss (3+)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab75-ec08-6100-b43d" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="2404-adec-8129-0258" name="Blunderbuss" hidden="false" targetId="7afe-6f22-2b97-27ac" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="3a77-b6bb-2882-f35d" name="Special Equipment" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="456e-19d1-f061-cf69" type="max"/>
@@ -160,46 +149,29 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="eb7c-d1d2-c56b-3bac" name="Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="eb7c-d1d2-c56b-3bac" name="Melee Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="0dea-3d76-db96-0cbe" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ae9-cf89-91e3-b982" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0dea-3d76-db96-0cbe" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="4fb9-ca8b-740d-5792" name="Flintlock Axe (3+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e78-3454-56bd-6567" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="ae34-6e8e-0997-b1f4" name="Flintlock Axe Melee" hidden="false" targetId="06dd-1877-81f7-f93d" type="profile"/>
-                <infoLink id="4cbe-11a2-4790-9b62" name="Flintlock Axe" hidden="false" targetId="1338-63b0-76a0-355b" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="fc1b-18fe-bde6-694f" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3055-9c5c-db75-3511" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="b569-c732-cb32-f10f" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink id="9a83-f076-568a-5d63" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="4d3f-4907-06b6-7aa5" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbe2-ef7e-de4f-142c" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="4379-21d0-3867-d8a0" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
-              </infoLinks>
+            </entryLink>
+            <entryLink id="b022-9c57-f1e8-62d1" name="Infernal Weapon" hidden="false" collective="false" import="true" targetId="138e-833e-1698-8056" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="9564-503e-6579-24cf" name="Mount" hidden="false" collective="false" import="true">
           <constraints>
@@ -217,6 +189,26 @@
             <entryLink id="cb26-c30c-61b9-c09a" name="Great Bull of Shamut" hidden="false" collective="false" import="true" targetId="c6f9-e247-8344-f709" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="410.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="a63e-3fbc-59a0-8e7e" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="8c45-2c70-9fee-c73b" name="Blunderbuss" hidden="false" collective="false" import="true" targetId="9cdb-d7a9-8c32-d058" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="b363-1402-c35e-cf4b" name="Flintlock Axe" hidden="false" collective="false" import="true" targetId="3ae9-cf89-91e3-b982" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -283,17 +275,6 @@
         <categoryLink id="5a38-8a63-8155-d058" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="fd5e-a6f5-9070-f63f" name="Blunderbuss (3+)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0454-423d-dbff-268d" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="0687-4c69-2259-2cf2" name="Blunderbuss" hidden="false" targetId="7afe-6f22-2b97-27ac" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="f702-654f-643c-822f" name="Special Equipment" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd55-4af4-ba84-1d46" type="max"/>
@@ -372,47 +353,6 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d5a7-bbfe-7c5d-87f4" name="Weapon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9b7-513b-57e0-2e7d" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="acb8-eea3-765b-f138" name="Flintlock Axe (3+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7a0-79c0-7341-6a09" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="4a91-6135-a7e2-82ec" name="Flintlock Axe Melee" hidden="false" targetId="06dd-1877-81f7-f93d" type="profile"/>
-                <infoLink id="6780-3fc9-a123-c7bd" name="Flintlock Axe" hidden="false" targetId="1338-63b0-76a0-355b" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3396-ef9e-4afe-267c" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b2b-77fc-81a7-79ad" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="e45d-a795-d7cd-9594" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="230a-eca0-e351-0fac" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d709-c429-267b-f132" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="9ca8-ef47-008a-d01e" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="f970-cc0e-f0eb-078e" name="Mount" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11df-cdfb-1f92-9d92" type="max"/>
@@ -424,6 +364,50 @@
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="220.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="672d-309b-fefa-9630" name="Melee Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="b2d7-b4ef-3486-23ab" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ae9-cf89-91e3-b982" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b2d7-b4ef-3486-23ab" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b7d5-c5f5-3f23-46ab" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="9bf6-6aa1-791f-3a83" name="Infernal Weapon" hidden="false" collective="false" import="true" targetId="138e-833e-1698-8056" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6fbe-2c70-030d-a711" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="c4e6-d8b8-34e0-682f" name="Blunderbuss" hidden="false" collective="false" import="true" targetId="9cdb-d7a9-8c32-d058" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="3c15-4666-3785-bf5a" name="Flintlock Axe" hidden="false" collective="false" import="true" targetId="3ae9-cf89-91e3-b982" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -587,46 +571,22 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4f89-8115-3b51-7e8b" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="2683-1d3b-13a8-ab65">
+        <selectionEntryGroup id="4e6c-2854-2be4-dd8b" name="Melee Weapon" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a22f-a414-2382-cb19" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da63-fcc0-5676-d94c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da88-8274-a6de-aae9" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="2749-2e99-6c46-1255" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf15-e10b-d24a-3d28" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="fc5e-bd4d-14e8-b679" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink id="b2ef-443b-4e4c-a230" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="7914-d168-0bde-7d2d" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d42-d3cf-eef5-110a" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="d982-93a5-2eac-8484" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
-              </infoLinks>
+            </entryLink>
+            <entryLink id="2350-e6b7-e15d-1195" name="Infernal Weapon" hidden="false" collective="false" import="true" targetId="138e-833e-1698-8056" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="2683-1d3b-13a8-ab65" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e29-a6e9-be7f-8fbe" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="48d7-6232-c397-8936" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -803,17 +763,6 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="460c-62af-712a-d922" name="Blunderbuss (3+)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d48-a8f5-7dd2-4235" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="8989-8167-f18d-8943" name="Blunderbuss" hidden="false" targetId="7afe-6f22-2b97-27ac" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="a2de-afde-7d87-7974" name="Trait" hidden="false" collective="false" import="true" defaultSelectionEntryId="f081-86dd-b659-ed88">
@@ -894,36 +843,6 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="265.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="2ebd-ac7b-d75f-930e" name="Weapon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e289-59dd-7178-6fb5" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="92b6-7de9-a3ca-59f6" name="Flintlock Axe (3+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbba-fa8c-2e45-fd92" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="300a-89d3-6084-f86a" name="Flintlock Axe Melee" hidden="false" targetId="06dd-1877-81f7-f93d" type="profile"/>
-                <infoLink id="c85a-97a3-b91a-3844" name="Flintlock Axe" hidden="false" targetId="1338-63b0-76a0-355b" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d283-8202-5546-91c6" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4937-683e-41c2-92db" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="b7a3-b307-3bad-ea2a" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1061,6 +980,45 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="4d77-9d58-0b61-a1bf" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="73c5-a74d-ab3e-6069" name="Blunderbuss" hidden="false" collective="false" import="true" targetId="9cdb-d7a9-8c32-d058" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="007b-e966-1fcd-e6e5" name="Flintlock Axe" hidden="false" collective="false" import="true" targetId="3ae9-cf89-91e3-b982" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f4a7-0f33-1242-6fc7" name="Melee Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="a9ef-ba7a-d008-a23d" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ae9-cf89-91e3-b982" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9ef-ba7a-d008-a23d" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="9c29-2b6b-b475-5ac5" name="Infernal Weapon" hidden="false" collective="false" import="true" targetId="138e-833e-1698-8056" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -1205,45 +1163,27 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f713-adb0-7749-e4c6" name="Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f713-adb0-7749-e4c6" name="Melee Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a49b-37bf-9a33-338d" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="00ba-5d26-b575-e1ad" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc86-8da0-edfa-b1cd" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="f5cf-e5ac-84de-782a" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f53f-114d-f512-e9ec" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="279b-db09-62d9-71a3" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c996-ed34-c900-88f9" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink id="c631-9d24-400d-67b2" name="Infernal Weapon" hidden="false" collective="false" import="true" targetId="138e-833e-1698-8056" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="02a8-1ba5-28b8-85bd" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f25-1c1b-e4f9-46f8" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="7633-7618-abf1-1ed1" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-              </infoLinks>
+            </entryLink>
+            <entryLink id="e584-a24e-b8e4-0c86" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink id="889f-4441-3eff-adba" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -1397,74 +1337,28 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="5e0c-e2bb-897d-12f6" name="Close Combat Weapon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6741-f66e-d6cc-b421" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="9d9d-afd8-afe7-597f" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6cbb-6f59-2a0f-86ee" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="2d96-91a7-1d49-a029" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4242-5914-7909-85df" name="Light Lance" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77e5-084a-f268-bc9a" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c873-4dc9-dcb7-3694" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="77a0-46b6-8b99-0689" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13c7-9098-5114-a7c9" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="e1b5-0c01-1e38-ba44" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="8bb2-a718-83c2-cb23" name="Shooting Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="25ad-3c34-5738-97f2" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="37cd-3dba-60b8-860c" name="Bow (3+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9338-48ae-4d5d-36f4" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="f9e1-cc76-e9cf-ec76" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink id="fde0-3308-a0fb-0bac" name="Bow" hidden="false" collective="false" import="true" targetId="e2c0-2230-5a1a-1f08" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="6e93-b2f3-7a84-9e87" name="Throwing Weapons (3+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcd7-1668-a4ce-2aad" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="600d-4b84-dee2-2b56" name="Throwing Weapons" hidden="false" targetId="8c83-06ff-024f-a235" type="profile"/>
-              </infoLinks>
+            </entryLink>
+            <entryLink id="8de2-dced-5df2-527a" name="Throwing Weapons" hidden="false" collective="false" import="true" targetId="b672-9729-1d95-cb6d" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="9ca6-7146-e094-2d73" name="May Take (One Choice Only):" hidden="false" collective="false" import="true">
           <constraints>
@@ -1501,6 +1395,28 @@
           <entryLinks>
             <entryLink id="7d9d-482e-555d-f740" name="Unarmoured" hidden="false" collective="false" import="true" targetId="3d08-4e50-5ccc-bda0" type="selectionEntry"/>
             <entryLink id="196f-5311-d9c8-17fa" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="caea-d786-b55b-099c" name="Melee Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d85-4e43-f478-857c" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="7b93-e51d-1271-28ce" name="Light Lance" hidden="false" collective="false" import="true" targetId="7efd-252a-dcad-fa35" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="d82e-7ef2-3c67-3744" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="aeb2-1f5d-3f91-2c51" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
@@ -4315,6 +4231,30 @@ Options:</characteristic>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="9cdb-d7a9-8c32-d058" name="Blunderbuss" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1549-5762-bc42-b99c" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="e50d-e668-525d-4efb" name="Blunderbuss" hidden="false" targetId="7afe-6f22-2b97-27ac" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="138e-833e-1698-8056" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d51-030a-653d-e53c" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="1fe4-c181-67bd-f9e9" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="3ae9-cf89-91e3-b982" name="Flintlock Axe" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0bd1-9bac-8b90-3f03" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="6eaa-42ff-effb-9638" name="Flintlock Axe" hidden="false" targetId="1338-63b0-76a0-355b" type="profile"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
