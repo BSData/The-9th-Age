@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b60b-8840-3461-ebf5" name="Ogre Khans 2020" revision="37" battleScribeVersion="2.03" authorName="Karanadon, Mikel2311, DarkSky, rzmoz, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b60b-8840-3461-ebf5" name="Ogre Khans 2020" revision="38" battleScribeVersion="2.03" authorName="Karanadon, Mikel2311, DarkSky, rzmoz, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="b0d2-524e-01c5-5893" name="Chained Beasts" hidden="false"/>
     <categoryEntry id="8848-ec3f-ef30-5842" name="Powder Keg" hidden="false"/>
@@ -109,7 +109,15 @@
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72f2-2e98-9e2e-e361" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="50bb-ef5c-ccea-9bcc" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="50bb-ef5c-ccea-9bcc" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="c2f2-85bc-ce11-c49d" value="0.0">
+                          <conditions>
+                            <condition field="selections" scope="cd6f-3e17-f9cc-1bae" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="43e3-9972-b079-ea86" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                     <entryLink id="33b6-95b8-4f62-1b1c" name="OK Weapon Enchantments (Khan, Hunter)" hidden="false" collective="false" import="true" targetId="2d99-90d1-b1c3-b075" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -158,48 +166,29 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1660-9d81-1fd2-ded8" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="c94a-d2f5-7db9-1ada" name="Brace of Ogre Pistols (4+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2bb-07a3-b6d7-fcf9" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="bb57-026f-a6e8-19d5" name="Brace of Ogre Pistols (4+)" hidden="false" targetId="ab76-c5ad-a4a6-e148" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink id="3d6c-5e9d-7276-1818" name="Brace of Ogre Pistols" hidden="false" collective="false" import="true" targetId="1147-8fb6-e8e8-38af" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (4+)"/>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="4229-f135-27a3-04b5" name="Ogre Crossbow (3+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e504-5dfe-0018-f1a8" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="00b9-27f2-6ea4-5913" name="Ogre Crossbow (3+)" hidden="false" targetId="6fed-96d4-3d46-a385" type="profile"/>
-              </infoLinks>
+            </entryLink>
+            <entryLink id="909c-c5cc-9e02-8aca" name="Ogre Crossbow" hidden="false" collective="false" import="true" targetId="c545-faed-2cf3-2182" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="e1d8-3b70-8f9d-7a44" name="Melee Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02cc-f7e2-f6bb-1330" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="77d3-953d-522b-c088" name="Iron Fist" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="770e-12c7-4b85-6d91" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="a039-7c1f-af48-9f23" name="Iron Fist" hidden="false" targetId="8ad3-0e9d-3cdf-36b4" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="2395-9bab-a4e0-76be" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
               <costs>
@@ -209,6 +198,11 @@
             <entryLink id="243b-9594-eb03-f4b3" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="f4a6-614d-fb48-f1a4" name="Iron Fist" hidden="false" collective="false" import="true" targetId="43e3-9972-b079-ea86" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -292,7 +286,15 @@
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="212e-e863-89f8-f004" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="e23b-ba7c-750f-c245" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="e23b-ba7c-750f-c245" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="c2f2-85bc-ce11-c49d" value="0.0">
+                          <conditions>
+                            <condition field="selections" scope="d22b-66e0-0dc6-614c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="43e3-9972-b079-ea86" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                     <entryLink id="c2d6-11e1-3315-da98" name="OK Weapon Enchantments (Khan, Hunter)" hidden="false" collective="false" import="true" targetId="2d99-90d1-b1c3-b075" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -343,70 +345,46 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4884-65b8-593b-9c88" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="3d4f-d321-d7e3-06fd" name="Brace of Ogre Pistols (4+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1545-6351-7b9f-888a" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="ab3e-4116-b132-3ddc" name="Brace of Ogre Pistols (4+)" hidden="false" targetId="ab76-c5ad-a4a6-e148" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink id="4557-3daa-77b3-715e" name="Brace of Ogre Pistols" hidden="false" collective="false" import="true" targetId="1147-8fb6-e8e8-38af" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (4+)"/>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="6d89-f0be-afc5-7878" name="Ogre Crossbow (3+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e37c-480e-4088-01f6" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="856d-aaab-f516-eb07" name="Ogre Crossbow (3+)" hidden="false" targetId="6fed-96d4-3d46-a385" type="profile"/>
-              </infoLinks>
+            </entryLink>
+            <entryLink id="35f0-c90e-45f3-9416" name="Ogre Crossbow" hidden="false" collective="false" import="true" targetId="c545-faed-2cf3-2182" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="b09a-5d43-7cbb-fd2c" name="Melee Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="637d-288e-561b-49b3" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="96b9-d032-c183-c38e" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1e5-c0dd-70fa-6778" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6ff3-7b0e-28f2-4a70" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f22f-46f9-453e-bc22" name="Iron Fist" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6325-61dc-e698-8706" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="21dd-c0c4-3d27-2ad4" name="Iron Fist" hidden="false" targetId="8ad3-0e9d-3cdf-36b4" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="31e0-c090-08c8-6839" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75be-53e3-18a6-8362" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="5b70-ee3d-d615-85d9" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink id="3d0c-ddb7-48e4-3e5c" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink id="82ac-796f-4cb2-6989" name="Iron Fist" hidden="false" collective="false" import="true" targetId="43e3-9972-b079-ea86" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="a3ed-0692-3ca2-babe" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="6c66-0a68-5a2b-abf1" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="7fb4-bc21-b6ae-ad29">
           <constraints>
@@ -514,7 +492,15 @@
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9b4-8728-d0a1-f2f6" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="5490-c1ef-a1dd-a909" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="5490-c1ef-a1dd-a909" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="c2f2-85bc-ce11-c49d" value="0.0">
+                          <conditions>
+                            <condition field="selections" scope="0354-83f8-6656-122f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="43e3-9972-b079-ea86" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                     <entryLink id="d0f5-e3a9-73e3-dc9a" name="OK Weapon Enchantments (Shaman)" hidden="false" collective="false" import="true" targetId="80ba-f84b-6b53-c0fc" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -657,41 +643,23 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98b7-c663-381a-bec1" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="6fd8-ee3b-f02b-d3c8" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f170-b986-dfc2-0449" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="31db-3043-6ac2-fa20" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="fb50-1935-379a-40ad" name="Iron Fist" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b87-ebed-cb06-d42e" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="8fd8-6018-f15e-d5a6" name="Iron Fist" hidden="false" targetId="8ad3-0e9d-3cdf-36b4" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a890-0f80-51cb-c192" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4995-485b-0e8d-c57b" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="d679-f26d-1f30-1a38" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink id="2295-82a4-1852-f708" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink id="fcfb-b299-f62d-fe4f" name="Iron Fist" hidden="false" collective="false" import="true" targetId="43e3-9972-b079-ea86" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="f1ab-c073-8f93-7d27" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="a73e-ce9a-6da3-e4aa" name="Magic Path" hidden="false" collective="false" import="true">
           <constraints>
@@ -838,7 +806,15 @@
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9954-0ed9-2a9f-6534" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="445d-fa4d-ac9d-90f2" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="445d-fa4d-ac9d-90f2" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="c2f2-85bc-ce11-c49d" value="0.0">
+                          <conditions>
+                            <condition field="selections" scope="1f91-684b-5a72-e05d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="43e3-9972-b079-ea86" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                     <entryLink id="c276-2339-40f0-ee65" name="OK Weapon Enchantments (Khan, Hunter)" hidden="false" collective="false" import="true" targetId="2d99-90d1-b1c3-b075" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -898,98 +874,50 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c739-14e8-4186-01a1" name="Ranged Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="e200-70ec-9323-c864">
+        <selectionEntryGroup id="c739-14e8-4186-01a1" name="Shooting Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ed9-0a5b-39f6-4b87" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="748c-1373-a033-db55" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="e200-70ec-9323-c864" name="Hunting Spear (2+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5001-519f-9085-fe67" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="1008-2c9b-f29c-ffa0" name="Hunting Spear" hidden="false" targetId="d8e1-c144-925b-71db" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7626-1759-e3a9-a6b8" name="Ogre Crossbow (2+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf6d-bd67-3180-d4a5" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="e1d7-29a6-ab58-cbf7" name="Ogre Crossbow (2+)" hidden="false" targetId="6fed-96d4-3d46-a385" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <entryLinks>
+            <entryLink id="9e6f-5d07-a898-1e26" name="Ogre Crossbow" hidden="false" collective="false" import="true" targetId="c545-faed-2cf3-2182" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (2+)"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="883a-4a62-8a6f-849d" name="Hunting Spear" hidden="false" collective="false" import="true" targetId="f7a4-df98-c40d-70e9" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (2+)"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="1f04-250b-63a3-e6e9" name="Melee Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f79a-b757-fef3-5026" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="b523-11cc-4a81-fb37" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b2d-1196-d188-00bd" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="465c-b1ba-e8cf-e16f" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink id="bc03-a965-9a70-b64a" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="d764-5116-1762-5fbb" name="Iron Fist" hidden="false" collective="false" import="true" targetId="43e3-9972-b079-ea86" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="97e0-bc37-f987-bdb4" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="ecef-acdb-7806-1d87" name="Iron Fist" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="1f91-684b-5a72-e05d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0138-c481-641b-31f3" type="equalTo"/>
-                        <condition field="selections" scope="1f91-684b-5a72-e05d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2920-a556-7ce3-1ede" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0279-c046-a7df-ca8c" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="f465-43de-7e76-bc4e" name="Iron Fist" hidden="false" targetId="8ad3-0e9d-3cdf-36b4" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="36a4-1bd2-3524-18e9" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26da-9102-fcc3-e5e2" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6832-d2e9-05da-ddcc" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="75c8-9bf9-8fee-8443" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81b2-c985-3303-e1f4" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="62fa-118f-9018-13e1" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
-              </infoLinks>
+            </entryLink>
+            <entryLink id="7fe5-18d5-6f25-83c2" name="Lance" hidden="false" collective="false" import="true" targetId="b10f-350c-0581-f9c2" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="0e73-7a42-b824-78d3" name="Options" hidden="false" collective="false" import="true">
           <constraints>
@@ -3489,6 +3417,38 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="43e3-9972-b079-ea86" name="Iron Fist" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="352d-6d9f-f33f-30ea" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="3e6e-e038-257e-89a2" name="Iron Fist" hidden="false" targetId="8ad3-0e9d-3cdf-36b4" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="1147-8fb6-e8e8-38af" name="Brace of Ogre Pistols" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="448f-3b38-0679-14c9" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="1625-3dc2-916f-e1de" name="Brace of Ogre Pistols" hidden="false" targetId="ab76-c5ad-a4a6-e148" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="c545-faed-2cf3-2182" name="Ogre Crossbow" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9829-5df4-0a92-2e37" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="0991-cd3a-869e-d0d9" name="Ogre Crossbow" hidden="false" targetId="6fed-96d4-3d46-a385" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="f7a4-df98-c40d-70e9" name="Hunting Spear" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8bb-f008-a1d1-ec3c" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="e30a-fdef-b813-7198" name="Hunting Spear" hidden="false" targetId="d8e1-c144-925b-71db" type="profile"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
