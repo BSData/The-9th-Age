@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c524-67bf-fa35-6c5e" name="Sylvan Elves 2020" revision="28" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c524-67bf-fa35-6c5e" name="Sylvan Elves 2020" revision="29" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="456a-ede0-3f5f-0c44" name="Unseen Arrows" hidden="false"/>
   </categoryEntries>
@@ -118,11 +118,6 @@
                 </selectionEntryGroup>
                 <selectionEntryGroup id="c506-66f5-8389-09a0" name="Armour Enchantments" hidden="false" collective="false" import="true">
                   <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="b023-0495-c4e8-40c1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6416-5971-e93f-f961" type="equalTo"/>
-                      </conditions>
-                    </modifier>
                     <modifier type="set" field="3a4c-6580-686b-18e1" value="0.0">
                       <conditions>
                         <condition field="selections" scope="b023-0495-c4e8-40c1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3d08-4e50-5ccc-bda0" type="equalTo"/>
@@ -179,17 +174,6 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4f2c-b023-df2f-169c" name="Elven Cloak" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c94e-ed84-c76f-51c7" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="64ce-7eaa-b135-66d4" name="Elven Cloak" hidden="false" targetId="653d-57ee-da4b-ee00" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="6416-5971-e93f-f961" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="9d3d-e344-a91a-2171">
@@ -204,69 +188,22 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
+            <entryLink id="af7b-70fe-4df7-3505" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="7e5a-02fa-d071-572c" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" and Light Armour"/>
+              </modifiers>
+              <entryLinks>
+                <entryLink id="2de0-a33e-9e5a-97d1" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e00-b430-f5a2-143c" type="min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
           </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7cc9-34fc-8b54-f8da" name="Melee Weapon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1bb4-3a02-b548-5ec0" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="8b11-044c-93e5-d11b" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="922d-b44f-192d-b615" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6c6e-478b-e20c-b945" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="555e-104c-db15-c963" name="Sylvan Blades" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="286f-758f-4af1-f55a" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="2af0-dbd6-6ec6-7cdf" name="Sylvan Blades" hidden="false" targetId="16d2-a28e-d542-301d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="01d1-573b-8b7c-5504" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60fa-f02f-9be6-e040" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="9db2-c101-625e-e6e6" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="fdf4-0c53-4c0c-3c89" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f0e-d615-7a45-680f" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="457f-68b5-1606-424a" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4223-bfd9-0564-3229" name="Sylvan Lance" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="deed-f4ab-cfc8-1958" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="641b-e685-01d3-459d" name="Sylvan Lance" hidden="false" targetId="eace-9ec6-ad08-1b91" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="9583-ca13-4ca0-b8e3" name="Mount" hidden="false" collective="false" import="true">
           <constraints>
@@ -294,6 +231,53 @@
             <entryLink id="d0f2-109e-3e06-11b3" name="Eagle King" hidden="false" collective="false" import="true" targetId="62ed-ad30-adba-b070" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b116-92e9-7782-2a88" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b880-9313-d32c-0d90" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="114a-98ee-66f6-8892" name="Sylvan Longbow" hidden="false" collective="false" import="true" targetId="6812-9b23-5c3d-e85c" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (0+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9132-5777-081b-89b4" name="Melee Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3dbd-ddc3-feb4-1c99" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="93d0-7df4-f3d6-d575" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="2c89-32e7-895d-8b1c" name="Lance" hidden="false" collective="false" import="true" targetId="b10f-350c-0581-f9c2" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="de82-3df0-b349-d38f" name="Spear" hidden="false" collective="false" import="true" targetId="e79a-e00b-b0ee-6850" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="82f6-a5bb-1ea4-2cce" name="Sylvan Blades" hidden="false" collective="false" import="true" targetId="e470-8d60-5ce0-695c" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="99e8-e27d-fa6d-48a3" name="Sylvan Lance" hidden="false" collective="false" import="true" targetId="fafb-3984-fa84-094f" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -464,17 +448,6 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="aaac-c9a1-f256-fc3a" name="Sylvan Longbow (1+)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="62e4-78ed-cba8-90b9" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="12ae-87b2-0127-aeec" name="Sylvan  (1+)" hidden="false" targetId="c53e-d709-b88e-c4ce" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="bd21-b53a-973d-6ea3" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -493,80 +466,39 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c7a5-7ed1-ea2f-bce2" name="Elven Cloak" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0888-3155-5165-6337" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="9ac8-0dba-0716-1e7a" name="Elven Cloak" hidden="false" targetId="653d-57ee-da4b-ee00" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="718c-d5a0-07ba-230a" name="Melee Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8a2f-6e9a-00aa-0b84" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="6dec-24b9-2ce8-e210" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2c2f-9702-0d57-2ce5" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="eefd-9982-71e2-3c77" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink id="5828-1ad5-dc85-d1c8" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="0c40-2675-c75b-6c17" name="Lance" hidden="false" collective="false" import="true" targetId="b10f-350c-0581-f9c2" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="489b-81af-6185-4460" name="Spear" hidden="false" collective="false" import="true" targetId="e79a-e00b-b0ee-6850" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="c8bd-697a-d834-4615" name="Sylvan Blades" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2121-9ca8-2736-2e05" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="d094-edde-be74-78f8" name="Sylvan Blades" hidden="false" targetId="16d2-a28e-d542-301d" type="profile"/>
-              </infoLinks>
+            </entryLink>
+            <entryLink id="f8f9-8846-e09f-a315" name="Sylvan Blades" hidden="false" collective="false" import="true" targetId="e470-8d60-5ce0-695c" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="d103-b0ee-e746-d4e1" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1431-e620-5242-6597" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6ce6-f0f3-ce87-c612" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ef40-e80b-65ae-d790" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc65-b891-3842-4de9" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="bd43-f0c4-ec69-d3d2" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7e87-3781-0eac-0c55" name="Sylvan Lance" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e8ae-df67-15f1-f304" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="309d-7ef4-1846-8d38" name="Sylvan Lance" hidden="false" targetId="eace-9ec6-ad08-1b91" type="profile"/>
-              </infoLinks>
+            </entryLink>
+            <entryLink id="0d5a-083b-eb00-9be4" name="Sylvan Lance" hidden="false" collective="false" import="true" targetId="fafb-3984-fa84-094f" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="f957-6951-921a-f4a7" name="Mount" hidden="false" collective="false" import="true">
           <constraints>
@@ -601,6 +533,36 @@
           <entryLinks>
             <entryLink id="2dd0-7a1c-30f9-89af" name="Unarmoured" hidden="false" collective="false" import="true" targetId="3d08-4e50-5ccc-bda0" type="selectionEntry"/>
             <entryLink id="cfab-97f3-7433-c03b" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="0243-92a3-ff15-8de9" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="7e5a-02fa-d071-572c" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" and Light Armour"/>
+              </modifiers>
+              <entryLinks>
+                <entryLink id="2fd1-0fa1-d4dd-afbe" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b675-ad6b-3a50-ab97" type="min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9bcb-fe82-91c0-7b16" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88ce-d318-2953-4f50" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="db5c-8e20-d976-fb95" name="Sylvan Longbow" hidden="false" collective="false" import="true" targetId="6812-9b23-5c3d-e85c" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (1+)"/>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
@@ -715,28 +677,6 @@
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4a8a-94b1-2b27-f329" name="Sylvan Longbow (3+)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c77f-6736-dd1e-a918" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="812a-ab73-eba8-0cca" name="Sylvan Longbow (3+)" hidden="false" targetId="c53e-d709-b88e-c4ce" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e80c-10de-271e-5a39" name="Sylvan Blades" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce1c-6c93-7271-be6c" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="3e73-54cd-b017-f481" name="Sylvan Blades" hidden="false" targetId="16d2-a28e-d542-301d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -907,6 +847,27 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="7c84-03e3-a72f-c376" name="Melee Weapon" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="d490-16ca-0318-8d30" name="Sylvan Blades" hidden="false" collective="false" import="true" targetId="e470-8d60-5ce0-695c" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="a846-82b0-e8f7-d230" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="842c-4a3f-de2e-78f3" name="Sylvan Longbow" hidden="false" collective="false" import="true" targetId="6812-9b23-5c3d-e85c" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -3452,6 +3413,47 @@ Dance of Bedevilments: Fear, and enemy units in base contact with the model do n
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="7e5a-02fa-d071-572c" name="Elven Cloak" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cff2-08ab-c684-583e" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="3005-1c82-63dc-cb73" name="Elven Cloak" hidden="false" targetId="653d-57ee-da4b-ee00" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="6541-615e-0417-c4d9" name="Impaling Roots" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56c2-7fa7-54cb-454f" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="eac8-d345-544c-2fea" name="Impaling Roots" hidden="false" targetId="e86f-9c35-81dc-f09d" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="6812-9b23-5c3d-e85c" name="Sylvan Longbow" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d51d-9c73-06a2-b77e" type="max"/>
+        <constraint field="selections" scope="roster" value="55.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="55df-b455-b9bd-c6f5" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="6907-ee92-e16f-8e51" name="Sylvan Longbow" hidden="false" targetId="c53e-d709-b88e-c4ce" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="e470-8d60-5ce0-695c" name="Sylvan Blades" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="419d-5025-4611-2011" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="6975-2648-05dc-f247" name="Sylvan Blades" hidden="false" targetId="16d2-a28e-d542-301d" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="fafb-3984-fa84-094f" name="Sylvan Lance" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6502-267f-0be3-8599" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="25b7-d2b1-0ca6-80c5" name="Sylvan Lance" hidden="false" targetId="eace-9ec6-ad08-1b91" type="profile"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
