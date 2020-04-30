@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c524-67bf-fa35-6c5e" name="Sylvan Elves 2020" revision="30" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c524-67bf-fa35-6c5e" name="Sylvan Elves 2020" revision="31" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="456a-ede0-3f5f-0c44" name="Unseen Arrows" hidden="false"/>
   </categoryEntries>
@@ -2930,6 +2930,176 @@ Dance of Bedevilments: Fear, and enemy units in base contact with the model do n
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="435.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b474-747e-a46b-bd16" name="Sylvan Giant" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="decrement" field="4e48-0fb8-ec17-1336" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="142b-2963-33de-cf84" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a735-b492-9f88-9bd7" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a24-2eb3-7301-f9fe" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e0fa-3a8f-9243-0040" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e48-0fb8-ec17-1336" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="69c0-577c-27ff-e765" name="Sylvan Giant Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <modifiers>
+            <modifier type="set" field="7bbb-3d47-ed57-284d" value="75×100">
+              <conditions>
+                <condition field="selections" scope="b474-747e-a46b-bd16" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d37c-ec68-bf0c-998c" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×75</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9faa-f537-78d9-7e41" name="Sylvan Giant Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+        <profile id="4fde-6a24-e353-0265" name="Sylvan Giant Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <modifiers>
+            <modifier type="set" field="f381-7850-7fa8-3440" value="8">
+              <conditions>
+                <condition field="selections" scope="b474-747e-a46b-bd16" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d37c-ec68-bf0c-998c" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Shield</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1862-170a-71a5-9bc0" name="Sylvan Giant Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Rage</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="7138-f0a6-4473-2b42" name="Rage" hidden="false">
+          <description>Attack Attribute – Close Combat.
+Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers -1 Attack Value.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="f4e6-1a6b-6037-ca58" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
+        <infoLink id="fa86-4217-df06-d53f" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="a7d5-f562-c4f1-1282" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (Forest)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7ef4-cd5f-d590-6979" name="New CategoryLink" hidden="false" targetId="456a-ede0-3f5f-0c44" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d37c-ec68-bf0c-998c" name="Big Brother" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaf0-a350-0f34-8f23" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="0ce5-e829-facf-63f5" name="Big Brother" hidden="false">
+              <description>Universal Rule.
+The model’s Health Points are set to 8, and its base size is changed to 75×100 mm. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="dac0-3eff-afd0-2b7d" name="Equipment" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0506-5d26-1507-b31a" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ca59-538c-2ba1-2e22" name="Giant Club" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="277b-4bf5-d6f7-c97d" name="Giant Club" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
+                  <characteristics>
+                    <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+1</characteristic>
+                    <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
+                    <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f99e-6d78-99ef-6761" name="Sapling Bow (4+)" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="083a-932d-818a-9e26" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="61ef-1277-b741-ba41" name="Sapling Bow (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">30&quot;</characteristic>
+                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
+                    <characteristic name="Str" typeId="f166-13ff-9227-4525">3 [6]</characteristic>
+                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">3 [10]</characteristic>
+                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Artillery Weapon, Area Attack (1×5)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b8f6-628c-c53d-adcd" name="Bone Break Dancer" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="8fa5-35ee-f8e2-be12" name="Bone Break Dancer" hidden="false">
+                  <description>Universal Rule.
+At the start of each Round of Combat, choose one of the dances listed below and apply its effects until the end of the Round of Combat. The model cannot choose this dance again until after one of the following has happened:
+• The model is no longer Engaged in Combat.
+• The model has chosen a different dance.
+
+Belly Dancing – +2 Offensive Skill and +2 Defensive Skill.
+Jump! – +1 Armour Penetration and Lethal Strike.
+Tap Dancing – Stomp Attacks (D6+2).
+The Twist – Enemy units in base contact do not receive any Rank Bonus to their Combat Score.
+</description>
+                </rule>
+              </rules>
+              <entryLinks>
+                <entryLink id="8e99-abaa-b03c-8adc" name="Sylvan Blades" hidden="false" collective="false" import="true" targetId="e470-8d60-5ce0-695c" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1436-ab7e-5050-f270" type="min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="295.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
