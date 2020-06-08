@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c837-5cf4-590b-b3bb" name="Nippon 2.2" revision="1" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c837-5cf4-590b-b3bb" name="Nippon 2.2" revision="2" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="35" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="2e5e-f748-ed22-f2a1" name="Ranged Warfare" hidden="false"/>
     <categoryEntry id="f105-3523-d08e-edd6" name="Imperial Armoury" hidden="false"/>
@@ -26,11 +26,25 @@
           </constraints>
         </categoryLink>
         <categoryLink id="a807-271f-f3e9-b81d" name="Imperial Armoury" hidden="false" targetId="f105-3523-d08e-edd6" primary="false">
+          <modifiers>
+            <modifier type="set" field="0bc8-4f4e-4f77-679a" value="20.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e28b-4e88-e6cf-f58f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="10.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="0bc8-4f4e-4f77-679a" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="4fdf-47ef-44d3-a3f8" name="Will of the Kami" hidden="false" targetId="1d97-9bd9-4eb6-cd23" primary="false">
+          <modifiers>
+            <modifier type="set" field="3de3-d025-8cfd-6e91" value="20.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e28b-4e88-e6cf-f58f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="40.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="3de3-d025-8cfd-6e91" type="max"/>
           </constraints>
@@ -46,58 +60,65 @@
   <selectionEntries>
     <selectionEntry id="6970-2319-ca5e-e4eb" name="Clan Mons" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b05-672c-8134-1ba9" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b05-672c-8134-1ba9" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="a556-e5e7-4ab0-41eb" name="Ashiwara Clan Army" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c2cc-79c2-f728-66c4" name="Clan Mons" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="34d5-f0fa-04c9-7cf2" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e369-4963-4486-aa9d" type="max"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3ef8-fcc2-ba8a-240a" name="Taneka Clan Army" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0689-3610-a684-1fdd" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b542-b9a1-9c45-adca" name="Shinzei Clan Army" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d12a-1084-eef0-dcb2" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1dc4-e9ca-5a61-0c13" name="Horumi Clan Army" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4683-ebe8-f3b3-703c" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5a99-0b52-969b-c251" name="Daimatzu Clan Army" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1aea-02dc-0fa3-e04d" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e28b-4e88-e6cf-f58f" name="Batake Clan Army" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="326b-2170-6ad3-2a65" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <selectionEntries>
+            <selectionEntry id="34a4-2923-6286-22e2" name="Ashiwara Clan Army" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="196f-c979-43b3-090d" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e28b-4e88-e6cf-f58f" name="Batake Clan Army" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9162-832a-f1e2-a798" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5a99-0b52-969b-c251" name="Daimatzu Clan Army" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a379-8bec-af78-a8d6" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1dc4-e9ca-5a61-0c13" name="Horumi Clan Army" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2826-0b4a-6075-f900" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b542-b9a1-9c45-adca" name="Shinzei Clan Army" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7da9-b54b-8c02-bf84" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3ef8-fcc2-ba8a-240a" name="Taneka Clan Army" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4cc7-4101-b7c0-42c8" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -320,7 +341,7 @@
               <modifiers>
                 <modifier type="set" field="f75c-cc76-8d5d-079c" value="0.0">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a556-e5e7-4ab0-41eb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="34a4-2923-6286-22e2" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -600,7 +621,7 @@
               <modifiers>
                 <modifier type="set" field="f75c-cc76-8d5d-079c" value="0.0">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a556-e5e7-4ab0-41eb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="34a4-2923-6286-22e2" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1211,7 +1232,7 @@ two consecutive Rounds of the same Combat. The effects last until the end of the
               <modifiers>
                 <modifier type="set" field="f75c-cc76-8d5d-079c" value="0.0">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a556-e5e7-4ab0-41eb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="34a4-2923-6286-22e2" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1596,6 +1617,11 @@ Any automatic wound caused by the Shinobi’s Poison Attacks (including wounds c
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" field="f75c-cc76-8d5d-079c" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="34a4-2923-6286-22e2" type="equalTo"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
             <entryLink id="577a-20c9-9546-54bd" name="Mon of the Daimatzu Clan" hidden="false" collective="false" import="true" targetId="199b-f845-6683-d34f" type="selectionEntry">
@@ -1604,6 +1630,11 @@ Any automatic wound caused by the Shinobi’s Poison Attacks (including wounds c
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
+                </modifier>
+                <modifier type="set" field="827d-b1cb-87e2-d542" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a99-0b52-969b-c251" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -1756,6 +1787,11 @@ Any automatic wound caused by the Shinobi’s Poison Attacks (including wounds c
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" field="824a-7ab2-2fb1-9267" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ef8-fcc2-ba8a-240a" type="equalTo"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
             <entryLink id="9964-e1e0-a0d3-c2c4" name="Mon of the Ashiwara Clan" hidden="false" collective="false" import="true" targetId="6107-f95b-2ab0-ebbd" type="selectionEntry">
@@ -1768,6 +1804,11 @@ Any automatic wound caused by the Shinobi’s Poison Attacks (including wounds c
                 <modifier type="set" field="f75c-cc76-8d5d-079c" value="0.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e124-7a2c-82fa-a37e" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="f75c-cc76-8d5d-079c" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="34a4-2923-6286-22e2" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1944,6 +1985,9 @@ Any automatic wound caused by the Shinobi’s Poison Attacks (including wounds c
       </costs>
     </selectionEntry>
     <selectionEntry id="286d-dbb9-9709-0e66" name="Ashigaru Bowmen" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cdec-6d81-e3e6-8b7d" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="3ab8-dbe1-101e-1983" name="Sashimonos" hidden="false" targetId="66fa-0aaf-47a8-5b9c" type="rule"/>
         <infoLink id="6f61-212b-c0c9-8e8d" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
@@ -1962,7 +2006,6 @@ Any automatic wound caused by the Shinobi’s Poison Attacks (including wounds c
           <constraints>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d08-3485-13f2-3b00" type="min"/>
             <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72d0-a94d-7a89-4ab0" type="max"/>
-            <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8f22-1c72-fa0b-78cc" type="max"/>
           </constraints>
           <profiles>
             <profile id="d092-2085-745b-2132" name="Ashigaru Bowman Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2109,7 +2152,20 @@ Any automatic wound caused by the Shinobi’s Poison Attacks (including wounds c
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" field="b849-ebeb-9318-a83c" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e28b-4e88-e6cf-f58f" type="equalTo"/>
+                  </conditions>
+                </modifier>
               </modifiers>
+              <rules>
+                <rule id="50b4-6844-6c55-a3ce" name="Shooting in Extra Rank" hidden="false">
+                  <description>This unit can perform shooting attacks from an extra rank (usually the 3rd).</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="88d8-a12e-7012-bd74" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+              </infoLinks>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -2194,6 +2250,11 @@ Any automatic wound caused by the Shinobi’s Poison Attacks (including wounds c
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
+                </modifier>
+                <modifier type="set" field="251f-fbe5-9b56-b08c" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1dc4-e9ca-5a61-0c13" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -2338,6 +2399,11 @@ Any automatic wound caused by the Shinobi’s Poison Attacks (including wounds c
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" field="827d-b1cb-87e2-d542" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a99-0b52-969b-c251" type="equalTo"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -2431,7 +2497,7 @@ You must choose one of the two dances for the Kabuki Dolls to perform at step 2 
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="d463-d430-a9b7-7547" name="Kabuki Doll Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2468,11 +2534,19 @@ You must choose one of the two dances for the Kabuki Dolls to perform at step 2 
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" field="2850-dc69-88b0-2a5d" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b542-b9a1-9c45-adca" type="equalTo"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="be16-e903-bcec-6cbf" name="Ronin" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -2533,7 +2607,7 @@ Immediately after an unengaged unit of Ronin comes into contact with an enemy un
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="9041-19e6-577b-7206" name="Ronin Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2557,6 +2631,9 @@ Immediately after an unengaged unit of Ronin comes into contact with an enemy un
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="614b-db1c-f63a-ddc2" name="Red Devils" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -2651,6 +2728,11 @@ Immediately after an unengaged unit of Ronin comes into contact with an enemy un
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" field="824a-7ab2-2fb1-9267" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ef8-fcc2-ba8a-240a" type="equalTo"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -2730,7 +2812,7 @@ Immediately after an unengaged unit of Ronin comes into contact with an enemy un
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="9336-e03a-4379-ae95" name="Wako Pirate Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2814,7 +2896,7 @@ Immediately after an unengaged unit of Ronin comes into contact with an enemy un
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="32a4-d533-b21d-6b90" name="Ninja Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2851,6 +2933,11 @@ Immediately after an unengaged unit of Ronin comes into contact with an enemy un
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" field="2850-dc69-88b0-2a5d" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b542-b9a1-9c45-adca" type="equalTo"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -2874,6 +2961,9 @@ Immediately after an unengaged unit of Ronin comes into contact with an enemy un
               <infoLinks>
                 <infoLink id="0fd2-998d-1023-2341" name="Ambush" hidden="false" targetId="2dda-ee2f-cfce-7f16" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="182e-47b6-d317-f7f7" name="Scout and Vanguard" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -2890,6 +2980,9 @@ Immediately after an unengaged unit of Ronin comes into contact with an enemy un
                 <infoLink id="8b6d-358a-d0df-282d" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
                 <infoLink id="baa3-04f3-b2f6-fc08" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2991,6 +3084,11 @@ The Shooting Attack gains Shots 2. Additionally, when shooting from Short Range,
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" field="824a-7ab2-2fb1-9267" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ef8-fcc2-ba8a-240a" type="equalTo"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
             <entryLink id="c939-4962-6fbd-2846" name="Mon of the Ashiwara Clan" hidden="false" collective="false" import="true" targetId="6107-f95b-2ab0-ebbd" type="selectionEntry">
@@ -2999,6 +3097,11 @@ The Shooting Attack gains Shots 2. Additionally, when shooting from Short Range,
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
+                </modifier>
+                <modifier type="set" field="f75c-cc76-8d5d-079c" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="34a4-2923-6286-22e2" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -3057,7 +3160,7 @@ The Shooting Attack gains Shots 2. Additionally, when shooting from Short Range,
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="2fbb-cad8-002c-637f" name="Fire Arrow Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3115,7 +3218,7 @@ Before shooting the Fire Arrow, the model may choose to gain Flaming Attacks for
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="9217-420a-ba17-6bcb" name="Mangonel Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3196,7 +3299,7 @@ Oni cannot benefit from Commanding Presence or Rally Around the Flag.</descripti
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="8821-201a-f027-27e9" name="Oni Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3266,7 +3369,7 @@ Oni cannot benefit from Commanding Presence or Rally Around the Flag.</descripti
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="ef4a-c201-8b6c-6c39" name="Kitsune Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3320,7 +3423,7 @@ Enemy models in units in Base Contact with one or more Kitsune suffer -1 Offensi
             <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="20a3-499c-834c-218e" name="Mizuchi Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -3328,7 +3431,7 @@ Enemy models in units in Base Contact with one or more Kitsune suffer -1 Offensi
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="dec8-5a22-9365-a58c" name="Mizuchi Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3372,7 +3475,7 @@ If the Mizuchi touches a Water Terrain feature at the beginning of any of its mo
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="d719-3664-284b-4502" name="Mikoshi Shrine Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -3389,7 +3492,7 @@ If the Mizuchi touches a Water Terrain feature at the beginning of any of its mo
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
         <profile id="c8c4-cce4-505a-ba5a" name="Mikoshi Shrine Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3436,6 +3539,13 @@ Friendly units in 6&quot; gain Aegis (5+, against Ranged Attacks). Additionally,
       </selectionEntries>
       <entryLinks>
         <entryLink id="b0cc-0e63-fa57-e1bd" name="Mon of the Horumi Clan" hidden="false" collective="false" import="true" targetId="d924-5a6d-7b2d-7493" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="251f-fbe5-9b56-b08c" value="0.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1dc4-e9ca-5a61-0c13" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
@@ -3506,7 +3616,7 @@ Friendly units in 6&quot; gain Aegis (5+, against Ranged Attacks). Additionally,
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="7733-f5f9-2242-86b1" name="Great Guard Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3558,6 +3668,11 @@ Friendly units in 6&quot; gain Aegis (5+, against Ranged Attacks). Additionally,
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
+            </modifier>
+            <modifier type="set" field="824a-7ab2-2fb1-9267" value="0.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ef8-fcc2-ba8a-240a" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
         </entryLink>
