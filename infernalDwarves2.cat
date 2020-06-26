@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ed3b-0fdf-b39c-32b0" name="Infernal Dwarves 2020.2 Beta1" revision="3" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ed3b-0fdf-b39c-32b0" name="Infernal Dwarves 2020.2 Beta1" revision="4" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="f410-d87f-bb92-f6cb" name="Instruments of Destruction" hidden="false"/>
     <categoryEntry id="95f0-1c8c-90dd-ed0b" name="Flyer" hidden="false"/>
@@ -2700,12 +2700,12 @@ The model’s Grind Attacks from Volcanic Embrace gain +1 to wound. In addition,
             <modifier type="append" field="name" value=" (5+)"/>
           </modifiers>
         </infoLink>
-        <infoLink id="e9e3-a848-a192-6b9b" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
         <infoLink id="4e7b-72bc-74f3-cf36" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (2+, against Flaming Attacks)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="4008-e7a3-4f2e-2233" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="746e-0e37-698b-4a50" name="New CategoryLink" hidden="false" targetId="f410-d87f-bb92-f6cb" primary="true"/>
@@ -3222,7 +3222,7 @@ If joined to a Taurukh Anointed unit, when a R&amp;F model from its unit is remo
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditions>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="829e-4217-277d-fb7d" type="equalTo"/>
+                        <condition field="selections" scope="aaf9-3bce-8cc5-2b58" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="829e-4217-277d-fb7d" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -3996,7 +3996,7 @@ When successfully casting a spell from:
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19b0-18ba-7117-7adb" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="d836-a6d4-8263-5f2e" name="Blunderbuss" hidden="true" collective="false" import="true" targetId="9cdb-d7a9-8c32-d058" type="selectionEntry">
+            <entryLink id="d836-a6d4-8263-5f2e" name="Blunderbuss" hidden="false" collective="false" import="true" targetId="9cdb-d7a9-8c32-d058" type="selectionEntry">
               <modifiers>
                 <modifier type="append" field="name" value=" (4+)"/>
               </modifiers>
@@ -4004,7 +4004,7 @@ When successfully casting a spell from:
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
-            <entryLink id="c607-e7ed-2950-3a1e" name="Flintlock Axe" hidden="true" collective="false" import="true" targetId="3ae9-cf89-91e3-b982" type="selectionEntry">
+            <entryLink id="c607-e7ed-2950-3a1e" name="Flintlock Axe" hidden="false" collective="false" import="true" targetId="3ae9-cf89-91e3-b982" type="selectionEntry">
               <modifiers>
                 <modifier type="append" field="name" value=" (2+)"/>
               </modifiers>
@@ -4260,7 +4260,7 @@ Can only be taken by models with Infernal Brand.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a249-135d-0aa1-2fbb" name="Blaze of Protection" hidden="false" collective="false" import="true" type="upgrade">
@@ -4963,7 +4963,7 @@ Failed Charge Range rolls of the model in the Charge Phase must be rerolled.</de
       <description>When fighting an enemy unit in the enemy’s Flank or Rear Facing while only being Engaged in the Front Facing, a model part with this rule must reroll failed to-hit rolls.</description>
     </rule>
     <rule id="02ab-566d-7f51-fee2" name="Volcanic Embrace" hidden="false">
-      <description>The model part gains Magical Attacks. All Melee Attacks (including Special Attacks) made by model parts with Volcanic Embrace become Flaming Attacks. In addition, at Initiative Step 0, all enemy models in base contact with one or more model parts with Volcanic Embrace suffer a hit with Strength 4, Armour Penetration 0, and Flaming Attacks. Models with Volcanic Embrace automatically fail all Fortitude Saves.</description>
+      <description>The model part gains Grind Attacks (X), where X corresponds to the value stated in brackets. These Grind Attacks are resolved with Strength 4 and Armour Penetration 0. In addition, all attacks made by the model part, including Special Attacks, gain Kadim Manifestation.</description>
     </rule>
     <rule id="e922-37f3-2937-7749" name="Fires of Industry" hidden="false">
       <description>The sum of the Fires of Industry values stated in brackets of all models in the army is restricted to 0–6 per Army.</description>
@@ -5050,15 +5050,11 @@ The Battering Ram can only use its Crush Attack against enemy units Engaged in t
     </profile>
     <profile id="7afe-6f22-2b97-27ac" name="Blunderbuss" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">10&quot; </characteristic>
+        <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">18&quot; </characteristic>
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-        <characteristic name="Str" typeId="f166-13ff-9227-4525">5</characteristic>
-        <characteristic name="AP" typeId="857a-4ce1-d134-8701">0</characteristic>
-        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire, March and Shoot.
-Attacks with this weapon do not suffer negative to-hit modifiers from a Stand and Shoot Charge Reaction.
-When shooting with a unit that has more than half of its models equipped with a Blunderbuss and
-● exactly 3 Full Ranks, each natural successful to-hit roll of &apos;6&apos; with a Blunderbuss causes two hits instead of one.
-● 4 or more Full Ranks, each successful to-hit roll with a Blunderbuss causes two hits instead of one.</characteristic>
+        <characteristic name="Str" typeId="f166-13ff-9227-4525">3</characteristic>
+        <characteristic name="AP" typeId="857a-4ce1-d134-8701">1</characteristic>
+        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Area Attack (2×1), Quick to Fire. Failed to-hit rolls of ‘1’ when shooting at Short Range must be rerolled.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
