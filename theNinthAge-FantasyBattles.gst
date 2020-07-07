@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2020" revision="37" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2020" revision="38" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -454,7 +454,7 @@
         <profile id="2578-ad31-a24c-3915" name="Rod of Battle" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/9): Type: Augment. Range 12&quot;. Duration: Lasts One Turn. The target gains +1 to hit with its Close Combat Attacks.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/8): Type: Augment. Range 12′′. Duration: One Turn. The target gains +1 to hit with its Close Combat Attacks.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -984,6 +984,9 @@
       <infoLinks>
         <infoLink id="4a63-9604-b76c-97f6" name="Commanding Presence" hidden="false" targetId="2304-d0e4-f97b-c4e5" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="1816-6a9c-7e82-694a" name="Battle Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -994,6 +997,9 @@
         <infoLink id="4e1b-5abe-4201-b32a" name="Rally Around the Flag" hidden="false" targetId="bf56-e3dc-41ca-292b" type="rule"/>
         <infoLink id="df4b-2178-ea99-76b9" name="Not a Leader" hidden="false" targetId="f611-6165-ada9-0d7d" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

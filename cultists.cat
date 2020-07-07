@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="baa8-f7ce-e46d-ad72" name="Cultists 2020 Beta 1" revision="7" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="baa8-f7ce-e46d-ad72" name="Cultists 2020 Beta 3" revision="8" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="544c-85ec-a241-28a3" name="2 Defensive (DL)">
       <characteristicTypes>
@@ -15,7 +15,6 @@
   <categoryEntries>
     <categoryEntry id="93a9-b195-fea7-12ff" name="Summoned Daemons" hidden="false"/>
     <categoryEntry id="2f76-5aa4-554a-46bf" name="Summoned Daemons (Aves)" hidden="false"/>
-    <categoryEntry id="744c-c3fb-3ae7-392f" name="Gift from Divine Entity" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2792-3989-3c15-f69e" name="Cultists" hidden="false">
@@ -41,18 +40,6 @@
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="663d-89b7-faaf-e066" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="87d0-7d30-b874-7c65" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false">
-          <modifiers>
-            <modifier type="increment" field="ff63-0b10-bf55-0e30" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="68a3-5585-1749-d935" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff63-0b10-bf55-0e30" type="max"/>
-          </constraints>
-        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -64,12 +51,12 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c1e7-71e3-168c-5e5c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="24fd-8af8-0c78-001c" value="20.0">
+        <modifier type="increment" field="24fd-8af8-0c78-001c" value="10.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="570e-d73a-11da-1ef9" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="24fd-8af8-0c78-001c" value="25.0">
+        <modifier type="increment" field="24fd-8af8-0c78-001c" value="10.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
           </conditions>
@@ -210,14 +197,17 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="697e-0a6f-6af7-907f" type="max"/>
           </constraints>
           <rules>
-            <rule id="f10e-ba77-5ad8-563c" name="Master of Ritual" hidden="false"/>
+            <rule id="f10e-ba77-5ad8-563c" name="Master of Ritual" hidden="false">
+              <description>Universal Rule.
+The model gains +1 Discipline, Daemonic Summon, Scout, and its Commanding Presence range is set to 18′′</description>
+            </rule>
           </rules>
           <infoLinks>
             <infoLink id="bdb1-2ef5-193d-a07c" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
             <infoLink id="249a-53a5-43a7-b72f" name="Daemonic Summon" hidden="false" targetId="d43d-525d-83ec-eab1" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0e0b-207e-9f33-2602" name="Army General" hidden="false" collective="false" import="true" type="upgrade">
@@ -280,9 +270,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="273a-5667-d451-b352" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="1cd0-237a-c50b-fde9" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
-          </categoryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
@@ -556,7 +543,7 @@
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dc61-4022-1d7b-d478" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="b03b-4751-ae6d-1a94" name="Cult Artefacts (Symbiote)" hidden="false" collective="false" import="true" targetId="bf3a-eb7d-ca14-649d" type="selectionEntryGroup"/>
+                    <entryLink id="b03b-4751-ae6d-1a94" name="Cult Artefacts" hidden="false" collective="false" import="true" targetId="b342-eecd-13c4-8ec9" type="selectionEntryGroup"/>
                     <entryLink id="f794-dabf-0bfc-4640" name="Artefacts (Wizards)" hidden="false" collective="false" import="true" targetId="ab25-3916-e8af-98cb" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -746,18 +733,29 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e3d3-2848-cc87-c647" name="Cultists" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="1953-ba6b-76ee-5ecb" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+        <infoLink id="5f66-94bc-b42b-0b8e" name="Pledged to Darkness" hidden="false" targetId="573e-bde4-9daf-3ef0" type="rule"/>
+        <infoLink id="4234-a789-1144-30de" name="Sacrifical Offerings" hidden="false" targetId="58ab-7b3c-c7b7-3f5b" type="rule"/>
+        <infoLink id="6de2-4fe3-b0b1-ac52" name="Unstable" hidden="false" targetId="b642-5b33-158d-421b" type="rule"/>
+        <infoLink id="b018-185a-9c38-a2a3" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (Battle Focus)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="8a53-04d8-4133-161c" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="598d-ca6a-5793-8e6b" name="Cultist" hidden="false" collective="false" import="true" type="model">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="570e-d73a-11da-1ef9" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d20e-a72c-60b4-2d4a" type="equalTo"/>
               </conditions>
@@ -769,7 +767,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="049b-c948-2199-c40d" type="max"/>
+            <constraint field="selections" scope="parent" value="40.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="049b-c948-2199-c40d" type="max"/>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cad7-a9ff-c113-1743" type="min"/>
           </constraints>
           <profiles>
@@ -906,14 +904,6 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="3.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2f80-f21a-5f85-c571" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cedb-75f9-7d57-cc3c" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="2310-df43-b6ef-763e" name="Cult Operation" hidden="false" collective="false" import="true">
@@ -929,13 +919,19 @@
                 <infoLink id="54f4-bfb6-65fb-e2c6" name="Wizard Conclave" hidden="false" targetId="7455-f914-028b-3359" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2686-1c0f-3451-cd1f" name="Unholy Conduit" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2686-1c0f-3451-cd1f" name="Abyssal Conduit" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="88a8-a88e-bbd3-c295" type="max"/>
               </constraints>
+              <rules>
+                <rule id="587f-7885-9597-1048" name="Abyssal Conduit" hidden="false">
+                  <description>Universal Rule.
+One model in the unit that is not a Champion or Musician becomes a Standard Bearer with Channel (1) and Daemonic Summon.</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="d8ca-f48d-8752-342a" name="Daemonic Summon" hidden="false" targetId="d43d-525d-83ec-eab1" type="rule"/>
                 <infoLink id="734b-fefd-98b1-7247" name="Channel" hidden="false" targetId="5a46-f1e8-f840-a1de" type="rule">
@@ -949,9 +945,23 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="7745-e20a-2055-02fc" name="Infiltrators" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="7edc-fe36-dfa0-81d1" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="69ab-62c0-bad7-8a68" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7edc-fe36-dfa0-81d1" type="max"/>
               </constraints>
+              <rules>
+                <rule id="86b1-a926-f116-b8ab" name="Infiltrators" hidden="false">
+                  <description>Universal Rule.
+The model gains Scout and loses Scoring.</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="026c-484e-f6b8-a3a6" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
               </infoLinks>
@@ -961,7 +971,52 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="4fd5-a3b6-05e2-d8b6" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="6a6a-c10a-5b26-e917" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cab0-6a93-00e8-230b" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ffc5-d0b7-5b83-1639" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32da-7356-fbc6-b1d5" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="4666-31fc-c025-9a94" name="Spear" hidden="false" collective="false" import="true" targetId="e79a-e00b-b0ee-6850" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="3740-2604-3639-48e8" name="Throwing Weapons" hidden="false" collective="false" import="true" targetId="b672-9729-1d95-cb6d" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="e829-ad61-66b7-5b70" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7745-e20a-2055-02fc" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
@@ -1119,7 +1174,7 @@
             </infoLink>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="13.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="11.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1142,14 +1197,22 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="e647-baa8-c5ad-5275" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="441c-ad86-41ca-4ea5" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="7b0e-0c25-f1d2-a6bb" name="Melee Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f9b-ffbc-832c-de5c" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="d489-bc56-3205-7e71" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="4bb9-6a6c-2055-0fbc" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
                   <repeats>
@@ -1157,29 +1220,8 @@
                   </repeats>
                 </modifier>
               </modifiers>
-              <infoLinks>
-                <infoLink id="caba-824a-3bdc-808f" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1839-04a8-6f4b-fd6a" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <infoLinks>
-                <infoLink id="d145-4e07-82ba-c997" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="50d9-de62-ef5e-b3a5" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
+            </entryLink>
+            <entryLink id="842a-b9ad-72cc-a27f" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
                   <repeats>
@@ -1187,23 +1229,26 @@
                   </repeats>
                 </modifier>
               </modifiers>
-              <infoLinks>
-                <infoLink id="5346-bede-6e90-12ce" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink id="e164-dac4-a7f2-0d4b" name="Spear" hidden="false" collective="false" import="true" targetId="e79a-e00b-b0ee-6850" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="effa-4679-4ea7-d3fd" name="Manifestation" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6755-d5e3-16e5-868d" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="a8c0-9cfe-c3cb-0484" name="Centipede Legs" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a8c0-9cfe-c3cb-0484" name="Bronze Backbone" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1233,7 +1278,7 @@
             </selectionEntry>
             <selectionEntry id="76b7-c5f3-a56e-3a70" name="Chitinous Scales" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1250,7 +1295,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-10.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e5dd-5d75-3434-f290" name="Ritual Altar" hidden="false" collective="false" import="true" type="unit">
@@ -1260,17 +1305,17 @@
       <profiles>
         <profile id="86af-6d8f-60be-daf9" name="Ritual Altar Defensive" hidden="false" typeId="544c-85ec-a241-28a3" typeName="2 Defensive (DL)">
           <characteristics>
-            <characteristic name="HP" typeId="1c84-3de2-1298-da52">7</characteristic>
-            <characteristic name="Def" typeId="2020-b3ed-75a3-c1bc">1</characteristic>
+            <characteristic name="HP" typeId="1c84-3de2-1298-da52">5</characteristic>
+            <characteristic name="Def" typeId="2020-b3ed-75a3-c1bc">2</characteristic>
             <characteristic name="Res" typeId="72bc-301c-c2cd-0b36">4</characteristic>
             <characteristic name="Arm" typeId="8efa-a821-a05e-a705">0</characteristic>
             <characteristic name="Aeg" typeId="a5b4-e05b-7618-bdd6">5+</characteristic>
             <characteristic name="Rules" typeId="4b43-6b8e-aefe-5535"/>
           </characteristics>
         </profile>
-        <profile id="c8b8-de61-10ea-ad82" name="Ritual Altar Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="c8b8-de61-10ea-ad82" name="Council Members" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">7</characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
@@ -1280,8 +1325,8 @@
         </profile>
         <profile id="9685-5564-d309-cf3c" name="Ritual Altar Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4</characteristic>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">2</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
             <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
@@ -1290,13 +1335,16 @@
           <characteristics>
             <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
             <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">100×100</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">60Ø</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
-        <rule id="cbd2-975d-ed1c-6c51" name="The End is Nigh!" hidden="false">
-          <description>The model must select Wrath of God (Thaumaturgy) and Pentagram of Pain (Occultism) during Spell Selection. This overrides the Spell Selection rules connected to being a Wizard Adept. If the model performed any kind of move during the current Player Turn, it cannot cast Spells. The Range for spells cast by this model are doubled.</description>
+        <rule id="cbd2-975d-ed1c-6c51" name="Dark Conclave" hidden="false">
+          <description>Universal Rule.
+Spells cast by the model gain +3′′ range for each additional friendly Wizard within 12′′. This bonus can never increase the combined modifier beyond +9′′, however other sources may.
+
+The model must select 2 spells from: Spear of Infinity (Hereditary Spell), Hand of Heaven (Thaumaturgy) and The Grave Calls (Occultism) during Spell selection. This overrides the normal Spell Selection rules connected to being a Wizard Adept.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1310,10 +1358,28 @@
             <modifier type="append" field="name" value=" (5+)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="e0f5-580d-125e-62ed" name="War Machine" hidden="false" targetId="610e-d71e-0439-9e7f" type="rule"/>
+        <infoLink id="6506-1d0b-c132-c458" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d87b-b586-9094-cc22" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6e50-0813-d1c2-44f3" name="Grand Council" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5bd-6e54-78b3-442a" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="08d8-e053-dcf3-b9ed" name="Grand Council" hidden="false">
+              <description>Universal Rule.
+The model’s Health Points and Attack Value are set to 8, and its base size is changed to 120 mm round.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="210.0"/>
       </costs>
@@ -1376,6 +1442,12 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ffe-a0b4-5d54-53a9" type="max"/>
           </constraints>
+          <rules>
+            <rule id="963e-2fbd-29fd-143c" name="Doomsday Colossus" hidden="false">
+              <description>Universal Rule.
+The model’s Health Points are set to 8, and its base size is changed to 75×100 mm. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
@@ -1389,25 +1461,52 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="f28b-770a-9660-734b" name="Wicker Man" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="680f-b343-3ef4-4f6e" name="Wicker Man" hidden="false">
+                  <description>Universal Rule.
+The model gains Flammable, Flaming Attacks, and Grind Attacks (3D3). These Grind Attacks are resolved with Strength 4, Armour Penetration 0, and Flaming Attacks.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="174b-56d5-e70e-1ddb" name="Flaming Attacks" hidden="false" targetId="49e5-2d9a-1ecc-101f" type="rule"/>
+                <infoLink id="54c7-d844-c47a-a7c7" name="Flammable" hidden="false" targetId="5df5-1a68-27be-1ad6" type="rule"/>
+                <infoLink id="6b1e-ac91-6a2a-0dd7" name="Grind Attacks" hidden="false" targetId="1728-908f-7383-29d6" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (3D3)"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="53f0-e0f1-6d91-8cdf" name="Heretic Golem" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-              </costs>
+              <rules>
+                <rule id="0e5c-a868-424b-08c4" name="Heretic Golem" hidden="false">
+                  <description>Universal Rule.
+The model gains +1 Strength and +1 Armour Penetration.</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="fe8a-f9c4-63e0-dba9" name="Apostate Automaton" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="557e-2617-d57b-e5f1" name="Apostate Automaton" hidden="false">
+                  <description>Universal Rule.
+The model’s Armour is set to 3, and it gains +1 Resilience and Crush Attack.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="a107-ea46-dcc4-b311" name="Crush Attack" hidden="false" targetId="9371-5924-2a39-1652" type="rule"/>
+              </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="320.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="340.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0bf6-50c7-b2d9-33ab" name="Imps" hidden="false" collective="false" import="true" type="unit">
@@ -4086,7 +4185,7 @@ The model counts as Gigantic for the purpose of determining the number of Full R
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="6081-e590-a97d-bfa4" name="Cultist Giant Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4614,58 +4713,58 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2aa0-6aac-fe47-2b1b" name="°Lifeforce Talisman" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="fe9b-065e-1afb-88c0" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe9b-065e-1afb-88c0" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd13-1f00-16dc-88a5" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="f07a-3955-38ee-1d80" name="Lifeforce Talisman" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Whenever the bearer Miscasts, you may inflict D3 hits on the bearer’s unit. These hits wound automatically with Armour Penetration 10 and with no saves of any kind allowed. If so, the owner may choose to apply a +1 or a -1 Miscast Modifier.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-      </costs>
-    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="b342-eecd-13c4-8ec9" name="Cult Artefacts (Leader)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="b342-eecd-13c4-8ec9" name="Cult Artefacts" hidden="false" collective="false" import="true">
       <selectionEntries>
-        <selectionEntry id="16a6-c8de-cbbf-94de" name="Tablet of Ashuruk" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="16a6-c8de-cbbf-94de" name="Scurrying Veil" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3a9-86f3-fc2e-d957" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b35-bf77-687e-d61b" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="a7e9-4d44-d61f-6e0d" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
-          </categoryLinks>
+          <profiles>
+            <profile id="cd72-3d7f-a4e9-a00b" name="Scurrying Veil" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Tiny, and its March Rate is set to 20′′.
+
+Tiny: Universal Rule.
+The model ignores friendly units when moving in the Charge and Movement Phase, but must follow the Unit Spacing rule at the end of the move.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f4d7-f6a6-42fc-52f1" name="Amulet of Spite" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f4d7-f6a6-42fc-52f1" name="°Gem of Faith&apos;s Tide" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="db62-fe5f-15d8-2abf" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2853-cd11-9279-c108" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56f5-b73b-206f-baee" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db62-fe5f-15d8-2abf" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e2ae-f692-8bac-b459" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="7688-32ba-0157-013f" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
-          </categoryLinks>
+          <profiles>
+            <profile id="80d5-7bac-b269-24d0" name="°Gem of Faith&apos;s Tide" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Whenever the bearer attempts to cast a spell, the owner may choose a friendly Champion with Pledged to Darkness within 12′′. If so, use the position of the Champion when drawing Line of Sight and measuring range. For Direct spells, also use the Champion’s Front Arc. The owner must use all of these or none at all. If the spell is successfully cast, the Champion suffers 1 hit that wounds automatically with Armour Penetration 10 and with no saves of any kind allowed.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
@@ -4679,7 +4778,8 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2aa0-6aac-fe47-2b1b" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2853-cd11-9279-c108" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f4d7-f6a6-42fc-52f1" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -4687,111 +4787,79 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96fa-15d7-bad9-3492" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="90cb-c1ca-7a3d-4c04" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="19d0-21a9-c44d-70e1" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
-          </categoryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5221-e174-ae7b-314d" name="°Ancient Plaque" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="170b-d2a5-f405-bb2b" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2aa0-6aac-fe47-2b1b" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="170b-d2a5-f405-bb2b" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="b923-9654-0860-ef20" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b94e-756d-0c60-faf5" name="Second Awakening" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b94e-756d-0c60-faf5" name="Lugar&apos;s Dice" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9137-5c01-70cd-1323" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b19d-56e3-0f90-3f1f" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="e294-ba23-51f8-5263" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
-          </categoryLinks>
+          <profiles>
+            <profile id="7fa0-40be-5d73-4395" name="Lugar&apos;s Dice" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A single model part of the bearer’s model can reroll a single failed to-hit, to-wound, or Armour Save roll per Player Turn. Crush Attacks are not affected.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="76a4-b4f6-fe00-19f8" name="°Skull Fetish" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0289-1e69-dbdb-88aa" name="Fiendish Snares (only on Standard size)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a363-89c5-b252-1adb" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b247-46ba-6279-505f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9281-64ac-6917-fa89" name="Fiendish Snares" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Immediately after Deployment Zones are chosen, the owner nominates a Terrain Feature other than Impassable Terrain or Open Terrain with its centre in their half of the Battlefield. The chosen Terrain becomes Dangerous Terrain (2).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2853-cd11-9279-c108" name="°Lifeforce Talisman" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="3474-7998-ec12-53d6" value="0.0">
+            <modifier type="set" field="41b9-9be1-50df-d187" value="0.0">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f4d7-f6a6-42fc-52f1" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56f5-b73b-206f-baee" type="equalTo"/>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2aa0-6aac-fe47-2b1b" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3474-7998-ec12-53d6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41b9-9be1-50df-d187" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ce2-9c70-cd7b-8281" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="311a-fd6d-7ea2-bf85" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
-          </categoryLinks>
+          <profiles>
+            <profile id="00de-706f-2de4-2576" name="Lifeforce Talisman" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+              <characteristics>
+                <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Whenever the bearer Miscasts, the owner may choose to inflict D3 hits on the bearer’s unit. These hits wound automatically with Armour Penetration 10 and with no saves of any kind allowed. If so, the owner may choose to apply a +1 or a −1 Miscast Modifier.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d48a-b138-cea9-1ecc" name="°Unholy Tome" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="bfd0-bbf0-6568-da66" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2aa0-6aac-fe47-2b1b" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfd0-bbf0-6568-da66" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="55ba-9d41-2a9e-a2dd" name="Gift from Divine Entity" hidden="false" targetId="744c-c3fb-3ae7-392f" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="1333-f882-275b-1825" name="°Lifeforce Talisman" hidden="false" collective="false" import="true" targetId="2aa0-6aac-fe47-2b1b" type="selectionEntry"/>
-        <entryLink id="95c8-f8a3-b00c-b474" name="Brimstone Brazier" hidden="false" collective="false" import="true" targetId="5553-13e9-d118-588e" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="bf3a-eb7d-ca14-649d" name="Cult Artefacts (Symbiote)" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="4391-5186-bec1-b973" name="°Lifeforce Talisman" hidden="false" collective="false" import="true" targetId="2aa0-6aac-fe47-2b1b" type="selectionEntry"/>
-        <entryLink id="f6c4-fad8-f524-90ca" name="Brimstone Brazier" hidden="false" collective="false" import="true" targetId="5553-13e9-d118-588e" type="selectionEntry"/>
-      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
@@ -4800,13 +4868,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
 As long as at least one friendly model with Pledged to Darkness is on the Battlefield, a Cultists army may store up to 6 Veil Tokens at the end of Siphon the Veil instead of the normal 3.</description>
     </rule>
     <rule id="d43d-525d-83ec-eab1" name="Daemonic Summon" hidden="false">
-      <description>At the end of any friendly Movement Phase, starting with your Player Turn 2, each non-Fleeing model with Daemonic Summon may perform a single Summon:
+      <description>At the end of step 3 of the owner’s Magic phase (Siphon the Veil) and before Veil Token Limits are applied, each non-Fleeing model with Daemonic Summon may perform a single Daemonic Summon:
+1. Choose a unit from the Summoned Daemons Army Category on your Army List.
+2. Discard a number of Veil Tokens from your Veil Token pool corresponding to the chosen unit’s Point Cost divided by 200, rounding fractions up. During the owner’s Player Turn 1, only 2 Veil Tokens may be discarded for Daemonic Summon. Otherwise, a maximum of 6 Veil Tokens may be discarded for Daemonic Summon per Player Turn.
+3. The chosen unit is deployed in a legal formation fully within 12′′ of the model that performs the Daemonic Summon. All models must be placed at least 1′′ away from other units and from Impassable Terrain. If the whole unit cannot be deployed, then no models can be deployed.
 
-● Choose a unit from the Summoned Daemons Army Category on your Army List.
-● Discard a number of Veil Tokens from your Veil Token pool corresponding to the chosen unit&apos;s Point Cost divided by 200, rounding fractions up.
-● Place the chosen unit in a legal formation fully within 12” of the model that performs the Summon.
-● The unit counts as as having moved for Moving and Shooting.
-● Any unit that entered the Battlefield on Game Turn 4 or later loses Scoring.</description>
+The unit counts as as having moved during the turn they arrive on the Battlefield. Any unit that entered the Battlefield on Game Turn 4 or later loses Scoring. If a unit from the Summoned Daemons Army Category has not entered the Battlefield before the end of the game, the unit counts as destroyed.
+
+Until deployed on the Battlefield, units from the Summoned Daemons Army Category cannot perform any actions at all, and all their Special Items, rules, and abilities don’t work while off the board.</description>
     </rule>
     <rule id="58ab-7b3c-c7b7-3f5b" name="Sacrifical Offerings" hidden="false">
       <description>Immediately before performing a Casting Attempt with a Wizard joined to a unit containing one or more models with Sacrificial Offerings, you may inflict 1 hit against that unit. This hit wounds automatically with Armour Penetration 10 and with no saves of any kind allowed. If a Health Point loss was caused against a model with Sacrificial Offerings, the Casting Attempt gains a +1 Casting Modifier. Each unit can be affected by Sacrificial Offerings only once per Magic Phase.</description>
