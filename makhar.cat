@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f4f2-a5a5-873e-1b18" name="Makhar 2020" revision="17" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f4f2-a5a5-873e-1b18" name="Makhar 2020" revision="18" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d224-066a-e928-c28c" name="Raining Death" hidden="false"/>
   </categoryEntries>
@@ -1114,6 +1114,29 @@ If the model’s unit has at least one Full Rank, the model’s Impact Hits caus
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="814b-c9c0-1680-e3f4" name="Karkadan Bulls" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="8a11-c308-bdea-f2ba" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a11-c308-bdea-f2ba" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="b66a-87b9-bbc7-c171" name="Karkadan Bulls" hidden="false">
+              <description>Universal Rule.
+The model’s base size is changed to 50×75 mm and its Discipline is set to 7.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
@@ -1191,7 +1214,7 @@ If the model’s unit has at least one Full Rank, the model’s Impact Hits caus
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="22.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1217,7 +1240,7 @@ If the model’s unit has at least one Full Rank, the model’s Impact Hits caus
         <entryLink id="4f0e-ba89-bb9c-522e" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="84.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9541-1d4a-37ce-097f" name="Makhar Flayers" hidden="false" collective="false" import="true" type="unit">
@@ -1302,7 +1325,7 @@ Close Combat Attacks and Shooting Attacks from Short Range made by the rider gai
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="19.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="22.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bd03-6128-d929-ee0f" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -1369,7 +1392,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
             </selectionEntry>
             <selectionEntry id="a201-7616-1270-c5e3" name="Throwing Weapons (5+)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="9541-1d4a-37ce-097f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="15a2-fae1-7afb-d2db" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1678,9 +1701,6 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
                   </characteristics>
                 </profile>
               </profiles>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-              </costs>
             </selectionEntry>
             <selectionEntry id="ae9f-56e2-017b-0775" name="Rally Around the Flag" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -1690,14 +1710,14 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
                 <infoLink id="935f-72e5-9775-3b57" name="Rally Around the Flag" hidden="false" targetId="bf56-e3dc-41ca-292b" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="370.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="420.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8d26-3a08-e887-8536" name="Makhar Chariots" hidden="false" collective="false" import="true" type="unit">
@@ -2220,7 +2240,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2659,6 +2679,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <infoLinks>
         <infoLink id="daac-b898-364f-f417" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
