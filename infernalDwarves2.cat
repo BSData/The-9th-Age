@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ed3b-0fdf-b39c-32b0" name="Infernal Dwarves 2020.2 Beta2" revision="5" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ed3b-0fdf-b39c-32b0" name="Infernal Dwarves 2020.2 Beta2" revision="6" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="f410-d87f-bb92-f6cb" name="Instruments of Destruction" hidden="false"/>
     <categoryEntry id="95f0-1c8c-90dd-ed0b" name="Flyer" hidden="false"/>
@@ -212,7 +212,7 @@ In addition, the owner may choose a single Weapon Enchantment from the Arcane Co
             </entryLink>
             <entryLink id="78d9-edd0-7f39-26fb" name="Great Bull of Shamut" hidden="false" collective="false" import="true" targetId="501f-a72d-64dc-0af6" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="401.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="400.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -244,12 +244,6 @@ In addition, the owner may choose a single Weapon Enchantment from the Arcane Co
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="72b4-5809-8001-da36" type="max"/>
       </constraints>
-      <rules>
-        <rule id="71c3-1eba-4319-95b6" name="Let Them Come!" hidden="false">
-          <description>Universal Rule.
-If the model has not performed a March Move during this Player Turn, it may shoot from the third rank (in addition to the first and second).</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="79ad-eac7-220f-17f9" name="Infernal Armour" hidden="false" targetId="3c9e-ab86-99bb-7595" type="profile"/>
         <infoLink id="5989-ae36-2eb4-e8a2" name="March and Shoot" hidden="false" targetId="f166-e6b4-13de-aa22" type="rule"/>
@@ -327,7 +321,7 @@ If the model has not performed a March Move during this Player Turn, it may shoo
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0e4a-1ba7-0649-55e7" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="0e4a-1ba7-0649-55e7" name="Great Weapon &amp; Fight in Extra Rank" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
                   <repeats>
@@ -543,6 +537,7 @@ The model gains Fight in Extra Rank unless it is Charging. In addition, if the m
         <infoLink id="2846-2d5a-03ff-3ff1" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
         <infoLink id="0a1b-5118-adc1-29e5" name="Oil Skins" hidden="false" targetId="b847-6d74-efd7-4f7e" type="rule"/>
         <infoLink id="039a-d2c5-c085-64e0" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+        <infoLink id="4419-b2f1-4488-8d7d" name="Bound or Broken" hidden="false" targetId="e474-68b9-465b-1efe" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b51f-ceb5-cd9d-38a2" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
@@ -765,17 +760,18 @@ The model is a Champion that loses First Amongst Equals and that is equipped wit
     <selectionEntry id="be24-982e-8a83-da6c" name="Shackled Slaves" hidden="false" collective="false" import="true" type="unit">
       <rules>
         <rule id="cee2-9398-5745-ecc0" name="Forced Compliance" hidden="false">
-          <description>Universal Rule.
+          <description>Universal Rule
 The unit may set its Discipline to the value of a non-Fleeing friendly model with Infernal Brand within 6′′. At the start of each friendly Player Turn, each unengaged non-Fleeing unit with one or more models with Forced Compliance must take a Discipline Test:
 • If the test is failed, all models in the unit become Shaken until the end of the Player Turn.
 • If the test is passed, the unit may immediately, if it has at least one Full Rank, receive an order from a single friendly unit with Infernal Brand within 6′′, and apply one of the following effects:
-– Ammo-Bearers: Shooting Attacks made with a Blunderbuss, Flintlock Axe, or Pistol from the unit which gave the order gain Battle Focus. Remove a model from the unit with Forced Compliance for every natural to-hit roll of ‘1’ with Shooting Attacks from the unit that gave the order.
-– Sacrificial Wretches: Any Health Point loss caused by Dangerous Terrain Tests on the unit that gave the order is ignored. Remove a model from the unit with Forced Compliance instead.
+– Ammo-Bearers: Shooting Attacks made with a Blunderbuss, Flintlock Axe, or Pistol from the unit which gave the order gain Battle Focus. For every natural to-hit roll of ‘1’ with Shooting Attacks from the unit that gave the order, the unit with Forced Compliance suffers 1 hit with Armour Penetration 10 that wounds automatically, with no saves of any kind allowed.
+– Sacrificial Wretches: Any Health Point loss caused by Dangerous Terrain Tests on the unit that gave the order is ignored. Instead, for each ignored Health Point loss, the unit with Forced Compliance suffers 1 hit with Armour Penetration 10 that wounds automatically, with no saves of any kind allowed.
 The effects last until the end of the Player Turn.</description>
         </rule>
       </rules>
       <infoLinks>
         <infoLink id="ffb0-85ab-520f-8c07" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
+        <infoLink id="2d85-ebf4-716d-6d6e" name="Bound or Broken" hidden="false" targetId="e474-68b9-465b-1efe" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="58d4-59e7-efa2-89a2" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
@@ -948,7 +944,7 @@ The effects last until the end of the Player Turn.</description>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="26.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="27.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -961,7 +957,7 @@ The effects last until the end of the Player Turn.</description>
           <selectionEntries>
             <selectionEntry id="1d32-8696-e724-61a4" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -976,7 +972,7 @@ The effects last until the end of the Player Turn.</description>
             </selectionEntry>
             <selectionEntry id="101b-6d89-7b1e-dfe4" name="Infernal Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -991,7 +987,7 @@ The effects last until the end of the Player Turn.</description>
             </selectionEntry>
             <selectionEntry id="7043-38d9-dba8-a7ed" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1034,7 +1030,7 @@ The effects last until the end of the Player Turn.</description>
       <rules>
         <rule id="b953-13e3-244d-305f" name="Pact of Fire" hidden="false">
           <description>Universal Rule.
-Once per game, at the start of any Melee Phase, all friendly models with Pact of Fire in the same unit may let the Kadim inside them take control. If so, they gain Fearless, Volcanic Embrace (1), and suffer −1 Armour Penetration and −1 Offensive Skill until the end of the game.</description>
+One use only. At the start of the Melee Phase, all models with Pact of Fire in the same unit may gain Fearless, Volcanic Embrace (1), and suffer −1 Armour Penetration and −1 Offensive Skill until the end of the game.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1190,7 +1186,7 @@ The model gains Hard Target (1), Light Troops, and Skirmisher and loses Scoring.
         <entryLink id="6752-a31c-0236-a7e2" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="47d5-7a06-a900-5783" name="Kadim Incarnates" hidden="false" collective="false" import="true" type="unit">
@@ -1210,6 +1206,7 @@ The model gains Hard Target (1), Light Troops, and Skirmisher and loses Scoring.
           </modifiers>
         </infoLink>
         <infoLink id="c3ea-18b6-f7bb-55c5" name="Ghost Step" hidden="false" targetId="36f9-836f-d687-5d43" type="rule"/>
+        <infoLink id="f3f5-5ad1-dba6-2546" name="Bound or Broken" hidden="false" targetId="e474-68b9-465b-1efe" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="233a-102e-0817-94d5" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -1807,6 +1804,7 @@ If passed – The opponent may perform a Dispelling Attempt as normal (without k
             <modifier type="append" field="name" value=" (4+)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="14d1-706c-662e-6040" name="Bound or Broken" hidden="false" targetId="e474-68b9-465b-1efe" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="513c-3897-2be8-1969" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -1963,7 +1961,7 @@ If passed – The opponent may perform a Dispelling Attempt as normal (without k
           <description>Artillery Weapon.
 This Artillery Weapon can be fired in two ways:
 • Bolt Thrower: Range 48′′, Shots 1, Str 3 [6], AP 10, Area Attack (1×5), [Multiple Wounds (D3)].
-• Oil Flask Thrower: Range 36′′, Shots 3, Str 1, AP 0. The target unit gains one instance of Incendiary for every successful hit.</description>
+• Oil Flask Thrower: Range 36′′, Shots 3, Str 1, AP 0. The target unit gains one Incendiary marker for every successful hit.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1971,6 +1969,7 @@ This Artillery Weapon can be fired in two ways:
         <infoLink id="c156-0cd5-1a65-677f" name="Move or Fire" hidden="false" targetId="6475-e063-0070-f6cc" type="rule"/>
         <infoLink id="5458-3932-8898-0afa" name="War Machine" hidden="false" targetId="610e-d71e-0439-9e7f" type="rule"/>
         <infoLink id="e865-2894-0851-5086" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+        <infoLink id="5317-2764-3f42-6a47" name="Bound or Broken" hidden="false" targetId="e474-68b9-465b-1efe" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4e24-27aa-ae3c-4196" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -2009,7 +2008,7 @@ This Artillery Weapon can be fired in two ways:
         <profile id="1c9e-592b-a02d-fdba" name="Gunnery Team Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">3&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">9&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">6&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
             <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
@@ -2026,9 +2025,9 @@ This Artillery Weapon can be fired in two ways:
         <rule id="ada2-4196-5dd5-6efa" name="Cumbersome" hidden="false">
           <description>Universal Rule.
 The model is subject to the following restrictions:
-• It may only perform a single Pivot or Wheel during a March Move.
 • It may only declare Hold as voluntary Charge Reaction.
-• The Strength and Armour Penetration of its Artillery Weapon are reduced by −1 (including any values in brackets).</description>
+• The Strength and Armour Penetration of its Artillery Weapon and of any hits from Cluster Munitions are reduced by −1 (including any values
+in brackets)</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2052,11 +2051,7 @@ The model is subject to the following restrictions:
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
               </costs>
             </entryLink>
-            <entryLink id="4a6a-2578-5857-d501" name="Titan Mortar" hidden="false" collective="false" import="true" targetId="804f-2334-205d-4ec8" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
-            </entryLink>
+            <entryLink id="4a6a-2578-5857-d501" name="Titan Mortar" hidden="false" collective="false" import="true" targetId="804f-2334-205d-4ec8" type="selectionEntry"/>
             <entryLink id="8faa-d68a-8dac-4b40" name="Naphta Thrower" hidden="false" collective="false" import="true" targetId="9436-530c-f6d6-81e7" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -2068,11 +2063,6 @@ The model is subject to the following restrictions:
           <selectionEntries>
             <selectionEntry id="0b93-7af8-a195-c523" name="Kadim Manifestation" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="5.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="804f-2334-205d-4ec8" type="equalTo"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="10.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dd87-622f-acef-c07b" type="equalTo"/>
@@ -2085,11 +2075,6 @@ The model is subject to the following restrictions:
             </selectionEntry>
             <selectionEntry id="56be-d110-e5d3-ae09" name="Ether Cloud" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="24fd-8af8-0c78-001c" value="5.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="804f-2334-205d-4ec8" type="equalTo"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="24fd-8af8-0c78-001c" value="5.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9436-530c-f6d6-81e7" type="equalTo"/>
@@ -2113,9 +2098,6 @@ The model is subject to the following restrictions:
                   </conditions>
                 </modifier>
               </modifiers>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2443,9 +2425,6 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
               <infoLinks>
                 <infoLink id="cb57-5806-e52e-fe1c" name="Parry" hidden="false" targetId="b828-8719-4807-b047" type="rule"/>
               </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
             </selectionEntry>
             <selectionEntry id="eda5-2c46-9d06-a265" name="Naphta Thrower" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -2462,7 +2441,7 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="deb9-d924-c573-040e" name="Rocket Battery" hidden="false" collective="false" import="true" type="upgrade">
@@ -2480,7 +2459,7 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="ddbe-0674-3aca-c614" name="Titan Mortar" hidden="false" collective="false" import="true" type="upgrade">
@@ -2498,7 +2477,7 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2560,8 +2539,22 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="dbd7-3506-59f2-5d42" name="Fires of Industry" hidden="false" collective="false" import="true" targetId="f974-7173-fb13-288c" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="b470-e0c7-5a5e-cb47" value="2.0"/>
+            <modifier type="set" field="84b0-67dc-1099-50df" value="2.0"/>
+          </modifiers>
+        </entryLink>
+        <entryLink id="3d94-1fe3-2f3a-2ab3" name="Fires of Industry" hidden="false" collective="false" import="true" targetId="f974-7173-fb13-288c" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="b470-e0c7-5a5e-cb47" value="2.0"/>
+            <modifier type="set" field="84b0-67dc-1099-50df" value="2.0"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="400.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="415.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5018-c8a6-a2b2-2051" name="Infernal Bastion" hidden="false" collective="false" import="true" type="unit">
@@ -2718,6 +2711,7 @@ The model’s Grind Attacks from Volcanic Embrace gain +1 to wound. In addition,
           </modifiers>
         </infoLink>
         <infoLink id="4008-e7a3-4f2e-2233" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
+        <infoLink id="87d7-ae57-43b1-173a" name="Bound or Broken" hidden="false" targetId="e474-68b9-465b-1efe" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="746e-0e37-698b-4a50" name="New CategoryLink" hidden="false" targetId="f410-d87f-bb92-f6cb" primary="true"/>
@@ -3347,6 +3341,7 @@ If joined to a Taurukh Anointed unit, when a R&amp;F model from its unit is remo
       </profiles>
       <infoLinks>
         <infoLink id="274a-e49a-3ebb-2ea5" name="Not a Leader" hidden="false" targetId="f611-6165-ada9-0d7d" type="rule"/>
+        <infoLink id="4a27-5b2b-8496-dc51" name="Bound or Broken" hidden="false" targetId="e474-68b9-465b-1efe" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="0493-8f72-30f0-d335" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -3443,6 +3438,13 @@ If joined to a Taurukh Anointed unit, when a R&amp;F model from its unit is remo
           </constraints>
           <entryLinks>
             <entryLink id="c635-2d74-499d-8195" name="Vassal Steed" hidden="false" collective="false" import="true" targetId="2f95-a932-5607-afc6" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="73d2-a917-71e6-919e" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d2e-3a7c-b8c4-2589" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
               </costs>
@@ -3877,6 +3879,9 @@ the model gains Feigned Flight, +1′′ Advance Rate, and +3′′ March Rate.<
                 </infoLink>
                 <infoLink id="0c7a-5aaf-959c-b23d" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="0a12-f06d-f1fa-1f1a" name="Nezibkesh" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -4140,13 +4145,13 @@ One use only. May be activated at the end of a friendly Movement Phase. Place an
       <profiles>
         <profile id="ab1d-69f1-499f-aa4e" name="Unflame" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340"></characteristic>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340"/>
             <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Round of Combat. A single enemy unit in base contact with the bearer’s model suffers −3 Agility, and all attacks against the enemy unit lose Flaming Attacks. The effects last until the start of the next Player Turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ad7f-49e4-7065-43e3" name="Infernal Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -4372,7 +4377,7 @@ When the bearer attempts to cast a non-Bound Spell using three or more Magic Dic
         <profile id="7765-1f36-13ee-2061" name="Ring of Desiccation" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">At the start of every Round of Combat, every enemy unit in base contact with the bearer’s model gains one instance of Incendiary.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">At the start of every Round of Combat, every enemy unit in base contact with the bearer’s model gains one Incendiary marker.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4406,7 +4411,7 @@ When the bearer attempts to cast a non-Bound Spell using three or more Magic Dic
         <profile id="377a-09d9-f67f-a00b" name="Lugar&apos;s Dice" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A single model part of the bearer’s model can reroll a single failed to-hit, to-wound, or Armour Save roll per Player Turn. Cannot be used with Crush Attacks.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A single model part of the bearer’s model can reroll a single failed to-hit, to-wound, or Armour Save roll per Player Turn. Crush Attacks are not affected.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4423,7 +4428,7 @@ When the bearer attempts to cast a non-Bound Spell using three or more Magic Dic
         <profile id="cd89-4a8b-b19d-070d" name="Gauntlets of Madzhab" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains +1 Strength and +1 Armour Penetration. Each of its Close Combat Attacks with a natural to-hit roll of ‘1’ is distributed onto the bearer’s unit (the owner distributes the hits). These hits can only be distributed onto the bearer’s model if it is a single model unit.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains +1 Strength and +1 Armour Penetration. Each of its Close Combat Attacks with a natural to-hit roll of ‘1’ is distributed onto the bearer’s unit, distributed by the owner unless specifically stated otherwise.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4792,7 +4797,7 @@ When the bearer attempts to cast a non-Bound Spell using three or more Magic Dic
       <rules>
         <rule id="320c-26db-f7e3-2cb9" name="Vassal Governor" hidden="false">
           <description>Universal Rule.
-The model may join Vassal Levies units. This overrides the corresponding restriction from Infernal Brand. When doing so, failed Charge Range rolls of its unit in the Charge Phase must be rerolled. In addition, friendly units with more than half of their models with Oil Skins within 12′′ of one or more models with Vassal Governor at the start of their March Move gain +2′′ March Rate.</description>
+Friendly units with more than half of their models with Oil Skins within 12′′ of one or more models with Vassal Governor at the start of their March Move gain +2′′ March Rate. In addition, the model may join Vassal Levies units. This overrides the corresponding restriction from Infernal Brand. When doing so, failed Charge Range rolls of its unit in the Charge Phase must be rerolled.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -4984,15 +4989,16 @@ Failed Charge Range rolls of the model in the Charge Phase must be rerolled.</de
       <description>When fighting an enemy unit in the enemy’s Flank or Rear Facing while only being Engaged in the Front Facing, a model part with this rule must reroll failed to-hit rolls.</description>
     </rule>
     <rule id="02ab-566d-7f51-fee2" name="Volcanic Embrace" hidden="false">
-      <description>The model part gains Grind Attacks (X), where X corresponds to the value stated in brackets. These Grind Attacks are resolved with Strength 4 and Armour Penetration 0. In addition, all attacks made by the model part, including Special Attacks, gain Kadim Manifestation.</description>
+      <description>The model part gains Grind Attacks (X), where X corresponds to the value stated in brackets. These Grind Attacks are resolved with Strength 4 and Armour Penetration 0. In addition, attacks made by the model part, including Special Attacks, gain Kadim Manifestation.</description>
     </rule>
     <rule id="e922-37f3-2937-7749" name="Fires of Industry" hidden="false">
       <description>The sum of the Fires of Industry values stated in brackets of all models in the army is restricted to 0–6 per Army.</description>
     </rule>
     <rule id="f7e9-d8e7-6d16-7ad6" name="Incendiary" hidden="false">
-      <description>Place one Incendiary marker for each instance of Incendiary next to the unit. A unit with Incendiary marker gains Flammable. Remove one Incendiary marker:
+      <description>Place one Incendiary marker for each instance of Incendiary next to the unit. A unit with one or more Incendiary markers gains Flammable. Remove one Incendiary marker:
 • Immediately when the unit suffers one or more wounds (before saves are performed) from Ranged Attacks that are Flaming Attacks.
-• At the end of a Round of Combat in which the unit suffers one or more wounds (before saves are performed) from Melee Attacks that are Flaming Attacks. Additionally suffer D3 S3AP1 Flaming hits (hits are considered as Special Melee Attack) if enemy is Flammable from other source.
+• At the end of a Round of Combat in which the unit suffers one or more wounds (before saves are performed) from Melee Attacks that are Flaming Attacks. If the unit had Flammable from another source than Incendiary, it also suffers D3 hits with Strength 3, Armour Penetration 1, and Flaming Attacks at the end of the Round of Combat. These hits are considered Special Attacks.
+
 A Character leaving a unit affected by Incendiary is no longer affected, unless the Character was a single model unit when it gained Incendiary. In that case, the Character keeps those Incendiary markers.</description>
     </rule>
     <rule id="86d7-0cd3-8d7f-1f68" name="Infernal Brand" hidden="false">
@@ -5010,32 +5016,36 @@ A Character leaving a unit affected by Incendiary is no longer affected, unless 
     </rule>
     <rule id="b0f1-db01-8f8a-6e62" name="Cluster Munitions" hidden="false">
       <description>Shooting
-If the attack scores one or more hits against an enemy unit, the next closest unengaged enemy unit within 6′′ of the original target immediately suffers D3+1 hits with Strength 4 and Armour Penetration 1. If there is more than one eligible unit, the Active Player chooses which is hit. These hits aren’t affected by Cluster Munitions. Hits from Gunnery teams are resolved with Strength 3 and Armour Penetration 0 instead.</description>
+If the attack scores one or more hits against an enemy unit, the next closest unengaged enemy unit within 6′′ of the original target immediately suffers D3+1 hits with Strength 4 and Armour Penetration 1. If there is more than one eligible unit, the Active Player chooses which is hit. These hits are considered Special Attacks and aren’t affected by Cluster Munitions.</description>
     </rule>
     <rule id="aea1-f95f-e053-b959" name="Ether Cloud" hidden="false">
       <description>Shooting
-Any Panic Tests the attack causes to enemy units through 25% casualties are taken at −1 Discipline. In addition, when the attack hits a unit containing one or more models with Channel, the target’s owner loses 1 Veil Token from their Veil Token pool.</description>
+Any Panic Tests the attack causes to enemy units through 25% or more Health Point losses are taken at −1 Discipline. In addition, when the attack hits a unit containing one or more models with Channel, the target’s owner loses 1 Veil Token from their Veil Token pool.</description>
     </rule>
     <rule id="54fa-f30d-95cb-1b21" name="Kadim Manifestation" hidden="false">
       <description>Close Combat, Shooting
-The attacks become Flaming Attacks and Magical Attacks. If the attacks become Flaming Attacks from more than one source (including other instances of Kadim Manifestation), they also become Divine Attacks.</description>
+The attacks become Flaming Attacks and Magical Attacks. Close Combat Attacks and Shooting Attacks with Kadim Manifestation that become Flaming Attacks from more than one source, including other instances of Kadim Manifestation, also become Divine Attacks.</description>
     </rule>
     <rule id="b847-6d74-efd7-4f7e" name="Oil Skins" hidden="false">
-      <description>Close Combat, Shooting
-Model parts with this rule may:
+      <description>Model parts with this rule may:
 • Immediately before performing a Melee Attack, set the Strength of their attacks to 1 until the end of the Round of Combat.
-• Immediately before performing a Shooting Attack, set the Strength of their attacks to 1 and reduce the range of their Shooting Attacks by −6′′ until the end of the phase.
-If so, all model parts with Oil Skins in the unit must do so. If one or more of these attacks hit, the target unit gains one instance of Incendiary after resolving these attacks.</description>
+• If they haven’t performed a March Move during the Player Turn, immediately before performing a Shooting Attack, set the Strength of their attacks to 1 and reduce the range of their Shooting Attacks by −6′′ until the end of the phase.
+If so, all model parts with Oil Skins in the unit must do so. If one or more of these attacks hit, the target unit gains one Incendiary marker after resolving these attacks.</description>
     </rule>
     <rule id="e813-d1e6-3017-ac5a" name="Firing Platform" hidden="false">
-      <description>Universal Rule.
-All models in the same unit as the model are considered to be in Soft Cover. In addition, they may choose to draw Line of Sight as if they were Gigantic and from any point of the base of the Infernal Bastion when shooting or casting spells. If so, as long as the unit has at least one Full Rank:
+      <description>Universal Rule
+All models in the same unit as the model are considered to be in Soft Cover. In addition, they may choose to draw Line of Sight as if they were Gigantic and from any point of the Infernal Bastion’s Front Facing when shooting or casting spells. If so, as long as the unit has at least one Full Rank:
 • A maximum of 20 models can shoot. These models can shoot regardless of the rank they are positioned in.
-• Measure their range from any point of the base of the Infernal Bastion.</description>
+• Measure their range from the Infernal Bastion.</description>
     </rule>
     <rule id="ac39-93d6-b608-c88a" name="Wallbreaker" hidden="false">
       <description>Universal Rule.
 The Battering Ram can only use its Crush Attack against enemy units Engaged in the model’s Front Facing. The model must be deployed in and can only join a unit that consists entirely of models with Infernal Brand, and it can never voluntarily leave its unit.</description>
+    </rule>
+    <rule id="e474-68b9-465b-1efe" name="Bound or Broken" hidden="false">
+      <description>The model cannot take any Special Items from this Army Book and cannot cast Curse of Nezibkesh (Hereditary Spell). In addition, if the model’s unit is within 6′′ of a friendly non-Fleeing model with Infernal Brand, the model:
+• Gains Battle Focus.
+• Must reroll failed Charge Range rolls in the Charge Phase.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -5043,14 +5053,14 @@ The Battering Ram can only use its Crush Attack against enemy units Engaged in t
       <characteristics>
         <characteristic name="Type" typeId="017b-143b-0520-bdc1">Plate Armour</characteristic>
         <characteristic name="Save" typeId="4ca3-2498-f356-f056">4+</characteristic>
-        <characteristic name="Rules" typeId="f269-16dd-a614-0f90">The wearer gains Aegis (5+, against Flaming Attacks).</characteristic>
+        <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Plate Armour (can be enchanted as if it was Plate Armour). The wearer gains Aegis (5+, against Flaming Attacks).</characteristic>
       </characteristics>
     </profile>
     <profile id="3ce9-1282-2e80-84d5" name="Infernal Weapon" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+1</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9"></characteristic>
+        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9"/>
       </characteristics>
     </profile>
     <profile id="1338-63b0-76a0-355b" name="Flintlock Axe" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
