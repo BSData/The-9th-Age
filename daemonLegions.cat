@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2020" revision="54" battleScribeVersion="2.03" authorName="WarX, DarkSky, koniu699, Hebus" authorContact="" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2020" revision="55" battleScribeVersion="2.03" authorName="WarX, DarkSky, koniu699, Hebus" authorContact="" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="3f95-f87e-5df2-4102" name="T9A – Daemon Legions"/>
   </publications>
@@ -4893,7 +4893,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="13e4-ccc5-4661-4f10" name="Cultist Giant" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="13e4-ccc5-4661-4f10" name="Possessed Giant" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="decrement" field="b405-6e4b-d1bf-a0b2" value="1.0">
           <repeats>
@@ -4912,20 +4912,21 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b405-6e4b-d1bf-a0b2" type="max"/>
       </constraints>
       <profiles>
-        <profile id="8da5-134b-e765-0888" name="Cultist Giant Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="8da5-134b-e765-0888" name="Cultist Giant Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <modifiers>
-            <modifier type="set" field="f381-7850-7fa8-3440" value="8">
+            <modifier type="set" field="61df-0ca3-17b2-f001" value="8">
               <conditions>
                 <condition field="selections" scope="13e4-ccc5-4661-4f10" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77cd-794d-3f25-9bd9" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">7</characteristic>
+            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
+            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
+            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">1</characteristic>
+            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
         <profile id="3ccb-4435-3de9-4b61" name="Cultist Giant Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4969,6 +4970,9 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
           <description>Attack Attribute – Close Combat.
 Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers -1 Attack Value.</description>
         </rule>
+        <rule id="d420-dbae-5214-f0f2" name="Giant See, Giant Do" hidden="false">
+          <description>The model gains Fearless and Supernal. In addition, at the start of each friendly Player Turn, before taking any Frenzy Tests, the model must take a Discipline Test that is modified by −X, where X corresponds to the difference between the number of Health Points that the model started the game with and its current number of Health Points. If failed, the model gains Battle Focus and Frenzy until the end of the game.</description>
+        </rule>
       </rules>
       <selectionEntries>
         <selectionEntry id="77cd-794d-3f25-9bd9" name="Big Brother" hidden="false" collective="false" import="true" type="upgrade">
@@ -4989,34 +4993,44 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <selectionEntryGroups>
         <selectionEntryGroup id="0b72-70e2-cf57-4988" name="Manifestation" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a17b-f596-b334-c164" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a17b-f596-b334-c164" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="872c-a338-0ff2-68b5" name="Unit - Unhinging Jaw" hidden="false" collective="false" import="true" targetId="f5b5-176e-d138-9e9e" type="selectionEntry">
+            <entryLink id="872c-a338-0ff2-68b5" name="Unit - Sorcerous Antennae" hidden="false" collective="false" import="true" targetId="7f66-1b58-871f-1f65" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </entryLink>
-            <entryLink id="6888-052e-610e-1845" name="Character - Iron Husk" hidden="false" collective="false" import="true" targetId="621e-65ee-2347-8e72" type="selectionEntry">
+            <entryLink id="6888-052e-610e-1845" name="Unit - Dextrous Tentacles" hidden="false" collective="false" import="true" targetId="fedb-d9a8-d699-5d44" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
             </entryLink>
-            <entryLink id="619d-fafb-89a6-a66a" name="Unit - Segmented Shell" hidden="false" collective="false" import="true" targetId="8101-3b21-c1ae-8871" type="selectionEntry">
+            <entryLink id="8288-b20a-15e5-b2b2" name="Unit - Living Shield" hidden="false" collective="false" import="true" targetId="9571-d0e9-f227-e54f" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
             </entryLink>
-            <entryLink id="8288-b20a-15e5-b2b2" name="Unit - Grasping Proboscis" hidden="false" collective="false" import="true" targetId="1e9e-1598-a3cc-5610" type="selectionEntry">
+            <entryLink id="4aa1-d36a-36d6-c9d2" name="Unit - Mark of the Eternal Champion" hidden="false" collective="false" import="true" targetId="534b-7d71-737c-c912" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="7b7b-5b0e-bec4-c72b" name="Character - Withering Vapor" hidden="false" collective="false" import="true" targetId="c90b-6da5-8da0-fe56" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="fdd6-4f4c-8f21-f3f8" name="Unit - Unnatural Roots" hidden="false" collective="false" import="true" targetId="c10c-4085-48a0-3e83" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="265.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="295.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4079-b3c9-934f-ce79" name="Undying Dynasties 2020" revision="35" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4079-b3c9-934f-ce79" name="Undying Dynasties 2020" revision="36" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="45a2-75ed-6496-6965" name="1 Global (UD)">
       <characteristicTypes>
@@ -4098,6 +4098,13 @@ The model has two Bound Spells:
       </costs>
     </selectionEntry>
     <selectionEntry id="93bc-1a7b-545b-8cf7" name="Ancient Giant" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="b101-9d4f-0729-9c02" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="344e-9a1f-6584-73ed" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b101-9d4f-0729-9c02" type="max"/>
       </constraints>
@@ -4161,6 +4168,7 @@ Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it g
         <infoLink id="843d-b43c-a7b1-1ca4" name="Dust to Dust" hidden="false" targetId="8d07-0aa4-6c27-79a6" type="rule"/>
         <infoLink id="926c-308d-d37c-85cd" name="Undead" hidden="false" targetId="b558-1cce-fbc9-afe6" type="rule"/>
         <infoLink id="a9d4-7c1a-1a84-df36" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="e5e1-9f50-f995-5893" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ab0d-d012-f7bd-681b" name="New CategoryLink" hidden="false" targetId="d425-7690-6b20-5848" primary="true"/>
@@ -4226,28 +4234,32 @@ Aspen Bow (5+), Halberd</description>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e120-ba8e-3718-1b6c" name="Sepulchral Guard" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e120-ba8e-3718-1b6c" name="Scarab Giant" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="ee4f-de38-90f7-1cc3" name="Scarab Giant" hidden="false">
+                  <description>Universal Rule.
+The Ancient Giant model part gains Harnessed. The model gains Distracting and the following additional
+model part:
+Offensive
+Scarabs
+Att Off Str AP Agi
+8 3 2 1 3
+Model Rules
+Poison Attacks</description>
+                </rule>
+              </rules>
               <infoLinks>
-                <infoLink id="2c3b-3745-c77a-81e0" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
-                <infoLink id="5aa1-9349-3b98-81e6" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
-                <infoLink id="9074-c410-37e5-f69c" name="Magical Attacks" hidden="false" targetId="97c6-651e-d93d-a61e" type="rule"/>
+                <infoLink id="9074-c410-37e5-f69c" name="Distracting" hidden="false" targetId="056f-73ea-194b-1b49" type="rule"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="37e6-6525-07cc-8102" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ff3-e0a7-dc83-aeb8" type="min"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="265.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="280.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
