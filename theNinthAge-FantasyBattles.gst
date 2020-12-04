@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2020" revision="38" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2020" revision="39" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -996,6 +996,17 @@
       <infoLinks>
         <infoLink id="4e1b-5abe-4201-b32a" name="Rally Around the Flag" hidden="false" targetId="bf56-e3dc-41ca-292b" type="rule"/>
         <infoLink id="df4b-2178-ea99-76b9" name="Not a Leader" hidden="false" targetId="f611-6165-ada9-0d7d" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d5a4-4049-60de-5914" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eab6-c8da-2be4-d5ca" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="1af4-8a70-22de-fb17" name="Hand Weapon" hidden="false" targetId="2d01-b358-db9b-3b99" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
