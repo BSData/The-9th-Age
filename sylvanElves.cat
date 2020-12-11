@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c524-67bf-fa35-6c5e" name="Sylvan Elves 2020" revision="34" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c524-67bf-fa35-6c5e" name="Sylvan Elves 2020" revision="35" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="456a-ede0-3f5f-0c44" name="Unseen Arrows" hidden="false"/>
   </categoryEntries>
@@ -161,17 +161,6 @@
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c90c-0844-ca44-aecc" name="Sylvan Longbow (0+)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="45bb-5283-486a-ac45" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="48c2-8c10-948d-1bd3" name="Sylvan  (0+)" hidden="false" targetId="c53e-d709-b88e-c4ce" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -448,28 +437,6 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bd21-b53a-973d-6ea3" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d59-0476-d4dd-7c08" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="000d-7f3e-1275-eb14" name="Battle Standard Bearer" hidden="false" collective="false" import="true" targetId="1816-6a9c-7e82-694a" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="718c-d5a0-07ba-230a" name="Melee Weapon" hidden="false" collective="false" import="true">
@@ -588,6 +555,18 @@
         <entryLink id="0bba-f9a4-593a-7c17" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="3bd9-6103-bc4f-9e4c" name="Battle Standard Bearer" hidden="false" collective="false" import="true" targetId="1816-6a9c-7e82-694a" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -1340,8 +1319,23 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="2049-a182-78e4-9dcc" name="Aspects of Nature" hidden="false" collective="false" import="true" targetId="f998-cb94-e4fd-75e7" type="selectionEntryGroup"/>
-        <entryLink id="3d8d-0db3-2662-510d" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
+        <entryLink id="3d8d-0db3-2662-510d" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1816-6a9c-7e82-694a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="b3a3-15bb-afd8-4697" name="Battle Standard Bearer" hidden="false" collective="false" import="true" targetId="1816-6a9c-7e82-694a" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
