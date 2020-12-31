@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2020" revision="39" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2021 Beta 1" revision="40" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
-    <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0"/>
+    <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
   <profileTypes>
     <profileType id="8292-1fb8-8251-29a9" name="1 Global">
@@ -697,7 +697,7 @@
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d276-08bb-7326-4146" name="Rending Banner" hidden="false" collective="false" import="true" type="upgrade">
@@ -785,7 +785,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b8a1-4182-3aba-ffd8" name="Destiny&apos;s Call (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b8a1-4182-3aba-ffd8" name="Destiny&apos;s Call (not on Construct or Towering Presence)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d9e-0dd9-9c03-22c9" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="441f-cdc3-2641-5eb4" type="max"/>
@@ -802,7 +802,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="47b1-c334-2935-e4f4" name="Essence of Mithril (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="47b1-c334-2935-e4f4" name="Essence of Mithril (not on Construct or Towering Presence)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8a8-87ba-b529-c97d" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="567d-e1e4-0a5d-1bbc" type="max"/>
@@ -1053,7 +1053,7 @@
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3eeb-4d3a-ca9b-17e5" name="King Slayer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3eeb-4d3a-ca9b-17e5" name="King Slayer (only on Foot)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f07-c141-0acb-6f38" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6056-7200-eae6-1b0a" type="max"/>
@@ -1067,7 +1067,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="51f1-66e8-4022-9d8b" name="Shield Breaker" hidden="false" collective="false" import="true" type="upgrade">
@@ -1164,7 +1164,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9621-5b4f-503d-1501" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="10fe-ce12-d662-ae02" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
@@ -1172,7 +1172,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b76f-c463-b6d8-4fed" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8f82-6955-3d8a-01ea" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1180,7 +1180,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8d1-795e-f3af-3b02" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
