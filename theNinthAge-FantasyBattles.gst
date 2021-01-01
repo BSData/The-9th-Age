@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2021 Beta 1" revision="40" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2021 Beta 1" revision="42" battleScribeVersion="2.03" authorName="Karanadon, DarkSky" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -980,6 +980,7 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e95-5927-c752-12ce" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="318b-239e-60fa-42ef" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0da0-7281-e219-4475" type="min"/>
       </constraints>
       <infoLinks>
         <infoLink id="4a63-9604-b76c-97f6" name="Commanding Presence" hidden="false" targetId="2304-d0e4-f97b-c4e5" type="rule"/>
@@ -1010,6 +1011,30 @@
       </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="10fe-ce12-d662-ae02" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9968-adaf-9cb5-9219" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8f82-6955-3d8a-01ea" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e07-8da4-71e3-21bd" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c3e7-8c28-0d42-6aa8" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efef-cedc-706d-0c46" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1158,32 +1183,11 @@
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="b4c3-e840-1bd5-b746" name="Command Group" hidden="false" collective="false" import="true">
-      <selectionEntries>
-        <selectionEntry id="c3e7-8c28-0d42-6aa8" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9621-5b4f-503d-1501" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="10fe-ce12-d662-ae02" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b76f-c463-b6d8-4fed" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8f82-6955-3d8a-01ea" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8d1-795e-f3af-3b02" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="4fb4-c9a2-fa29-d2af" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry"/>
+        <entryLink id="707a-8897-5a0d-a04c" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="8f82-6955-3d8a-01ea" type="selectionEntry"/>
+        <entryLink id="7e9e-ad84-4aa7-020a" name="Musician" hidden="false" collective="false" import="true" targetId="10fe-ce12-d662-ae02" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="3ca8-d93a-232c-d3b5" name="Shield Enchantments" hidden="false" collective="false" import="true">
       <constraints>
