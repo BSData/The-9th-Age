@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fb15-9166-d400-2894" name="Orcs and Goblins 2021 Beta 1" revision="38" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky, hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="39" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fb15-9166-d400-2894" name="Orcs and Goblins 2021 Beta 1" revision="39" battleScribeVersion="2.03" authorName="Mikel2311, DarkSky, hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="82d5-126d-e31a-aa94" name="Big &apos;n Nasty" hidden="false"/>
     <categoryEntry id="213d-78ab-6a2f-1664" name="Death from Above" hidden="false"/>
@@ -1190,12 +1190,24 @@
                 <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2838-fe86-95be-368c" type="min"/>
               </constraints>
             </entryLink>
-            <entryLink id="52fd-c87c-8914-1f2c" name="Unarmoured" hidden="false" collective="false" import="true" targetId="3d08-4e50-5ccc-bda0" type="selectionEntry"/>
+            <entryLink id="52fd-c87c-8914-1f2c" name="Unarmoured" hidden="false" collective="false" import="true" targetId="3d08-4e50-5ccc-bda0" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="81c1-99bc-ee12-2fa8" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82f0-6a38-e902-eb19" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="81c1-99bc-ee12-2fa8" type="min"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="e56c-a091-f8b0-5608" name="Melee Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="e56c-a091-f8b0-5608" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="5d88-5f8f-9ab2-38e4">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfeb-71a5-1ce6-c214" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41a9-be6c-0233-3348" type="min"/>
           </constraints>
           <entryLinks>
             <entryLink id="426b-d8af-83ab-1e1e" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
@@ -1203,6 +1215,7 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
+            <entryLink id="5d88-5f8f-9ab2-38e4" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1457,9 +1470,10 @@
             <entryLink id="9c5b-bbc3-078a-6430" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f53d-60c2-4567-84d9" name="Melee Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f53d-60c2-4567-84d9" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="03e1-fbe6-482f-39f7">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9115-0fc3-3c53-ed11" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94ed-fdef-3946-c115" type="min"/>
           </constraints>
           <entryLinks>
             <entryLink id="9e37-415c-ea15-3d40" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
@@ -1496,6 +1510,7 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
+            <entryLink id="03e1-fbe6-482f-39f7" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="50fd-16ac-eba0-21d2" name="Shooting Weapon" hidden="false" collective="false" import="true">
@@ -1743,9 +1758,10 @@
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="1ab3-0101-bc78-3e2e" name="Melee Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="1ab3-0101-bc78-3e2e" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="805d-30a4-5583-8d75">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9ed6-2682-5219-a3f5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1ca-a1f5-32ce-3f7e" type="min"/>
           </constraints>
           <entryLinks>
             <entryLink id="53fe-6362-ffa6-8c74" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
@@ -1782,6 +1798,7 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
+            <entryLink id="805d-30a4-5583-8d75" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="7df0-41c0-28c8-072b" name="Shooting Weapon" hidden="false" collective="false" import="true">
