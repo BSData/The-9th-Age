@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cb95-d0ac-2627-c23e" name="Vermin Swarm 2021 Beta 1" revision="38" battleScribeVersion="2.03" authorName="Karanadon, Mikel2311, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="39" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cb95-d0ac-2627-c23e" name="Vermin Swarm 2021 Beta 1" revision="39" battleScribeVersion="2.03" authorName="Karanadon, Mikel2311, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="1c57-fa6c-295c-c49c" name="Tunnel Gunners" hidden="false"/>
     <categoryEntry id="a4b6-d53f-821c-9216" name="Built and Bred" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="035e-617b-127a-22fd" name="The Vermin Swarm" hidden="false">
+    <forceEntry id="035e-617b-127a-22fd" name="Vermin Swarm" hidden="false">
       <categoryLinks>
         <categoryLink id="041d-188e-83f8-5c2f" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
           <constraints>
@@ -264,16 +264,10 @@
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="520a-591a-c437-bf7d" name="Melee Weapon" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="066c-31c3-e132-3bbf" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f413-43a2-f205-4235" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup id="520a-591a-c437-bf7d" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="d7eb-f735-000d-cc8d">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="066c-31c3-e132-3bbf" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b012-e027-d316-ef68" type="min"/>
           </constraints>
           <entryLinks>
             <entryLink id="21ce-6555-902f-c094" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
@@ -297,9 +291,23 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </entryLink>
+            <entryLink id="d7eb-f735-000d-cc8d" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="f413-43a2-f205-4235" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="071c-d59b-0ca9-2b73" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="544f-9331-9cce-694d" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a41-63a5-c5f6-66f6" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2837-ec0d-956f-690a" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="071c-d59b-0ca9-2b73" type="max"/>
           </constraints>
@@ -496,16 +504,10 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="6837-6e8d-f904-795f" name="Melee Weapon" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="9b88-9267-898e-58a8" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="579f-44c4-8b4e-9320" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup id="6837-6e8d-f904-795f" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="1541-11cb-1085-2b1a">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b88-9267-898e-58a8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7de5-d695-361e-7926" type="min"/>
           </constraints>
           <entryLinks>
             <entryLink id="22dc-3346-3ac1-8e1d" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
@@ -529,6 +531,7 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
+            <entryLink id="1541-11cb-1085-2b1a" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="2c73-18dc-6073-8b0b" name="Mount" hidden="false" collective="false" import="true">
@@ -566,6 +569,19 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="579f-44c4-8b4e-9320" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="e9ed-bf3a-9ac8-68dd" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="544f-9331-9cce-694d" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a41-63a5-c5f6-66f6" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2837-ec0d-956f-690a" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e9ed-bf3a-9ac8-68dd" type="max"/>
           </constraints>
@@ -599,6 +615,9 @@ The Chief has its Advance Rate set to 7”, its March Rate set to 14”, and gai
               </conditions>
             </modifier>
           </modifiers>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+          </costs>
         </entryLink>
         <entryLink id="2a3e-a1b3-8ce8-fc45" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
           <costs>
@@ -1314,9 +1333,10 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="b387-78ad-5dfe-f890" name="Melee Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="b387-78ad-5dfe-f890" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="a822-4732-a593-19db">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="87dc-4f60-5d8c-2061" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d31f-000a-16e4-2621" type="min"/>
           </constraints>
           <entryLinks>
             <entryLink id="e717-c026-fe2f-7fcf" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
@@ -1329,9 +1349,10 @@ A Rakachit Machinist may use a single of the following attacks once per Player T
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
               </costs>
             </entryLink>
+            <entryLink id="a822-4732-a593-19db" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="9de2-fd8b-595f-4080" name="Armour" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="9de2-fd8b-595f-4080" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="3e7e-caa1-bf76-a162">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c8d-9806-2fff-63d0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58a3-d456-9558-b703" type="min"/>
@@ -2754,12 +2775,19 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5f35-2893-76e9-ac10" name="Verminous Artillery" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="5f35-2893-76e9-ac10" name="Plague Catapult" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="decrement" field="f968-5b6d-743b-36ab" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7459-17ff-e150-69bb" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f968-5b6d-743b-36ab" type="max"/>
       </constraints>
       <profiles>
-        <profile id="9bc1-2a8a-4751-fb68" name="Verminous Artillery Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+        <profile id="9bc1-2a8a-4751-fb68" name="Plague Catapult Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">5&quot;</characteristic>
@@ -2767,7 +2795,7 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
-        <profile id="e721-369f-48e4-e910" name="Verminous Artillery Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+        <profile id="e721-369f-48e4-e910" name="Plague Catapult Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
@@ -2776,108 +2804,46 @@ When shooting into combat where the only Engaged friendly models are Slaves, the
             <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
-        <profile id="42fb-8cfc-f1fe-f6a2" name="Verminous Artillery Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+        <profile id="42fb-8cfc-f1fe-f6a2" name="Plague Catapult Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
           <characteristics>
             <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
             <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
             <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">75Ø</characteristic>
           </characteristics>
         </profile>
+        <profile id="0245-1283-b1cb-3562" name="Crew" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Battle Focus, Hatred, Move or Fire, Plague Catapult (4+)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0599-c65f-98eb-c7fe" name="Plague Catapult" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">12–48&quot;</characteristic>
+            <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
+            <characteristic name="Str" typeId="f166-13ff-9227-4525">3</characteristic>
+            <characteristic name="AP" typeId="857a-4ce1-d134-8701">6</characteristic>
+            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Catapult (4×4), Magical Attacks, Toxic Attacks</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="721e-ca56-0ed4-f057" name="Safety in Numbers" hidden="false" targetId="f4e0-dc81-e628-dc4a" type="rule"/>
         <infoLink id="4eb8-7d7a-773a-256a" name="War Machine" hidden="false" targetId="610e-d71e-0439-9e7f" type="rule"/>
+        <infoLink id="d6d9-7ecc-9255-203d" name="Hatred" hidden="false" targetId="13c5-ce89-60ad-c572" type="rule"/>
+        <infoLink id="e4b1-9f52-1406-4611" name="Battle Focus" hidden="false" targetId="cc29-65f2-796b-52e2" type="rule"/>
+        <infoLink id="f7d4-ae72-ceb4-2276" name="Move or Fire" hidden="false" targetId="6475-e063-0070-f6cc" type="rule"/>
+        <infoLink id="3dc3-ab23-5aed-38c9" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="6905-7489-4724-fdc0" name="Magical Attacks" hidden="false" targetId="97c6-651e-d93d-a61e" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="9b93-2646-679b-04f2" name="New CategoryLink" hidden="false" targetId="1c57-fa6c-295c-c49c" primary="true"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="262b-0343-c845-6cea" name="Weapon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da31-08db-52f3-7205" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb6c-23c2-ed82-ef32" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="c892-3493-9bf6-b748" name="Plague Catapult" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1efd-063e-b10c-8f15" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="84eb-356d-2561-24b1" name="Plague Catapult" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-                  <modifiers>
-                    <modifier type="append" field="name" value=" (4+)"/>
-                  </modifiers>
-                  <characteristics>
-                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">12-48&quot;</characteristic>
-                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-                    <characteristic name="Str" typeId="f166-13ff-9227-4525">-</characteristic>
-                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">-</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Catapult (4x4), Toxic Attacks, Magical Attacks</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="01c6-b8e0-f583-7792" name="Catapult Crew" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-                  <characteristics>
-                    <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
-                    <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                    <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                    <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                    <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                    <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Plague Catapult (4+), Hatred, Battle Focus, Move or Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="d841-26a5-810b-e539" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
-                <infoLink id="2cdb-645b-c0b3-3037" name="Hatred" hidden="false" targetId="13c5-ce89-60ad-c572" type="rule"/>
-                <infoLink id="4892-8b8d-c815-4144" name="Battle Focus" hidden="false" targetId="cc29-65f2-796b-52e2" type="rule"/>
-                <infoLink id="ec15-639b-76a7-090c" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="210.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6b7c-5ea6-5f44-7de4" name="Lightning Cannon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="19ff-a155-2e51-6e87" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f9b5-0274-72c5-42cb" name="Lightning Cannon" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-                  <modifiers>
-                    <modifier type="append" field="name" value=" (4+)"/>
-                  </modifiers>
-                  <characteristics>
-                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">48&quot;</characteristic>
-                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-                    <characteristic name="Str" typeId="f166-13ff-9227-4525">7</characteristic>
-                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">10</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Cannon, Accurate, Magical Attacks, Lightning Attacks, Multiple Wounds (D3+1, Clipped Wings). Before rolling to hit, the Lightning Cannon may be supercharged. If supercharged, the weapon’s Strength is set to 10 and its Range is set to 18&quot; for the duration of the phase. After the shot has been resolved, roll a D6. On a roll of &apos;1&apos; or ‘2’, the Lightning Cannon cannot be supercharged again this game.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="b8cf-7a30-1bda-7896" name="Cannon Crew" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-                  <characteristics>
-                    <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
-                    <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                    <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                    <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                    <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                    <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lightning Cannon (4+), Move or Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="3833-bba1-920c-d289" name="Accurate" hidden="false" targetId="68aa-b60b-ae0b-158b" type="rule"/>
-                <infoLink id="89d6-a7ed-a80e-e83e" name="Lightning Attack" hidden="false" targetId="501e-5bc4-8b73-463a" type="rule"/>
-                <infoLink id="68c7-43b4-fdb3-bb6b" name="Magical Attacks" hidden="false" targetId="97c6-651e-d93d-a61e" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="230.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="210.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="782d-f3d3-d092-b05e" name="Dreadmill" hidden="false" collective="false" import="true" type="unit">
@@ -3163,6 +3129,79 @@ When the model is removed as a casualty, all units within 6′′ suffer 2D6 hit
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="265.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7459-17ff-e150-69bb" name="Lightning Cannon" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="decrement" field="6c75-3edf-c490-d743" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5f35-2893-76e9-ac10" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6c75-3edf-c490-d743" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="08b3-d1df-263d-ec39" name="Lightning Cannon Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">5&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+        <profile id="3337-feb5-b795-b2d0" name="Lightning Cannon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="25c1-82e5-2a0d-cb5c" name="Lightning Cannon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">75Ø</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6c0c-1cc9-18a4-88a9" name="Crew" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Move or Fire, Lightning Cannon (4+)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ccdd-32ad-9345-8023" name="Lightning Cannon" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">48&quot;</characteristic>
+            <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
+            <characteristic name="Str" typeId="f166-13ff-9227-4525">7</characteristic>
+            <characteristic name="AP" typeId="857a-4ce1-d134-8701">10</characteristic>
+            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Cannon, Accurate, Lightning Attack, Magical Attacks, Multiple Wounds (D3+1, Clipped WIngs). Before rolling to hit, the Lightning Cannon may be supercharged. If supercharged, the weapon’s Strength is set
+to 10 and its range is set to 18′′ for the duration of the phase. After the shot has been resolved, roll a D6. On a
+roll of ‘1’ or ‘2’, the Lightning Cannon cannot be supercharged again until the end of game.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="136f-8583-4a10-c93e" name="Move or Fire" hidden="false" targetId="6475-e063-0070-f6cc" type="rule"/>
+        <infoLink id="b982-ba4c-2140-79ab" name="War Machine" hidden="false" targetId="610e-d71e-0439-9e7f" type="rule"/>
+        <infoLink id="78a0-cb71-487b-cbb2" name="Accurate" hidden="false" targetId="68aa-b60b-ae0b-158b" type="rule"/>
+        <infoLink id="ee22-7294-028a-8384" name="Lightning Attack" hidden="false" targetId="501e-5bc4-8b73-463a" type="rule"/>
+        <infoLink id="43c5-6947-fa99-abb5" name="Magical Attacks" hidden="false" targetId="97c6-651e-d93d-a61e" type="rule"/>
+        <infoLink id="4491-226b-f3d8-0847" name="Multiple Wounds" hidden="false" targetId="2ea2-3a42-de1e-bc0a" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6de7-72c2-92fc-34b0" name="New CategoryLink" hidden="false" targetId="1c57-fa6c-295c-c49c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="230.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
