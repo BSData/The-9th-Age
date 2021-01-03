@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ce46-6b39-6f02-8925" name="Dread Elves 2021 Alpha 1" revision="5" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ce46-6b39-6f02-8925" name="Dread Elves 2021 Alpha 1" revision="6" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="3a14-99d4-8059-140f" name="The Menagerie" hidden="false"/>
     <categoryEntry id="2611-7f11-a4ea-5807" name="Destroyers" hidden="false"/>
@@ -1720,15 +1720,14 @@ The model gains Cannot be Stomped and Shield. At the start of each friendly Play
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="27.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="74a3-692f-428f-ff47" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d01a-cc68-63a5-6b6c" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="647a-767e-5219-4970" name="Command Group" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="04ce-142d-0971-df24" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
@@ -2466,18 +2465,24 @@ The bearer gains Aegis (+1, max. 3+) for each non-Attribute Spell with duration 
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ca13-2a8a-3cb9-cef5" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3b0e-bac3-0068-689f" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="5fda-847c-ade6-eac3" name="Wizard Conclave" hidden="false" targetId="7455-f914-028b-3359" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b9d5-d7b1-0324-3c83" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="472c-764a-aed7-a0b1" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9bfa-f76b-1d90-de6d" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="cee5-f84f-c530-0438" name="Wizard Conclave" hidden="false" targetId="7455-f914-028b-3359" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
@@ -2564,9 +2569,6 @@ At the end of each friendly Magic Phase the owner may discard up to 2 Veil Token
                   </modifiers>
                 </infoLink>
               </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-              </costs>
             </selectionEntry>
             <selectionEntry id="d261-18c8-84aa-3967" name="Crucible of Slaughter" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
