@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1aa5-c442-6972-b551" name="Empire of Sonnstahl 2021 Beta 1" revision="34" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1aa5-c442-6972-b551" name="Empire of Sonnstahl 2021 Beta 1.1" revision="35" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="ecde-c284-9850-23e1" name="Imperial Armoury" hidden="false"/>
     <categoryEntry id="77b5-bf3a-88ad-b176" name="Imperial Auxiliaries" hidden="false"/>
@@ -2396,15 +2396,14 @@ The attack gains Multiple Wounds (D3), Lethal Strike, and must reroll failed to-
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="11.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4a2b-c06f-9a49-11b7" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1862-0173-68e8-a6ae" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="af3f-203d-eb49-fc2f" name="Command Group" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="d115-220b-ed93-3843" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
@@ -2509,6 +2508,21 @@ A charging model part with Fire on Impact! using a Pistol, a Brace of Pistols, o
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="47ea-952d-1a83-9f48" name="Champion Repeater Pistol (4+)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c3e7-8c28-0d42-6aa8" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8fa-9971-2e3c-673c" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="4b96-da38-7eea-a609" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="3362-89ad-3f9b-78ab">
@@ -2588,41 +2602,10 @@ A charging model part with Fire on Impact! using a Pistol, a Brace of Pistols, o
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="9912-7648-05eb-6d08" name="Command Group" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="ce1f-7f6a-bd8a-c413" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f91-5b8b-301e-75be" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="d8a0-e1c6-ffe2-6713" name="Repeater Pistol (4+)" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4821-e699-4bd5-37cc" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="ce8a-a372-4207-dd7d" name="Repeater Pistol" hidden="false" targetId="ceb6-ffaa-c9f3-a019" type="profile">
-                      <modifiers>
-                        <modifier type="append" field="name" value=" (4+)"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="961f-b9b4-54ad-f0c5" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32ff-756e-cf9b-5040" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <entryLinks>
+            <entryLink id="fe3e-6506-6b51-fc66" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry"/>
+            <entryLink id="8677-55a3-8d4d-6f2c" name="Musician" hidden="false" collective="false" import="true" targetId="10fe-ce12-d662-ae02" type="selectionEntry"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -2961,15 +2944,14 @@ A charging model part with Fire on Impact! using a Pistol, a Brace of Pistols, o
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="16.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8b09-082d-f0fb-a8f2" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfaa-00c2-59ce-fda3" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c1e4-3c93-533c-75dd" name="Command Group" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="6405-18d6-017e-7276" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-40.0"/>
       </costs>
