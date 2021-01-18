@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ce46-6b39-6f02-8925" name="Dread Elves 2021 Alpha 1" revision="6" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ce46-6b39-6f02-8925" name="Dread Elves 2021 Alpha 1" revision="7" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="3a14-99d4-8059-140f" name="The Menagerie" hidden="false"/>
     <categoryEntry id="2611-7f11-a4ea-5807" name="Destroyers" hidden="false"/>
@@ -166,6 +166,7 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -186,6 +187,7 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf2a-f8ef-05f9-0b4d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -205,6 +207,7 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -223,6 +226,8 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -232,7 +237,23 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="8.0"/>
               </costs>
             </entryLink>
-            <entryLink id="c45a-82a3-1907-ce1d" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry"/>
+            <entryLink id="c45a-82a3-1907-ce1d" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="eab6-c8da-2be4-d5ca" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="bf2a-f8ef-05f9-0b4d" name="Mount" hidden="false" collective="false" import="true">
@@ -241,16 +262,57 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
           </constraints>
           <entryLinks>
             <entryLink id="c600-1c59-7117-5b06" name="Elven Horse" hidden="false" collective="false" import="true" targetId="c0d0-20bc-f556-468f" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="d953-6cb0-dc84-8349" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
               </costs>
             </entryLink>
-            <entryLink id="c37f-13cb-0073-f794" name="Raptor" hidden="false" collective="false" import="true" targetId="e1d2-1439-a2b8-d8ec" type="selectionEntry">
+            <entryLink id="c37f-13cb-0073-f794" name="Plains Raptor" hidden="false" collective="false" import="true" targetId="e1d2-1439-a2b8-d8ec" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="ff63-eb47-b4e3-4b57" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
               </costs>
             </entryLink>
             <entryLink id="17a0-61e8-9a1b-5f52" name="Raptor Chariot" hidden="false" collective="false" import="true" targetId="5465-f1c8-ada2-b24c" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="f849-1be7-e217-5f82" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
               </costs>
@@ -420,6 +482,7 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -438,6 +501,7 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eedf-4585-d0c1-f613" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
@@ -458,6 +522,7 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7d51-b464-e27a-4aa2" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
@@ -476,7 +541,9 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -486,7 +553,23 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
-            <entryLink id="6374-2285-ff66-3a9e" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry"/>
+            <entryLink id="6374-2285-ff66-3a9e" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="eab6-c8da-2be4-d5ca" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="7d51-b464-e27a-4aa2" name="Mount" hidden="false" collective="false" import="true">
@@ -495,26 +578,94 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
           </constraints>
           <entryLinks>
             <entryLink id="d56d-43fd-fc3c-2e97" name="Elven Horse" hidden="false" collective="false" import="true" targetId="c0d0-20bc-f556-468f" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="d953-6cb0-dc84-8349" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
               </costs>
             </entryLink>
             <entryLink id="74a0-609a-7b0f-c79f" name="Manticore" hidden="false" collective="false" import="true" targetId="b9e4-b91d-d874-f3c5" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="33ac-525c-c47b-2c1f" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
               </costs>
             </entryLink>
             <entryLink id="0efc-3223-319d-6119" name="Raptor Chariot" hidden="false" collective="false" import="true" targetId="5465-f1c8-ada2-b24c" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="f849-1be7-e217-5f82" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
               </costs>
             </entryLink>
-            <entryLink id="1a2e-0d9d-9a83-ee1e" name="Raptor" hidden="false" collective="false" import="true" targetId="e1d2-1439-a2b8-d8ec" type="selectionEntry">
+            <entryLink id="1a2e-0d9d-9a83-ee1e" name="Plains Raptor" hidden="false" collective="false" import="true" targetId="e1d2-1439-a2b8-d8ec" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="ff63-eb47-b4e3-4b57" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
               </costs>
             </entryLink>
-            <entryLink id="7a10-060c-87e0-3456" name="Pegasus" hidden="false" collective="false" import="true" targetId="1182-69a3-0773-e51e" type="selectionEntry">
+            <entryLink id="7a10-060c-87e0-3456" name="Blackmane Pegasus" hidden="false" collective="false" import="true" targetId="1182-69a3-0773-e51e" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="2124-a36f-2a21-9c2a" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
               </costs>
@@ -699,7 +850,10 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eedf-4585-d0c1-f613" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf1b-ec7a-0012-8cfe" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -712,9 +866,17 @@ For each Close Combat Attack allocated towards the model for which a natural ‘
             <entryLink id="31a9-3d19-b5c9-0b98" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="236a-7e57-0706-fc14" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <costs>
@@ -909,26 +1071,97 @@ The Casting Values of all spells cast by the model are increased by +1. Dispelli
           </constraints>
           <entryLinks>
             <entryLink id="684d-fde3-3991-aa43" name="Dragon" hidden="false" collective="false" import="true" targetId="409d-6c5e-5489-d2cd" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="a3a6-1c0f-abfc-41a8" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="425.0"/>
               </costs>
             </entryLink>
-            <entryLink id="efc7-acbe-4ebc-351d" name="Raptor" hidden="false" collective="false" import="true" targetId="e1d2-1439-a2b8-d8ec" type="selectionEntry">
+            <entryLink id="efc7-acbe-4ebc-351d" name="Plains Raptor" hidden="false" collective="false" import="true" targetId="e1d2-1439-a2b8-d8ec" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="ff63-eb47-b4e3-4b57" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </entryLink>
-            <entryLink id="54b6-dc2d-4fc3-b3f6" name="Pegasus" hidden="false" collective="false" import="true" targetId="1182-69a3-0773-e51e" type="selectionEntry">
+            <entryLink id="54b6-dc2d-4fc3-b3f6" name="Blackmane Pegasus" hidden="false" collective="false" import="true" targetId="1182-69a3-0773-e51e" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="2124-a36f-2a21-9c2a" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
               </costs>
             </entryLink>
             <entryLink id="5b6b-d25b-e82b-c6f9" name="Manticore" hidden="false" collective="false" import="true" targetId="b9e4-b91d-d874-f3c5" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="33ac-525c-c47b-2c1f" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
               </costs>
             </entryLink>
             <entryLink id="be8e-25c6-cd0a-a43e" name="Elven Horse" hidden="false" collective="false" import="true" targetId="c0d0-20bc-f556-468f" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="d953-6cb0-dc84-8349" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
               </costs>
@@ -1052,7 +1285,23 @@ The Casting Values of all spells cast by the model are increased by +1. Dispelli
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
             </entryLink>
-            <entryLink id="38f2-3b53-e972-69fe" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry"/>
+            <entryLink id="38f2-3b53-e972-69fe" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="eab6-c8da-2be4-d5ca" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2569,6 +2818,9 @@ At the end of each friendly Magic Phase the owner may discard up to 2 Veil Token
                   </modifiers>
                 </infoLink>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="d261-18c8-84aa-3967" name="Crucible of Slaughter" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -3192,6 +3444,8 @@ The roll for determining the number of hits from Stomp Attacks of enemy models w
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eedf-4585-d0c1-f613" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3211,6 +3465,8 @@ The roll for determining the number of hits from Stomp Attacks of enemy models w
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1535-dddd-41c4-02a0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3228,6 +3484,9 @@ The roll for determining the number of hits from Stomp Attacks of enemy models w
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3237,7 +3496,23 @@ The roll for determining the number of hits from Stomp Attacks of enemy models w
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </entryLink>
-            <entryLink id="b01b-20ab-832d-08ca" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry"/>
+            <entryLink id="b01b-20ab-832d-08ca" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="eab6-c8da-2be4-d5ca" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fe6-a0b6-a976-a53f" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c52f-787d-8819-6ef0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6677-968f-e0b5-0eb0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde3-7ae3-1754-73c6" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2152-9b34-a62d-0587" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="1535-dddd-41c4-02a0" name="Mount" hidden="false" collective="false" import="true">
@@ -3246,31 +3521,117 @@ The roll for determining the number of hits from Stomp Attacks of enemy models w
           </constraints>
           <entryLinks>
             <entryLink id="f0de-2b30-0a04-0de0" name="Elven Horse" hidden="false" collective="false" import="true" targetId="c0d0-20bc-f556-468f" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="d953-6cb0-dc84-8349" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
               </costs>
             </entryLink>
-            <entryLink id="4e28-b53b-96e5-060c" name="Raptor" hidden="false" collective="false" import="true" targetId="e1d2-1439-a2b8-d8ec" type="selectionEntry">
+            <entryLink id="4e28-b53b-96e5-060c" name="Plains Raptor" hidden="false" collective="false" import="true" targetId="e1d2-1439-a2b8-d8ec" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="ff63-eb47-b4e3-4b57" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
               </costs>
             </entryLink>
             <entryLink id="b07c-11d7-404e-ec5f" name="Raptor Chariot" hidden="false" collective="false" import="true" targetId="5465-f1c8-ada2-b24c" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="f849-1be7-e217-5f82" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
               </costs>
             </entryLink>
-            <entryLink id="322b-6435-ca73-7b85" name="Pegasus" hidden="false" collective="false" import="true" targetId="1182-69a3-0773-e51e" type="selectionEntry">
+            <entryLink id="322b-6435-ca73-7b85" name="Blackmane Pegasus" hidden="false" collective="false" import="true" targetId="1182-69a3-0773-e51e" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="2124-a36f-2a21-9c2a" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
               </costs>
             </entryLink>
             <entryLink id="e011-2342-50e5-eeae" name="Manticore" hidden="false" collective="false" import="true" targetId="b9e4-b91d-d874-f3c5" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="33ac-525c-c47b-2c1f" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="170.0"/>
               </costs>
             </entryLink>
             <entryLink id="7cd1-7b11-d44d-74c6" name="Dragon" hidden="false" collective="false" import="true" targetId="409d-6c5e-5489-d2cd" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="a3a6-1c0f-abfc-41a8" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1efa-8974-f05f-bb4a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="430.0"/>
               </costs>
@@ -3487,6 +3848,9 @@ Additionally, all friendly Infantry units of Standard Height within 8′′ of o
   </selectionEntries>
   <sharedSelectionEntries>
     <selectionEntry id="c0d0-20bc-f556-468f" name="Elven Horse" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d953-6cb0-dc84-8349" type="max"/>
+      </constraints>
       <profiles>
         <profile id="8b82-ecb0-2042-1838" name="Elven Horse Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -3524,6 +3888,9 @@ Additionally, all friendly Infantry units of Standard Height within 8′′ of o
       </costs>
     </selectionEntry>
     <selectionEntry id="e1d2-1439-a2b8-d8ec" name="Plains Raptor" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff63-eb47-b4e3-4b57" type="max"/>
+      </constraints>
       <profiles>
         <profile id="2fff-528c-5074-9236" name="Plains Raptor Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -3570,6 +3937,9 @@ Additionally, all friendly Infantry units of Standard Height within 8′′ of o
       </costs>
     </selectionEntry>
     <selectionEntry id="1182-69a3-0773-e51e" name="Blackmane Pegasus" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2124-a36f-2a21-9c2a" type="max"/>
+      </constraints>
       <profiles>
         <profile id="fadc-4865-c5cf-63f1" name="Blackmane Pegasus Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -3616,6 +3986,9 @@ Additionally, all friendly Infantry units of Standard Height within 8′′ of o
       </costs>
     </selectionEntry>
     <selectionEntry id="5465-f1c8-ada2-b24c" name="Raptor Chariot" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f849-1be7-e217-5f82" type="max"/>
+      </constraints>
       <profiles>
         <profile id="1258-71aa-8835-ea20" name="Raptor Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -3692,6 +4065,9 @@ Additionally, all friendly Infantry units of Standard Height within 8′′ of o
       </costs>
     </selectionEntry>
     <selectionEntry id="b9e4-b91d-d874-f3c5" name="Manticore" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33ac-525c-c47b-2c1f" type="max"/>
+      </constraints>
       <profiles>
         <profile id="3cf6-b730-1688-5572" name="Manticore Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -3761,6 +4137,7 @@ The Manticore gains Stomp Attacks (D3) and its base size is changed to 50×100 m
     <selectionEntry id="409d-6c5e-5489-d2cd" name="Dragon" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d8c-ae9d-673c-a158" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3a6-1c0f-abfc-41a8" type="max"/>
       </constraints>
       <profiles>
         <profile id="8f95-3ea0-b34f-7e25" name="Dragon Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -3900,7 +4277,7 @@ The bearer gains Petrifying Stare (see Gorgons unit). Enemy units in base contac
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1efa-8974-f05f-bb4a" name="Seal of the Republic (only on Foot)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="1efa-8974-f05f-bb4a" name="Seal of the Republic" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fdb3-65ac-45f8-4761" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf28-535c-7ed0-5982" type="max"/>
