@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f4f2-a5a5-873e-1b18" name="Makhar 2021 Beta 1.1" revision="22" battleScribeVersion="2.03" authorName="DarkSky, Hebus" authorUrl="https://www.the-ninth-age.com/community/index.php" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f4f2-a5a5-873e-1b18" name="Makhar 2021" revision="23" battleScribeVersion="2.03" authorName="DarkSky, Hebus" authorUrl="https://www.the-ninth-age.com/community/index.php" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Report issues by
 1. Posting in [The Ninth Age Forum thread](https://www.the-ninth-age.com/community/index.php?thread/32031-battlescribe-files-for-t9a-2-0/&amp;s=3d1a2d5f3af91850c50d403638048494514c3ad1)
 2. Create an issue on the [GitHub issue tracker](https://github.com/BSData/The-9th-Age/issues).</readme>
@@ -838,12 +838,12 @@ Units with more than half of their models with Path of the Favoured must reroll 
         </selectionEntryGroup>
         <selectionEntryGroup id="1b32-d42b-5048-3d90" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="8df2-195a-5020-e3c2" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="8df2-195a-5020-e3c2" name="Favoured Champion" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f5f-8061-81ca-1c06" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1262,9 +1262,14 @@ The model’s base size is changed to 50×75 mm and its Discipline is set to 7.<
     <selectionEntry id="9541-1d4a-37ce-097f" name="Makhar Flayers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="d224-066a-e928-c28c">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a5a9-98a9-37c9-c878" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c745-8326-dad5-a89a" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2c0-2230-5a1a-1f08" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1344,39 +1349,6 @@ Close Combat Attacks and Shooting Attacks from Short Range made by the rider gai
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bd03-6128-d929-ee0f" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2">
-              <repeats>
-                <repeat field="selections" scope="9541-1d4a-37ce-097f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="15a2-fae1-7afb-d2db" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a09f-a629-41ba-5f64" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="f966-9b85-f82b-1383" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b6ed-d7c1-47f5-d364" name="Light Lance" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="217b-1658-4c24-dbfc" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="491f-b4ec-9ec3-5962" name="Shooting Weapon" hidden="false" collective="false" import="true">
@@ -1406,60 +1378,39 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="a201-7616-1270-c5e3" name="Throwing Weapons (5+)" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
-                  <repeats>
-                    <repeat field="selections" scope="9541-1d4a-37ce-097f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="15a2-fae1-7afb-d2db" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62d7-7d44-df50-971c" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="1c79-5add-e851-8339" name="Throwing Weapons" hidden="false" targetId="8c83-06ff-024f-a235" type="profile">
-                  <modifiers>
-                    <modifier type="append" field="name" value=" (5+)"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="82ed-73ba-6868-7066" name="Bow (4+)" hidden="false" collective="false" import="true" type="upgrade">
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="58a3-1373-421f-3448" name="Bow" hidden="false" collective="false" import="true" targetId="e2c0-2230-5a1a-1f08" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="append" field="name" value=" (4+)"/>
               </modifiers>
-              <infoLinks>
-                <infoLink id="fa9b-b30e-62d8-caaf" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a5a9-98a9-37c9-c878" name="Recurve Bow (3+)" hidden="false" collective="false" import="true" type="upgrade">
+            </entryLink>
+            <entryLink id="f206-371b-27e9-025b" name="Recurve Bow" hidden="false" collective="false" import="true" targetId="c745-8326-dad5-a89a" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="7.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="append" field="name" value=" (3+)"/>
               </modifiers>
-              <infoLinks>
-                <infoLink id="8d6c-d26a-4c8f-71ad" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
-                <infoLink id="e709-6553-cba7-bfe8" name="Parting Shot" hidden="false" targetId="381d-6b94-16aa-dcab" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink id="1025-411b-9982-7990" name="Throwing Weapons" hidden="false" collective="false" import="true" targetId="b672-9729-1d95-cb6d" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="append" field="name" value=" (5+)"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="5b01-7730-a185-67e3" name="Command Group" hidden="false" collective="false" import="true">
           <entryLinks>
@@ -1468,6 +1419,26 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="bf3e-e997-ea9d-e663" name="Light Lance" hidden="false" collective="false" import="true" targetId="7efd-252a-dcad-fa35" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="7577-1c82-e45a-054b" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="9541-1d4a-37ce-097f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="15a2-fae1-7afb-d2db" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
       </costs>
