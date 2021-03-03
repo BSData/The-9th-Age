@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2021 " revision="43" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2021 Beta 2" revision="44" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -785,7 +785,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b8a1-4182-3aba-ffd8" name="Destiny&apos;s Call (not on Construct or Towering Presence)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b8a1-4182-3aba-ffd8" name="Destiny&apos;s Call (not on Large Construct or Towering Presence)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d9e-0dd9-9c03-22c9" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="441f-cdc3-2641-5eb4" type="max"/>
@@ -802,7 +802,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="47b1-c334-2935-e4f4" name="Essence of Mithril (not on Construct or Towering Presence)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="47b1-c334-2935-e4f4" name="Essence of Mithril (not on Large Construct or Towering Presence)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8a8-87ba-b529-c97d" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="567d-e1e4-0a5d-1bbc" type="max"/>
