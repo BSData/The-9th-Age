@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2021 Beta 2" revision="44" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2021 Beta 2 Hotfix 3" revision="45" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -658,7 +658,11 @@
         <profile id="d633-f98b-a73c-30dd" name="Banner of the Relentless Company" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated during the controlling player’s Movement Phase. All Infantry models in thebearer’s unit always have March Rate 15”, until the end of the Player Turn. Only a single Banner of the Relentless Company may be activated during the same Phase.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated during the owner’s Movement Phase. All Infantry models in the bearer’s unit always have March Rate 15′′ with the following restrictions:
+• Characters cannot voluntarily leave the bearer’s unit.
+• The bearer’s unit cannot perform any Shooting Attacks.
+• Only a single Banner of the Relentless Company may be activated during the same phase.
+The effects last until the end of the Player Turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
