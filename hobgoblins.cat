@@ -92,7 +92,8 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="0385-3864-deeb-e029" name="Equipment" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd7a-134e-ad42-e4bc" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd7a-134e-ad42-e4bc" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2f2-f676-47d5-bbfa" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="feeb-8047-650b-578b" name="Spear and Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -103,6 +104,9 @@
                   </repeats>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08c7-7515-b082-4829" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="5043-8bc6-f7ad-fa8d" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
                 <infoLink id="5bc0-c3c8-8d3f-672d" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
@@ -119,6 +123,9 @@
                   </repeats>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af19-fd3a-ad0d-2f4e" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="6ed6-83e6-2ad8-9d81" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
                 <infoLink id="3111-7907-9b64-6ee4" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
@@ -281,8 +288,15 @@
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="f02a-3cc8-7b93-d41b" name="Special Equipment" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="41f9-b8fe-3061-638c" value="200.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ab-249b-e180-109d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="75.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="41f9-b8fe-3061-638c" type="max"/>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="41f9-b8fe-3061-638c" type="max"/>
               </constraints>
               <selectionEntryGroups>
                 <selectionEntryGroup id="e844-afb7-6fb6-9a9b" name="Armour Enchantment" hidden="false" collective="false" import="true">
@@ -298,6 +312,7 @@
                   </constraints>
                   <entryLinks>
                     <entryLink id="3a7d-519c-cbc8-aff3" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
+                    <entryLink id="45b2-ebac-5940-272a" name="Hob Armours" hidden="false" collective="false" import="true" targetId="d705-7505-7d2b-9637" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="062d-a11d-867f-0cba" name="Artefacts" hidden="false" collective="false" import="true">
@@ -306,6 +321,7 @@
                   </constraints>
                   <entryLinks>
                     <entryLink id="7e93-7805-a2ef-0c38" name="Artefacts (Wizards)" hidden="false" collective="false" import="true" targetId="ab25-3916-e8af-98cb" type="selectionEntryGroup"/>
+                    <entryLink id="a21a-343d-96a3-8036" name="Hob Artefacts" hidden="false" collective="false" import="true" targetId="7c91-8249-8755-c93b" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="62a6-8beb-4586-f2b8" name="Weapon Enchantment" hidden="false" collective="false" import="true">
@@ -326,9 +342,14 @@
         <selectionEntry id="2e4f-9986-5d55-009b" name="Infernal Lackey" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="e693-72d4-af35-0f84" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ab-249b-e180-109d" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ab-249b-e180-109d" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="463e-9612-da1e-7c67" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -442,6 +463,9 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="7de5-7666-6c95-e468" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
       </costs>
@@ -635,6 +659,7 @@ While joined by a mounted model with this rule, Cavalry units gain Strider.</des
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </entryLink>
+        <entryLink id="9334-45ed-5a8c-404a" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="165.0"/>
@@ -804,9 +829,10 @@ Units in Line Formation joined by the model never count as having moved for the 
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </entryLink>
+        <entryLink id="e7f9-e29a-c755-4001" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="165.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0262-6708-226a-d86e" name="Hob Slingers" hidden="false" collective="false" import="true" type="unit">
@@ -1200,7 +1226,7 @@ If one or more simultaneous attacks with Boiling Oil hit, after resolving these 
         <entryLink id="dc95-b77c-7b51-3f1c" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e263-6bec-d58f-aa46" name="Eternals" hidden="false" collective="false" import="true" type="unit">
@@ -1398,7 +1424,7 @@ The model gains Fearless and Frenzy while Engaged in Combat. In addition, units 
         <entryLink id="d16d-840a-96c0-f0cd" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3600-a5b8-2305-3943" name="Drum Gogyag" hidden="false" collective="false" import="true" type="unit">
@@ -1463,10 +1489,13 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
         <infoLink id="d1ed-eee3-894c-aeaa" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
         <infoLink id="e708-6c99-6451-ad74" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d267-3924-71c0-eb44" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="4a59-273a-f443-dfba" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="8f82-6955-3d8a-01ea" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -1570,39 +1599,6 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
           <entryLinks>
             <entryLink id="9d2e-1f61-925e-bab2" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
             <entryLink id="1b28-d838-4919-93d8" name="Hob Banners" hidden="false" collective="false" import="true" targetId="c4f1-0098-6bd9-30f4" type="selectionEntryGroup"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="fbbf-e95f-be81-d915" name="Shooting Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="1cd2-7393-1d0e-c468">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="06b9-1037-b38e-dee4" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64bb-f6c6-2d7c-2bf1" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1cd2-7393-1d0e-c468" name="Bow" hidden="false" collective="false" import="true" targetId="e2c0-2230-5a1a-1f08" type="selectionEntry">
-              <modifiers>
-                <modifier type="append" field="name" value=" (3+)"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="8140-9801-5e39-9dc9" name="Flintlock Axe" hidden="false" collective="false" import="true" targetId="3ae9-cf89-91e3-b982" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="append" field="name" value=" (4+)"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="4276-38d9-d03d-984b" name="Blunderbuss" hidden="false" collective="false" import="true" targetId="9cdb-d7a9-8c32-d058" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="append" field="name" value=" (5+)"/>
-              </modifiers>
-            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
