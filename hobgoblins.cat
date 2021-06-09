@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8ad8-dcc6-8331-c264" name="Hobgoblins 2021 Beta 1" revision="1" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8ad8-dcc6-8331-c264" name="Hobgoblins 2021 Beta 1 Hotfix 1" revision="2" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="f410-d87f-bb92-f6cb" name="Blotting the Sun" hidden="false"/>
   </categoryEntries>
@@ -30,7 +30,7 @@
       <modifiers>
         <modifier type="add" field="category" value="f410-d87f-bb92-f6cb">
           <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2c0-2230-5a1a-1f08" type="equalTo"/>
+            <condition field="selections" scope="cf56-b365-7909-865c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2c0-2230-5a1a-1f08" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -90,7 +90,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0385-3864-deeb-e029" name="Equipment" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="0385-3864-deeb-e029" name="Melee Weapon and Armour" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd7a-134e-ad42-e4bc" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2f2-f676-47d5-bbfa" type="min"/>
@@ -130,20 +130,14 @@
                 <infoLink id="6ed6-83e6-2ad8-9d81" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
                 <infoLink id="3111-7907-9b64-6ee4" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
             <entryLink id="e230-68da-6590-a2ea" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry"/>
             <entryLink id="1140-60c2-4837-f0f7" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry"/>
-            <entryLink id="b7cf-1e0e-b4d3-40c6" name="Bow" hidden="false" collective="false" import="true" targetId="e2c0-2230-5a1a-1f08" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="ca30-0731-9287-04b6" name="Banner Enchantment" hidden="false" collective="false" import="true">
@@ -160,6 +154,22 @@
           <entryLinks>
             <entryLink id="ea44-663c-1d47-e382" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
             <entryLink id="ff89-33ed-8699-65ff" name="Hob Banners (Core)" hidden="false" collective="false" import="true" targetId="dd81-fb1a-6781-0fe2" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e498-91ba-eb17-a353" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7609-2755-ded1-e81d" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="5b52-797a-85f0-aa0d" name="Bow" hidden="false" collective="false" import="true" targetId="e2c0-2230-5a1a-1f08" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -215,7 +225,7 @@
             <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
             <characteristic name="Str" typeId="f166-13ff-9227-4525">3 [6]</characteristic>
             <characteristic name="AP" typeId="857a-4ce1-d134-8701">10</characteristic>
-            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Area Attack (1×5), [Multiple Wounds (D3)]</characteristic>
+            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Artillery Weapon. Area Attack (1×5), [Multiple Wounds (D3)]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -402,7 +412,11 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2f42-e760-7d15-9ba6" name="Shamanism" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="2f42-e760-7d15-9ba6" name="Shamanism" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="c409-9919-4ceb-0fb0" name="Mount" hidden="false" collective="false" import="true">
@@ -445,7 +459,11 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="bd69-2d35-d6fd-a32a" name="Shamanism" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="bd69-2d35-d6fd-a32a" name="Shamanism" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="4490-8892-ce90-a6e4" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="0f7c-1b12-beeb-3deb">
@@ -764,6 +782,22 @@ While joined by a mounted model with this rule, Cavalry units gain Strider.</des
                     <entryLink id="49df-e7a5-2dae-6fa8" name="Shield Enchantments" hidden="false" collective="false" import="true" targetId="3ca8-d93a-232c-d3b5" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
+                <selectionEntryGroup id="5516-6b7d-0719-e5dc" name="Banner Enchantments" hidden="true" collective="false" import="true">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="47d4-75ca-5c15-f34d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1816-6a9c-7e82-694a" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4d4a-142f-c17d-deff" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="2c78-c2ef-6251-da3e" name="Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="6f44-7811-b1d1-1d86" type="selectionEntryGroup"/>
+                    <entryLink id="8250-dec3-6187-5714" name="Hob Banners (BSB)" hidden="false" collective="false" import="true" targetId="f21c-8712-d3c5-c100" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -819,6 +853,9 @@ The model must take a mount. Cavalry units containing one or more model with thi
 Units in Line Formation joined by the model never count as having moved for the purpose of Volley Fire.</description>
                 </rule>
               </rules>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -829,7 +866,15 @@ Units in Line Formation joined by the model never count as having moved for the 
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </entryLink>
-        <entryLink id="e7f9-e29a-c755-4001" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
+        <entryLink id="e7f9-e29a-c755-4001" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1816-6a9c-7e82-694a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
@@ -2000,6 +2045,9 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
       <infoLinks>
         <infoLink id="a0da-4abf-2e68-ab0e" name="Hobgoblin Scimitar" hidden="false" targetId="1e57-4ed3-15ac-a10b" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3e5a-c836-5772-d919" name="Mountain Wolf" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2051,6 +2099,9 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
         </infoLink>
         <infoLink id="c4f2-2854-fd35-fb0d" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="ffec-b093-85e8-3bb5" name="Bear-Dog" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2100,6 +2151,9 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
         </infoLink>
         <infoLink id="1bc0-bfbb-f0ac-b5e4" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="712e-fee8-d581-637e" name="Plains Tusker" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2137,11 +2191,11 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Impact Hits (D3)</characteristic>
           </characteristics>
         </profile>
-        <profile id="0f03-df9c-a507-abd2" name="Hobgoblin Mahout (3)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+        <profile id="0f03-df9c-a507-abd2" name="Hobgoblin Mahout (2)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -2158,6 +2212,9 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
         <infoLink id="1a73-cc63-d906-2302" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
         <infoLink id="8c24-18ab-774d-9439" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="8868-787a-f18b-80d2" name="Alpha Karkadan" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2225,6 +2282,9 @@ The model part may reroll the roll for the number of Impact Hits.</description>
           </modifiers>
         </infoLink>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -2300,7 +2360,7 @@ Shooting Attacks made by the model while Located in the target’s Flank or Rear
     </profile>
     <profile id="1e57-4ed3-15ac-a10b" name="Hobgoblin Scimitar" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
-        <characteristic name="Str" typeId="7d4e-b182-dd11-52a0"></characteristic>
+        <characteristic name="Str" typeId="7d4e-b182-dd11-52a0"/>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
         <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Two-Handed, attacks made with this weapon that are allocated towards models that are Large and Beast, Large and Cavalry, or Gigantic gain +2 Strength.</characteristic>
       </characteristics>
