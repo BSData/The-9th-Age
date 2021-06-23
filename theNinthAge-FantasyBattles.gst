@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2021" revision="47" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2021" revision="48" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -1762,49 +1762,49 @@ If the first rank is occupied by models with Front Rank, a model with Matching B
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">As User</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">As User</characteristic>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">If a model has any Melee Weapon other than a Hand Weapon, it cannot choose to use the Hand Weapon (unless specifically stated). Hand Weapons wielded by models on foot can be used alongside a Shield, then giving the Parry Personal Protection .</characteristic>
+        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">All models come equipped with a Hand Weapon as their default equipment. If a model has any Close Combat Weapon other than a Hand Weapon, it cannot choose to use the Hand Weapon, unless specifically stated otherwise. Models on foot wielding a Hand Weapon alongside a Shield gain Parry .</characteristic>
       </characteristics>
     </profile>
     <profile id="ce6c-6fd5-c795-da76" name="Great Weapon" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+2</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">+2</characteristic>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Always strike at Initiative Step 0 (regardless of the wielder’s Agility ). A model using this weapon cannot simultaneously use a Shield against Melee Attacks.</characteristic>
+        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Two-Handed . Attacks made with a Great Weapon strike at Initiative Step 0 (regardless of the wielder’s Agility).</characteristic>
       </characteristics>
     </profile>
     <profile id="680b-8e56-dff9-240c" name="Halberd" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+1</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">A model using this weapon cannot simultaneously use a Shield against Melee Attacks .</characteristic>
+        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Two-Handed</characteristic>
       </characteristics>
     </profile>
     <profile id="06d7-e62c-0123-95ec" name="Paired Weapons" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">As User</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">As User</characteristic>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">The wielder gains +1 Attack Value when using this weapon. Attacks made with Paired Weapons gain +1 Offensive Skill and ignore Parry. A model using this weapon cannot simultaneously use a Shield against Melee Attacks .</characteristic>
+        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Two-Handed . The wielder gains +1 Attack Value and +1 Offensive Skill when using Paired Weapons. Attacks made with Paired Weapons ignore Parry.</characteristic>
       </characteristics>
     </profile>
     <profile id="f1a1-62ad-69ea-9d18" name="Lance" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
-        <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+2</characteristic>
-        <characteristic name="AP" typeId="646b-1e72-1589-5083">+2</characteristic>
+        <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">As User</characteristic>
+        <characteristic name="AP" typeId="646b-1e72-1589-5083">As User</characteristic>
         <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Attacks made with a Lance and allocated toward models in the wielders’ Front Facing gain Devastating Charge (+ 2 Strength, +2 Armour Penetration). Infantry cannot use Lances.</characteristic>
       </characteristics>
     </profile>
     <profile id="8460-7bb5-aa92-d6ee" name="Light Lance" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
-        <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+1</characteristic>
-        <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Attacks made with a Lance and allocated toward models in the wielders’ Front Facing gain Devastating Charge (+1 Strength, +1 Armour Penetration). Infantry cannot use Lances.</characteristic>
+        <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">As User</characteristic>
+        <characteristic name="AP" typeId="646b-1e72-1589-5083">As User</characteristic>
+        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Attacks made with a Light Lance and allocated toward models in the wielders’ Front Facing gain Devastating Charge (+1 Strength, +1 Armour Penetration). Infantry cannot use Light Lances.</characteristic>
       </characteristics>
     </profile>
     <profile id="c18a-75bb-fa2f-f7cf" name="Spear" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">As User</characteristic>
         <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Attacks made with a Spear gain Fight in Extra Rank and +1 Armour Penetration. Close Combat Attacks from model parts wielding a Spear gain +2 Agility and an additional +1 Armour Penetration in the first Round of Combat provided their unit is not Charging and is not Engaged either in their Flank or Rear Facing. Cavalry, Beasts and Constructs cannot use Spears.</characteristic>
+        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Attacks made with a Spear gain Fight in Extra Rank. Attacks made with a Spear gain +2 Agility and an additional +1 Armour Penetration in the First Round of Combat provided the attacking model’s unit is not Charging and is not Engaged either in its Flank or Rear Facing. Only Infantry can use Spears.</characteristic>
       </characteristics>
     </profile>
     <profile id="a564-30bf-f33f-f20d" name="Bow" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
