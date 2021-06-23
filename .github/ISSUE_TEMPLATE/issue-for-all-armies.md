@@ -27,5 +27,6 @@ assignees: ''
 
 **Auxiliary Books**
 - [ ] Asklanders
+- [ ] Hobgoblins
 - [ ] Makhar
 - [ ] Cultists
