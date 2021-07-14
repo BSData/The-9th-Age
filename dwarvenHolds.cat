@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="041b-e72b-1f30-5a89" name="Dwarven Holds 2021" revision="44" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="041b-e72b-1f30-5a89" name="Dwarven Holds 2021" revision="45" battleScribeVersion="2.03" authorName="Karanadon, DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="1101-0d1e-0830-2bbb" name="Clan&apos;s Thunder" hidden="false"/>
     <categoryEntry id="d027-973a-954e-3377" name="Engines of War" hidden="false"/>
@@ -89,7 +89,7 @@
               </constraints>
               <entryLinks>
                 <entryLink id="e18c-6d96-4b15-26e2" name="Armour Runes" hidden="false" collective="false" import="true" targetId="cafc-e06c-3df7-5651" type="selectionEntryGroup"/>
-                <entryLink id="6d24-483f-69f9-9a50" name="Talismanic Runes" hidden="false" collective="false" import="true" targetId="2163-4457-52a1-d323" type="selectionEntryGroup"/>
+                <entryLink id="6d24-483f-69f9-9a50" name="Runic Artefacts" hidden="false" collective="false" import="true" targetId="2163-4457-52a1-d323" type="selectionEntryGroup"/>
                 <entryLink id="0b5c-03e2-e0c6-98fa" name="Runic Weapon Enchantments" hidden="false" collective="false" import="true" targetId="b35f-5d0c-dc14-7725" type="selectionEntryGroup">
                   <modifiers>
                     <modifier type="set" field="6277-062b-bb61-0595" value="0.0">
@@ -188,7 +188,7 @@
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c18-b6bf-4e0d-0f15" type="atLeast"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6aad-9d24-16d9-eab9" type="atLeast"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b9d0-0950-2795-95ee" type="atLeast"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -316,7 +316,7 @@
                   </constraints>
                   <entryLinks>
                     <entryLink id="aac4-3dae-2c29-2c55" name="Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="6f44-7811-b1d1-1d86" type="selectionEntryGroup"/>
-                    <entryLink id="f8cb-1864-586a-d543" name="Runic Banner Enchantments" hidden="false" collective="false" import="true" targetId="82ba-77be-be53-fcef" type="selectionEntryGroup"/>
+                    <entryLink id="f8cb-1864-586a-d543" name="Runic Banner Enchantments (BSB, Watch, Guard)" hidden="false" collective="false" import="true" targetId="de07-6c3e-516f-9382" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -485,6 +485,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="fe50-8d84-dc2a-a9d5" name="Dragon Seeker" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="3f27-9d25-0700-2689" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="3f27-9d25-0700-2689" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f27-9d25-0700-2689" type="max"/>
       </constraints>
@@ -701,8 +713,8 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
                 <constraint field="24fd-8af8-0c78-001c" scope="parent" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="992a-4f19-0301-7f78" type="max"/>
               </constraints>
               <entryLinks>
-                <entryLink id="b9dd-9e75-b80b-3694" name="Armour Runes" hidden="false" collective="false" import="true" targetId="cafc-e06c-3df7-5651" type="selectionEntryGroup"/>
-                <entryLink id="4ed3-c920-1b93-231f" name="Talismanic Runes" hidden="false" collective="false" import="true" targetId="2163-4457-52a1-d323" type="selectionEntryGroup"/>
+                <entryLink id="b9dd-9e75-b80b-3694" name="Runic Armour Enchantments" hidden="false" collective="false" import="true" targetId="cafc-e06c-3df7-5651" type="selectionEntryGroup"/>
+                <entryLink id="4ed3-c920-1b93-231f" name="Runic Artefacts (Runic Smith)" hidden="false" collective="false" import="true" targetId="2c11-049f-0086-ca9c" type="selectionEntryGroup"/>
                 <entryLink id="6c5c-0449-beab-cf94" name="Runic Weapon Enchantments" hidden="false" collective="false" import="true" targetId="b35f-5d0c-dc14-7725" type="selectionEntryGroup">
                   <modifiers>
                     <modifier type="set" field="6277-062b-bb61-0595" value="0.0">
@@ -770,6 +782,18 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
       </costs>
     </selectionEntry>
     <selectionEntry id="5ea1-9ad7-19cb-d835" name="Engineer" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="afe9-7e18-9dfb-2f20" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="afe9-7e18-9dfb-2f20" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afe9-7e18-9dfb-2f20" type="max"/>
       </constraints>
@@ -964,6 +988,13 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
       </costs>
     </selectionEntry>
     <selectionEntry id="b79f-1005-d038-d80b" name="Anvil of Power" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="5751-5553-8aec-3f6b" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5751-5553-8aec-3f6b" type="max"/>
       </constraints>
@@ -1434,6 +1465,18 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
       </costs>
     </selectionEntry>
     <selectionEntry id="b182-d45c-005f-909f" name="Clan Marksmen" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="2553-8743-f7f3-0d1f" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="2553-8743-f7f3-0d1f" value="8.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2553-8743-f7f3-0d1f" type="max"/>
       </constraints>
@@ -1680,7 +1723,7 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
           </constraints>
           <entryLinks>
             <entryLink id="baf9-7d36-3892-e3d0" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="d568-bedc-6177-e79e" name="Runic Banner Enchantments" hidden="false" collective="false" import="true" targetId="82ba-77be-be53-fcef" type="selectionEntryGroup"/>
+            <entryLink id="d568-bedc-6177-e79e" name="Runic Banner Enchantments (BSB, Watch, Guard)" hidden="false" collective="false" import="true" targetId="de07-6c3e-516f-9382" type="selectionEntryGroup"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -1695,6 +1738,18 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
       </costs>
     </selectionEntry>
     <selectionEntry id="36e3-13ba-e9ee-21ec" name="King&apos;s Guard" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="5694-8f5f-2b6c-3ae1" value="3.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="5694-8f5f-2b6c-3ae1" value="10.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5694-8f5f-2b6c-3ae1" type="max"/>
       </constraints>
@@ -1772,7 +1827,7 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
           </constraints>
           <entryLinks>
             <entryLink id="a881-6817-52a3-f984" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="91e1-bc05-7da4-97bf" name="Runic Banner Enchantments" hidden="false" collective="false" import="true" targetId="82ba-77be-be53-fcef" type="selectionEntryGroup"/>
+            <entryLink id="91e1-bc05-7da4-97bf" name="Runic Banner Enchantments (BSB, Watch, Guard)" hidden="false" collective="false" import="true" targetId="de07-6c3e-516f-9382" type="selectionEntryGroup"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -1797,6 +1852,16 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="31cb-ab98-5b35-65a4" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="31cb-ab98-5b35-65a4" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1980,6 +2045,16 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="34d2-0beb-e029-e478" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="34d2-0beb-e029-e478" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2203,6 +2278,18 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
       </costs>
     </selectionEntry>
     <selectionEntry id="4029-837f-4759-365b" name="Seekers" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="b099-86e8-acdd-f269" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="b099-86e8-acdd-f269" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b099-86e8-acdd-f269" type="max"/>
       </constraints>
@@ -2326,6 +2413,18 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
       </costs>
     </selectionEntry>
     <selectionEntry id="6b57-4385-75c1-bff0" name="Vengeance Seeker" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="85f0-80b4-4bfe-ea38" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="85f0-80b4-4bfe-ea38" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85f0-80b4-4bfe-ea38" type="max"/>
       </constraints>
@@ -2394,6 +2493,18 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
       </costs>
     </selectionEntry>
     <selectionEntry id="b86e-fc1e-4a80-d595" name="Hold Guardians" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="a254-9949-550c-006c" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="a254-9949-550c-006c" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a254-9949-550c-006c" type="max"/>
       </constraints>
@@ -2489,6 +2600,18 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
       </costs>
     </selectionEntry>
     <selectionEntry id="6ea5-26f3-4f05-09cc" name="Grudge Buster" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="81b9-a61d-7eb8-3754" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="81b9-a61d-7eb8-3754" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81b9-a61d-7eb8-3754" type="max"/>
       </constraints>
@@ -2661,6 +2784,18 @@ Each Runic Smith may select up to three different Battle Runes during Spell Sele
       </costs>
     </selectionEntry>
     <selectionEntry id="6617-9441-1a82-1c6c" name="Steam Copters" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="b8cd-c0b5-1309-9adc" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="b8cd-c0b5-1309-9adc" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8cd-c0b5-1309-9adc" type="max"/>
       </constraints>
@@ -2846,6 +2981,18 @@ Sweeping Attack. One use only. The enemy unit suffers D3 hits with Strength 3 an
           </constraints>
           <selectionEntries>
             <selectionEntry id="2e8b-d125-3265-4e32" name="Dwarf Ballista (4+)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="9b64-8693-d8ef-70e9" value="2.0">
+                  <conditions>
+                    <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="9b64-8693-d8ef-70e9" value="8.0">
+                  <conditions>
+                    <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dc9-e9db-bc0d-9f94" type="max"/>
                 <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b64-8693-d8ef-70e9" type="max"/>
@@ -2882,6 +3029,18 @@ The model gains Scout with the following exception: It must be deployed within t
               </costs>
             </selectionEntry>
             <selectionEntry id="b91d-011e-8878-22b5" name="Flame Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="2f9c-9eb7-c5ff-fca9" value="1.0">
+                  <conditions>
+                    <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="2f9c-9eb7-c5ff-fca9" value="4.0">
+                  <conditions>
+                    <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e10a-37b0-ebf9-2544" type="max"/>
                 <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f9c-9eb7-c5ff-fca9" type="max"/>
@@ -2917,6 +3076,18 @@ The model gains Scout with the following exception: It must be deployed within t
               </costs>
             </selectionEntry>
             <selectionEntry id="79cc-b1b7-75a9-87fd" name="Catapult (4+)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="cdce-92ef-01d4-a17f" value="1.0">
+                  <conditions>
+                    <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="cdce-92ef-01d4-a17f" value="4.0">
+                  <conditions>
+                    <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3473-31a3-0665-6668" type="max"/>
                 <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cdce-92ef-01d4-a17f" type="max"/>
@@ -2952,6 +3123,18 @@ The model gains Scout with the following exception: It must be deployed within t
               </costs>
             </selectionEntry>
             <selectionEntry id="a2fb-2e90-51d3-99c0" name="Cannon (4+)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="13bb-0f45-7cd1-226d" value="1.0">
+                  <conditions>
+                    <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="13bb-0f45-7cd1-226d" value="4.0">
+                  <conditions>
+                    <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdf4-354c-f19c-455f" type="max"/>
                 <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="13bb-0f45-7cd1-226d" type="max"/>
@@ -2996,6 +3179,18 @@ The model gains Scout with the following exception: It must be deployed within t
               </costs>
             </selectionEntry>
             <selectionEntry id="db4d-8fcd-9225-b89f" name="Organ Gun (4+)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="cad4-04a0-e12b-aeb0" value="1.0">
+                  <conditions>
+                    <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="cad4-04a0-e12b-aeb0" value="4.0">
+                  <conditions>
+                    <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49e3-7c2f-55e1-1160" type="max"/>
                 <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cad4-04a0-e12b-aeb0" type="max"/>
@@ -3038,6 +3233,18 @@ The model gains Scout with the following exception: It must be deployed within t
       </costs>
     </selectionEntry>
     <selectionEntry id="68a5-7b94-da40-4ccf" name="Giant Dwarf" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="265c-c431-c4e4-8f5a" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="265c-c431-c4e4-8f5a" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="265c-c431-c4e4-8f5a" type="max"/>
       </constraints>
@@ -3315,6 +3522,433 @@ The model gains Scout with the following exception: It must be deployed within t
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="1bc6-b41f-7679-9316" name="Runic Banner Enchantment of Shielding" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="e9fa-6546-d3d4-1660" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4508-b804-8d88-ee1c" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9fa-6546-d3d4-1660" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1b09-c470-78db-f889" name="Runic Standard of Shielding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">All friendly units within 6&quot; of the bearer gain Aegis (5+) against Shooting Attacks.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9336-80f8-b821-dd81" name="Runic Standard of Dismay" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="f160-cc37-e31d-4b2d" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56ea-e20f-bc19-dc01" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f160-cc37-e31d-4b2d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1247-61c5-5c81-439f" name="Runic Standard of Dismay" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Units charging the bearer’s unit suffer -2&quot; Advance Rate for their Charge Range roll. </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d77c-ef4e-16a0-d51d" name="Runic Standard of Steadiness" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="ee14-d967-3e41-cbf4" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="ee14-d967-3e41-cbf4" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3944-70f2-512b-7232" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ee14-d967-3e41-cbf4" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b40b-f128-69f4-1007" name="Runic Standard of Steadiness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Movement Phase. The Bearer&apos;s Unit gains Quick to Fire antil the end of the player turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7df2-de10-f0c4-1556" name="Runic Standard of Swiftness" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="0ae7-5e23-7e0d-8d5b" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3697-47c1-4278-6974" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ae7-5e23-7e0d-8d5b" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c90d-6ade-a55a-b46f" name="Runic Standard of Swiftness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit gains Vanguard.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6b79-d7a9-9988-78ca" name="Runic Standard of the Anvil" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="fdb5-4a90-f64d-6ddb" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="fdb5-4a90-f64d-6ddb" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a31-df7e-3582-abbe" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fdb5-4a90-f64d-6ddb" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="94c7-52cb-8c24-4e9e" name="Runic Standard of the Anvil" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Friendly units charging enemy units Engaged in Combat with the bearer’s unit must reroll Failed Charge Range rolls.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b480-fa6f-d776-5d63" name="Runic Standard of the Hold" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="fc12-b7a0-ac58-f2ae" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="fc12-b7a0-ac58-f2ae" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfde-f6c0-3bae-dbee" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc12-b7a0-ac58-f2ae" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="a95d-d0c8-50f0-302b" name="Runic Standard of the Hold" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A unit with one or more Runic Standards of the Hold counts as having an additional Full Rank for the purpose of Steadfast and Disrupted. </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="df8f-0464-4da7-5466" name="Runic Standard of Wisdom" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="6ce1-9cee-55b7-6d4b" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="6ce1-9cee-55b7-6d4b" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="794f-b6ff-fd28-85d4" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6ce1-9cee-55b7-6d4b" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d3c2-cf23-0cb7-3807" name="Runic Standard of Wisdom" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer may select a single Battle Rune during Spell Selection. This Battle Rune can be cast by the bearer and has Range: Caster’s Unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bd76-0587-ccfe-45c3" name="Rune of Courage" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3280-8869-2210-e8c2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="413f-6cbd-1e67-7d93" name="Rune of Courage" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Round of Combat. For the duration of the Phase, the bearer gains Stubborn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2e10-3484-7002-bf44" name="° Rune of Denial" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="5f55-b0bc-c463-90c0" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3a76-b0ba-325a-5eab" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f55-b0bc-c463-90c0" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d2c-1c22-9c88-b9b8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4d4d-acb4-ea8e-e8fd" name="Rune of Denial" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Talismanic Rune</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. The bearer may choose to use this Rune instead of making a Dispel Attempt. The spell is automatically dispelled.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3a76-b0ba-325a-5eab" name="° Rune of Devouring" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="278a-e072-8d3e-a6a4" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2e10-3484-7002-bf44" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="278a-e072-8d3e-a6a4" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="169a-d662-3dea-b6d8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8eea-ffa7-cb35-615a" name="Rune of Devouring" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Talismanic Rune</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. The player may choose to use this Rune instead of performing a Dispelling Attempt. The spell is cast as normal but the Caster may not cast it again for the rest of the game. Spells dispelled by the Rune of Revocation and Attribute Spells are not affected.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="61cd-1217-4655-a7fd" name="Rune of Dragon&apos;s Breath" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="d0be-44e5-c2ce-0d48" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="d0be-44e5-c2ce-0d48" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a023-9951-31dc-32e9" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d0be-44e5-c2ce-0d48" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b612-c22e-1230-3706" name="Rune of Dragon&apos;s Breath" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Breath Attack (Str 4, AP 1, Flaming Attacks, Magical Attacks). A single friendly Rune of Dragon&apos;s Breath may be made per round of combat.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="26ad-6acb-845e-7116" name="Rune of Grounding" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="ddc0-f2b9-ed0a-3416" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a343-6754-b9f8-8eef" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddc0-f2b9-ed0a-3416" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="727f-b052-a1dd-2414" name="Rune of Grounding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Melee Phase. All spells with Duration: Lasts One Turn affecting the bearer’s unit and enemy units in base contact with the bearer come to an end.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bdd8-eb25-16cb-9e37" name="Rune of Harnessing" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="492f-a27e-3e7d-d93f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8170-6ce8-3ddf-cdda" name="Rune of Harnessing" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Enemy models within 24” of the Runic Smith have their Channel value (the value within brackets) reduced by 1 to a minimum of 0</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b9d0-0950-2795-95ee" name="Rune of Kinship" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f5e-647e-db5a-ba2b" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="afd2-81ed-b5dc-9bcc" name="Rune of Kinship" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Scout and Ambush.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1f65-17d6-de05-85aa" name="Rune of Mastery" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21a0-6a41-0d2a-e27e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1701-8d3e-58fb-2e39" name="Rune of Mastery" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated just before the Bearer casts a Bound Spell. Adds (+2/+2) to the Power Level of this Bound Spell.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e0a9-5e52-c5fb-ca3c" name="Rune of Mining" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8adc-4633-d07c-4045" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3297-e0a4-0e7f-51d7" name="Rune of Mining" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">After Determining Deployment Zones (at the end of step 6 of the The Pre-Game Sequence), choose a Terrain Feature on the Battlefield. As long a the bearer is on the Battlefield, all friendly models may treat this as Open Terrain when making Advance Moves or March Moves, but must still follow the Unit Spacing rule at the end of their movement.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="98c6-9704-06f6-92d3" name="Rune of Readiness" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a2f-c4d2-28b1-2135" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3d3d-42a0-cd3d-3a8c" name="Rune of Readiness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the end of the Charge Phase, directly after all Charge Moves have been resolved. If the bearer’s unit was successfully charged during this phase, it may perform a Combat Reform (following the normal rules for Combat Reforms). </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d967-f5cd-a033-2560" name="Rune of Shielding" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="5eb9-e7ff-e263-d211" name="Rune of Shielding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (+1, max 4+). The Aegis from this Rune only stacks with itself and/or Shield Wall.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="01b8-3b44-6fdf-2fa9" name="Rune of Storms" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="5ac4-b43a-945b-0587" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="5ac4-b43a-945b-0587" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8862-3cf0-60bb-ee37" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5ac4-b43a-945b-0587" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f4e7-0858-8ef0-14e8" name="Rune of Storms" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. Effects last one turn. May be activated at the start of the opponent’s Player Turn. Choose a single enemy unit within 24” of the bearer. The Advance Rate and March Rate of all models with Fly in that unit (both for Ground and Fly Movement) are halved rounding fractions up.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="b35f-5d0c-dc14-7725" name="Runic Weapon Enchantments" hidden="false" collective="false" import="true">
@@ -3323,6 +3957,13 @@ The model gains Scout with the following exception: It must be deployed within t
       </constraints>
       <selectionEntries>
         <selectionEntry id="8bfb-fbc9-b4bb-25d1" name="Rune of Destruction" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="22ba-08fb-264e-a8ac" value="2.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36d7-58fc-17dc-f955" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22ba-08fb-264e-a8ac" type="max"/>
@@ -3355,7 +3996,14 @@ The model gains Scout with the following exception: It must be deployed within t
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8c18-b6bf-4e0d-0f15" name="Rune of Smashing - On foot only" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8c18-b6bf-4e0d-0f15" name="Rune of Smashing (only on Foot)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="207d-c7f6-9003-4cfb" value="2.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1320-c8a5-dc5e-bc6e" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="207d-c7f6-9003-4cfb" type="max"/>
@@ -3402,6 +4050,18 @@ The model gains Scout with the following exception: It must be deployed within t
           </costs>
         </selectionEntry>
         <selectionEntry id="be33-ccec-33ac-b3fc" name="Rune of Craftsmanship" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="f674-4697-558b-7b25" value="2.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f674-4697-558b-7b25" value="6.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f70-048f-45ac-abcb" type="max"/>
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f674-4697-558b-7b25" type="max"/>
@@ -3445,6 +4105,18 @@ The model gains Scout with the following exception: It must be deployed within t
           </costs>
         </selectionEntry>
         <selectionEntry id="5d50-8b70-7429-0a15" name="Rune of Lightning" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="8e29-307b-6c89-5117" value="2.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="8e29-307b-6c89-5117" value="6.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8e29-307b-6c89-5117" type="max"/>
           </constraints>
@@ -3501,6 +4173,13 @@ Shooting Attacks with this weapon are affected by all Runic Weapon Enchantments 
       </constraints>
       <selectionEntries>
         <selectionEntry id="7472-68a9-359e-cab2" name="Rune of Resistance" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="6295-7675-c1d6-a792" value="2.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db4c-55fe-f4aa-db01" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6295-7675-c1d6-a792" type="max"/>
@@ -3589,328 +4268,63 @@ Shooting Attacks with this weapon are affected by all Runic Weapon Enchantments 
       <constraints>
         <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="777f-9032-510c-3f15" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="00b9-63d0-5214-73d6" name="Rune of Harnessing - Runic Smiths only" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dde-66fd-7c58-51bc" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e02d-f99c-bb13-fe70" name="Rune of Harnessing" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Enemy models within 24” of the Runic Smith have their Channel value (the value within brackets) reduced by 1 to a minimum of 0</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7ac4-c395-e493-7578" name="Rune of Courage" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="facf-0cde-6ba5-0f23" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3b24-1cd8-1d1f-4c87" name="Rune of Courage" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Round of Combat. For the duration of the Phase, the bearer gains Stubborn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a8bc-1f97-428c-acfa" name="Rune of Dragon&apos;s Breath" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1df-4f22-810f-8f4e" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c6ff-2eec-9c2b-eefe" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="091c-59ca-14d6-f48f" name="Rune of Dragon&apos;s Breath" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Breath Attack (Str 4, AP 1, Flaming Attacks, Magical Attacks). A single friendly Rune of Dragon&apos;s Breath may be made per round of combat.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f9ac-72d4-d0dd-93f0" name="Rune of Grounding - Runic Smiths only" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f44b-aeb9-7ff4-8044" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b53-f68e-65a3-e9ad" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9b98-c77c-3859-63d8" name="Rune of Grounding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Melee Phase. All spells with Duration: Lasts One Turn affecting the bearer’s unit and enemy units in base contact with the bearer come to an end.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bea2-b168-b0ea-d822" name="Rune of Readiness" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bf3-98bd-b64e-79cb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7bd6-fa33-d0df-fd39" name="Rune of Readiness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the end of the Charge Phase, directly after all Charge Moves have been resolved. If the bearer’s unit was successfully charged during this phase, it may perform a Combat Reform (following the normal rules for Combat Reforms). </characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7278-42cf-e62d-b1a6" name="Rune of Shielding" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="4005-51b8-15ea-256a" name="Rune of Shielding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (+1, max 4+). The Aegis from this Rune only stacks with itself and/or Shield Wall.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ee60-95a5-47af-dbed" name="Rune of Storms" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d844-de33-365c-2e20" type="max"/>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c716-1ff3-c849-cff7" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ebf4-c28f-1fc3-f149" name="Rune of Storms" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. Effects last one turn. May be activated at the start of the opponent’s Player Turn. Choose a single enemy unit within 24” of the bearer. The Advance Rate and March Rate of all models with Fly in that unit (both for Ground and Fly Movement) are halved rounding fractions up.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="93e4-f755-68e0-16c9" name="Rune of Mastery" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39ae-981b-671c-6fdf" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="128d-2a89-d064-daee" name="Rune of Mastery" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated just before the Bearer casts a Bound Spell. Adds (+2/+2) to the Power Level of this Bound Spell.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9884-0084-1462-3e2e" name="Rune of Mining" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba8c-8c80-5835-628a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="392b-42cb-6e46-7d78" name="Rune of Mining" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">After Determining Deployment Zones (at the end of step 6 of the The Pre-Game Sequence), choose a Terrain Feature on the Battlefield. As long a the bearer is on the Battlefield, all friendly models may treat this as Open Terrain when making Advance Moves or March Moves, but must still follow the Unit Spacing rule at the end of their movement.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6aad-9d24-16d9-eab9" name="Rune of Kinship" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="16b7-97ff-4604-6813" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e5ea-4327-b520-7b7b" name="Rune of Kinship" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Runic Artefact</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Scout and Ambush.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c2c3-b939-ad2a-24be" name="Rune of Devouring - Runic Smiths only - Dominant" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a81-e6f1-c44f-f4b9" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25c7-d260-7417-93ad" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8b99-adfa-5e7a-7df9" name="Rune of Devouring" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Talismanic Rune</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. The player may choose to use this Rune instead of performing a Dispelling Attempt. The spell is cast as normal but the Caster may not cast it again for the rest of the game. Spells dispelled by the Rune of Revocation and Attribute Spells are not affected.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="201c-cefe-b1b2-17c8" name="Rune of Denial - Dominant" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9952-6e8e-cd2f-52c7" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb01-ff7d-4aa6-6d53" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7856-338a-80d1-a445" name="Rune of Denial" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Talismanic Rune</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. The bearer may choose to use this Rune instead of making a Dispel Attempt. The spell is automatically dispelled.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="82bf-d6d3-3612-932c" name="Rune of Courage" hidden="false" collective="false" import="true" targetId="bd76-0587-ccfe-45c3" type="selectionEntry"/>
+        <entryLink id="1987-4c09-2d36-d5d3" name="Rune of Denial - Dominant" hidden="false" collective="false" import="true" targetId="2e10-3484-7002-bf44" type="selectionEntry"/>
+        <entryLink id="1893-14d2-8004-b429" name="Rune of Dragon&apos;s Breath" hidden="false" collective="false" import="true" targetId="61cd-1217-4655-a7fd" type="selectionEntry"/>
+        <entryLink id="6c65-19cb-f6be-7856" name="Rune of Kinship" hidden="false" collective="false" import="true" targetId="b9d0-0950-2795-95ee" type="selectionEntry"/>
+        <entryLink id="4f8e-4783-e732-a647" name="Rune of Mastery" hidden="false" collective="false" import="true" targetId="1f65-17d6-de05-85aa" type="selectionEntry"/>
+        <entryLink id="3ffd-2f56-9923-6fea" name="Rune of Readiness" hidden="false" collective="false" import="true" targetId="98c6-9704-06f6-92d3" type="selectionEntry"/>
+        <entryLink id="ba5c-eb85-03f0-ea07" name="Rune of Mining" hidden="false" collective="false" import="true" targetId="e0a9-5e52-c5fb-ca3c" type="selectionEntry"/>
+        <entryLink id="9f10-0a19-5043-c975" name="Rune of Shielding" hidden="false" collective="false" import="true" targetId="d967-f5cd-a033-2560" type="selectionEntry"/>
+        <entryLink id="5cd6-67b3-64fc-22d7" name="Rune of Storms" hidden="false" collective="false" import="true" targetId="01b8-3b44-6fdf-2fa9" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="82ba-77be-be53-fcef" name="Runic Banner Enchantments" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5f0-eeac-5ca6-bb1f" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="d13d-5172-dae7-2498" name="Runic Banner Enchantment of Shielding - Only BSB, Deep Watch, King&apos;s Guard." hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8780-e286-a7e0-adc9" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b161-05ae-cf41-d0e4" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ccbe-5164-dea7-b507" name="Runic Standard of Shielding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">All friendly units within 6&quot; of the bearer gain Aegis (5+) against Shooting Attacks.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e6fa-515c-4de5-9de4" name="Runic Standard of Dismay" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="825f-b755-9f01-4690" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37ad-724b-2908-161e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3a41-8e1a-bb0a-4964" name="Runic Standard of Dismay" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Units charging the bearer’s unit suffer -2&quot; Advance Rate for their Charge Range roll. </characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9271-de57-4d42-d747" name="Runic Standard of Swiftness" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a42-8552-4db4-5474" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3450-52b3-b875-ec7a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="18e0-f91e-1834-559e" name="Runic Standard of Swiftness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit gains Vanguard.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="11cd-e8e8-47bc-16a3" name="Runic Standard of the Hold" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e89-2158-7974-438f" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d542-fa01-d104-c2a9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1baf-c85d-cdaa-1666" name="Runic Standard of the Hold" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A unit with one or more Runic Standards of the Hold counts as having an additional Full Rank for the purpose of Steadfast and Disrupted. </characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="cdbf-f44c-33f6-79e0" name="Runic Standard of the Anvil" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fef-d231-125b-fb9f" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9180-663d-2693-b224" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a574-f517-ca50-1003" name="Runic Standard of the Anvil" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Friendly units charging enemy units Engaged in Combat with the bearer’s unit must reroll Failed Charge Range rolls.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="21b2-3b18-dd7c-61a8" name="Runic Standard of Wisdom" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03d0-9343-85c0-288c" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7015-f461-9ba0-3d2b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4558-ae4d-54a1-6d14" name="Runic Standard of Wisdom" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer may select a single Battle Rune during Spell Selection. This Battle Rune can be cast by the bearer and has Range: Caster’s Unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2d08-32b5-87da-76c9" name="Runic Standard of Steadiness" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78fb-d351-443d-9f7d" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64e8-6eb0-9ac1-d2fd" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dddc-0ccd-2cf5-d45c" name="Runic Standard of Steadiness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Movement Phase. The Bearer&apos;s Unit gains Quick to Fire antil the end of the player turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="de3a-007f-afa6-8f6d" name="Runic Standard of Dismay" hidden="false" collective="false" import="true" targetId="9336-80f8-b821-dd81" type="selectionEntry"/>
+        <entryLink id="7bec-f380-8be2-b267" name="Runic Standard of Steadiness" hidden="false" collective="false" import="true" targetId="d77c-ef4e-16a0-d51d" type="selectionEntry"/>
+        <entryLink id="950e-f039-e257-d1bd" name="Runic Standard of Swiftness" hidden="false" collective="false" import="true" targetId="7df2-de10-f0c4-1556" type="selectionEntry"/>
+        <entryLink id="d88b-6acf-3eed-5c5b" name="Runic Standard of the Anvil" hidden="false" collective="false" import="true" targetId="6b79-d7a9-9988-78ca" type="selectionEntry"/>
+        <entryLink id="5c28-cde4-75f2-c473" name="Runic Standard of the Hold" hidden="false" collective="false" import="true" targetId="b480-fa6f-d776-5d63" type="selectionEntry"/>
+        <entryLink id="f467-4666-a20b-cb71" name="Runic Standard of Wisdom" hidden="false" collective="false" import="true" targetId="df8f-0464-4da7-5466" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="de07-6c3e-516f-9382" name="Runic Banner Enchantments (BSB, Watch, Guard)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cae9-0f43-89e9-1dc7" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="1af9-e069-0554-9522" name="Runic Banner Enchantment of Shielding - Only BSB, Deep Watch, King&apos;s Guard." hidden="false" collective="false" import="true" targetId="1bc6-b41f-7679-9316" type="selectionEntry"/>
+        <entryLink id="0767-f245-c9ff-4b99" name="Runic Standard of Dismay" hidden="false" collective="false" import="true" targetId="9336-80f8-b821-dd81" type="selectionEntry"/>
+        <entryLink id="01e2-2825-3589-b3fd" name="Runic Standard of Steadiness" hidden="false" collective="false" import="true" targetId="d77c-ef4e-16a0-d51d" type="selectionEntry"/>
+        <entryLink id="ee61-ca34-31fc-b6e3" name="Runic Standard of Swiftness" hidden="false" collective="false" import="true" targetId="7df2-de10-f0c4-1556" type="selectionEntry"/>
+        <entryLink id="0b1d-25b8-adca-6152" name="Runic Standard of the Anvil" hidden="false" collective="false" import="true" targetId="6b79-d7a9-9988-78ca" type="selectionEntry"/>
+        <entryLink id="e352-94bd-751f-315d" name="Runic Standard of the Hold" hidden="false" collective="false" import="true" targetId="b480-fa6f-d776-5d63" type="selectionEntry"/>
+        <entryLink id="1532-96aa-2ea4-d0e3" name="Runic Standard of Wisdom" hidden="false" collective="false" import="true" targetId="df8f-0464-4da7-5466" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="2c11-049f-0086-ca9c" name="Runic Artefacts (Runic Smith)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="55e5-f337-e948-dd7c" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="3da9-a5dc-2eda-5d21" name="Rune of Courage" hidden="false" collective="false" import="true" targetId="bd76-0587-ccfe-45c3" type="selectionEntry"/>
+        <entryLink id="475c-31e1-b8f1-74e2" name="Rune of Denial - Dominant" hidden="false" collective="false" import="true" targetId="2e10-3484-7002-bf44" type="selectionEntry"/>
+        <entryLink id="de26-adbb-2552-2b11" name="Rune of Devouring - Runic Smiths only - Dominant" hidden="false" collective="false" import="true" targetId="3a76-b0ba-325a-5eab" type="selectionEntry"/>
+        <entryLink id="59f3-2295-7d44-4570" name="Rune of Dragon&apos;s Breath" hidden="false" collective="false" import="true" targetId="61cd-1217-4655-a7fd" type="selectionEntry"/>
+        <entryLink id="95a9-bd68-a9cf-8660" name="Rune of Grounding - Runic Smiths only" hidden="false" collective="false" import="true" targetId="26ad-6acb-845e-7116" type="selectionEntry"/>
+        <entryLink id="e804-08ed-ee1c-34ef" name="Rune of Harnessing - Runic Smiths only" hidden="false" collective="false" import="true" targetId="bdd8-eb25-16cb-9e37" type="selectionEntry"/>
+        <entryLink id="4afe-29e6-8d91-f074" name="Rune of Kinship" hidden="false" collective="false" import="true" targetId="b9d0-0950-2795-95ee" type="selectionEntry"/>
+        <entryLink id="afa3-e8e0-311e-f8b5" name="Rune of Mastery" hidden="false" collective="false" import="true" targetId="1f65-17d6-de05-85aa" type="selectionEntry"/>
+        <entryLink id="5a48-f9dd-81fd-723d" name="Rune of Readiness" hidden="false" collective="false" import="true" targetId="98c6-9704-06f6-92d3" type="selectionEntry"/>
+        <entryLink id="33d5-8161-c0c5-63d5" name="Rune of Mining" hidden="false" collective="false" import="true" targetId="e0a9-5e52-c5fb-ca3c" type="selectionEntry"/>
+        <entryLink id="fbe2-89c3-2c0c-99df" name="Rune of Shielding" hidden="false" collective="false" import="true" targetId="d967-f5cd-a033-2560" type="selectionEntry"/>
+        <entryLink id="63ee-9144-b23e-af6c" name="Rune of Storms" hidden="false" collective="false" import="true" targetId="01b8-3b44-6fdf-2fa9" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
