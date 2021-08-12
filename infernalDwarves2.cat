@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ed3b-0fdf-b39c-32b0" name="Infernal Dwarves 2021 Beta 3" revision="27" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ed3b-0fdf-b39c-32b0" name="Infernal Dwarves 2021 Beta 3" revision="28" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="f410-d87f-bb92-f6cb" name="Instruments of Destruction" hidden="false"/>
     <categoryEntry id="95f0-1c8c-90dd-ed0b" name="Flyer" hidden="false"/>
@@ -33,6 +33,13 @@
   </forceEntries>
   <selectionEntries>
     <selectionEntry id="5d98-d7eb-13ef-df34" name="Overlord" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="b084-04b6-e3da-04c7" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b084-04b6-e3da-04c7" type="max"/>
       </constraints>
@@ -307,6 +314,18 @@ Apply the following effects while the model is joined to an Infantry unit:
       </costs>
     </selectionEntry>
     <selectionEntry id="cc2d-ee87-9432-4ed0" name="Infernal Warriors" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="72b4-5809-8001-da36" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="72b4-5809-8001-da36" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="72b4-5809-8001-da36" type="max"/>
       </constraints>
@@ -1106,6 +1125,18 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
       </costs>
     </selectionEntry>
     <selectionEntry id="47d5-7a06-a900-5783" name="Kadim Incarnates" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="80ee-a5ad-8976-a87a" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="80ee-a5ad-8976-a87a" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="80ee-a5ad-8976-a87a" type="max"/>
       </constraints>
@@ -1200,6 +1231,16 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
         <modifier type="decrement" field="2763-d319-8e89-e3fc" value="1.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b5c-d85f-fdbd-606d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="2763-d319-8e89-e3fc" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="2763-d319-8e89-e3fc" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1323,8 +1364,20 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
       </costs>
     </selectionEntry>
     <selectionEntry id="009b-8f73-b9d6-bdeb" name="Taurukh Enforcers" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="b5b0-c85e-8727-ba5f" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="b5b0-c85e-8727-ba5f" value="8.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b5b0-c85e-8727-ba5f" type="max"/>
+        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b5b0-c85e-8727-ba5f" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="1acf-b61e-ce30-5e46" name="Infernal Brand" hidden="false" targetId="86d7-0cd3-8d7f-1f68" type="rule"/>
@@ -1475,6 +1528,18 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
       </costs>
     </selectionEntry>
     <selectionEntry id="ca3d-b3ab-dbfd-d73f" name="Taurukh Anointed" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="fdd1-4a8e-5251-d217" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="fdd1-4a8e-5251-d217" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fdd1-4a8e-5251-d217" type="max"/>
       </constraints>
@@ -1499,6 +1564,18 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="63b6-1eea-474b-c35a" name="Taurukh Anointed" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="57ba-abbd-6f53-8f4f" value="24.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="57ba-abbd-6f53-8f4f" value="6.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b45b-b0bd-d5ab-7305" type="max"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b60d-42c0-7cb5-df23" type="min"/>
@@ -1615,6 +1692,13 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
       </costs>
     </selectionEntry>
     <selectionEntry id="ec55-a042-090f-2da1" name="Lamassu Scholar" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="9381-199a-8a0e-1f9f" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9381-199a-8a0e-1f9f" type="max"/>
       </constraints>
@@ -1719,6 +1803,18 @@ Before Spell Selection (at the start of step 7 of the Pre-Game Sequence), the op
       </costs>
     </selectionEntry>
     <selectionEntry id="c908-edf6-c9b9-ffbb" name="Vassal Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="2e17-548c-089f-2ff8" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="2e17-548c-089f-2ff8" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2e17-548c-089f-2ff8" type="max"/>
       </constraints>
@@ -1840,6 +1936,18 @@ Before Spell Selection (at the start of step 7 of the Pre-Game Sequence), the op
       </costs>
     </selectionEntry>
     <selectionEntry id="5a12-9841-d7bd-241e" name="Vassal Slingshot" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="adb5-2e2d-e53a-e38d" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="adb5-2e2d-e53a-e38d" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="adb5-2e2d-e53a-e38d" type="max"/>
       </constraints>
@@ -1905,6 +2013,18 @@ This Artillery Weapon can be fired in two ways:
       </costs>
     </selectionEntry>
     <selectionEntry id="776f-5efc-893e-84b5" name="Gunnery Team" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="b21d-c36d-8bdf-089d" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="b21d-c36d-8bdf-089d" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b21d-c36d-8bdf-089d" type="max"/>
       </constraints>
@@ -2064,6 +2184,13 @@ The maximum range of the model’s Artillery Weapon is doubled. Enemy units hit 
       </costs>
     </selectionEntry>
     <selectionEntry id="aac6-f4cc-9375-ed9b" name="Infernal Engine" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="78da-87dc-fceb-2a02" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="78da-87dc-fceb-2a02" type="max"/>
       </constraints>
@@ -2188,6 +2315,16 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a01-d64f-74dd-9af5" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="5e09-f06e-0701-ff2c" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="5e09-f06e-0701-ff2c" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5e09-f06e-0701-ff2c" type="max"/>
@@ -2272,6 +2409,18 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="d574-5af2-4ed1-a20c" name="Kadim Titan" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="ab81-2c3c-f38d-1811" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="ab81-2c3c-f38d-1811" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab81-2c3c-f38d-1811" type="max"/>
       </constraints>
@@ -2429,6 +2578,18 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="7402-4fed-8c54-5c25" name="Citizen Giant" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="0a29-070d-877e-91cb" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="0a29-070d-877e-91cb" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0a29-070d-877e-91cb" type="max"/>
       </constraints>
@@ -2957,6 +3118,18 @@ Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.</descr
       </costs>
     </selectionEntry>
     <selectionEntry id="aaf9-3bce-8cc5-2b58" name="Taurukh Commissioner" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="2b25-b924-0e24-2771" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="2b25-b924-0e24-2771" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b25-b924-0e24-2771" type="max"/>
       </constraints>
@@ -4150,6 +4323,13 @@ When successfully casting a spell from:
       </costs>
     </selectionEntry>
     <selectionEntry id="8251-8993-2a2b-c6a2" name="Blessed Icon of Zalaman Tekash" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="ca83-a595-c802-0ffe" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbc8-5123-fa5f-d4df" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ca83-a595-c802-0ffe" type="max"/>
@@ -4168,6 +4348,13 @@ The Armour Penetration of Special Attacks against models in the bearer’s unit 
       </costs>
     </selectionEntry>
     <selectionEntry id="9715-2a49-8443-5d21" name="Icon of Ashuruk" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="8c50-1865-7ee5-7f84" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ce0-2ed4-04f8-5d4c" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c50-1865-7ee5-7f84" type="max"/>
@@ -4236,6 +4423,13 @@ The Armour Penetration of Special Attacks against models in the bearer’s unit 
       </costs>
     </selectionEntry>
     <selectionEntry id="619f-329b-263d-9a6e" name="Onyx Core" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="1958-a31c-893d-b5b2" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ca72-e7a8-1d30-5bf3" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1958-a31c-893d-b5b2" type="max"/>
@@ -4253,6 +4447,13 @@ The Armour Penetration of Special Attacks against models in the bearer’s unit 
       </costs>
     </selectionEntry>
     <selectionEntry id="431e-99e0-b6f0-af1d" name="Flame of the East" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="a60c-f52c-5f1c-1c8f" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5754-54a2-26f3-6393" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a60c-f52c-5f1c-1c8f" type="max"/>
@@ -4270,6 +4471,13 @@ The Armour Penetration of Special Attacks against models in the bearer’s unit 
       </costs>
     </selectionEntry>
     <selectionEntry id="3021-241f-20ba-9f09" name="Eye of the Bull" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="437b-c1a7-b3ba-e08d" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a735-53a0-0426-26d5" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="437b-c1a7-b3ba-e08d" type="max"/>
@@ -4287,6 +4495,13 @@ The Armour Penetration of Special Attacks against models in the bearer’s unit 
       </costs>
     </selectionEntry>
     <selectionEntry id="e8cb-accc-dcb3-cea5" name="Mask of the Ages" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="10d8-b300-7f6f-dbfa" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="63e9-d8c5-6877-94c1" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="10d8-b300-7f6f-dbfa" type="max"/>
@@ -4304,6 +4519,13 @@ The Armour Penetration of Special Attacks against models in the bearer’s unit 
       </costs>
     </selectionEntry>
     <selectionEntry id="a249-135d-0aa1-2fbb" name="Blaze of Protection" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="cc19-5bde-c429-0db7" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3947-bd7d-d3ea-e44f" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc19-5bde-c429-0db7" type="max"/>
@@ -4323,6 +4545,13 @@ Can only be taken by models with Infernal Brand.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="f864-640a-32af-6e67" name="Kadim Binding" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="c669-72ac-fe8c-b257" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c85-1c1e-245c-69a9" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c669-72ac-fe8c-b257" type="max"/>
@@ -4342,6 +4571,13 @@ Can only be taken by models with Infernal Brand.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="a606-ee6f-2938-989b" name="Their Master’s Banner" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="09fd-5393-67b2-2447" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5c0-13ae-d666-8a3b" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="09fd-5393-67b2-2447" type="max"/>
@@ -4359,6 +4595,13 @@ Can only be taken by models with Infernal Brand.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="a9b6-8b11-c1ad-e920" name="Breath of the Brass Bull" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="f672-29ce-546c-4bee" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="70ba-44c7-7283-087e" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f672-29ce-546c-4bee" type="max"/>
@@ -4377,6 +4620,13 @@ The bearer’s model gains +1 Health Point and the bearer gains Breath Attack (T
       </costs>
     </selectionEntry>
     <selectionEntry id="bb02-90cb-3d8a-9f26" name="°Tablet of Vezodinezh" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="d88b-6168-3f2e-a8e0" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="79cc-98a6-e399-208a" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d88b-6168-3f2e-a8e0" type="max"/>
@@ -4395,6 +4645,13 @@ When the bearer attempts to cast a non-Bound Spell using three or more Magic Dic
       </costs>
     </selectionEntry>
     <selectionEntry id="35e0-3b1f-a45e-0b4b" name="Ring of Desiccation" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="4275-4261-4976-3d0a" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c0d-235b-b3cd-2e73" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4275-4261-4976-3d0a" type="max"/>
@@ -4412,6 +4669,13 @@ When the bearer attempts to cast a non-Bound Spell using three or more Magic Dic
       </costs>
     </selectionEntry>
     <selectionEntry id="3436-a6e8-4753-ec97" name="Golden Idol of Shamut" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="0df0-78a2-7bb9-d7ad" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3782-d6bc-97b5-ee4e" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0df0-78a2-7bb9-d7ad" type="max"/>
@@ -4430,6 +4694,13 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
       </costs>
     </selectionEntry>
     <selectionEntry id="036f-efd7-8c67-b0e3" name="Lugar’s Dice" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="b341-b542-0531-82a2" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64cc-814b-1c17-8dfa" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b341-b542-0531-82a2" type="max"/>
@@ -4447,6 +4718,13 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
       </costs>
     </selectionEntry>
     <selectionEntry id="b42d-5f2d-2df8-6a55" name="Gauntlets of Madzhab (only on Infantry)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="2b84-51ef-0923-c242" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3827-78d4-f6ec-1ffb" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2b84-51ef-0923-c242" type="max"/>
@@ -4464,6 +4742,18 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
       </costs>
     </selectionEntry>
     <selectionEntry id="b0f5-d695-c68c-edd2" name="Taurukh Ritual" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="7179-1434-6df7-2847" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="7179-1434-6df7-2847" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6427-377c-2350-ba27" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7179-1434-6df7-2847" type="max"/>
@@ -4492,6 +4782,18 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
       </costs>
     </selectionEntry>
     <selectionEntry id="7e92-9012-3dad-3c0a" name="Bull of Shamut" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="92e9-6bc9-09a1-862e" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="92e9-6bc9-09a1-862e" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f36c-bc66-552f-6ed0" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="92e9-6bc9-09a1-862e" type="max"/>
@@ -4566,6 +4868,13 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
       </costs>
     </selectionEntry>
     <selectionEntry id="501f-a72d-64dc-0af6" name="Great Bull of Shamut" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="d3e4-894f-e36e-85ae" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3e4-894f-e36e-85ae" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6d1-f58d-58df-6925" type="max"/>
@@ -4642,6 +4951,13 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
       </costs>
     </selectionEntry>
     <selectionEntry id="4a01-d64f-74dd-9af5" name="Infernal Bastion (Mount)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="8744-e4dc-8ec8-93fd" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8744-e4dc-8ec8-93fd" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8655-4b51-078f-113f" type="max"/>
@@ -4717,6 +5033,18 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
       </costs>
     </selectionEntry>
     <selectionEntry id="9436-530c-f6d6-81e7" name="Naphta Thrower" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="43b7-de9e-f28a-4600" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="43b7-de9e-f28a-4600" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="43b7-de9e-f28a-4600" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45d6-2cda-096d-8515" type="max"/>
@@ -4737,6 +5065,18 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
       </costs>
     </selectionEntry>
     <selectionEntry id="804f-2334-205d-4ec8" name="Titan Mortar" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="8f69-11aa-ce53-be57" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="8f69-11aa-ce53-be57" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8f69-11aa-ce53-be57" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="679f-5e5c-a2f5-fa81" type="max"/>
@@ -4757,6 +5097,18 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
       </costs>
     </selectionEntry>
     <selectionEntry id="dd87-622f-acef-c07b" name="Rocket Battery" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="7170-6fe4-f630-01b8" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="7170-6fe4-f630-01b8" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7170-6fe4-f630-01b8" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c50f-5c32-0037-45eb" type="max"/>
@@ -4836,6 +5188,13 @@ Friendly units with more than half of their models with Oil Flasks within 12′�
       </costs>
     </selectionEntry>
     <selectionEntry id="8b5c-d85f-fdbd-606d" name="Kadim Chariot (Mount)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="1a99-64a7-034f-219a" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1a99-64a7-034f-219a" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="578e-ca41-5aa5-0b0f" type="max"/>
@@ -4934,6 +5293,16 @@ Friendly units with more than half of their models with Oil Flasks within 12′�
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1de4-bc18-f4dc-3fc7" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="set" field="daec-fc07-a2bb-a65b" value="12.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="daec-fc07-a2bb-a65b" value="3.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="daec-fc07-a2bb-a65b" type="max"/>
@@ -4948,6 +5317,18 @@ Friendly units with more than half of their models with Oil Flasks within 12′�
       </costs>
     </selectionEntry>
     <selectionEntry id="1de4-bc18-f4dc-3fc7" name="Fires of Industry Double" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="e420-d361-9188-e278" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="e420-d361-9188-e278" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e420-d361-9188-e278" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36e7-257e-5e32-fac1" type="min"/>

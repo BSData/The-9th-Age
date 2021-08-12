@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b60b-8840-3461-ebf5" name="Ogre Khans 2021" revision="52" battleScribeVersion="2.03" authorName="DarkSky, rzmoz, Hebus, Karanadon, Mikel2311" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b60b-8840-3461-ebf5" name="Ogre Khans 2021" revision="53" battleScribeVersion="2.03" authorName="DarkSky, rzmoz, Hebus, Karanadon, Mikel2311" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="b0d2-524e-01c5-5893" name="Chained Beasts" hidden="false"/>
     <categoryEntry id="8848-ec3f-ef30-5842" name="Powder Keg" hidden="false"/>
@@ -45,6 +45,16 @@
         <modifier type="set" field="df1b-b9d7-f458-8228" value="0.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="df1b-b9d7-f458-8228" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="df1b-b9d7-f458-8228" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -268,14 +278,14 @@
     </selectionEntry>
     <selectionEntry id="d22b-66e0-0dc6-614c" name="Khan" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="1f54-2a1c-af1e-3a57" value="0">
+        <modifier type="set" field="1f54-2a1c-af1e-3a57" value="0.0">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f54-2a1c-af1e-3a57" type="max"/>
+        <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f54-2a1c-af1e-3a57" type="max"/>
       </constraints>
       <profiles>
         <profile id="5b2d-4ef3-e367-18b1" name="Khan Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -871,9 +881,45 @@
     <selectionEntry id="1f91-684b-5a72-e05d" name="Mammoth Hunter" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="e4b4-7453-79e4-28c2" value="4.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="atLeast"/>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="e4b4-7453-79e4-28c2" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="e4b4-7453-79e4-28c2" value="4.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="equalTo"/>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="e4b4-7453-79e4-28c2" value="8.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1267,6 +1313,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="0185-d8bd-f5be-e60b" name="Tribesmen" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="59cd-68bf-3969-edf0" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="59cd-68bf-3969-edf0" value="8.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="59cd-68bf-3969-edf0" type="max"/>
       </constraints>
@@ -1402,6 +1460,16 @@
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="fc48-26c7-a2fa-6380" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="fc48-26c7-a2fa-6380" value="8.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc48-26c7-a2fa-6380" type="max"/>
@@ -1493,6 +1561,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="bcdc-e58a-0a46-7cd7" name="Scraplings" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="518e-e057-4ca4-70d0" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="518e-e057-4ca4-70d0" value="8.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="518e-e057-4ca4-70d0" type="max"/>
       </constraints>
@@ -1690,9 +1770,9 @@
     </selectionEntry>
     <selectionEntry id="4fb4-1aaa-370a-92d8" name="Mercenary Veterans" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="f662-ffcd-b0e0-bb6e" value="0">
+        <modifier type="set" field="f662-ffcd-b0e0-bb6e" value="0.0">
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="atLeast"/>
           </conditions>
         </modifier>
         <modifier type="add" field="category" value="8848-ec3f-ef30-5842">
@@ -2015,6 +2095,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="bdba-ec58-78a8-10a5" name="Tusker Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="83a4-3bd4-29cb-0675" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="83a4-3bd4-29cb-0675" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83a4-3bd4-29cb-0675" type="max"/>
       </constraints>
@@ -2158,6 +2250,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="5b2f-cf3b-67ea-8c40" name="Yetis" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="aaf6-065e-932b-9c73" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="aaf6-065e-932b-9c73" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaf6-065e-932b-9c73" type="max"/>
       </constraints>
@@ -2235,6 +2339,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="b1da-71fb-188e-d8bf" name="Scrapling Trappers" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="8df3-752e-fd46-3753" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="8df3-752e-fd46-3753" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8df3-752e-fd46-3753" type="max"/>
       </constraints>
@@ -2323,6 +2439,16 @@
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9a70-d2d0-0891-d010" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="set" field="674f-7864-a23a-a893" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="674f-7864-a23a-a893" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="674f-7864-a23a-a893" type="max"/>
@@ -2386,10 +2512,20 @@
     </selectionEntry>
     <selectionEntry id="9a70-d2d0-0891-d010" name="Sabretooth Tigers (Core)" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="decrement" field="2600-4532-81e9-cf43" value="1">
+        <modifier type="decrement" field="2600-4532-81e9-cf43" value="1.0">
           <repeats>
             <repeat field="selections" scope="f8f1-3d4f-12bf-73cd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9f7-1d3d-5a8a-5155" repeats="1" roundUp="false"/>
           </repeats>
+        </modifier>
+        <modifier type="set" field="2600-4532-81e9-cf43" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="2600-4532-81e9-cf43" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2453,6 +2589,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="130d-5dd5-58e6-d3ab" name="Kin-Eater" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="8859-1298-941a-e8b4" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="8859-1298-941a-e8b4" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8859-1298-941a-e8b4" type="max"/>
       </constraints>
@@ -2515,6 +2663,16 @@
         <modifier type="set" field="b4b8-52e4-6d35-d472" value="0">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="b4b8-52e4-6d35-d472" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="b4b8-52e4-6d35-d472" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2623,6 +2781,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="edf3-1210-abdd-84a5" name="Scratapult" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3d3f-402d-f5ce-4dda" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="3d3f-402d-f5ce-4dda" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d3f-402d-f5ce-4dda" type="max"/>
       </constraints>
@@ -2714,6 +2884,16 @@
         <modifier type="set" field="86df-3ef4-a659-4274" value="0">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2945-e9d3-e35d-bf35" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="86df-3ef4-a659-4274" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="86df-3ef4-a659-4274" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2814,9 +2994,19 @@
     </selectionEntry>
     <selectionEntry id="fa4c-41b5-30e0-beb7" name="Rock Aurochs" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="decrement" field="1948-2afe-bff6-1f7d" value="1">
+        <modifier type="decrement" field="1948-2afe-bff6-1f7d" value="1.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77f0-e914-b7e7-5940" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="1948-2afe-bff6-1f7d" value="4.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="1948-2afe-bff6-1f7d" value="1.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2941,6 +3131,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="04df-77d1-d29d-0582" name="Frost Mammoth" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="891f-e269-1bc7-4bdd" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="891f-e269-1bc7-4bdd" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="891f-e269-1bc7-4bdd" type="max"/>
       </constraints>
@@ -3048,6 +3250,18 @@ Enemy units within 9″ of one or more Frost Mammoths suffer −3 Agility. The r
       </costs>
     </selectionEntry>
     <selectionEntry id="2cc3-0dfb-c6c3-a7b8" name="Slave Giant" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="1b46-7db9-5a19-4457" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="1b46-7db9-5a19-4457" value="6.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b46-7db9-5a19-4457" type="max"/>
       </constraints>
@@ -3252,6 +3466,13 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
       </costs>
     </selectionEntry>
     <selectionEntry id="77f0-e914-b7e7-5940" name="Rock Auroch" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="f93a-2a1d-e39f-e219" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fafe-340f-adfe-bd44" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f93a-2a1d-e39f-e219" type="max"/>
@@ -3299,7 +3520,7 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
       </rules>
       <infoLinks>
         <infoLink id="9a31-d8a4-3fde-caaa" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
-        <infoLink id="93f0-dc0f-a56a-0fcd" name="Stone Skin" hidden="false" targetId="cbda-c7b7-5e59-8d0b" type="rule"/>
+        <infoLink id="93f0-dc0f-a56a-0fcd" name="Mountain Hide" hidden="false" targetId="cbda-c7b7-5e59-8d0b" type="rule"/>
         <infoLink id="278d-76bc-e203-5cd8" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
         <infoLink id="7093-80f0-2934-2f63" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
           <modifiers>
@@ -3329,6 +3550,11 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="1d42-b03a-8763-f7c7" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c055-0da8-b632-dfc9" type="max"/>
@@ -3356,6 +3582,13 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
       </costs>
     </selectionEntry>
     <selectionEntry id="76a2-42eb-2bfe-93d9" name="Hoardmaster" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="4868-aed6-b0bc-ced5" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a45d-2d99-abf8-733e" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4868-aed6-b0bc-ced5" type="max"/>
@@ -3378,6 +3611,13 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
       </costs>
     </selectionEntry>
     <selectionEntry id="0711-4d52-e7f2-e777" name="Headhunter" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="7218-9080-e3bb-6d33" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e317-adff-63f1-3606" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7218-9080-e3bb-6d33" type="max"/>
@@ -3392,6 +3632,13 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
       </costs>
     </selectionEntry>
     <selectionEntry id="b02d-4389-29f0-678a" name="Rottenjaw" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="8504-92f9-5fe3-2b52" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a9d-4f2a-26e2-e110" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8504-92f9-5fe3-2b52" type="max"/>
@@ -3407,7 +3654,7 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
     </selectionEntry>
     <selectionEntry id="6365-25aa-871e-08b5" name="Cult Leader (only on General/BSB)" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="decrement" field="de97-63ff-03a1-dbde" value="1.0">
+        <modifier type="set" field="de97-63ff-03a1-dbde" value="0.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3416,6 +3663,11 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="1e1e-7158-1d40-63fa" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3432,6 +3684,13 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
       </costs>
     </selectionEntry>
     <selectionEntry id="92cb-346f-604f-e6df" name="Gut Roarer" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="3bea-6850-dc5e-8ac4" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2bf-c711-38f3-1ff4" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bea-6850-dc5e-8ac4" type="max"/>
@@ -3455,7 +3714,7 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
     </selectionEntry>
     <selectionEntry id="7cad-3e29-84a6-b4da" name="Spinesplitter (only on foot)" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="decrement" field="d2d5-1f23-eb19-804c" value="1.0">
+        <modifier type="set" field="d2d5-1f23-eb19-804c" value="0.0">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3464,6 +3723,11 @@ The model gains Breath Attack (Str 3, AP 1) and Fortitude (5+). If the model has
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="d983-d373-d344-9cf2" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3505,6 +3769,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
       </costs>
     </selectionEntry>
     <selectionEntry id="8bdc-e24f-b730-39a5" name="Firebrand" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="047b-4431-4ea3-a9bf" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="047b-4431-4ea3-a9bf" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f88c-5d96-b463-1d44" type="max"/>
@@ -3519,6 +3790,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
       </costs>
     </selectionEntry>
     <selectionEntry id="34ef-f143-4997-ca26" name="Banner of the Gyengget" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="341d-63bb-9d1f-1079" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85e4-0663-97e7-7036" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="341d-63bb-9d1f-1079" type="max"/>
@@ -3536,6 +3814,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
       </costs>
     </selectionEntry>
     <selectionEntry id="76cd-a1b5-f966-24c6" name="Pennant of the Great Grass Sky" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="6e51-7b80-bd13-2612" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7306-62f3-472d-6178" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e51-7b80-bd13-2612" type="max"/>
@@ -3553,6 +3838,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
       </costs>
     </selectionEntry>
     <selectionEntry id="70b1-b9f6-9dae-3b0f" name="Skull of Qenghet" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="23f5-717c-5156-a2fd" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa6b-9186-0876-e6c8" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23f5-717c-5156-a2fd" type="max"/>
@@ -3570,6 +3862,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
       </costs>
     </selectionEntry>
     <selectionEntry id="fc5f-ee77-7887-5ade" name="Heart-Ripper" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="dbcd-62a5-b927-7426" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17d0-7473-e01f-1c68" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbcd-62a5-b927-7426" type="max"/>
@@ -3587,6 +3886,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
       </costs>
     </selectionEntry>
     <selectionEntry id="a843-793d-0d0c-17f7" name="Khagadai&apos;s Legacy" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="7f6c-ef0f-a799-1f38" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c6e-0a9a-e7b7-c2d5" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f6c-ef0f-a799-1f38" type="max"/>
@@ -3604,6 +3910,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
       </costs>
     </selectionEntry>
     <selectionEntry id="898a-fe4f-a243-79c3" name="Ritual Bloodletter" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="ac9d-d37d-2e3a-7bbe" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5822-aeba-5950-b08b" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac9d-d37d-2e3a-7bbe" type="max"/>
@@ -3621,6 +3934,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
       </costs>
     </selectionEntry>
     <selectionEntry id="2958-3ed8-9d37-c580" name="Viper&apos;s Curse" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="5479-88cc-663d-b882" value="2.0">
+          <conditions>
+            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64ba-690f-beaa-6812" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5479-88cc-663d-b882" type="max"/>
@@ -3797,6 +4117,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
       </constraints>
       <selectionEntries>
         <selectionEntry id="024f-44fc-651f-6183" name="Lygur&apos;s Tongue" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="3f8e-d1eb-3188-534a" value="2.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="186a-9c70-2d9e-733e" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f8e-d1eb-3188-534a" type="max"/>
@@ -3814,6 +4141,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
           </costs>
         </selectionEntry>
         <selectionEntry id="75b6-f1bc-d006-5511" name="Rampager&apos;s Chain" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="0024-7689-c557-02e3" value="2.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e384-194b-827e-db4f" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0024-7689-c557-02e3" type="max"/>
@@ -3831,6 +4165,13 @@ The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, B
           </costs>
         </selectionEntry>
         <selectionEntry id="a5e8-52ee-e14f-93e8" name="Auroch Charm" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="a3fd-c449-d638-ae29" value="2.0">
+              <conditions>
+                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf06-1e81-a87a-ef30" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3fd-c449-d638-ae29" type="max"/>
