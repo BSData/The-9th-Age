@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3966-f982-d360-9f91" name="Vermin Swarm 2021.2 Alpha 3" revision="2" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3966-f982-d360-9f91" name="Vermin Swarm 2021.2 Alpha 3" revision="4" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="96ad-dc06-c0e7-f8db" name="Tunnel Gunners" hidden="false"/>
     <categoryEntry id="a9b5-ba41-2a1c-a944" name="Bread and Games" hidden="false"/>
@@ -450,6 +450,22 @@ When the model’s unit fails a Discipline Test after any rerolls, you may apply
                     <entryLink id="5c2c-3044-3fc7-6cc5" name="VS Weapon Enchantments" hidden="false" collective="false" import="true" targetId="aa33-b9e5-7629-bfba" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
+                <selectionEntryGroup id="b353-67b9-63cb-580b" name="Banner Enchantments" hidden="true" collective="false" import="true">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="cf74-0218-25b8-1e97" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1816-6a9c-7e82-694a" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bc72-5082-f6e1-0c0a" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="fe6f-43f1-2e07-2b04" name="Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="6f44-7811-b1d1-1d86" type="selectionEntryGroup"/>
+                    <entryLink id="8e99-1d60-69a1-5eb4" name="VS Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="b653-8f71-caba-1419" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
                 <entryLink id="830d-3c2a-f5cf-79b3" name="Shield Enchantments" hidden="false" collective="false" import="true" targetId="3ca8-d93a-232c-d3b5" type="selectionEntryGroup">
@@ -589,6 +605,11 @@ When the model’s unit fails a Discipline Test after any rerolls, you may apply
         <entryLink id="3fe9-ef90-5eb8-c559" name="Battle Standard Bearer" hidden="false" collective="false" import="true" targetId="1816-6a9c-7e82-694a" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value=" with Eagle Standard"/>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <infoLinks>
             <infoLink id="00a6-3aa1-be78-2d3b" name="Eagle Standard" hidden="false" targetId="cea2-5e0c-fcbc-33eb" type="rule"/>
@@ -602,7 +623,15 @@ When the model’s unit fails a Discipline Test after any rerolls, you may apply
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </entryLink>
-        <entryLink id="6e30-e525-9dfc-8b45" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
+        <entryLink id="6e30-e525-9dfc-8b45" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1816-6a9c-7e82-694a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
@@ -1062,6 +1091,9 @@ The model gains Heavy Armour and Great Weapon. At the start of any friendly Shoo
               <infoLinks>
                 <infoLink id="14cd-fe10-293f-41ae" name="Cult of Errahman" hidden="false" targetId="061b-1c71-daf9-4a65" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="c245-52d2-4b9b-c9e9" name="Caelysian Pantheon" hidden="false" collective="false" import="true" type="upgrade">
               <rules>
@@ -1672,6 +1704,9 @@ its Formation:
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="8734-a52e-89cd-72c6" name="Bloodfur Praetorians" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
