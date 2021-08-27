@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="da96-69fb-2ba6-9da8" name="Free Companies 1.3" revision="1" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="da96-69fb-2ba6-9da8" name="Free Companies 1.3.1" revision="2" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5924-45de-723c-7487" name="Hired Guns" hidden="false"/>
-    <categoryEntry id="5630-178a-4bf4-d1f3" name="Ordnance" hidden="false"/>
     <categoryEntry id="fc9c-1368-3425-ecf2" name="Exotic Finds" hidden="false"/>
   </categoryEntries>
   <forceEntries>
@@ -27,11 +26,6 @@
         <categoryLink id="3912-34d8-0941-f3d5" name="Hired Guns" hidden="false" targetId="5924-45de-723c-7487" primary="false">
           <constraints>
             <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="35.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="4d87-3af3-09d4-929d" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="ae43-e080-605e-f725" name="Ordnance" hidden="false" targetId="5630-178a-4bf4-d1f3" primary="false">
-          <constraints>
-            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="15.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="335b-f1be-30a2-2174" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -229,6 +223,7 @@ The model gains -1 Offensive Skill, -1 Defensive Skill, and its Commanding Prese
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e459-5069-6f56-e05d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="409d-5ccb-c05b-48e6" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -249,6 +244,7 @@ The model gains -1 Offensive Skill, -1 Defensive Skill, and its Commanding Prese
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="409d-5ccb-c05b-48e6" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -264,9 +260,10 @@ The model gains -1 Offensive Skill, -1 Defensive Skill, and its Commanding Prese
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e459-5069-6f56-e05d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="409d-5ccb-c05b-48e6" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e459-5069-6f56-e05d" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -495,7 +492,7 @@ At the beginning of each friendly Magic Phase, nominate one enemy unit within 12
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="410b-3cc8-1b9f-5a81" name="Hireling Wizard Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -597,9 +594,21 @@ Wizard Masters with this rule do not gain a +1 bonus to their Casting Roll.</des
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fec4-f8fc-ec29-6d0f" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="be8d-2113-18e8-25bb" name="Pyromancy" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="7aa0-d53a-bd2e-cf6f" name="Alchemy" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="2a30-5dbb-ef55-92b8" name="Witchcraft" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="be8d-2113-18e8-25bb" name="Pyromancy" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7aa0-d53a-bd2e-cf6f" name="Alchemy" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2a30-5dbb-ef55-92b8" name="Witchcraft" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="f3ba-257e-d2ed-1078" name="Mount" hidden="false" collective="false" import="true">
@@ -613,9 +622,10 @@ Wizard Masters with this rule do not gain a +1 bonus to their Casting Roll.</des
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e459-5069-6f56-e05d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="409d-5ccb-c05b-48e6" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e459-5069-6f56-e05d" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -634,6 +644,7 @@ Wizard Masters with this rule do not gain a +1 bonus to their Casting Roll.</des
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e459-5069-6f56-e05d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="409d-5ccb-c05b-48e6" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1411,7 +1422,7 @@ At the start of each Round of Combat, each unit with one or more models with Net
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1534,7 +1545,7 @@ At the start of each Round of Combat, each unit with one or more models with Net
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1866,7 +1877,7 @@ At the start of each Round of Combat, each unit with one or more models with Net
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2343,7 +2354,7 @@ For each enemy Close Combat Attack allocated towards the model for which a natur
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2965-857c-59aa-d6c1" type="max"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="00cd-937e-e063-2aa7" name="New CategoryLink" hidden="false" targetId="5630-178a-4bf4-d1f3" primary="true"/>
+        <categoryLink id="e39a-937e-dda7-c732" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="a1ba-c6c8-fb7c-4df0" name="Artillery Weapon" hidden="false" collective="false" import="true">
@@ -2379,6 +2390,9 @@ For each enemy Close Combat Attack allocated towards the model for which a natur
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="edcc-7d77-e977-9bc3" name="Field Cannon (4+)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -2648,7 +2662,7 @@ Each upgrade may only be taken by a single unit of Ogre Freelancers in your army
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
           </characteristics>
         </profile>
         <profile id="9462-da11-f08b-868f" name="War Hydra" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2731,7 +2745,7 @@ Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it g
             <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"></characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
           </characteristics>
         </profile>
         <profile id="5253-1a36-31b5-7411" name="Giant of Fortune" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2793,11 +2807,17 @@ The model&apos;s Health Points are set to 8, and its base size is changed to 75Ã
               <infoLinks>
                 <infoLink id="d4a7-1774-296c-2d88" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="d0a5-f5de-c05e-ef9e" name="Knight" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="532b-9c82-7359-ca7e" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="51f3-afa3-ed14-ef73" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
               <rules>
@@ -2808,17 +2828,26 @@ The model&apos;s Health Points are set to 8, and its base size is changed to 75Ã
               <infoLinks>
                 <infoLink id="dc17-8e54-d1a3-14d6" name="Stubborn" hidden="false" targetId="51bf-5c8d-5b95-e33c" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="8d98-d6dc-9852-876c" name="Marauder" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="64b5-7a53-d94f-2a41" name="Battle Focus" hidden="false" targetId="cc29-65f2-796b-52e2" type="rule"/>
                 <infoLink id="f356-17a6-0127-ad33" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="9343-d4ef-6321-57d0" name="Corsair" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="df39-28d5-39a9-7541" name="Ambush" hidden="false" targetId="2dda-ee2f-cfce-7f16" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2971,7 +3000,7 @@ Attacks made with this weapon gain +1 Armour Penetration and Magical Attacks.</d
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="409d-5ccb-c05b-48e6" name="Steelcurse Icon" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="409d-5ccb-c05b-48e6" name="Steelcurse Icon (on Foot only)" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="1ef5-7a47-91ee-fae5" value="2.0">
           <conditions>
@@ -3365,6 +3394,9 @@ Natural to-hit rolls of â€˜1â€™ of attacks with this Attack Attribute must be re
       <infoLinks>
         <infoLink id="5795-93bb-2101-fa45" name="Light Crossbow" hidden="false" targetId="0bc4-678a-9a3a-b132" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
