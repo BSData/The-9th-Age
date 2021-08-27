@@ -30,3 +30,7 @@ assignees: ''
 - [ ] Hobgoblins
 - [ ] Makhar
 - [ ] Cultists
+
+**Homebrew Books**
+- [ ] Free Companies
+- [ ] Nippon
