@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3966-f982-d360-9f91" name="Vermin Swarm 2021.2 Alpha 3" revision="4" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3966-f982-d360-9f91" name="Vermin Swarm 2021.2 Alpha 4" revision="5" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="96ad-dc06-c0e7-f8db" name="Tunnel Gunners" hidden="false"/>
     <categoryEntry id="a9b5-ba41-2a1c-a944" name="Bread and Games" hidden="false"/>
@@ -9,7 +9,7 @@
       <categoryLinks>
         <categoryLink id="92a0-be9a-803e-7488" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="false">
           <constraints>
-            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="35.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="0fd7-6d92-7461-ad7d" type="max"/>
+            <constraint field="limit::24fd-8af8-0c78-001c" scope="roster" value="40.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="0fd7-6d92-7461-ad7d" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="b2e5-2443-0a67-4130" name="Core" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="false">
@@ -121,7 +121,7 @@ When friendly units within range of the model’s Commanding Presence (including
                 </rule>
               </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="df0e-aae8-6891-1dbe" name="Lord of the Legion" hidden="false" collective="false" import="true" type="upgrade">
@@ -147,7 +147,7 @@ The model knows The Awakened Swarm (Hereditary Spell) in addition to its other s
                 </rule>
               </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -260,6 +260,12 @@ The model gains Multiple Wounds (D3) and Swiftstride.</description>
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="a3cc-1c13-394f-17d5" name="The Die is Cast" hidden="false">
+          <description>Universal Rule.
+The model gains +1 Discipline, up to a maximum of 8, while within 12′′ of one or more enemy models.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="54bf-bec3-11a9-7b3a" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
         <infoLink id="4063-ae51-5506-3c6d" name="Callous" hidden="false" targetId="aad9-aefc-1376-e855" type="rule"/>
@@ -349,7 +355,7 @@ The model gains Multiple Wounds (D3) and Swiftstride.</description>
         <entryLink id="ed09-ac09-db8a-5f69" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cf74-0218-25b8-1e97" name="Bloodfur Legate" hidden="false" collective="false" import="true" type="unit">
@@ -389,15 +395,6 @@ The model gains Multiple Wounds (D3) and Swiftstride.</description>
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="17a0-609b-5856-0407" name="Decimation" hidden="false">
-          <description>Universal Rule.
-When the model’s unit fails a Discipline Test after any rerolls, you may apply the following rules:
-1. Roll a D6.
-2. Add the result to the initial dice rolled for the Discipline Test as an (additional) instance of Minimised Roll, ignoring all dice that were discarded from any other instances of Minimised Roll.
-3. The model’s unit suffers a number of hits equal to the discarded D6 from this instance of Minimised Roll that wound automatically with no saves of any kind allowed.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="1fbb-9864-d0b4-2b79" name="Callous" hidden="false" targetId="aad9-aefc-1376-e855" type="rule"/>
         <infoLink id="b2ed-b838-6a98-06f9" name="Valorous Discretion" hidden="false" targetId="d3bf-96b7-a3fa-f83f" type="rule"/>
@@ -478,6 +475,20 @@ When the model’s unit fails a Discipline Test after any rerolls, you may apply
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7bd0-3fca-376b-f1e4" name="Greater Eagle Standard" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="992d-26c0-e726-d39a" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="7b8f-3a02-1f66-f82a" name="Greater Eagle Standard" hidden="false">
+              <description>Universal Rule.
+The bearer gains Standard Bearer and Eagle Standard, with the exception that the requirement for being within range of its General’s Commanding Presence is ignored.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -595,7 +606,7 @@ When the model’s unit fails a Discipline Test after any rerolls, you may apply
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="315.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="325.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -634,7 +645,7 @@ When the model’s unit fails a Discipline Test after any rerolls, you may apply
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8aa6-ddde-64d1-ddc8" name="House Prefect" hidden="false" collective="false" import="true" type="unit">
@@ -801,7 +812,7 @@ May be activated at the start of any Round of Combat. Standard Height R&amp;F mo
                 </rule>
               </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="a559-3a20-6c46-4f98" name="Rakachit Technocrat" hidden="false" collective="false" import="true" type="upgrade">
@@ -834,7 +845,7 @@ The model gains Engineer (3+) that can also be used on Experimental Weapon Teams
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4504-a8b6-4077-297c" name="Stygian Overseer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1018,7 +1029,7 @@ The model gains Heavy Armour and Great Weapon. At the start of any friendly Shoo
             </rule>
           </rules>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6a90-e416-bc08-e132" name="Special Items" hidden="false" collective="false" import="true" type="upgrade">
@@ -1301,7 +1312,12 @@ The model’s Path access is replaced with: Thaumaturgy, Witchcraft</description
       <rules>
         <rule id="d13e-35d3-0f6c-424e" name="Dark Doorways" hidden="false">
           <description>Universal Rule.
-The model cannot be deployed normally. Instead, immediately before step 2 of the Deployment Phase Sequence (after determining who deploys first), mark up to 3 units of Vermin Velites, Vermin Legionaries, Blackfur Veterans, Shadowfur Stalkers, or Ignifer Grenadiers on your Army List. Once per game, at the start of any Player Turn, the owner must deploy all of their Duskblade Assassins. For each Duskblade Assassin, choose a marked non-Fleeing unit and remove a R&amp;F model from the chosen unit’s first rank as a casualty. Deploy the Duskblade Assassins inside those units in the position of the removed models.</description>
+The model cannot be deployed during the Deployment Phase. Instead, at the start of any Player Turn, the owner may choose a friendly unit of Vermin Velites, Vermin Legionaries, Blackfur Veterans, Shadowfur Stalkers, or Ignifier Grenadiers that is not Fleeing and that the model can join, and apply the following rules:
+• Remove a R&amp;F model from the chosen unit’s first rank as a casualty. You cannot remove the last R&amp;F model from a unit.
+• Deploy the Duskblade Assassin inside the unit in the position of the removed model.
+• The Duskblade Assassin cannot voluntarily leave its unit during the Player Turn in which it was deployed.
+• If the model is not deployed by the end of Game Turn 4, it counts as a casualty and cannot be deployed for the rest of the game.
+• The model cannot be deployed in a Summoned unit.</description>
         </rule>
         <rule id="5691-5637-39aa-4a3e" name="Disdain for Plebs" hidden="false">
           <description>Universal Rule.
@@ -1334,7 +1350,7 @@ While the model’s unit is in base contact with one or more enemy Characters, t
         <categoryLink id="0f71-14a2-2640-93e7" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="135.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6708-45cb-cbc3-1722" name="Vermin Velites" hidden="false" collective="false" import="true" type="unit">
@@ -1506,7 +1522,7 @@ While the model’s unit is in base contact with one or more enemy Characters, t
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="6.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="889f-bc46-bb13-df98" name="Without Number" hidden="false" collective="false" import="true" type="upgrade">
@@ -1542,7 +1558,7 @@ While the model’s unit is in base contact with one or more enemy Characters, t
           <entryLinks>
             <entryLink id="44dd-3e88-f3a0-9c2a" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="d5a4-4049-60de-5914" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1592,17 +1608,16 @@ While the model’s unit is in base contact with one or more enemy Characters, t
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="098a-cdea-d784-cfc9" name="Blackfur Veterans" hidden="false" collective="false" import="true" type="unit">
       <rules>
         <rule id="ea29-b36f-5966-36ba" name="Avrasi Formations" hidden="false">
           <description>Universal Rule.
-The model’s unit gains the following rules based on
-its Formation:
-• Testudo: While the unit has exactly 5 files, it gains Soft Cover, and its Charge Range rolls in the Charge Phase are subject to Minimised Roll.
-• Phalanx: While the unit has exactly 8 files, it doubles its number of Full Ranks for the purpose of Cohort Coordination, and its Flee Distance rolls are subject to Minimised Roll.</description>
+The unit gains the following rules based on the unit&apos;s Formation:
+• Testudo: While the model&apos;s unit is in Close Formation, the model gains +1 Armour against Shooting Attacks
+• Phalanx: While the model&apos;s unit is in Line Formation, the model must reroll natural to-wound rolls of &apos;1&apos; with its Close Combat Attacks.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1705,7 +1720,7 @@ its Formation:
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8734-a52e-89cd-72c6" name="Bloodfur Praetorians" hidden="false" collective="false" import="true" type="unit">
@@ -1720,11 +1735,15 @@ its Formation:
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5c7a-50fb-26d1-cdb5" type="max"/>
       </constraints>
       <rules>
-        <rule id="a79f-88bb-a50a-0845" name="Avrasi Formation" hidden="false">
+        <rule id="9949-733c-0a6b-9c71" name="Avrasi Formations" hidden="false">
           <description>Universal Rule.
-The model gains the following rules based on its unit’s Formation:
-• Close Formation – Testudo: The model gains +1 Armour against Shooting Attacks from shooting models Located in the unit’s Front Arc.
-• Line Formation – Phalanx: The model must reroll to-wound rolls of ‘1’ with Close Combat Attacks.</description>
+The unit gains the following rules based on the unit&apos;s Formation:
+• Testudo: While the model&apos;s unit is in Close Formation, the model gains +1 Armour against Shooting Attacks
+• Phalanx: While the model&apos;s unit is in Line Formation, the model must reroll natural to-wound rolls of &apos;1&apos; with its Close Combat Attacks.</description>
+        </rule>
+        <rule id="6c33-a6d9-39c4-ae5d" name="Bloodfur Praetorians" hidden="false">
+          <description>Universal Rule.
+The model gains Bodyguard (Vermin Senator that is the General) and Great Weapon, and loses Halberd.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1735,6 +1754,11 @@ The model gains the following rules based on its unit’s Formation:
         <infoLink id="54ac-20b3-a502-a73c" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
         <infoLink id="2ddc-9176-3bbe-ad97" name="Cohort Coordination" hidden="false" targetId="fee7-48fc-f293-20b4" type="rule"/>
         <infoLink id="27a7-1c1e-65bd-2058" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
+        <infoLink id="a837-0a03-1764-472b" name="Bodyguard" hidden="false" targetId="1d4a-2ada-4edb-0363" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (Vermin Senator that is the General)"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5d48-33f9-4106-9948" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -1782,7 +1806,7 @@ The model gains the following rules based on its unit’s Formation:
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="11.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1827,7 +1851,7 @@ The model gains the following rules based on its unit’s Formation:
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="241e-f39f-100f-aad0" name="Vermin Slaves" hidden="false" collective="false" import="true" type="unit">
@@ -1887,7 +1911,7 @@ The model gains the following rules based on its unit’s Formation:
         </selectionEntry>
         <selectionEntry id="693e-4cc6-1d33-143c" name="Without Number" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
@@ -1919,7 +1943,7 @@ The unit adds a single Tunnel Marker to the army.</description>
             </rule>
           </rules>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2020,7 +2044,7 @@ The unit may start the game in Tunnel Reserve. Ambush rolls of units consisting 
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="8.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="9.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2038,7 +2062,7 @@ The unit may start the game in Tunnel Reserve. Ambush rolls of units consisting 
             </entryLink>
             <entryLink id="4e98-a74b-9a5c-ba68" name="Pistol" hidden="false" collective="false" import="true" targetId="bdc6-e116-53be-d2ae" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -2071,7 +2095,7 @@ The unit may start the game in Tunnel Reserve. Ambush rolls of units consisting 
       <rules>
         <rule id="dcee-c2a1-8573-0df5" name="Fear no Evil" hidden="false">
           <description>Universal Rule.
-The model gains Fearless while in the same unit as a Swarm Priest.</description>
+While the model’s unit is Steadfast and does not suffer from Disrupted Ranks, it gains Unbreakable. In addition, while in the same unit as a Swarm Priest, the model gains Fearless.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2131,7 +2155,7 @@ The model gains Fearless while in the same unit as a Swarm Priest.</description>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="9.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2200,7 +2224,7 @@ The model gains Fearless while in the same unit as a Swarm Priest.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5019-de68-1a3d-9bdd" name="Giant Rats" hidden="false" collective="false" import="true" type="unit">
@@ -2372,7 +2396,7 @@ The model gains +1 Strength, +1 Armour Penetration, and +1 Resilience, and its b
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2384,7 +2408,7 @@ The model gains +1 Strength, +1 Armour Penetration, and +1 Resilience, and its b
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0905-74af-c46a-080a" name="Murmillo Brutes" hidden="false" collective="false" import="true" type="unit">
@@ -2509,14 +2533,14 @@ The model gains +1 Strength, +1 Armour Penetration, and +1 Resilience, and its b
                     <modifier type="append" field="name" value=" (4+)"/>
                   </modifiers>
                   <costs>
-                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
                   </costs>
                 </entryLink>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2561,7 +2585,7 @@ The model gains +1 Strength, +1 Armour Penetration, and +1 Resilience, and its b
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0534-4b71-b5ac-3a3d" name="Legionary Drill Team" hidden="false" collective="false" import="true" type="unit">
@@ -2641,7 +2665,7 @@ Once per game, at the end of the owner’s Movement Phase, the model’s unit ma
         <categoryLink id="c9fc-4c68-4703-9cc0" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1c5d-0426-9b36-eb95" name="Ignifier Grenadiers" hidden="false" collective="false" import="true" type="unit">
@@ -2721,12 +2745,12 @@ Once per game, at the end of the owner’s Movement Phase, the model’s unit ma
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="13.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="12.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="46.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="54.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0742-d2fd-86b7-6aad" name="Experimental Weapon Teams" hidden="false" collective="false" import="true" type="unit">
@@ -2745,11 +2769,18 @@ Once per game, at the end of the owner’s Movement Phase, the model’s unit ma
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3e2e-93a6-0269-a0bc" type="max"/>
       </constraints>
+      <rules>
+        <rule id="dfc3-3bdc-e85c-e374" name="Heavy Weapon" hidden="false">
+          <description>Attack Attribute – Shooting.
+The model may not use its Shooting Weapon if the model performed a March Move in this Player Turn.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="fe93-3589-df2d-a83c" name="Callous" hidden="false" targetId="aad9-aefc-1376-e855" type="rule"/>
         <infoLink id="8278-4376-9662-6a0f" name="Life is Cheap" hidden="false" targetId="4a32-b0e1-f058-6b43" type="rule"/>
         <infoLink id="473c-3cae-5fa6-6c16" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
         <infoLink id="60a1-eefd-df21-1880" name="Quick to Fire" hidden="false" targetId="5a08-d3bf-06f9-3034" type="rule"/>
+        <infoLink id="431e-ec39-864c-d189" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="283f-5b96-f672-19a7" name="New CategoryLink" hidden="false" targetId="96ad-dc06-c0e7-f8db" primary="true"/>
@@ -2785,7 +2816,7 @@ Once per game, at the end of the owner’s Movement Phase, the model’s unit ma
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Quick to Fire</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Heavy Weapon, Quick to Fire</characteristic>
               </characteristics>
             </profile>
             <profile id="ee84-334c-464a-f928" name="Experimental Weapon Team Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2891,8 +2922,8 @@ Once per game, at the end of the owner’s Movement Phase, the model’s unit ma
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5"/>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6"/>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">D6</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Chain Lightning, Grind Attacks (D6), Inanimate, March and Shoot, Darkstone Generator</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Chain Lightning, Grind Attacks (D6), Inanimate, Darkstone Generator</characteristic>
           </characteristics>
         </profile>
         <profile id="1986-6e60-9cce-fd22" name="Rakachit Engineer (3)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2909,13 +2940,13 @@ Once per game, at the end of the owner’s Movement Phase, the model’s unit ma
       <rules>
         <rule id="8b2e-ec4b-a4d7-a61f" name="Darkstone Generator" hidden="false">
           <description>Shooting Weapon.
-Range 6′′, Shots D6, Lightning Attacks, Mishap (Roll for number of Shots), Reload!.
-When used, the weapon targets and automatically hits all units within Range (including units not inside the Front Arc/Line of Sight, and units Engaged in Combat) except the shooting unit itself (remember that models that are Engaged in Combat cannot perform Shooting Attacks). Roll once for the number of shots and apply this value to all targeted units, then roll for the Strength of the hits for each targeted unit individually. These shots are not randomised using the rules for Callous.
-Trial and Terror: The attack gains +1 Strength and +1 Armour Penetration.</description>
+Range 12′′, Shots D6, Lightning Attacks, March and Shoot, Mishap (Roll for number of Shots), Reload!.
+The Attacks hit automatically.
+Trial and Terror: The weapon instead targets and automatically hits all units within 6′′ (including units not inside the Front Arc/Line of Sight, and units Engaged in Combat) except the shooting unit itself (remember that models that are Engaged in Combat cannot perform Shooting Attacks). Roll once for the number of shots and apply this value to all targeted units, then roll for the Strength of the hits for each targeted unit individually. These shots are not randomised using the rules for Callous.</description>
         </rule>
         <rule id="8669-d87d-0b88-17e4" name="Chain Lightning" hidden="false">
           <description>Special Attack.
-The model’s Grind Attacks are resolved as Lightning Attacks. Roll for Agility of this model when determining the Initiative Order.</description>
+The model’s Grind Attacks are resolved as Lightning Attacks.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2933,7 +2964,7 @@ The model’s Grind Attacks are resolved as Lightning Attacks. Roll for Agility 
         <categoryLink id="7a48-3a8b-796b-b415" name="New CategoryLink" hidden="false" targetId="96ad-dc06-c0e7-f8db" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0f4f-d267-8958-260f" name="Vermin Artillery" hidden="false" collective="false" import="true" type="unit">
@@ -3036,7 +3067,7 @@ Trial and Terror: The weapon’s range is set to 12–30′′. Replace Catapult
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="87ca-4ae2-5b9c-19aa" name="Rakachit Mauss Cannon (4+)" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="87ca-4ae2-5b9c-19aa" name="Rakachit Mauss Rifle (4+)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="e5d0-e032-31a4-33d6" value="1.0">
                   <conditions>
@@ -3053,26 +3084,26 @@ Trial and Terror: The weapon’s range is set to 12–30′′. Replace Catapult
                 <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e5d0-e032-31a4-33d6" type="max"/>
               </constraints>
               <profiles>
-                <profile id="6437-1afa-72c1-bfff" name="Rakachit Mauss Cannon" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+                <profile id="6437-1afa-72c1-bfff" name="Rakachit Mauss Rifle" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
                   <characteristics>
                     <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">48&quot;</characteristic>
                     <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
                     <characteristic name="Str" typeId="f166-13ff-9227-4525">5 [7]</characteristic>
                     <characteristic name="AP" typeId="857a-4ce1-d134-8701">2 [4]</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Artillery Weapon. Cannon. Area Attack(1×5), Mishap (Misfire), [Multiple Wounds (D3)].
-Trial and Terror: The weapon’s range is set to 24′′, and it gains Accurate and [Multiple Wounds (D6)]. The weapon suffers Mishap on to-hit rolls of ‘1’ and ‘2’.</characteristic>
+                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Artillery Weapon. Area Attack(1×5), Mishap (To-hit roll), [Multiple Wounds (D3)].
+Trial and Terror: The weapon’s range is set to 24′′, and it gains Accurate and [Multiple Wounds (D6)].</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0121-38c5-a5bc-632d" name="Stygian Earthbreaker" hidden="false" collective="false" import="true" type="unit">
@@ -3345,7 +3376,7 @@ Immediately before a model is removed as a casualty from the unit, the model inf
               <characteristics>
                 <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
                 <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×75</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
               </characteristics>
             </profile>
             <profile id="46d9-cda9-5ae6-2209" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3365,7 +3396,7 @@ Immediately before a model is removed as a casualty from the unit, the model inf
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -3408,12 +3439,12 @@ Immediately before a model is removed as a casualty from the unit, the model inf
         <profile id="64a0-d7b2-c991-51f0" name="Swarm Master" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Close Combat Weapon</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">While using this weapon, the wielder gains Grind Attacks (X), where X is the number of Full Ranks in the wielder’s unit, up to a maximum of 10. These Grind Attacks are resolved with Strength 3, Armour Penetration 1, and Magical Attacks.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Infantry models only. While using this weapon, the wielder gains Grind Attacks (X), where X is the number of Full Ranks in the wielder’s unit, up to a maximum of 10. These Grind Attacks are resolved with Strength 3, Armour Penetration 1, and Magical Attacks.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="80c9-838d-5a6b-e902" name="Rodentium Bullets" hidden="false" collective="false" import="true" type="upgrade">
@@ -3436,7 +3467,7 @@ Immediately before a model is removed as a casualty from the unit, the model inf
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="db0c-73de-276b-7821" name="Plague-Hermit&apos;s Blessing" hidden="false" collective="false" import="true" type="upgrade">
@@ -3482,7 +3513,7 @@ Immediately before a model is removed as a casualty from the unit, the model inf
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="87ec-8414-fd86-21e7" name="Sacred Aquila" hidden="false" collective="false" import="true" type="upgrade">
@@ -3505,7 +3536,7 @@ Immediately before a model is removed as a casualty from the unit, the model inf
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="21f9-2681-f614-234a" name="Bell of the Deep Roads" hidden="false" collective="false" import="true" type="upgrade">
@@ -3620,7 +3651,7 @@ Immediately before a model is removed as a casualty from the unit, the model inf
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fe3b-b62b-ee67-37aa" name="Map of the Deeps" hidden="false" collective="false" import="true" type="upgrade">
@@ -3666,7 +3697,7 @@ Immediately before a model is removed as a casualty from the unit, the model inf
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="65e7-65a4-db7b-a58e" name="Tarina’s Lyre" hidden="false" collective="false" import="true" type="upgrade">
@@ -3768,7 +3799,7 @@ Immediately before a model is removed as a casualty from the unit, the model inf
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C+1</characteristic>
             <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
@@ -3868,7 +3899,7 @@ Immediately before a model is removed as a casualty from the unit, the model inf
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Great Weapon</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
           </characteristics>
         </profile>
         <profile id="f2d9-a706-460e-73ca" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3924,7 +3955,7 @@ The range of the model’s March to the Beat, and to enemy units that are requir
               <rules>
                 <rule id="7e7c-9248-aa63-3933" name="Pestilent Pulpit" hidden="false">
                   <description>Universal Rule.
-The model can cast Pentagram of Pain (Occultism) as a Bound Spell with Power Level (4/8) and gains Borne into Battle (Plague Disciples), and the Acolytes gain Paired Weapons and Poison Attacks. In addition, friendly units within 6′′ of the model gain Poison Attacks with the following exceptions:
+The model can cast Breath of Corruption (Occultism) as a Bound Spell with Power Level (4/8). The model gains Borne into Battle (Plague Disciples). The model&apos;s unit gains Poison Attacks with the following exceptions:
 • Only models with Cult of Errahman are affected.
 • Close Combat Attacks that already were Poison Attacks from another source will automatically wound on successful to-hit rolls of 5+ instead of 6+.</description>
                 </rule>
@@ -3934,6 +3965,32 @@ The model can cast Pentagram of Pain (Occultism) as a Bound Spell with Power Lev
               </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3854-cbab-2c5d-b364" name="Acolyte Weapons" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2385-bee8-e176-93c2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea38-ef6d-a591-6a2a" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="477e-4521-202b-d0bb" name="Bloodpox Blades" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="f67e-93b9-c495-dd59" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32a7-6613-afe4-237a" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f67e-93b9-c495-dd59" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="32b2-7498-ce2d-0582" name="Bloodpox Blades" hidden="false" targetId="4f78-4ea0-ad40-8f61" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="c4d4-b57b-bde8-f5e8" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -4051,12 +4108,12 @@ The model can cast Pentagram of Pain (Occultism) as a Bound Spell with Power Lev
         <profile id="9774-7b48-5920-2518" name="Cowl of the Apostate" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The model counts as having both Caelysian Pantheon and Cult of Errahman for the purpose of Holy Triumvirate.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The model gains Holy Triumvirate (see Swarm Priest), and for the purpose of this rule, it counts as having both Caelysian Pantheon and Cult of Errahman</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="734a-d59b-3384-e1d7" name="Senatorial Litter" hidden="false" collective="false" import="true" type="upgrade">
@@ -4083,8 +4140,8 @@ The model can cast Pentagram of Pain (Occultism) as a Bound Spell with Power Lev
           <characteristics>
             <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">C</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">C</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C+1</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">C</characteristic>
             <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Cannot be Stomped</characteristic>
           </characteristics>
         </profile>
@@ -4220,8 +4277,9 @@ The range of the model’s Commanding Presence is set to 18′′ when measured 
 • In case of Area Attacks, the initial hit is not randomised. Determine the number of hits caused by the Area Attack based on the attack’s initial target. Then randomise each hit as specified above.</description>
     </rule>
     <rule id="cea2-5e0c-fcbc-33eb" name="Eagle Standard" hidden="false">
-      <description>While a non-Fleeing unit with one or more models with Eagle Standard is within 18′′ of its General, the unit gains Rally Around the Flag with a range of 6′′ (any already existing instances of Rally Around the Flag on models in the unit are not affected). Any Discipline Tests taken by units while within range of Rally Around the Flag from one or more models in a unit with one or more Eagle Standards are subject to Minimised Roll.
-If the General is removed as a casualty, then your Battle Standard Bearer counts as the General for the purpose of Eagle Standard (i.e. it does not gain Commanding Presence, etc.).</description>
+      <description>While a non-Fleeing unit with one or more Eagle Standards is within range of its General’s Commanding Presence, the unit gains Rally Around the Flag with the following rules and exceptions:
+• Its range is always 6′′.
+• Discipline Tests taken by units while within range of one or more instances of this Rally Around the Flag are subject to Minimised Roll.</description>
     </rule>
     <rule id="4a32-b0e1-f058-6b43" name="Life is Cheap" hidden="false">
       <description>Each Health Point loss of models with Life is Cheap is only counted as half a Health Point loss for the purpose of Combat Score, rounding fractions up. This does not include Combat Score bonuses from Overkill.</description>
@@ -4242,7 +4300,7 @@ If the General is removed as a casualty, then your Battle Standard Bearer counts
 The attacks become Magical Attacks, their Strength is set to D6, and their Armour Penetration is set to 2. If the target’s unit is in contact with Water Terrain, failed to-wound rolls must be rerolled. Roll only once for the Strength value of all simultaneous hits with Lightning Attacks from a single unit and apply the result to all hits.</description>
     </rule>
     <rule id="6393-4f21-d852-cfa3" name="Mishap" hidden="false">
-      <description>The model suffers a Mishap when it rolls a natural ‘1’ for the type of roll described in brackets (X). If X is “Misfire”, the model suffers a Mishap instead of suffering effects from Misfire. A roll resulting in a Mishap can never be rerolled and an attack resulting in a Mishap is always lost. When suffering a Mishap, the model’s unit suffers D6 hits with Strength 3 and Armour Penetration 0. If the Trial and Terror shooting mode was used, the Strength of these hits is set to 6 and their Armour Penetration is set to 3.</description>
+      <description>The model suffers a Mishap when it rolls a natural ‘1’ for the type of roll described in brackets (X). If X is “Misfire”, the model suffers a Mishap instead of suffering effects from Misfire. A roll resulting in a Mishap can never be rerolled and an attack resulting in a Mishap is always lost. When suffering a Mishap, the model’s unit suffers 2 hits with Strength 5 and Armour Penetration 10. If the Trial and Terror shooting mode was used, the number of hits is increased to 4.</description>
     </rule>
     <rule id="3896-4daf-52f4-644d" name="Trial and Terror" hidden="false">
       <description>The Trial and Terror section in a weapon’s profile describes an alternative shooting mode. If one model uses the Trial and Terror shooting mode, then all models in its unit must use it. The effects last until the end of the phase.</description>
@@ -4288,6 +4346,13 @@ R&amp;F models with Cult of Errahman cannot be joined by models without Cult of 
         <characteristic name="AP" typeId="857a-4ce1-d134-8701">0</characteristic>
         <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Flamethrower. Flaming Attacks, Mishap (Misfire). The bearer gains Flammable. The total number of simultaneous hits from a unit with this weapon cannot exceed the number of models in the target unit.
 Trial and Terror: The weapon’s range is set to 12′′ and its Strength is set to 4.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="4f78-4ea0-ad40-8f61" name="Bloodpox Blades" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
+      <characteristics>
+        <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">As User</characteristic>
+        <characteristic name="AP" typeId="646b-1e72-1589-5083">As User</characteristic>
+        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Paired Weapons. Attacks made with Bloodpox Blades gain Poison Attacks.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
