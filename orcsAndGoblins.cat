@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fb15-9166-d400-2894" name="Orcs and Goblins 2021" revision="49" battleScribeVersion="2.03" authorName="DarkSky, hebus, Mikel2311" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fb15-9166-d400-2894" name="Orcs and Goblins 2021" revision="50" battleScribeVersion="2.03" authorName="DarkSky, hebus, Mikel2311" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="82d5-126d-e31a-aa94" name="Big &apos;n Nasty" hidden="false"/>
     <categoryEntry id="213d-78ab-6a2f-1664" name="Death from Above" hidden="false"/>
@@ -2268,14 +2268,7 @@
         </profile>
       </profiles>
       <rules>
-        <rule id="7eb9-b23f-16c8-2788" name="Spider-Mother Shrine" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="72b8-5864-ab83-b1a0" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4b98-25a3-b30b-2431" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <rule id="7eb9-b23f-16c8-2788" name="Spider-Mother Shrine" hidden="true">
           <description>The model gain Aegis (5+, against Ranged Attacks) and knows one additional Learned Spell.</description>
         </rule>
       </rules>
@@ -2340,6 +2333,29 @@
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="a532-1a23-0f90-b6df" name="Spider Mother Shrine" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="f9a0-48c1-8d30-2346" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b2e-f21e-81e6-4153" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="38cc-12b1-8d7e-f06d" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b2e-f21e-81e6-4153" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38cc-12b1-8d7e-f06d" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9a0-48c1-8d30-2346" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="5890-dcf1-c0e7-4c9d" name="Spider-Mother Shrine" hidden="true">
+              <description>The model gain Aegis (5+, against Ranged Attacks) and knows one additional Learned Spell.</description>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -5295,7 +5311,7 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
         <infoLink id="06e0-b956-6182-8194" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
         <infoLink id="c564-0808-53c1-0564" name="Shambolic" hidden="false" targetId="24b3-4352-5103-4c13" type="rule"/>
         <infoLink id="e128-d601-be46-26f3" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="1e2d-c9d7-b3bb-3705" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
+        <infoLink id="1e2d-c9d7-b3bb-3705" name="War Machine" hidden="false" targetId="610e-d71e-0439-9e7f" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a70f-2033-36b2-ad2e" name="New CategoryLink" hidden="false" targetId="213d-78ab-6a2f-1664" primary="true"/>
@@ -5380,9 +5396,8 @@ At the model part’s Initiative Step, it may choose to not perform its Close Co
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="9b21-03d1-a37e-bf4d" name="Shambolic" hidden="false" targetId="24b3-4352-5103-4c13" type="rule"/>
         <infoLink id="7b83-5583-4c2b-8d21" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="15c2-d015-ac78-0c06" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
+        <infoLink id="15c2-d015-ac78-0c06" name="War Machine" hidden="false" targetId="610e-d71e-0439-9e7f" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="356b-3fb2-9b35-21d6" name="New CategoryLink" hidden="false" targetId="213d-78ab-6a2f-1664" primary="true"/>
@@ -6587,7 +6602,7 @@ The effects last until the end of the Round of Combat.</description>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0b2e-f21e-81e6-4153" name="Gargantula" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="0b2e-f21e-81e6-4153" name="Gargantula (Mount)" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="b7bb-2d5f-958b-663f" value="2.0">
           <conditions>
