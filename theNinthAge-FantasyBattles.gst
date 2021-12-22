@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2021" revision="49" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2022" revision="50" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -271,7 +271,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy (not with Not A Leader)" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="10ee-597b-7691-dc42" value="2.0">
           <conditions>
@@ -287,12 +287,13 @@
         <profile id="3296-1a1d-fa61-756d" name="Crown of Autocracy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains +1 Discipline. If taken by the General, the opponent doubles the Victory Points bonus for killing this General (normally +400 instead of +200).</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cannot be taken by models with Not a Leader.
+The model&apos;s range of Commanding Presence (if available) is increased by 3&quot;, up to a maximum of 18&quot;. If the model does not have Commanding Presence, it gains Commanding Presence whose range is always set to 3&quot;.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="28c9-d1c6-a0c8-d695" name="Crown of the Wizard King" hidden="false" collective="false" import="true" type="upgrade">
@@ -316,7 +317,7 @@
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ef67-0a29-6d5c-687c" name="Crystal Ball" hidden="false" collective="false" import="true" type="upgrade">
@@ -335,12 +336,12 @@
         <profile id="3f5d-84aa-6629-c4e6" name="Crystal Ball" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">After Spell Selection (at the end of step 7 of the Pre-Game Sequence), mark a single enemy model in the opponent’s Army List. All dispelling attempts of spells cast by that model gain a +1 dispelling modifier, provided the bearer is on the battlefield.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The first Dispelling Attempt in each friendly Magic Phase gains a +2 Dispelling Modifier, provided the bearer is on the Battlefield.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b996-d7ae-e854-2601" name="Dragon Staff" hidden="false" collective="false" import="true" type="upgrade">
@@ -364,7 +365,7 @@
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="57fe-c8e7-f786-132c" name="Dragonfire Gem" hidden="false" collective="false" import="true" type="upgrade">
@@ -407,12 +408,12 @@
         <profile id="2806-17d8-e125-0f85" name="Lightning Vambraces" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/8): Type: Hex, Missile, Damage. Range 24&quot;. Duration: Instant. The target suffers 2D6 hits with Strength 3 and Armour Penetration 0.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast Hand of Heaven (Thaumaturgy) as a bound spell, with Power Level (4/8)</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ebd9-2cee-402a-4ff4" name="Lucky Charm" hidden="false" collective="false" import="true" type="upgrade">
@@ -460,7 +461,7 @@
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="589f-da5c-20ba-5f1a" name="Potion of Strength" hidden="false" collective="false" import="true" type="upgrade">
@@ -527,7 +528,7 @@
         <profile id="6a20-41d9-409c-9020" name="Ranger&apos;s Boots" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Standard size models on foot only. The bearer gains Strider and, unless using Flying Movement, gains +2 Advance Rate up to a maximum of 10, and +4 March Rate up to a maximum of 20.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Standard size infantry models on foot only. The bearer gains Strider and, unless using Flying Movement, gains +2 Advance Rate up to a maximum of 10, and +4 March Rate up to a maximum of 20.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -551,7 +552,7 @@
         <profile id="2578-ad31-a24c-3915" name="Rod of Battle" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/8): Type: Augment. Range 12′′. Duration: One Turn. The target gains +1 to hit with its Close Combat Attacks.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/8): Type: Augment. Range 18′′. Duration: One Turn. The target gains +1 to hit with its Close Combat Attacks.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -638,7 +639,6 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -665,18 +665,8 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3db5-8d52-cfe9-fbfa" name="°Essence of a Free Mind" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="3db5-8d52-cfe9-fbfa" name="Essence of a Free Mind" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="73b8-f867-8841-bdf9" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="f865-a3c5-c1c3-e973" value="2.0">
           <conditions>
             <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
@@ -696,7 +686,7 @@
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1a15-8ac5-586b-1b94" name="°Magical Heirloom" hidden="false" collective="false" import="true" type="upgrade">
@@ -705,7 +695,6 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3db5-8d52-cfe9-fbfa" type="equalTo"/>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -788,7 +777,7 @@
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c253-ce04-6c42-8bf6" name="Banner of Speed" hidden="false" collective="false" import="true" type="upgrade">
@@ -966,7 +955,7 @@ The effects last until the end of the Player Turn.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="98fe-a333-8a21-dcb0" name="Alchemist&apos;s Alloy" hidden="false" collective="false" import="true" type="upgrade">
@@ -1014,7 +1003,7 @@ The effects last until the end of the Player Turn.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cba2-e616-5486-217b" name="Death Cheater" hidden="false" collective="false" import="true" type="upgrade">
@@ -1476,7 +1465,7 @@ The effects last until the end of the Player Turn.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dd35-7a49-6952-982e" name="Supernatural Dexterity" hidden="false" collective="false" import="true" type="upgrade">
@@ -1500,7 +1489,7 @@ The effects last until the end of the Player Turn.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="81c6-6663-7fd4-18f7" name="Cleansing Light" hidden="false" collective="false" import="true" type="upgrade">
@@ -1524,7 +1513,7 @@ The effects last until the end of the Player Turn.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
