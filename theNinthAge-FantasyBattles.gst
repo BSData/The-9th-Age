@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2022" revision="50" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2022 Beta 2" revision="51" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -320,12 +320,22 @@ The model&apos;s range of Commanding Presence (if available) is increased by 3&q
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ef67-0a29-6d5c-687c" name="Crystal Ball" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="ef67-0a29-6d5c-687c" name="°Crystal Ball" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="2893-a2ca-9621-f623" value="2.0">
           <conditions>
             <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
           </conditions>
+        </modifier>
+        <modifier type="set" field="89dc-15b7-96ab-ea9f" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -639,6 +649,7 @@ The model&apos;s range of Commanding Presence (if available) is increased by 3&q
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-0a29-6d5c-687c" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -696,6 +707,7 @@ The model&apos;s range of Commanding Presence (if available) is increased by 3&q
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-0a29-6d5c-687c" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1436,7 +1448,7 @@ The effects last until the end of the Player Turn.</characteristic>
             <profile id="3d1e-95aa-7268-83fe" name="Hero&apos;s Heart" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon and Paired Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder of this enchanted weapon gains +1 Attack Value when using it. Attacks made with this enchanted weapon gain Magical Attacks and always have at least Strength 5 and at least Armour Penetration 3.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder of this enchanted weapon gains +1 Attack Value when using it. Attacks made with this enchanted weapon gain Magical Attacks and always have at least Strength 5 and at least Armour Penetration 2.</characteristic>
               </characteristics>
             </profile>
           </profiles>
