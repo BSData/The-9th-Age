@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="204b-f298-c044-edc2" name="Kingdom of Equitaine 2022 Beta 1 Hotfix 1" revision="1" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="50" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="204b-f298-c044-edc2" name="Kingdom of Equitaine 2022 Beta 1 Hotfix 1" revision="3" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="50" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <profileTypes>
+    <profileType id="5280-86a1-d490-10b8" name="2 Defensive Koe">
+      <characteristicTypes>
+        <characteristicType id="d8ce-649e-ebf4-ce39" name="HP"/>
+        <characteristicType id="2f91-bb43-b822-ba6c" name="Def"/>
+        <characteristicType id="60b8-9f24-3829-8c84" name="Res"/>
+        <characteristicType id="2d2a-d351-541b-27f1" name="Arm"/>
+        <characteristicType id="0931-3c5e-6bbd-6c1c" name="Aeg"/>
+        <characteristicType id="0648-d066-1f9b-29ed" name="Rules"/>
+      </characteristicTypes>
+    </profileType>
+  </profileTypes>
   <categoryEntries>
     <categoryEntry id="a39e-563e-a72c-30af" name="Fey" hidden="false"/>
   </categoryEntries>
@@ -175,18 +187,56 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </costs>
     </selectionEntry>
     <selectionEntry id="356b-6a28-ca50-c918" name="Damsel" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="0c4b-9cf5-f38f-9f30" name="Damsel Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Orison(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7a3d-d2e9-3f50-0fe0" name="Damsel Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+        <profile id="919d-935d-661f-e714" name="Damsel Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">3</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">3</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">0</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">5+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Honesty</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b63d-b3f5-1be1-da12" name="Damsel Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20x20</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="0b8f-3829-96da-973f" name="Beloved" hidden="false">
+          <description>Beloved: Universal Rule.
+While the model is joined to a unit with at least one Full Rank, it gains Stand Behind.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="baae-dfbc-61d6-2a1f" name="Honesty" hidden="false" targetId="b124-6c67-9a2d-a06d" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="a128-02b0-d70c-b723" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="756e-f04d-da93-bf72" name="Sainted" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f64-0521-bab1-61e7" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="e5a4-e6af-d36b-fe40" name="Special Equipment" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad86-24db-b10f-d62d" type="max"/>
@@ -198,6 +248,16 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                   <conditions>
                     <condition field="selections" scope="356b-6a28-ca50-c918" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fe30-0a0d-d4d6-b7be" type="equalTo"/>
                   </conditions>
+                </modifier>
+                <modifier type="increment" field="8534-1845-9c30-8f76" value="50.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="356b-6a28-ca50-c918" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="60d5-4889-6942-b867" type="atLeast"/>
+                        <condition field="selections" scope="356b-6a28-ca50-c918" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fe30-0a0d-d4d6-b7be" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -255,11 +315,27 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b41-717c-21dc-5039" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="b60d-55c0-e6db-1211" name="2022 Mount: Destrier" hidden="false" collective="false" import="true" targetId="4728-58d3-5610-5c09" type="selectionEntry"/>
-            <entryLink id="3eb9-88f1-6d86-b1a0" name="2022 Mount: Heraldic Steed" hidden="false" collective="false" import="true" targetId="174f-28db-eb65-96ce" type="selectionEntry"/>
-            <entryLink id="28f7-08a4-5c80-25a5" name="2022 Mount: Pegasus Charger" hidden="false" collective="false" import="true" targetId="092e-12b7-d4e6-8c87" type="selectionEntry"/>
-            <entryLink id="94a1-71d4-097e-7036" name="2022 Mount: Revered Unicorn" hidden="false" collective="false" import="true" targetId="95bc-8477-219e-a5cb" type="selectionEntry"/>
-            <entryLink id="88e6-f758-88b5-5a57" name="2022 Mount: Fey Steed" hidden="false" collective="false" import="true" targetId="650c-977f-a443-2455" type="selectionEntry">
+            <entryLink id="b60d-55c0-e6db-1211" name="Mount: Destrier" hidden="false" collective="false" import="true" targetId="4728-58d3-5610-5c09" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="3eb9-88f1-6d86-b1a0" name="Mount: Heraldic Steed" hidden="false" collective="false" import="true" targetId="174f-28db-eb65-96ce" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="28f7-08a4-5c80-25a5" name="Mount: Pegasus Charger" hidden="false" collective="false" import="true" targetId="092e-12b7-d4e6-8c87" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="94a1-71d4-097e-7036" name="Mount: Revered Unicorn" hidden="false" collective="false" import="true" targetId="95bc-8477-219e-a5cb" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="88e6-f758-88b5-5a57" name="Mount: Fey Steed" hidden="false" collective="false" import="true" targetId="650c-977f-a443-2455" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="5366-17f9-4d63-d437" value="0.0">
                   <conditions>
@@ -267,6 +343,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                   </conditions>
                 </modifier>
               </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+              </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -365,6 +444,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="c364-9f0a-18df-597c" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
+        <entryLink id="0d16-09e5-3f99-a559" name="Sainted" hidden="false" collective="false" import="true" targetId="60d5-4889-6942-b867" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
@@ -374,6 +458,48 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffc9-e15d-3eea-e714" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="8161-bf47-e345-bcdd" name="Equitan Lord Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+        <profile id="3c88-aee2-0eb7-c85e" name="Equitan Lord Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lance Formation</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7608-428b-daa0-8895" name="Equitan Lord Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">3</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">6</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">0</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Courage, Heavy Armour</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="50d5-0db5-8336-86d5" name="Equitan Lord Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20x20</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="de3f-37ef-7a42-3a80" name="Lance Formation" hidden="false" targetId="b53e-e733-517e-8c2d" type="rule"/>
+        <infoLink id="0499-74b4-d7ef-46a4" name="The Blessing" hidden="false" targetId="f4b8-68e0-86ef-c252" type="rule"/>
+        <infoLink id="b358-2a9d-5bb8-f5a6" name="Courage" hidden="false" targetId="e242-3ed9-fea8-8646" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="ef22-9ff9-a9f3-ea2e" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
@@ -387,7 +513,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               <modifiers>
                 <modifier type="set" field="c186-2aeb-d6d6-a16f" value="100.0">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1816-6a9c-7e82-694a" type="equalTo"/>
+                    <condition field="selections" scope="b0d2-7eae-05ee-8338" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1816-6a9c-7e82-694a" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="c186-2aeb-d6d6-a16f" value="50.0">
+                  <conditions>
+                    <condition field="selections" scope="b0d2-7eae-05ee-8338" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="60d5-4889-6942-b867" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -450,6 +581,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b377-df28-ef35-4656" type="max"/>
           </constraints>
+          <rules>
+            <rule id="da7b-9b78-df69-c0f7" name="Paladin" hidden="false">
+              <description>Paladin: Universal Rule.
+The Equitan Lord model part gains Divine Attacks. The model gains Not a Leader, Honesty, Orison (1), and loses Courage.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
@@ -471,7 +608,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
               </costs>
             </entryLink>
-            <entryLink id="d4a8-223c-1f94-b965" name="2022 Mount: Revered Unicorn" hidden="false" collective="false" import="true" targetId="95bc-8477-219e-a5cb" type="selectionEntry"/>
+            <entryLink id="d4a8-223c-1f94-b965" name="Mount: Revered Unicorn" hidden="false" collective="false" import="true" targetId="95bc-8477-219e-a5cb" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
+              </costs>
+            </entryLink>
             <entryLink id="619e-1951-041c-29b5" name="2022 Mount: Fey Steed" hidden="false" collective="false" import="true" targetId="650c-977f-a443-2455" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="0c37-c576-8216-c41d" value="0.0">
@@ -558,14 +699,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </entryLink>
-        <entryLink id="46f3-05bf-89f8-69c5" name="Sainted" hidden="false" collective="false" import="true" targetId="60d5-4889-6942-b867" type="selectionEntry">
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
-          </costs>
-        </entryLink>
         <entryLink id="ef9f-5eef-cab6-16c5" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="fd37-6702-9825-f0ad" name="Sainted" hidden="false" collective="false" import="true" targetId="60d5-4889-6942-b867" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -577,16 +718,69 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="233f-0d90-7abb-eb96" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="4008-f790-2574-83c7" name="Folk Hero Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Traits of a Hero</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8a00-b5a9-c998-cfbe" name="Folk Hero Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">3</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">0</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Ordeal, Light Armour</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="21f2-26a7-e177-3c5c" name="Folk Hero Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20x20</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e7b0-502a-fdd8-e6d3" name="Folk Hero Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="5e44-b9f1-0986-0633" name="Traits of a Hero" hidden="false">
+          <description>Traits of a Hero: Universal Rule.
+The Folk Hero model part must choose at least 1 and up to 2 different Heroic Traits.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="f5ab-c71a-75f8-5150" name="Ordeal" hidden="false" targetId="cfb7-648a-9b76-fca4" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="64bc-0f0b-8d87-03e1" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="226a-e6bf-2461-a234" name="Special Equipment" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b63-c359-fdad-88bf" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0b63-c359-fdad-88bf" type="max"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="750d-1c45-70ac-26a0" name="Special Equipment" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="increment" field="0e52-4fba-7b0b-d743" value="50.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="60d5-4889-6942-b867" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="24fd-8af8-0c78-001c" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0e52-4fba-7b0b-d743" type="max"/>
               </constraints>
@@ -649,12 +843,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="175e-3ee7-f24f-357b" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="fe90-3b2e-1573-2605" name="2022 Mount: Destrier" hidden="false" collective="false" import="true" targetId="4728-58d3-5610-5c09" type="selectionEntry">
+            <entryLink id="fe90-3b2e-1573-2605" name="Mount: Destrier" hidden="false" collective="false" import="true" targetId="4728-58d3-5610-5c09" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
               </costs>
             </entryLink>
-            <entryLink id="478b-2d25-2d62-2f3e" name="2022 Mount: Pegasus Charger" hidden="false" collective="false" import="true" targetId="092e-12b7-d4e6-8c87" type="selectionEntry">
+            <entryLink id="478b-2d25-2d62-2f3e" name="Mount: Pegasus Charger" hidden="false" collective="false" import="true" targetId="092e-12b7-d4e6-8c87" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="2ef2-7d4c-66fb-7eac" value="0.0">
                   <conditions>
@@ -666,7 +860,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
               </costs>
             </entryLink>
-            <entryLink id="b9c2-9987-3820-f911" name="2022 Mount: Revered Unicorn" hidden="false" collective="false" import="true" targetId="95bc-8477-219e-a5cb" type="selectionEntry">
+            <entryLink id="b9c2-9987-3820-f911" name="Mount: Revered Unicorn" hidden="false" collective="false" import="true" targetId="95bc-8477-219e-a5cb" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="4e01-b2e6-92b2-7572" value="0.0">
                   <conditions>
@@ -678,7 +872,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
               </costs>
             </entryLink>
-            <entryLink id="7df0-061b-8ab3-1caa" name="2022 Mount: Fey Steed" hidden="false" collective="false" import="true" targetId="650c-977f-a443-2455" type="selectionEntry">
+            <entryLink id="7df0-061b-8ab3-1caa" name="Mount: Fey Steed" hidden="false" collective="false" import="true" targetId="650c-977f-a443-2455" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="5366-17f9-4d63-d437" value="0.0">
                   <conditions>
@@ -776,15 +970,15 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="47dd-0e10-4eb1-b84c" name="2022 Heroic Traits" hidden="false" collective="false" import="true" targetId="36d6-38a8-e68a-a90a" type="selectionEntryGroup"/>
-        <entryLink id="85ab-5a53-bd79-cfa4" name="Sainted" hidden="false" collective="false" import="true" targetId="60d5-4889-6942-b867" type="selectionEntry">
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
-          </costs>
-        </entryLink>
+        <entryLink id="47dd-0e10-4eb1-b84c" name="Heroic Traits" hidden="false" collective="false" import="true" targetId="36d6-38a8-e68a-a90a" type="selectionEntryGroup"/>
         <entryLink id="be70-245f-e6dc-27ce" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="63b3-508e-66b2-f2ed" name="Sainted" hidden="false" collective="false" import="true" targetId="60d5-4889-6942-b867" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -796,6 +990,57 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e1b-3234-5f8c-a297" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="0fba-7e31-7aa8-f881" name="Feudal Knights Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Scoring</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="782f-248e-6d57-a8bc" name="Feudal Knights Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lance Formation, Lance</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c46b-dba0-09da-66c0" name="Feudal Knights Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Courage, Heavy Armour, Shield</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6fa0-7378-c82d-9cbb" name="Destrier Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="01ef-d0a7-f80e-79f0" name="Feudal Knights Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x50</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="93de-0563-6724-dbc2" name="Lance Formation" hidden="false" targetId="b53e-e733-517e-8c2d" type="rule"/>
+        <infoLink id="ff31-8011-c5cb-33dc" name="Courage" hidden="false" targetId="e242-3ed9-fea8-8646" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="38e3-09aa-2703-6f0b" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
@@ -820,11 +1065,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="21ac-0980-bdc5-9e26" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21ac-0980-bdc5-9e26" type="max"/>
           </constraints>
           <entryLinks>
             <entryLink id="f883-739b-f859-825b" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="b8c4-1f32-20ea-2a5d" name="2022 KoE Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="d2b3-2992-90c7-c460" type="selectionEntryGroup"/>
+            <entryLink id="b8c4-1f32-20ea-2a5d" name="KoE Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="d2b3-2992-90c7-c460" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -838,6 +1083,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink id="a068-1e48-40e2-1fcc" name="KoE Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="d2b3-2992-90c7-c460" type="selectionEntryGroup"/>
+          </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
@@ -848,6 +1096,56 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </costs>
     </selectionEntry>
     <selectionEntry id="8204-565a-6f6b-6a0d" name="Ordo Sergeants" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="bba9-6480-8cc8-5821" name="Ordo Sergeants Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Orison (0), Scoring</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8528-915a-f698-332d" name="Ordo Sergeants Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">3</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">1</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Honesty, Heavy Armour, Shield</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5d99-fdb9-ab06-848f" name="Ordo Sergeants Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f852-53d9-6eec-21ed" name="Ordo Sergeants Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Hatred</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3dd1-0953-70dc-8716" name="Rouncey Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="f7a4-1b91-c6ac-787e" name="Honesty" hidden="false" targetId="b124-6c67-9a2d-a06d" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="1ef9-4cc6-fc0b-d2af" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
@@ -911,6 +1209,46 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </costs>
     </selectionEntry>
     <selectionEntry id="106a-d83a-b38c-aa72" name="Lowborn Levies" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="28eb-f405-38cb-75b8" name="Lowborn Levies Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Scoring</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8b6b-d3b0-a5d9-e776" name="Lowborn Levies Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">2</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">0</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Ordeal, Light Armour</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="95e0-0cc8-08c5-9c69" name="Lowborn Levies Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20x20</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cc19-9a2c-b685-ec4b" name="Lowborn Levies Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="b296-5f92-cadc-71b4" name="Ordeal" hidden="false" targetId="cfb7-648a-9b76-fca4" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="0301-ef39-8fa8-70c9" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
@@ -989,6 +1327,46 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76e5-9154-b396-c89e" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="664d-862a-5ae0-d504" name="Lowborn Archers Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Scoring</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="21cf-15b0-6183-42e3" name="Lowborn Archers Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">2</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">0</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Ordeal</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3862-b7c9-1aab-a5ce" name="Lowborn Archers Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20x20</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3ab7-f3e2-28a4-8cf8" name="Lowborn Archers Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="820b-3fbe-958a-4976" name="Ordeal" hidden="false" targetId="cfb7-648a-9b76-fca4" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="b998-50c4-b307-a1f1" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
@@ -1006,6 +1384,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dacb-00f1-5132-fdf3" type="max"/>
           </constraints>
+          <rules>
+            <rule id="28c1-4fe9-057e-0864" name="Defensive Stakes" hidden="false">
+              <description>Defensive Stakes: Universal Rule.
+Enemy models in base contact with one or more Lowborn Archers must take a Dangerous Terrain (2) Test immediately after successfully Charging a nonFleeing unit of Lowborn Archers in its Front Facing.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
@@ -1022,6 +1406,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               <modifiers>
                 <modifier type="append" field="name" value="and Expert Bowmen (4+)"/>
               </modifiers>
+              <rules>
+                <rule id="ee06-f840-0a86-3a22" name="Expert Bowmen" hidden="false">
+                  <description>Expert Bowmen: Universal Rule.
+The model gains Accurate if it did not move during this Player Turn.</description>
+                </rule>
+              </rules>
             </entryLink>
             <entryLink id="18b5-73ed-26ce-50fd" name="Crossbow" hidden="false" collective="false" import="true" targetId="8dad-9602-9dd1-7698" type="selectionEntry">
               <modifiers>
@@ -1047,6 +1437,46 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76c5-dd63-e57a-9fd9" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="97d4-799c-d03a-2f50" name="Men-At-Arms Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Scoring</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="aa17-3c8c-15f0-ec59" name="Men-At-Arms Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">0</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Ordeal, Heavy Armour, Shield</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0509-e0d6-cbd5-472b" name="Men-At-Arms Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20x20</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="aa72-4d05-29e2-0bee" name="Men-At-Arms Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="39a7-3377-b36b-58be" name="Ordeal" hidden="false" targetId="cfb7-648a-9b76-fca4" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="5562-5040-98ba-f239" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1095,6 +1525,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7274-cab4-4c08-11c5" type="max"/>
               </constraints>
+              <rules>
+                <rule id="018a-ebac-a9fb-c0c9" name="Knights Forlorn" hidden="false">
+                  <description>Knights Forlorn: Universal Rule.
+The model loses Ordeal and gains Courage and Bastard Sword. In the First Round of Combat, enemy units in base contact do not count as Charging for the purpose of Devastating Charge.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -1110,11 +1546,21 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a4c-c90b-8448-0a55" type="max"/>
               </constraints>
+              <rules>
+                <rule id="cd78-28ba-9e03-cbde" name="Ordo Wardens" hidden="false">
+                  <description>Ordo Wardens: Universal Rule.
+The model loses Ordeal and gains Orison (0), Honesty, and Great Weapon.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d681-0f73-525c-c281" name="Peasants - None" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="d681-0f73-525c-c281" name="Peasants - None" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1133,6 +1579,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               </conditionGroups>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink id="6599-2d84-54a6-1a35" name="KoE Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="d2b3-2992-90c7-c460" type="selectionEntryGroup"/>
+          </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
@@ -1163,6 +1612,56 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3948-838b-0c95-1c8a" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="c382-14f2-2a8b-f64a" name="Sacred Reliquary Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Holy Relic, Not a Leader, Orison (1), Tall, War Platform</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5fc9-df4a-a757-6d95" name="Sacred Reliquary Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">4</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">5+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Honesty, Heavy Armour</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4c8d-59fa-b7a2-cfac" name="Sacred Reliquary Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40x60</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b886-be9a-87ab-f292" name="Sacred Reliquary Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="372e-3645-51be-b9dd" name="Holy Relic" hidden="false">
+          <description>Holy Relic: Universal Rule.
+The model must be deployed in a Standard Height Infantry unit and can never voluntarily leave it. The model’s unit gains the following rules:
+• Fearless
+• Fight in Extra Rank
+• The unit’s Break Tests are subject to Minimised Roll
+• At the start of every Magic Phase, if the unit is Engaged in Combat, add one Orison Token to your Orison Token pool</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="b160-2b80-20f4-93e0" name="Honesty" hidden="false" targetId="b124-6c67-9a2d-a06d" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="4dfc-997c-1301-7ca1" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1174,6 +1673,57 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37da-da56-7667-9315" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="d4a6-1efe-b08f-da36" name="Knights Resplendent Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Scoring</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b180-a84f-87b4-0c01" name="Knights Resplendent Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Courage, Heavy Armour, Shield</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b86e-c773-5d5c-67f0" name="Knights Resplendent Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1f70-81e6-74e1-690e" name="Knights Resplendent Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Devastating Charge (+1″ Adv,+1 Att), Lance Formation, Lance</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="da90-d3af-e553-78a4" name="Destrier Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c20c-43ab-4f0f-7555" name="Lance Formation" hidden="false" targetId="b53e-e733-517e-8c2d" type="rule"/>
+        <infoLink id="9b76-ba9e-e4f2-1d15" name="Courage" hidden="false" targetId="e242-3ed9-fea8-8646" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="9908-7514-3167-7609" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1208,7 +1758,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="f3f2-60d8-58d5-8c38" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
-        <entryLink id="ccfe-1ed4-4ca7-a3d9" name="2022 Knight Banneret" hidden="true" collective="false" import="true" targetId="48ec-bafc-6600-b974" type="selectionEntry">
+        <entryLink id="ccfe-1ed4-4ca7-a3d9" name="Knight Banneret" hidden="true" collective="false" import="true" targetId="48ec-bafc-6600-b974" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -1216,6 +1766,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink id="cab6-cfc0-f5d0-8c5b" name="KoE Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="d2b3-2992-90c7-c460" type="selectionEntryGroup"/>
+          </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
@@ -1229,6 +1782,63 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faca-d402-dd58-44de" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="a75f-6a61-3c1e-cc6f" name="Knights of the Quest Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fearless, Scoring, The Quest</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1ed4-b7f3-d28d-7d2c" name="Knights of the Quest Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">5</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Courage, Heavy Armour, Shield</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="47ca-289f-3804-9c57" name="Knights of the Quest Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ad2e-8121-7af6-deab" name="Knights of the Quest Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lance Formation, Bastard Sword</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5c08-15f7-fd5b-60a0" name="Destrier Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="e9bf-a311-26b4-8841" name="The Quest" hidden="false">
+          <description>The Quest: Universal Rule.
+Immediately after deploying the first friendly unit of Knights of the Quest during the Deployment Phase, the owner must choose 1 unit entry from the opponent’s Army Book (this may also be a Character, but not a Character Mount). Models of all units from this unit entry in the enemy army (even if there is more than one such unit) are considered “marked”. For attacks allocated either towards marked models, or towards models joined to units with more than half of their models marked, Questing Knights gain Lethal Strike and must reroll failed to-wound rolls.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="6f25-29a1-f0c6-3872" name="Lance Formation" hidden="false" targetId="b53e-e733-517e-8c2d" type="rule"/>
+        <infoLink id="1f92-7244-4803-c94d" name="Courage" hidden="false" targetId="e242-3ed9-fea8-8646" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="b4b2-7f05-5af4-0de1" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1263,7 +1873,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="08e6-3c0b-1fc7-51f2" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
-        <entryLink id="8dbf-7413-f01f-6e8f" name="2022 Knight Banneret" hidden="true" collective="false" import="true" targetId="48ec-bafc-6600-b974" type="selectionEntry">
+        <entryLink id="8dbf-7413-f01f-6e8f" name="Knight Banneret" hidden="true" collective="false" import="true" targetId="48ec-bafc-6600-b974" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -1271,6 +1881,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink id="c71e-9858-804b-ee11" name="KoE Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="d2b3-2992-90c7-c460" type="selectionEntryGroup"/>
+          </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
@@ -1284,6 +1897,63 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="159b-8c65-9e64-8d14" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="94cb-3b36-6367-0cda" name="Knights of the Court Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Bodyguard (Sainted or General with Courage), Scoring, Sworn Companions</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b396-77f8-2a59-c2ff" name="Knights of the Court Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Courage, Heavy Armour, Shield</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1597-5a0f-6470-5e7e" name="Knights of the Court Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="eb9d-74aa-f288-85d6" name="Knights of the Court Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lance Formation, Lance</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e39e-1861-6518-9f3c" name="Destrier Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="7846-2f41-b5f1-8185" name="Sworn Companions" hidden="false">
+          <description>Sworn Companions: Universal Rule.
+While joined by a model with Sainted or a General with Courage, the model’s unit gains Fearless. In addition, there must be fewer than 3 models with Sworn Companions in the unit before hits can be distributed onto Characters with the same Type and Height.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="2747-8fcb-d2d3-75c1" name="Courage" hidden="false" targetId="e242-3ed9-fea8-8646" type="rule"/>
+        <infoLink id="e481-7007-7f65-6220" name="Lance Formation" hidden="false" targetId="b53e-e733-517e-8c2d" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="649e-28ee-2e44-6a69" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1318,7 +1988,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="0865-e0bb-f6c4-ea1f" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
-        <entryLink id="16c9-721f-c99c-250c" name="2022 Knight Banneret" hidden="true" collective="false" import="true" targetId="48ec-bafc-6600-b974" type="selectionEntry">
+        <entryLink id="16c9-721f-c99c-250c" name="Knight Banneret" hidden="true" collective="false" import="true" targetId="48ec-bafc-6600-b974" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -1326,6 +1996,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink id="9b03-d53d-118e-014a" name="KoE Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="d2b3-2992-90c7-c460" type="selectionEntryGroup"/>
+          </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
@@ -1339,6 +2012,57 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c514-a047-3151-3b1c" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="5006-0eec-f821-abce" name="Hedge Knight Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4386-ef78-ba21-33b6" name="Hedge Knights Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fearless, Light Troops</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8bf4-9850-855d-09b0" name="Hedge Knight Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Courage, Heavy Armour</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ce38-e6bb-ea5e-55e1" name="Courser Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2d18-c63d-21da-97ce" name="Hedge Knight Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Devastating Charge (Battle Focus,−2 Def, +2 Agi), Lance Formation, Paired Weapons</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="d605-add3-e274-69df" name="Lance Formation" hidden="false" targetId="b53e-e733-517e-8c2d" type="rule"/>
+        <infoLink id="dd36-e22c-fdbe-477a" name="Courage" hidden="false" targetId="e242-3ed9-fea8-8646" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="7dfc-8d1d-ca0d-f49e" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1355,7 +2079,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </selectionEntries>
       <entryLinks>
         <entryLink id="1cdf-8235-72df-2059" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
-        <entryLink id="8db0-5688-6272-31f9" name="2022 Knight Banneret" hidden="true" collective="false" import="true" targetId="48ec-bafc-6600-b974" type="selectionEntry">
+        <entryLink id="8db0-5688-6272-31f9" name="Knight Banneret" hidden="true" collective="false" import="true" targetId="48ec-bafc-6600-b974" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -1363,6 +2087,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink id="d97d-67ab-7e1b-1375" name="KoE Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="d2b3-2992-90c7-c460" type="selectionEntryGroup"/>
+          </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
@@ -1376,6 +2103,56 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5b7-c660-7aa4-11f9" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="7be5-448e-0cc0-b6e9" name="Knights Penitent Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fearless, Scoring, Unstable</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="47c5-b85d-40a3-17cb" name="Knights Penitent Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">2</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">3</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Heavy Armour</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a2d6-9731-0610-2f0d" name="Knights Penitent Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="99bb-3594-b795-297b" name="Knights Penitent Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lance Formation, Great Weapon</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9ed2-98dc-25a7-8538" name="Draughthorse Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="71a1-3030-8f4d-4a37" name="Lance Formation" hidden="false" targetId="b53e-e733-517e-8c2d" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="15aa-12b6-89ca-f351" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1414,6 +2191,56 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09a4-5475-1aae-73cf" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="fcf6-79a3-ae7a-ffea" name="Yeoman Outriders Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Feigned Flight, Light Troops, Vanguard</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="28f3-6371-2ec0-f6d0" name="Yeoman Outriders Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">3</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">1</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Ordeal, Light Armour</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d3a6-de98-0aba-1d60" name="Yeoman Outriders Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7c3c-ce9e-37cd-7029" name="Yeoman Outriders Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Light Lance</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4fa1-3fc0-db19-d1d6" name="Courser Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="0d4b-4358-096f-7221" name="Ordeal" hidden="false" targetId="cfb7-648a-9b76-fca4" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="e6a8-56c7-9db3-64ba" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1468,6 +2295,43 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08f8-4c9b-b252-6df3" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="e2e3-6e93-ad96-75a0" name="Hooded Men Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fearless, Light Troops, Scout, Skirmisher, Unstable</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bc69-9889-2141-cb24" name="Hooded Men Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">1</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">3</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">0</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Hard Target (1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="de22-162a-0f27-6bb2" name="Hooded Men Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20x20</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8d53-7bc9-7628-17d9" name="Hooded Men Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Quick to Fire, Longbow (3+)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="b564-bef9-8f5e-a521" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1485,6 +2349,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae41-5866-aa63-49ff" type="max"/>
           </constraints>
+          <rules>
+            <rule id="9fd4-35b9-70d5-84f4" name="Enlisted Outlaws" hidden="false">
+              <description>Enlisted Outlaws: Universal Rule.
+The model gains Ordeal and loses Fearless and Unstable. When the unit is deployed, choose a single Terrain Feature that the unit is in contact with. The chosen Terrain Feature is no longer Dangerous Terrain for any unit (friend or foe) for the rest of the game (but can become Dangerous Terrain from other sources).</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
@@ -1509,6 +2379,46 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a75-6560-6745-583e" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="10a6-19e3-da55-a163" name="Siege Weapon Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">0&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">0&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">War Machine</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="eb3f-c616-83eb-d16e" name="Siege Weapon Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">5</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">1</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">0</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Honesty</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c98e-c918-a433-3bcc" name="Siege Weapon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">75 round</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="287f-b1fd-2009-f067" name="Crew Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Move or Fire</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="4db6-d0ce-ed2c-d7da" name="Honesty" hidden="false" targetId="b124-6c67-9a2d-a06d" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="1c3e-8dcb-e745-139c" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1520,11 +2430,23 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           </constraints>
           <selectionEntries>
             <selectionEntry id="38e3-01fe-32f1-cad0" name="Scorpion (4+)" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="2f35-b242-90ba-5958" name="Scorpion (4+)" hidden="false">
+                  <description>Scorpion: Artillery Weapon.
+Range 48″, Shots 1, Str 3 [6], AP 10, Area Attack (1×5), [Multiple Wounds (D3+1, Clipped Wings)].</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="63f9-96b3-7bb5-f34b" name="Trebuchet (4+)" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="a382-8ff2-3b69-5752" name="Trebuchet (4+)" hidden="false">
+                  <description>Trebuchet: Artillery Weapon.
+Catapult (3×8), Range 18–72″, Shots 1, Str 4, AP 1. The model’s Height is changed to Large.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
@@ -1537,6 +2459,57 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </costs>
     </selectionEntry>
     <selectionEntry id="8ccf-1dd6-e5ca-344b" name="Pegasus Knights" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="234f-e7c6-362d-2053" name="Pegasus Knights Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot; (8&quot;)</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot; (16&quot;)</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fly (8″, 16″), Gallantry (2), Light Troops</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9b7f-4b6c-aacf-2da8" name="Pegasus Knights Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">3</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Courage, Heavy Armour, Shield</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b05b-8f19-e8cf-5a8f" name="Pegasus Knights Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bf77-0fea-95a3-5c91" name="Pegasus Knights Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lance Formation, Lance</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a920-0f6a-01d1-1118" name="Pegasus Charger Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e091-8ba1-7bf8-7a58" name="Courage" hidden="false" targetId="e242-3ed9-fea8-8646" type="rule"/>
+        <infoLink id="5ba8-7f2d-3494-dfa8" name="Lance Formation" hidden="false" targetId="b53e-e733-517e-8c2d" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="8462-1069-e599-52b4" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1572,7 +2545,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="47bf-73c6-eea1-cd68" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
-        <entryLink id="a411-c70f-64aa-780d" name="2022 Knight Banneret" hidden="true" collective="false" import="true" targetId="48ec-bafc-6600-b974" type="selectionEntry">
+        <entryLink id="a411-c70f-64aa-780d" name="Knight Banneret" hidden="true" collective="false" import="true" targetId="48ec-bafc-6600-b974" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -1580,6 +2553,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink id="c020-329e-7aaa-7aa4" name="KoE Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="d2b3-2992-90c7-c460" type="selectionEntryGroup"/>
+          </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
@@ -1592,6 +2568,56 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </costs>
     </selectionEntry>
     <selectionEntry id="9e70-4ee6-ea88-42e6" name="Sky Heralds" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="0b03-98e4-0dcd-6282" name="Sky Heralds Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot; (10&quot;)</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot; (14&quot;)</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fly (10″, 14″), Gallantry (1), Light Troops, Skirmisher, Vanguard</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b759-a236-3168-5f7b" name="Sky Heralds Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">2</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">3</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">6+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Hard Target (1), Ordeal, Light Armour, Shield</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b514-eb42-dad0-e60e" name="Sky Heralds Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40x40</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c5b9-8425-fd56-4eea" name="Sky Heralds Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+        <profile id="df5f-aec2-e6e1-2736" name="Heraldic Steed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Impact Hits (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9d94-4251-b1e6-3d28" name="Ordeal" hidden="false" targetId="cfb7-648a-9b76-fca4" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="e885-592d-ae24-f0de" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1639,6 +2665,49 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ecf-3104-c0d7-88d9" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="3260-39c1-b813-a80e" name="Naiads Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fey Spirit, Light Troops, Water Spirits, Wizard Conclave</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ca3b-5090-f6ca-2c9e" name="Naiads Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">2</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">4</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">2</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">0</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">5+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed"/>
+          </characteristics>
+        </profile>
+        <profile id="b1d2-06dd-2c54-6022" name="Naiads Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x25</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="419d-c93d-b90f-e83b" name="Naiads Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Grind Attacks (2)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="9bcf-fc9e-5c37-03de" name="Water Spirits" hidden="false">
+          <description>Water Spirits: Universal Rule.
+The model gains Strider (Water Terrain) and Scout with the following restriction: At least half the models of the model’s unit must be deployed fully inside Water Terrain or the owner’s Deployment Zone. In addition, Melee Attacks that are Flaming Attacks from enemy units Engaged with the model lose Flaming Attacks.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="24a1-651f-b014-ce55" name="New CategoryLink" hidden="false" targetId="a39e-563e-a72c-30af" primary="true"/>
       </categoryLinks>
@@ -1655,6 +2724,15 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </selectionEntries>
       <entryLinks>
         <entryLink id="b6c2-c72c-26a2-02b1" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry">
+          <rules>
+            <rule id="9a86-27bc-22b9-28dc" name="Wizard Conclave" hidden="false">
+              <description>Must select 2 spells from:
+• Deceptive Glamour (Witchcraft)
+• Healing Waters (Druidism)
+• Savage Fury (Shamanism)
+• Scrying (Divination)</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
           </costs>
@@ -1668,6 +2746,56 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5a6-fc75-df67-d6a4" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="0127-df54-1269-1056" name="Friar&apos;s Lantern Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot; (8&quot;)</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot; (16&quot;)</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fey Spirit, Fly (8″, 16″), Illusions, Insignificant, Lights in the Mist, Scout, Unstable</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3141-c2a1-909e-c0ca" name="Friar&apos;s Lantern Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">5</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">1</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">1</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">0</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">5+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Hard Target (2)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9f94-5f31-e32f-28f8" name="Friar&apos;s Lantern Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d5e1-0a69-818f-0309" name="Friar&apos;s Lantern Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">1</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">10</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Grind Attacks (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="9647-6498-bb70-c21e" name="Illusions" hidden="false">
+          <description>Illusions: Universal Rule.
+The model must always choose Flee as a Charge Reaction if possible despite having Fearless, and never becomes Shaken after passing a Rally Test. The Reform after Rallying does not prevent the model from moving.</description>
+        </rule>
+        <rule id="1793-9481-c4b2-1023" name="Lights in the Mist" hidden="false">
+          <description>Lights in the Mist: Universal Rule.
+The model may perform a Sweeping Attack. The enemy unit suffers 1 hit with Strength 1 and Armour Penetration 0. Enemy units suffering one or more hits with Grind Attacks or Sweeping Attacks from Friar’s Lantern suffer the following effects until the end of the next Player Turn:
+• −2″ Advance Rate, to a minimum of 3″
+• −2″ March Rate, to a minimum of 3″
+• −2″ Pursuit Distance</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="2dfc-5cb1-4b59-af73" name="New CategoryLink" hidden="false" targetId="a39e-563e-a72c-30af" primary="true"/>
       </categoryLinks>
@@ -1679,6 +2807,43 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0004-a4d5-e75e-eda8" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="9c95-6971-5c2f-34da" name="The Lady&apos;s Courtier Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fear, Fey Spirit, Supernal</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a733-c506-2d69-3589" name="The Lady&apos;s Courtier Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">5</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">5</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">5</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">5+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Aegis (4+, against Melee Attacks)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5d66-f074-edf6-0bae" name="The Lady&apos;s Courtier Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b30a-a395-3b60-59ac" name="The Lady&apos;s Courtier Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="b2d5-a6c7-552b-dda0" name="New CategoryLink" hidden="false" targetId="a39e-563e-a72c-30af" primary="true"/>
       </categoryLinks>
@@ -1724,6 +2889,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac4b-ae8f-5f4a-2f3e" type="max"/>
               </constraints>
+              <rules>
+                <rule id="ef9d-2c88-fdb7-3baa" name="Courtier of the Dawn" hidden="false">
+                  <description>Courtier of the Dawn: Universal Rule.
+The model gains +3 Attack Value, Fly (8″, 16″), and Gallantry (2). Model parts (friend or foe) with Harnessed Engaged in the same Combat as the model gain +1 to hit.</description>
+                </rule>
+              </rules>
               <entryLinks>
                 <entryLink id="59d7-6c09-3419-e9f6" name="Gallantry" hidden="false" collective="false" import="true" targetId="1c9e-818d-22ae-8ebc" type="selectionEntry"/>
                 <entryLink id="193a-36ee-63ec-a4eb" name="Gallantry" hidden="false" collective="false" import="true" targetId="1c9e-818d-22ae-8ebc" type="selectionEntry"/>
@@ -1736,6 +2907,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec30-4bf3-a375-48d9" type="max"/>
               </constraints>
+              <rules>
+                <rule id="43a5-4012-2b00-2445" name="Courtier of the Dusk" hidden="false">
+                  <description>Courtier of the Dusk: Universal Rule.
+The model is a Wizard Adept that must choose Druidism or Witchcraft as its Path of Magic and that cannot select the Hereditary Spell. In addition, the Casting Value of spells that target the model and/or any unit or model Engaged in the same Combat as the model (friend or foe) is reduced by 1. A natural roll of ‘1’ or ‘2’ for these Casting Attempts with a single Magic Dice is always a failed Casting Attempt, regardless of any modifiers.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -1748,6 +2925,61 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </costs>
     </selectionEntry>
     <selectionEntry id="1a3d-9865-414e-c278" name="Fey Knight" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="e61c-28f9-d144-5b5b" name="Fey Knight Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fear, Fey Spirit, Ghost Step, Supernal</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7f9a-538d-dee4-3fe1" name="Fey Knight Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">4</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">6</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">1</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c">5+</characteristic>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Heavy Armour, Shield</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d06d-4687-df95-9a3b" name="Fey Knight Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">6</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+          </characteristics>
+        </profile>
+        <profile id="98e8-ebc5-53a7-6bd9" name="Fey Knight Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50x75</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="993c-c911-0c85-00dd" name="Fey Steed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="9c8e-df37-069c-4c2e" name="Bound to the Land (X)" hidden="false">
+          <description>Bound to the Land (X): Universal Rule.
+The model follows the rules for Ambush with the following exceptions:
+• Immediately after step 2 of the owner’s Movement Phase Sequence, including the owner’s Player Turn 1, the owner may decide for each of their Fey Knights if they will enter the Battlefield or not (no dice rolls are required).
+• When the model enters the Battlefield, it must be placed completely within any (X) Terrain Feature instead of having its Rear Facing touch the Board Edge. If the model cannot be placed, it cannot enter the Battlefield during this turn.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="185b-6576-e0d1-7ed3" name="New CategoryLink" hidden="false" targetId="a39e-563e-a72c-30af" primary="true"/>
       </categoryLinks>
@@ -1763,6 +2995,16 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed13-280e-39b7-2057" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2b1b-03b5-c79e-196a" type="max"/>
               </constraints>
+              <rules>
+                <rule id="5812-f9b4-3ebf-0623" name="Field and Stone" hidden="false">
+                  <description>Field and Stone: Universal Rule.
+The model gains Bound to the Land (Field), and the Fey Rider gains Large Flail</description>
+                </rule>
+                <rule id="91a1-4c10-6f67-57d3" name="Large Flail" hidden="false">
+                  <description>Large Flail: Close Combat Weapon.
+Hand Weapon. Attacks made with this weapon ignore Parry. In addition, the wielder gains +1 Attack Value for each enemy model in base contact with it.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -1772,6 +3014,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a83-7ce4-470c-2395" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bbaf-824a-399d-8fbe" type="max"/>
               </constraints>
+              <rules>
+                <rule id="c0d5-7b70-f3c4-b0dd" name="Stream and Springs" hidden="false">
+                  <description>Stream and Springs: Universal Rule.
+The Fey Rider gains a Bastard Sword and the model gains Bound to the Land (Water Terrain), Aegis (+1, against Melee Attacks), and Stubborn. In addition, the model counts as a Champion for the purpose of Duels that must issue and accept Duels whenever possible (this cannot be prevented by issuing a Duel with another friendly model first unless that model also must issue a Duel whenever possible).</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -1801,6 +3049,15 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ace7-df9c-e227-3948" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b238-af01-bdbc-128a" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="1e85-c4a8-906f-ec6c" name="Castellan&apos;s Crest" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cavalry models only.
+The bearer’s unit adds +1 to its side’s Combat Score if the unit has at least 3 Full Ranks.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
@@ -1810,6 +3067,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5a2-7306-f562-5ea1" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e394-55d2-f788-e2b2" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="88ba-bf57-db7b-2b81" name="Mortal Reminder" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Halberd or Great Weapon.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder gains Fear. Attacks made with this weapon gain +1 Strength, +1 Armour Penetration, and become Magical Attacks.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
@@ -1819,6 +3084,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7789-b4de-4d13-05fb" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="76c0-7583-d8d1-f513" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="5106-a256-d89d-43ed" name="Tristan&apos;s Resolve" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Hand Weapon.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">While using this weapon, the wielder gains +1 Attack Value, and attacks made with this weapon become Magical Attacks and gain +1 Armour Penetration. After a successful to-hit roll, the attacker may discard one of the hits with this weapon and choose an enchanted weapon carried by the model the attack was allocated towards. Any Weapon Enchantment of the chosen weapon is ignored for the rest of the game.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
@@ -1828,6 +3101,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95cc-417d-26bf-8298" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce8c-ee7e-53c0-0866" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="bc58-6f8a-1821-3a7b" name="Uther&apos;s Mettle" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Lance.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon become Magical Attacks. Once per Round of Combat, if the wielder is Charging and not fighting a Duel, it must nominate a single enemy unit Engaged with the wielder’s Front Facing when allocating Close Combat Attacks with this weapon. In the same Initiative Step, the wielder inflicts one hit with Area Attack (1×5), Strength 6, Armour Penetration 3, and Magical Attacks on the nominated unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
@@ -1850,6 +3131,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd13-71c6-fdce-af21" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="677b-c3e2-c670-3d4d" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="16f7-1a4a-3c4c-de71" name="°Prayer-Etched" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Heavy Armour</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and must reroll failed Armour Saves. The wearer’s Aegis Save can never be better than 5+.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
       </costs>
@@ -1859,6 +3148,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9870-ae9b-96df-d8d3" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1659-3264-cdda-95a9" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="99d2-e32e-1220-3870" name="Percival&apos;s Panoply" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Heavy Armour.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cavalry models without Towering Presence only. The wearer gains +2 Armour.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
@@ -1868,6 +3165,15 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f07-6e5a-25c1-4aa9" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4da0-5803-f53a-54f5" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="627b-dcf8-941b-833c" name="Oriflamme" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cannot be taken by units that count towards Core.
+The bearer gains Fear while Engaged in Combat. Enemy units in base contact with the bearer’s unit cannot benefit from Rally Around the Flag.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
       </costs>
@@ -1875,8 +3181,17 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
     <selectionEntry id="c3b3-dbf3-7070-20b5" name="Relic Shroud" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="48d5-86eb-8f54-160f" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f1c9-af62-9d72-29d9" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f1c9-af62-9d72-29d9" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="4895-0d32-75d9-f6cf" name="Relic Shroud" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">0–2 per Army. Models with Courage or Honesty only.
+The bearer of one or more Relic Shrouds can cast Breath of the Lady (Hereditary Spell) as a Bound Spell with Power Level (4/8).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
@@ -1886,6 +3201,17 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9429-56e2-c434-c31e" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8087-a8fb-e6aa-0415" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="80ce-eff9-efe3-9d23" name="Aspirant&apos;s Elan" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Close Combat Attacks made with Lances by the bearer’s unit gain +2 Strength and +2 Armour Penetration in the First Round of Combat if the following conditions are met:
+• The bearer’s unit is only Engaged in its Front Facing.
+• The bearer’s unit is not Charging.
+• The bearer’s unit failed a Charge in its previous Charge Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
@@ -1895,6 +3221,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="60db-95b9-824a-28cf" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d8a-e029-bb1c-28d2" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="97c0-f1a5-1cdd-6a45" name="Banner of Roland" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit gains Aegis (+1, max. 4+, against Ranged Attacks). In addition, enemy units cannot choose Stand and Shoot as a Charge Reaction against Charges declared by the bearer’s unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
@@ -1917,6 +3251,15 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19d2-2444-95c0-3e7a" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b3a5-e9cb-faa2-89ce" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="030c-4124-f378-9d52" name="°Black Knight&apos;s Tabard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. Must be activated when the bearer’s model reaches 0 (or fewer) Health Points. Ignore
+all Health Point losses below 0 and do not remove the bearer’s model as a casualty. Instead, after resolving all simultaneous attacks (such as all Shooting Attacks from the same unit or all Melee Attacks at the same Initiative Step), the Health Points of the bearer’s model are set to 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
@@ -1926,6 +3269,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="602a-1c0c-1f6a-33c5" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c6e1-4ca3-b3b6-16b1" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="2de1-42da-6eac-7840" name="Sacred Chalice" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Models with Orison (X) only. The bearer gains Magic Resistance (1). When the bearer’s unit is the target of an enemy Casting Attempt, including Attribute Spells, the bearer’s owner gains 1 Veil Token.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
@@ -1935,6 +3286,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b5f-d73e-85cc-35a5" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="875f-b03d-9c6f-fb6a" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="9252-c6c2-4516-cfe8" name="Divine Judgement" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+          <characteristics>
+            <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Lance.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon gain Devastating Charge (+1 Str, +1 AP, Multiple Wounds (D3)) and become Magical Attacks.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
@@ -1943,6 +3302,43 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44a2-72e7-2aa4-f608" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="884a-6619-a49c-fad7" name="Destrier Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+          </characteristics>
+        </profile>
+        <profile id="129f-84cb-35b8-7a67" name="Destrier Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">C</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">C</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">C</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">C+2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c"/>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed"/>
+          </characteristics>
+        </profile>
+        <profile id="5476-b735-a734-9c6b" name="Destrier Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="df4e-bc01-c2e9-2122" name="Destrier Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1952,6 +3348,43 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ca1-8865-c55e-1e0d" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f55d-97b7-5e40-4427" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="1803-3583-4e42-9e93" name="Heraldic Steed Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot; (10&quot;)</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot; (14&quot;)</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fly (10″, 14″), Gallantry (1), Light Troops, Vanguard</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="492d-555c-c754-5a39" name="Heraldic Steed Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">C</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">C</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">C</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">C+2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c"/>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Hard Target (1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dc96-9abd-a6ce-68e2" name="Heraldic Steed Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40x40</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7ca6-af58-54dd-e582" name="Heraldic Steed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Impact Hits (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <entryLinks>
         <entryLink id="04b5-b0af-2eed-5ee8" name="Gallantry" hidden="false" collective="false" import="true" targetId="1c9e-818d-22ae-8ebc" type="selectionEntry"/>
       </entryLinks>
@@ -1964,6 +3397,43 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c37-c576-8216-c41d" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5366-17f9-4d63-d437" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="a46a-727a-291d-4b4f" name="Fey Steed Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"> Fear, Fey Spirit, Ghost Step</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="750b-54b2-a36b-ae5b" name="Fey Steed Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">4</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">C</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">C+1</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c"/>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Aegis (+1, max. 4+)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="73e7-47c2-7dfb-ca6c" name="Fey Steed Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50x75</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="59ea-eb09-6faf-ee8f" name="Fey Steed Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Breath Attack (Str 4, AP 0, Magical Attacks), Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1973,6 +3443,49 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e01-b2e6-92b2-7572" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="399d-405d-c2ed-fc06" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="d8fd-6f8c-9951-3dd0" name="Revered Unicorn Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">9&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Forest Guide, Magic Resistance (2)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9ec2-804c-b2f8-9d1e" name="Revered Unicorn Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">C</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">C</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">C+1</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c"/>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed"/>
+          </characteristics>
+        </profile>
+        <profile id="e75b-a0da-b8e6-ce2c" name="Revered Unicorn Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="604c-ece4-1b8a-952b" name="Revered Unicorn Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="70a0-7fdd-1f94-fb38" name="Forest Guide" hidden="false">
+          <description>Forest Guide: Universal Rule.
+The model’s unit gains Magical Attacks and Strider (Forest).</description>
+        </rule>
+      </rules>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1982,6 +3495,49 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19f2-9965-2189-81d6" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9968-8438-015a-1df0" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="2e2f-70a8-5d34-051d" name="Hippogriff Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot; (8&quot;)</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot; (16&quot;)</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fear, Fly (8″, 16″), Gallantry (2), Light Troops, Relentless, Towering Presence</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f860-afc7-25d9-ac37" name="Hippogriff Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">4</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">C</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">5</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">C+1</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c"/>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed"/>
+          </characteristics>
+        </profile>
+        <profile id="b37b-9ef1-d83a-3832" name="Hippogriff Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50x75</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4f20-56e9-b3af-a646" name="Hippogriff Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="7a2d-259b-0f17-5d36" name="Relentless" hidden="false">
+          <description>Relentless: Universal Rule.
+While Engaged in Combat, the model’s Discipline Tests are subject to Minimised Roll.</description>
+        </rule>
+      </rules>
       <entryLinks>
         <entryLink id="bff2-c549-4064-fadf" name="Gallantry" hidden="false" collective="false" import="true" targetId="1c9e-818d-22ae-8ebc" type="selectionEntry"/>
         <entryLink id="cabd-9726-ad39-f7cc" name="Gallantry" hidden="false" collective="false" import="true" targetId="1c9e-818d-22ae-8ebc" type="selectionEntry"/>
@@ -1995,6 +3551,43 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ef2-7d4c-66fb-7eac" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="360d-6ba2-e3e6-f4c1" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="eb75-0f92-b038-174c" name="Pegasus Charger Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot; (8&quot;)</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot; (16&quot;)</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Fly (8″, 16″), Gallantry (2), Light Troops</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="04c8-67da-7d74-2988" name="Pegasus Charger Defensive" hidden="false" typeId="5280-86a1-d490-10b8" typeName="2 Defensive Koe">
+          <characteristics>
+            <characteristic name="HP" typeId="d8ce-649e-ebf4-ce39">C</characteristic>
+            <characteristic name="Def" typeId="2f91-bb43-b822-ba6c">C</characteristic>
+            <characteristic name="Res" typeId="60b8-9f24-3829-8c84">4</characteristic>
+            <characteristic name="Arm" typeId="2d2a-d351-541b-27f1">C+2</characteristic>
+            <characteristic name="Aeg" typeId="0931-3c5e-6bbd-6c1c"/>
+            <characteristic name="Rules" typeId="0648-d066-1f9b-29ed">Hard Target (1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e63e-b17d-08c6-79e4" name="Pegasus Charger Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50x50</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="97e5-3b6a-dd46-52f9" name="Pegasus Charger Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <entryLinks>
         <entryLink id="dee5-a984-a85a-0a41" name="Gallantry" hidden="false" collective="false" import="true" targetId="1c9e-818d-22ae-8ebc" type="selectionEntry"/>
         <entryLink id="f71c-f5b7-583c-2d3c" name="Gallantry" hidden="false" collective="false" import="true" targetId="1c9e-818d-22ae-8ebc" type="selectionEntry"/>
@@ -2005,7 +3598,8 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
     </selectionEntry>
     <selectionEntry id="60d5-4889-6942-b867" name="Sainted" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5df-849c-63b4-008b" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c5df-849c-63b4-008b" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bff1-28d4-868c-b2eb" type="max"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -2025,6 +3619,17 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ebcf-d770-b5d7-bb56" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9c0-53e3-80c8-5418" type="max"/>
       </constraints>
+      <rules>
+        <rule id="86e3-6ada-d790-0df4" name="Ordo Minister" hidden="false">
+          <description>0–2 Models/Army.
+The model gains +1 Health Point, up to a maximum of 3. At the start of each friendly Magic Phase, the model’s unit,
+or a model inside the model’s unit, may Raise 1 Health Point with the following restrictions:
+• No single unit can Recover or Raise more than 1 Health Point per Player Turn from this ability.
+• Champions cannot be Raised by Ordo Minister.
+Fountain of Youth (Druidism) cannot target any models in a unit that Recovered or Raised Health Points this way in
+the same Magic Phase.</description>
+        </rule>
+      </rules>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -2042,6 +3647,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="df36-34b7-6680-ef47" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c17-627a-6814-6753" type="max"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -2050,10 +3658,10 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="375a-fab4-058d-a7dd" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="fb74-0fa2-0c24-3620" name="2022 Divine Judgement" hidden="false" collective="false" import="true" targetId="2bba-97f3-d711-43cf" type="selectionEntry"/>
+        <entryLink id="fb74-0fa2-0c24-3620" name="Divine Judgement" hidden="false" collective="false" import="true" targetId="2bba-97f3-d711-43cf" type="selectionEntry"/>
         <entryLink id="4a86-169c-3d79-fc93" name="2022 Uther&apos;s Mettle" hidden="false" collective="false" import="true" targetId="8d35-8fd4-a6c8-6b1a" type="selectionEntry"/>
         <entryLink id="2912-5362-9e96-8af9" name="2022 Tristan&apos;s Resolve" hidden="false" collective="false" import="true" targetId="459f-0da5-6ee8-5c27" type="selectionEntry"/>
-        <entryLink id="8c6c-9c48-ad99-cebf" name="2022 Mortal Reminder" hidden="false" collective="false" import="true" targetId="53f6-5304-550b-2534" type="selectionEntry"/>
+        <entryLink id="8c6c-9c48-ad99-cebf" name="Mortal Reminder" hidden="false" collective="false" import="true" targetId="53f6-5304-550b-2534" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="9cc7-7c08-5df1-35cf" name="KoE Armour Enchantments" hidden="false" collective="false" import="true">
@@ -2061,8 +3669,8 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b98c-a11a-7cc1-4893" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="4db2-f78f-2b5a-649d" name="2022 °Prayer-Etched" hidden="false" collective="false" import="true" targetId="53cd-6978-d265-0062" type="selectionEntry"/>
-        <entryLink id="c5ba-d797-4319-60c2" name="2022 Percival&apos;s Panoply" hidden="false" collective="false" import="true" targetId="3105-f1cd-ab4e-d511" type="selectionEntry"/>
+        <entryLink id="4db2-f78f-2b5a-649d" name="°Prayer-Etched" hidden="false" collective="false" import="true" targetId="53cd-6978-d265-0062" type="selectionEntry"/>
+        <entryLink id="c5ba-d797-4319-60c2" name="Percival&apos;s Panoply" hidden="false" collective="false" import="true" targetId="3105-f1cd-ab4e-d511" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="0e79-72ac-e1b9-e628" name="KoE Artefacts (Orisons)" hidden="false" collective="false" import="true">
@@ -2070,8 +3678,8 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dca3-c4f4-0865-8bf8" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="ba45-bf50-fc5d-3c7e" name="2022 Sacred Chalice" hidden="false" collective="false" import="true" targetId="c7d8-de96-8d9e-b7b7" type="selectionEntry"/>
-        <entryLink id="5e78-393e-97f5-ef0c" name="2022 °Black Knight&apos;s Tabard" hidden="false" collective="false" import="true" targetId="5567-de34-b22b-9ef5" type="selectionEntry"/>
+        <entryLink id="ba45-bf50-fc5d-3c7e" name="Sacred Chalice" hidden="false" collective="false" import="true" targetId="c7d8-de96-8d9e-b7b7" type="selectionEntry"/>
+        <entryLink id="5e78-393e-97f5-ef0c" name="°Black Knight&apos;s Tabard" hidden="false" collective="false" import="true" targetId="5567-de34-b22b-9ef5" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2fdc-d6a3-82fa-2c83" name="KoE Banner Enchantments" hidden="false" collective="false" import="true">
@@ -2079,11 +3687,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2882-be55-b39b-bf7a" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="b012-9fae-4bfc-cb58" name="2022 Oriflamme" hidden="false" collective="false" import="true" targetId="86cd-60f0-26ad-17f8" type="selectionEntry"/>
-        <entryLink id="5ebf-5b86-fe4d-944c" name="2022 Relic Shroud" hidden="false" collective="false" import="true" targetId="c3b3-dbf3-7070-20b5" type="selectionEntry"/>
-        <entryLink id="93dd-5418-f54c-8600" name="2022 Aspirant&apos;s Elan" hidden="false" collective="false" import="true" targetId="86b1-c2ca-0b33-db3e" type="selectionEntry"/>
-        <entryLink id="4eb4-6125-00cf-07e3" name="2022 Banner of Roland" hidden="false" collective="false" import="true" targetId="03c0-5e8c-a596-2d19" type="selectionEntry"/>
-        <entryLink id="3150-0c59-77c6-91f4" name="2022 Castellan&apos;s Crest" hidden="false" collective="false" import="true" targetId="0f05-17f1-e331-91a5" type="selectionEntry"/>
+        <entryLink id="b012-9fae-4bfc-cb58" name="Oriflamme" hidden="false" collective="false" import="true" targetId="86cd-60f0-26ad-17f8" type="selectionEntry"/>
+        <entryLink id="5ebf-5b86-fe4d-944c" name="Relic Shroud" hidden="false" collective="false" import="true" targetId="c3b3-dbf3-7070-20b5" type="selectionEntry"/>
+        <entryLink id="93dd-5418-f54c-8600" name="Aspirant&apos;s Elan" hidden="false" collective="false" import="true" targetId="86b1-c2ca-0b33-db3e" type="selectionEntry"/>
+        <entryLink id="4eb4-6125-00cf-07e3" name="Banner of Roland" hidden="false" collective="false" import="true" targetId="03c0-5e8c-a596-2d19" type="selectionEntry"/>
+        <entryLink id="3150-0c59-77c6-91f4" name="Castellan&apos;s Crest" hidden="false" collective="false" import="true" targetId="0f05-17f1-e331-91a5" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="3fa8-5548-1869-9225" name="Knightly Principles" hidden="false" collective="false" import="true">
@@ -2096,6 +3704,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c666-198e-45cd-9dba" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="85ca-362b-9103-7adf" type="max"/>
           </constraints>
+          <rules>
+            <rule id="72ae-fbf3-ba57-1a9b" name="Valour" hidden="false">
+              <description>Attack Attribute. One of a Kind.
+The model gains Fearless and the model’s part Close Combat Attacks gain Multiple Wounds (2, against Fear).</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
@@ -2105,6 +3719,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="44e2-52d9-80fa-71b1" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ecbc-9e08-0e03-7f59" type="max"/>
           </constraints>
+          <rules>
+            <rule id="d387-0f04-7308-751d" name="Justice" hidden="false">
+              <description>Attack Attribute. One of a Kind.
+Whenever another model in the model’s unit suffers an unsaved wound due to an enemy Melee Attack, the model part must perform a single Close Combat Attack at Initiative Step 0 against an enemy model in base contact. If this is not possible, the effect is ignored. The number of these bonus attacks that the model part performs can never be higher than 3 per Round of Combat.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
           </costs>
@@ -2114,6 +3734,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc50-63b0-8f5c-f864" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="566b-4f2f-ae92-6a12" type="max"/>
           </constraints>
+          <rules>
+            <rule id="2d80-1b9c-45ca-e508" name="Excellence" hidden="false">
+              <description>Attack Attribute. One of a Kind.
+Duels issued by the model must (if possible) be accepted by an enemy Character, unless a Champion accepts first. In addition, while fighting a Duel, the model part’s Close Combat Attacks gain +2 Armour Penetration.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
@@ -2123,6 +3749,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aeb9-a43f-c800-c2ba" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="21d2-c975-9854-d839" type="max"/>
           </constraints>
+          <rules>
+            <rule id="b4ca-f314-d8b4-769c" name="Faith" hidden="false">
+              <description>Universal Rule. One of a Kind.
+In the Melee Phase, if the model’s unit is the target of an Orison while Engaged in Combat, add one Orison Token to the owner’s Orison Token pool. In addition, Ordo Minister becomes 0-3 per Army.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
@@ -2132,6 +3764,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9622-dc84-8827-66bd" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1667-57b4-640f-b160" type="max"/>
           </constraints>
+          <rules>
+            <rule id="93e1-9acf-1868-4541" name="Generosity" hidden="false">
+              <description>Universal Rule. One of a Kind.
+The model gains Commanding Presence that only friendly models with Ordeal may benefit from. In addition, Knight Banneret becomes 0-3 per Army.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
@@ -2141,6 +3779,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="50cf-f6cb-6b88-e381" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a7cd-fa49-0a56-9eeb" type="max"/>
           </constraints>
+          <rules>
+            <rule id="d4f0-ec45-8bc8-f30c" name="Forebearance" hidden="false">
+              <description>Personal Protection. One of a Kind.
+The model gains Distracting. This instance of Distracting cannot be used in the First Round of Combat.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
@@ -2150,6 +3794,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1c97-e9fb-9153-d14c" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e9af-c97a-788d-c128" type="max"/>
           </constraints>
+          <rules>
+            <rule id="93db-2ee8-ca38-29eb" name="Honour" hidden="false">
+              <description>Attack Attribute. One of a Kind.
+While Located in the Charged unit’s Front Arc, the model gains Devastating Charge (+2″ Adv). While Engaged with an enemy unit’s Front Facing, the model part gains Devastating Charge (+2 Att).</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
@@ -2173,6 +3823,12 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5ea7-e963-fb6a-86da" type="max"/>
           </constraints>
+          <rules>
+            <rule id="27b3-9376-449c-b388" name="Quin" hidden="false">
+              <description>Counts as two Heroic Traits.
+The model is a Wizard Adept that chooses Witchcraft as its Path of Magic.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
           </costs>
@@ -2181,6 +3837,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de41-ec92-abc6-0d72" type="max"/>
           </constraints>
+          <rules>
+            <rule id="1e57-fa01-8460-1dca" name="Cleric" hidden="false">
+              <description>The model gains Honesty, Ordo Minister, Orison (1), and loses Ordeal.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
           </costs>
@@ -2189,6 +3850,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="189f-9a1b-5e92-8508" type="max"/>
           </constraints>
+          <rules>
+            <rule id="1971-67f4-386c-df3f" name="Bannerman" hidden="false">
+              <description>The model becomes the Battle Standard Bearer, and the model part gains +1 Attack Value.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
           </costs>
@@ -2197,6 +3863,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="89c3-4054-16f5-c868" type="max"/>
           </constraints>
+          <rules>
+            <rule id="22ad-b121-d341-0d88" name="Troubadour" hidden="false">
+              <description>The model gains March to the Beat and is a Wizard Apprentice that chooses Divination as its Path of Magic.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
@@ -2205,6 +3876,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="db8c-9f3f-c95a-a4f5" type="max"/>
           </constraints>
+          <rules>
+            <rule id="9b02-0d36-7dcf-8e5d" name="Castellan" hidden="false">
+              <description>The model part gains +1 Attack Value, +1 Offensive Skill, +1 Defensive Skill, and Bastard Sword. In addition, the model part must purchase one Knightly Principle.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
@@ -2213,13 +3889,13 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
     </selectionEntryGroup>
     <selectionEntryGroup id="d2b3-2992-90c7-c460" name="KoE Banner Enchantments (Core)" hidden="false" collective="false" import="true">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="57c1-aa2b-d7f7-929b" type="max"/>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="57c1-aa2b-d7f7-929b" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="b747-9c74-8bb1-3058" name="2022 Relic Shroud" hidden="false" collective="false" import="true" targetId="c3b3-dbf3-7070-20b5" type="selectionEntry"/>
-        <entryLink id="90ba-89c2-e6e0-63e0" name="2022 Aspirant&apos;s Elan" hidden="false" collective="false" import="true" targetId="86b1-c2ca-0b33-db3e" type="selectionEntry"/>
-        <entryLink id="d851-3680-83c3-9e52" name="2022 Banner of Roland" hidden="false" collective="false" import="true" targetId="03c0-5e8c-a596-2d19" type="selectionEntry"/>
-        <entryLink id="0e93-5403-1b85-944e" name="2022 Castellan&apos;s Crest" hidden="false" collective="false" import="true" targetId="0f05-17f1-e331-91a5" type="selectionEntry"/>
+        <entryLink id="b747-9c74-8bb1-3058" name="Relic Shroud" hidden="false" collective="false" import="true" targetId="c3b3-dbf3-7070-20b5" type="selectionEntry"/>
+        <entryLink id="90ba-89c2-e6e0-63e0" name="Aspirant&apos;s Elan" hidden="false" collective="false" import="true" targetId="86b1-c2ca-0b33-db3e" type="selectionEntry"/>
+        <entryLink id="d851-3680-83c3-9e52" name="Banner of Roland" hidden="false" collective="false" import="true" targetId="03c0-5e8c-a596-2d19" type="selectionEntry"/>
+        <entryLink id="0e93-5403-1b85-944e" name="Castellan&apos;s Crest" hidden="false" collective="false" import="true" targetId="0f05-17f1-e331-91a5" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2ebe-fefd-b857-89af" name="KoE Artefacts" hidden="false" collective="false" import="true">
@@ -2227,7 +3903,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2a4-7866-19e5-65e3" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="4c1e-0ac0-8e0b-b81f" name="2022 °Black Knight&apos;s Tabard" hidden="false" collective="false" import="true" targetId="5567-de34-b22b-9ef5" type="selectionEntry"/>
+        <entryLink id="4c1e-0ac0-8e0b-b81f" name="°Black Knight&apos;s Tabard" hidden="false" collective="false" import="true" targetId="5567-de34-b22b-9ef5" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="8bbc-d5f3-def5-46a6" name="KoE Banner Enchantments (BSB)" hidden="false" collective="false" import="true">
@@ -2235,11 +3911,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6725-4aa4-28ca-bd3a" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="1ae4-a75e-6e0c-92fb" name="2022 Oriflamme" hidden="false" collective="false" import="true" targetId="86cd-60f0-26ad-17f8" type="selectionEntry"/>
-        <entryLink id="850a-b411-2743-01be" name="2022 Relic Shroud" hidden="false" collective="false" import="true" targetId="c3b3-dbf3-7070-20b5" type="selectionEntry"/>
-        <entryLink id="5b38-281e-c5a9-27a5" name="2022 Aspirant&apos;s Elan" hidden="false" collective="false" import="true" targetId="86b1-c2ca-0b33-db3e" type="selectionEntry"/>
-        <entryLink id="dbf0-2c6d-1d30-14f5" name="2022 Banner of Roland" hidden="false" collective="false" import="true" targetId="03c0-5e8c-a596-2d19" type="selectionEntry"/>
-        <entryLink id="85d3-69aa-6287-f3ff" name="2022 Castellan&apos;s Crest" hidden="false" collective="false" import="true" targetId="0f05-17f1-e331-91a5" type="selectionEntry"/>
+        <entryLink id="1ae4-a75e-6e0c-92fb" name="Oriflamme" hidden="false" collective="false" import="true" targetId="86cd-60f0-26ad-17f8" type="selectionEntry"/>
+        <entryLink id="850a-b411-2743-01be" name="Relic Shroud" hidden="false" collective="false" import="true" targetId="c3b3-dbf3-7070-20b5" type="selectionEntry"/>
+        <entryLink id="5b38-281e-c5a9-27a5" name="Aspirant&apos;s Elan" hidden="false" collective="false" import="true" targetId="86b1-c2ca-0b33-db3e" type="selectionEntry"/>
+        <entryLink id="dbf0-2c6d-1d30-14f5" name="Banner of Roland" hidden="false" collective="false" import="true" targetId="03c0-5e8c-a596-2d19" type="selectionEntry"/>
+        <entryLink id="85d3-69aa-6287-f3ff" name="Castellan&apos;s Crest" hidden="false" collective="false" import="true" targetId="0f05-17f1-e331-91a5" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -2282,6 +3958,19 @@ Several instances of an effect on the same model are not cumulative, and a singl
     <rule id="de29-bb0a-5081-1551" name="Sainted" hidden="false">
       <description>One of a Kind. Cannot be taken by the Battle Standard Bearer.
 Model parts without Harnessed gain Orison (+1) and Fearless. The model part gains +1 Attack Value, +1 Offensive Skill, +1 Defensive Skill, its Discipline is set to 9, and its Special Item allowance is increased by 50 pts, up to a maximum of 200 pts. In addition, the model is always under the effect of the Orisons Holy Strike, Holy Shield, and Holy Wrath. This does not prevent the model’s unit from being the target of an Orison.</description>
+    </rule>
+    <rule id="e242-3ed9-fea8-8646" name="Courage" hidden="false">
+      <description>The model gains Aegis (+1, max. 4+) with the following restriction: The effect can only be used against wounds
+against which the model cannot take or would automatically fail its any Armour Saves. Units with more than half of
+their models with Courage ignore friendly units consisting entirely of models with Ordeal for the purpose of Panic
+Tests.</description>
+    </rule>
+    <rule id="b124-6c67-9a2d-a06d" name="Honesty" hidden="false">
+      <description>The model gains Aegis (+1, against Magical Attacks, max. 4+).</description>
+    </rule>
+    <rule id="cfb7-648a-9b76-fca4" name="Ordeal" hidden="false">
+      <description>The model gains Aegis (+1, max. 5+) with the following condition: Its unit must be Engaged in the same Combat as
+at least one other friendly unit containing one or more models with Courage or Honesty.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
