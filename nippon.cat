@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c837-5cf4-590b-b3bb" name="Nippon 2.3.0" revision="5" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="52" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c837-5cf4-590b-b3bb" name="Nippon 2.3.0" revision="6" battleScribeVersion="2.03" authorName="grossmaul2130" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="52" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <comment>Bugfixes for nippon 2.3.0</comment>
   <categoryEntries>
     <categoryEntry id="2e5e-f748-ed22-f2a1" name="Ranged Warfare" hidden="false"/>
     <categoryEntry id="1d97-9bd9-4eb6-cd23" name="Will of the Kami" hidden="false"/>
@@ -163,15 +164,6 @@
                     <entryLink id="5716-7128-9e02-399c" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
-                <selectionEntryGroup id="4f2b-276b-1a69-d833" name="Armour Enchantment" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f9cb-fb1f-6faf-ce19" type="max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink id="384b-8789-81d1-5e76" name="Nip Armour Enchantments (Warrior)" hidden="false" collective="false" import="true" targetId="943f-0647-246a-0cc1" type="selectionEntryGroup"/>
-                    <entryLink id="4ca4-a90c-60d2-8f18" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
                 <selectionEntryGroup id="57c4-cdd9-8ee4-2106" name="Shield Enchantment" hidden="false" collective="false" import="true">
                   <modifiers>
                     <modifier type="set" field="065d-7e2a-db54-c0c0" value="0.0">
@@ -186,6 +178,32 @@
                   <entryLinks>
                     <entryLink id="29d2-08cd-2f02-eca2" name="Nip Shield Enchantments" hidden="false" collective="false" import="true" targetId="7547-4b28-0704-e9cc" type="selectionEntryGroup"/>
                     <entryLink id="c505-4b5a-d95f-94fd" name="Shield Enchantments" hidden="false" collective="false" import="true" targetId="3ca8-d93a-232c-d3b5" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="8d27-7591-3a56-4f20" name="Armour Enchantment" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2796-78fb-3544-1582" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="e614-8b09-91c6-0d56" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
+                    <entryLink id="af0c-5a8b-c218-6305" name="Nip Armour Enchantments (Warrior on foot)" hidden="false" collective="false" import="true" targetId="ba63-7d4d-0b17-c7a4" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditions>
+                            <condition field="selections" scope="98b3-df83-dce6-328b" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="fad4-0463-035f-064b" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink id="1d12-1ca3-48ca-78be" name="Nip Armour Enchantments (Warrior on mount)" hidden="false" collective="false" import="true" targetId="943f-0647-246a-0cc1" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditions>
+                            <condition field="selections" scope="98b3-df83-dce6-328b" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="fad4-0463-035f-064b" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -428,8 +446,8 @@
                     <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="807a-efec-9f71-7094" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="811f-00ee-e22e-f807" name="Nip Artefacts (Warrior)" hidden="false" collective="false" import="true" targetId="92bc-7642-0e3f-4bc4" type="selectionEntryGroup"/>
                     <entryLink id="ee4a-5a5f-59c9-bd8b" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
+                    <entryLink id="d00e-1256-a368-1f9d" name="Nip Artefacts (Warrior)" hidden="false" collective="false" import="true" targetId="92bc-7642-0e3f-4bc4" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="dd3e-4311-de64-d9cf" name="Armour Enchantment" hidden="false" collective="false" import="true">
@@ -437,8 +455,25 @@
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="84b7-e59c-1344-a593" type="max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink id="5457-3fe2-cd52-2cf0" name="Nip Armour Enchantments (Warrior)" hidden="false" collective="false" import="true" targetId="943f-0647-246a-0cc1" type="selectionEntryGroup"/>
                     <entryLink id="03c1-f0e1-e0fc-5644" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
+                    <entryLink id="e7eb-af59-a3d5-d00a" name="Nip Armour Enchantments (Warrior on foot)" hidden="false" collective="false" import="true" targetId="ba63-7d4d-0b17-c7a4" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditions>
+                            <condition field="selections" scope="7217-c3e7-2454-393c" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="338e-ad50-0f08-19bd" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink id="c58e-2265-a606-7b63" name="Nip Armour Enchantments (Warrior on mount)" hidden="false" collective="false" import="true" targetId="943f-0647-246a-0cc1" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditions>
+                            <condition field="selections" scope="7217-c3e7-2454-393c" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="338e-ad50-0f08-19bd" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="830b-a20a-a6e0-c357" name="Shield Enchantment" hidden="false" collective="false" import="true">
@@ -459,18 +494,27 @@
                 </selectionEntryGroup>
                 <selectionEntryGroup id="9ba6-a396-81b1-76e7" name="Banner Enchantments" hidden="false" collective="false" import="true">
                   <modifiers>
-                    <modifier type="set" field="hidden" value="false">
+                    <modifier type="set" field="959e-4cff-8c08-a77b" value="3.0">
                       <conditions>
                         <condition field="selections" scope="7217-c3e7-2454-393c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1816-6a9c-7e82-694a" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
                   <constraints>
-                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="959e-4cff-8c08-a77b" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="959e-4cff-8c08-a77b" type="max"/>
                   </constraints>
                   <entryLinks>
                     <entryLink id="382e-d770-7a41-4a4e" name="Nip Banner Enchantments" hidden="false" collective="false" import="true" targetId="9bca-f920-b536-7782" type="selectionEntryGroup"/>
-                    <entryLink id="6cd6-70af-b39f-61c2" name="Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="6f44-7811-b1d1-1d86" type="selectionEntryGroup"/>
+                    <entryLink id="6cd6-70af-b39f-61c2" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+                    <entryLink id="f5ab-624c-f757-ae4b" name="Banner Enchantments (BSB)" hidden="false" collective="false" import="true" targetId="6f44-7811-b1d1-1d86" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="false">
+                          <conditions>
+                            <condition field="selections" scope="7217-c3e7-2454-393c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1816-6a9c-7e82-694a" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -1427,7 +1471,6 @@ for the rest of the game.</description>
           </constraints>
           <entryLinks>
             <entryLink id="e3f7-1abe-0ced-a7d8" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="8d66-86be-d031-1d60" name="Nip Banner Enchantments" hidden="false" collective="false" import="true" targetId="9bca-f920-b536-7782" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1606,7 +1649,6 @@ for the rest of the game.</description>
           </constraints>
           <entryLinks>
             <entryLink id="499c-5826-e282-1062" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="ea3e-2d3d-de7b-ebac" name="Nip Banner Enchantments" hidden="false" collective="false" import="true" targetId="9bca-f920-b536-7782" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="32d0-2f2c-5b8d-412c" name="Specialization" hidden="false" collective="false" import="true">
@@ -1767,7 +1809,6 @@ for the rest of the game.</description>
           </constraints>
           <entryLinks>
             <entryLink id="b1d3-e820-ea68-de4b" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="e6e6-ea2d-e545-493d" name="Nip Banner Enchantments" hidden="false" collective="false" import="true" targetId="9bca-f920-b536-7782" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2433,7 +2474,7 @@ You must choose one of the two dances for the Kabuki Dolls to perform at step 2 
           </constraints>
           <entryLinks>
             <entryLink id="145f-15cf-7c51-f858" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="bb8d-1c01-6af9-8bdf" name="Nip Banner Enchantments" hidden="false" collective="false" import="true" targetId="9bca-f920-b536-7782" type="selectionEntryGroup"/>
+            <entryLink id="d8bd-f8ff-c873-5e7a" name="Nip Banner Enchantments" hidden="false" collective="false" import="true" targetId="9bca-f920-b536-7782" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3261,7 +3302,7 @@ The model gains War Platform, +1 Resilience, changes its Base to 60×100 mm and 
           </constraints>
           <entryLinks>
             <entryLink id="15d6-41d0-1021-22fc" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-            <entryLink id="2fd3-c01f-2cb5-4487" name="Nip Banner Enchantments" hidden="false" collective="false" import="true" targetId="9bca-f920-b536-7782" type="selectionEntryGroup"/>
+            <entryLink id="2840-9f1c-d8d1-63f7" name="Nip Banner Enchantments" hidden="false" collective="false" import="true" targetId="9bca-f920-b536-7782" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -4015,13 +4056,12 @@ The range of spells cast by the Wizard is increased by 6″. Spells with the typ
         <entryLink id="d05d-516c-448d-3bfc" name="Mempo of Blood" hidden="false" collective="false" import="true" targetId="faab-1412-4730-ce47" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="943f-0647-246a-0cc1" name="Nip Armour Enchantments (Warrior)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="943f-0647-246a-0cc1" name="Nip Armour Enchantments (Warrior on mount)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d6e-3248-8341-8272" type="max"/>
       </constraints>
       <entryLinks>
         <entryLink id="2bdf-743f-ba95-b563" name="Nobunaga&apos;s Honour" hidden="false" collective="false" import="true" targetId="e164-a50c-64bb-c39e" type="selectionEntry"/>
-        <entryLink id="421c-dc0e-3f81-be4c" name="Symbol of Imperial Rule" hidden="false" collective="false" import="true" targetId="230c-038c-20cb-14a6" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="d1a2-80e5-c9f1-cf81" name="Nip Weapon Enchantments (Daimyo)" hidden="false" collective="false" import="true">
@@ -4033,6 +4073,15 @@ The range of spells cast by the Wizard is increased by 6″. Spells with the typ
         <entryLink id="18e3-e588-fe2d-d2bb" name="Black Demon Essence (only on Taneka Clan)" hidden="false" collective="false" import="true" targetId="e31b-6eed-b75d-7b15" type="selectionEntry"/>
         <entryLink id="abdf-9dbd-0450-55ee" name="Dragon Claw" hidden="false" collective="false" import="true" targetId="fc25-8af0-cc01-18c1" type="selectionEntry"/>
         <entryLink id="979f-3a60-2af0-a035" name="Dance of the Cherry Blossoms" hidden="false" collective="false" import="true" targetId="d8bf-6682-07b6-ac6c" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="ba63-7d4d-0b17-c7a4" name="Nip Armour Enchantments (Warrior on foot)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="96e8-8906-47df-642a" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="b5c2-327c-da4c-c255" name="Nobunaga&apos;s Honour" hidden="false" collective="false" import="true" targetId="e164-a50c-64bb-c39e" type="selectionEntry"/>
+        <entryLink id="cd12-86e3-f19a-9376" name="Symbol of Imperial Rule" hidden="false" collective="false" import="true" targetId="230c-038c-20cb-14a6" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
