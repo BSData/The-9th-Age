@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c837-5cf4-590b-b3bb" name="Nippon 2.3.1" revision="7" battleScribeVersion="2.03" authorName="grossmaul2130" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="52" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <comment>Bugfixes for nippon 2.3.0</comment>
+<catalogue id="c837-5cf4-590b-b3bb" name="Nippon 2.3.1" revision="9" battleScribeVersion="2.03" authorName="grossmaul2130" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="53" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <comment>Bugfixes for nippon 2.3.1</comment>
   <categoryEntries>
     <categoryEntry id="2e5e-f748-ed22-f2a1" name="Ranged Warfare" hidden="false"/>
     <categoryEntry id="1d97-9bd9-4eb6-cd23" name="Will of the Kami" hidden="false"/>
@@ -168,7 +168,7 @@
                   <modifiers>
                     <modifier type="set" field="065d-7e2a-db54-c0c0" value="0.0">
                       <conditions>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b7b6-08b9-88fc-3376" type="equalTo"/>
+                        <condition field="selections" scope="98b3-df83-dce6-328b" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b7b6-08b9-88fc-3376" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -480,7 +480,7 @@
                   <modifiers>
                     <modifier type="set" field="9cb7-5a82-ff08-9371" value="0.0">
                       <conditions>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b7b6-08b9-88fc-3376" type="equalTo"/>
+                        <condition field="selections" scope="7217-c3e7-2454-393c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b7b6-08b9-88fc-3376" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -1187,6 +1187,13 @@ Kensai cannot join units that contain another Kensai. Unless another model does 
       </costs>
     </selectionEntry>
     <selectionEntry id="e378-7cd4-54fb-91ca" name="Shinobi" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="e27b-8e9b-6234-8f8c" value="999.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b542-b9a1-9c45-adca" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e27b-8e9b-6234-8f8c" type="max"/>
       </constraints>
@@ -1198,7 +1205,7 @@ Kensai cannot join units that contain another Kensai. Unless another model does 
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">7</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lightning Reflexes, Paired Weapons, Shuriken (2+)</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Poison Attacks,Lightning Reflexes, Paired Weapons, Shuriken (2+)</characteristic>
           </characteristics>
         </profile>
         <profile id="d0a7-a876-8bd8-fad7" name="Shinobi Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1247,6 +1254,7 @@ for the rest of the game.</description>
         <infoLink id="9398-fad8-3efa-f367" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
         <infoLink id="5319-e9b3-0195-d07a" name="Shuriken" hidden="false" targetId="e497-9aeb-de22-e91e" type="profile"/>
         <infoLink id="1378-1d16-c8ec-a603" name="Lightning Reflexes" hidden="false" targetId="f17a-c7f9-af34-a039" type="rule"/>
+        <infoLink id="28e4-07b1-ed3f-739b" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="7487-f3be-fd4f-5ae6" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -1269,6 +1277,14 @@ for the rest of the game.</description>
                   <entryLinks>
                     <entryLink id="efac-fc66-fc65-39c9" name="Nip Artefacts (Shinobi)" hidden="false" collective="false" import="true" targetId="888b-5ac7-d1d1-2ccd" type="selectionEntryGroup"/>
                     <entryLink id="93f3-ae1b-8b32-782d" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="5b49-9da4-26a4-f36a" name="Weapon Enchantments" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a3a6-4b91-23b4-3fcd" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="e22e-f918-6887-cf87" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -2583,7 +2599,7 @@ You must choose one of the two dances for the Kabuki Dolls to perform at step 2 
         </selectionEntryGroup>
         <selectionEntryGroup id="b899-8eb6-20d1-adf7" name="Stealth Skills" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f3d-8b44-efeb-9994" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f3d-8b44-efeb-9994" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="a83d-85d3-e590-b30d" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
