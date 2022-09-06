@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7737-33f3-3897-4541" name="Saurian Ancients 2022.2 Alpha 1" revision="1" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="53" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7737-33f3-3897-4541" name="Saurian Ancients 2022.2 Alpha 1" revision="1" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="0a69-f7af-e4da-3ad0" name="Guerrilla Warriors" hidden="false"/>
     <categoryEntry id="634f-0995-844c-451a" name="Magna Sauria" hidden="false"/>
@@ -1307,7 +1307,6 @@ While using a mundane weapon, the model is subject to the following rules corres
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="58ec-ff9e-eebe-bb20" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="597a-951e-ce93-0b87" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
         <infoLink id="12ce-084a-96f2-1904" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="3821-94e9-a2ac-22b2" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule">
           <modifiers>
@@ -1592,7 +1591,7 @@ Attacks made by enemy units in base contact with one or more models with Contain
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="796b-f5f3-1992-8d12" name="Raptor Rider Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -1799,60 +1798,68 @@ Attacks made by enemy units in base contact with one or more models with Contain
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="889f-5702-f98f-1605" name="Snake Swarms" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="889f-5702-f98f-1605" name="Saurian Swarms" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="094e-82c4-8219-bbd6" type="max"/>
       </constraints>
       <rules>
         <rule id="0528-c3cc-6b21-49a3" name="Venomous Tide" hidden="false">
-          <description>All models in enemy units must take a Dangerous Terrain (1) test after successfully charging a unit of Snake Swarms.</description>
+          <description>All models in enemy units must take a Dangerous Terrain (1) Test after completing a Charge Move against a unit that contains one or more models with Venomous Tide (even if that unit is Fleeing).</description>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="df55-4ef0-8734-dc0c" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
-        <infoLink id="474d-fcd8-8405-ab0e" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
-        <infoLink id="b3ee-463c-0beb-1a65" name="Skirmisher" hidden="false" targetId="2ce4-ece5-068c-4d20" type="rule"/>
-        <infoLink id="4b96-7832-29ac-1757" name="Unstable" hidden="false" targetId="b642-5b33-158d-421b" type="rule"/>
+        <infoLink id="df55-4ef0-8734-dc0c" name="Communal Bond" hidden="false" targetId="28b6-3dc2-c190-5cc3" type="rule"/>
+        <infoLink id="474d-fcd8-8405-ab0e" name="Combined Strength" hidden="false" targetId="b693-8ffd-e35f-6b31" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (Skink Warriors, Skink Hunters)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="b3ee-463c-0beb-1a65" name="Fortitude" hidden="false" targetId="faef-6f9d-ae02-d420" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (6+)"/>
+          </modifiers>
+        </infoLink>
         <infoLink id="3308-ce09-2a8d-775e" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
+        <infoLink id="0df4-999d-8be3-5988" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="152e-bbdf-3103-d082" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="2258-f13c-792c-80aa" name="Snake Swarm" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="2258-f13c-792c-80aa" name="Saurian Swarm" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="492d-8976-fa8b-70e3" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d81f-64d0-7157-18e9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="aeaa-80ec-93c4-b8b5" name="Snake Swarm Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="aeaa-80ec-93c4-b8b5" name="Saurian Swarm Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">10</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Cold-Blooded, Fearless, Light Troops, Skirmisher, Unstable, Venomous Tide</characteristic>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
               </characteristics>
             </profile>
-            <profile id="620c-f3b3-0052-0608" name="Snake Swarm Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="620c-f3b3-0052-0608" name="Saurian Swarm Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">2</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
+                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">1</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hard Target (1)</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Fortitude (6+)</characteristic>
               </characteristics>
             </profile>
-            <profile id="adaa-b39b-f68e-dce3" name="Snake Swarm Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="adaa-b39b-f68e-dce3" name="Saurian Swarm Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">2</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">1</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">1</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
                 <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Poison Attacks</characteristic>
               </characteristics>
             </profile>
-            <profile id="76fa-4463-f050-fac8" name="Snake Swarms Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+            <profile id="76fa-4463-f050-fac8" name="Saurian Swarms Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
               <characteristics>
                 <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
                 <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
@@ -1864,27 +1871,9 @@ Attacks made by enemy units in base contact with one or more models with Contain
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4127-dc90-b37a-bb7b" name="Scout" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="6.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fde-befd-7507-b615" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="eeda-57cf-742d-6b3a" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6b51-ef75-d0bd-20d6" name="Skink Hunters" hidden="false" collective="false" import="true" type="unit">
@@ -1966,68 +1955,73 @@ Attacks made by enemy units in base contact with one or more models with Contain
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c47d-f1d3-eaf7-54e1" name="Chameleons" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="c47d-f1d3-eaf7-54e1" name="Skink Guerillas" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e4c-c64f-446b-9c25" type="max"/>
+        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e4c-c64f-446b-9c25" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="d9da-42ad-189a-92a6" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
-        <infoLink id="26b6-8794-945d-9de3" name="Skirmisher" hidden="false" targetId="2ce4-ece5-068c-4d20" type="rule"/>
-        <infoLink id="b873-15ba-2706-cbd2" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule">
+        <infoLink id="d9da-42ad-189a-92a6" name="Fortitude" hidden="false" targetId="faef-6f9d-ae02-d420" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (Water Terrain)"/>
+            <modifier type="append" field="name" value=" (6+)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="26b6-8794-945d-9de3" name="Skirmisher" hidden="false" targetId="2ce4-ece5-068c-4d20" type="rule"/>
+        <infoLink id="b873-15ba-2706-cbd2" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
         <infoLink id="92ab-a16f-9cdc-3200" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (2)"/>
+            <modifier type="append" field="name" value=" (2)">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7d6d-0ca2-4e54-6650" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="append" field="name" value=" (1)">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7d6d-0ca2-4e54-6650" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="2a0c-3708-f5f2-5e5d" name="Blowpipe" hidden="false" targetId="7d16-fc1d-6a00-9eb1" type="profile">
-          <modifiers>
-            <modifier type="append" field="name" value=" (4+)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="f8f4-ff9d-370f-e8eb" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
+        <infoLink id="f8f4-ff9d-370f-e8eb" name="Communal Bond" hidden="false" targetId="28b6-3dc2-c190-5cc3" type="rule"/>
+        <infoLink id="2898-fcad-6b37-0f81" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a240-4af0-5886-46c0" name="New CategoryLink" hidden="false" targetId="0a69-f7af-e4da-3ad0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9907-512b-a517-ea53" name="Chameleon" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="9907-512b-a517-ea53" name="Skink Guerilla" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff14-ff70-6bc3-c68a" type="min"/>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="805b-d297-fb25-c2cf" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0a08-a9fe-e6d6-d2c4" name="Chameleon Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="0a08-a9fe-e6d6-d2c4" name="Skink Guerilla Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
               <characteristics>
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Cold-Blooded, Light Troops, Scout, Skirmisher, Strider (Water Terrain)</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
               </characteristics>
             </profile>
-            <profile id="2b8a-f455-3360-9554" name="Chameleon Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="2b8a-f455-3360-9554" name="Skink Guerilla Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">2</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hard Target (2)</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Fortitude (6+), Hard Target (2)</characteristic>
               </characteristics>
             </profile>
-            <profile id="6bf7-ccbf-406b-cfbe" name="Chameleon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="6bf7-ccbf-406b-cfbe" name="Skink Guerilla Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Blowpipe (4+)</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
               </characteristics>
             </profile>
-            <profile id="9324-0312-8350-2e25" name="Chameleon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+            <profile id="9324-0312-8350-2e25" name="Skink Guerilla Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
               <characteristics>
                 <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
                 <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
@@ -2036,8 +2030,42 @@ Attacks made by enemy units in base contact with one or more models with Contain
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="4a58-69f7-5827-cd55" name="Marking Lure" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e512-1a7f-c95c-f4af" type="max"/>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fecb-b060-a196-5112" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="6775-0772-c3e8-54ad" name="Marking Lure" hidden="false" targetId="2d42-3168-801d-70d6" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="7d6d-0ca2-4e54-6650" name="Chameleon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbc4-8f6f-9b33-30b3" type="max"/>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0d45-f983-074b-9751" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="ec03-a694-e180-1f46" name="Chameleon" hidden="false" targetId="8441-e171-394d-dbb7" type="rule"/>
+            <infoLink id="2d74-954e-d389-af62" name="Ambush" hidden="false" targetId="2dda-ee2f-cfce-7f16" type="rule"/>
+            <infoLink id="502e-d31d-191e-9afe" name="Scout" hidden="false" targetId="1c9f-ec16-529b-e3ca" type="rule"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2046,9 +2074,32 @@ Attacks made by enemy units in base contact with one or more models with Contain
             <entryLink id="4d73-43e2-50e4-d331" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup id="8a44-b3ac-0114-d2ec" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a54f-9d87-b064-51bd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edda-781d-79c9-8ded" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="0fa1-86e3-55b8-ff7d" name="Magnetic Short Bow" hidden="false" collective="false" import="true" targetId="3861-3828-6c65-8e74" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="791d-0b28-738b-2094" name="Blowpipe" hidden="false" collective="false" import="true" targetId="a90e-2362-bd05-58f6" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (4+)"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b559-dce8-c95d-fc08" name="Weapon Beasts" hidden="false" collective="false" import="true" type="unit">
@@ -2056,13 +2107,8 @@ Attacks made by enemy units in base contact with one or more models with Contain
         <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5df-1edf-4f29-797a" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="b52c-9103-b617-b372" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
+        <infoLink id="b52c-9103-b617-b372" name="Communal Bond" hidden="false" targetId="28b6-3dc2-c190-5cc3" type="rule"/>
         <infoLink id="42e3-b6df-ff42-1e67" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-        <infoLink id="05f9-78d1-0f29-2805" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (Water Terrain)"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3df6-9bef-04de-85bd" name="New CategoryLink" hidden="false" targetId="0a69-f7af-e4da-3ad0" primary="true"/>
@@ -2080,7 +2126,7 @@ Attacks made by enemy units in base contact with one or more models with Contain
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
                 <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
@@ -2098,7 +2144,7 @@ Attacks made by enemy units in base contact with one or more models with Contain
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Cold-Blooded, Light Troops, Strider (Water Terrain)</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
               </characteristics>
             </profile>
             <profile id="c53f-15a7-6089-695c" name="Weapon Beast Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2113,6 +2159,18 @@ Attacks made by enemy units in base contact with one or more models with Contain
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="826d-4d4e-87ca-5d12" name="Combined Strength" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0506-918b-5a1f-e7a8" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="92e4-f358-213b-e42a" name="Combined Strength" hidden="false" targetId="b693-8ffd-e35f-6b31" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value="(Skink Warriors,SkinkHunters)"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="aaa4-9efe-afcb-3f38" name="Species" hidden="false" collective="false" import="true">
@@ -2122,9 +2180,6 @@ Attacks made by enemy units in base contact with one or more models with Contain
           </constraints>
           <selectionEntries>
             <selectionEntry id="8f22-e3f1-d323-568e" name="Spearback" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e7e-78dd-894c-2c94" type="max"/>
-              </constraints>
               <profiles>
                 <profile id="2321-26e8-f887-dfe3" name="Shoot Spikes" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
                   <characteristics>
@@ -2132,7 +2187,7 @@ Attacks made by enemy units in base contact with one or more models with Contain
                     <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">2D6</characteristic>
                     <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
                     <characteristic name="AP" typeId="857a-4ce1-d134-8701">2</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire. Cannot be used if the model performed a March move. Must declare Stand and Shoot as a Charge Reaction if possible, but does not suffer -1 to hit modifier.</characteristic>
+                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire. This weapon may not be used if the model performed a March Move in this Player Turn. The model must declare Stand and Shoot as a Charge Reaction if possible, but it does not suffer the −1 to-hit modifier for it.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2142,26 +2197,18 @@ Attacks made by enemy units in base contact with one or more models with Contain
             </selectionEntry>
             <selectionEntry id="6cc5-659f-6409-a35e" name="Salamander" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="20.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f72f-58a2-a6a0-8249" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="a20f-b5c2-9053-0cd2" name="Spout Flames" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">8&quot;</characteristic>
-                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-                    <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
-                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">1</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Flame Thrower Artillery Weapon, Flaming Attacks. If a Misfire is rolled, the Salamander always counts as rolling the 5+ Malfunction result.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
+              <rules>
+                <rule id="9e35-9f75-583f-0c7d" name="Spout Flames" hidden="false">
+                  <description>Special Attack.
+The model gains Breath Attack (Str 3, AP 0, Flaming Attacks). This Breath Attack is not limited to being used only once per game and can only be used once per Player Turn.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -2170,76 +2217,77 @@ Attacks made by enemy units in base contact with one or more models with Contain
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e0b7-f470-5bd9-2343" name="Pteradon Sentries" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="e0b7-f470-5bd9-2343" name="Pteradon Riders" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="985d-861b-40a3-3a7e" type="max"/>
       </constraints>
+      <rules>
+        <rule id="19cd-6ce5-f674-6bf3" name="Aerial Assault" hidden="false">
+          <description>Special Attack.
+Units consisting entirely of models with Aerial Assault may perform a Sweeping Attack. The enemy unit suffers 1 hit with Strength 4 and Armour Penetration 1 for each model in the unit.</description>
+        </rule>
+      </rules>
       <infoLinks>
-        <infoLink id="faae-8259-1053-d58c" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
         <infoLink id="a613-1066-b6eb-e85c" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule"/>
         <infoLink id="2582-7573-0daf-8cf8" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
         <infoLink id="6044-e912-b849-5b55" name="Skirmisher" hidden="false" targetId="2ce4-ece5-068c-4d20" type="rule"/>
-        <infoLink id="570f-a656-82cf-bd7f" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (Forest)"/>
-          </modifiers>
-        </infoLink>
         <infoLink id="7a1d-0610-7168-3326" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
         <infoLink id="d72f-b69e-499d-a89d" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="6593-c38d-9f19-2748" name="Release Rocks" hidden="false" targetId="8673-0260-df96-1ca2" type="rule"/>
         <infoLink id="b5d1-0367-4c48-5f17" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
+        <infoLink id="5c6a-b0d1-ed63-9518" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+        <infoLink id="8245-078d-c71e-78e4" name="Communal Bond" hidden="false" targetId="28b6-3dc2-c190-5cc3" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b0b2-34f9-6eab-0fc4" name="New CategoryLink" hidden="false" targetId="0a69-f7af-e4da-3ad0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="74e7-e743-41a4-a508" name="Pteradon Sentry" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="74e7-e743-41a4-a508" name="Pteradon Rider" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed4c-5f9d-8c19-198b" type="max"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f701-a572-9f1c-3eb4" type="min"/>
           </constraints>
           <profiles>
-            <profile id="97ae-1d61-178c-3db4" name="Pteradon Sentry Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="97ae-1d61-178c-3db4" name="Pteradon Rider Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
               <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (9&quot;)</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (18&quot;)</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">5</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Cold-Blooded, Feigned Flight, Fly (9″, 18″), Light Troops, Skirmisher, Strider (Forest), Vanguard</characteristic>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (8&quot;)</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (16&quot;)</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
               </characteristics>
             </profile>
-            <profile id="2598-29f9-5ae8-c488" name="Pteradon Sentry Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="2598-29f9-5ae8-c488" name="Pteradon Rider Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">2</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hard Target (1)</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hard Target (1), Shield</characteristic>
               </characteristics>
             </profile>
-            <profile id="210f-101a-8166-94df" name="Rider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="210f-101a-8166-94df" name="Skink Rider" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
                 <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Light Lance</characteristic>
               </characteristics>
             </profile>
-            <profile id="e39a-70e0-03eb-80e8" name="Pteradon Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="e39a-70e0-03eb-80e8" name="Pteradon" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Release Rocks</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Aerial Assault, Harnessed</characteristic>
               </characteristics>
             </profile>
-            <profile id="36c4-4b8a-97cb-d09b" name="Pteradon Sentry Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+            <profile id="36c4-4b8a-97cb-d09b" name="Pteradon Rider Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
               <characteristics>
                 <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
                 <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
@@ -2248,53 +2296,20 @@ Attacks made by enemy units in base contact with one or more models with Contain
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5c36-96fc-cc98-7910" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="766d-6961-8ef9-4f36" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="2432-e8ab-b80d-8148" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d05c-3251-8b91-01ec" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="bf88-5ad3-8074-6f38">
+        <selectionEntryGroup id="d05c-3251-8b91-01ec" name="Shooting Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b9e-657f-4aef-1511" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d49-f30b-cba4-b2f6" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="bf88-5ad3-8074-6f38" name="Poisoned Javelin (4+)" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50b8-6eae-aae9-ff18" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="e47c-e465-0b91-d54c" name="Poisoned Javelin" hidden="false" targetId="7159-bd2f-96f0-eb19" type="profile">
-                  <modifiers>
-                    <modifier type="append" field="name" value=" (4+)"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="16fd-bf48-8a19-27ac" name="Fire Bola (4+)" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="16fd-bf48-8a19-27ac" name="Marking Bolas (4+)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -2304,30 +2319,60 @@ Attacks made by enemy units in base contact with one or more models with Contain
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7508-2b29-6fd4-1e4e" type="max"/>
               </constraints>
               <profiles>
-                <profile id="28d3-f270-bdc5-3d24" name="Fire Bola (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+                <profile id="28d3-f270-bdc5-3d24" name="Marking Bolas (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
                   <characteristics>
-                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">8&quot;</characteristic>
+                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">12&quot;</characteristic>
                     <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
                     <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
                     <characteristic name="AP" typeId="857a-4ce1-d134-8701">1</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Flaming Attacks, Quick to Fire.</characteristic>
+                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire, Marking Lure.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink id="dbbc-05ad-4897-368f" name="Marking Lure" hidden="false" targetId="2d42-3168-801d-70d6" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink id="9671-a9e1-a7f5-7327" name="Poisoned Javelin" hidden="false" collective="false" import="true" targetId="6f3b-72de-48bd-8fcf" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (4+)"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="f9b6-2010-e81b-1c5d" name="Magnetic Short Bow" hidden="false" collective="false" import="true" targetId="3861-3828-6c65-8e74" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="d3e5-866e-5f8d-ab0f" name="Command Group" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="60f3-6c21-54cf-3681" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry"/>
+            <entryLink id="60f3-6c21-54cf-3681" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value=" with Enclace Wizard"/>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="5114-d592-395e-560d" name="Enclave Wizard (X)" hidden="false" targetId="d656-751c-978f-5a1e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
+              </costs>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6e90-3f58-5696-193e" name="Ramphodon Riders" hidden="false" collective="false" import="true" type="unit">
@@ -2341,32 +2386,38 @@ Attacks made by enemy units in base contact with one or more models with Contain
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7540-9fb6-5793-cbdb" type="max"/>
       </constraints>
+      <rules>
+        <rule id="cd8a-22b3-a0a8-8a15" name="Feeding Frenzy" hidden="false">
+          <description>Attack Attribute – Close Combat.
+The model part gains Devastating Charge (+D3 Att) until the end of the Combat after successfully Charging a unit marked with Prey Scent.</description>
+        </rule>
+      </rules>
       <infoLinks>
-        <infoLink id="27a4-f066-1be2-695a" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
-        <infoLink id="33d5-e2b5-1be1-31c3" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule"/>
+        <infoLink id="27a4-f066-1be2-695a" name="Communal Bond" hidden="false" targetId="28b6-3dc2-c190-5cc3" type="rule"/>
+        <infoLink id="33d5-e2b5-1be1-31c3" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (8&quot;, 16&quot;)"/>
+          </modifiers>
+        </infoLink>
         <infoLink id="fcc0-e3f3-1d86-0b73" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
-        <infoLink id="0af1-fb16-b98d-e92f" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule"/>
+        <infoLink id="0af1-fb16-b98d-e92f" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (1)"/>
+          </modifiers>
+        </infoLink>
         <infoLink id="567a-22b3-1b0e-3421" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
         <infoLink id="d865-8d00-25f5-eecd" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
-        <infoLink id="e0c3-5eba-62f6-f317" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (Forest)"/>
-          </modifiers>
-        </infoLink>
         <infoLink id="045c-7671-b3ca-9141" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
-        <infoLink id="cd83-21c1-4ef4-dec0" name="Prey Scent" hidden="false" targetId="4f66-9166-2062-6337" type="rule"/>
+        <infoLink id="cd83-21c1-4ef4-dec0" name="Predator Senses" hidden="false" targetId="88a9-8e62-50f2-90d6" type="rule"/>
         <infoLink id="eb38-9220-d373-215c" name="Battle Focus" hidden="false" targetId="cc29-65f2-796b-52e2" type="rule"/>
         <infoLink id="7c41-2479-ae8e-83f4" name="Restraints" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="4db6-2316-a754-79b6" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+        <infoLink id="4db6-2316-a754-79b6" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
         <infoLink id="f9fb-9e0d-e74c-617d" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
-        <infoLink id="0c5b-8f0c-9e77-98ea" name="Poisoned Javelin" hidden="false" targetId="7159-bd2f-96f0-eb19" type="profile">
-          <modifiers>
-            <modifier type="append" field="name" value=" (4+)"/>
-          </modifiers>
-        </infoLink>
+        <infoLink id="03b9-e1cc-17c6-e20a" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="f570-8a96-cd0f-0c7f" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="fd45-dd2d-de5a-9f1e" name="New CategoryLink" hidden="false" targetId="0a69-f7af-e4da-3ad0" primary="true"/>
+        <categoryLink id="4517-d02b-dcf4-5712" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c9bd-3e81-e42d-c4e1" name="Ramphodon Rider" hidden="false" collective="false" import="true" type="model">
@@ -2380,36 +2431,36 @@ Attacks made by enemy units in base contact with one or more models with Contain
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">2&quot; (8&quot;)</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot; (16&quot;)</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Cold-Blooded, Fearless, Fly (8″, 16″), Frenzy, Light Troops, Strider (Forest), Vanguard</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
               </characteristics>
             </profile>
             <profile id="07e7-509f-2d95-53d2" name="Ramphodon Rider Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">2</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hard Target (1), Light Armour</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hard Target (1), Shield</characteristic>
               </characteristics>
             </profile>
-            <profile id="4916-e1ca-15da-cff0" name="Rider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="4916-e1ca-15da-cff0" name="Skink Rider" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Light Lance, Poisoned Javelin (4+)</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Light Lance</characteristic>
               </characteristics>
             </profile>
             <profile id="3579-987a-dbb6-f883" name="Ramphodon" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Battle Focus, Harnessed, Lethal Strike, Prey Scent</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Battle Focus, Feeding Frenzy, Harnessed, Lethal Strike, Predator Senses</characteristic>
               </characteristics>
             </profile>
             <profile id="7de5-e0e5-9f16-c0b4" name="Ramphodon Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -2424,24 +2475,6 @@ Attacks made by enemy units in base contact with one or more models with Contain
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="49.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3228-1b46-622d-e3ed" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="11.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5cdd-5a79-4348-6161" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="d08b-092f-766e-28ea" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="d7cb-de47-161f-487d" name="Command Group" hidden="false" collective="false" import="true">
@@ -2451,7 +2484,7 @@ Attacks made by enemy units in base contact with one or more models with Contain
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="77.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7aec-c5e2-0281-0b84" name="Taurosaur" hidden="false" collective="false" import="true" type="unit">
@@ -2600,73 +2633,25 @@ Attacks made by enemy units in base contact with one or more models with Contain
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="470.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5f37-052e-e523-e174" name="Stygiosaur" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="5f37-052e-e523-e174" name="Stygiosaur Pack" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3af8-829a-02f1-cab5" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="5ac8-7c07-bb06-4682" name="Stygiosaur Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Cold-Blooded, Fear, Terror, Towering Presence</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4149-3fc6-f1a8-caca" name="Stygiosaur Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-          </characteristics>
-        </profile>
-        <profile id="8ef8-dd4c-bd03-2ed6" name="Stygiosaur Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Born Predator, Breath Attack (Toxic Attacks), Harnessed, Poison Attacks, Stomp Attacks (D3)</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="80fc-e591-be9c-32c6" name="Skink Rider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-          </characteristics>
-        </profile>
-        <profile id="ed78-5eab-bfd2-9ed4" name="Stygiosaur Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
-        <infoLink id="dad1-0ee7-ce84-4ba3" name="Born Predator" hidden="false" targetId="dc2d-109e-9221-8880" type="rule"/>
-        <infoLink id="22ff-6256-99dc-8389" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
-        <infoLink id="5282-7bb2-1b0d-5c7e" name="Terror" hidden="false" targetId="0b48-87f9-1467-7ef2" type="rule"/>
-        <infoLink id="1009-a892-028c-e5c2" name="Towering Presence" hidden="false" targetId="9ca4-65be-33fc-5d47" type="rule"/>
-        <infoLink id="afb0-1391-0b1c-95eb" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
-        <infoLink id="cc19-772b-4d9e-712d" name="Restraints" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="75a3-3ab3-f7f9-a109" name="Breath Attack" hidden="false" targetId="3be7-d693-e8e8-6b1e" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (Toxic Attacks)"/>
-          </modifiers>
-        </infoLink>
+        <infoLink id="dad1-0ee7-ce84-4ba3" name="Communal Bond" hidden="false" targetId="28b6-3dc2-c190-5cc3" type="rule"/>
+        <infoLink id="5282-7bb2-1b0d-5c7e" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
+        <infoLink id="1009-a892-028c-e5c2" name="Predator Senses" hidden="false" targetId="88a9-8e62-50f2-90d6" type="rule"/>
+        <infoLink id="afb0-1391-0b1c-95eb" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+        <infoLink id="cc19-772b-4d9e-712d" name="Pack Hunter" hidden="false" targetId="57a6-fb89-b7b3-d611" type="rule"/>
+        <infoLink id="75a3-3ab3-f7f9-a109" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
         <infoLink id="ca4f-4b78-f4c0-04f8" name="Stomp Attacks" hidden="false" targetId="4810-6726-807b-e78e" type="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (D3)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="11df-6442-2c7d-b6ca" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
+        <infoLink id="408e-7fcb-303c-a4fb" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+        <infoLink id="6cc3-1883-e0b1-3d49" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5ea0-8ea5-d335-1669" name="New CategoryLink" hidden="false" targetId="634f-0995-844c-451a" primary="true"/>
@@ -2689,9 +2674,96 @@ Attacks made by enemy units in base contact with one or more models with Contain
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="c5c7-1f3a-c856-b37f" name="Stygiosaur" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9bf-4de4-6894-5015" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a608-1f8a-0b26-befd" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="0e53-8a5b-0e84-d816" name="Stygiosaur Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="72e5-6486-caae-c151" name="Stygiosaur Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3c1e-ebd7-907d-52ca" name="Stygiosaur Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+              <characteristics>
+                <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
+                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour, Shield</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="c82f-84ff-c5e6-6881" name="Skink Rider" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Light Lance</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3f25-b720-4457-4b5e" name="Stygiosaur" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Poison Attacks, Predator Senses, Stomp Attacks (D3)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e83d-73c9-0e39-4743" name="Command Group" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="f752-ee2b-a13c-d904" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="5943-445d-4e36-aaf8" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="8f82-6955-3d8a-01ea" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8638-5c56-5d7f-b8dd" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="38e8-afdf-2202-3350" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="f073-d8c0-9f2e-1ee4" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="3af6-db93-81f5-eadd" name="SA Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="9924-709e-6518-4522" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="285.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4c39-d252-7c8a-162b" name="Thyroscutus Herd" hidden="false" collective="false" import="true" type="unit">
@@ -2724,7 +2796,7 @@ Attacks made by enemy units in base contact with one or more models with Contain
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="a71b-8dd8-6787-e8a6" name="Thyroscutus Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
@@ -2743,7 +2815,7 @@ Attacks made by enemy units in base contact with one or more models with Contain
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
                 <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"></characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
               </characteristics>
             </profile>
             <profile id="153c-4f97-7645-b4f0" name="Thyroscutus Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -2850,9 +2922,6 @@ The model’s unit gains Cannot be Stomped, and R&amp;F models in the unit gain 
 Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers -1 Attack Value.</description>
         </rule>
       </rules>
-      <infoLinks>
-        <infoLink id="55de-6203-5794-eaa8" name="Cold Blooded" hidden="false" targetId="c357-84cc-757a-d28b" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="3c17-c344-0084-eb83" name="New CategoryLink" hidden="false" targetId="634f-0995-844c-451a" primary="true"/>
       </categoryLinks>
@@ -3074,7 +3143,7 @@ If allocated towards a Standard Height model, the attack gains +1 to wound.</des
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="b8f3-ac86-3e37-1c33" name="Raptor Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3183,7 +3252,7 @@ The model gains Poison Attacks. In addition, the model gains Breath Attack (Str 
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="28de-c215-6210-6ba5" name="Raptor Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3264,6 +3333,9 @@ The model gains Poison Attacks. In addition, the model gains Breath Attack (Str 
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf3a-13dc-c051-4492" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -3309,6 +3381,112 @@ The model gains Poison Attacks. In addition, the model gains Breath Attack (Str 
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bd38-4d64-09c6-0387" name="Carnosaur" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fdf-b7f8-6cc0-ee2c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="74a4-77d8-9d36-ffaf" name="Carnosaur Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+          <characteristics>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
+            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"></characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c59e-dbf0-9995-7f05" name="Carnosaur Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+          <characteristics>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
+            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
+            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
+            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
+          </characteristics>
+        </profile>
+        <profile id="20a0-4a2b-f83c-f4c4" name="Carnosaur Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Battle Focus, Harnessed, Multiple Wounds (2, against Standard, Large), Predator Senses</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6220-72b4-6f75-6a00" name="Tegu Rider" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+          <characteristics>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
+            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
+            <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lodestone</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3d02-5e64-93d5-5f31" name="Carnosaur Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+          <characteristics>
+            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
+            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
+            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9a9e-e3fc-0caf-c159" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
+        <infoLink id="6c25-6b6e-b7e9-83c8" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="a125-b70c-ef59-6b21" name="Communal Bond" hidden="false" targetId="28b6-3dc2-c190-5cc3" type="rule"/>
+        <infoLink id="eadd-be1a-5806-f879" name="Battle Focus" hidden="false" targetId="cc29-65f2-796b-52e2" type="rule"/>
+        <infoLink id="108c-242e-eaca-0238" name="Lodestone" hidden="false" targetId="8856-272c-4b1b-4461" type="rule"/>
+        <infoLink id="631b-cd9c-e174-3c27" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
+        <infoLink id="a5a7-f36b-f0f4-e697" name="Multiple Wounds" hidden="false" targetId="2ea2-3a42-de1e-bc0a" type="rule"/>
+        <infoLink id="61f0-7358-5b88-7359" name="Predator Senses" hidden="false" targetId="88a9-8e62-50f2-90d6" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="07bd-073d-66e5-c42f" name="New CategoryLink" hidden="false" targetId="634f-0995-844c-451a" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a2d4-8822-084f-488a" name="Combined Strength and Hunt Leader" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a029-4499-0068-de48" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="ac0d-f500-7174-baee" name="Hunt Leader" hidden="false">
+              <description>Universal Rule.
+R&amp;F models in the model’s unit gain Frenzy and Fearless. Standard Beasts and model parts with Harnessed in the model’s unit gain Battle Focus.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="4e41-4d57-0f86-7a96" name="Combined Strength" hidden="false" targetId="b693-8ffd-e35f-6b31" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (Raptor Riders, Raptor Pack)"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7767-3a80-6226-add6" name="Melee Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1134-1dd5-dff0-b1f8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3dd6-024a-5950-a7e2" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="8607-65d8-69b7-c6b5" name="Light Lance" hidden="false" collective="false" import="true" targetId="7efd-252a-dcad-fa35" type="selectionEntry"/>
+            <entryLink id="80db-8ffa-f795-dd21" name="Halberd" hidden="false" collective="false" import="true" targetId="544f-9331-9cce-694d" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="370.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -4616,9 +4794,6 @@ One use only. At the start of any friendly Player Turn, you may remove an unenga
     <rule id="dc2d-109e-9221-8880" name="Born Predator" hidden="false">
       <description>Model parts with this Attack Attribute may reroll natural to-hit rolls of ‘1’ with their Close Combat Attacks.</description>
     </rule>
-    <rule id="c357-84cc-757a-d28b" name="Cold Blooded" hidden="false">
-      <description>If more than half of a unit’s models have Cold-Blooded, Discipline Tests are subject to Minimised Roll.</description>
-    </rule>
     <rule id="bca6-c3cb-3ba2-61f1" name="Engine of the Ancients" hidden="false">
       <description>The model gains Telepathic Link. At the beginning of each friendly Player Turn, choose one of the following configurations. The effects last until the beginning of the next friendly Player Turn:
 - Choose a Magic Path. Friendly Wizards casting spells from this Path have the casting values decreased by 1.
@@ -4640,7 +4815,7 @@ first friendly Player Turn.</description>
     <rule id="8441-e171-394d-dbb7" name="Chameleon" hidden="false">
       <description>The model gains Ambush, Hard Target (1), and Scout.</description>
     </rule>
-    <rule id="b693-8ffd-e35f-6b31" name="Combined Strength (X)" hidden="false">
+    <rule id="b693-8ffd-e35f-6b31" name="Combined Strength" hidden="false">
       <description>At step 8 of the Pre-Game Sequence (after Spell Selection), each unit with Combined Strength may be merged with a unit from one of the unit entries in brackets (X), forming a single unit called a Compound Unit. No unit can be merged with more than one other unit. In this context, the unit with Combined Strength is referred to as Guest Unit and its models as Guest Models, and the unit it is merged with is referred to as Host Unit and its models as Host Models. 
 
 Guest Models lose any Champion upgrade and Banner Enchantment until the end of the game, and, while part of a Compound Unit, they gain Fight in Extra Rank.
