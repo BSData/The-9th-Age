@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7737-33f3-3897-4541" name="Saurian Ancients 2022.2 Alpha 1" revision="1" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ebfc-b7cd-7aab-4b76" name="Saurian Ancients 2022.2 Alpha 1" revision="1" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="53" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="0a69-f7af-e4da-3ad0" name="Guerrilla Warriors" hidden="false"/>
     <categoryEntry id="634f-0995-844c-451a" name="Magna Sauria" hidden="false"/>
@@ -480,7 +480,7 @@ At the start of each friendly Magic Phase, the model may choose to lose all inst
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="95c3-d71a-20c9-7653" name="Forbideen Mastery" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="95c3-d71a-20c9-7653" name="Forbidden Mastery" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="361b-a053-9e09-ebb7" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a93e-3ca9-1e6e-6ea3" type="max"/>
@@ -1081,47 +1081,6 @@ While using a mundane weapon, the model is subject to the following rules corres
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="2e82-2f57-9576-5708" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="ef69-c096-ad3d-8fa5">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5891-ae5c-7f94-e8ff" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cfb-a7e1-0797-9917" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="462f-1be3-c9cd-edd9" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="c73d-37e8-2340-287d" value="0.0">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="05d1-0c88-6284-fafd" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eedf-4585-d0c1-f613" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-              </costs>
-            </entryLink>
-            <entryLink id="ef69-c096-ad3d-8fa5" name="Halberd" hidden="false" collective="false" import="true" targetId="544f-9331-9cce-694d" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="b311-493d-9678-8b90" value="0.0">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="05d1-0c88-6284-fafd" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eedf-4585-d0c1-f613" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="2364-e4a4-38c9-8451" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
           <constraints>
@@ -1134,6 +1093,9 @@ While using a mundane weapon, the model is subject to the following rules corres
       </costs>
     </selectionEntry>
     <selectionEntry id="ec7c-18f7-71ee-668a" name="Tegu Warriors" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f244-e997-69ef-3dda" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="5054-56ed-f95d-2867" name="Communal Bond" hidden="false" targetId="28b6-3dc2-c190-5cc3" type="rule"/>
         <infoLink id="6acf-1b94-40a3-364a" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
@@ -1206,7 +1168,20 @@ While using a mundane weapon, the model is subject to the following rules corres
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ae56-10ad-65ab-77a1" name="Enclave Wizard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ae56-10ad-65ab-77a1" name="Enclave Wizard (50×50)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="742c-c0d9-7d08-e30f" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c3e7-8c28-0d42-6aa8" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="742c-c0d9-7d08-e30f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="2d70-ee05-b737-2818" name="Enclave Wizard" hidden="false" targetId="d656-751c-978f-5a1e" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
           </costs>
@@ -1250,7 +1225,7 @@ While using a mundane weapon, the model is subject to the following rules corres
     </selectionEntry>
     <selectionEntry id="6d6a-55bb-f04f-5b8f" name="Skink Warriors" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="58ec-ff9e-eebe-bb20" type="max"/>
+        <constraint field="selections" scope="roster" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="58ec-ff9e-eebe-bb20" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="12ce-084a-96f2-1904" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
@@ -1327,7 +1302,20 @@ While using a mundane weapon, the model is subject to the following rules corres
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4fde-aa87-a66f-c15b" name="Enclave Wizard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4fde-aa87-a66f-c15b" name="Enclave Wizard (40×40)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="72aa-f6ae-b6de-828d" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c3e7-8c28-0d42-6aa8" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="72aa-f6ae-b6de-828d" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7284-6e5e-3dd3-c551" name="Enclave Wizard" hidden="false" targetId="d656-751c-978f-5a1e" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
@@ -1477,7 +1465,7 @@ Attacks made by enemy units in base contact with one or more models with Contain
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="337a-50a0-01e8-8426" name="Melee Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="337a-50a0-01e8-8426" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="3b2a-fd18-a8f8-f26e">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6708-6858-bf37-3ec2" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3162-5530-15a7-b4d9" type="max"/>
@@ -1694,12 +1682,17 @@ Attacks made by enemy units in base contact with one or more models with Contain
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8a51-1511-0d33-8fea" name="Combined Strength (Skink Warriors)" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8a51-1511-0d33-8fea" name="Combined Strength (SW)" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="fc14-c2b6-cc99-7d40" value="0.0">
               <conditions>
                 <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="10.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <constraints>
@@ -1708,36 +1701,18 @@ Attacks made by enemy units in base contact with one or more models with Contain
           <infoLinks>
             <infoLink id="5a11-d1a2-0386-4edd" name="Combined Strength" hidden="false" targetId="b693-8ffd-e35f-6b31" type="rule"/>
           </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0267-35ff-59dc-fa5d" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="6084-fe4b-2bb7-1bac">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da79-24ee-53aa-11c1" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a147-1b9a-1b70-e87e" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6084-fe4b-2bb7-1bac" name="Tooth and Claw" hidden="false" collective="false" import="true" targetId="a3c2-ee0d-a3b3-c3cc" type="selectionEntry"/>
-            <entryLink id="b2e7-44e2-9368-fe3f" name="Halberd" hidden="false" collective="false" import="true" targetId="544f-9331-9cce-694d" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
         <selectionEntryGroup id="5adf-0764-36b0-c52e" name="Command Group" hidden="false" collective="false" import="true">
           <entryLinks>
             <entryLink id="7a10-3b90-25c7-d058" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry">
               <modifiers>
                 <modifier type="append" field="name" value=" with Enclave Wizard"/>
               </modifiers>
+              <infoLinks>
+                <infoLink id="0f6d-a6eb-592c-559a" name="Enclave Wizard" hidden="false" targetId="d656-751c-978f-5a1e" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
               </costs>
@@ -1766,6 +1741,22 @@ Attacks made by enemy units in base contact with one or more models with Contain
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="0034-f7c4-a32d-754b" name="Tooth and Claw" hidden="false" collective="false" import="true" targetId="a3c2-ee0d-a3b3-c3cc" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81ec-136c-df35-12b0" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="2c82-d561-ea8a-efd2" name="Halberd" hidden="false" collective="false" import="true" targetId="544f-9331-9cce-694d" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
@@ -1905,7 +1896,7 @@ Attacks made by enemy units in base contact with one or more models with Contain
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="11.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="6.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1916,6 +1907,9 @@ Attacks made by enemy units in base contact with one or more models with Contain
               <modifiers>
                 <modifier type="append" field="name" value=" with Enclave Wizard"/>
               </modifiers>
+              <infoLinks>
+                <infoLink id="91fd-b5b8-8016-874f" name="Enclave Wizard" hidden="false" targetId="d656-751c-978f-5a1e" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
               </costs>
@@ -1924,7 +1918,7 @@ Attacks made by enemy units in base contact with one or more models with Contain
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c47d-f1d3-eaf7-54e1" name="Skink Guerillas" hidden="false" collective="false" import="true" type="unit">
@@ -2133,11 +2127,53 @@ Attacks made by enemy units in base contact with one or more models with Contain
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="e1b1-cdbb-b1c0-d3ca" name="Species" hidden="false" collective="true" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d26-c768-1775-0ac5" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="06ce-ab1f-1471-683e" name="Spearback" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9387-4893-428d-457b" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="8625-00b2-e33c-5343" name="Shoot Spikes" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+                      <characteristics>
+                        <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">18&quot;</characteristic>
+                        <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">2D6</characteristic>
+                        <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
+                        <characteristic name="AP" typeId="857a-4ce1-d134-8701">2</characteristic>
+                        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire. This weapon may not be used if the model performed a March Move in this Player Turn. The model must declare Stand and Shoot as a Charge Reaction if possible, but it does not suffer the −1 to-hit modifier for it.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="ca37-80c1-a60f-d06d" name="Salamander" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d2f7-8414-bec7-1ce5" type="max"/>
+                  </constraints>
+                  <rules>
+                    <rule id="8229-2c5b-9b2a-652e" name="Spout Flames" hidden="false">
+                      <description>Special Attack.
+The model gains Breath Attack (Str 3, AP 0, Flaming Attacks). This Breath Attack is not limited to being used only once per game and can only be used once per Player Turn.</description>
+                    </rule>
+                  </rules>
+                  <costs>
+                    <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="826d-4d4e-87ca-5d12" name="Combined Strength" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="826d-4d4e-87ca-5d12" name="Combined Strength (SW, SH)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0506-918b-5a1f-e7a8" type="max"/>
           </constraints>
@@ -2153,50 +2189,6 @@ Attacks made by enemy units in base contact with one or more models with Contain
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="aaa4-9efe-afcb-3f38" name="Species" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1fa-fa8a-add1-684e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fda-e95a-1556-e306" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="8f22-e3f1-d323-568e" name="Spearback" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="2321-26e8-f887-dfe3" name="Shoot Spikes" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">18&quot;</characteristic>
-                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">2D6</characteristic>
-                    <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
-                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">2</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire. This weapon may not be used if the model performed a March Move in this Player Turn. The model must declare Stand and Shoot as a Charge Reaction if possible, but it does not suffer the −1 to-hit modifier for it.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6cc5-659f-6409-a35e" name="Salamander" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <rules>
-                <rule id="9e35-9f75-583f-0c7d" name="Spout Flames" hidden="false">
-                  <description>Special Attack.
-The model gains Breath Attack (Str 3, AP 0, Flaming Attacks). This Breath Attack is not limited to being used only once per game and can only be used once per Player Turn.</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
@@ -2726,15 +2718,18 @@ The number of hits from the model’s Stomp Attacks is set to 4D3. For the purpo
               </characteristics>
             </profile>
           </profiles>
+          <entryLinks>
+            <entryLink id="4f91-4ad3-cbf6-e333" name="Howdah Device (Thyroscutus Herd)" hidden="false" collective="true" import="true" targetId="a1e5-c7a0-ee19-c660" type="selectionEntryGroup"/>
+          </entryLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="145.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="44bf-2f94-f13c-a27d" name="Combined Strength (Tegu Warriors &amp; Guards) and Great Protector" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="44bf-2f94-f13c-a27d" name="Combined Strength (TW, TG) &amp; Great Protector" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="c5c2-810e-f0fb-fa73" value="0.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2747,14 +2742,14 @@ The number of hits from the model’s Stomp Attacks is set to 4D3. For the purpo
 The model’s unit gains Cannot be Stomped, and R&amp;F models in the unit gain Parry.</description>
             </rule>
           </rules>
+          <infoLinks>
+            <infoLink id="89ee-c470-d72d-204a" name="Combined Strength" hidden="false" targetId="b693-8ffd-e35f-6b31" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="f25b-c111-0642-f8e3" name="Howdah Device (Thyroscutus Herd)" hidden="false" collective="false" import="true" targetId="a1e5-c7a0-ee19-c660" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
       </costs>
@@ -2982,6 +2977,9 @@ If allocated towards a Standard Height model, the attack gains +1 to wound.</des
               <modifiers>
                 <modifier type="append" field="name" value=" with Enclave Wizard"/>
               </modifiers>
+              <infoLinks>
+                <infoLink id="29b9-2df0-02a5-9d09" name="Enclave Wizard" hidden="false" targetId="d656-751c-978f-5a1e" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
               </costs>
@@ -3233,7 +3231,7 @@ The model gains Poison Attacks. In addition, the model gains Breath Attack (Str 
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9ec9-d7e4-bb9e-772c" name="Combined Strength (Tegu Warriors, Tegu Guards)" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9ec9-d7e4-bb9e-772c" name="Combined Strength (TW, TG)" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="cf3a-13dc-c051-4492" value="0.0">
               <conditions>
@@ -3244,6 +3242,9 @@ The model gains Poison Attacks. In addition, the model gains Breath Attack (Str 
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf3a-13dc-c051-4492" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="8617-2b25-f969-85d4" name="Combined Strength" hidden="false" targetId="b693-8ffd-e35f-6b31" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
@@ -3278,6 +3279,9 @@ The model gains Poison Attacks. In addition, the model gains Breath Attack (Str 
               <modifiers>
                 <modifier type="append" field="name" value=" with Enclave Wizard"/>
               </modifiers>
+              <infoLinks>
+                <infoLink id="f6b9-f0d5-d11a-ee8a" name="Enclave Wizard" hidden="false" targetId="d656-751c-978f-5a1e" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
               </costs>
@@ -3374,7 +3378,7 @@ The model gains Poison Attacks. In addition, the model gains Breath Attack (Str 
         <categoryLink id="07bd-073d-66e5-c42f" name="New CategoryLink" hidden="false" targetId="634f-0995-844c-451a" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="a2d4-8822-084f-488a" name="Combined Strength and Hunt Leader" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a2d4-8822-084f-488a" name="Combined Strength (RR, RP) &amp; Hunt Leader" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a029-4499-0068-de48" type="max"/>
           </constraints>
@@ -3487,7 +3491,7 @@ R&amp;F models in the model’s unit gain Frenzy and Fearless. Standard Beasts a
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
-    <selectionEntry id="1a35-f5d6-d8da-bdbe" name="Alpha Carnosaur (Mount)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="1a35-f5d6-d8da-bdbe" name="Alpha Carnosaur" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5522-1a9b-db1b-bf72" type="max"/>
       </constraints>
@@ -3884,7 +3888,7 @@ One use only. The bearer’s unit and all units in base contact with the bearer�
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1296-31e9-e6ac-2f8d" name="Carved Wisdom" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="1296-31e9-e6ac-2f8d" name="Carved Wisdom" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5622-ec3e-8976-f400" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="709d-cdb6-40c4-db63" type="max"/>
@@ -3907,7 +3911,7 @@ Each spell can only be chosen by a single model with Carved Wisdom.</characteris
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="164e-030e-432a-b4af" name="Monolith of Vitalism" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="164e-030e-432a-b4af" name="Monolith of Vitalism" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4db9-bc5f-1462-08c8" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5918-4081-798c-cbfe" type="max"/>
@@ -3927,7 +3931,7 @@ Each spell can only be chosen by a single model with Carved Wisdom.</characteris
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d9df-3cc3-1450-ef7e" name="Venomous Fortress" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="d9df-3cc3-1450-ef7e" name="Venomous Fortress" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7bd-4838-21ed-94fc" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="67e4-150d-6cce-dce2" type="max"/>
@@ -3944,7 +3948,7 @@ Each spell can only be chosen by a single model with Carved Wisdom.</characteris
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2625-e919-8ccb-85c1" name="Suncatcher Crystal" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="2625-e919-8ccb-85c1" name="Suncatcher Crystal" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b872-9610-b857-44ce" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="527f-0376-221b-34e7" type="max"/>
@@ -3963,7 +3967,7 @@ Each spell can only be chosen by a single model with Carved Wisdom.</characteris
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2050-1cfc-727c-131e" name="Magnetic Great Bow (3+)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="2050-1cfc-727c-131e" name="Magnetic Great Bow (3+)" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20e2-b410-45f7-0398" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e1a3-bbdd-4064-0e4e" type="max"/>
@@ -4147,7 +4151,7 @@ Each spell can only be chosen by a single model with Carved Wisdom.</characteris
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="437d-2750-dd63-d2f8" name="Engine of the Ancients (3+)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="437d-2750-dd63-d2f8" name="Engine of the Ancients (3+)" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd22-ff23-b155-9678" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64b0-b5ca-eced-e40d" type="max"/>
@@ -4431,7 +4435,7 @@ One use only. At the start of any friendly Player Turn, you may remove an unenga
         <entryLink id="5db4-9830-0b5d-8271" name="Suncatcher Crystal" hidden="false" collective="false" import="true" targetId="2625-e919-8ccb-85c1" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="a1e5-c7a0-ee19-c660" name="Howdah Device (Thyroscutus Herd)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="a1e5-c7a0-ee19-c660" name="Howdah Device (Thyroscutus Herd)" hidden="false" collective="true" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1085-e117-b96d-eb3a" type="max"/>
       </constraints>
@@ -4441,7 +4445,7 @@ One use only. At the start of any friendly Player Turn, you may remove an unenga
         <entryLink id="f442-80e8-52b5-b4fb" name="Engine of the Ancients (3+)" hidden="false" collective="false" import="true" targetId="437d-2750-dd63-d2f8" type="selectionEntry"/>
         <entryLink id="48c1-1a7d-0f2d-0cf2" name="Magnetic Great Bow (3+)" hidden="false" collective="false" import="true" targetId="2050-1cfc-727c-131e" type="selectionEntry"/>
         <entryLink id="21ba-e4bf-5592-e858" name="Suncatcher Crystal" hidden="false" collective="false" import="true" targetId="2625-e919-8ccb-85c1" type="selectionEntry"/>
-        <entryLink id="9c2d-780e-6e2d-5567" name="Venomous Fortress (only on Thyroscutus Herd)" hidden="false" collective="false" import="true" targetId="d9df-3cc3-1450-ef7e" type="selectionEntry"/>
+        <entryLink id="9c2d-780e-6e2d-5567" name="Venomous Fortress" hidden="false" collective="false" import="true" targetId="d9df-3cc3-1450-ef7e" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="df20-c249-88e4-1c91" name="SA Weapon Enchantments (Skink)" hidden="false" collective="false" import="true">
