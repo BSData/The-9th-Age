@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2022" revision="53" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2023 Beta 1" revision="54" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -268,7 +268,7 @@
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy (not with Not A Leader)" hidden="false" collective="false" import="true" type="upgrade">
@@ -394,7 +394,7 @@ The model&apos;s range of Commanding Presence (if available) is increased by 3&q
         <profile id="d275-4b93-adb6-e803" name="Dragonfire Gem" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (2+, against Flaming Attacks). The bearer automatically fails all Fortitude Saves.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (3+, against Flaming Attacks). The bearer automatically fails all Fortitude Saves.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -423,7 +423,7 @@ The model&apos;s range of Commanding Presence (if available) is increased by 3&q
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ebd9-2cee-402a-4ff4" name="Lucky Charm" hidden="false" collective="false" import="true" type="upgrade">
@@ -668,12 +668,12 @@ The model&apos;s range of Commanding Presence (if available) is increased by 3&q
         <profile id="25e1-86d3-6929-6ea0" name="Book of Arcane Mastery" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The Bearer&apos;s first casting attempt in each magic phase gains +2 to cast. When using a single magic die for this casting attempt, a natural roll of 1 or 2 on the magic die is always a failed casting attempt, regardless of any modifiers.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Unless the bearer has Protean Magic, it knows one additional Learned Spell that it selects from the Learned Spells 1, 2, 3, and 4 of its chosen Path. In addition, the bearer cannot cast the Hereditary Spell.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3db5-8d52-cfe9-fbfa" name="Essence of a Free Mind" hidden="false" collective="false" import="true" type="upgrade">
@@ -910,35 +910,6 @@ The effects last until the end of the Player Turn.</characteristic>
       </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="d276-08bb-7326-4146" name="Rending Banner" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="483b-11bc-457b-5097" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="483b-11bc-457b-5097" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a197-cee8-e0be-6a88" type="max"/>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="483b-11bc-457b-5097" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="8d44-0648-8c76-8d65" name="Rending Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of a Round of Combat. Close Combat Attacks from R&amp;F models in the bearer&apos;s unit gain +1 Armour Penetration until they are no longer engaged in combat. A model can only be affected by a single Rending Banner at the same time.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1339-adda-070d-906c" name="Stalker&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade">
@@ -1336,31 +1307,7 @@ The effects last until the end of the Player Turn.</characteristic>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2f2-85bc-ce11-c49d" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="2f88-9ecd-8c12-0dcb" name="Titanic Might" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="7155-2463-ebaa-8001" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="676b-52a1-7bb8-3a71" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7155-2463-ebaa-8001" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2d3d-c4fc-c6f2-23a2" name="Titanic Might" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this enchanted weapon gain +3 Strength and Magical Attacks.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="311e-5a0b-83f2-9069" name="Blessed Inscriptions" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="311e-5a0b-83f2-9069" name="Eldritch Inscriptions" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="c5ae-726c-f925-b6b3" value="2.0">
               <conditions>
@@ -1373,15 +1320,15 @@ The effects last until the end of the Player Turn.</characteristic>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c5ae-726c-f925-b6b3" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c829-3241-7dd4-d4b0" name="Blessed Inscriptions" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
+            <profile id="c829-3241-7dd4-d4b0" name="Eldritch Inscriptions" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this enchanted weapon gain Divine Attacks and failed to-wound rolls must be rerolled.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Failed to-wound rolls from attacks made with this weapon must be rerolled.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3eeb-4d3a-ca9b-17e5" name="King Slayer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1400,7 +1347,7 @@ The effects last until the end of the Player Turn.</characteristic>
             <profile id="42bb-c25a-0a67-996e" name="King Slayer" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder of the enchanted weapon gains +X Strength, +X Armour Penetration, +X Attack Value and Magical Attacks when attacking with it, where X is equal to the number of enemy Characters in base contact with the wielder&apos;s unit. This bonus is calculated and effective at the Initiative Step when such attacks are made.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder gains +X Attack Value while using this weapon, and attacks made with this weapon gain +X Strength and +X Armour Penetration, where X is equal to the number of enemy Characters in base contact with the wielder’s unit. This bonus is calculated at the Initiative Step when the attacks are made.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1472,7 +1419,7 @@ The effects last until the end of the Player Turn.</characteristic>
             <profile id="3dae-893d-ab4b-a760" name="Touch of Greatness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this enchanted weapon gain +1 Strength, +1 Armour Penetration and Magical Attacks. Strength modifiers from this weapon (combining both mundane and Weapon Enchantment modifiers) cannot exceed +2 (but can exceed +2 through modifiers from other sources, such as spells).</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon gain +1 Strength and +1 Armour Penetration. Strength modifiers from this weapon (combining both mundane and Weapon Enchantment modifiers) cannot exceed +2 (but can exceed +2 through modifiers from other sources, such as spells).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1520,12 +1467,12 @@ The effects last until the end of the Player Turn.</characteristic>
             <profile id="72e2-3e89-1f4a-9ee7" name="Cleansing Light" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
               <characteristics>
                 <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">At the start of each Round of Combat, the wielder may choose to give attacks made with this enchanted weapon Flaming Attacks and Magical Attacks.</characteristic>
+                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">At the start of each Round of Combat, the wielder may choose to have attacks made with this weapon become Divine Attacks and Flaming Attacks. The effects last until the end of the Round of Combat.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1616,7 +1563,6 @@ The effects last until the end of the Player Turn.</characteristic>
         <entryLink id="df6b-d277-de58-63c7" name="Banner of Discipline" hidden="false" collective="false" import="true" targetId="bd1e-b521-5357-bc0e" type="selectionEntry"/>
         <entryLink id="d4a1-a7e4-c789-6347" name="Banner of Speed" hidden="false" collective="false" import="true" targetId="c253-ce04-6c42-8bf6" type="selectionEntry"/>
         <entryLink id="bb2c-8475-bb19-83e7" name="Banner of the Relentless Company" hidden="false" collective="false" import="true" targetId="6454-0e64-e88b-0afa" type="selectionEntry"/>
-        <entryLink id="f767-ec69-425a-3086" name="Rending Banner" hidden="false" collective="false" import="true" targetId="d276-08bb-7326-4146" type="selectionEntry"/>
         <entryLink id="3046-d937-6007-f9a9" name="Flaming Standard" hidden="false" collective="false" import="true" targetId="58a9-c83f-8819-4bfa" type="selectionEntry"/>
         <entryLink id="6fda-106b-c998-3348" name="Stalker&apos;s Standard" hidden="false" collective="false" import="true" targetId="1339-adda-070d-906c" type="selectionEntry"/>
         <entryLink id="0992-5c15-3353-133d" name="Legion Standard" hidden="false" collective="false" import="true" targetId="e2f6-29ee-8b26-9f6e" type="selectionEntry"/>
@@ -1631,7 +1577,6 @@ The effects last until the end of the Player Turn.</characteristic>
         <entryLink id="b485-d7a5-7901-04c6" name="Banner of Discipline" hidden="false" collective="false" import="true" targetId="bd1e-b521-5357-bc0e" type="selectionEntry"/>
         <entryLink id="7270-a619-9d01-bab9" name="Banner of Speed" hidden="false" collective="false" import="true" targetId="c253-ce04-6c42-8bf6" type="selectionEntry"/>
         <entryLink id="2314-1e37-1921-1a3a" name="Banner of the Relentless Company" hidden="false" collective="false" import="true" targetId="6454-0e64-e88b-0afa" type="selectionEntry"/>
-        <entryLink id="f23c-a9bf-a036-2b1b" name="Rending Banner" hidden="false" collective="false" import="true" targetId="d276-08bb-7326-4146" type="selectionEntry"/>
         <entryLink id="0621-a3d6-4ab0-3240" name="Flaming Standard" hidden="false" collective="false" import="true" targetId="58a9-c83f-8819-4bfa" type="selectionEntry"/>
         <entryLink id="a381-eb39-4e82-c6b5" name="Stalker&apos;s Standard" hidden="false" collective="false" import="true" targetId="1339-adda-070d-906c" type="selectionEntry"/>
         <entryLink id="1984-fb34-d302-dc22" name="Legion Standard" hidden="false" collective="false" import="true" targetId="e2f6-29ee-8b26-9f6e" type="selectionEntry"/>
@@ -1848,7 +1793,7 @@ In addition, the model automatically passes Dangerous Terrain Tests taken due to
       <description>The model gains Tall and can never be joined or join a unit (unless it is a War Platform). A model with Towering Presence increases its Rally Around the Flag and Commanding Presence ranges by 6&quot;.</description>
     </rule>
     <rule id="99ef-69e8-164b-3335" name="Unbreakable" hidden="false">
-      <description>The model’s unit automatically passes all Break Tests. Models with Unbreakable can only join or be joined by models with Unbreakable.</description>
+      <description>The model gains Exclusive (Unbreakable), and the model’s unit automatically passes all Break Tests</description>
     </rule>
     <rule id="b558-1cce-fbc9-afe6" name="Undead" hidden="false">
       <description>The model gains Unstable. Models with Undead cannot perform March Moves, unless their unit starts the March Move within the range of a friendly model’s Commanding Presence. The only Charge Reaction a unit with one or more models with Undead can perform is Hold.
@@ -1860,7 +1805,7 @@ When units consisting entirely of models with Undead lose Health Points due to U
 4. Apply all other modifiers (from Special Items, Model Rules, spells, etc.) afterwards.</description>
     </rule>
     <rule id="b642-5b33-158d-421b" name="Unstable" hidden="false">
-      <description>Models with Unstable can only join or be joined by models with Unstable. A unit with one or more models with Unstable does not take a Break Test when losing a Round of Combat, but instead it loses one Health Point for each point of Combat Score difference by which it lost the Round of Combat (with no saves of any kind allowed).
+      <description>The model gains Exclusive (Unstable). A unit with one or more models with Unstable does not take a Break Test when losing a Round of Combat, but instead it loses one Health Point for each point of Combat Score difference by which it lost the Round of Combat (with no saves of any kind allowed).
 
 The Health Point losses are allotted in the following order:
 1. R&amp;F models, excluding Champions
@@ -1888,8 +1833,7 @@ When a unit Breaks from Combat and Flees away from a War Machine on a round base
 • It can perform Swirling Melee.
 • It does not count as Character regarding Bodyguard and Multiple Wounds, unless the War Platform is specifically mentioned in the Bodyguard rule.
 
-The model can join units even if it has Towering Presence, and having Chariot does not prevent it from joining units without Chariot. Additionally, it does not prevent Characters without Chariot from joining a unit containing a model with War Platform and Chariot. When joined to a unit, it must always be placed in the centre of the first rank, possibly pushing back other models with Front Rank, and must keep its position in the centre of the first rank at all times (as long as it is joined to the unit). If two positions are equally central (e.g. in a unit with an even number of models in the first rank and a War Platform replacing an uneven number of models per rank), the War Platform can be placed in either of these positions. If the War Platform cannot be placed in the centre of the the first rank, the model cannot
-join the unit. A War Platform with Mismatching Base can never join a unit, and only a single War Platform can be in the same unit unless specifically stated otherwise.</description>
+The model can join units even if it has Towering Presence , and having Chariot does not prevent it from joining units without Chariot. Additionally, it does not prevent Characters without Chariot from joining a unit containing a model with War Platform and Chariot. When joined to a unit, it must always be placed in the centre of the first rank, possibly pushing back other models with Front Rank , and must keep its position in the centre of the first rank at all times, including during casualty removal (as long as it is joined to the unit). Should the model ever be forced to leave its position in the centre of the first rank, immediately redistribute models in the unit until the model is back in the centre of the first rank, following the priority order in 16.B.e Illegal Formation after Removing Models. If two positions are equally central (e.g. in a unit with an even number of models in the first rank and a War Platform replacing an uneven number of models per rank), the War Platform can be placed in either of these positions. If the War Platform cannot be placed in the centre of the the first rank, the model cannot join the unit. A War Platform with Mismatching Base can never join a unit, and only a single War Platform can be in the same unit unless specifically stated otherwise.</description>
     </rule>
     <rule id="7455-f914-028b-3359" name="Wizard Conclave" hidden="false">
       <description>The Champion of a unit with Wizard Conclave is a Wizard Adept and gains +1 Health Point in addition to the normal Attack Value increase associated with being a Champion. This Champion may select up to two spells from predetermined spells given in the unit entry. This overrides the Spell Selection rules for Wizard Adepts.</description>
@@ -2071,6 +2015,55 @@ If the first rank is occupied by models with Front Rank, a model with Matching B
 • The unit is not prohibited from shooting in the next Shooting Phase (but will still suffer the to-hit modifier for moving and shooting).
 • The unit can perform an Advance Move after the Reform. For the purpose of no model being able to end its movement with its centre farther away than its Advance Rate from its starting position, measure this distance after the Reform.
 • No model can end its movement (after an Advance Move) with its centre farther away than its March Rate from its starting position before the Reform.</description>
+    </rule>
+    <rule id="7892-bac3-7fb7-b4db" name="Steady Aim" hidden="false">
+      <description>Steady Aim – Shooting
+The model does not suffer the −1 to-hit modifier for Stand and Shoot Charge Reactions.</description>
+    </rule>
+    <rule id="4875-9189-0a8c-bfa0" name="Shoot in Extra Rank" hidden="false">
+      <description>The model part may use Shooting Attacks from one additional rank (normally, this means that models with Shoot in Extra Rank will be able to make Shooting Attacks from the third rank).</description>
+    </rule>
+    <rule id="8be7-9332-4733-a07f" name="Rage" hidden="false">
+      <description>Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers −1 Attack Value.</description>
+    </rule>
+    <rule id="4d95-b8a4-cad9-c07e" name="Extra Support" hidden="false">
+      <description>The model part ignores the general Attack Value modifier for Supporting Attacks, but its Attack Value is never higher than the value stated in brackets (X) while performing Supporting Attacks.</description>
+    </rule>
+    <rule id="c030-b79a-25d6-989f" name="Immune" hidden="false">
+      <description>Attacks with the Attack Attributes stated in brackets (X) allocated towards or distributed onto the model lose these Attack Attributes.</description>
+    </rule>
+    <rule id="01fd-1523-71ed-cd50" name="Special Ambush" hidden="false">
+      <description>The model follows the rules for Ambush with the following exception: When its unit enters the Battlefield, apply the following rules instead of placing it using the normal Ambush rules:
+1. Choose a point that meets the conditions specified in brackets (X).
+2. Place the unit in contact with and fully within 6′′ of the chosen point. The unit can be placed in any formation but must follow the Unit Spacing rule. If the unit cannot be placed according to these rules, it cannot enter the Battlefield during this Player Turn.
+3. The unit loses Scoring until the end of the Movement Phase.
+4. The unit counts as having performed a March Move in this Player Turn for the purpose of shooting.
+Roll again in the next friendly Player Turn.
+</description>
+    </rule>
+    <rule id="3370-e237-1ea9-5a02" name="Hold the Line" hidden="false">
+      <description>Friendly units within 6′′ of a non-Fleeing unit containing one or more models with Hold the Line must reroll failed Panic Tests.</description>
+    </rule>
+    <rule id="b371-05d1-597f-494f" name="Hidden" hidden="false">
+      <description>The model cannot be deployed during the Deployment Phase. Instead, at the start of any Player Turn, the owner may choose a friendly unit that meets all the following conditions:
+• The model with Hidden could have joined it normally.
+• It has the same Type and Height as the model with Hidden.
+• It is not Fleeing nor a Summoned unit.
+
+Then apply the following procedure:
+• Remove a R&amp;F model with the same base size as the model with Hidden from the chosen unit’s first rank as a casualty. You cannot remove the last R&amp;F model from a unit, and removing the model never causes a Panic Test.
+• Deploy the model with Hidden in the position of the removed model.
+• The model with Hidden cannot voluntarily leave its unit during the Player Turn in which it was deployed.
+• If the model is not deployed by the end of Game Turn 4, it counts as a casualty and cannot be deployed for the rest of the game.</description>
+    </rule>
+    <rule id="6034-690b-2c59-a7fa" name="Exclusive" hidden="false">
+      <description>Characters with Exclusive (X) can only join units that contain at least one model with (X), and units consisting entirely of models with Exclusive (X) can only be joined by models with (X), where X specifies certain unit names, Model Rules, or upgrades. Models with Exclusive without any brackets can never join units or be joined by other models.</description>
+    </rule>
+    <rule id="3eec-762d-c938-144b" name="Deafening Clamour" hidden="false">
+      <description>The model is a Musician. The range of the model’s March to the Beat, and to enemy units that are required to take a March Test due to the model’s unit, are both extended to 18′′.</description>
+    </rule>
+    <rule id="c44f-d7ea-b42a-edac" name="Attached" hidden="false">
+      <description>The model must be deployed in a unit. The model can never voluntarily leave its unit.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
