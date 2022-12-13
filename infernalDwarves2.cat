@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ed3b-0fdf-b39c-32b0" name="Infernal Dwarves 2022" revision="34" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="50" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ed3b-0fdf-b39c-32b0" name="Infernal Dwarves 2023 Beta 1" revision="35" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="54" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="f410-d87f-bb92-f6cb" name="Instruments of Destruction" hidden="false"/>
     <categoryEntry id="95f0-1c8c-90dd-ed0b" name="Flyer" hidden="false"/>
@@ -113,11 +113,7 @@
       <rules>
         <rule id="155e-202c-8c6f-6a9e" name="Keys to the Citadel" hidden="false">
           <description>Universal Rule.
-The model must buy Weapon Enchantments for two of its mundane weapons.</description>
-        </rule>
-        <rule id="719f-cf4e-f476-5879" name="Arrogance" hidden="false">
-          <description>Universal Rule.
-The model’s unit automatically passes Fear Tests.</description>
+The model must buy Weapon Enchantments for two of its mundane weapons. The Point Cost of one of the Weapon Enchantments, the cheapest if applicable, is halved, rounding fractions up.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -315,7 +311,7 @@ The model’s unit automatically passes Fear Tests.</description>
         <entryLink id="9de0-3545-e63c-d258" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="210.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc2d-ee87-9432-4ed0" name="Infernal Warriors" hidden="false" collective="false" import="true" type="unit">
@@ -391,27 +387,6 @@ The model’s unit automatically passes Fear Tests.</description>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="969d-be0b-1afa-115b" name="Equipment" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="0e4a-1ba7-0649-55e7" name="Ziggurat Regulars" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ab1-f0d1-76a4-6370" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6c53-52d4-8425-193d" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-                <infoLink id="cba9-1020-2172-4f40" name="Fight in Extra Rank" hidden="false" targetId="f07b-fa49-1de5-8a2b" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="23f4-b5eb-8d53-67ba" name="Blunderbuss" hidden="false" collective="false" import="true" targetId="9cdb-d7a9-8c32-d058" type="selectionEntry">
               <modifiers>
@@ -426,6 +401,15 @@ The model’s unit automatically passes Fear Tests.</description>
             <entryLink id="7eb7-3532-9029-0031" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="48a4-1859-8bfa-cf54" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -721,64 +705,6 @@ The model’s unit automatically passes Fear Tests.</description>
             <entryLink id="a1c5-58c2-1d79-7d8d" name="ID Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="a395-f3fa-820f-1f2f" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="fc3f-2fba-4839-6382" name="Command Group" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="7438-df50-dc56-308b" name="Vassal Chieftain" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5bd-1d52-c24f-63bd" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="fab3-0dc7-4946-080d" name="Vassal Chieftain Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-                  <characteristics>
-                    <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
-                    <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-                    <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                    <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                    <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                    <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-                  </characteristics>
-                </profile>
-                <profile id="4fa2-02c8-3306-6219" name="Vassal Chieftain Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-                  <characteristics>
-                    <characteristic name="HP" typeId="f381-7850-7fa8-3440">2</characteristic>
-                    <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-                    <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-                    <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                    <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-                  </characteristics>
-                </profile>
-                <profile id="4863-0ba1-a7f6-51cf" name="Vassal Chieftain Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-                  <characteristics>
-                    <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                    <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-                    <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="a957-a26d-aa8e-6398" name="Vassal Chieftain Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-                  <characteristics>
-                    <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-                    <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-                    <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                    <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <rules>
-                <rule id="1979-b455-d813-2728" name="First Among Inferiors" hidden="false">
-                  <description>Universal Rule.
-The model is a Champion that loses First Amongst Equals and that is equipped with the same weapons and Armour Equipment as the other R&amp;F models in its unit. For the purpose of receiving Commanding Presence and Rally Around the Flag from friendly models, as well as for benefiting from Vassal Governor from friendly models, the model counts as 6′′ closer to those models.</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <entryLinks>
-            <entryLink id="2a9f-e5a3-5ff7-e502" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="8f82-6955-3d8a-01ea" type="selectionEntry"/>
-            <entryLink id="8d88-e40e-e432-8b48" name="Musician" hidden="false" collective="false" import="true" targetId="10fe-ce12-d662-ae02" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
         <selectionEntryGroup id="1ea3-c156-05db-1590" name="Shooting Weapon" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="bc03-f393-e8dd-2a03" name="Bow (4+)" hidden="false" collective="false" import="true" type="upgrade">
@@ -802,21 +728,17 @@ The model is a Champion that loses First Amongst Equals and that is equipped wit
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="437b-32da-b9c7-c97f" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="be24-982e-8a83-da6c" name="Shackled Slaves" hidden="false" collective="false" import="true" type="unit">
-      <rules>
-        <rule id="cee2-9398-5745-ecc0" name="Enslaved Porters" hidden="false">
-          <description>Shackled Slaves do not cause Panic Tests in other friendly units. At start of the First Game Turn and at the start of each friendly Player Turn, if the Shackled Slaves unit is not Fleeing, Shaken, or Engaged, choose a single friendly Standard Height unit with more than half of its models with Infernal Brand within 6′′:
-• If the Shackled Slaves unit is equipped with Shields, the chosen unit gains Soft Cover.
-• If the Shackled Slaves unit is equipped with Paired Weapons, the chosen unit must reroll natural to hit rolls of ‘1’ with its Close Combat Attacks.
-The effects last until the start of the next friendly Player Turn.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="ffb0-85ab-520f-8c07" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
+        <infoLink id="983e-84e0-321c-5380" name="Unstable" hidden="false" targetId="b642-5b33-158d-421b" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="58d4-59e7-efa2-89a2" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
@@ -857,7 +779,7 @@ The effects last until the start of the next friendly Player Turn.</description>
             <profile id="1b0d-c81f-466f-ad93" name="Shackled Slave Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
               <characteristics>
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
                 <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">4</characteristic>
                 <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
@@ -902,7 +824,7 @@ The effects last until the start of the next friendly Player Turn.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cf1a-e7dc-3e13-50b5" name="Immortals" hidden="false" collective="false" import="true" type="unit">
@@ -1077,7 +999,7 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (2+, against Flaming Attacks), Aegis (5+)</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (3+, against Flaming Attacks), Aegis (5+)</characteristic>
               </characteristics>
             </profile>
             <profile id="5be8-a634-c418-d776" name="Disciple of Lugar Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -1179,7 +1101,7 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
         </infoLink>
         <infoLink id="8c35-6f10-53bf-c3eb" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (2+, against Flaming Attacks)"/>
+            <modifier type="append" field="name" value=" (3+, against Flaming Attacks)"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1210,7 +1132,7 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
                 <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
                 <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
                 <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (2+, against Flaming Attacks), Aegis (5+)</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (3+, against Flaming Attacks), Aegis (5+)</characteristic>
               </characteristics>
             </profile>
             <profile id="a8bb-bd52-475c-6dcb" name="Kadim Incarnate Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -1303,7 +1225,7 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (2+, against Flaming Attacks), Aegis (5+)</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (3+, against Flaming Attacks), Aegis (5+)</characteristic>
           </characteristics>
         </profile>
         <profile id="ab65-1464-4dbb-7399" name="Kadim Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -1577,6 +1499,7 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
             <modifier type="append" field="name" value=" (Taurukh Commissioner)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="d7b9-13d6-4647-8ce6" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b6be-da4c-ff48-b989" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -1637,7 +1560,7 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="96.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1707,7 +1630,7 @@ The bearer’s unit and enemy units in base contact with the bearer’s unit gai
         <entryLink id="8c61-7b54-8321-cb3d" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="17.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec55-a042-090f-2da1" name="Lamassu Scholar" hidden="false" collective="false" import="true" type="unit">
@@ -1786,7 +1709,7 @@ Before Spell Selection (at the start of step 7 of the Pre-Game Sequence), the op
         <infoLink id="c68d-9952-66f6-a73d" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule"/>
         <infoLink id="8dc7-3ebe-390a-6b6b" name="Infernal Weapon" hidden="false" targetId="3ce9-1282-2e80-84d5" type="profile"/>
         <infoLink id="5bbe-5b75-8580-fc6d" name="Not a Leader" hidden="false" targetId="f611-6165-ada9-0d7d" type="rule"/>
-        <infoLink id="5ccc-48e3-dcaf-09bb" name="Solitary" hidden="false" targetId="73bb-af45-90c6-efc6" type="rule"/>
+        <infoLink id="9c60-d34e-590b-242f" name="Exclusive" hidden="false" targetId="6034-690b-2c59-a7fa" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="77f7-87fc-a6cf-7d18" name="Flyer" hidden="false" targetId="95f0-1c8c-90dd-ed0b" primary="false"/>
@@ -1933,25 +1856,12 @@ Before Spell Selection (at the start of step 7 of the Pre-Game Sequence), the op
             <entryLink id="6690-1f88-0909-c3e6" name="ID Banner Enchantments (Vassals)" hidden="false" collective="false" import="true" targetId="a395-f3fa-820f-1f2f" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="afba-eeae-b8d4-8dcb" name="Command Group" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="1fdd-af7a-019e-29ce" name="Vassal Chieftain" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="45b1-5fac-0ef4-85eb" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <entryLinks>
-            <entryLink id="4c23-afef-9a0e-6f25" name="Musician" hidden="false" collective="false" import="true" targetId="10fe-ce12-d662-ae02" type="selectionEntry"/>
-            <entryLink id="a4cf-1fda-71fa-2187" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="8f82-6955-3d8a-01ea" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="19e8-f314-0d0f-d68d" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="150.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5a12-9841-d7bd-241e" name="Vassal Slingshot" hidden="false" collective="false" import="true" type="unit">
@@ -2005,21 +1915,23 @@ Before Spell Selection (at the start of step 7 of the Pre-Game Sequence), the op
             <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">60Ø</characteristic>
           </characteristics>
         </profile>
+        <profile id="f231-f8e4-f56a-7df6" name="Vassal Slingshot" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">48&quot;</characteristic>
+            <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
+            <characteristic name="Str" typeId="f166-13ff-9227-4525">3 [6]</characteristic>
+            <characteristic name="AP" typeId="857a-4ce1-d134-8701">10</characteristic>
+            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Artillery Weapon, Area Attack (1×5), [Multiple Wounds (D3)]</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <rules>
-        <rule id="e6cf-3de1-12c6-2502" name="Vassal Slingshot" hidden="false">
-          <description>Artillery Weapon.
-This Artillery Weapon can be fired in two ways:
-• Bolt Thrower: Range 48′′, Shots 1, Str 3 [6], AP 10, Area Attack (1×5), [Multiple Wounds (D3)].
-• Oil Flask Thrower: Range 36′′, Shots 3, Str 1, AP 0. The target unit gains one Incendiary marker for every successful hit.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="762b-b4f7-69ea-8a8f" name="Flammable" hidden="false" targetId="5df5-1a68-27be-1ad6" type="rule"/>
         <infoLink id="c156-0cd5-1a65-677f" name="Move or Fire" hidden="false" targetId="6475-e063-0070-f6cc" type="rule"/>
         <infoLink id="5458-3932-8898-0afa" name="War Machine" hidden="false" targetId="610e-d71e-0439-9e7f" type="rule"/>
         <infoLink id="e865-2894-0851-5086" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
         <infoLink id="5317-2764-3f42-6a47" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
+        <infoLink id="bda0-ef25-5b81-aae6" name="Oil Flasks" hidden="false" targetId="b847-6d74-efd7-4f7e" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4e24-27aa-ae3c-4196" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -2028,7 +1940,7 @@ This Artillery Weapon can be fired in two ways:
         <entryLink id="b825-594f-4c2c-5f31" name="Fires of Industry" hidden="false" collective="false" import="true" targetId="f974-7173-fb13-288c" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="125.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="776f-5efc-893e-84b5" name="Gunnery Team" hidden="false" collective="false" import="true" type="unit">
@@ -2050,27 +1962,27 @@ This Artillery Weapon can be fired in two ways:
       <profiles>
         <profile id="3d4a-d7aa-b020-3157" name="Gunnery Team Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a"></characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"></characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Grind Attacks (3)</characteristic>
           </characteristics>
         </profile>
         <profile id="d194-d794-9e6d-e2f3" name="Gunnery Team Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
           <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
+            <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour, Shield</characteristic>
           </characteristics>
         </profile>
         <profile id="1c9e-592b-a02d-fdba" name="Gunnery Team Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">3&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">6&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">9&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
             <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
@@ -2089,6 +2001,13 @@ This Artillery Weapon can be fired in two ways:
         <infoLink id="cc2e-2a1d-2226-a46d" name="Not a Leader" hidden="false" targetId="f611-6165-ada9-0d7d" type="rule"/>
         <infoLink id="897b-19c9-9ba1-5285" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
         <infoLink id="9ac1-0695-1b8f-439a" name="Infernal Brand" hidden="false" targetId="86d7-0cd3-8d7f-1f68" type="rule"/>
+        <infoLink id="0fc5-6c4c-6797-9548" name="Attached" hidden="false" targetId="c44f-d7ea-b42a-edac" type="rule"/>
+        <infoLink id="6c68-308e-08cf-950c" name="Exclusive" hidden="false" targetId="6034-690b-2c59-a7fa" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (RnF model with Infernal Brand)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="12ec-224d-d182-be60" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3852-b8d8-6c56-f5a9" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -2119,7 +2038,7 @@ This Artillery Weapon can be fired in two ways:
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="155.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2015-6f8e-8431-f55c" name="Infernal Artillery" hidden="false" collective="false" import="true" type="unit">
@@ -2162,7 +2081,7 @@ This Artillery Weapon can be fired in two ways:
       <rules>
         <rule id="5efe-8b9c-3134-afeb" name="Higher Calibre" hidden="false">
           <description>Universal Rule.
-The maximum range of the model’s Artillery Weapon is doubled. Enemy units hit by the weapon suffer −1′′ Advance Rate to a minimum of 3′′ and −2′′ March Rate to a minimum of 6′′ until the start of the next friendly Player Turn.</description>
+The minimum range and the maximum range of the model’s Artillery Weapon are doubled. Enemy units hit by the weapon suffer −1′′ Advance Rate to a minimum of 3′′ and −2′′ March Rate to a minimum of 6′′ until the start of the next friendly Player Turn.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2183,6 +2102,9 @@ The maximum range of the model’s Artillery Weapon is doubled. Enemy units hit 
           </constraints>
           <entryLinks>
             <entryLink id="4e39-f37b-3882-e6f4" name="Rocket Battery" hidden="false" collective="false" import="true" targetId="dd87-622f-acef-c07b" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value="(4+)"/>
+              </modifiers>
               <entryLinks>
                 <entryLink id="89df-4d5a-0fb8-be8c" name="Fires of Industry Double" hidden="false" collective="false" import="true" targetId="1de4-bc18-f4dc-3fc7" type="selectionEntry"/>
               </entryLinks>
@@ -2191,11 +2113,14 @@ The maximum range of the model’s Artillery Weapon is doubled. Enemy units hit 
               </costs>
             </entryLink>
             <entryLink id="0ee3-e455-d268-ad46" name="Titan Mortar" hidden="false" collective="false" import="true" targetId="804f-2334-205d-4ec8" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value="(4+)"/>
+              </modifiers>
               <entryLinks>
                 <entryLink id="221a-98cb-5c5b-6f7d" name="Fires of Industry Double" hidden="false" collective="false" import="true" targetId="1de4-bc18-f4dc-3fc7" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="125.0"/>
               </costs>
             </entryLink>
             <entryLink id="5763-9f5e-607f-70ed" name="Naphta Thrower" hidden="false" collective="false" import="true" targetId="9436-530c-f6d6-81e7" type="selectionEntry">
@@ -2270,7 +2195,8 @@ The maximum range of the model’s Artillery Weapon is doubled. Enemy units hit 
       <rules>
         <rule id="6060-8558-6a6b-7c5e" name="Full Steam Ahead" hidden="false">
           <description>Universal Rule.
-The model may only perform a single Pivot or Wheel during a March Move. If the model is Charging, it must Pursue or Overrun if possible. If the model is not Charging, it always passes Restrain Pursuit Tests and its Pursuit Distance is always 0′′.</description>
+The model may only perform a single Pivot or Wheel during a March Move. If the model is Charging, it must Pursue or Overrun if possible. If the model is not Charging, it always passes Restrain Pursuit Tests
+and its Pursuit and overrun Distance in the Melee Phase are is always 0′′.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2427,6 +2353,12 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
         <infoLink id="048c-29e3-d383-ab06" name="Crush Attack" hidden="false" targetId="9371-5924-2a39-1652" type="rule"/>
         <infoLink id="2fd7-7f54-aba5-6dec" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
         <infoLink id="e2a6-be00-69c0-71ff" name="Mechanised Support" hidden="false" targetId="3c78-ba43-8c9d-c48b" type="rule"/>
+        <infoLink id="979d-165c-a923-bcf5" name="Exclusive" hidden="false" targetId="6034-690b-2c59-a7fa" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (R&amp;F model with Infernal Brand)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="22aa-26fa-f9fc-7e72" name="Attached" hidden="false" targetId="c44f-d7ea-b42a-edac" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="37a4-ad93-c20b-a85a" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -2453,15 +2385,8 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
       </constraints>
       <profiles>
         <profile id="083e-57d4-7d57-9844" name="Kadim Titan Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <modifiers>
-            <modifier type="increment" field="8265-800f-bc87-d00a" value="3">
-              <conditions>
-                <condition field="selections" scope="d574-5af2-4ed1-a20c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c5a-8282-26d4-bb9b" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
+            <characteristic name="Att" typeId="8265-800f-bc87-d00a">6</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
@@ -2475,7 +2400,7 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
             <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
             <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
             <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (2+, against Flaming Attacks), Aegis (5+)</characteristic>
+            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Aegis (3+, against Flaming Attacks), Aegis (5+)</characteristic>
           </characteristics>
         </profile>
         <profile id="910c-6178-3f81-4845" name="Kadim Titan Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
@@ -2502,11 +2427,6 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="bf24-ebd7-ba9e-c0aa" name="Volcanic Embrace" hidden="false" targetId="02ab-566d-7f51-fee2" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2D3)"/>
-          </modifiers>
-        </infoLink>
         <infoLink id="8553-703c-6d51-207e" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="87c9-642e-1e40-3341" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
           <modifiers>
@@ -2515,7 +2435,7 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
         </infoLink>
         <infoLink id="4e7b-72bc-74f3-cf36" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (2+, against Flaming Attacks)"/>
+            <modifier type="append" field="name" value=" (3+, against Flaming Attacks)"/>
           </modifiers>
         </infoLink>
         <infoLink id="4008-e7a3-4f2e-2233" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
@@ -2554,11 +2474,10 @@ The number of the Chassis’ Grind Attacks is increased by +2D3.</description>
               <rules>
                 <rule id="3477-e97d-44b8-0bce" name="Walking Earthquake" hidden="false">
                   <description>Universal Rule.
-The model gains Swiftstride, Volcanic Embrace (D3+1), and +3 Attack Value. Its March Rate is set to 14′′. While in base contact with the model, enemy units suffer −1 Offensive Skill and −1 Defensive Skill.</description>
+The model gains Swiftstride, Volcanic Embrace (D3+1), and its March Rate is set to 14′′.</description>
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="9745-0507-7fc8-df4b" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
                 <infoLink id="c9cd-6fbf-37f2-6441" name="Volcanic Embrace" hidden="false" targetId="02ab-566d-7f51-fee2" type="rule">
                   <modifiers>
                     <modifier type="append" field="name" value=" (D3+1)"/>
@@ -2566,7 +2485,7 @@ The model gains Swiftstride, Volcanic Embrace (D3+1), and +3 Attack Value. Its M
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2609,7 +2528,7 @@ The model gains Swiftstride, Volcanic Embrace (D3+1), and +3 Attack Value. Its M
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="420.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="450.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7402-4fed-8c54-5c25" name="Citizen Giant" hidden="false" collective="false" import="true" type="unit">
@@ -3213,6 +3132,7 @@ Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.</descr
             <modifier type="append" field="name" value=" (1)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="3d82-8a36-34e2-3766" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8fe8-f435-0554-4fcb" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -4368,10 +4288,7 @@ When successfully casting a spell from:
         <profile id="9fda-33fc-5d38-ea77" name="Banner of the Twice-Branded" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner Enchantment</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit does not suffer the −1 to-hit modifier for Stand and Shoot Charge Reactions. In addition, at the end of the Charge Phase, immediately after all Charge Moves have been resolved, the bearer’s unit may perform a Combat Reform (following the normal rules for Combat Reforms) if all of the following conditions are met:
-• The bearer’s unit consists entirely of Infantry models and/or Gunnery Teams.
-• The bearer’s unit performed a Stand and Shoot Charge Reaction during this phase.
-• The bearer’s unit was successfully Charged during this phase.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the end of the Charge Phase, immediately after all Charge Moves have been resolved. If the bearer’s unit was successfully Charged during this phase, it may perform a Combat Reform (following the normal rules for Combat Reforms).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4470,7 +4387,7 @@ When successfully casting a spell from:
         <profile id="f66a-74bc-cf98-4dc8" name="Onyx Core" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Hand Weapon or Infernal Weapon</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon become Flaming Attacks and Magical Attacks and gain Multiple Wounds (D3, against Flammable). In addition the Strength is always set to 6.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon become Flaming Attacks and gain Multiple Wounds (D3, against Flammable). In addition the Strength is always set to 6.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4518,7 +4435,7 @@ When successfully casting a spell from:
         <profile id="6af3-5157-4e2c-a06c" name="Eye of the Bull" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Flintlock Axe </characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Close Combat Attacks and Shooting Attacks made with this weapon hit automatically. These hits are resolved with Strength 5,Armour Penetration 10, and Magical Attacks. The Strength of the weapon’s Close Combat Attacks is set to the wielder’s Offensive Skill, and the Strength of the weapon’s Shooting Attacks is set to 5. In addition, while using this weapon, the wielder’s Attack Value is set to 1 and Close Combat Attacks made with this weapon gain Multiple Wounds (2).</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Close Combat Attacks and Shooting Attacks made with this weapon hit automatically. The Strength of these hits is always set to 5 and their Armour Penetration is always set to 10. In addition, while using this weapon, the wielder’s Attack Value is set to 1 and Close Combat Attacks made with this weapon gain Multiple Wounds (2).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4592,9 +4509,7 @@ The wearer gains +3 Armour. Every enemy model in base contact with the wearer’
         <profile id="314f-b6e4-f027-1230" name="Kadim Binding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Shield</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cannot be taken by models with Towering Presence.
-The bearer’s weapons lose Two-Handed if they had it. While using this Shield, the bearer gains Aegis (+1, against Flaming Attacks, max. 2+) and Parry.
-Can only be taken by models with Infernal Brand.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s weapons lose Two-Handed if they had it. While using this Shield, the bearer gains Aegis (+1, against Flaming Attacks, max. 3+) and Parry.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4673,7 +4588,7 @@ When the bearer attempts to cast a non-Bound Spell using three or more Magic Dic
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="35e0-3b1f-a45e-0b4b" name="Ring of Desiccation" hidden="false" collective="false" import="true" type="upgrade">
@@ -4865,7 +4780,7 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
         </infoLink>
         <infoLink id="503e-117a-e4eb-41a1" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="a4f9-ec03-f87d-4ecb" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
-        <infoLink id="4055-eb0b-5def-7e7b" name="Solitary" hidden="false" targetId="73bb-af45-90c6-efc6" type="rule"/>
+        <infoLink id="4055-eb0b-5def-7e7b" name="Exclusive" hidden="false" targetId="6034-690b-2c59-a7fa" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="78ec-f230-1637-f545" name="Instruments of Destruction" hidden="false" targetId="f410-d87f-bb92-f6cb" primary="false"/>
@@ -5025,6 +4940,12 @@ In addition, the bearer can cast Glory of Gold (Alchemy) as a Bound Spell with P
         </infoLink>
         <infoLink id="2fbd-c451-d096-c3fc" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
         <infoLink id="6274-67d8-c105-8804" name="Mechanised Support" hidden="false" targetId="3c78-ba43-8c9d-c48b" type="rule"/>
+        <infoLink id="106c-ad90-b5f0-78e1" name="Attached" hidden="false" targetId="c44f-d7ea-b42a-edac" type="rule"/>
+        <infoLink id="bb43-5aa5-ab2f-b044" name="Exclusive" hidden="false" targetId="6034-690b-2c59-a7fa" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (RnF model with Infernal Brand)"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5768-f79e-0544-59bf" name="Instruments of Destruction" hidden="false" targetId="f410-d87f-bb92-f6cb" primary="false"/>
@@ -5449,7 +5370,7 @@ Friendly units with more than half of their models with Oil Flasks within 12′�
 A Character leaving a unit affected by Incendiary is no longer affected, unless the Character was a single model unit when it gained Incendiary. In that case, the Character keeps those Incendiary markers.</description>
     </rule>
     <rule id="86d7-0cd3-8d7f-1f68" name="Infernal Brand" hidden="false">
-      <description>The model gains Commanding Presence with the following restrictions: it has a range of 6′′ and can only benefit Insignificant models. In addition, Standard Height units with more than half of their models with Infernal Brand double their number of Full Ranks for the purpose of Steadfast in the First Round of Combat unless Charging.</description>
+      <description>The model gains Commanding Presence with the following restrictions: it has a range of 6′′ and can only benefit Insignificant models. In addition, when losing a Round of Combat, Standard Height units with more than half of their models with Infernal Brand double their number of Full Ranks for the purpose of Steadfast in the First Round of Combat unless Charging.</description>
     </rule>
     <rule id="18cb-eaae-7654-76b8" name="Taurukh Ritual" hidden="false">
       <description>The model is subject to the following modifications:
@@ -5507,9 +5428,6 @@ Instead of rolling on the Misfire Table as normal, apply the following Misfire E
 • 2 or less: The model may not shoot its Artillery Weapon until the end of the game. In addition, the model part equipped with the Artillery Weapon gains Volcanic Embrace (D3).
 • 3+: The model loses 1 Health Point with no saves of any kind allowed.</description>
     </rule>
-    <rule id="73bb-af45-90c6-efc6" name="Solitary" hidden="false">
-      <description>The model may never join units or be joined by other Characters.</description>
-    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="3c9e-ab86-99bb-7595" name="Infernal Armour" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="4 Armour">
@@ -5532,8 +5450,7 @@ Instead of rolling on the Misfire Table as normal, apply the following Misfire E
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
         <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
         <characteristic name="AP" typeId="857a-4ce1-d134-8701">2</characteristic>
-        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Counts as a Close Combat Weapon with Two-Handed in close combat. Close Combat Attacks made with it gain +1 Strength. Can be enchanted like a Close Combat Weapon, but only Close Combat Attacks
-are affected by the Weapon Enchantment unless specifically stated otherwise. The model may shoot from the third rank (in addition to the first and second).</characteristic>
+        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Shoot in Extra Rank. Counts as Halberd in close combat.</characteristic>
       </characteristics>
     </profile>
     <profile id="06dd-1877-81f7-f93d" name="Flintlock Axe Melee" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
@@ -5549,7 +5466,7 @@ are affected by the Weapon Enchantment unless specifically stated otherwise. The
         <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
         <characteristic name="Str" typeId="f166-13ff-9227-4525">5</characteristic>
         <characteristic name="AP" typeId="857a-4ce1-d134-8701">3</characteristic>
-        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Accurate, March and Shoot, Quick to Fire. Does not suffer the negative to-hit modifier from a Stand and Shoot Charge Reaction.</characteristic>
+        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Accurate, March and Shoot, Quick to Fire, Steady Aim.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
