@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2022" revision="72" battleScribeVersion="2.03" authorName="Vrenel, DarkSky, WarX, Hebus, koniu699" authorContact="" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="50" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2022" revision="73" battleScribeVersion="2.03" authorName="Vrenel, DarkSky, WarX, Hebus, koniu699" authorContact="" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="54" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="3f95-f87e-5df2-4102" name="T9A – Daemon Legions"/>
   </publications>
@@ -84,7 +84,7 @@
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">18&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
+            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">10</characteristic>
             <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
@@ -120,16 +120,6 @@
         <rule id="8204-38c6-3714-222c" name="Divine Right" hidden="false">
           <description>The model cannot join units with other Characters and other Characters cannot join its unit. The model must issue a Duel whenever possible. Duels issued by this model must (if possible) be accepted by a Character unless a Champion accepts first. In addition, when fighting a Duel, the model gains Lethal Strike and Multiple Wounds (2).</description>
         </rule>
-        <rule id="4b4f-0a81-78b0-3bde" name="Dominion of Pride" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="97b3-ca59-67ea-42ab" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <description>Follows the rules for Dominion. Units with more than half of their models affected may reroll failed Discipline Tests.</description>
-        </rule>
       </rules>
       <infoLinks>
         <infoLink id="69fe-a5a4-4bb8-e902" name="Aegis" hidden="false" targetId="4966-e452-f252-6176" type="rule">
@@ -140,6 +130,15 @@
         <infoLink id="0ebd-9853-cb6d-21e9" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
         <infoLink id="4a1b-30fc-f20f-83b3" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="9e5d-de57-9ea8-a9f0" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
+        <infoLink id="d940-5dce-20c2-94e6" name="Greater Dominion" hidden="true" targetId="8d54-23ac-064d-43d1" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="54ef-0d4d-8596-cb63" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2823-f566-f8e5-10c4" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -299,7 +298,6 @@
                     <modifier type="append" field="name" value=" (9&quot;, 9&quot;)"/>
                   </modifiers>
                 </infoLink>
-                <infoLink id="d222-131e-3d2d-b16c" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
                 <infoLink id="8272-e309-d5d2-a63b" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
                 <infoLink id="2d9c-b714-68a5-8d45" name="Towering Presence" hidden="false" targetId="9ca4-65be-33fc-5d47" type="rule"/>
                 <infoLink id="d203-e231-001d-ed88" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
@@ -386,7 +384,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="485.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="490.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e7fc-b37b-7e58-d098" name="Imps" hidden="false" collective="false" import="true" type="unit">
@@ -509,19 +507,14 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="d4fc-36be-78f0-cc29" name="Unit - Dark Hide" hidden="false" collective="false" import="true" targetId="dc2e-45f8-578d-b084" type="selectionEntry">
+            <entryLink id="d4fc-36be-78f0-cc29" name="Unit - Aura of Despair" hidden="false" collective="false" import="true" targetId="6f4b-fe91-ef41-420a" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
-            </entryLink>
-            <entryLink id="a336-eb69-5b4e-2410" name="Unit - Charged Tendrils" hidden="false" collective="false" import="true" targetId="3e2c-0f67-7121-d0cf" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-              </costs>
             </entryLink>
             <entryLink id="f9a8-b735-8340-fcc0" name="Unit - Mark of the Eternal Champion" hidden="false" collective="false" import="true" targetId="534b-7d71-737c-c912" type="selectionEntry">
               <modifiers>
@@ -539,6 +532,15 @@
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
               </costs>
+            </entryLink>
+            <entryLink id="57b6-dd17-1831-fb10" name="Unit - Dark Hide" hidden="false" collective="false" import="true" targetId="dc2e-45f8-578d-b084" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -666,15 +668,11 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="9587-d4f8-d13d-12e6" name="Succubi" hidden="false" collective="false" import="true" type="unit">
-      <rules>
-        <rule id="974b-f29c-de6a-385c" name="Talon Scythes" hidden="false">
-          <description>Attacks made with Talon Scythes ignore Parry and, if allocated towards Standard or Large Infantry, gain a +1 to-hit modifier.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="31cb-aad5-85a0-a57d" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
         <infoLink id="dd08-dfed-144b-6a21" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
         <infoLink id="4e94-2269-3c5b-c150" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="6976-cc82-52a2-602a" name="Smother" hidden="false" targetId="b3e9-4149-dadb-31e7" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e62e-71c8-629e-1f4e" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
@@ -769,9 +767,9 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="89ff-640d-f87d-939f" name="Unit - Smothering Coils" hidden="false" collective="false" import="true" targetId="6712-49f2-5348-8362" type="selectionEntry">
+            <entryLink id="89ff-640d-f87d-939f" name="Unit - Divining Snout" hidden="false" collective="false" import="true" targetId="98ea-ee0f-2037-cffd" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="7.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -785,7 +783,7 @@
         <entryLink id="a259-c396-f6d9-a4aa" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8951-670c-406a-6f6e" name="Myrmidons" hidden="false" collective="false" import="true" type="unit">
@@ -920,28 +918,6 @@
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="508e-841d-ca5f-db76" name="Sentinel of Nukuja Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
-          <modifiers>
-            <modifier type="increment" field="f988-a51e-9e65-0291" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8832-1de9-83b4-ea5d" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" field="61df-0ca3-17b2-f001" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8832-1de9-83b4-ea5d" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">5</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">5</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
-            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
-          </characteristics>
-        </profile>
         <profile id="2003-9a62-d593-04d0" name="Sentinel of Nukuja Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
@@ -972,19 +948,6 @@
             <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
-        <profile id="c19c-e738-51dc-4906" name="Dominion of Sloth" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="7902-bc18-757d-a8d5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Sloth</characteristic>
-            <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models gain Aegis (+1, against Special Attacks).</characteristic>
-          </characteristics>
-        </profile>
         <profile id="f13b-e404-edca-48d0" name="Sentinel of Nukuja Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
           <modifiers>
             <modifier type="set" field="0d1d-aeaf-8f31-fd17" value="Gigantic">
@@ -1002,7 +965,7 @@
       </profiles>
       <rules>
         <rule id="e4f0-2982-57d4-84e2" name="Omniscience" hidden="false">
-          <description>In the Magic Phase, if the model did not March Move or declare a Charge this Player Turn, the cost of converting Veil Tokens into Magic Dice is decreased to 2:1 during this Player Turn (1 Magic Die per 2 Veil Tokens).</description>
+          <description>In the Magic Phase, if the model did not March Move or declare a Charge this Player Turn, the cost of converting Veil Tokens into Magic Dice is decreased to 2:1 during this Player Turn (1 Magic Die per 2 Veil Tokens). In addition, at the end of Siphon the Veil, the owner is allowed to store up to 6 Veil Tokens instead of the normal 3.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1013,12 +976,20 @@
         <infoLink id="f6d8-659e-807f-374d" name="Crush Attack" hidden="false" targetId="9371-5924-2a39-1652" type="rule"/>
         <infoLink id="be6c-01a1-ee20-5240" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
         <infoLink id="af56-f968-5d38-f3c5" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
-        <infoLink id="19b6-8c8e-a07d-d64c" name="Third Eye" hidden="false" targetId="a398-0648-5cdb-87c8" type="rule"/>
         <infoLink id="0485-e050-0b80-f4eb" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8832-1de9-83b4-ea5d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="0511-0ba6-374a-f9e1" name="Greater Dominion" hidden="true" targetId="8d54-23ac-064d-43d1" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7155-97de-aff3-942f" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1110,7 +1081,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="150.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7d0-ec26-7357-543e" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="175.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7d0-ec26-7357-543e" type="max"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="737b-0cfc-502d-2154" name="Guiding Manifestation" hidden="false" collective="false" import="true">
@@ -1138,9 +1109,6 @@
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c67e-3998-f834-71b8" type="max"/>
               </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -1161,7 +1129,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="175.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="533d-ddd3-acc0-2071" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="parent" value="200.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="533d-ddd3-acc0-2071" type="max"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup id="0663-d38f-d0b7-cc38" name="Guiding Manifestation" hidden="false" collective="false" import="true">
@@ -1188,7 +1156,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="710.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="690.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="eb16-a4aa-0483-bc03" name="Eidolons" hidden="false" collective="false" import="true" type="unit">
@@ -1295,7 +1263,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b20-5cac-b156-211e" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1321,7 +1289,7 @@
             </entryLink>
             <entryLink id="d289-4174-f51f-3c07" name="Unit - Aura of Despair" hidden="false" collective="false" import="true" targetId="6f4b-fe91-ef41-420a" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="6.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1360,15 +1328,16 @@
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="07eb-9389-5da4-b8ce" type="max"/>
       </constraints>
-      <rules>
-        <rule id="37f6-deb6-cb08-b871" name="Hellish Growl" hidden="false">
-          <description>At the start of each Round of Combat, enemy units in base contact with one or more models with Hellish Growl must take a Discipline Test with a -1 modifier. Failed to-wound rolls from attacks made by the model against units that fail this test must be rerolled. The effect lasts until the end of the Round of Combat.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="23a5-039b-8d95-7634" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="45d2-1ae4-efb8-7402" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
         <infoLink id="ab5d-a0d5-ef96-630a" name="Lethal Strike" hidden="false" targetId="f433-7645-0332-97a4" type="rule"/>
+        <infoLink id="a4e6-1572-7f54-b0e9" name="Extra Support" hidden="false" targetId="4d95-b8a4-cad9-c07e" type="rule">
+          <modifiers>
+            <modifier type="set" field="name" value="Extra Support (2)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="9f4a-40f6-872a-fb13" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a239-039b-1384-8e6a" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -1417,7 +1386,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="19.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1432,15 +1401,6 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c618-f930-7f4f-4fff" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="1ffc-c132-2850-5a52" name="Unit - Grasping Proboscis" hidden="false" collective="false" import="true" targetId="1e9e-1598-a3cc-5610" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
             <entryLink id="b527-c9c3-72b5-1b00" name="Unit - Hot Blood" hidden="false" collective="false" import="true" targetId="3bc5-58a2-f553-694a" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1">
@@ -1470,7 +1430,7 @@
             </entryLink>
             <entryLink id="5788-a2c4-db44-aefc" name="Unit - Centipede Legs" hidden="false" collective="false" import="true" targetId="9014-f681-74cb-b6b6" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1490,7 +1450,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="620e-92f1-bd05-04aa" name="Threshing Engine" hidden="false" collective="false" import="true" type="unit">
@@ -1660,15 +1620,6 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="4c37-7c9b-10f7-0942" name="Light Troops" hidden="true" targetId="8b75-3cd5-bd70-6210" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1708-80c5-bb33-a4d0" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="b27a-4435-9829-a220" name="Fly" hidden="true" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
@@ -1797,23 +1748,10 @@
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">6</characteristic>
             <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
+            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">7</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-          </characteristics>
-        </profile>
-        <profile id="9fea-9431-6e6d-503a" name="Dominion of Gluttony" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="3198-4164-0f51-4ea2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Gluttony</characteristic>
-            <characteristic name="Description" typeId="2945-4921-f954-c0f5">The affected models&apos; Melee Attacks must reroll failed to-wound rolls of &apos;1&apos;.</characteristic>
           </characteristics>
         </profile>
         <profile id="5e4d-e8cf-e999-baaa" name="Maw of Akaan Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -1842,6 +1780,15 @@
             <modifier type="append" field="name" value=" (5+)"/>
           </modifiers>
         </infoLink>
+        <infoLink id="80ba-aea1-7d98-97fa" name="Greater Dominion" hidden="true" targetId="8d54-23ac-064d-43d1" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d37c-0e8d-0111-0340" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ac02-3a4e-b4ce-be3a" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -1859,7 +1806,7 @@
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1992,7 +1939,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="555.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="535.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b5f8-7399-95ea-f00e" name="Titanslayer Chariot" hidden="false" collective="false" import="true" type="unit">
@@ -2014,8 +1961,8 @@
       <profiles>
         <profile id="9b5b-7aa7-3320-b0fa" name="Titanslayer Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">7&quot;</characteristic>
+            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
+            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
             <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
             <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
@@ -2070,7 +2017,7 @@
       </profiles>
       <rules>
         <rule id="b497-3e5f-0da6-39a0" name="Mountain Breaker" hidden="false">
-          <description>The model gains +D3&quot; Advance Rate when rolling for Charge Range against units that consist entirely of models with Towering Presence in the Charge Phase. In addition, the model&apos;s Impact Hits gain Multiple Wounds (D3, against Towering Presence).</description>
+          <description>Charge Range rolls in the Charge Phase of Charges against units that consist entirely of models with Towering Presence are subject to Maximised Roll. In addition, the model&apos;s Impact Hits gain Multiple Wounds (D3, against Towering Presence).</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2114,17 +2061,17 @@
             </entryLink>
             <entryLink id="6bb2-a660-f2b1-1db1" name="Unit - Centipede Legs" hidden="false" collective="false" import="true" targetId="9014-f681-74cb-b6b6" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
             </entryLink>
             <entryLink id="b156-49fc-0daf-d60e" name="Unit - Digestive Vomit" hidden="false" collective="false" import="true" targetId="dd92-a99c-d63c-b2bf" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
             </entryLink>
-            <entryLink id="3195-4e55-0f74-744d" name="Unit - Divining Snout" hidden="false" collective="false" import="true" targetId="98ea-ee0f-2037-cffd" type="selectionEntry">
+            <entryLink id="3195-4e55-0f74-744d" name="Unit - Hammer Hand" hidden="false" collective="false" import="true" targetId="d44f-3ef6-47b7-c253" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -2176,19 +2123,6 @@
             <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
           </characteristics>
         </profile>
-        <profile id="fc49-973b-09f2-0644" name="Dominion of Envy" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="6461-ecc2-b233-18d2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Envy</characteristic>
-            <characteristic name="Description" typeId="2945-4921-f954-c0f5"/>
-          </characteristics>
-        </profile>
         <profile id="ea3c-eca1-deb2-75fc" name="Kuulima&apos;s Deceiver Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
           <characteristics>
             <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
@@ -2202,14 +2136,14 @@
             <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">6</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
+            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">4+</characteristic>
             <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
           </characteristics>
         </profile>
         <profile id="0f8c-7e4c-eed5-9a6e" name="Kuulima&apos;s Deceiver Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
           <characteristics>
             <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">6</characteristic>
+            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">8</characteristic>
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
@@ -2229,6 +2163,15 @@
         <infoLink id="290a-8e96-09b1-ea0f" name="Protean Magic" hidden="false" targetId="9c73-bbca-fd62-c017" type="rule"/>
         <infoLink id="72e2-beb7-5a37-7467" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
         <infoLink id="7edb-8cd2-b22d-be39" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="033c-d56b-164b-a67f" name="Greater Dominion" hidden="true" targetId="8d54-23ac-064d-43d1" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="537f-3c0d-b029-a888" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="02d0-8446-5222-5956" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -2246,7 +2189,7 @@
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d790-533f-8482-1920" name="Fly (7&quot;, 14&quot;)" hidden="false" collective="false" import="true" type="upgrade">
@@ -2329,7 +2272,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="310.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="320.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1123-fd6a-bbf7-5006" name="Courtesan of Cibaresh" hidden="false" collective="false" import="true" type="unit">
@@ -2372,26 +2315,6 @@
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Razor Tentacles</characteristic>
           </characteristics>
         </profile>
-        <profile id="3d8c-1180-9085-d9ce" name="Razor Tentacles" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
-          <characteristics>
-            <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">As User/2 [As User]</characteristic>
-            <characteristic name="AP" typeId="646b-1e72-1589-5083">As User/2 [As User]</characteristic>
-            <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Area Attack (1x5) (see Rules)</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="fe32-17ef-5d58-c314" name="Dominion of Lust" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="1123-fd6a-bbf7-5006" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Lust</characteristic>
-            <characteristic name="Description" typeId="2945-4921-f954-c0f5">The model gains Strider. When rolling their Charge Range in the Charge Phase. units consisting entirely of models with Dominion of Lust must reroll failed Charge Range rolls if they are Located in the Charged unit’s Flank or Rear Facing.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="d334-1e36-d438-7d06" name="Courtesan of Cibaresh Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
           <characteristics>
             <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
@@ -2405,7 +2328,8 @@
           <description>Enemy units within 6″ of one or more models with Avert Your Gaze suffer −2 Discipline when taking Combat Reform tests.</description>
         </rule>
         <rule id="ed25-c47e-d557-00cd" name="Razor Tentacles" hidden="false">
-          <description>If the attack is allocated towards an enemy model in the enemy’s Flank or Rear Facing, it gains Area Attack (1×5), and its Strength and Armour Penetration are set to half the model’s [the model’s] Strength, respectively Armour Penetration, rounding fractions up.</description>
+          <description>Attack Attribute – Close Combat.
+The model gains +3 Attack Value while Engaged with one or more Flank or Rear Facings of enemy units. The additional attacks must be allocated towards R&amp;F models in these units. Ignore this effect if the model cannot allocate any Close Combat Attacks towards R&amp;F models.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2415,6 +2339,16 @@
         <infoLink id="004c-f835-b749-3b24" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (1)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="59cf-9474-0f5b-8618" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule"/>
+        <infoLink id="0ae8-3ef2-5851-f4e5" name="Greater Dominion" hidden="true" targetId="8d54-23ac-064d-43d1" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3499-d502-6c4a-01bd" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -2567,7 +2501,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="540.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="520.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c758-13b6-9c8c-eb64" name="Miser of Sugulag" hidden="false" collective="false" import="true" type="unit">
@@ -2593,7 +2527,7 @@
         <profile id="d6d5-a19d-169b-b847" name="Miser of Sugulag Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <characteristics>
             <characteristic name="HP" typeId="61df-0ca3-17b2-f001">6</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">6</characteristic>
+            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">7</characteristic>
             <characteristic name="Res" typeId="f988-a51e-9e65-0291">7</characteristic>
             <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">0</characteristic>
             <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
@@ -2617,19 +2551,6 @@
             <characteristic name="Rules" typeId="f269-16dd-a614-0f90">For each Veil Token in the owner’s Veil Token pool, attacks against the wearer suffer −1 Armour Penetration, up to a maximum of 3.</characteristic>
           </characteristics>
         </profile>
-        <profile id="7627-648a-27c7-6bd0" name="Dominion of Greed" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="c758-13b6-9c8c-eb64" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Greed</characteristic>
-            <characteristic name="Description" typeId="2945-4921-f954-c0f5">The model gains +2 Defensive Skill while its unit is in base contact with an enemy Scoring Unit.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="68b0-226d-91b5-d13f" name="Miser of Sugulag Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
           <characteristics>
             <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
@@ -2638,14 +2559,18 @@
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="c9b5-6e1b-0e04-6351" name="Half Off" hidden="false">
-          <description>If the model suffers a wound from an attack with Multiple Wounds (X), reduce X by half, rounding fractions up.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="181c-8905-e8f0-06a6" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
         <infoLink id="7e33-7951-a40f-97a6" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="3e76-2178-c79a-70ec" name="Greater Dominion" hidden="true" targetId="8d54-23ac-064d-43d1" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a519-961c-113e-e2d5" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d283-b2a4-f40f-ee1d" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -2663,7 +2588,7 @@
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2797,7 +2722,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="615.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="575.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2507-3db8-2c82-7a4f" name="Clawed Fiends" hidden="false" collective="false" import="true" type="unit">
@@ -2816,15 +2741,11 @@
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5912-346d-a32c-17ec" type="max"/>
       </constraints>
-      <rules>
-        <rule id="5447-51f4-72fe-d52e" name="Smother" hidden="false">
-          <description>If the attack is allocated towards a Large model, it gains +1 to hit and +1 to wound.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="98b5-49ed-1aad-6656" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="c717-72dc-210c-91dc" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
         <infoLink id="11df-381b-e7b5-c290" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+        <infoLink id="cfa6-c0ad-9e9f-01be" name="Smother" hidden="false" targetId="b3e9-4149-dadb-31e7" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="dbed-65b7-ba16-bedc" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -2921,7 +2842,7 @@
             </entryLink>
             <entryLink id="dd53-90b9-fdb4-6ada" name="Unit - Broodmother" hidden="false" collective="false" import="true" targetId="5c5d-b745-4ab1-3403" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="15.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="8.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -2956,10 +2877,10 @@
       </constraints>
       <rules>
         <rule id="88e6-54cb-19f1-aa52" name="Spell Craving" hidden="false">
-          <description>The model can perform up to 3 Supporting Attacks. When determining Combat Score, a side with at least one model with Spell Craving Engaged in Combat adds +X to its side’s Combat Score, where X is the number of non-Bound non-Attribute Spells known by enemy Wizards in units in base contact with it (note that multiple instances of the same spell count as 1 each).</description>
+          <description>When determining Combat Score, a side with at least one model with Spell Craving Engaged in Combat adds +X to its side’s Combat Score, where X is the number of non-Bound non-Attribute Spells known by enemy Wizards in units in base contact with it (note that multiple instances of the same spell count as 1 each).</description>
         </rule>
         <rule id="2a71-36d4-1e9d-16f8" name="Veil Stalker" hidden="false">
-          <description>The model follows the rules for Ambush with the following exceptions. When the unit arrives, it may choose to be placed within 6″ of an enemy model with Channel (instead of with its Rear Facing touching the Board Edge). If so, it cannot perform any Advance Moves this Movement Phase (note that this does not prevent the unit from performing a Reform).</description>
+          <description>The model follows the rules for Ambush with the following exceptions. When its unit enters the Battlefield, the owner may choose to apply the rules for Special Ambush (within 6” of an enemy model with Channel).</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2973,6 +2894,11 @@
         <infoLink id="e596-0de6-0ab6-7932" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
         <infoLink id="5716-6ae4-a05a-be74" name="Supernal" hidden="false" targetId="4d9a-1dea-1661-4083" type="rule"/>
         <infoLink id="8966-f403-0457-f064" name="Poison Attacks" hidden="false" targetId="f2fe-a751-2161-8c76" type="rule"/>
+        <infoLink id="59f5-eebf-a63f-42eb" name="Extra Support" hidden="false" targetId="4d95-b8a4-cad9-c07e" type="rule">
+          <modifiers>
+            <modifier type="set" field="name" value="Extra Support (3)"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3143-dda5-87a4-ba27" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -3034,7 +2960,7 @@
           <entryLinks>
             <entryLink id="ba95-9934-9cd8-28b9" name="Unit - Greenfire Eyes" hidden="false" collective="false" import="true" targetId="df10-be3e-95ef-f9d9" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -3209,9 +3135,9 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0507-690d-37ed-bbff" type="max"/>
               </constraints>
             </entryLink>
-            <entryLink id="5e59-aa3d-3172-7d63" name="Unit - Grasping Proboscis" hidden="false" collective="false" import="true" targetId="1e9e-1598-a3cc-5610" type="selectionEntry">
+            <entryLink id="5e59-aa3d-3172-7d63" name="Unit - Segmented Shell" hidden="false" collective="false" import="true" targetId="8101-3b21-c1ae-8871" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -3382,7 +3308,7 @@
             </entryLink>
             <entryLink id="c088-f049-5f4f-a5cd" name="Unit - Centipede Legs" hidden="false" collective="false" import="true" targetId="9014-f681-74cb-b6b6" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -3492,11 +3418,6 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
             </entryLink>
-            <entryLink id="ec3f-c725-31e4-6774" name="Unit - Cloven Hooves" hidden="false" collective="false" import="true" targetId="e153-94cd-6d94-7245" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-              </costs>
-            </entryLink>
             <entryLink id="d979-89cd-2373-7ac3" name="Unit - Bronze Backbone" hidden="false" collective="false" import="true" targetId="ed85-6fc9-ffad-b111" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
@@ -3537,13 +3458,6 @@
       </constraints>
       <profiles>
         <profile id="cce8-0c11-f188-17ec" name="Hope Harvester Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <modifiers>
-            <modifier type="set" field="db10-a838-f72f-3ed6" value="15&quot;">
-              <conditions>
-                <condition field="selections" scope="bc31-0baa-4e41-481f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b382-baa5-b0bc-e199" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
             <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10</characteristic>
@@ -3553,12 +3467,7 @@
         </profile>
         <profile id="89e4-9893-1e41-b2e7" name="Hope Harvester Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
           <modifiers>
-            <modifier type="set" field="61df-0ca3-17b2-f001" value="7">
-              <conditions>
-                <condition field="selections" scope="bc31-0baa-4e41-481f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b382-baa5-b0bc-e199" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="f988-a51e-9e65-0291" value="6">
+            <modifier type="set" field="61df-0ca3-17b2-f001" value="8">
               <conditions>
                 <condition field="selections" scope="bc31-0baa-4e41-481f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b382-baa5-b0bc-e199" type="equalTo"/>
               </conditions>
@@ -3633,7 +3542,7 @@
       <selectionEntries>
         <selectionEntry id="b382-baa5-b0bc-e199" name="Engine of Damnation" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="2f3e-4405-de8b-5868" value="1">
+            <modifier type="set" field="2f3e-4405-de8b-5868" value="1.0">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -3653,11 +3562,11 @@
           </constraints>
           <rules>
             <rule id="513a-5496-3f38-ca7b" name="Engine of Damnation" hidden="false">
-              <description>The model’s base is changed to 150×100 mm and its Height to Gigantic. Its Health Points are set to 7, Resilience is set to 6, March Rate is set to 15″, and it loses War Platform.</description>
+              <description>The model’s base is changed to 150×100 mm and its Height to Gigantic. Its Health Points are set to 8 and it loses War Platform.</description>
             </rule>
           </rules>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3667,14 +3576,14 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b712-3249-1b04-eca2" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="2cff-c27e-5549-1b78" name="Unit - Sorcerous Antennae" hidden="false" collective="false" import="true" targetId="7f66-1b58-871f-1f65" type="selectionEntry">
+            <entryLink id="2cff-c27e-5549-1b78" name="Unit - Aura of Despair" hidden="false" collective="false" import="true" targetId="6f4b-fe91-ef41-420a" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
             </entryLink>
-            <entryLink id="ab42-14c4-9ab6-4d66" name="Unit - Segmented Shell" hidden="false" collective="false" import="true" targetId="8101-3b21-c1ae-8871" type="selectionEntry">
+            <entryLink id="ab42-14c4-9ab6-4d66" name="Unit - Iron Husk" hidden="false" collective="false" import="true" targetId="41eb-5754-ef9e-983a" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
               </costs>
             </entryLink>
             <entryLink id="216b-d0b0-449f-bcce" name="Unit - Mark of the Eternal Champion" hidden="false" collective="false" import="true" targetId="534b-7d71-737c-c912" type="selectionEntry">
@@ -3685,11 +3594,6 @@
             <entryLink id="f68e-e99e-e828-9f20" name="Unit - Chilling Yawn" hidden="false" collective="false" import="true" targetId="1551-a143-9262-463f" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
-              </costs>
-            </entryLink>
-            <entryLink id="04e7-c721-df41-2337" name="Unit - Aura of Despair" hidden="false" collective="false" import="true" targetId="6f4b-fe91-ef41-420a" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -3838,7 +3742,7 @@
             </entryLink>
             <entryLink id="fe72-ae89-924c-f0f3" name="Unit - Centipede Legs" hidden="false" collective="false" import="true" targetId="9014-f681-74cb-b6b6" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="9.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -4020,13 +3924,9 @@
       <rules>
         <rule id="1bba-f834-77ff-b863" name="Morphlings" hidden="false">
           <description>During Spell Selection, each unit of Veil Serpents must choose a Manifestation from the list below and apply the effects during the game.
-· Writhing Nightmares
+· Venom Sacs
 · Mesmerising Plumage
 · Chilling Yawn</description>
-        </rule>
-        <rule id="f682-437d-0eb6-d9ee" name="Writhing Nightmares" hidden="false">
-          <description>Manifestation.
-Enemy units in base contact with one or more models with Writhing Nightmares suffer −1 Discipline.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -4087,7 +3987,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="37.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="34.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ea41-7d94-1d41-5ce0" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
@@ -4100,7 +4000,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="129.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="138.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e4dc-24bc-8ac3-72a6" name="Bloat Flies" hidden="false" collective="false" import="true" type="unit">
@@ -4134,6 +4034,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
           </modifiers>
         </infoLink>
         <infoLink id="fc6a-65ef-7153-f765" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="f47a-780e-07a1-1186" name="Tall" hidden="false" targetId="229b-fa84-b9fe-b1ff" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6bc4-be49-3ec3-b247" name="Aves (local)" hidden="false" targetId="e6bc-b5cf-f6f6-2ac0" primary="true"/>
@@ -4182,7 +4083,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="105.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4192,15 +4093,6 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="944d-7065-0094-7df7" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="8c7c-d9fc-3bc0-a63e" name="Unit - Dextrous Tentacles" hidden="false" collective="false" import="true" targetId="fedb-d9a8-d699-5d44" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="5.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
             <entryLink id="ffc3-1767-0312-b5e7" name="Unit - Unhinging Jaw" hidden="false" collective="false" import="true" targetId="f5b5-176e-d138-9e9e" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="12.0">
@@ -4212,7 +4104,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             </entryLink>
             <entryLink id="f74d-8873-3655-ae02" name="Unit - Digestive Vomit" hidden="false" collective="false" import="true" targetId="dd92-a99c-d63c-b2bf" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="6.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="7.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -4230,7 +4122,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             </entryLink>
             <entryLink id="2ea9-57d7-2c9b-9def" name="Unit - Broodmother" hidden="false" collective="false" import="true" targetId="5c5d-b745-4ab1-3403" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="18.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="8.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -4244,7 +4136,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
         <entryLink id="3c29-c3ec-a3dc-d661" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a3f0-b200-8276-5593" name="Vanadra’s Scourge" hidden="false" collective="false" import="true" type="unit">
@@ -4287,19 +4179,6 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Battle Focus, Devastating Charge (Distracting), Rage</characteristic>
           </characteristics>
         </profile>
-        <profile id="7cfa-3eb5-73d4-b1f7" name="Dominion of Wrath" hidden="false" typeId="af60-d32b-0a9b-275d" typeName="8 Dominion">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Sin" typeId="3905-9e58-d9a0-f7d5">Wrath</characteristic>
-            <characteristic name="Description" typeId="2945-4921-f954-c0f5">Follows the rules for Dominion. The model attacks ignore Parry.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="a3b1-e78e-7111-b2ed" name="Vanadra’s Scourge Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
           <characteristics>
             <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
@@ -4328,6 +4207,15 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
           </modifiers>
         </infoLink>
         <infoLink id="3547-7ee2-75e6-9dfd" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
+        <infoLink id="acf3-d0ec-e5f6-28ce" name="Greater Dominion" hidden="true" targetId="8d54-23ac-064d-43d1" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bda6-31ac-08d7-67f4" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5007-dbb0-d3e2-831b" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -4346,7 +4234,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4482,7 +4370,7 @@ Enemy units in base contact with one or more models with Writhing Nightmares suf
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="760.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="740.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3aa8-8efa-2e56-ee79" name="Harbinger of Father Chaos" hidden="false" collective="false" import="true" type="unit">
@@ -5142,11 +5030,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </entryLink>
-            <entryLink id="6888-052e-610e-1845" name="Unit - Dextrous Tentacles" hidden="false" collective="false" import="true" targetId="fedb-d9a8-d699-5d44" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-              </costs>
-            </entryLink>
             <entryLink id="8288-b20a-15e5-b2b2" name="Unit - Living Shield" hidden="false" collective="false" import="true" targetId="9571-d0e9-f227-e54f" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
@@ -5155,11 +5038,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             <entryLink id="4aa1-d36a-36d6-c9d2" name="Unit - Mark of the Eternal Champion" hidden="false" collective="false" import="true" targetId="534b-7d71-737c-c912" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-              </costs>
-            </entryLink>
-            <entryLink id="7b7b-5b0e-bec4-c72b" name="Character - Withering Vapor" hidden="false" collective="false" import="true" targetId="c90b-6da5-8da0-fe56" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </entryLink>
             <entryLink id="fdd6-4f4c-8f21-f3f8" name="Unit - Unnatural Roots" hidden="false" collective="false" import="true" targetId="c10c-4085-48a0-3e83" type="selectionEntry">
@@ -5177,10 +5055,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
   </selectionEntries>
   <rules>
     <rule id="5122-7830-9011-1a51" name="Immortal Denizens" hidden="false">
-      <description>Casting rolls made by models in a Daemon Legions army with one or two dice gain a +1 Casting Modifier. For casting rolls with a single Magic Dice, a natural roll of &apos;1&apos; or &apos;2&apos; is always a failed Casting Attempt, regardless of any modifiers. In addition, each player adds +2 Veil Tokens to their Veil Token pool in the Magic Phase during Siphon the Veil, when they are the Active Player.</description>
-    </rule>
-    <rule id="4048-cb47-8111-742f" name="Dominion" hidden="false">
-      <description>At the start of each friendly Player Turn, you may choose one friendly unit within the Commanding Presence range of the model with Dominion. All R&amp;F models in the chosen unit are affected as described in the Dominion rule in the Character&apos;s unit entry. The effects last until the end of the next Player Turn.</description>
+      <description>Casting rolls made by models in a Daemon Legions army with one or two dice gain a +1 Casting Modifier. In addition, each player adds +2 Veil Tokens to their Veil Token pool in the Magic Phase during Siphon the Veil, when they are the Active Player.</description>
     </rule>
   </rules>
   <sharedSelectionEntries>
@@ -5215,17 +5090,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2612-a224-6aeb-79f0" name="Guiding - Dextrous Tentacles" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="fd85-1aa4-d0e3-0d83" name="Dextrous Tentacles (Guiding)" hidden="false" targetId="9b4d-89d1-b96c-e25b" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="ccdc-eb4f-e22a-ad69" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="179b-e388-9bae-22b6" name="Guiding - Centipede Legs" hidden="false" collective="false" import="true" type="upgrade">
@@ -5314,17 +5178,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="95a7-7337-4dc7-4932" name="Guiding - Grasping Proboscis" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="cad9-d050-7b18-0b49" name="Grasping Proboscis (Guiding)" hidden="false" targetId="332d-f18e-f808-ee41" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="b35f-378b-460e-20d0" name="Dominant Manifestations" hidden="false" targetId="56dd-1865-f8d0-bf12" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5826-3909-0c8c-2c4d" name="Guiding - Roaming Hands" hidden="false" collective="false" import="true" type="upgrade">
@@ -5526,17 +5379,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d222-156f-e43b-2680" name="Character - Charged Tendrils" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a869-feeb-e1ab-cbad" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="cae7-f4ee-b3ba-eea0" name="Charged Tendrils" hidden="false" targetId="fdd8-3ed1-3ee7-adef" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="1b21-7ecf-6553-31c9" name="Character - Chiling Yawn" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -5563,17 +5405,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="cfbd-5bd9-3216-5990" name="Character - Cloven Hooves" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4ea-aed7-8219-3a15" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="24dd-939e-6232-973e" name="Cloven Hooves" hidden="false" targetId="b464-caac-eb5a-e188" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e602-aa80-88d8-37e3" name="Character - Chitinous Scales" hidden="false" collective="false" import="true" type="upgrade">
@@ -5620,28 +5451,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7c75-e3b8-8f62-44e8" name="Character - Dextrous Tentacles" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2612-a224-6aeb-79f0" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86d0-a793-3274-1ce3" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="d9ac-32f9-2218-c0f9" name="Dextrous Tentacles" hidden="false" targetId="2397-fa03-e8b9-6925" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="cf6b-323a-249a-4d67" name="Character - Divining Snout" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -5662,28 +5471,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="db25-829b-af9d-6b20" name="Character - Grasping Proboscis" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95a7-7337-4dc7-4932" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1153-1d5a-935a-5280" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="87f9-ff8b-7ef5-229f" name="Grasping Proboscis" hidden="false" targetId="e980-5c7d-2eed-185f" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e786-6f8e-c9c8-712c" name="Character - Greenfire Eyes" hidden="false" collective="false" import="true" type="upgrade">
@@ -6077,18 +5864,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c90b-6da5-8da0-fe56" name="Character - Withering Vapor" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b21-328c-28f4-48fd" type="max"/>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8ee5-62c7-c8ad-4b4d" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="fe05-98ad-7a2d-7239" name="Withering Vapour" hidden="false" targetId="5322-fd75-3892-9134" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="dd82-d2e9-2966-3793" name="Guiding - Incendiary Ichor" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="9757-1e63-49a8-613f" name="Incendiary Ichor (Guiding)" hidden="false" targetId="fad0-dcaf-7a4b-0e0d" type="rule"/>
@@ -6148,14 +5923,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3e2c-0f67-7121-d0cf" name="Unit - Charged Tendrils" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="d36c-7c7b-c071-1037" name="Charged Tendrils" hidden="false" targetId="fdd8-3ed1-3ee7-adef" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="7f66-1b58-871f-1f65" name="Unit - Sorcerous Antennae" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="decrement" field="d80b-331d-6d51-2379" value="1.0">
@@ -6185,14 +5952,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
     <selectionEntry id="7679-cd89-0364-5aad" name="Unit - Incendiary Ichor" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="aca6-3837-deea-419a" name="Incendiary Ichor" hidden="false" targetId="c5dc-a2e2-a42a-794c" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="e153-94cd-6d94-7245" name="Unit - Cloven Hooves" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="5ea8-ed9f-b744-ec23" name="Cloven Hooves" hidden="false" targetId="b464-caac-eb5a-e188" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -6270,14 +6029,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1e9e-1598-a3cc-5610" name="Unit - Grasping Proboscis" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="77ee-18f4-aae0-1c0f" name="Grasping Proboscis" hidden="false" targetId="e980-5c7d-2eed-185f" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="deaa-fae6-282f-a5dd" name="Unit - Horns of Hubris" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="5563-cec0-0905-6c96" name="Horns of Hubris" hidden="false" targetId="ec0d-9a79-f1ff-21b6" type="rule"/>
@@ -6297,14 +6048,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
     <selectionEntry id="ca78-5b27-f154-1827" name="Unit - Brimstone Secretions" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="cd34-7ddd-280f-d074" name="Brimstone Secretions" hidden="false" targetId="1b6a-bf48-2d0c-1b89" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="fedb-d9a8-d699-5d44" name="Unit - Dextrous Tentacles" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="c78f-6bb8-0bf2-b202" name="Dextrous Tentacles" hidden="false" targetId="2397-fa03-e8b9-6925" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -6473,6 +6216,16 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="a8f7-244f-718a-e178" name="Guiding - Aura of Despair" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="8445-4da7-3515-c487" name="Aura of Despair (Guiding)" hidden="false" targetId="c27f-c5e6-c2e1-2635" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="41eb-5754-ef9e-983a" name="Unit - Iron Husk" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="6109-c931-42ad-f269" name="Iron Husk" hidden="false" targetId="d125-afbd-5f7f-dc96" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="c7e6-73d9-a772-5640" name="Guiding Manifestations of Father Chaos" hidden="false" collective="false" import="true">
@@ -6481,7 +6234,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </constraints>
       <entryLinks>
         <entryLink id="6b85-ce63-7596-efee" name="Guiding - Brimstone Secretions" hidden="false" collective="false" import="true" targetId="f9a2-7553-a87c-bf04" type="selectionEntry"/>
-        <entryLink id="0a14-28ff-161e-e5bc" name="Guiding - Dextrous Tentacles" hidden="false" collective="false" import="true" targetId="2612-a224-6aeb-79f0" type="selectionEntry"/>
         <entryLink id="e5df-eadd-6f4a-0625" name="Guiding - Centipede Legs" hidden="false" collective="false" import="true" targetId="179b-e388-9bae-22b6" type="selectionEntry"/>
         <entryLink id="2dc9-9e06-8387-8e93" name="Guiding - Mirrored Scales" hidden="false" collective="false" import="true" targetId="179e-fcf9-a896-dd42" type="selectionEntry"/>
         <entryLink id="d685-3ada-211d-9a86" name="Guiding - Kaleidoscopic Flesh" hidden="false" collective="false" import="true" targetId="1eb6-6ae5-2c96-e356" type="selectionEntry"/>
@@ -6494,18 +6246,13 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <entryLink id="a55e-12b3-adb6-582e" name="Character - Kaleidoscopic Flesh" hidden="false" collective="false" import="true" targetId="973b-ff11-0103-3c4b" type="selectionEntry"/>
         <entryLink id="7087-71a1-d2e4-9ff0" name="Character - Mark of the Eternal Champion" hidden="false" collective="false" import="true" targetId="6934-09a2-c423-4815" type="selectionEntry"/>
         <entryLink id="2ada-a772-b65c-68e0" name="Character - Mirrored Scales" hidden="false" collective="false" import="true" targetId="05c3-b01f-3881-b48a" type="selectionEntry"/>
-        <entryLink id="5fac-dafd-f5ad-5858" name="Character - Withering Vapor" hidden="false" collective="false" import="true" targetId="c90b-6da5-8da0-fe56" type="selectionEntry"/>
         <entryLink id="bbb9-dc53-b56a-1313" name="Character - Hammer Hand" hidden="false" collective="false" import="true" targetId="5c33-ef04-52f4-e8e5" type="selectionEntry"/>
-        <entryLink id="4c4d-0469-4a99-ae05" name="Character - Sorcerous Antennae" hidden="false" collective="false" import="true" targetId="8acc-ba3f-25f3-21bf" type="selectionEntry"/>
-        <entryLink id="86b4-08df-b95a-e54d" name="Character - Cloven Hooves" hidden="false" collective="false" import="true" targetId="cfbd-5bd9-3216-5990" type="selectionEntry"/>
         <entryLink id="3d98-901d-97f7-fa15" name="Character - Brimstone Secretions" hidden="false" collective="false" import="true" targetId="0194-4f3a-ba16-4882" type="selectionEntry"/>
         <entryLink id="84c1-9609-c73b-be44" name="Character - Centipede Legs" hidden="false" collective="false" import="true" targetId="a84f-6a92-0338-3335" type="selectionEntry"/>
-        <entryLink id="5349-4560-5f73-19e8" name="Character - Charged Tendrils" hidden="false" collective="false" import="true" targetId="d222-156f-e43b-2680" type="selectionEntry"/>
         <entryLink id="80eb-cfe5-0e5a-0eaf" name="Character - Chitinous Scales" hidden="false" collective="false" import="true" targetId="e602-aa80-88d8-37e3" type="selectionEntry"/>
         <entryLink id="d0eb-0007-b3f2-d3aa" name="Character - Dark Hide" hidden="false" collective="false" import="true" targetId="a500-0fe0-76f0-168a" type="selectionEntry"/>
         <entryLink id="ec7c-e3fb-3d74-538a" name="Character - Living Shield" hidden="false" collective="false" import="true" targetId="a549-eef7-a5c4-885b" type="selectionEntry"/>
         <entryLink id="0bae-ac46-dbad-f332" name="Character - Unnatural Roots" hidden="false" collective="false" import="true" targetId="a7d4-ddae-1d27-ce1b" type="selectionEntry"/>
-        <entryLink id="1189-a483-c167-331b" name="Character - Dextrous Tentacles" hidden="false" collective="false" import="true" targetId="7c75-e3b8-8f62-44e8" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="c24c-0ae8-66b7-f307" name="Manifestations of Envy" hidden="false" collective="false" import="true">
@@ -6526,7 +6273,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <entryLinks>
         <entryLink id="f62d-4083-5fb4-e826" name="Character - Chiling Yawn" hidden="false" collective="false" import="true" targetId="1b21-7ecf-6553-31c9" type="selectionEntry"/>
         <entryLink id="40e2-19af-eb21-5d65" name="Character - Aura of Despair" hidden="false" collective="false" import="true" targetId="1224-6fae-6bbf-1f13" type="selectionEntry"/>
-        <entryLink id="60d3-0e7b-3129-7a39" name="Character - Segmented Shell" hidden="false" collective="false" import="true" targetId="4560-fc49-51da-fd99" type="selectionEntry"/>
+        <entryLink id="584f-ab22-baa6-25d2" name="Character - Sorcerous Antennae" hidden="false" collective="false" import="true" targetId="8acc-ba3f-25f3-21bf" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="db1f-51cf-c20c-cdbd" name="Manifestations of Pride" hidden="false" collective="false" import="true">
@@ -6545,9 +6292,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
     </selectionEntryGroup>
     <selectionEntryGroup id="6098-90d8-dc8c-c477" name="Manifestations of Greed" hidden="false" collective="false" import="true">
       <entryLinks>
-        <entryLink id="35a6-aa93-2dbb-0486" name="Character - Grasping Proboscis" hidden="false" collective="false" import="true" targetId="db25-829b-af9d-6b20" type="selectionEntry"/>
         <entryLink id="eb2f-22e0-0676-7bd1" name="Character - Smothering Coils" hidden="false" collective="false" import="true" targetId="df15-d360-eca5-85a2" type="selectionEntry"/>
         <entryLink id="a08c-45f8-ab41-dd8e" name="Character - Divining Snout" hidden="false" collective="false" import="true" targetId="cf6b-323a-249a-4d67" type="selectionEntry"/>
+        <entryLink id="0134-b772-3d6f-9401" name="Character - Segmented Shell" hidden="false" collective="false" import="true" targetId="4560-fc49-51da-fd99" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="00c6-893d-47ed-ce5d" name="Manifestations of Gluttony" hidden="false" collective="false" import="true">
@@ -6581,9 +6328,9 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b946-33cc-d76f-b175" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="175f-fb91-c985-de47" name="Guiding - Grasping Proboscis" hidden="false" collective="false" import="true" targetId="95a7-7337-4dc7-4932" type="selectionEntry"/>
         <entryLink id="ce18-efa2-85d5-35bc" name="Guiding - Smothering Coils" hidden="false" collective="false" import="true" targetId="a1d4-7820-3de0-1d03" type="selectionEntry"/>
         <entryLink id="8042-1baf-f853-7db0" name="Guiding - Divining Snout" hidden="false" collective="false" import="true" targetId="3f58-f25a-0f16-83da" type="selectionEntry"/>
+        <entryLink id="8d89-70ab-ff39-6598" name="Guiding - Segmented Shell" hidden="false" collective="false" import="true" targetId="e2a2-d153-2657-2772" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="8fc6-2d33-86fb-da06" name="Guiding Manifestations of Lust" hidden="false" collective="false" import="true">
@@ -6609,7 +6356,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a82a-d4e3-112b-e8a7" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="4511-08a9-e85d-e4a2" name="Guiding - Segmented Shell" hidden="false" collective="false" import="true" targetId="e2a2-d153-2657-2772" type="selectionEntry"/>
+        <entryLink id="592c-ba87-a0b5-3891" name="Guiding - Aura of Despair" hidden="false" collective="false" import="true" targetId="a8f7-244f-718a-e178" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="c05a-a52e-1185-57b8" name="Guiding Manifestations of Wrath" hidden="false" collective="false" import="true">
@@ -6634,7 +6381,7 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <description>The model gains Hard Target (1).</description>
     </rule>
     <rule id="cee3-07d3-84e2-15e3" name="Kaleidoscopic Flesh (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains Hard Target (1).</description>
+      <description>Dominant. The model gains Hard Target (1).</description>
     </rule>
     <rule id="a527-8372-68fa-ed2e" name="Mark of the Eternal Champion" hidden="false">
       <description>If the bearer is not a Wizard, it becomes a Wizard Apprentice that does not select spells as normal but always knows Spear of Infinity (Hereditary Spell). If the bearer is already a Wizard, it knows Spear of Infinity in addition to its other spells and cannot select it during Spell Selection.</description>
@@ -6642,17 +6389,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
     <rule id="2358-2b51-8513-65e6" name="Mirrored Scales" hidden="false">
       <description>Each Close Combat Attack allocated towards the model for which a natural ‘1’ on its to-hit roll is distributed onto the attacking model’s Health Pool.</description>
     </rule>
-    <rule id="2397-fa03-e8b9-6925" name="Dextrous Tentacles" hidden="false">
-      <description>The model gains +1 Agility.</description>
-    </rule>
     <rule id="dd4f-13ad-fabf-fb40" name="Unnatural Roots" hidden="false">
       <description>A side with one or more models with Unnatural Roots Engaged in Combat at the end of the Round of Combat adds +1 to its Combat Score.</description>
     </rule>
-    <rule id="a398-0648-5cdb-87c8" name="Third Eye" hidden="false">
-      <description>At the beginning of each friendly Charge Phase, draw the Flux Card for that Player Turn instead of step 2 of the Magic Phase Sequence.</description>
-    </rule>
     <rule id="73c3-6c8d-ef45-cb14" name="Living Shield (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains Parry.</description>
+      <description>Dominant. The model gains Parry.</description>
     </rule>
     <rule id="d688-cdcb-904a-e480" name="Living Shield" hidden="false">
       <description>The model gains Parry.</description>
@@ -6663,23 +6404,17 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
     <rule id="0f8a-515b-da8d-31ce" name="Chitinous Scales" hidden="false">
       <description>The model gains +2 Armour, to a maximum of 3.</description>
     </rule>
-    <rule id="fdd8-3ed1-3ee7-adef" name="Charged Tendrils" hidden="false">
-      <description>At the end of Siphon the Veil, the owner is allowed to store up to 6 Veil Tokens instead of the normal 3.</description>
-    </rule>
     <rule id="cc45-50dd-97b5-5f44" name="Centipede Legs (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains +1′′ Advance Rate.</description>
+      <description>Dominant. The model gains +2″ March Rate</description>
     </rule>
     <rule id="69cb-edb7-a8e1-9e2c" name="Centipede Legs" hidden="false">
-      <description>The model gains +1′′ Advance Rate.</description>
+      <description>The model gains +2″ March Rate</description>
     </rule>
     <rule id="1b6a-bf48-2d0c-1b89" name="Brimstone Secretions" hidden="false">
-      <description>Attacks that are Divine Attacks made against the model lose this Attack Attribute.</description>
-    </rule>
-    <rule id="b464-caac-eb5a-e188" name="Cloven Hooves" hidden="false">
-      <description>Unless the model already has Impact Hits (X), it gains Impact Hits (D3+1). These Impact Hits are resolved with Strength 5 and Armour Penetration 2.</description>
+      <description>The model gains Immune (Divine Attacks).</description>
     </rule>
     <rule id="a361-9ff9-d38c-2ae8" name="Brimstone Secretions (Guiding)" hidden="false">
-      <description>Dominant. Attacks that are Divine Attacks made against the model and against R&amp;F models in its unit lose this Attack Attribute.</description>
+      <description>Dominant. The model gains Immune (Divine Attacks).</description>
     </rule>
     <rule id="1b87-097f-c091-4721" name="Sorcerous Antennae" hidden="false">
       <description>At the start of Siphon the Veil in each of your Magic Phases, choose a single model part in each unit with one or more instances of this Manifestation. The chosen model part gains Channel (1) until the end of the Magic Phase.</description>
@@ -6687,17 +6422,11 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
     <rule id="2d09-c66a-79ff-4849" name="Hammer Hand" hidden="false">
       <description>The model gains +1 Attack Value.</description>
     </rule>
-    <rule id="5322-fd75-3892-9134" name="Withering Vapour" hidden="false">
-      <description>The bearer gains Breath Attack (Str 3, AP 2).</description>
-    </rule>
     <rule id="856b-4f84-b1d7-6eab" name="Mirrored Scales (Guiding)" hidden="false">
-      <description>Dominant. Each Close Combat Attack allocated towards the model and R&amp;F models in its unit for which a natural ‘1’ on its to-hit roll is distributed onto the attacking model’s Health Pool.</description>
-    </rule>
-    <rule id="9b4d-89d1-b96c-e25b" name="Dextrous Tentacles (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains +1 Agility.</description>
+      <description>Dominant. Each Close Combat Attack allocated towards the model for which a natural ‘1’ on its to-hit roll is distributed onto the attacking model’s Health Pool.</description>
     </rule>
     <rule id="20d1-921b-231c-5964" name="Greenfire Eyes" hidden="false">
-      <description>One use only. Must be activated when the model’s unit fails its first Charge Range roll. The unit must reroll the Charge Range roll.</description>
+      <description>The model must reroll any natural rolls of ‘1’ when rolling for Charge Range and Pursuit Distance.</description>
     </rule>
     <rule id="280f-0f0b-5ea6-a75c" name="Roaming Hands" hidden="false">
       <description>While the unit is Engaged with an enemy unit’s Flank or Rear Facing, the model gains +1 Strength and +1 Armour Penetration.</description>
@@ -6706,81 +6435,73 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       <description>Dominant. Enemy units in base contact with one or more models with this Manifestation suffer −1 Offensive Skill and −1 Defensive Skill.</description>
     </rule>
     <rule id="5305-baaf-a522-1b32" name="Divining Snout (Guiding)" hidden="false">
-      <description>Dominant. When Charging a unit that contains one or more Special Items, the model and each R&amp;F model in its unit gains +2&quot; Advance Rate for Charge Range rolls. The effects only apply in the Charge Phase and only if all models in the unit are affected by Divining Snout.</description>
+      <description>Dominant. The model gains Devastating Charge (+2″ Adv) for Charges against units that contain at least one Special Item. The effects only apply if all models in the unit are affected by Divining Snout.</description>
     </rule>
     <rule id="853b-f9ad-f26b-60f6" name="Divining Snout" hidden="false">
-      <description>When Charging a unit that contains one or more Special Items, the model gains +2&quot; Advance Rate for Charge Range rolls. The effects only apply in the Charge Phase and only if all models in the unit are affected by Divining Snout.</description>
+      <description>The model gains Devastating Charge (+2″ Adv) for Charges against units that contain at least one Special Item. The effects only apply if all models in the unit are affected by Divining Snout.</description>
     </rule>
     <rule id="2a42-39f9-fdfc-c751" name="Smothering Coils (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains +1 to-wound with Close Combat Attacks against models with Scoring.</description>
+      <description>Dominant. The model gains +1 to-wound with Close Combat Attacks against models with Scoring.</description>
     </rule>
     <rule id="02ac-94df-710c-04f7" name="Smothering Coils" hidden="false">
       <description>The model gains +1 to-wound with Close Combat Attacks against models with Scoring.</description>
     </rule>
-    <rule id="332d-f18e-f808-ee41" name="Grasping Proboscis (Guiding)" hidden="false">
-      <description>Dominant. At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and the model and R&amp;F model in its unit caused at least three Health Point losses against enemy units with Melee Attacks, the owner gains D3 Veil Tokens to their Veil Token pool.</description>
-    </rule>
-    <rule id="e980-5c7d-2eed-185f" name="Grasping Proboscis" hidden="false">
-      <description>At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and the model caused at least three Health Point losses against enemy units with Melee Attacks, the owner gains D3 Veil Tokens to their Veil Token pool.</description>
-    </rule>
     <rule id="a327-0702-2d00-a321" name="Unhinging Jaw (Guiding)" hidden="false">
-      <description>Dominant. Failed to-wound rolls from Close Combat Attacks against Large or Gigantic models made by the model and each R&amp;F model in its unit must be re-rolled.</description>
+      <description>Dominant. Failed to-wound rolls from Close Combat Attacks against Large or Gigantic models made by the model must be re-rolled.</description>
     </rule>
     <rule id="4039-deb4-6680-d42a" name="Unhinging Jaw" hidden="false">
       <description>Failed to-wound rolls from Close Combat Attacks against Large or Gigantic models made by the model must be re-rolled.</description>
     </rule>
     <rule id="e33b-baf7-0483-6ca0" name="Digestive Vomit (Guiding)" hidden="false">
-      <description>Dominant. One use only. Must be activated the first time the model’s unit performs a Post-Combat Pivot or a Post-Combat Reform. The model and each R&amp;F model in
-its unit gains +1 Strength and +1 Armour Penetration until the end of the game.</description>
+      <description>Dominant. The first time the model is on the winning side of a combat, it gains +1 Strength and +1 Armour Penetration until the end of the game.</description>
     </rule>
     <rule id="7479-f430-568c-f382" name="Digestive Vomit" hidden="false">
-      <description>One use only. Must be activated the first time the model’s unit performs a Post-Combat Pivot or a Post-Combat Reform. The model gains +1 Strength and +1 Armour Penetration until the end of the game.</description>
+      <description>The first time the model is on the winning side of a combat, it gains +1 Strength and +1 Armour Penetration until the end of the game.</description>
     </rule>
     <rule id="ef3b-cd0e-ac78-b679" name="Broodmother (Guiding)" hidden="false">
-      <description>Dominant. At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and during which the model caused at least three Health Point losses against enemy units with Close Combat Attacks, the unit Raises D3 Health Points.</description>
+      <description>Dominant. For each Health Point loss the model causes with Close Combat Attacks against enemy units, roll a D6 at the end of the Initiative Step. For each rolled 6+, the model’s Health Pool Raises 1 Health Point.</description>
     </rule>
     <rule id="5864-c9bc-5aa0-2996" name="Broodmother" hidden="false">
-      <description>Dominant. At the end of each Round of Combat during which the model’s unit was Engaged in Combat, and during which the model caused at least three Health Point losses against enemy units with Close Combat Attacks, the unit Raises D3 Health Points.</description>
+      <description>Dominant. For each Health Point loss the model causes with Close Combat Attacks against enemy units, roll a D6 at the end of the Initiative Step. For each rolled 6+, the model’s Health Pool Raises 1 Health Point.</description>
     </rule>
     <rule id="03ec-e4ff-5b7e-009e" name="Venom Sacs (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains Poison Attacks. If the model’s Close Combat Attacks or those from R&amp;F models in its unit already were Poison
-Attacks from another source than this Manifestation, the attack will automatically wound on successful to-hit rolls of 5+, instead of 6+.</description>
+      <description>Dominant. The model gains Poison Attacks. If the model’s Close Combat Attacks already were Poison Attacks from another source than this Manifestation, the attack will automatically wound on successful to-hit rolls of 5+, instead of 6+.</description>
     </rule>
     <rule id="38b8-6e18-7a60-c9cf" name="Venom Sacs" hidden="false">
-      <description>The model gains Poison Attacks. If the model’s Close Combat Attacks or those from R&amp;F models in its unit already were Poison Attacks from another source than this Manifestation, the attack will automatically wound on successful to-hit rolls of 5+, instead of 6+.</description>
+      <description>The model gains Poison Attacks. If the model’s Close Combat Attacks already were Poison Attacks from another source than this Manifestation, the attack will automatically wound on successful to-hit rolls of 5+, instead of 6+.</description>
     </rule>
     <rule id="1b39-4678-0f67-af7a" name="Piercing Spike (Guiding)" hidden="false">
-      <description>Dominant. Close Combat Attacks made by the model and each R&amp;F model in its unit gain +1 Armour Penetration.</description>
+      <description>Dominant. Close Combat Attacks made by the model gain +1 Armour Penetration.</description>
     </rule>
     <rule id="4f01-a1c0-875f-0af5" name="Piercing Spike" hidden="false">
       <description>Close Combat Attacks made by the model gain +1 Armour Penetration.</description>
     </rule>
     <rule id="e889-67b0-7efc-9d09" name="Roaming Hands (Guiding)" hidden="false">
-      <description>Dominant. While the unit is Engaged with an enemy unit’s Flank or Rear Facing, the model and each R&amp;F model in its unit gains +1 Strength and +1 Armour Penetration.</description>
+      <description>Dominant. While the unit is Engaged with an enemy unit’s Flank or Rear Facing, the model gains +1 Strength and +1 Armour Penetration.</description>
     </rule>
     <rule id="fad0-dcaf-7a4b-0e0d" name="Incendiary Ichor (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains Aegis (2+, against Flaming Attacks). All Melee Attacks (including Special Attacks) and Shooting Attacks made by the model with Incendiary Ichor and each R&amp;F model in its unit become Flaming Attacks. The model and each R&amp;F model in its unit automatically fails all Fortitude Saves.</description>
+      <description>Dominant. The model gains Aegis (3+, against Flaming Attacks). All Melee Attacks (including Special Attacks) and Shooting Attacks made by the model with Incendiary Ichor become Flaming Attacks. The model automatically fails all Fortitude Saves.</description>
     </rule>
     <rule id="62b3-5cc4-e382-0ea9" name="Segmented Shell (Guiding)" hidden="false">
-      <description>Dominant. When the model or a R&amp;F model in its unit suffers a wound from an attack with Multiple Wounds (X), reduce X by 1, to a minimum of 1.</description>
+      <description>Dominant. When the model suffers a wound from an attack with Multiple Wounds (X), reduce X by 1, to a minimum of 1.</description>
     </rule>
     <rule id="fbee-3c55-4196-5a18" name="Segmented Shell" hidden="false">
       <description>When the model suffers a wound from an attack with Multiple Wounds (X), reduce X by 1, to a minimum of 1.</description>
     </rule>
     <rule id="6c21-6c4d-93b5-7fee" name="Aura of Despair" publicationId="3f95-f87e-5df2-4102" page="5" hidden="false">
-      <description>Dominant. Enemy units suffer −2′′ Advance Rate to a minimum of 1′′ when rolling for Charge Range against units with at least one model with this Manifestation in the Charge Phase.</description>
+      <description>Dominant. The model gains Accurate</description>
     </rule>
     <rule id="5ed6-5249-9ce8-cde8" name="Chilling Yawn" hidden="false">
       <description>Dominant. Enemy units in base contact with one or more models with this Manifestation suffer −2 Agility.</description>
     </rule>
     <rule id="d52b-8bbc-273f-c6cc" name="Horns of Hubris (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains Vanguard (6′′).</description>
+      <description>Dominant. The model gains Vanguard (6′′).</description>
     </rule>
     <rule id="ec0d-9a79-f1ff-21b6" name="Horns of Hubris" hidden="false">
       <description>The model gains Vanguard (6′′).</description>
     </rule>
     <rule id="c7b6-f47e-fed1-71e5" name="Bronze Backbone (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains Hatred.</description>
+      <description>Dominant. The model gains Hatred.</description>
     </rule>
     <rule id="b20f-b5d9-40cf-f241" name="Bronze Backbone" hidden="false">
       <description>The model gains Hatred.</description>
@@ -6789,22 +6510,22 @@ Attacks from another source than this Manifestation, the attack will automatical
       <description>Discipline Tests taken by units with at least one model with this Manifestation are subject to Minimised Roll.</description>
     </rule>
     <rule id="b0ee-64ce-7e01-f781" name="Hot Blood (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains Devastating Charge (+2 Agi).</description>
+      <description>Dominant. The model gains Devastating Charge (+2 Agi).</description>
     </rule>
     <rule id="8e5e-e260-1cab-aadf" name="Hot Blood" hidden="false">
       <description>The model gains Devastating Charge (+2 Agi).</description>
     </rule>
     <rule id="c5dc-a2e2-a42a-794c" name="Incendiary Ichor" hidden="false">
-      <description>The model gains Aegis (2+, against Flaming Attacks). All Melee Attacks (including Special Attacks) and Shooting Attacks made by the model with Incendiary Ichor become Flaming Attacks. The model automatically fails all Fortitude Saves.</description>
+      <description>The model gains Aegis (3+, against Flaming Attacks). All Melee Attacks (including Special Attacks) and Shooting Attacks made by the model with Incendiary Ichor become Flaming Attacks. The model automatically fails all Fortitude Saves.</description>
     </rule>
     <rule id="f061-bc6e-b687-8fef" name="Red Haze (Guiding)" hidden="false">
-      <description>Dominant. The model’s Close Combat Attacks and those of R&amp;F models in its unit gain +1 Strength and +1 Armour Penetration, but each of its Close Combat Attacks and those of R&amp;F models in its unit with a natural to-hit roll of ‘1’ is distributed onto the attacking model’s Health Pool.</description>
+      <description>Dominant. The model’s Close Combat Attacks gain +1 Strength and +1 Armour Penetration, but each of its Close Combat Attacks with a natural to-hit roll of ‘1’ is distributed onto the attacking model’s Health Pool.</description>
     </rule>
     <rule id="b434-337b-bd50-4c7b" name="Red Haze" hidden="false">
       <description>The model’s Close Combat Attacks gain +1 Strength and +1 Armour Penetration, but each of its Close Combat Attacks with a natural to-hit roll of ‘1’ is distributed onto the attacking model’s Health Pool.</description>
     </rule>
     <rule id="345a-6276-7db8-c575" name="Whipcrack Tail (Guiding)" hidden="false">
-      <description>Dominant. The model and each R&amp;F model in its unit gains Lightning Reflexes.</description>
+      <description>Dominant. The model gains Lightning Reflexes.</description>
     </rule>
     <rule id="90cf-6591-ffa0-a360" name="Whipcrack Tail" hidden="false">
       <description>The model gains Lightning Reflexes.</description>
@@ -6812,6 +6533,15 @@ Attacks from another source than this Manifestation, the attack will automatical
     <rule id="fcdf-ed43-7444-3103" name="Colossal Stature" hidden="false">
       <description>Universal Rule
 The model counts as Gigantic for the purpose of determining the number of Full Ranks.</description>
+    </rule>
+    <rule id="c27f-c5e6-c2e1-2635" name="Aura of Despair (Guiding)" publicationId="3f95-f87e-5df2-4102" page="5" hidden="false">
+      <description>Dominant. The model gains Accurate</description>
+    </rule>
+    <rule id="b3e9-4149-dadb-31e7" name="Smother" publicationId="3f95-f87e-5df2-4102" page="2" hidden="false">
+      <description>Close Combat. If the attack is allocated towards a model that has the same Height as the attacker, it gains +1 to hit and +1 to wound.</description>
+    </rule>
+    <rule id="8d54-23ac-064d-43d1" name="Greater Dominion" hidden="false">
+      <description>At the start of each friendly Player Turn, you may choose one friendly unit within the Commanding Presence range of the model with Greater Dominion. All R&amp;F models in the chosen unit must reroll failed Aegis Save rolls of ‘1’ until the end of the next Player Turn.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -6832,7 +6562,7 @@ The model counts as Gigantic for the purpose of determining the number of Full R
         <characteristic name="Type" typeId="b6ee-c0b1-7832-0e4f">24&quot;</characteristic>
         <characteristic name="Duration" typeId="ada6-44ac-7daa-aa57">Hex Missile Damage</characteristic>
         <characteristic name="Effect" typeId="7839-02e6-d607-a978">Instant</characteristic>
-        <characteristic name="Path" typeId="defe-1234-5678-9123">The target suffers 1 hit with Strength 2 [5], Armour Penetration 2, Area Attack (1×5), and [Multiple Wounds (2)]. The hits from Spear of Infinity gain +1 Strength for each non-Attribute Spell successfully cast in this Magic Phase.</characteristic>
+        <characteristic name="Path" typeId="defe-1234-5678-9123">The target suffers 1 hit with Strength 2 [5], Armour Penetration 2, Area Attack (1×5), Magical Attacks, and [Multiple Wounds (2)]. The hits from Spear of Infinity gain +1 Strength for each non-Attribute Spell successfully cast in this Magic Phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="f28d-db1a-9d6e-2941" name="Fate&apos;s Judgement" hidden="false" typeId="654a-9b5c-962c-4f80" typeName="X Spell">
