@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2023 Beta 1" revision="54" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2023 Beta 2" revision="55" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -317,7 +317,7 @@ The model&apos;s range of Commanding Presence (if available) is increased by 3&q
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ef67-0a29-6d5c-687c" name="°Crystal Ball" hidden="false" collective="false" import="true" type="upgrade">
@@ -375,7 +375,7 @@ The model&apos;s range of Commanding Presence (if available) is increased by 3&q
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="57fe-c8e7-f786-132c" name="Dragonfire Gem" hidden="false" collective="false" import="true" type="upgrade">
@@ -789,7 +789,7 @@ The model&apos;s range of Commanding Presence (if available) is increased by 3&q
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c253-ce04-6c42-8bf6" name="Banner of Speed" hidden="false" collective="false" import="true" type="upgrade">
@@ -880,7 +880,7 @@ The effects last until the end of the Player Turn.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e2f6-29ee-8b26-9f6e" name="Legion Standard" hidden="false" collective="false" import="true" type="upgrade">
@@ -1010,7 +1010,7 @@ The effects last until the end of the Player Turn.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b8a1-4182-3aba-ffd8" name="Destiny&apos;s Call" hidden="false" collective="false" import="true" type="upgrade">
@@ -1082,7 +1082,7 @@ The effects last until the end of the Player Turn.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="97f7-20ef-fc6c-63a7" name="Dusk Forged" hidden="false" collective="false" import="true" type="upgrade">
@@ -1472,7 +1472,7 @@ The effects last until the end of the Player Turn.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

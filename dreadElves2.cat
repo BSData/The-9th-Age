@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ce46-6b39-6f02-8925" name="Dread Elves 2023 Beta 3" revision="26" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="54" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ce46-6b39-6f02-8925" name="Dread Elves 2023 Beta 4" revision="27" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="3a14-99d4-8059-140f" name="The Menagerie" hidden="false"/>
-    <categoryEntry id="2611-7f11-a4ea-5807" name="Hunting Chariot/Repeater Battery Limit" hidden="false">
-      <modifiers>
-        <modifier type="set" field="66e9-47a6-0fae-8781" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="66e9-47a6-0fae-8781" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="66e9-47a6-0fae-8781" type="max"/>
-      </constraints>
-    </categoryEntry>
     <categoryEntry id="d761-542f-a7ba-bb88" name="Raiders" hidden="false"/>
   </categoryEntries>
   <forceEntries>
@@ -1533,7 +1516,6 @@ The model cannot join units that contain another model from the same unit entry.
           </modifiers>
         </infoLink>
         <infoLink id="2299-c40f-3232-e8c2" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-        <infoLink id="d031-9429-fa88-73ac" name="Hidden" hidden="false" targetId="b371-05d1-597f-494f" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4629-b23a-c9b3-57e5" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -1637,43 +1619,46 @@ The model cannot join units that contain another model from the same unit entry.
       <entryLinks>
         <entryLink id="7505-fef1-096e-881d" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
-    <selectionEntry id="1b6f-5b02-13ad-c245" name="Raiding Party" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="1b6f-5b02-13ad-c245" name="Corsairs" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="d761-542f-a7ba-bb88">
           <conditions>
             <condition field="selections" scope="1b6f-5b02-13ad-c245" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f94-5c8a-383f-c552" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="4825-c7a0-cffa-6aea" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="4825-c7a0-cffa-6aea" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4825-c7a0-cffa-6aea" type="max"/>
       </constraints>
+      <rules>
+        <rule id="0a4f-780a-a251-8d01" name="Vicious Slavers" hidden="false">
+          <description>Universal Rule.
+Enemy models that are not immune to the effects of Fear in units in base contact with one or more models with Vicious Slavers suffer -1 Discipline.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="2142-47a3-3cb9-d9c9" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
         <infoLink id="7c35-ce5f-4794-e97e" name="Lightning Reflexes" hidden="false" targetId="f17a-c7f9-af34-a039" type="rule"/>
+        <infoLink id="868c-f811-8790-5b7a" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
+        <infoLink id="c9c4-3b2b-87b3-745d" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
+        <infoLink id="174d-8830-d8a0-2370" name="Kraken&apos;s Hide" hidden="false" targetId="f691-8c07-03fd-0ae6" type="profile"/>
+        <infoLink id="97b3-a26a-de6e-86e4" name="Ruthless Efficiency" hidden="false" targetId="d4eb-9569-0c02-2e09" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f879-24b6-38c1-1028" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="35a2-39f4-c550-b6dd" name="Raider" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="35a2-39f4-c550-b6dd" name="Corsair" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="adc3-b186-7ae7-625a" type="max"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d0e-1b11-d429-ddfc" type="min"/>
           </constraints>
           <profiles>
-            <profile id="9383-6c7b-ce64-9780" name="Raider Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+            <profile id="9383-6c7b-ce64-9780" name="Corsair Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
               <characteristics>
                 <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
                 <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
@@ -1681,7 +1666,7 @@ The model cannot join units that contain another model from the same unit entry.
                 <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
-            <profile id="c70e-db80-c955-1216" name="Raider Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+            <profile id="c70e-db80-c955-1216" name="Corsair Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
               <characteristics>
                 <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
                 <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
@@ -1690,7 +1675,7 @@ The model cannot join units that contain another model from the same unit entry.
                 <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
               </characteristics>
             </profile>
-            <profile id="4f3b-49eb-862f-c986" name="Raider Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+            <profile id="4f3b-49eb-862f-c986" name="Corsair Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
               <characteristics>
                 <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
@@ -1700,7 +1685,7 @@ The model cannot join units that contain another model from the same unit entry.
                 <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lightning Reflexes, Ruthless Efficiency</characteristic>
               </characteristics>
             </profile>
-            <profile id="6457-b68f-2d1f-e9f4" name="Raider Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+            <profile id="6457-b68f-2d1f-e9f4" name="Corsair Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
               <characteristics>
                 <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
                 <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
@@ -1713,69 +1698,16 @@ The model cannot join units that contain another model from the same unit entry.
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="ed09-a460-8255-29cf" name="Occupation" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2342-f6b8-7a93-e8a5" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4f2-dcbc-fa23-1f6b" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="8d7b-5276-aa8b-cbd6" name="Corsair" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <rules>
-                <rule id="f7cc-b382-dacb-e2b9" name="Corsair" hidden="false">
-                  <description>Universal Rule.
-The model gains Light Troops, Kraken’s Hide, and Paired Weapons. In addition, enemy models that are not immune to the effects of Fear in base contact with one or more models with Corsair suffer -1 Discipline.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="6652-fefa-b020-54eb" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-                <infoLink id="93cb-52b5-dfda-1da4" name="Kraken&apos;s Hide" hidden="false" targetId="f691-8c07-03fd-0ae6" type="profile"/>
-                <infoLink id="fc1d-c60e-1611-c174" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f898-369c-c083-b4d9" name="Beast Breaker" hidden="false" collective="false" import="true" type="upgrade">
-              <rules>
-                <rule id="08a4-df63-10c9-ebce" name="Beast Breaker" hidden="false">
-                  <description>Universal Rule.
-The model gains Shield, and units containing one or more models with Beast Breaker gain Cannot be Stomped. At the start of each friendly Player Turn, for each unit that contains one or more models with Beast Breaker, choose another friendly unit within 8′′ of that unit. Model parts with Harnessed in the chosen units gain Devastating Charge (Battle Focus) until the end of the next Player Turn.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="3a35-2da4-59c6-ab16" name="Cannot be Stomped" hidden="false" targetId="0919-4c3c-87d8-78a8" type="rule"/>
-                <infoLink id="eaa6-862f-f87a-cb60" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="3e83-fc7d-20d5-1586" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
         <entryLink id="1e0c-546e-aef8-a0d3" name="Repeater Handbow" hidden="true" collective="false" import="true" targetId="8f94-5c8a-383f-c552" type="selectionEntry">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="append" field="name" value=" [2] (4+)"/>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d7b-5276-aa8b-cbd6" type="equalTo"/>
-              </conditions>
-            </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -1789,7 +1721,6 @@ The model gains Shield, and units containing one or more models with Beast Break
         <infoLink id="de53-6e9d-7296-00b2" name="Lightning Reflexes" hidden="false" targetId="f17a-c7f9-af34-a039" type="rule"/>
         <infoLink id="9a61-5cd3-44f9-1120" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
         <infoLink id="7cae-7da7-bc78-e980" name="Blades of Darag" hidden="false" targetId="e56c-3324-c2f2-6632" type="profile"/>
-        <infoLink id="f665-e2ac-8331-875e" name="Fight in Extra Rank" hidden="false" targetId="f07b-fa49-1de5-8a2b" type="rule"/>
         <infoLink id="22f8-cacc-0707-f17f" name="Battle Focus" hidden="false" targetId="cc29-65f2-796b-52e2" type="rule"/>
         <infoLink id="3e67-86f6-332f-5b48" name="Ruthless Efficiency" hidden="false" targetId="d4eb-9569-0c02-2e09" type="rule"/>
         <infoLink id="dba3-6e7e-2518-3082" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
@@ -1800,7 +1731,7 @@ The model gains Shield, and units containing one or more models with Beast Break
       <selectionEntries>
         <selectionEntry id="bc73-6ac1-4909-6b72" name="Temple Militant" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="abef-4891-2b82-437a" type="min"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="abef-4891-2b82-437a" type="min"/>
             <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2812-e039-2d02-d3a8" type="max"/>
           </constraints>
           <profiles>
@@ -1840,7 +1771,7 @@ The model gains Shield, and units containing one or more models with Beast Break
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="14.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2055,7 +1986,7 @@ The model gains Shield, and units containing one or more models with Beast Break
         <entryLink id="a15a-10c8-1d53-3085" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="24c3-4461-446f-26e1" name="Black Cloaks" hidden="false" collective="false" import="true" type="unit">
@@ -2177,7 +2108,6 @@ The model gains Shield, and units containing one or more models with Beast Break
         <infoLink id="e27c-1d1d-ed48-e25e" name="Lightning Reflexes" hidden="false" targetId="f17a-c7f9-af34-a039" type="rule"/>
         <infoLink id="cd9b-9c39-8a7e-cd73" name="Academy Trained" hidden="false" targetId="135a-869c-b116-e7b6" type="rule"/>
         <infoLink id="2777-30cb-87d2-a63c" name="Ruthless Efficiency" hidden="false" targetId="d4eb-9569-0c02-2e09" type="rule"/>
-        <infoLink id="a543-99af-ac9c-6b9a" name="Hold the Line" hidden="false" targetId="3370-e237-1ea9-5a02" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="bac0-ea38-768f-b861" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -2589,7 +2519,7 @@ Sweeping Attack. The enemy unit suffers 1 hit for each model with Raking Claws i
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f735-378c-1ce0-4d30" name="Judicators" hidden="false" collective="false" import="true" type="unit">
@@ -2714,15 +2644,11 @@ Sweeping Attack. The enemy unit suffers 1 hit for each model with Raking Claws i
         <infoLink id="0b48-9972-5b51-ceff" name="Lightning Reflexes" hidden="false" targetId="f17a-c7f9-af34-a039" type="rule"/>
         <infoLink id="91c6-1286-4318-4caa" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
           <modifiers>
-            <modifier type="append" field="name" value=" (+1 Str, +1 AP, Terror)"/>
+            <modifier type="append" field="name" value=" (+1 AP, Terror)"/>
           </modifiers>
         </infoLink>
         <infoLink id="201a-8635-1287-578a" name="Scent of Blood" hidden="false" targetId="061b-d5e1-3d70-4c82" type="rule"/>
-        <infoLink id="bce1-c729-8788-1c34" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (D3+1)"/>
-          </modifiers>
-        </infoLink>
+        <infoLink id="022f-938c-62d9-4d95" name="Hatred" hidden="false" targetId="13c5-ce89-60ad-c572" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f0a1-7a63-9fe5-9993" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
@@ -2747,8 +2673,8 @@ Sweeping Attack. The enemy unit suffers 1 hit for each model with Raking Claws i
                 <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
                 <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
                 <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Devastating Charge (Terror), Harnessed</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Devastating Charge (+1 AP, Terror), Harnessed, Hatred</characteristic>
               </characteristics>
             </profile>
             <profile id="cc03-7079-18b6-ba2b" name="Lashmaster (2)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -3106,7 +3032,7 @@ At Initiative Step 10, each enemy unit in base contact with the model suffers 2 
                 <rule id="1a46-934b-957d-1c47" name="Effigy of Dread" hidden="false">
                   <description>Universal Rule.
 The model gains Fear, Fearless, and Unbreakable. Its Health Points are set to 6 and and its Advance Rate and March Rate are always set to 0′′. The model cannot declare any Charges nor perform any
-Advance Moves, March Moves, Magical Moves, Pursuit Moves, nor Random Movement. In addition, friendly units within 18′′ of the model gain Fear. Enemy units within 18′′ of the model cannot benefit from Rally Around the Flag for Fear Tests.</description>
+Advance Moves, March Moves, Magical Moves, Pursuit Moves, nor Random Movement. In addition, friendly units within 24′′ of the model gain Fear. Enemy units within 24′′ of the model cannot benefit from Rally Around the Flag for Fear Tests.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -3139,7 +3065,6 @@ The model gains Attached, Exclusive (R&amp;F Infantry), Frenzy, Not a Leader, an
                 <infoLink id="44f2-813d-dccb-f635" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
                 <infoLink id="a651-9f96-7596-0a23" name="Not a Leader" hidden="false" targetId="f611-6165-ada9-0d7d" type="rule"/>
                 <infoLink id="1943-9806-2fbf-d07d" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
-                <infoLink id="008b-7556-fb34-8119" name="Attached" hidden="false" targetId="c44f-d7ea-b42a-edac" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
@@ -3153,6 +3078,9 @@ The model gains Attached, Exclusive (R&amp;F Infantry), Frenzy, Not a Leader, an
       </costs>
     </selectionEntry>
     <selectionEntry id="41f1-3cf4-27ca-d38a" name="Hunting Chariot" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2099-8c52-6d6a-72c2" type="max"/>
+      </constraints>
       <profiles>
         <profile id="4ca9-779a-1c09-60bd" name="Hunting Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -3198,16 +3126,16 @@ The model gains Attached, Exclusive (R&amp;F Infantry), Frenzy, Not a Leader, an
             <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
             <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
             <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6), Inanimate, Barbed Net Thrower (3+)</characteristic>
+            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6), Inanimate, Harpoon Launcher (3+)</characteristic>
           </characteristics>
         </profile>
-        <profile id="e027-2c55-c618-dff1" name="Barbed Net Thrower (3+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
+        <profile id="e027-2c55-c618-dff1" name="Harpoon Launcher" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
           <characteristics>
             <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">18&quot;</characteristic>
-            <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">4</characteristic>
-            <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
-            <characteristic name="AP" typeId="857a-4ce1-d134-8701">2</characteristic>
-            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire, Reload!. Units that suffer one or more hits from this weapon suffer -1 Agility and lose Swiftstride. The effects last until the start of the next friendly Player Turn.</characteristic>
+            <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">3</characteristic>
+            <characteristic name="Str" typeId="f166-13ff-9227-4525">6</characteristic>
+            <characteristic name="AP" typeId="857a-4ce1-d134-8701">3</characteristic>
+            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Accurate, Quick to Fire, Reload!. Units that suffer one or more hits from this weapon lose Swiftstride (and cannot gain it in any way) until the start of the next friendly Player Turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="488b-a991-ff72-557a" name="Hunting Chariot Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
@@ -3232,14 +3160,23 @@ The model gains Attached, Exclusive (R&amp;F Infantry), Frenzy, Not a Leader, an
         <infoLink id="85f3-87ef-d3fe-a354" name="Ruthless Efficiency" hidden="false" targetId="d4eb-9569-0c02-2e09" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="42d0-387a-5573-5b61" name="New CategoryLink" hidden="false" targetId="2611-7f11-a4ea-5807" primary="false"/>
         <categoryLink id="b9c7-8deb-ef01-ff11" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="175.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4c53-b497-1c21-c8bf" name="Repeater Battery" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="decrement" field="8f34-c5d4-f306-80a2" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41f1-3cf4-27ca-d38a" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8f34-c5d4-f306-80a2" type="max"/>
+      </constraints>
       <profiles>
         <profile id="f901-eb4d-a28c-a310" name="Repeater Battery Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
           <characteristics>
@@ -3292,11 +3229,10 @@ The model gains Attached, Exclusive (R&amp;F Infantry), Frenzy, Not a Leader, an
         <infoLink id="ac9e-6a99-e6a3-c9ff" name="Ruthless Efficiency" hidden="false" targetId="d4eb-9569-0c02-2e09" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="fd5a-3c8e-f32b-be2a" name="Destroyers (local)" hidden="false" targetId="2611-7f11-a4ea-5807" primary="false"/>
         <categoryLink id="cca7-8db5-973a-0b29" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="210.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="215.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fc07-1764-3400-fdd4" name="Kraken" hidden="false" collective="false" import="true" type="unit">
@@ -4108,7 +4044,7 @@ If within 12′′ of one or more models with Willbreaker’s Craft, the roll fo
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="21.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="19.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4116,7 +4052,7 @@ If within 12′′ of one or more models with Willbreaker’s Craft, the roll fo
         <entryLink id="f354-c36f-a256-8315" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4f09-b229-207f-0e70" name="Mist Leviathan" hidden="false" collective="false" import="true" type="unit">
@@ -4204,7 +4140,81 @@ Enemy units within 8” of one or more Mist Leviathans suffer -1 to hit for Shoo
         <categoryLink id="d24b-299b-c438-f487" name="New CategoryLink" hidden="false" targetId="3a14-99d4-8059-140f" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="240.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="230.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7a63-a357-0341-8a67" name="Beast Breakers" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc9b-bc73-2960-2b32" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="665c-5c5e-eb80-aaf6" name="Lash&apos;s String" hidden="false">
+          <description>Universal Rule.
+Units containing one or more models with Lash’s Sting gain Cannot be Stomped. At the start of each friendly Player Turn, for each unit that contains one or more models with Lash’s Sting, choose another friendly unit within 8′′ of that unit. Mounted models in a unit chosen once or more gain +1′′ Advance Rate until the end of the Movement Phase.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="b0d3-8929-1a58-b849" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
+        <infoLink id="b4a6-53ed-8556-b421" name="Lightning Reflexes" hidden="false" targetId="f17a-c7f9-af34-a039" type="rule"/>
+        <infoLink id="1135-b25d-01b4-2949" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
+        <infoLink id="7836-83a0-20c1-114d" name="Ruthless Efficiency" hidden="false" targetId="d4eb-9569-0c02-2e09" type="rule"/>
+        <infoLink id="abeb-70db-73be-1ee8" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="961b-3b43-5e95-a0a0" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="eda3-828f-77e5-64ef" name="Beast Breaker" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="30.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e03a-4d75-1a08-0af5" type="max"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e127-c6dd-4c38-b861" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="0127-467e-0dc3-2eea" name="Beast Breaker Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
+              <characteristics>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">5&quot;</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
+              </characteristics>
+            </profile>
+            <profile id="fb6a-5ce4-fcce-abb7" name="Beast Breaker Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
+              <characteristics>
+                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
+                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
+                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
+                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
+                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d54d-7219-9480-d525" name="Beast Breaker Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
+              <characteristics>
+                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
+                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
+                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
+                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
+                <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
+                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Lightning Reflexes, Ruthless Efficiency</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4555-06d6-5f26-d266" name="Beast Breaker Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
+              <characteristics>
+                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
+                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
+                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="14.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="9086-7d53-7e9c-74f7" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -4514,7 +4524,6 @@ Enemy units within 8” of one or more Mist Leviathans suffer -1 to hit for Shoo
         <infoLink id="e250-e3d6-6c04-89f0" name="Scent of Blood" hidden="false" targetId="061b-d5e1-3d70-4c82" type="rule"/>
         <infoLink id="04e2-cca0-a6c8-2da0" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
         <infoLink id="3134-13d8-a59e-17ac" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-        <infoLink id="a874-e211-27a7-f6b4" name="Exclusive" hidden="false" targetId="6034-690b-2c59-a7fa" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="247a-edee-3794-57b9" name="The Menagerie" hidden="false" targetId="3a14-99d4-8059-140f" primary="false"/>
@@ -4866,7 +4875,7 @@ If the bearer’s unit consists entirely of Infantry models, it gains Academy Tr
         <profile id="ba42-29e2-d5eb-2486" name="Beastmaster&apos;s Whistle" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of the Charge Phase. Charge Range rolls of friendly Manticores and models with Type Beast within 12′′ of the bearer are subject to Maximised Roll until the end of the Charge Phase.</characteristic>
+            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any friendly Charge Phase. Friendly Manticores and friendly models with Type Beast within 12′′ of the bearer gain Maximised (Charge Range) until the end of the Charge Phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4906,7 +4915,7 @@ If the bearer’s unit consists entirely of Infantry models, it gains Academy Tr
           <characteristics>
             <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
             <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cannot be taken by Warlock Outcasts.
-Break Tests and Panic Tests taken within 6″ of the bearer are subject to Minimised Roll.</characteristic>
+While within 6′′ of the bearer, friendly units gain Minimised (Break Tests, Panic Tests)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5118,7 +5127,7 @@ Characters without Coastal Predator that Charge out of a unit do not benefit fro
       <characteristics>
         <characteristic name="Str" typeId="7d4e-b182-dd11-52a0"/>
         <characteristic name="AP" typeId="646b-1e72-1589-5083"/>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Two-Handed. While using this weapon, the model part gains +1 Attack Value, and attacks made with this weapon become Magical Attacks. If at least one model in the model part’s unit is the target of one or more friendly non- Attribute Spells with duration One Turn, the Strength of attacks made with this weapon is always set to 5 for as long as the spell’s effect is applied. This weapon cannot be enchanted.</characteristic>
+        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Paired Weapons. Attacks made with this weapon become Magical Attacks. If at least one model in the model part’s unit is the target of one or more friendly non-Attribute Spells with duration One Turn, the Strength of attacks made with this weapon is always set to 5 for as long as the spell’s effect is applied. This weapon cannot be enchanted.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
