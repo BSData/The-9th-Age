@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2023 Beta 2" revision="59" battleScribeVersion="2.03" authorName="DarkSky, Hebus, Karanadon, Mikel2311" authorContact="https://www.the-ninth-age.com/community/index.php?thread/32031-battlescribe-files-for-t9a-2-0/&amp;s=3d1a2d5f3af91850c50d403638048494514c3ad1" authorUrl="https://www.the-ninth-age.com/community/index.php" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ef6e-1eeb-e440-8944" name="Vampire Covenant 2023 Beta 2" revision="60" battleScribeVersion="2.03" authorName="DarkSky, Hebus, Karanadon, Mikel2311" authorContact="https://www.the-ninth-age.com/community/index.php?thread/32031-battlescribe-files-for-t9a-2-0/&amp;s=3d1a2d5f3af91850c50d403638048494514c3ad1" authorUrl="https://www.the-ninth-age.com/community/index.php" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Report issues by
 1. Posting in [The Ninth Age Forum thread](https://www.the-ninth-age.com/community/index.php?thread/32031-battlescribe-files-for-t9a-2-0/&amp;s=3d1a2d5f3af91850c50d403638048494514c3ad1)
 2. Create an issue on the [GitHub issue tracker](https://github.com/BSData/The-9th-Age/issues).</readme>
@@ -126,7 +126,11 @@
           </constraints>
           <entryLinks>
             <entryLink id="a1af-c2a4-63e7-625e" name="Wizard Apprentice" hidden="false" collective="false" import="true" targetId="9dfd-528a-2991-3f75" type="selectionEntry"/>
-            <entryLink id="9dc2-743e-335c-54f4" name="Wizard Adept" hidden="false" collective="false" import="true" targetId="6d2e-3a7c-b8c4-2589" type="selectionEntry"/>
+            <entryLink id="9dc2-743e-335c-54f4" name="Wizard Adept" hidden="false" collective="false" import="true" targetId="6d2e-3a7c-b8c4-2589" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
+              </costs>
+            </entryLink>
             <entryLink id="9f37-70d8-e7d2-1b87" name="Wizard Master" hidden="false" collective="false" import="true" targetId="e7ab-249b-e180-109d" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="265.0"/>
@@ -146,16 +150,61 @@
               </constraints>
             </entryLink>
             <entryLink id="c500-63f1-18f0-455a" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="c015-e52d-3852-27ea" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="f485-3ff7-1641-4829" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4ab-cc05-21c9-ceaa" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f02-6c23-4fb7-9bb9" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
               </costs>
             </entryLink>
             <entryLink id="6f72-e859-5abc-77ba" name="Plate Armour" hidden="false" collective="false" import="true" targetId="f49b-1010-24f1-f23b" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="c5a0-19f2-1509-e0cc" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fded-9889-51f6-34d5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" field="11a5-33e3-6714-8ce3" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fded-9889-51f6-34d5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5a0-19f2-1509-e0cc" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5a0-19f2-1509-e0cc" type="max"/>
+                <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11a5-33e3-6714-8ce3" type="min"/>
               </constraints>
             </entryLink>
             <entryLink id="7e99-50da-68dd-8bf1" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="c162-a646-5acd-5058" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
@@ -163,6 +212,13 @@
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="7ab1-8909-f0f1-9bae" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="751b-50ef-3c51-cc5e">
+          <modifiers>
+            <modifier type="set" field="89fb-50fd-c5cf-7b0d" value="-1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fded-9889-51f6-34d5" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="89fb-50fd-c5cf-7b0d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="011f-d983-97a9-d2f3" type="min"/>
@@ -252,6 +308,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77ba-62c0-9764-70c3" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -277,6 +336,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77ba-62c0-9764-70c3" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86e4-b959-0c26-ce90" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -297,6 +359,9 @@
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -314,6 +379,9 @@
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -323,18 +391,21 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
               </costs>
             </entryLink>
-            <entryLink id="7b7d-f36b-8f0a-a753" name="Shrieking Horror" hidden="true" collective="false" import="true" targetId="a7c6-75ab-7e65-df3c" type="selectionEntry">
+            <entryLink id="7b7d-f36b-8f0a-a753" name="Shrieking Horror (Mount)" hidden="false" collective="false" import="true" targetId="a7c6-75ab-7e65-df3c" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="d833-8244-7376-35ce" value="0.0">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77ba-62c0-9764-70c3" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -360,6 +431,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77ba-62c0-9764-70c3" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86e4-b959-0c26-ce90" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -382,6 +456,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77ba-62c0-9764-70c3" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86e4-b959-0c26-ce90" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -425,9 +502,9 @@
             <selectionEntry id="2237-baeb-ac1f-b05b" name="Occultism" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or"/>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -438,6 +515,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="af1d-3ddb-a25b-b297" name="Evocation" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6dc0-aaf3-e075-12c7" type="max"/>
               </constraints>
@@ -445,7 +529,14 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7cfe-6c9a-b763-b9ba" name="Witchcraft" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7cfe-6c9a-b763-b9ba" name="Witchcraft" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b1c8-5524-39fd-cf3d" type="max"/>
               </constraints>
@@ -453,9 +544,31 @@
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7bc0-bd86-b47f-f1d0" name="Cosmology" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7bc0-bd86-b47f-f1d0" name="Cosmology" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="37b3-6ab0-cbdd-b1f0" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9e8f-b2dc-ced8-3453" name="Shamanism" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c4b5-b000-41b1-537b" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -486,64 +599,102 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c191-9910-853a-926f" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="264b-6953-0785-924e" name="Occultism" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="cf21-0126-ad8f-1710" name="Cosmology (2nd)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2237-baeb-ac1f-b05b" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7bc0-bd86-b47f-f1d0" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="395f-fdee-02b2-06b7" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="352a-e738-4f4b-1366" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="c1fd-821a-110e-9d62" name="Evocation" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="66b6-4e23-2ce5-8cac" name="Evocation (2nd)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="af1d-3ddb-a25b-b297" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="af1d-3ddb-a25b-b297" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fbc8-18de-3991-072c" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e8ad-ebff-734f-ff82" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8bcb-028f-6f6d-4f20" name="Cosmology" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b286-341d-eaec-2d41" name="Occultism (2nd)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7bc0-bd86-b47f-f1d0" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2237-baeb-ac1f-b05b" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b4a8-f323-209e-5318" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7843-4c6a-96f3-0482" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="bacd-3ab6-d4aa-b364" name="Witchcraft" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="da55-d73e-2008-c83c" name="Shamanism (2nd)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e8f-b2dc-ced8-3453" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d737-f2f2-e13a-af7c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ef21-2c2b-b8bd-bfd1" name="Witchcraft (2nd)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7cfe-6c9a-b763-b9ba" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73ad-fd5b-c6bf-b4c2" type="max"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -561,6 +712,19 @@
           </costs>
         </entryLink>
         <entryLink id="4b5e-7290-af2e-1f11" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="d158-aeff-6968-2615" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4ab-cc05-21c9-ceaa" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f02-6c23-4fb7-9bb9" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
@@ -691,7 +855,11 @@
         </selectionEntryGroup>
         <selectionEntryGroup id="4d6e-f2b7-74c0-283f" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="d014-9911-1634-313a">
           <modifiers>
-            <modifier type="set" field="4ae2-288f-d0d6-560b" value="-1.0"/>
+            <modifier type="set" field="4ae2-288f-d0d6-560b" value="-1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fded-9889-51f6-34d5" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="511a-7ecf-d3c5-e6cc" type="min"/>
@@ -795,6 +963,8 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77ba-62c0-9764-70c3" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -809,7 +979,6 @@
             </entryLink>
             <entryLink id="092f-b245-8c52-f660" name="Court of the Damned" hidden="false" collective="false" import="true" targetId="480f-80cb-b650-da3f" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="hidden" value="true"/>
                 <modifier type="set" field="af20-7cdc-4b4d-0757" value="0.0">
                   <conditionGroups>
                     <conditionGroup type="or">
@@ -822,6 +991,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77ba-62c0-9764-70c3" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86e4-b959-0c26-ce90" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -840,6 +1012,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -858,6 +1033,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3eeb-4d3a-ca9b-17e5" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d9-59b3-eee6-de87" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a52f-c8a1-bcc5-db09" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -886,40 +1064,76 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="902c-6845-f8de-d49e" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="e5f6-65f0-6122-fcf0" name="Occultism" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a158-9e95-3da4-69f6" name="Cosmology" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or"/>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e53-89db-599a-a6a0" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aa46-79b2-435d-f376" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7291-ee7e-2bc7-85c3" name="Evocation" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="764e-4155-9c1d-8b22" name="Evocation" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="05fa-409f-7bbd-2c2a" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="decb-f2a6-a783-e2a5" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8772-46a7-7a3d-3200" name="Witchcraft" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="caf9-8b02-e299-9a28" name="Occultism" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c26f-8639-866f-9c31" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="25ee-e1b3-2717-63ef" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9ff4-49a7-1830-4c50" name="Cosmology" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f03d-62f7-cb84-3fe6" name="Shamanism" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cfcf-3c4e-73f3-d440" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0e97-b2d0-6416-af15" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3337-ec51-821f-70a5" name="Witchcraft" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c34a-02a9-8376-68dd" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -940,66 +1154,101 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ce3-c14f-8d95-ae7a" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="8ae6-e011-2e59-dd27" name="Occultism" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b261-0d4e-64ec-905e" name="Witchcraft (2nd)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e5f6-65f0-6122-fcf0" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3337-ec51-821f-70a5" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="43d6-9c9d-3af0-8eb9" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e9c-2591-f6e5-ff30" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="438b-8708-7045-4cd7" name="Evocation" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7676-2b12-a968-4e52" name="Evocation (2nd)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7291-ee7e-2bc7-85c3" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="764e-4155-9c1d-8b22" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6635-0236-a973-cef4" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="87c9-d2b3-0a6d-136c" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="65ed-298f-d09d-dec7" name="Cosmology" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="6478-f2d1-ad36-4788" name="Cosmology (2nd)" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9ff4-49a7-1830-4c50" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a158-9e95-3da4-69f6" type="equalTo"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef21-8e65-704a-21ca" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6ed7-042c-7118-133b" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="858b-3d57-43a5-3ac8" name="Witchcraft" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="443a-52c0-7108-0b3b" name="Occultism (2nd)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="caf9-8b02-e299-9a28" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9256-bf36-0afb-0aee" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="89e2-ba1e-801a-1f71" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4544-f669-31d0-cf46" name="Shamanism (2nd)" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a799-f079-3b68-3222" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f03d-62f7-cb84-3fe6" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e77a-53dc-842d-07cb" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -1019,16 +1268,61 @@
               </constraints>
             </entryLink>
             <entryLink id="e054-ee40-2125-9e65" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="c015-e52d-3852-27ea" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="f485-3ff7-1641-4829" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4ab-cc05-21c9-ceaa" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f02-6c23-4fb7-9bb9" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
             </entryLink>
             <entryLink id="c5c6-8ab2-4aeb-da40" name="Plate Armour" hidden="false" collective="false" import="true" targetId="f49b-1010-24f1-f23b" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="cb7f-ffe5-cbdc-e3d0" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fded-9889-51f6-34d5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" field="a20c-888d-0750-e9ef" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fded-9889-51f6-34d5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a20c-888d-0750-e9ef" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb7f-ffe5-cbdc-e3d0" type="max"/>
               </constraints>
             </entryLink>
             <entryLink id="499b-ef8f-ddde-05f0" name="Light Armour" hidden="false" collective="false" import="true" targetId="dd27-6738-aebc-192e" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="c162-a646-5acd-5058" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
               </costs>
@@ -1041,8 +1335,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c190-a071-ddf1-427a" type="min"/>
           </constraints>
           <entryLinks>
-            <entryLink id="1b69-12b0-b4da-6031" name="Ancient Blood Powers" hidden="false" collective="false" import="true" targetId="8aaa-efe8-5149-ecb6" type="selectionEntryGroup"/>
-            <entryLink id="5f22-041c-8993-2b24" name="Lesser Blood Powers" hidden="false" collective="false" import="true" targetId="3e3c-20fe-5381-2e4a" type="selectionEntryGroup"/>
+            <entryLink id="1b69-12b0-b4da-6031" name="Ancestral Blood Powers" hidden="false" collective="false" import="true" targetId="8aaa-efe8-5149-ecb6" type="selectionEntryGroup"/>
+            <entryLink id="5f22-041c-8993-2b24" name="Blood Powers (Courtier)" hidden="false" collective="false" import="true" targetId="70d8-cb5e-5d72-65d6" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1061,6 +1355,19 @@
           </costs>
         </entryLink>
         <entryLink id="ba08-f6c8-d6a5-47d4" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="d158-aeff-6968-2615" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4ab-cc05-21c9-ceaa" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f02-6c23-4fb7-9bb9" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
@@ -2172,6 +2479,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="00b2-2113-f95b-4268" name="Wraiths" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -2346,63 +2656,10 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e14c-e28c-c46a-ac41" name="Vampire Knight" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="25.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f7f7-3306-561e-b7f6" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3b2b-4591-ba11-f281" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e96-e40d-2964-f7fc" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="b559-2cb0-ed38-85c4" name="Vampire Knight Global" hidden="false" typeId="8f74-301f-981a-bcf5" typeName="1 Global (VC)">
-              <characteristics>
-                <characteristic name="Adv" typeId="a0c8-1fa7-334e-3f65">7&quot;</characteristic>
-                <characteristic name="Mar" typeId="c691-f826-f931-aadf">14&quot;</characteristic>
-                <characteristic name="Dis" typeId="41b5-a291-90ef-fdfa">7</characteristic>
-                <characteristic name="Rea" typeId="075c-2e80-439c-bb8b">1</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="4b1c-d78c-ff9a-f5fa" name="Vampire Knight Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">2</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour, Shield</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="4c95-6d29-3809-2857" name="Vampire Knight Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Vampiric (6+), Lance</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="2e22-5a56-2efa-068a" name="Undead Mount Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="d96c-de86-aba0-0459" name="Vampire Knight Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="82.0"/>
           </costs>
@@ -3058,38 +3315,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f7f7-3306-561e-b7f6" name="Brotherhood of the Dragon Bloodline (Army)" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8f16-588a-4bc2-c080" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="9982-3233-d3e8-8c05" name="Nosferatu Bloodline (Army)" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f964-8d46-1555-9158" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="e3f7-eaa3-cf6a-d1f3" name="Strigoi Bloodline (Army)" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="130f-1ed3-550e-e3e7" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="006e-8839-f9ae-deb6" name="Von Karnstein Bloodline (Army)" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d5ad-a777-ab15-a0f7" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="ba2f-c8fd-23e6-6aeb" name="Reaper&apos;s Harvest" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="441a-1d51-8152-6913" type="max"/>
@@ -3199,6 +3424,169 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="7b04-b17f-1af3-5957" name="Arcane Knowledge" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="4627-c4c2-aa11-f630" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f02-6c23-4fb7-9bb9" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4627-c4c2-aa11-f630" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8b9a-b106-d9f5-4570" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a52f-c8a1-bcc5-db09" name="Bestial Bulk" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ce4-ccdf-9042-a52e" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0823-c8ed-6986-c6a7" name="Commandment" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="8ffd-0b14-6d3d-fae7" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4ab-cc05-21c9-ceaa" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8ffd-0b14-6d3d-fae7" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a205-d330-d454-f629" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cbd8-dd64-9ed7-7ed0" name="Crimson Rage" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="c3d6-7b74-58c8-bd57" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fded-9889-51f6-34d5" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c3d6-7b74-58c8-bd57" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="06e4-754d-3254-b887" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="35fa-2d32-0268-76a7" name="Eternal Duelist" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="776f-982b-844d-86ca" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d0d9-59b3-eee6-de87" name="Flying Horror" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d23e-e065-829d-0a9f" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e873-d2ae-ad11-b1b1" name="Ghoul Lord" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="ef8d-b6d5-9517-fdfe" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae3-c8d5-f7b7-cd6e" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef8d-b6d5-9517-fdfe" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce04-9023-f562-6a8d" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1334-bf49-909e-73a4" name="Mesmerising Gaze" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3fdb-0cb1-754d-b801" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c0fc-141d-1fcb-05a5" name="Monster Hunter" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b867-405e-8aec-7229" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a799-f079-3b68-3222" name="Mysteries of the Night" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="84c1-4ada-bcc8-6502" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d2e-3a7c-b8c4-2589" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9dfd-528a-2991-3f75" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="84c1-4ada-bcc8-6502" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9058-ac64-f229-8ff1" name="Storm Caller" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="3fce-be5f-6532-d435" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8545-c103-72a5-9006" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3fce-be5f-6532-d435" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de70-bd68-9686-394d" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c464-27b0-d8b0-c03c" name="Supreme Lich" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="c820-de5c-17b4-a739" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f02-6c23-4fb7-9bb9" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c820-de5c-17b4-a739" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="290.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="548a-5910-88c6-6200" name="Unbreakable Will" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="98b6-00b5-bad0-4210" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="8aaa-efe8-5149-ecb6" name="Ancestral Blood Powers" hidden="false" collective="false" import="true">
@@ -3215,6 +3603,17 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           </costs>
         </selectionEntry>
         <selectionEntry id="aae3-c8d5-f7b7-cd6e" name="Strigoi" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="5828-52bf-8932-875a" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ab-249b-e180-109d" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5828-52bf-8932-875a" type="max"/>
           </constraints>
@@ -3223,6 +3622,19 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           </costs>
         </selectionEntry>
         <selectionEntry id="1f02-6c23-4fb7-9bb9" name="Nosferatu" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="55b6-6a87-5223-3f80" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d2e-3a7c-b8c4-2589" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9dfd-528a-2991-3f75" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ab-249b-e180-109d" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55b6-6a87-5223-3f80" type="max"/>
           </constraints>
@@ -3234,8 +3646,22 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d89-038e-581a-d970" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
-        <selectionEntry id="fded-9889-51f6-34d5" name="Botherhood of the Dragon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fded-9889-51f6-34d5" name="Brotherhood of the Dragon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="7c31-d43a-4bf1-9533" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ab-249b-e180-109d" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c31-d43a-4bf1-9533" type="max"/>
           </constraints>
@@ -3283,121 +3709,24 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <entryLink id="c591-c695-be85-c899" name="Cursed Medallion" hidden="false" collective="false" import="true" targetId="d507-9f70-660a-63bf" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="3e3c-20fe-5381-2e4a" name="Blood Powers" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="3e3c-20fe-5381-2e4a" name="Blood Powers (Count)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0e52-573e-6001-6f9a" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="b20d-c09a-b6ef-19fd" name="Eternal Duelist" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5e76-d888-20a1-5ba6" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="14bb-cf5d-0878-1472" name="Monster Hunter" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d7d1-9810-2380-53f9" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="32b8-2fb1-9826-dbce" name="Bestial Bulk" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c741-8ffa-d101-81d4" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8088-8eab-3286-2976" name="Unbreakable Will" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="43f3-3460-6ad5-c1cd" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="db41-20c6-5f19-e716" name="Crimson Rage" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9395-b4a2-ee30-49d3" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7e5c-2ec8-d682-0abd" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2208-4b49-3371-ebbd" name="Mysteries of the Night" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e0df-2771-a395-2b5d" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f30b-4575-1ad6-e689" name="Mesmerising Gaze" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2c2c-0ef8-c83d-7d2c" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8e61-cf1c-9175-0a94" name="Arcane Knowledge" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="756c-e98b-2f76-5e92" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3a3e-a920-4faf-e410" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="33a9-43af-cd16-d36c" name="Commandment" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="08c9-d412-042d-0b8c" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e05e-b1ab-07d7-7cba" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9c4b-c82d-b1a8-1620" name="Ghoul Lord" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="feb9-382a-80e2-e9b1" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f935-6e0a-0b3c-7c7d" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e947-31a6-42e2-1ae2" name="Storm Caller" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7c1c-89de-8e8d-9479" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da46-2f0d-efbc-4d22" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="00da-d23d-2f8d-0104" name="Supreme Lich" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9337-d238-2947-7783" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="290.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d6e4-1812-4190-74bf" name="Flying Horror" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b62-4601-e0af-2c21" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="3d5d-81c3-c7d7-5dd4" name="Arcane Knowledge" hidden="false" collective="false" import="true" targetId="7b04-b17f-1af3-5957" type="selectionEntry"/>
+        <entryLink id="0a32-6f4a-e042-d749" name="Bestial Bulk" hidden="false" collective="false" import="true" targetId="a52f-c8a1-bcc5-db09" type="selectionEntry"/>
+        <entryLink id="a9be-6692-f5a0-a9f9" name="Commandment" hidden="false" collective="false" import="true" targetId="0823-c8ed-6986-c6a7" type="selectionEntry"/>
+        <entryLink id="1edf-623f-8b07-4a1c" name="Crimson Rage" hidden="false" collective="false" import="true" targetId="cbd8-dd64-9ed7-7ed0" type="selectionEntry"/>
+        <entryLink id="be3a-4e1d-510e-a7cd" name="Eternal Duelist" hidden="false" collective="false" import="true" targetId="35fa-2d32-0268-76a7" type="selectionEntry"/>
+        <entryLink id="19a3-e704-5b6c-2190" name="Flying Horror" hidden="false" collective="false" import="true" targetId="d0d9-59b3-eee6-de87" type="selectionEntry"/>
+        <entryLink id="4328-551a-f119-8955" name="Ghoul Lord" hidden="false" collective="false" import="true" targetId="e873-d2ae-ad11-b1b1" type="selectionEntry"/>
+        <entryLink id="e682-47dd-5396-b4e3" name="Mesmerising Gaze" hidden="false" collective="false" import="true" targetId="1334-bf49-909e-73a4" type="selectionEntry"/>
+        <entryLink id="0a9e-516b-9074-18c0" name="Monster Hunter" hidden="false" collective="false" import="true" targetId="c0fc-141d-1fcb-05a5" type="selectionEntry"/>
+        <entryLink id="eb93-1559-5aca-d61f" name="Mysteries of the Night" hidden="false" collective="false" import="true" targetId="a799-f079-3b68-3222" type="selectionEntry"/>
+        <entryLink id="1e53-0531-e930-4934" name="Storm Caller" hidden="false" collective="false" import="true" targetId="9058-ac64-f229-8ff1" type="selectionEntry"/>
+        <entryLink id="a2af-132c-9817-22a9" name="Unbreakable Will" hidden="false" collective="false" import="true" targetId="548a-5910-88c6-6200" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="0285-81b5-0a2e-deeb" name="VC Weapon Enchantments (non Vampires)" hidden="false" collective="false" import="true">
       <constraints>
@@ -3427,6 +3756,21 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <entryLink id="9868-da0d-36df-25e2" name="Night&apos;s Crown - Standard Size Only" hidden="false" collective="false" import="true" targetId="77ba-62c0-9764-70c3" type="selectionEntry"/>
         <entryLink id="3cd7-4de2-23a8-f205" name="Unholy Tome - Wizards only - Dominant" hidden="false" collective="false" import="true" targetId="40c7-4f38-1017-819f" type="selectionEntry"/>
         <entryLink id="8cc7-7ccb-2d7c-d2c4" name="Cursed Medallion" hidden="false" collective="false" import="true" targetId="d507-9f70-660a-63bf" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="70d8-cb5e-5d72-65d6" name="Blood Powers (Courtier)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="746e-1aab-b03a-35cc" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="6e39-158e-4a49-811d" name="Eternal Duelist" hidden="false" collective="false" import="true" targetId="35fa-2d32-0268-76a7" type="selectionEntry"/>
+        <entryLink id="a515-dfd8-39f7-1d73" name="Flying Horror" hidden="false" collective="false" import="true" targetId="d0d9-59b3-eee6-de87" type="selectionEntry"/>
+        <entryLink id="5fd5-17dd-fcf5-df9f" name="Mesmerising Gaze" hidden="false" collective="false" import="true" targetId="1334-bf49-909e-73a4" type="selectionEntry"/>
+        <entryLink id="e8de-bba3-cae2-df3b" name="Monster Hunter" hidden="false" collective="false" import="true" targetId="c0fc-141d-1fcb-05a5" type="selectionEntry"/>
+        <entryLink id="cf8b-3d40-4801-b286" name="Mysteries of the Night" hidden="false" collective="false" import="true" targetId="a799-f079-3b68-3222" type="selectionEntry"/>
+        <entryLink id="afb4-6ab7-f1eb-23a1" name="Supreme Lich" hidden="false" collective="false" import="true" targetId="c464-27b0-d8b0-c03c" type="selectionEntry"/>
+        <entryLink id="d8f1-9948-24d9-21eb" name="Unbreakable Will" hidden="false" collective="false" import="true" targetId="548a-5910-88c6-6200" type="selectionEntry"/>
+        <entryLink id="1bf4-beb9-89b6-9a76" name="Bestial Bulk" hidden="false" collective="false" import="true" targetId="a52f-c8a1-bcc5-db09" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
