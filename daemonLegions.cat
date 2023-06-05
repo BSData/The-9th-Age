@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2022" revision="74" battleScribeVersion="2.03" authorName="Vrenel, DarkSky, WarX, Hebus, koniu699" authorContact="" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a422-c29f-5027-f336" name="Daemon Legions 2023" revision="75" battleScribeVersion="2.03" authorName="Vrenel, DarkSky, WarX, Hebus, koniu699" authorContact="" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="3f95-f87e-5df2-4102" name="T9A – Daemon Legions"/>
   </publications>
@@ -2930,11 +2930,12 @@ The model gains +3 Attack Value while Engaged with one or more Flank or Rear Fac
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae20-f317-da77-c382" type="max"/>
           </constraints>
           <profiles>
-            <profile id="1f8f-33bd-6a13-5fec" name="Mageblight Gremlin Size" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="0 Size">
+            <profile id="1f8f-33bd-6a13-5fec" name="Mageblight Gremlin Size" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
               <characteristics>
-                <characteristic name="Height" typeId="b0d9-2dab-f10b-9b13">Standard</characteristic>
-                <characteristic name="Type" typeId="db10-a838-f72f-3ed6">Beast</characteristic>
-                <characteristic name="Base" typeId="be28-67a6-2280-9eaf">40×40</characteristic>
+                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">Standard</characteristic>
+                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">Beast</characteristic>
+                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">40×40</characteristic>
+                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
               </characteristics>
             </profile>
             <profile id="6abc-cb20-ac58-2496" name="Mageblight Gremlin Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
@@ -4942,83 +4943,10 @@ The model gains +3 Attack Value while Engaged with one or more Flank or Rear Fac
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="68ef-d8fa-cc46-d24c" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
-        <modifier type="set" field="b405-6e4b-d1bf-a0b2" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="b405-6e4b-d1bf-a0b2" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b405-6e4b-d1bf-a0b2" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="8da5-134b-e765-0888" name="Cultist Giant Defensive" hidden="false" typeId="e6e2-5027-c8f6-da13" typeName="2 Defensive (DL)">
-          <modifiers>
-            <modifier type="set" field="61df-0ca3-17b2-f001" value="8">
-              <conditions>
-                <condition field="selections" scope="13e4-ccc5-4661-4f10" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77cd-794d-3f25-9bd9" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="HP" typeId="61df-0ca3-17b2-f001">7</characteristic>
-            <characteristic name="Def" typeId="5b8d-8753-654e-d9f8">3</characteristic>
-            <characteristic name="Res" typeId="f988-a51e-9e65-0291">5</characteristic>
-            <characteristic name="Arm" typeId="fdeb-4a6f-8679-2769">1</characteristic>
-            <characteristic name="Aeg" typeId="9820-1785-03cb-9eae">5+</characteristic>
-            <characteristic name="Rules" typeId="8f52-4c60-7457-72bf"/>
-          </characteristics>
-        </profile>
-        <profile id="3ccb-4435-3de9-4b61" name="Cultist Giant Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Rage</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="61c8-690a-4614-24ba" name="Cultist Giant Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-        <profile id="cdc1-79cf-5f95-3498" name="Cultist Giant Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <modifiers>
-            <modifier type="set" field="7bbb-3d47-ed57-284d" value="75×100">
-              <conditions>
-                <condition field="selections" scope="13e4-ccc5-4661-4f10" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77cd-794d-3f25-9bd9" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×75</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="a4cd-20c3-1483-0d34" name="Mark of the Eternal Champion" hidden="false">
-          <description>If the bearer is not a Wizard, it becomes a Wizard Apprentice that does not select spells as normal but always knows Spear of Infinity (Hereditary Spell). If the bearer is already a Wizard, it knows Spear of Infinity in addition to its other spells and cannot select it during Spell Selection.</description>
-        </rule>
-        <rule id="ca42-f12e-a95e-a6e2" name="Rage" hidden="false">
-          <description>Attack Attribute – Close Combat.
-Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers -1 Attack Value.</description>
-        </rule>
-        <rule id="d420-dbae-5214-f0f2" name="Giant See, Giant Do" hidden="false">
-          <description>The model gains Fearless and Supernal. In addition, at the start of each friendly Player Turn, before taking any Frenzy Tests, the model must take a Discipline Test that is modified by −X, where X corresponds to the difference between the number of Health Points that the model started the game with and its current number of Health Points. If failed, the model gains Battle Focus and Frenzy until the end of the game.</description>
-        </rule>
-      </rules>
       <categoryLinks>
         <categoryLink id="a8aa-132d-bfef-5108" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -5027,28 +4955,18 @@ Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it g
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0136-8a71-a1f7-600c" type="max"/>
           </constraints>
-          <rules>
-            <rule id="3a4b-2d4c-c83a-010a" name="Big Brother" hidden="false">
-              <description>Universal Rule.
-The model’s Health Points are set to 8, and its base size is changed to 75×100 mm. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.</description>
-            </rule>
-          </rules>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0b72-70e2-cf57-4988" name="Manifestation" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="0b72-70e2-cf57-4988" name="Manifestations" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a17b-f596-b334-c164" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a17b-f596-b334-c164" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2969-ca64-9a51-c8e5" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="872c-a338-0ff2-68b5" name="Unit - Sorcerous Antennae" hidden="false" collective="false" import="true" targetId="7f66-1b58-871f-1f65" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-              </costs>
-            </entryLink>
             <entryLink id="8288-b20a-15e5-b2b2" name="Unit - Living Shield" hidden="false" collective="false" import="true" targetId="9571-d0e9-f227-e54f" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
@@ -5064,11 +4982,14 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
             </entryLink>
+            <entryLink id="2099-cf8d-f32e-0345" name="Unit - Centipede Legs" hidden="false" collective="false" import="true" targetId="9014-f681-74cb-b6b6" type="selectionEntry"/>
+            <entryLink id="13f9-769b-c231-30f7" name="Unit - Chitinous Scales" hidden="false" collective="false" import="true" targetId="3fe2-a165-7438-54da" type="selectionEntry"/>
+            <entryLink id="224a-5752-8eb4-177f" name="Unit - Dark Hide" hidden="false" collective="false" import="true" targetId="dc2e-45f8-578d-b084" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="295.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="260.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
