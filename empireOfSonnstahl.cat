@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1aa5-c442-6972-b551" name="Empire of Sonnstahl 2023 Beta 2" revision="51" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1aa5-c442-6972-b551" name="Empire of Sonnstahl 2023 Beta 2" revision="52" battleScribeVersion="2.03" authorName="DarkSky, Hebus" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="ecde-c284-9850-23e1" name="Imperial Armoury" hidden="false"/>
     <categoryEntry id="77b5-bf3a-88ad-b176" name="Imperial Auxiliaries" hidden="false"/>
@@ -3352,80 +3352,9 @@ The model may choose not to move despite having Random Movement, it always passe
       </costs>
     </selectionEntry>
     <selectionEntry id="e711-12fb-4f67-dab9" name="Imperial Giant" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="c024-1995-9ea3-da51" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="c024-1995-9ea3-da51" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c024-1995-9ea3-da51" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="79b1-9c02-b6b4-2065" name="Imperial Giant Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <modifiers>
-            <modifier type="set" field="f381-7850-7fa8-3440" value="8">
-              <conditions>
-                <condition field="selections" scope="e711-12fb-4f67-dab9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="123a-4a39-aec7-c6a6" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-          </characteristics>
-        </profile>
-        <profile id="5b2e-36d1-e315-918c" name="Imperial Giant Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Rage</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3608-1fcc-e48e-8d42" name="Imperial Giant Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Support Unit</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="533a-b9f5-10c2-2b98" name="Imperial Giant Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <modifiers>
-            <modifier type="set" field="7bbb-3d47-ed57-284d" value="75×100">
-              <conditions>
-                <condition field="selections" scope="e711-12fb-4f67-dab9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="123a-4a39-aec7-c6a6" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×75</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="c7ed-2b4f-f34f-ca69" name="Rage" hidden="false">
-          <description>Attack Attribute – Close Combat.
-Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers -1 Attack Value.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="85be-c0c7-1cf4-3851" name="Support Unit" hidden="false" targetId="490a-c098-12b6-5697" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="b464-2659-69be-7e86" name="New CategoryLink" hidden="false" targetId="bc79-f1f0-5d7d-cd9b" primary="true"/>
       </categoryLinks>
@@ -3434,34 +3363,21 @@ Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it g
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="899e-9de9-64fc-7d26" type="max"/>
           </constraints>
-          <rules>
-            <rule id="e57f-f16a-9e08-82d8" name="Big Brother" hidden="false">
-              <description>The model’s Health Points are set to 8, and its base size is changed to 75×100 mm. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.</description>
-            </rule>
-          </rules>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="32bc-8bce-47c2-cad6" name="Equipment" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f49a-985f-c677-da22" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f49a-985f-c677-da22" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e5b-a178-f431-05c0" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="d56b-a246-550a-5895" name="Big Fan of Sunna" hidden="false" collective="false" import="true" type="upgrade">
-              <rules>
-                <rule id="370a-44d1-9ef9-765f" name="Fanatical" hidden="false">
-                  <description>When a model with Fanatical is killed by a Melee Attack, remove it as a casualty only at the end of Initiative Step 0.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="8170-79c5-e9a0-276a" name="Battle Focus" hidden="false" targetId="cc29-65f2-796b-52e2" type="rule"/>
-                <infoLink id="e168-054c-18c9-f0aa" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
-              </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="3cd3-2aff-6782-e094" name="Giant Repeater (4+)" hidden="false" collective="false" import="true" type="upgrade">
@@ -3472,40 +3388,16 @@ Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it g
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="880e-7f16-6e3e-3316" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="c5a6-7e99-ccd1-978d" name="Giant Repeater" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">24&quot;</characteristic>
-                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">3D6×2</characteristic>
-                    <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
-                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">2</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Volley Gun, Unwieldy</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="72b0-0384-7c4f-43bb" name="Giant Club" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="0097-340c-838d-b9c1" name="Giant Club" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
-                  <characteristics>
-                    <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+1</characteristic>
-                    <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
-                    <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-              </costs>
-            </selectionEntry>
+            <selectionEntry id="72b0-0384-7c4f-43bb" name="Giant Club" hidden="false" collective="false" import="true" type="upgrade"/>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="265.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="270.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f5ab-0f09-1b48-2c5e" name="Knightly Orders" hidden="false" collective="false" import="true" type="unit">
