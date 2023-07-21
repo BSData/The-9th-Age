@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f4f2-a5a5-873e-1b18" name="Makhar 2021" revision="26" battleScribeVersion="2.03" authorName="DarkSky, Hebus" authorUrl="https://www.the-ninth-age.com/community/index.php" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="47" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f4f2-a5a5-873e-1b18" name="Makhar 2023" revision="27" battleScribeVersion="2.03" authorName="DarkSky, Hebus" authorUrl="https://www.the-ninth-age.com/community/index.php" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Report issues by
 1. Posting in [The Ninth Age Forum thread](https://www.the-ninth-age.com/community/index.php?thread/32031-battlescribe-files-for-t9a-2-0/&amp;s=3d1a2d5f3af91850c50d403638048494514c3ad1)
 2. Create an issue on the [GitHub issue tracker](https://github.com/BSData/The-9th-Age/issues).</readme>
@@ -30,42 +30,6 @@
   </forceEntries>
   <selectionEntries>
     <selectionEntry id="6de7-3d7b-8973-aa1c" name="Táltos" hidden="false" collective="false" import="true" type="unit">
-      <profiles>
-        <profile id="5e11-3ab6-2253-5576" name="Táltos Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9128-3ea5-77d6-c8a2" name="Táltos Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="840c-d2a7-35e2-a208" name="Táltos Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">2</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-          </characteristics>
-        </profile>
-        <profile id="a42d-4ce3-2601-a0a4" name="Táltos Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-      </profiles>
       <categoryLinks>
         <categoryLink id="0b75-ee8f-892b-8cf7" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
@@ -123,6 +87,27 @@
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="353b-692a-46ba-7734" name="Vanguard" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="7529-abd1-046d-b001" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef34-43df-9d62-5f0b" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a8e1-4953-953b-507e" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7529-abd1-046d-b001" type="max"/>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e0b-cc79-1cd2-b020" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -197,7 +182,7 @@
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
               </costs>
             </entryLink>
             <entryLink id="5c8e-fa56-63ef-da94" name="Dark Chariot" hidden="false" collective="false" import="true" targetId="a8e1-4953-953b-507e" type="selectionEntry">
@@ -209,9 +194,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e177-2f3f-26bb-20cc" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3076-8c33-1310-ad0f" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="719b-b952-0fe5-1574" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bc8-bb49-f035-0110" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -230,9 +215,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e177-2f3f-26bb-20cc" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3076-8c33-1310-ad0f" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="719b-b952-0fe5-1574" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bc8-bb49-f035-0110" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
@@ -240,7 +225,7 @@
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="340.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="330.0"/>
               </costs>
             </entryLink>
             <entryLink id="2507-30e5-cdb9-d7ea" name="Black Stallion" hidden="false" collective="false" import="true" targetId="05b9-70f1-4d6c-09cd" type="selectionEntry">
@@ -332,46 +317,10 @@
         <entryLink id="a916-704d-8b2b-64b9" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="75a4-d324-24a1-59ba" name="Makhar Gyula" hidden="false" collective="false" import="true" type="unit">
-      <profiles>
-        <profile id="dfe0-60b4-1565-63fb" name="Makhar Gyula Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="289e-5a1a-1ee7-2848" name="Makhar Gyula Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6190-e657-2ba2-5473" name="Makhar Gyula Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">5</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Deeds not Words</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="594b-d82c-f10c-5c0f" name="Makhar Gyula Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">9</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-      </profiles>
       <categoryLinks>
         <categoryLink id="7aaa-769d-e759-0893" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
@@ -384,9 +333,14 @@
             <selectionEntryGroup id="26a4-7bab-012e-dba6" name="Special Equipment" hidden="false" collective="false" import="true">
               <modifiers>
                 <modifier type="increment" field="fd05-a49f-cca4-f10b" value="50.0">
-                  <conditions>
-                    <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73ad-dcf5-685e-0a3e" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e06f-c397-2c10-5d38" type="equalTo"/>
+                        <condition field="selections" scope="75a4-d324-24a1-59ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73ad-dcf5-685e-0a3e" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
                 <modifier type="increment" field="fd05-a49f-cca4-f10b" value="50.0">
                   <conditions>
@@ -484,11 +438,6 @@
             <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dae3-eae6-c07d-3d92" type="max"/>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="751b-e0cd-ac54-5155" type="max"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="d541-926e-4107-b600" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
-            <infoLink id="0361-65b2-551b-4f6c" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
-            <infoLink id="8ac2-f5b9-a20b-b7f5" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
@@ -509,9 +458,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e177-2f3f-26bb-20cc" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3076-8c33-1310-ad0f" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="719b-b952-0fe5-1574" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bc8-bb49-f035-0110" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
@@ -519,7 +468,7 @@
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="365.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="350.0"/>
               </costs>
             </entryLink>
             <entryLink id="51d3-e00c-d62e-4e3a" name="War Dais" hidden="false" collective="false" import="true" targetId="3971-6450-4139-3827" type="selectionEntry">
@@ -536,7 +485,7 @@
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
               </costs>
             </entryLink>
             <entryLink id="1ca5-5ea1-1f85-cf49" name="Chimera" hidden="false" collective="false" import="true" targetId="f730-732b-fe6b-47bb" type="selectionEntry">
@@ -548,9 +497,9 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="589f-da5c-20ba-5f1a" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e177-2f3f-26bb-20cc" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3076-8c33-1310-ad0f" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="719b-b952-0fe5-1574" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bc8-bb49-f035-0110" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
@@ -558,7 +507,7 @@
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="150.0"/>
               </costs>
             </entryLink>
             <entryLink id="6f5e-6baa-2b27-5dbb" name="Dark Chariot" hidden="false" collective="false" import="true" targetId="a8e1-4953-953b-507e" type="selectionEntry">
@@ -570,16 +519,16 @@
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47b1-c334-2935-e4f4" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e177-2f3f-26bb-20cc" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3076-8c33-1310-ad0f" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8a1-4182-3aba-ffd8" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="719b-b952-0fe5-1574" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bc8-bb49-f035-0110" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
               </costs>
             </entryLink>
             <entryLink id="516e-b68d-080e-f289" name="Shadow Chaser" hidden="false" collective="false" import="true" targetId="e8ae-4ee6-35cc-e9a2" type="selectionEntry">
@@ -596,7 +545,7 @@
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
               </costs>
             </entryLink>
             <entryLink id="363a-221b-6d49-0135" name="Black Stallion" hidden="false" collective="false" import="true" targetId="05b9-70f1-4d6c-09cd" type="selectionEntry">
@@ -613,7 +562,7 @@
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
               </costs>
             </entryLink>
             <entryLink id="8edc-392e-36a4-dafd" name="Great Elk" hidden="false" collective="false" import="true" targetId="e8b5-5e05-803c-0b3a" type="selectionEntry">
@@ -630,7 +579,7 @@
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -662,7 +611,7 @@
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eedf-4585-d0c1-f613" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b7bc-c981-b934-04ab" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a427-d31e-3096-74ef" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -678,7 +627,7 @@
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b7bc-c981-b934-04ab" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a427-d31e-3096-74ef" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -705,7 +654,7 @@
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eedf-4585-d0c1-f613" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b7bc-c981-b934-04ab" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a427-d31e-3096-74ef" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -722,7 +671,7 @@
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eedf-4585-d0c1-f613" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b7bc-c981-b934-04ab" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a427-d31e-3096-74ef" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -749,7 +698,7 @@
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eedf-4585-d0c1-f613" type="equalTo"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b7bc-c981-b934-04ab" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a427-d31e-3096-74ef" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -778,11 +727,6 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0bb0-8332-b27c-937f" type="max"/>
               </constraints>
-              <rules>
-                <rule id="ace3-8636-d874-d310" name="Mare&apos;s Shelter" hidden="false">
-                  <description>The Makhar Gyula gains +1 Attack Value and may take Special Items for an additional 50 pts. The model’s Commanding Presence range is increased by 6”.</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
               </costs>
@@ -792,7 +736,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f3fa-de1f-e791-e3df" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -811,9 +755,6 @@
               <modifiers>
                 <modifier type="append" field="name" value=" (2+) and Parting Shot"/>
               </modifiers>
-              <infoLinks>
-                <infoLink id="7b05-ea4a-b848-5202" name="Parting Shot" hidden="false" targetId="381d-6b94-16aa-dcab" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
               </costs>
@@ -852,37 +793,10 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f450-8724-b2d2-876b" name="Warrior Knights" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="6dcc-741d-a5c6-a412" value="1.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="6dcc-741d-a5c6-a412" value="4.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6dcc-741d-a5c6-a412" type="max"/>
-      </constraints>
-      <rules>
-        <rule id="4d45-c563-7241-3d9d" name="Path of the Favored" hidden="false">
-          <description>Universal Rule.
-Units with more than half of their models with Path of the Favoured must reroll failed Break Tests. In addition, model parts with Path of the Favoured upgraded to a Champion additionally gain +1 Health Point to a maximum of 3, and their Discipline is set to 9.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="f37a-2f65-0462-5127" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
-        <infoLink id="0a85-b768-3c22-0291" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-        <infoLink id="c88c-1a5e-ef0a-b840" name="Hell-Forged Armour" hidden="false" targetId="4b6e-450b-00c6-c6e9" type="profile"/>
-        <infoLink id="452a-defe-ed5b-b363" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="d860-188f-d8f2-79ba" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -890,56 +804,11 @@ Units with more than half of their models with Path of the Favoured must reroll 
         <selectionEntry id="2342-65ab-28c9-38a2" name="Warrior Knight" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af0d-ca94-4d13-f10b" type="min"/>
-            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b29-04ec-feb7-9d4c" type="max"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b29-04ec-feb7-9d4c" type="max"/>
+            <constraint field="selections" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="50e8-b82f-f435-671e" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="5d73-f86d-e057-98bb" name="Warrior Knight Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="1108-954c-a41c-36bd" name="Warrior Knight Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Hell-Forge Armour, Shield</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="0a65-f039-53e8-53e7" name="Warrior Knight" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-              </characteristics>
-            </profile>
-            <profile id="f4ca-fa27-c684-9143" name="Black Steed" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="b08a-c618-78f6-cc47" name="Warrior Knight Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="38.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="36.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -948,26 +817,8 @@ Units with more than half of their models with Path of the Favoured must reroll 
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b12d-60cc-126f-be9a" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="d7d6-4c9c-a03b-555e" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="828c-d424-c6fa-f905" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="1476-46e3-5bde-5dd4" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9f55-8412-f136-cf91" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="9720-2c0c-407e-b35e" name="Lance" hidden="false" collective="false" import="true" targetId="b10f-350c-0581-f9c2" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="7.0">
                   <repeats>
@@ -975,17 +826,17 @@ Units with more than half of their models with Path of the Favoured must reroll 
                   </repeats>
                 </modifier>
               </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c217-3bbb-c5db-0f59" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="bba8-43e4-002b-481b" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink id="de5c-d2d7-93e2-c31b" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="0736-2239-6a18-8eee" name="Banner Enchantment" hidden="true" collective="false" import="true">
           <modifiers>
@@ -1021,158 +872,40 @@ Units with more than half of their models with Path of the Favoured must reroll 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="88b2-a098-0164-890f" name="Tamyir Vassals" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="d224-066a-e928-c28c">
           <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f4fd-8247-3c26-017f" type="equalTo"/>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2c0-2230-5a1a-1f08" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <infoLinks>
-        <infoLink id="a089-03b0-99ad-a2a0" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
-        <infoLink id="7ec1-ca3e-bb17-e59d" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-        <infoLink id="f0f4-0530-7bd9-1d33" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="bc45-7a10-bdff-18e3" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6a60-8f44-df1d-0d73" name="Tamyir Vassal" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="3708-9701-1685-d276" value="160.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="3708-9701-1685-d276" value="40.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e09-c6fa-82e4-044c" type="min"/>
             <constraint field="selections" scope="parent" value="40.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2db0-c65a-ea7f-e1b2" type="max"/>
             <constraint field="selections" scope="roster" value="80.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3708-9701-1685-d276" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="2470-bc2c-ceaa-bc0b" name="Tamyir Vassal Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×25</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="8a64-f5f7-b9b7-6ff3" name="Tamyir Vassal Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-              </characteristics>
-            </profile>
-            <profile id="9b42-8cf9-b711-f0ae" name="Tamyir Vassal Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="5ae6-254e-7b0f-c6a3" name="Tamyir Vassal Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="6.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1d5c-a7a4-f23d-284f" name="Throwing Weapons (5+)" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="315b-82bc-f9e8-730f" type="max"/>
-            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="80.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="67f5-59a9-2168-f3a7" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0b48-9e3a-669c-a04b" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5f9-6919-a370-9331" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e301-c6c1-0313-bf10" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f4fd-8247-3c26-017f" name="Bow (4+)" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8285-e807-9592-e3ed" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="00a1-17ac-09d2-c088" name="Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="00a1-17ac-09d2-c088" name="Melee Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d760-148b-d436-21c6" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="c26e-0fbc-036e-abf9" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8965-c39b-1fc4-1cdc" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8fd5-fd63-1427-695e" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="558b-fbc6-8fa2-f547" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry"/>
+            <entryLink id="d829-5420-6bd9-6976" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
                   <repeats>
@@ -1180,29 +913,18 @@ Units with more than half of their models with Path of the Favoured must reroll 
                   </repeats>
                 </modifier>
               </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4323-38c4-fe85-4f60" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c5f9-6919-a370-9331" name="Spear and Shield" hidden="false" collective="false" import="true" type="upgrade">
+            </entryLink>
+            <entryLink id="3e4e-20a2-2ea3-9ab7" name="Spear" hidden="false" collective="false" import="true" targetId="e79a-e00b-b0ee-6850" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
+                <modifier type="append" field="name" value="and Shield"/>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf0a-807b-a948-7dc5" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="040c-2c98-ea80-e216" name="Banner Enchantment" hidden="true" collective="false" import="true">
           <modifiers>
@@ -1220,55 +942,51 @@ Units with more than half of their models with Path of the Favoured must reroll 
             <entryLink id="b30d-2ff0-f8b0-1309" name="Mak Banner Enchantment (Units)" hidden="false" collective="false" import="true" targetId="3977-dc87-5313-cfc8" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup id="a189-5c0d-eb94-528f" name="Shooting Weapons" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="5645-a01b-61fa-5ac2" name="Bow" hidden="false" collective="false" import="true" targetId="e2c0-2230-5a1a-1f08" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value="(4+)"/>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="f854-84e9-9cad-2c6d" name="Throwing Weapons" hidden="false" collective="false" import="true" targetId="b672-9729-1d95-cb6d" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value="(5+)"/>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="cf57-395c-201e-771a" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
+        <entryLink id="7964-47f4-6b3c-91a9" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8eea-d70f-9bbc-89dd" name="Karkadan Herd" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="c007-6522-33e3-fc55" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="c007-6522-33e3-fc55" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c007-6522-33e3-fc55" type="max"/>
       </constraints>
-      <rules>
-        <rule id="8abd-595d-d180-fc68" name="Follow The Herd" hidden="false">
-          <description>Universal Rule.
-The unit can never benefit from Commanding Presence or Rally Around the Flag. The unit gains +1 Discipline for each Full Rank.</description>
-        </rule>
-        <rule id="09ea-9a3e-1ea1-2497" name="Stampede" hidden="false">
-          <description>Attack Attribute.
-If the model’s unit has at least one Full Rank, the model’s Impact Hits cause an additional D3 hits for each model in the same file behind it (normally 2D3/3D3/etc. instead of D3).</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="79d2-c2b8-cb3b-513a" name="Fearless" hidden="false" targetId="0ab3-2e1b-8c2b-a7fe" type="rule"/>
-        <infoLink id="24d3-f4e0-ea34-a976" name="Frenzy" hidden="false" targetId="b6f2-241f-8379-3327" type="rule"/>
-        <infoLink id="6073-e90e-a085-0051" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
-        <infoLink id="3646-9949-7269-d313" name="Devastating Charge" hidden="false" targetId="c66c-e69e-a4f1-0351" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (Terror)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="f23e-12bd-59b2-17af" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (D3)"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="c61c-9768-a2eb-7bad" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1278,53 +996,12 @@ If the model’s unit has at least one Full Rank, the model’s Impact Hits caus
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0da-3091-b54b-dd5e" type="min"/>
             <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05a9-0512-81ee-8252" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="f281-1918-d741-3ae0" name="Karkadan Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×50</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="938f-b824-9c24-14d5" name="Karkadan Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">2</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-              </characteristics>
-            </profile>
-            <profile id="c35b-6e45-fe3a-cac4" name="Karkadan Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Devastating Charge (Terror), Impact Hits (D3), Stampede</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="c969-7d34-4c73-b008" name="Karkadan Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">6</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="814b-c9c0-1680-e3f4" name="Karkadan Bulls" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
             <modifier type="set" field="8a11-c308-bdea-f2ba" value="0.0">
               <conditions>
                 <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
@@ -1334,48 +1011,19 @@ If the model’s unit has at least one Full Rank, the model’s Impact Hits caus
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a11-c308-bdea-f2ba" type="max"/>
           </constraints>
-          <rules>
-            <rule id="b66a-87b9-bbc7-c171" name="Karkadan Bulls" hidden="false">
-              <description>Universal Rule.
-The model’s base size is changed to 50×75 mm and its Discipline is set to 7.</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7f4a-4b90-a2a9-4071" name="Horse Archers" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="1b2d-4498-d679-55fb" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="1b2d-4498-d679-55fb" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b2d-4498-d679-55fb" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="feaa-97d2-6a28-4567" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
-        <infoLink id="eaba-c833-b372-c533" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-        <infoLink id="ca76-4e2d-65a5-70cf" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
-        <infoLink id="6af5-ec81-c019-dad8" name="Parting Shot" hidden="false" targetId="381d-6b94-16aa-dcab" type="rule"/>
-        <infoLink id="d927-b90c-69fd-e442" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
-        <infoLink id="070e-3975-edd2-0f99" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="feb3-71bb-2a69-6a84" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
-        <infoLink id="37b6-9258-a978-8b54" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
-        <infoLink id="f98a-9214-66d0-bf56" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="079a-8e9e-444c-301c" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
         <categoryLink id="424d-d6d6-4432-9882" name="Raining Death" hidden="false" targetId="d224-066a-e928-c28c" primary="false"/>
@@ -1386,54 +1034,8 @@ The model’s base size is changed to 50×75 mm and its Discipline is set to 7.<
             <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b25-3765-86d0-bd7b" type="min"/>
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82c0-334b-4de3-b4d9" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="a511-0bad-96e7-c81b" name="Horse Archer Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="bdb4-a772-5644-f67f" name="Horse Archer Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="e49d-8a44-73ff-4108" name="Rider" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Light Lance, Recurve Bow (3+)</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="389e-a294-16d7-1b11" name="Black Steed" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="6975-e828-0b54-9b77" name="Horse Archer Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="18.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1459,7 +1061,7 @@ The model’s base size is changed to 50×75 mm and its Discipline is set to 7.<
         <entryLink id="4f0e-ba89-bb9c-522e" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="106.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9541-1d4a-37ce-097f" name="Makhar Flayers" hidden="false" collective="false" import="true" type="unit">
@@ -1469,40 +1071,14 @@ The model’s base size is changed to 50×75 mm and its Discipline is set to 7.<
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c745-8326-dad5-a89a" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2c0-2230-5a1a-1f08" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set" field="c433-7a15-f5a7-d8fa" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="c433-7a15-f5a7-d8fa" value="8.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
         </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c433-7a15-f5a7-d8fa" type="max"/>
       </constraints>
-      <rules>
-        <rule id="9f3c-176e-63c8-f492" name="Beast Taker" hidden="false">
-          <description>Universal.
-Close Combat Attacks and Shooting Attacks from Short Range made by the rider gain Lethal Strike (against Beasts and Cavalry).</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="2046-34dc-79d7-e4bd" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
-        <infoLink id="272b-aac2-f914-c78f" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-        <infoLink id="bfaa-5c11-8164-b168" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
-        <infoLink id="53c0-25b6-913d-5b4e" name="Strider" hidden="false" targetId="df36-dc35-ead5-1719" type="rule"/>
-        <infoLink id="d23b-ddba-dd9b-1f05" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
-        <infoLink id="427e-04d9-ff0c-8b39" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="8a60-9e65-7e3c-e60b" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="9ba6-6e81-633a-a1dc" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1512,54 +1088,8 @@ Close Combat Attacks and Shooting Attacks from Short Range made by the rider gai
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15c6-e759-bfd0-a21c" type="min"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7965-d5f3-e7fe-2b05" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="103d-5835-ab78-4d49" name="Makhar Flayer Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="874f-b65e-3a18-d0ab" name="Makhar Flayer Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="a959-3112-6051-471b" name="Makhar Flayer" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Beast Taker</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="20f1-d826-e9bb-bab9" name="Shadow Chaser" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="9203-d4c3-cc0d-9b87" name="Makhar Flayer Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">10&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">20&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d">Feigned Flight, Light Troops, Makhar Battle Fever, Strider, Vanguard</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1568,41 +1098,7 @@ Close Combat Attacks and Shooting Attacks from Short Range made by the rider gai
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8279-6976-2c79-e7f4" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="1dce-5d0a-2272-c1a7" name="Skinning Lash" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="369a-f99d-db36-0431" type="max"/>
-                <constraint field="24fd-8af8-0c78-001c" scope="roster" value="60.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cdf8-761a-5446-a669" type="max"/>
-              </constraints>
-              <rules>
-                <rule id="4ff8-7443-de68-9a8a" name="Skinning Lash" hidden="false">
-                  <description>Special Attack
-A unit with at least one model with Skinning Lash can make a Sweeping Attack against a single unengaged enemy unit when passing within 1&quot; (it does not need to and cannot move through or over that unit). The enemy unit suffers 1 hit with Strength 4 and Armour Penetration 0 for each model with Skinning Lash in the unit. A unit that loses one or more Health Points due to the Skinning Lash Sweeping Attack suffers -1 Discipline until the end of its next Player Turn.</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
-            <entryLink id="58a3-1373-421f-3448" name="Bow" hidden="false" collective="false" import="true" targetId="e2c0-2230-5a1a-1f08" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="append" field="name" value=" (4+)"/>
-              </modifiers>
-            </entryLink>
             <entryLink id="f206-371b-27e9-025b" name="Recurve Bow" hidden="false" collective="false" import="true" targetId="c745-8326-dad5-a89a" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="7.0">
@@ -1610,7 +1106,7 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="append" field="name" value=" (3+)"/>
+                <modifier type="append" field="name" value=" (3+) and Parting Shot"/>
               </modifiers>
             </entryLink>
             <entryLink id="1025-411b-9982-7990" name="Throwing Weapons" hidden="false" collective="false" import="true" targetId="b672-9729-1d95-cb6d" type="selectionEntry">
@@ -1653,29 +1149,13 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="be95-9a87-b729-bcad" name="Steppe Wolfhounds" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="fe6d-151e-fbc4-5dd4" value="8.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="fe6d-151e-fbc4-5dd4" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe6d-151e-fbc4-5dd4" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="4785-875c-2ce3-41ff" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
-        <infoLink id="403a-a516-9844-bfb7" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="ded7-364a-8778-5891" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
@@ -1727,173 +1207,24 @@ A unit with at least one model with Skinning Lash can make a Sweeping Attack aga
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c93b-955d-d8ef-8759" name="Turul" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="6707-7b7b-4199-638c" value="1.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="6707-7b7b-4199-638c" value="4.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6707-7b7b-4199-638c" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6707-7b7b-4199-638c" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="171e-d52e-a3e3-a7d2" name="Turul Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3e8f-05cc-ae15-aca0" name="Turul Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-          </characteristics>
-        </profile>
-        <profile id="c95f-22f8-31fe-5044" name="Turul Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-          </characteristics>
-        </profile>
-        <profile id="d04c-31fb-1ef2-9f27" name="Turul Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot; (8&quot;)</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">16&quot; (16&quot;)</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="5d3c-6268-00e4-fcf7" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
-        <infoLink id="2eaf-74aa-7b55-bc1a" name="Fly" hidden="false" targetId="4a5a-48a4-b2f9-f6ed" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (8&quot;, 16&quot;)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="806b-8827-757f-f38a" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-        <infoLink id="2dc3-1b45-1749-e8a7" name="Towering Presence" hidden="false" targetId="9ca4-65be-33fc-5d47" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="448a-5493-ede4-8495" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="c297-1961-a76a-2f6d" name="Territorial Hunter" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77fa-5d93-feb6-eeeb" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="c431-8d0f-4f09-41a3" name="Territorial Hunter" hidden="false">
-              <description>Universal Rule.
-The model gains Ambush. In addition, when declaring if the model will Ambush (during step 8 of the Pre-Game Sequence), you may declare that the model Ambushes from an Impassable Terrain Feature instead of the Board Edge. If so, follow the rules for Ambush but replace all instances of “Board Edge” in the rules for Ambush with “edge of any Impassable Terrain”.</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink id="20e5-aacc-432b-cae9" name="Ambush" hidden="false" targetId="2dda-ee2f-cfce-7f16" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="230.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="220.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="17fa-c5e5-7139-474f" name="Steppe Mammoth" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="55dc-b142-c7b4-1fed" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="55dc-b142-c7b4-1fed" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="d6ad-3892-3bf0-c694" name="Steppe Mammoth Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">100×150</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="cf23-2d80-9f4e-dffd" name="Steppe Mammoth Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">6</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-          </characteristics>
-        </profile>
-        <profile id="c258-4b01-2d4a-1cb3" name="Steppe Mammoth" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Impact Hits (D3)</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="f7fd-bfa0-56f6-6819" name="Steppe Mammoth Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-        <profile id="578f-47b1-e253-2db6" name="Crew (6)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <modifiers>
-            <modifier type="set" field="name" value="Crew (3)">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c63-8911-1013-1286" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Makhar Lance, Recurve Bow (3+)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="4832-1d09-832f-2fb1" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
-        <infoLink id="7ec3-06ba-3fc0-64fe" name="Parting Shot" hidden="false" targetId="381d-6b94-16aa-dcab" type="rule"/>
-        <infoLink id="82cc-56c9-de21-85ad" name="Makhar Lance" hidden="false" targetId="2654-300e-cfee-3ac9" type="profile"/>
-        <infoLink id="ae53-3a6d-9d3c-1058" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
-        <infoLink id="34f1-9e2e-f528-7aa8" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="faff-f004-ca7a-f8b2" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (D3)"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="e1d5-2185-9106-078a" name="New CategoryLink" hidden="false" targetId="d224-066a-e928-c28c" primary="true"/>
       </categoryLinks>
@@ -1907,17 +1238,6 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6e0-0832-9308-fda6" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="4b40-6a7d-65e1-2999" name="Fist of the Makhar (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">12&quot; – 48&quot;</characteristic>
-                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-                    <characteristic name="Str" typeId="f166-13ff-9227-4525">3 [7]</characteristic>
-                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">0 [4]</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Artillery Weapon, Catapult (4×4), [Mult</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -1926,18 +1246,15 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf2c-5d9e-e17f-c2ce" type="max"/>
               </constraints>
-              <infoLinks>
-                <infoLink id="935f-72e5-9775-3b57" name="Rally Around the Flag" hidden="false" targetId="bf56-e3dc-41ca-292b" type="rule"/>
-              </infoLinks>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="410.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="400.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8d26-3a08-e887-8536" name="Makhar Chariots" hidden="false" collective="false" import="true" type="unit">
@@ -1947,33 +1264,10 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2932-a8df-0659-f2c2" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="6d4b-8156-d476-f9fb" value="8.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="6d4b-8156-d476-f9fb" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6d4b-8156-d476-f9fb" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="07ce-0af5-e6f4-79ff" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-        <infoLink id="b139-66d2-14de-8b36" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
-        <infoLink id="9b9d-dae6-741e-f78c" name="Parting Shot" hidden="false" targetId="381d-6b94-16aa-dcab" type="rule"/>
-        <infoLink id="5f69-5aea-c76e-14bb" name="Swiftstride" hidden="false" targetId="d15d-3c8e-23db-ab7b" type="rule"/>
-        <infoLink id="e2b5-2f21-0b23-25bc" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="8a77-65b6-a3a1-78f8" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (D6+1)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="f5eb-77a8-a5cd-9764" name="Inanimate" hidden="false" targetId="ca83-2dad-d908-5f4c" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="601a-e705-26e0-5cf3" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1983,79 +1277,16 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbd7-8f67-06d1-7329" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddb9-e3ec-5c75-4351" type="min"/>
           </constraints>
-          <profiles>
-            <profile id="27a3-f076-4922-6925" name="Makhar Chariot Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="ce02-1484-6ad3-3728" name="Mahkar Chariot Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">4</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour, Shield</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="9a90-d18d-0ce3-d155" name="Chassis" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a"/>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7"/>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297"/>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Impact Hits (D6), Inanimate</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="16c5-2905-d313-1de2" name="Horse (2)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="292f-8cd8-332e-d7fe" name="Crew (4)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-              </characteristics>
-            </profile>
-            <profile id="7175-58d4-a6e2-f923" name="Mahkar Chariot Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="34ae-b800-6158-a41b" name="Vanguard (6&apos;&apos;)" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="34ae-b800-6158-a41b" name="Vanguard" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c58-1d4d-f0fd-18ef" type="max"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="5645-a90c-ec64-826e" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value=" (6&quot;)"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2075,10 +1306,6 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54aa-0056-c285-f013" type="max"/>
               </constraints>
-              <infoLinks>
-                <infoLink id="e8c7-46c4-4ac3-1324" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-                <infoLink id="b630-5326-016a-0a26" name="Makhar Lance" hidden="false" targetId="2654-300e-cfee-3ac9" type="profile"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -2087,10 +1314,6 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9344-b9f5-5ab8-fa46" type="max"/>
               </constraints>
-              <infoLinks>
-                <infoLink id="8bb1-29a5-f193-6683" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
-                <infoLink id="a6ac-5ec9-0581-74df" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
@@ -2099,7 +1322,7 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="64e6-0778-b8d9-1bf9" name="Makhar Lancers" hidden="false" collective="false" import="true" type="unit">
@@ -2109,26 +1332,10 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ffe-7bea-bac9-9977" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="03be-5428-e77c-fdf4" value="8.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="03be-5428-e77c-fdf4" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="03be-5428-e77c-fdf4" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="d096-2f93-c81c-c6d3" name="Makhar Battle Fever" hidden="false" targetId="0e05-c2ea-20d5-5859" type="rule"/>
-        <infoLink id="f498-b0ff-fb33-87d7" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-        <infoLink id="6eb0-12fc-317e-8dae" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="3c8c-9da0-08cf-ea96" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="9977-ccbd-8efc-1acd" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
@@ -2185,7 +1392,7 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="18.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="16.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="27dd-6519-62a3-684b" name="Lamellar Barding" hidden="false" collective="false" import="true" type="upgrade">
@@ -2199,9 +1406,6 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="060f-e2a8-8af2-4091" type="max"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="9ed5-2c92-9cfe-fd8a" name="Lamellar Barding" hidden="false" targetId="e97b-1a62-946c-f2c9" type="profile"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
@@ -2213,7 +1417,7 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
+            <modifier type="set" field="e72e-fff9-70ac-c438" value="0.0">
               <conditions>
                 <condition field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
               </conditions>
@@ -2222,27 +1426,6 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e72e-fff9-70ac-c438" type="max"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="f760-cc5e-16d9-b196" name="Recurve Bow" hidden="false" targetId="6116-625c-aa10-5108" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="86e9-19cf-057a-1f0d" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db50-d595-bd3d-b7fc" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="5a11-6259-b691-46e6" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
           </costs>
@@ -2253,46 +1436,9 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0512-ee16-d938-0e58" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="6306-66f7-bb6d-e630" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8804-8612-3ba8-55f8" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3a09-4f2c-a237-64e1" name="Paired Weapons" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dfe-9212-1f23-6945" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="87d3-9c49-a25d-b9b9" name="Light Lance" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7edb-164e-4226-c050" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5608-6d52-4a00-e6f0" name="Makhar Lance" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="d073-a04f-4f8f-c9e7" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry"/>
+            <entryLink id="447c-8e2c-149e-a888" name="Light Lance" hidden="false" collective="false" import="true" targetId="7efd-252a-dcad-fa35" type="selectionEntry">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
                   <repeats>
@@ -2300,14 +1446,18 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
                   </repeats>
                 </modifier>
               </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="851e-8af6-b069-df5f" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink id="9802-191f-18f2-3c13" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry"/>
+            <entryLink id="d973-bdd5-ebed-1d28" name="Makhar Lance" hidden="false" collective="false" import="true" targetId="c353-f3bc-357a-a2a5" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="72bc-43ee-fa2f-d12e" name="Banner Enchantment" hidden="true" collective="false" import="true">
           <modifiers>
@@ -2329,13 +1479,30 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
       <entryLinks>
         <entryLink id="6423-fab3-7a85-9557" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
         <entryLink id="e327-8df8-e887-fcce" name="Vanguard" hidden="false" collective="false" import="true" targetId="4aa1-fb25-b3c5-57bc" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1376-2832-fd2e-0f4b" type="max"/>
+            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="70.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7dfc-6aad-e6a1-4819" type="max"/>
           </constraints>
+        </entryLink>
+        <entryLink id="cbb9-6f59-c96c-cb7f" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="47.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="748c-b645-869d-953b" name="Nomadic Giant" hidden="false" collective="false" import="true" type="unit">
@@ -2345,66 +1512,10 @@ The model gains Ambush. In addition, when declaring if the model will Ambush (du
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1dc0-4440-c8bd-9485" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="7a9d-7350-8580-c3f4" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="7a9d-7350-8580-c3f4" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a9d-7350-8580-c3f4" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="c090-33e5-69a2-a9fc" name="Nomadic Giant Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×75</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="17a4-1657-02a4-4c23" name="Nomadic Giant Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-          </characteristics>
-        </profile>
-        <profile id="8294-8724-33ce-84ff" name="Nomadic Giant Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">5</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Rage</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3fcc-1cc3-5b17-c041" name="Nomadic Giant Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="28e0-3641-4fbe-8a29" name="Giant See, Giant Do" hidden="false">
-          <description>Universal Rule.
-The model gains Makhar Battle Fever.</description>
-        </rule>
-        <rule id="7aa1-5964-2c0e-fd26" name="Rage" hidden="false">
-          <description>Attack Attribute – Close Combat.
-Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers −1 Attack Value.</description>
-        </rule>
-      </rules>
       <categoryLinks>
         <categoryLink id="cd84-001a-f45d-2885" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -2420,14 +1531,15 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
             </rule>
           </rules>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="59af-3113-da66-f997" name="Weapon" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6526-2848-ccd5-10ce" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6526-2848-ccd5-10ce" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3df-2e89-0db5-3864" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="334a-a188-7985-999c" name="Giant Club" hidden="false" collective="false" import="true" type="upgrade">
@@ -2443,54 +1555,23 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
                   </characteristics>
                 </profile>
               </profiles>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
-              </costs>
             </selectionEntry>
             <selectionEntry id="524f-2622-e9ac-3363" name="Tribal Warspear" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d9d-da38-29b9-4d6a" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="09e9-8253-1d40-91ef" name="Tribal Warspear" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
-                  <characteristics>
-                    <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">C+1</characteristic>
-                    <characteristic name="AP" typeId="646b-1e72-1589-5083"/>
-                    <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Multiple Wounds (D3, against Towering Presence). Charging enemy units in base contact with the wielder suffer −1 Agility. The wielder follows the rules for War Platforms with the following exception: It can only join Infantry units that include at least one R&amp;F Barbarian Infantry model.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="1af0-4ba0-c2c4-02f0" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
-              </costs>
             </selectionEntry>
             <selectionEntry id="1dc0-4440-c8bd-9485" name="Giant Recurve Bow (4+)" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="194b-e6c6-7aff-5535" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73f5-0e37-45ed-f685" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="56d2-a96e-34cf-6e7d" name="Giant Recurve Bow (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">48&quot;</characteristic>
-                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-                    <characteristic name="Str" typeId="f166-13ff-9227-4525">3 [6]</characteristic>
-                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">10</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Area Attack (1×5), [Mulitple Wounds (D3)]</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
-              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="260.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="290.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -2845,69 +1926,17 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </costs>
     </selectionEntry>
     <selectionEntry id="ef34-43df-9d62-5f0b" name="Wasteland Behemoth" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="0046-3c51-beff-a5b5" value="1.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="0046-3c51-beff-a5b5" value="4.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="559c-7f0b-1d36-803a" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0046-3c51-beff-a5b5" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="4960-8001-5c3e-32f7" name="Wasteland Behemoth Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">100×150</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="996e-dbf6-8235-148c" name="Wasteland Behemoth Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">7</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">4</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-          </characteristics>
-        </profile>
-        <profile id="d682-e447-fb8c-38ea" name="Wasteland Behemoth Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">6</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">6</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">3</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="86e5-dfd9-9713-157f" name="Wasteland Behemoth Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <modifiers>
-            <modifier type="set" field="db10-a838-f72f-3ed6" value="20&quot;">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93ac-eab6-27dc-6e0b" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-      </profiles>
       <selectionEntries>
         <selectionEntry id="93ac-eab6-27dc-6e0b" name="Additional Limbs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cddc-9c5e-44af-ab9d" type="max"/>
+          </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2938,13 +1967,6 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
       </costs>
     </selectionEntry>
     <selectionEntry id="81ad-1a69-0940-c6ee" name="Wasteland Torch" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="8d15-687a-cfa6-9212" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddf8-3834-2c4a-c731" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d15-687a-cfa6-9212" type="max"/>
@@ -2953,78 +1975,78 @@ The model’s Health Points are set to 8, and its base size is changed to 75×10
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="a427-d31e-3096-74ef" name="Hawthorne Curse" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="78aa-96bf-e879-e903" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="62e9-07e8-f409-7a2c" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2e1b-c602-929e-f071" name="Wildfire Burst" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1118-b47d-0c62-0bbf" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9a17-d502-3fbc-93e6" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3076-8c33-1310-ad0f" name="Mammoth-Hide Cloak" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="175c-6ce5-b1b8-c8c2" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cea2-1066-fcb7-9dba" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fa79-e704-178d-7557" name="Endless Pain" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f2a1-330c-3391-e743" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1c79-8aca-3aa9-6f61" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6df4-a8d6-5fe9-82eb" name="Spirit of the Herd" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d71-ddae-4818-d1b1" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3749-1c08-178e-da68" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4bc8-bb49-f035-0110" name="Turul Radiant Headdress" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e14-bb84-dcd8-eb5f" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a95b-85a5-4b3b-43ac" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="2eb2-5755-d708-4c4c" name="Mak Weapon Enchantments" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c88-5795-55e5-6b93" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="0a30-afbb-4ce6-f5a2" name="Wildfire Burst" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="de97-71b2-7546-36cf" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7526-86ec-a9b0-4ef4" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de97-71b2-7546-36cf" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b7bc-c981-b934-04ab" name="Hawthorne Curse" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="54fb-9e9e-c2ec-9886" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="974e-2945-3d37-7468" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="54fb-9e9e-c2ec-9886" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="cd82-88cd-f0bd-76e8" name="Hawthorne Curse" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Models without Ambush only.
-Attacks made with this weapon gain Devastating Charge (+2 Str, +2 AP) and become Magical Attacks. The weapon can be used as a Shooting Weapon (3+) with the following profile: Range 18′′, Shots 1, Str 3 [6], AP 10, Area Attack (1×5), Reload!, [Multiple Wounds (D3)]. This Shooting Attack never suffers negative to-hit modifiers.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="190e-613a-d3f4-8cd2" name="Hawthorne Curse" hidden="false" collective="false" import="true" targetId="a427-d31e-3096-74ef" type="selectionEntry"/>
+        <entryLink id="1dc5-fcb9-0091-de0d" name="Wildfire Burst" hidden="false" collective="false" import="true" targetId="2e1b-c602-929e-f071" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="e473-0818-1abb-3348" name="Mak Armour Enchantment" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86f0-a61d-6b25-4bf7" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="e177-2f3f-26bb-20cc" name="Mammoth-Hide Cloak (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="34db-1d0e-2f11-9c4f" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f905-d5c8-0e2e-2467" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="34db-1d0e-2f11-9c4f" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="02e4-6ef6-0a1c-f3a0" name="Mammoth-Hide Cloak" hidden="false" collective="false" import="true" targetId="3076-8c33-1310-ad0f" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="f1be-ccdc-db5b-9013" name="Mak Banner Enchantments (BSB)" hidden="false" collective="false" import="true">
       <constraints>
@@ -3038,56 +2060,11 @@ Attacks made with this weapon gain Devastating Charge (+2 Str, +2 AP) and become
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b2e-d3ca-d3a2-edd6" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="1022-4118-68c2-07cf" name="Spirit of the Herd" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="8f28-f8da-a88f-6430" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f2f1-414b-0e8e-2d31" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8f28-f8da-a88f-6430" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8b69-6051-a86b-f6c9" name="Endless Pain" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="892b-722c-4ae7-995c" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="09a0-c173-846a-6d7a" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="892b-722c-4ae7-995c" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="719b-b952-0fe5-1574" name="Turul Radiant Headdress (only on Standard)" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="3b2b-387b-45d0-087f" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d2d-06f2-b6b1-3e39" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3b2b-387b-45d0-087f" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="ee06-4968-25a0-9a4a" name="Spirit of the Herd" hidden="false" collective="false" import="true" targetId="6df4-a8d6-5fe9-82eb" type="selectionEntry"/>
+        <entryLink id="b448-455a-a0ba-0d65" name="Turul Radiant Headdress" hidden="false" collective="false" import="true" targetId="4bc8-bb49-f035-0110" type="selectionEntry"/>
+        <entryLink id="c0f8-f1a4-9ae5-58c2" name="Endless Pain" hidden="false" collective="false" import="true" targetId="fa79-e704-178d-7557" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="3977-dc87-5313-cfc8" name="Mak Banner Enchantment (Units)" hidden="false" collective="false" import="true">
       <constraints>
