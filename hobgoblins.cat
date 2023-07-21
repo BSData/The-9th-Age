@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8ad8-dcc6-8331-c264" name="Hobgoblins 2021 Beta 2 Hotfix 1" revision="5" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="42" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8ad8-dcc6-8331-c264" name="Hobgoblins 2023" revision="6" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="f410-d87f-bb92-f6cb" name="Blotting the Sun" hidden="false"/>
   </categoryEntries>
@@ -37,7 +37,6 @@
       <infoLinks>
         <infoLink id="2846-2d5a-03ff-3ff1" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
         <infoLink id="039a-d2c5-c085-64e0" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-        <infoLink id="4419-b2f1-4488-8d7d" name="Iron Rain" hidden="false" targetId="0417-c3ca-b91d-d194" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b51f-ceb5-cd9d-38a2" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
@@ -182,125 +181,17 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="5a12-9841-d7bd-241e" name="Hob Ballista" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="adb5-2e2d-e53a-e38d" value="1.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="adb5-2e2d-e53a-e38d" value="4.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="adb5-2e2d-e53a-e38d" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="abea-9030-65d5-5cd4" name="Crew" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Iron Rain, Move or Fire, Ballista (4+)</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3765-9d13-4f2f-0e9d" name="Hob Ballista Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">1</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Light Armour</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="cd05-ac96-826e-e3c1" name="Hob Ballista Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">4&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-        <profile id="d349-4e06-e48a-82dc" name="Hob Ballista Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Construct</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">60Ø</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a1c2-b7a3-8e07-0dd0" name="Ballista (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-          <characteristics>
-            <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">48&quot;</characteristic>
-            <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-            <characteristic name="Str" typeId="f166-13ff-9227-4525">3 [6]</characteristic>
-            <characteristic name="AP" typeId="857a-4ce1-d134-8701">10</characteristic>
-            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Artillery Weapon. Area Attack (1×5), [Multiple Wounds (D3)]</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="c156-0cd5-1a65-677f" name="Move or Fire" hidden="false" targetId="6475-e063-0070-f6cc" type="rule"/>
-        <infoLink id="5458-3932-8898-0afa" name="War Machine" hidden="false" targetId="610e-d71e-0439-9e7f" type="rule"/>
-        <infoLink id="e865-2894-0851-5086" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="4db0-0127-595f-e2ce" name="Multiple Wounds" hidden="false" targetId="2ea2-3a42-de1e-bc0a" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (D3)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="882e-12e4-ca71-c157" name="Area Attack" hidden="false" targetId="542e-121d-e448-b51e" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (1×5)"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="4990-fe44-7028-018e" name="New CategoryLink" hidden="false" targetId="f410-d87f-bb92-f6cb" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="100.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="65fc-7491-1039-cdfb" name="Hobgoblin Conjurer" hidden="false" collective="false" import="true" type="unit">
-      <profiles>
-        <profile id="7648-06cf-a879-794b" name="Hobgoblin Conjurer Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-          </characteristics>
-        </profile>
-        <profile id="6ac5-4f2d-1a17-dcce" name="Hobgoblin Conjurer Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36"/>
-          </characteristics>
-        </profile>
-        <profile id="ed52-9fbe-8529-042d" name="Hobgoblin Conjurer Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="38b4-eb47-7fd9-3a50" name="Hobgoblin Conjurer Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-      </profiles>
       <categoryLinks>
         <categoryLink id="0493-8f72-30f0-d335" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
@@ -335,7 +226,6 @@
                   </constraints>
                   <entryLinks>
                     <entryLink id="3a7d-519c-cbc8-aff3" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
-                    <entryLink id="45b2-ebac-5940-272a" name="Hob Armours" hidden="false" collective="false" import="true" targetId="d705-7505-7d2b-9637" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="062d-a11d-867f-0cba" name="Artefacts" hidden="false" collective="false" import="true">
@@ -360,32 +250,6 @@
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2e4f-9986-5d55-009b" name="Infernal Lackey" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="e693-72d4-af35-0f84" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e7ab-249b-e180-109d" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="463e-9612-da1e-7c67" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e693-72d4-af35-0f84" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="c4e6-b310-67b3-88b4" name="Infernal Lackey" hidden="false">
-              <description>Universal Rule.
-The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to 8, and it must choose Pyromancy as its Path of Magic.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -445,13 +309,14 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9dfd-528a-2991-3f75" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </entryLink>
             <entryLink id="ac07-882c-ac3d-aaae" name="Plains Tusker" hidden="false" collective="false" import="true" targetId="712e-fee8-d581-637e" type="selectionEntry">
@@ -462,13 +327,32 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
                       <conditions>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9dfd-528a-2991-3f75" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="180.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="125.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="aac2-23ee-7ccd-e215" name="Colossal Camel" hidden="false" collective="false" import="true" targetId="a078-f140-2b56-355d" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="eb57-cdc8-855b-a0a8" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9dfd-528a-2991-3f75" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41fe-d2cc-82ef-381a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538d-5665-58a8-281d" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -515,6 +399,11 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
               </costs>
             </entryLink>
             <entryLink id="0f7c-1b12-beeb-3deb" name="Unarmoured" hidden="false" collective="false" import="true" targetId="3d08-4e50-5ccc-bda0" type="selectionEntry"/>
+            <entryLink id="a8cd-586a-7750-7a31" name="Infernal Armour" hidden="false" collective="false" import="true" targetId="ad7f-49e4-7065-43e3" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+              </costs>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -522,57 +411,10 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
         <entryLink id="7de5-7666-6c95-e468" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="130.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="47d4-75ca-5c15-f34d" name="Satrap" hidden="false" collective="false" import="true" type="unit">
-      <profiles>
-        <profile id="9ac3-1382-4763-ca1e" name="Satrap Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-        <profile id="f774-2888-784f-1a32" name="Satrap Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="53a7-b9e6-e7c6-0526" name="Satrap Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">5</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour, Shield</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ddcf-66f2-7731-008f" name="Satrap Offensive" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">3</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">4</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Iron Rain, Weapon Master, Bow (2+), Lance, Paired Weapons</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="9dc6-2483-46e8-2096" name="Iron Rain" hidden="false" targetId="0417-c3ca-b91d-d194" type="rule"/>
-        <infoLink id="37c9-7946-de55-72fa" name="Infernal Armour" hidden="false" targetId="3c9e-ab86-99bb-7595" type="profile"/>
-        <infoLink id="1c14-9b20-5477-9f83" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
-        <infoLink id="faa9-7ff4-6aeb-70ca" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile">
-          <modifiers>
-            <modifier type="append" field="name" value=" (2+)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="f0ea-3fbc-cf7b-9bab" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="6701-4a76-8d13-3327" name="Characters" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
       </categoryLinks>
@@ -600,7 +442,6 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
                   </constraints>
                   <entryLinks>
                     <entryLink id="6510-63ee-7c96-b47b" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
-                    <entryLink id="11af-545d-a94b-89d6" name="Hob Armours" hidden="false" collective="false" import="true" targetId="d705-7505-7d2b-9637" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="4515-7591-7464-a277" name="Artefacts" hidden="false" collective="false" import="true">
@@ -707,10 +548,10 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="225.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
               </costs>
             </entryLink>
-            <entryLink id="fd31-20bb-d374-5a66" name="Drum Gogyag" hidden="false" collective="false" import="true" targetId="6ebb-70f5-27ee-a333" type="selectionEntry">
+            <entryLink id="fd31-20bb-d374-5a66" name="Royal Gogyag" hidden="false" collective="false" import="true" targetId="6ebb-70f5-27ee-a333" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="e1f1-2948-52f5-f7dd" value="0.0">
                   <conditionGroups>
@@ -727,7 +568,12 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="245.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="175.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="fdaa-fb72-99eb-e43b" name="Colossal Camel" hidden="false" collective="false" import="true" targetId="a078-f140-2b56-355d" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -738,26 +584,10 @@ The model gains Infernal Armour and Flintlock Axe (3+). Its Discipline is set to
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1679-5a82-18fe-f331" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="095d-f9d7-cc46-5264" name="Cavalry Commander" hidden="false" collective="false" import="true" type="upgrade">
-              <rules>
-                <rule id="6d66-5056-8dbc-98d7" name="Cavalry Commander" hidden="false">
-                  <description>Universal Rule.
-The Satrap model part gains +1 Offensive Skill and Weapon Master. The Satrap must take a mount. Cavalry units joined by one or more models with Cavalry Commander must reroll any natural rolls of ‘1’ when rolling for Charge Range in the Charge Phase.</description>
-                </rule>
-              </rules>
+            <selectionEntry id="095d-f9d7-cc46-5264" name="Cavalry Commander" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="5bee-d1ce-c094-7204" name="Archery Commander" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5bee-d1ce-c094-7204" name="Archery Commander" hidden="false" collective="false" import="true" type="upgrade">
-              <rules>
-                <rule id="0263-9653-d1fb-378f" name="Archery Commander" hidden="false">
-                  <description>Universal Rule.
-Units in Line Formation joined by one or more models with Archery Commander never count as having moved for the purpose of Volley Fire.</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="32be-7102-f549-870d" name="Shah" hidden="false" collective="false" import="true" type="upgrade">
@@ -768,14 +598,8 @@ Units in Line Formation joined by one or more models with Archery Commander neve
                   </conditions>
                 </modifier>
               </modifiers>
-              <rules>
-                <rule id="2100-dc17-b109-483f" name="Shah" hidden="false">
-                  <description>Universal Rule.
-The Satrap model part gains +1 Agility, +1 Discipline, and +1 Attack Value, and its Special Item allowance is set to 200 pts.</description>
-                </rule>
-              </rules>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -808,6 +632,9 @@ The Satrap model part gains +1 Agility, +1 Discipline, and +1 Attack Value, and 
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="cfd2-ae55-47b8-3e91" name="Shooting Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8002-540d-ee57-d4cd" type="max"/>
+          </constraints>
           <entryLinks>
             <entryLink id="4758-f221-de5d-32e0" name="Bow" hidden="false" collective="false" import="true" targetId="e2c0-2230-5a1a-1f08" type="selectionEntry">
               <modifiers>
@@ -850,29 +677,13 @@ The Satrap model part gains +1 Agility, +1 Discipline, and +1 Attack Value, and 
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="105.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0262-6708-226a-d86e" name="Hob Auxiliaries" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="781b-64fd-7ee7-4c62" type="max"/>
       </constraints>
-      <rules>
-        <rule id="f1c7-3503-f284-1ad1" name="Boiling Oil" hidden="false">
-          <description>Attack Attribute – Shooting.
-If one or more simultaneous attacks with Boiling Oil hit, after resolving these attacks, the target unit gains one Boiling Oil marker. If a unit with one or more Boiling Oil markers is targeted by Shooting Attacks with Iron Rain, the shooting models are considered to be Located in the target’s Rear Arc for the purpose of Iron Rain (not for the purpose of other rules like Area Attack). Remove all markers from a unit when it is hit by one or more attacks with Iron Rain or at the end of the Shooting Phase, whichever comes first.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="8787-ef36-dcec-8370" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-        <infoLink id="f901-b67f-0893-fe6b" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (6&quot;)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="8564-41c8-9a24-560e" name="Iron Rain" hidden="false" targetId="0417-c3ca-b91d-d194" type="rule"/>
-        <infoLink id="0644-51fa-d824-e151" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="e726-7c67-448a-e016" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
         <categoryLink id="d26e-baff-b0f0-80b9" name="Blotting the Sun" hidden="false" targetId="f410-d87f-bb92-f6cb" primary="false"/>
@@ -883,44 +694,8 @@ If one or more simultaneous attacks with Boiling Oil hit, after resolving these 
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8a1-892b-cbb5-bc3f" type="max"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cb0-de28-75e6-5b95" type="min"/>
           </constraints>
-          <profiles>
-            <profile id="dec2-0d89-e484-edd3" name="Hob Auxiliary Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Infantry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">20×20</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="4aac-453e-2402-5d4e" name="Hob Auxiliary Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">4&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">8&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-              </characteristics>
-            </profile>
-            <profile id="3648-8418-9b17-098e" name="Hob Auxiliary Offense" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Boiling Oil, Iron Rain, Paired Weapons</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="92f2-e1e1-e1cc-2183" name="Hob Auxiliary Defense" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">0</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="6.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -932,31 +707,6 @@ If one or more simultaneous attacks with Boiling Oil hit, after resolving these 
           </constraints>
           <selectionEntries>
             <selectionEntry id="9ff3-b07a-15ef-953d" name="Slingers" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7b1f-2448-db03-bb91" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f0d3-899d-2643-c078" name="Sling (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">18&quot;</characteristic>
-                    <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-                    <characteristic name="Str" typeId="f166-13ff-9227-4525">3</characteristic>
-                    <characteristic name="AP" typeId="857a-4ce1-d134-8701">0</characteristic>
-                    <characteristic name="Attributes" typeId="d988-3828-5f00-7582">The attack gains +1 Strength when shooting from Short Range.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="6f89-043c-2c3b-513a" name="Skirmisher" hidden="false" targetId="2ce4-ece5-068c-4d20" type="rule"/>
-                <infoLink id="f5a5-c28a-40bf-f41d" name="Hard Target" hidden="false" targetId="69d6-4d15-1fc4-13d3" type="rule">
-                  <modifiers>
-                    <modifier type="append" field="name" value=" (1)"/>
-                  </modifiers>
-                </infoLink>
-                <infoLink id="2a91-5d8e-25fe-3b89" name="Insignificant" hidden="false" targetId="10f4-4cf9-f713-7351" type="rule"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry id="ae5a-0d0b-39ec-ab3e" name="Disciples" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
@@ -965,52 +715,44 @@ If one or more simultaneous attacks with Boiling Oil hit, after resolving these 
                 </modifier>
               </modifiers>
               <constraints>
+                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7b1f-2448-db03-bb91" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ae5a-0d0b-39ec-ab3e" name="Disciples" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
                 <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc3a-97e3-0a25-748c" type="max"/>
               </constraints>
-              <rules>
-                <rule id="0680-88ff-4289-e33c" name="Disciples" hidden="false">
-                  <description>Universal Rule.
-Units fully composed of models with Disciples gain Swiftstride for the Charge Range roll if they are Located in the Charged unit’s Flank or Rear Arc when rolling their Charge Range in the Charge Phase. In addition, while the model’s unit is Engaged with an enemy unit’s Flank or Rear Facing, the model’s Close Combat Attacks gain +1 to hit and +1 Armour Penetration.</description>
-                </rule>
-              </rules>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="9567-102b-51c1-29ea" name="Command Group" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="afaa-d453-b6e3-6e28" name="Champion" hidden="false" collective="false" import="true" targetId="c3e7-8c28-0d42-6aa8" type="selectionEntry"/>
+            <entryLink id="4b4a-d169-3305-5681" name="Musician" hidden="false" collective="false" import="true" targetId="10fe-ce12-d662-ae02" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f0db-0270-26dd-6a38" name="Mountain Wolf Cavalry" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="8f32-cf99-864d-67fc" value="4.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="8f32-cf99-864d-67fc" value="1.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8f32-cf99-864d-67fc" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="c117-2ccd-25d0-879b" name="Feigned Flight" hidden="false" targetId="06e4-3c2b-0e6d-e48f" type="rule"/>
-        <infoLink id="446b-b4b5-de15-7d0f" name="Light Troops" hidden="false" targetId="8b75-3cd5-bd70-6210" type="rule"/>
-        <infoLink id="ac1a-060c-c323-f08f" name="Vanguard" hidden="false" targetId="e4e4-ef11-f62f-59b6" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (6&quot;)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="7d4c-e1b3-8a9a-d1aa" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-        <infoLink id="104f-02ff-9590-8f18" name="Iron Rain" hidden="false" targetId="0417-c3ca-b91d-d194" type="rule"/>
-        <infoLink id="6d6e-c101-c1cf-279f" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="002a-dde9-f866-25d2" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-        <infoLink id="47a7-8b86-26b9-6228" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="0460-600c-eea7-d93c" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1067,7 +809,7 @@ Units fully composed of models with Disciples gain Swiftstride for the Charge Ra
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="12.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1093,30 +835,13 @@ Units fully composed of models with Disciples gain Swiftstride for the Charge Ra
         <entryLink id="2e8b-7c3b-9b03-c633" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0032-a707-b49a-3bd6" name="Hob Cataphracts" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="e0b8-eebc-26d2-fd6d" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="e0b8-eebc-26d2-fd6d" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e0b8-eebc-26d2-fd6d" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="98f1-4658-27e4-3457" name="Stomp Attacks" hidden="false" targetId="4810-6726-807b-e78e" type="rule"/>
-        <infoLink id="8ce9-d5df-5124-6f6f" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="c29f-208e-4025-dc25" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="9414-54b3-1c73-53d7" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1126,54 +851,8 @@ Units fully composed of models with Disciples gain Swiftstride for the Charge Ra
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6953-e5f6-4c95-ed4d" type="min"/>
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b3a-e7a9-6ba0-a4fe" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="4e06-336c-d5e5-8933" name="Hob Cataphract Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="1c2a-7a45-a3db-a1c6" name="Hob Cataphract Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-              </characteristics>
-            </profile>
-            <profile id="3502-df55-9e05-2cb4" name="Hob Cataphract Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour, Shield</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="9363-f1d1-4725-da81" name="Veteran" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Iron Rain, Bow (4+), Weapon Master, Bow (4+), Lance, Paired Weapons</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="317c-d2e5-5f40-d51a" name="Bear-Dog" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Stomp Attacks (1)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="22.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="21.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1194,92 +873,18 @@ Units fully composed of models with Disciples gain Swiftstride for the Charge Ra
             <entryLink id="b38c-351f-a271-0e23" name="Hob Banners" hidden="false" collective="false" import="true" targetId="c4f1-0098-6bd9-30f4" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="5256-4d11-6ed1-a656" name="Occupation" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b45-129a-e16b-b0b8" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f159-2a70-78b2-4186" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="453d-30fa-0666-1785" name="Eternals" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b1b-6bdf-c74b-5570" type="max"/>
-              </constraints>
-              <rules>
-                <rule id="cc8c-4e8e-60ce-ab4c" name="Eternals" hidden="false">
-                  <description>Universal Rule.
-The model gains Great Weapon, Infernal Armour, and Hatred (against Beast, Cavalry).</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="5224-7431-56bc-e071" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-                <infoLink id="1aa9-b195-5691-5084" name="Infernal Armour" hidden="false" targetId="3c9e-ab86-99bb-7595" type="profile"/>
-                <infoLink id="b41b-3d5c-c080-a8fa" name="Hatred" hidden="false" targetId="13c5-ce89-60ad-c572" type="rule">
-                  <modifiers>
-                    <modifier type="append" field="name" value=" (Beast, Cavalry)"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry id="1b29-2314-bc26-a379" name="Cataphractii" hidden="false" collective="false" import="true" type="upgrade">
-              <rules>
-                <rule id="8fce-27a8-bea8-0a13" name="Cataphractii" hidden="false">
-                  <description>Universal Rule.
-The model gains Lance, Paired Weapons, Heavy Armour, Shield, and Weapon Master.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="3e42-d6d1-5783-a907" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-                <infoLink id="fe2f-202d-5f45-a74d" name="Weapon Master" hidden="false" targetId="a9a1-31b4-37a3-4138" type="rule"/>
-                <infoLink id="be5c-4223-c407-87bd" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-                <infoLink id="04f6-ebd1-6128-8573" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
-                <infoLink id="d19a-a4b3-91b3-dba7" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="40b4-00bc-1794-66df" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4ccf-ce4b-dc86-9772" name="Tusker Mahouts" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="c0e1-a278-d612-56cf" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="c0e1-a278-d612-56cf" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c0e1-a278-d612-56cf" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="2619-38bb-0fc4-8688" name="Impact Hits" hidden="false" targetId="197f-58cf-73ad-ac42" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value=" (D3)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="6ae8-a61a-581f-a78b" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-        <infoLink id="012f-0f7c-2d5a-fa44" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="ed14-c7f4-39aa-71ea" name="Fear" hidden="false" targetId="ed2a-e8b3-cc1a-cce0" type="rule"/>
-        <infoLink id="3366-213d-6747-d36f" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
-        <infoLink id="afca-56ff-6fd8-78d1" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="bcaa-f7d1-b343-e73c" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
@@ -1289,54 +894,8 @@ The model gains Lance, Paired Weapons, Heavy Armour, Shield, and Weapon Master.<
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f17e-f05b-287d-8c16" type="min"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17ff-f27f-ad51-21c1" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="6544-0fe0-ee05-0fab" name="Tusker Mahout Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">50×100</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="e121-ecf4-0780-f6c2" name="Tusker Mahout Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">8&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-              </characteristics>
-            </profile>
-            <profile id="445a-dac6-a492-7df1" name="Tusker Mahout Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">3</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">5</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Heavy Armour</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="f1a8-1f92-5d45-ae0c" name="Hobgoblin Mahout (3)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">4</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Halberd</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="5ca5-5938-d613-c429" name="Plains Tusker" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Impact Hits (D3)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="110.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="105.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1366,85 +925,20 @@ The model gains Lance, Paired Weapons, Heavy Armour, Shield, and Weapon Master.<
       </costs>
     </selectionEntry>
     <selectionEntry id="e263-6bec-d58f-aa46" name="Eternals" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="2225-a4a6-d3a1-5d12" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="2225-a4a6-d3a1-5d12" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2225-a4a6-d3a1-5d12" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="6467-fff3-3552-565e" name="Stomp Attacks" hidden="false" targetId="4810-6726-807b-e78e" type="rule"/>
-        <infoLink id="514f-f21b-e11f-c1c5" name="Infernal Armour" hidden="false" targetId="3c9e-ab86-99bb-7595" type="profile"/>
-        <infoLink id="44e2-cf10-e86c-56e6" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="30f6-9700-c0e1-2368" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-        <infoLink id="7684-e019-6bf2-cddf" name="Hobgoblin Scimitar" hidden="false" targetId="1e57-4ed3-15ac-a10b" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="c91b-e653-18f2-0dfc" name="Special" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="fff0-ff35-1935-7214" name="Eternal" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68df-de35-525c-58b6" type="min"/>
-            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e9e-a630-2f68-1fa6" type="max"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68df-de35-525c-58b6" type="min"/>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e9e-a630-2f68-1fa6" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="4d26-502c-ffde-1d94" name="Eternal Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Standard</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">25×50</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="5964-8735-bb60-ca73" name="Eternal Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">7&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">14&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">8</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-              </characteristics>
-            </profile>
-            <profile id="54ef-7eff-e1b5-18c4" name="Eternal Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">1</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">4</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">3</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">2</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="cece-372a-31f0-199b" name="Hunter" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">5</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Hobgoblin Scimitar</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="00ae-fa1f-e114-92e1" name="Bear-Dog" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed, Stomp Attacks (1)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="28.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="24.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1470,7 +964,7 @@ The model gains Lance, Paired Weapons, Heavy Armour, Shield, and Weapon Master.<
         <entryLink id="32f0-d81e-e2e7-0ea9" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="21.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="11ce-ce96-3069-06be" name="Tyrannical Disciples" hidden="false" collective="false" import="true" type="unit">
@@ -1575,127 +1069,21 @@ The model gains Fearless and Frenzy while Engaged in Combat. In addition, units 
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-25.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3600-a5b8-2305-3943" name="Drum Gogyag" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="e666-24ba-e04b-c232" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="e666-24ba-e04b-c232" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="3600-a5b8-2305-3943" name="Regimental Gogyag" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e666-24ba-e04b-c232" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="be41-49da-26cb-7722" name="Drum Gogyag Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">60×100</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6c0d-d0c9-cf5b-4dfa" name="Drum Gogyag Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-        <profile id="e027-b9cb-a13c-d090" name="Drum Gogyag Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-          </characteristics>
-        </profile>
-        <profile id="e2e0-f473-1033-d271" name="Gogyag" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="f188-520c-cec7-e4bf" name="Drummer (4)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Halberd</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="6b90-009f-78a4-873d" name="Giant Drum" hidden="false">
-          <description>Universal Rule.
-The model must be deployed in, and can only join Blasted Plains Emissaries, Hob Levies, or Tyrannical Disciples units. The model can never voluntarily leave its unit. In addition, the range of the model’s March to the Beat, and to enemy units that are required to take a March Test due to the Drum Gogyag’s unit, are both extended to 12′′.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="e277-1ca2-be36-3f19" name="Not a Leader" hidden="false" targetId="f611-6165-ada9-0d7d" type="rule"/>
-        <infoLink id="21cc-282b-a9cb-876c" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
-        <infoLink id="d1ed-eee3-894c-aeaa" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
-        <infoLink id="e708-6c99-6451-ad74" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-      </infoLinks>
       <categoryLinks>
-        <categoryLink id="d267-3924-71c0-eb44" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
+        <categoryLink id="d093-186c-2291-86df" name="New CategoryLink" hidden="false" targetId="4bcd-01c8-ce5e-7108" primary="true"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink id="4a59-273a-f443-dfba" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="8f82-6955-3d8a-01ea" type="selectionEntry">
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="200.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="575d-718e-a8bf-ac41" name="Sky Mountain Emissaries" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="14d6-7396-6a0a-0208" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="14d6-7396-6a0a-0208" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="14d6-7396-6a0a-0208" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="6d95-f9a1-0a2c-0abd" name="Saddle Cannon (4+)" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-          <characteristics>
-            <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">24&quot;</characteristic>
-            <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">D6</characteristic>
-            <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
-            <characteristic name="AP" typeId="857a-4ce1-d134-8701">2</characteristic>
-            <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Quick to Fire</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="3ce6-781a-cda6-de40" name="Infernal Armour" hidden="false" targetId="3c9e-ab86-99bb-7595" type="profile"/>
-        <infoLink id="1723-46b8-408a-550b" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-        <infoLink id="10ce-01ee-afee-6323" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="ec56-4432-119a-fca3" name="Quick to Fire" hidden="false" targetId="5a08-d3bf-06f9-3034" type="rule"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="cd50-edf8-d3df-bf7d" name="New CategoryLink" hidden="false" targetId="f410-d87f-bb92-f6cb" primary="true"/>
       </categoryLinks>
@@ -1705,52 +1093,6 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78ac-c190-31f0-448f" type="min"/>
             <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6805-bee2-5437-0fae" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="6382-d373-7eda-0471" name="Sky Mountain Emissary Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-              <characteristics>
-                <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Large</characteristic>
-                <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Cavalry</characteristic>
-                <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">40×60</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="abe4-2472-0025-354a" name="Sky Mountain Emissary Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-              <characteristics>
-                <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
-                <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">12&quot;</characteristic>
-                <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">7</characteristic>
-                <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-              </characteristics>
-            </profile>
-            <profile id="dd02-e281-3d87-05fe" name="Sky Mountain Emissary Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-              <characteristics>
-                <characteristic name="HP" typeId="f381-7850-7fa8-3440">2</characteristic>
-                <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-                <characteristic name="Res" typeId="ec15-bc66-645e-db5d">4</characteristic>
-                <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">1</characteristic>
-                <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14">Infernal Armour</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="2ca1-c150-9514-d8a6" name="Emissary" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Saddle Cannon (4+)</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="edc1-b463-04b7-0ad7" name="Colossal Camel" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-              <characteristics>
-                <characteristic name="Att" typeId="8265-800f-bc87-d00a">2</characteristic>
-                <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-                <characteristic name="Str" typeId="4d4a-2100-804f-99e5">4</characteristic>
-                <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">1</characteristic>
-                <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-                <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="75.0"/>
           </costs>
@@ -1778,16 +1120,10 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
         <entryLink id="6e02-9483-fde2-c5d1" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="7.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="25e0-5381-5e17-7673" name="Blasted Plains Emissaries" hidden="false" collective="false" import="true" type="unit">
-      <infoLinks>
-        <infoLink id="3272-195e-00c8-cf3f" name="Infernal Armour" hidden="false" targetId="3c9e-ab86-99bb-7595" type="profile"/>
-        <infoLink id="62fe-d8ef-2333-d14a" name="Iron Rain" hidden="false" targetId="0417-c3ca-b91d-d194" type="rule"/>
-        <infoLink id="e11e-438b-c541-0b77" name="Scoring" hidden="false" targetId="188e-05fb-8a95-60c8" type="rule"/>
-        <infoLink id="f24f-ca12-6436-ff35" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="60f2-89a7-86a4-427b" name="New CategoryLink" hidden="false" targetId="f410-d87f-bb92-f6cb" primary="true"/>
       </categoryLinks>
@@ -1861,14 +1197,9 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5bc-1ee2-ab24-407c" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="0db2-db74-09d4-914c" name="Bow" hidden="false" collective="false" import="true" targetId="e2c0-2230-5a1a-1f08" type="selectionEntry">
-              <modifiers>
-                <modifier type="append" field="name" value=" (3+)"/>
-              </modifiers>
-            </entryLink>
             <entryLink id="686a-099b-9b80-a31b" name="Flintlock Axe" hidden="false" collective="false" import="true" targetId="3ae9-cf89-91e3-b982" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="1.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1878,7 +1209,7 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
             </entryLink>
             <entryLink id="3eb3-b7cd-8bf7-7f21" name="Blunderbuss" hidden="false" collective="false" import="true" targetId="9cdb-d7a9-8c32-d058" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="4.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1893,7 +1224,94 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
         <entryLink id="e6cd-b4c3-765c-5bd9" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="-50.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ad8b-9637-c161-deb9" name="Hob Savaran" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="0f96-f235-8e8b-8baa" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4545-45b6-4e5b-4093" name="Melee Weapons" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="4ce7-f42b-af53-33e7" name="Great Weapon" hidden="false" collective="false" import="true" targetId="2837-ec0d-956f-690a" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="f813-0f27-e339-1982" name="Lance" hidden="false" collective="false" import="true" targetId="b10f-350c-0581-f9c2" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="164d-05b7-33aa-3e0b" name="Paired Weapons" hidden="false" collective="false" import="true" targetId="6a41-63a5-c5f6-66f6" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="3af7-1c63-e11d-0b98" name="Flintlock Axe" hidden="false" collective="false" import="true" targetId="3ae9-cf89-91e3-b982" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value="(3+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8d17-0205-6991-28b1" name="Shooting Weapons" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f35f-5474-ed21-f4db" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="6dbc-9b19-56b8-8f7b" name="Blunderbuss" hidden="false" collective="false" import="true" targetId="9cdb-d7a9-8c32-d058" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value="(5+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="7845-ef62-4034-b333" name="Bow" hidden="false" collective="false" import="true" targetId="e2c0-2230-5a1a-1f08" type="selectionEntry">
+              <modifiers>
+                <modifier type="append" field="name" value="(2+)"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9da9-7bd0-a9d9-f377" name="Mount" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a175-1c74-9ee2-97df" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="e121-a70d-bb5a-c320" name="Mountain Wolf" hidden="false" collective="false" import="true" targetId="3e5a-c836-5772-d919" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="35e3-d039-532f-76eb" name="Bear-Dog" hidden="false" collective="false" import="true" targetId="ffec-b093-85e8-3bb5" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="051e-d635-375b-9c17" name="Colossal Camel" hidden="false" collective="false" import="true" targetId="a078-f140-2b56-355d" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="9209-531b-e4e2-9460" name="Plains Tusker" hidden="false" collective="false" import="true" targetId="712e-fee8-d581-637e" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="120.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -1949,9 +1367,6 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7ec-4015-6d9e-ee64" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="4acf-009e-09fc-4da4" name="Infernal Armour" hidden="false" targetId="3c9e-ab86-99bb-7595" type="profile"/>
-      </infoLinks>
       <entryLinks>
         <entryLink id="7d05-eed0-d65a-3a92" name="Plate Armour" hidden="false" collective="false" import="true" targetId="f49b-1010-24f1-f23b" type="selectionEntry">
           <constraints>
@@ -1967,9 +1382,6 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1549-5762-bc42-b99c" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="e50d-e668-525d-4efb" name="Blunderbuss" hidden="false" targetId="7afe-6f22-2b97-27ac" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1978,9 +1390,6 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0bd1-9bac-8b90-3f03" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="6eaa-42ff-effb-9638" name="Flintlock Axe" hidden="false" targetId="1338-63b0-76a0-355b" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -2094,150 +1503,46 @@ The model must be deployed in, and can only join Blasted Plains Emissaries, Hob 
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b4f2-ab00-5027-702a" name="Elemental Plate" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="d42a-242d-70ba-6804" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dec-0850-33f2-ece2" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d42a-242d-70ba-6804" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="a062-1540-dc1b-8911" name="Elemental Plate" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Suit of Armour</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Aegis (4+, against Close Combat Attacks). This Aegis Save cannot be used against Close Combat Attacks made with a Hand Weapon. In addition, the wearer gains Aegis (4+, against Flaming Attacks).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="90ba-c214-1c90-b80e" name="Death&apos;s Head Aura" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="6e36-0c67-5dea-4306" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5162-4489-6557-8489" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e36-0c67-5dea-4306" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="34d4-592a-7ffa-f85e" name="Death&apos;s Head Aura" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Enchantment: Suit of Armour</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">If on foot, the wearer gains +2 Armour. If mounted, the wearer gains +1 Armour instead. In addition, the wearer gains Aegis (3+, against Special Attacks).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="7ec0-79e4-4628-e465" name="Green Tide" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="60a8-f76a-bd93-914c" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="60a8-f76a-bd93-914c" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="7ec0-79e4-4628-e465" name="Baited Banner" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1790-84e6-5f77-a01e" type="max"/>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60a8-f76a-bd93-914c" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60a8-f76a-bd93-914c" type="max"/>
       </constraints>
-      <rules>
-        <rule id="da2c-aa5b-608c-02a8" name="Green Tide" hidden="false">
-          <description>The bearer’s unit gains Fight in Extra Rank.</description>
-        </rule>
-      </rules>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="649b-7c7b-c076-2666" name="Predator Pennant" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="34d9-c1a8-c462-b34b" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef8a-e66b-4de2-a598" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="34d9-c1a8-c462-b34b" type="max"/>
       </constraints>
-      <rules>
-        <rule id="6cc4-f410-a80b-4b7d" name="Predator Pennant" hidden="false">
-          <description>The bearer’s unit gains Devastating Charge (Distracting).</description>
-        </rule>
-      </rules>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3225-74cd-d680-cd4d" name="Zartosht’s Chains" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="0de0-ed2b-f4f9-7d42" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df5b-3605-6253-14bd" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0de0-ed2b-f4f9-7d42" type="max"/>
       </constraints>
-      <rules>
-        <rule id="383a-790f-4fe8-4a60" name="Zartosht’s Chains" hidden="false">
-          <description>Enemy units in base contact with the bearer’s model suffer −2 Defensive Skill. The roll for Flee Distance of units in base contact with the bearer’s model is subject to Minimised Roll.</description>
-        </rule>
-      </rules>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="20e6-3fbb-7655-a10f" name="Breath of the Brass Bull" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="c984-db58-ca35-7964" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff18-98d5-b31d-30a3" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c984-db58-ca35-7964" type="max"/>
       </constraints>
-      <rules>
-        <rule id="cca7-1b63-5db3-af32" name="Breath of the Brass Bull" hidden="false">
-          <description>The bearer’s model gains +1 Health Point and the bearer gains Breath Attack (Toxic Attacks).</description>
-        </rule>
-      </rules>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c962-8813-c7ae-9bf6" name="Hobgoblin Scimitar" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8a5-2257-db2e-ef3f" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="a0da-4abf-2e68-ab0e" name="Hobgoblin Scimitar" hidden="false" targetId="1e57-4ed3-15ac-a10b" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -2498,72 +1803,28 @@ The model part may reroll the roll for the number of Impact Hits.</description>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6ebb-70f5-27ee-a333" name="Drum Gogyag" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="6ebb-70f5-27ee-a333" name="Royal Gogyag" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1f1-2948-52f5-f7dd" type="max"/>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1384-e99a-b292-a8c4" type="max"/>
+        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1384-e99a-b292-a8c4" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="5c33-9cdd-6678-9d5c" name="Drum Gogyag Size" hidden="false" typeId="7733-ad26-4b46-6a5a" typeName="0 Size">
-          <characteristics>
-            <characteristic name="Height" typeId="0d1d-aeaf-8f31-fd17">Gigantic</characteristic>
-            <characteristic name="Type" typeId="1176-4910-e04b-f1c5">Beast</characteristic>
-            <characteristic name="Base" typeId="7bbb-3d47-ed57-284d">60×100</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3dbf-2fbc-fd6a-2a62" name="Drum Gogyag Global" hidden="false" typeId="8292-1fb8-8251-29a9" typeName="1 Global">
-          <characteristics>
-            <characteristic name="Adv" typeId="b0d9-2dab-f10b-9b13">6&quot;</characteristic>
-            <characteristic name="Mar" typeId="db10-a838-f72f-3ed6">10&quot;</characteristic>
-            <characteristic name="Dis" typeId="be28-67a6-2280-9eaf">C</characteristic>
-            <characteristic name="Rules" typeId="8f96-9d74-2aaa-da9d"/>
-          </characteristics>
-        </profile>
-        <profile id="0698-737d-fc0c-36cb" name="Drum Gogyag Defensive" hidden="false" typeId="e7d3-5099-e669-c365" typeName="2 Defensive">
-          <characteristics>
-            <characteristic name="HP" typeId="f381-7850-7fa8-3440">5</characteristic>
-            <characteristic name="Def" typeId="160d-4624-273f-2114">3</characteristic>
-            <characteristic name="Res" typeId="ec15-bc66-645e-db5d">6</characteristic>
-            <characteristic name="Arm" typeId="597b-8735-3dd1-0e70">3</characteristic>
-            <characteristic name="Rules" typeId="91c5-9d30-bda7-cf14"/>
-          </characteristics>
-        </profile>
-        <profile id="76c3-4ac5-5b2d-1697" name="Drum Gogyag" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">4</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">5</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">2</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">2</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Harnessed</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="dd3d-b44f-e0cb-07d3" name="Drummer (4)" hidden="false" typeId="154c-6605-1486-e1da" typeName="3 Offensive">
-          <characteristics>
-            <characteristic name="Att" typeId="8265-800f-bc87-d00a">1</characteristic>
-            <characteristic name="Off" typeId="7d3b-bb95-3d29-26f7">3</characteristic>
-            <characteristic name="Str" typeId="4d4a-2100-804f-99e5">3</characteristic>
-            <characteristic name="AP" typeId="7a8c-adb0-d1b8-a1b6">0</characteristic>
-            <characteristic name="Agi" typeId="2a23-367f-8828-c297">3</characteristic>
-            <characteristic name="Rules" typeId="44e9-6a3e-7471-8b36">Halberd</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="e842-3ef3-a063-3476" name="Musician" hidden="false"/>
-        <rule id="3eba-2e56-e93c-ea98" name="Giant Drum" hidden="false">
-          <description>Universal Rule.
-The model must be deployed in, and can only join Blasted Plains Emissaries or Hob Levies units. The model can never voluntarily leave its unit. In addition, the range of the model’s March to the Beat, and to enemy units that are required to take a March Test due to the Drum Gogyag’s unit, are both extended to 18′′.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="f445-0a85-f6fe-3768" name="Harnessed" hidden="false" targetId="3d09-e862-b7b5-fc26" type="rule"/>
-        <infoLink id="37c6-6a53-406b-f0e2" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
-        <infoLink id="dff6-3fad-b98c-cb88" name="War Platform" hidden="false" targetId="ccef-5d47-fa0a-8bdf" type="rule"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="ce2f-7f45-a932-41bc" name="Rocket Arrows" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f440-5233-1f73-4ef0" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0fb0-5748-659b-fbce" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a078-f140-2b56-355d" name="Colossal Camel" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb57-cdc8-855b-a0a8" type="max"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -2590,15 +1851,7 @@ The model must be deployed in, and can only join Blasted Plains Emissaries or Ho
       </constraints>
       <entryLinks>
         <entryLink id="521e-6b86-c51d-4fc8" name="Wicked Serrations" hidden="false" collective="false" import="true" targetId="5e28-33af-2c73-bd24" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="d705-7505-7d2b-9637" name="Hob Armours" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49ca-8ea7-5057-461c" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="acf9-9540-1fd6-a04e" name="Elemental Plate" hidden="false" collective="false" import="true" targetId="b4f2-ab00-5027-702a" type="selectionEntry"/>
-        <entryLink id="a205-2cea-1449-c9bb" name="Death&apos;s Head Aura" hidden="false" collective="false" import="true" targetId="90ba-c214-1c90-b80e" type="selectionEntry"/>
+        <entryLink id="7b23-f459-3be8-13ac" name="Rocket Arrows" hidden="false" collective="false" import="true" targetId="ce2f-7f45-a932-41bc" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="f21c-8712-d3c5-c100" name="Hob Banners (BSB)" hidden="false" collective="false" import="true">
@@ -2615,60 +1868,9 @@ The model must be deployed in, and can only join Blasted Plains Emissaries or Ho
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f8d-7e5c-d188-fb7c" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="0b7e-1c73-699b-5e66" name="Green Tide" hidden="false" collective="false" import="true" targetId="7ec0-79e4-4628-e465" type="selectionEntry"/>
+        <entryLink id="0b7e-1c73-699b-5e66" name="Baited Banner" hidden="false" collective="false" import="true" targetId="7ec0-79e4-4628-e465" type="selectionEntry"/>
         <entryLink id="26c6-3bd2-06ca-12f8" name="Predator Pennant" hidden="false" collective="false" import="true" targetId="649b-7c7b-c076-2666" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <sharedRules>
-    <rule id="0a0c-109f-85c3-15f8" name="Warrior Vassals" hidden="false">
-      <description>The total Combat Score bonus gained by each player from Duels (from lost Health Points on enemy units and Overkill), is reduced by 1, to a minimum of 0.</description>
-    </rule>
-    <rule id="0417-c3ca-b91d-d194" name="Iron Rain" hidden="false">
-      <description>Shooting
-Shooting Attacks made by the model while Located in the target’s Flank or Rear Arc gain +1 to hit and +1 Armour Penetration.</description>
-    </rule>
-  </sharedRules>
-  <sharedProfiles>
-    <profile id="3c9e-ab86-99bb-7595" name="Infernal Armour" hidden="false" typeId="658e-7f7b-4e4f-162a" typeName="4 Armour">
-      <characteristics>
-        <characteristic name="Type" typeId="017b-143b-0520-bdc1">Plate Armour</characteristic>
-        <characteristic name="Save" typeId="4ca3-2498-f356-f056">4+</characteristic>
-        <characteristic name="Rules" typeId="f269-16dd-a614-0f90">Follows the rules for Plate Armour (can be enchanted as if it was Plate Armour). The wearer gains Aegis (5+, against Flaming Attacks).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1e57-4ed3-15ac-a10b" name="Hobgoblin Scimitar" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
-      <characteristics>
-        <characteristic name="Str" typeId="7d4e-b182-dd11-52a0"/>
-        <characteristic name="AP" typeId="646b-1e72-1589-5083">+1</characteristic>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">Two-Handed, attacks made with this weapon that are allocated towards models that are Large and Beast, Large and Cavalry, or Gigantic gain +2 Strength.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1338-63b0-76a0-355b" name="Flintlock Axe" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">18&quot;</characteristic>
-        <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-        <characteristic name="Str" typeId="f166-13ff-9227-4525">4</characteristic>
-        <characteristic name="AP" typeId="857a-4ce1-d134-8701">2</characteristic>
-        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Counts as a Close Combat Weapon with Two-Handed in close combat. Close Combat Attacks made with it gain +1 Strength. Can be enchanted like a Close Combat Weapon, but only Close Combat Attacks
-are affected by the Weapon Enchantment unless specifically stated otherwise. The model may shoot from the third rank (in addition to the first and second).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="06dd-1877-81f7-f93d" name="Flintlock Axe Melee" hidden="false" typeId="a32f-208a-be3d-ad8d" typeName="5 Melee Weapon">
-      <characteristics>
-        <characteristic name="Str" typeId="7d4e-b182-dd11-52a0">+1</characteristic>
-        <characteristic name="AP" typeId="646b-1e72-1589-5083">0</characteristic>
-        <characteristic name="Attributes" typeId="048a-df92-bb5b-6de9">In c lose combat, this weapon is used as a Close Combat Weapon with the Two-Handed Attack Attribute.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7afe-6f22-2b97-27ac" name="Blunderbuss" hidden="false" typeId="a00c-d586-ee68-ed21" typeName="6 Ranged Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="c2a8-bc01-360c-6aca">12&quot; </characteristic>
-        <characteristic name="Shots" typeId="6867-dcc2-7874-e3b4">1</characteristic>
-        <characteristic name="Str" typeId="f166-13ff-9227-4525">5</characteristic>
-        <characteristic name="AP" typeId="857a-4ce1-d134-8701">3</characteristic>
-        <characteristic name="Attributes" typeId="d988-3828-5f00-7582">Accurate, March and Shoot, Quick to Fire. Does not suffer the negative to-hit modifier from a Stand and Shoot Charge Reaction.</characteristic>
-      </characteristics>
-    </profile>
-  </sharedProfiles>
 </catalogue>
