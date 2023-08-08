@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4bd5-208b-0fd4-2a58" name="Orcs and Goblins 2023.2 Alpha 2" revision="8" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4bd5-208b-0fd4-2a58" name="Orcs and Goblins 2023.2 Alpha 3" revision="9" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d031-bca7-588c-8214" name="Brood Rivalry" hidden="false">
       <constraints>
@@ -61,15 +61,8 @@
   </forceEntries>
   <selectionEntries>
     <selectionEntry id="33f4-d837-6f45-2562" name="Orc Warlord" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="dc5d-04ef-8237-889c" value="3.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff41-e833-bd45-bb1a" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dc5d-04ef-8237-889c" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dc5d-04ef-8237-889c" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="b472-57e3-067e-5cea" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
@@ -203,13 +196,6 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="40ea-d9c7-8fcc-4733" name="Feral Warlord" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="ce02-59ad-f52e-495a" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce02-59ad-f52e-495a" type="max"/>
               </constraints>
@@ -218,13 +204,6 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="fee2-56cc-f407-1a3e" name="Iron Warlord" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="b347-3984-e240-6d95" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b347-3984-e240-6d95" type="max"/>
               </constraints>
@@ -233,13 +212,6 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="a982-99db-4329-103d" name="Veteran Warlord" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="6919-9943-d787-e55b" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d664-b973-594c-5971" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6919-9943-d787-e55b" type="max"/>
               </constraints>
@@ -248,17 +220,14 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
-          <entryLinks>
-            <entryLink id="938e-2435-c6e3-ab34" name="Iron Orc Loner" hidden="false" collective="false" import="true" targetId="409d-20e0-d721-36d6" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="95.0"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="beac-e6cf-b16c-5260" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry"/>
+        <entryLink id="beac-e6cf-b16c-5260" name="Army General" hidden="false" collective="false" import="true" targetId="d664-b973-594c-5971" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a73-eb8a-0d9b-f569" type="min"/>
+          </constraints>
+        </entryLink>
         <entryLink id="f39e-593a-b22d-259f" name="Tribe Leader" hidden="false" collective="false" import="true" targetId="ff41-e833-bd45-bb1a" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="bb18-1b3e-cc75-d5c7" value="0.0">
@@ -268,9 +237,6 @@
             </modifier>
             <modifier type="append" field="name" value=" and Orc Horde"/>
           </modifiers>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
-          </costs>
         </entryLink>
         <entryLink id="2ddc-ecfd-b433-672b" name="Shield" hidden="false" collective="false" import="true" targetId="ff97-a295-86c8-76d5" type="selectionEntry">
           <costs>
@@ -785,7 +751,7 @@
             </modifier>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -1088,11 +1054,11 @@
       <selectionEntries>
         <selectionEntry id="506d-df3f-3292-d274" name="Goblin" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="709b-0e70-0403-d86d" type="min"/>
+            <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="709b-0e70-0403-d86d" type="min"/>
             <constraint field="selections" scope="parent" value="60.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1188-3008-b1ad-58b7" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="4.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="3.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1146,7 +1112,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b2e2-a599-3e97-5d3f" name="Goblin Reavers" hidden="false" collective="false" import="true" type="unit">
@@ -1171,7 +1137,7 @@
             <constraint field="selections" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f71c-f386-028c-edaa" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="8.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1199,7 +1165,7 @@
             </selectionEntry>
             <selectionEntry id="c94c-e813-7ae5-b65c" name="Bow (4+) and Spies" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
+                <modifier type="increment" field="24fd-8af8-0c78-001c" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -1250,7 +1216,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="96.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8e08-40ad-1f78-cc3e" name="Feral Orcs" hidden="false" collective="false" import="true" type="unit">
@@ -1404,7 +1370,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3ecf-1e2b-85e0-0865" name="Veteran Orcs" hidden="false" collective="false" import="true" type="unit">
@@ -1784,7 +1750,7 @@
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb88-6484-c28f-9f14" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="12.0"/>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="8.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4b76-1732-9577-7f30" name="Creepers" hidden="false" collective="false" import="true" type="upgrade">
@@ -2127,7 +2093,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e5e-67e2-efc9-ad5d" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="3634-0db0-f20a-4430" name="Immense Bulk" hidden="false" collective="false" import="true" type="upgrade">
@@ -2143,7 +2109,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="847e-04dd-0033-4748" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="679e-f0d7-3b7b-77f3" name="Scarred Carapace" hidden="false" collective="false" import="true" type="upgrade">
@@ -2415,7 +2381,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="638b-2dd0-e172-d00b" name="Iron Orcs (BSB)" hidden="false" collective="false" import="true" type="unit">
@@ -2475,14 +2441,14 @@
               </repeats>
             </modifier>
             <modifier type="append" field="name" value="(4+)"/>
-            <modifier type="set" field="c239-190f-e5da-b7b2" value="40.0">
+            <modifier type="set" field="c239-190f-e5da-b7b2" value="2.0">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff41-e833-bd45-bb1a" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="24fd-8af8-0c78-001c" scope="roster" value="20.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c239-190f-e5da-b7b2" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c239-190f-e5da-b7b2" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="6c12-ecee-13f4-ea86" name="Battle Standard Bearer" hidden="false" collective="false" import="true" targetId="1816-6a9c-7e82-694a" type="selectionEntry">
@@ -2662,13 +2628,105 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d0c-9a8a-dc72-60f5" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
-          </costs>
         </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="85.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="39c9-627f-4edd-6c61" name="Iron Orc Loner" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="f3db-faea-d7f9-2e7a" value="3.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff41-e833-bd45-bb1a" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f3db-faea-d7f9-2e7a" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="0dae-5ea6-4569-e8fc" name="New CategoryLink" hidden="false" targetId="953d-22cd-7ee1-36dc" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="f57e-31d7-77ea-ab49" name="Special Equipment" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4fb4-699b-2a2c-1258" type="max"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="c039-f689-9145-1084" name="Special Equipment" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="24fd-8af8-0c78-001c" scope="parent" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5568-5b37-293f-477b" type="max"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="e3ec-6cd4-4993-196e" name="Artefacts" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="52c2-4cf2-73ec-e66c" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="0178-7ce3-ed27-a3ee" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true" targetId="6e26-c5df-c19e-83d4" type="selectionEntryGroup"/>
+                    <entryLink id="5371-db56-9066-64ba" name="OnG Artefacts (Orc Warlord)" hidden="false" collective="false" import="true" targetId="77d1-ca32-3509-aee9" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="372c-a82f-76f2-a1ab" name="Weapon Enchantments" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="88fe-4df6-32f2-369b" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="ceff-990f-7af6-e0c5" name="Weapon Enchantments" hidden="false" collective="false" import="true" targetId="f853-d3c3-4165-d5ab" type="selectionEntryGroup"/>
+                    <entryLink id="bebf-b41f-c9a7-20e0" name="OnG Weapon Enchantments" hidden="false" collective="false" import="true" targetId="cc36-bcd6-e979-93aa" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="a6cb-0c46-6b01-29d5" name="Armour Enchantments" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7c63-8ff0-08a0-a916" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="5b31-4da7-141d-d5e3" name="Armour Enchantments" hidden="false" collective="false" import="true" targetId="74ad-3e59-5174-60fa" type="selectionEntryGroup"/>
+                    <entryLink id="87c2-9e69-8a37-2516" name="OnG Armour Enchantments" hidden="false" collective="false" import="true" targetId="6bd3-1fe0-d63c-6e32" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <entryLinks>
+                <entryLink id="eff5-e5e8-cf6a-0602" name="Shield Enchantments" hidden="false" collective="false" import="true" targetId="3ca8-d93a-232c-d3b5" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0cfb-c44c-b713-2657" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6b13-e535-c54d-55a7" name="Mount" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d225-88ec-122b-60b7" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="99cf-6b33-ce2d-3803" name="Mount: Grunter" hidden="false" collective="false" import="true" targetId="64ca-68b1-c27b-bd9b" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="8218-d144-b4fe-b7ac" name="Mount: Grunter Chariot" hidden="false" collective="false" import="true" targetId="93bb-18ce-ccd3-b635" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="017a-aa72-f034-2fe9" name="Mount: Wyvern" hidden="false" collective="false" import="true" targetId="eb5a-24aa-2942-1e25" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="160.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="275.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
