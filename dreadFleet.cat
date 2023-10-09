@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3bf6-370c-a54f-961d" name="Dread Fleet 2023 Alpha 1" revision="1" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3bf6-370c-a54f-961d" name="Dread Fleet 2023 Alpha 1" revision="2" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="aa64-1e8e-66fc-9abf" gameSystemRevision="55" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="3a14-99d4-8059-140f" name="Fleet Menagerie" hidden="false"/>
   </categoryEntries>
@@ -280,6 +280,9 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81f0-fc79-1ea5-bf40" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -871,6 +874,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f0c4-7861-655b-0d99" type="max"/>
             <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b38f-4c9b-0c7f-80ad" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -880,13 +886,40 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6911-f813-91b6-e865" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="fdd0-96d6-c526-daa4" name="Boarders" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="fdd0-96d6-c526-daa4" name="Boarders" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b77e-b4e4-7de0-08bc" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
+            </selectionEntry>
             <selectionEntry id="6003-e812-1e95-5391" name="Ravagers" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="10b8-d639-3fd2-4ffb" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0dcf-da6f-190b-9e4b" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8569-db5f-504b-62b6" name="Banner Enchantment" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="95bc-d8a7-ff68-eb13" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="802a-1868-f786-0d59" name="Banner Enchantments (Unit)" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="ed54-7909-6d69-7fd4" name="DF Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="8f63-b258-8e49-9545" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -1335,6 +1368,9 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed1c-d52c-fe9e-e059" type="max"/>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5a7f-7e13-25f5-cf49" type="max"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3277-fcff-d37a-9c62" name="Terrors of the Deep (copy)" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -1349,6 +1385,9 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c036-9da5-1247-91df" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d69-e97a-33c3-7a97" type="max"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -1358,6 +1397,7 @@
       </constraints>
       <entryLinks>
         <entryLink id="f5c3-aacb-8011-2e01" name="Banner of Tides" hidden="false" collective="false" import="true" targetId="2fe4-5420-25f1-0008" type="selectionEntry"/>
+        <entryLink id="d9c7-2dcd-5bb9-2ed5" name="Black Flag" hidden="false" collective="false" import="true" targetId="2ba6-a376-2b16-63e9" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="8f63-b258-8e49-9545" name="DF Banner Enchantments (Core)" hidden="false" collective="false" import="true">
@@ -1365,7 +1405,6 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8a90-78be-6eac-a4a6" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="d05b-5ec5-09d8-660d" name="Black Flag" hidden="false" collective="false" import="true" targetId="2ba6-a376-2b16-63e9" type="selectionEntry"/>
         <entryLink id="ab5f-0c0c-63f6-9c4c" name="Banner of Tides" hidden="false" collective="false" import="true" targetId="2fe4-5420-25f1-0008" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
