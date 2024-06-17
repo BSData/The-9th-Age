@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2023 Beta 2" revision="55" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="aa64-1e8e-66fc-9abf" name="The 9th Age: Fantasy Battles 2nd Edition 2024" revision="56" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/community/index.php?board-list/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -81,9 +81,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c162-a646-5acd-5058" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="2e20-006e-1fd8-cbbd" name="Light Armour" hidden="false" targetId="ceb4-e216-c1ec-56a4" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -92,9 +89,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f485-3ff7-1641-4829" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="f0df-0fb2-1055-6a25" name="Heavy Armour" hidden="false" targetId="37ab-dde5-6b99-7c67" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -103,9 +97,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faa0-e44c-e408-c61f" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="8e30-a95c-1572-f73e" name="Plate Armour" hidden="false" targetId="85fa-68ac-214d-2f4b" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -114,9 +105,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d158-aeff-6968-2615" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="0125-f6f2-650f-9c01" name="Shield" hidden="false" targetId="1da1-0128-4bf2-cf8d" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -125,9 +113,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a37-3686-46d8-6eb0" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="8a3d-bebe-849b-e426" name="Spear" hidden="false" targetId="c18a-75bb-fa2f-f7cf" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -136,9 +121,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="236a-7e57-0706-fc14" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="421f-ae08-b81b-a874" name="Paired Weapons" hidden="false" targetId="06d7-e62c-0123-95ec" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -147,9 +129,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ff1-d7f1-dfdc-8762" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="f3df-4e1e-c05f-04d5" name="Lance" hidden="false" targetId="f1a1-62ad-69ea-9d18" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -158,9 +137,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dece-abfb-1646-28f2" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="dd7d-4f2a-dab3-aa30" name="Crossbow" hidden="false" targetId="fdf6-3c15-644b-1ced" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -169,9 +145,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4382-0938-eb2f-87d2" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="765e-c4e1-998e-0a57" name="Bow" hidden="false" targetId="a564-30bf-f33f-f20d" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -180,9 +153,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c73d-37e8-2340-287d" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="fdb9-447a-b77b-fb08" name="Great Weapon" hidden="false" targetId="ce6c-6fd5-c795-da76" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -191,9 +161,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b311-493d-9678-8b90" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="4750-144d-fdb2-7f3e" name="Halberd" hidden="false" targetId="680b-8e56-dff9-240c" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -202,9 +169,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb60-f5ed-2fc9-4921" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="a538-8323-787c-6cde" name="Longbow" hidden="false" targetId="245b-baaf-f5ec-e168" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -213,9 +177,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f540-01da-46f0-6811" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="1fd0-456b-1ad2-ff1c" name="Pistol" hidden="false" targetId="12c1-3184-6230-c142" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -224,9 +185,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e829-ad61-66b7-5b70" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="6178-75fa-e100-5737" name="Throwing Weapons" hidden="false" targetId="8c83-06ff-024f-a235" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -235,900 +193,312 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7cd-87e0-ef2f-540a" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="3797-3f0b-f854-c656" name="Light Lance" hidden="false" targetId="8460-7bb5-aa92-d6ee" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3f7d-5a54-b1ca-550f" name="Binding Scroll" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="0533-e602-37d0-79cd" value="4.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="0533-e602-37d0-79cd" value="1.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f02-3f8e-7013-7cb4" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0533-e602-37d0-79cd" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="ddd8-7819-7e35-e366" name="Binding Scroll" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated after siphon the veil. When activated, pick an enemy model and select one of its spells (including Attribute and Bound Spells). The chosen model cannot cast the selected spell during this Magic Phase. Only a single Binding Scroll may be activated during the same Phase.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f996-0dd2-7d1f-17fe" name="Crown of Autocracy (not with Not A Leader)" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="10ee-597b-7691-dc42" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4163-e9f4-70b3-775a" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="10ee-597b-7691-dc42" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="3296-1a1d-fa61-756d" name="Crown of Autocracy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cannot be taken by models with Not a Leader.
-The model&apos;s range of Commanding Presence (if available) is increased by 3&quot;, up to a maximum of 18&quot;. If the model does not have Commanding Presence, it gains Commanding Presence whose range is always set to 3&quot;.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="28c9-d1c6-a0c8-d695" name="Crown of the Wizard King" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="7520-60ab-8f28-6061" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1828-5940-a898-08ac" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7520-60ab-8f28-6061" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="2982-08f1-f536-f51b" name="Crown of the Wizard King" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">During Spell Selection, randomise a magic Path (from all Paths in The 9th Age: Fantasy Battles - Paths of Magic). The bearer is a Wizard Apprentice using the randomised Path. It cannot select the Hereditary Spell.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ef67-0a29-6d5c-687c" name="°Crystal Ball" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="2893-a2ca-9621-f623" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="89dc-15b7-96ab-ea9f" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="89dc-15b7-96ab-ea9f" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2893-a2ca-9621-f623" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="3f5d-84aa-6629-c4e6" name="Crystal Ball" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The first Dispelling Attempt in each friendly Magic Phase gains a +2 Dispelling Modifier, provided the bearer is on the Battlefield.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b996-d7ae-e854-2601" name="Dragon Staff" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="bbd3-3550-c358-b9e9" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf4d-573e-5b14-f5df" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bbd3-3550-c358-b9e9" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="121b-db3e-587a-ec4c" name="Dragon Staff" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Breath Attack (Strength 3, Armour Penetration 0, Flaming Attacks).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="57fe-c8e7-f786-132c" name="Dragonfire Gem" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="8d77-0788-23ea-166c" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0cc1-fa28-1661-956f" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d77-0788-23ea-166c" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="d275-4b93-adb6-e803" name="Dragonfire Gem" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (3+, against Flaming Attacks). The bearer automatically fails all Fortitude Saves.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3d77-9d65-58c3-9e7d" name="Lightning Vambraces" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="b190-6df3-1803-f935" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0111-aed8-93df-9973" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b190-6df3-1803-f935" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="2806-17d8-e125-0f85" name="Lightning Vambraces" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast Hand of Heaven (Thaumaturgy) as a bound spell, with Power Level (4/8)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ebd9-2cee-402a-4ff4" name="Lucky Charm" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="f5c6-2684-9a12-e8c2" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d5c0-6e49-2bc3-cab3" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f5c6-2684-9a12-e8c2" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="1023-7aaa-0f49-6c33" name="Lucky Charm" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated when the bearer&apos;s model fails an Armour Save. This failed Armour Save may be rerolled.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="717c-cdd1-f368-649a" name="Obsidian Rock" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="c67b-4d65-7959-fcad" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3df8-0966-ed17-ee75" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c67b-4d65-7959-fcad" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="d78a-cd47-7008-aded" name="Obsidian Rock" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Magic Resistance (2).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="589f-da5c-20ba-5f1a" name="Potion of Strength" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="9bac-fc91-af4b-e93d" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb32-3b95-1e6c-9a05" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9bac-fc91-af4b-e93d" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="542b-248a-3536-5381" name="Potion of Strength" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Cannot be taken by models with Towering Presence. One use only. May be activated at the start of any Phase or Round of Combat. Until the end of the Player Turn the bearer gains Crush Attack.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fc3e-7023-b3ce-8579" name="Potion of Swiftness" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="1b81-fea2-1f62-ddf9" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="579c-0a47-7f43-2f98" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b81-fea2-1f62-ddf9" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="8994-59fe-6b49-825f" name="Potion of Swiftness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of any Phase or Round of Combat. Until the end of the Player Turn, the bearer gains +3 Agility.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="538d-5665-58a8-281d" name="Ranger&apos;s Boots" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="ab93-3140-445c-9de6" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ffa-67cd-68eb-1267" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab93-3140-445c-9de6" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="6a20-41d9-409c-9020" name="Ranger&apos;s Boots" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Standard size infantry models on foot only. The bearer gains Strider and, unless using Flying Movement, gains +2 Advance Rate up to a maximum of 10, and +4 March Rate up to a maximum of 20.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2078-81dc-eac0-b856" name="Rod of Battle" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="0b86-31b2-574f-645e" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4632-77ba-878a-d216" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0b86-31b2-574f-645e" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="2578-ad31-a24c-3915" name="Rod of Battle" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer can cast a Bound Spell, Power Level (4/8): Type: Augment. Range 18′′. Duration: One Turn. The target gains +1 to hit with its Close Combat Attacks.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="52aa-545b-5fc8-64fe" name="Scepter of Power" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="19eb-8b4c-d707-8268" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5967-7f82-f3fb-1325" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="19eb-8b4c-d707-8268" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="75d6-dab9-6135-972d" name="Scepter of Power" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. A Wizard with this Artefact may add a single Magic Dice from its Dice Pool to one of its casting rolls or dispel rolls, after seeing the casting or dispel froll. (Note that casting rolls cannot exceed the limit of max 5 Magic Dice.)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8cca-6eee-ecd5-1620" name="Talisman of Shielding" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="8fda-8f2c-9c0f-c4d5" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c4d9-6201-993c-7c61" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8fda-8f2c-9c0f-c4d5" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="13bb-bdd6-edab-0da3" name="Talisman of Shielding" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Aegis (5+).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bc10-9582-1642-6f0e" name="Talisman of the Void" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="f56f-401d-a2b5-14a1" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4093-7621-0d1b-0dfa" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f56f-401d-a2b5-14a1" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="dba4-fd02-72e4-9881" name="Talisman of the Void" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer gains Channel (+1)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="02ee-20af-e439-e56f" name="°Book of Arcane Mastery (not on Wizard Master)" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="d9d0-13ea-3f62-0d61" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a15-8ac5-586b-1b94" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-0a29-6d5c-687c" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="fd14-0482-e23a-ef29" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d9d0-13ea-3f62-0d61" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fd14-0482-e23a-ef29" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="25e1-86d3-6929-6ea0" name="Book of Arcane Mastery" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Unless the bearer has Protean Magic, it knows one additional Learned Spell that it selects from the Learned Spells 1, 2, 3, and 4 of its chosen Path. In addition, the bearer cannot cast the Hereditary Spell.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3db5-8d52-cfe9-fbfa" name="Essence of a Free Mind" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="f865-a3c5-c1c3-e973" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73b8-f867-8841-bdf9" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f865-a3c5-c1c3-e973" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="0816-fdf4-0942-c0f5" name="Essence of a Free Mind" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A Wizard with this Artefact may select up to two Paths on its Army List instead of one (from the ones normally available to it). Select which of the two Paths to use during Spell Selection. The bearer cannot select from the Learned Spells 5 and 6 of its chosen Path.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1a15-8ac5-586b-1b94" name="°Magical Heirloom" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="09fb-61bf-d2b2-eb15" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02ee-20af-e439-e56f" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-0a29-6d5c-687c" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="a514-8cb4-1139-9905" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="09fb-61bf-d2b2-eb15" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a514-8cb4-1139-9905" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="2816-552b-a5ad-0be7" name="Magical Heirloom" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Artefact</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A Wizard with this Artefact knows the Hereditary Spell in addition to its other spells.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8a96-40ff-7fb6-54a0" name="Aether Icon" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="3290-f93c-4203-1ed8" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="3290-f93c-4203-1ed8" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e301-4817-97c9-61ee" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3290-f93c-4203-1ed8" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="16ae-d3dc-ae73-6dd9" name="Aether Icon" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer’s unit gains Magic Resistance (1). If the unit already had Magic Resistance, it instead increases the Magic Resistance value by 1.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bd1e-b521-5357-bc0e" name="Banner of Discipline" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="0f3d-dc64-2d8e-fea1" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="0f3d-dc64-2d8e-fea1" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a2e6-5898-c18e-073d" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0f3d-dc64-2d8e-fea1" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="8b19-2cd0-d82f-8cd0" name="Banner of Discipline" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer&apos;s unit may reroll failed Panic Tests and Decimated Tests. If the Battle Standard Bearer or the General is part of the bearer’s unit, it automatically passes all its Panic Tests and Decimated Tests instead.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c253-ce04-6c42-8bf6" name="Banner of Speed" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="d519-ce01-461a-a9f0" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="d519-ce01-461a-a9f0" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b8ec-88fe-1802-034c" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d519-ce01-461a-a9f0" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="fa8a-e1b3-e78b-31f1" name="Banner of Speed" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A unit with one or more Banners of Speed gains +1 Advance Rate and +2 March Rate.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6454-0e64-e88b-0afa" name="Banner of the Relentless Company" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="18d3-e6b2-9af0-18e2" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="18d3-e6b2-9af0-18e2" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="65fc-77a6-bc7d-708b" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="18d3-e6b2-9af0-18e2" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="d633-f98b-a73c-30dd" name="Banner of the Relentless Company" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated during the owner’s Movement Phase. All Infantry models in the bearer’s unit always have March Rate 15′′ with the following restrictions:
-• Characters cannot voluntarily leave the bearer’s unit.
-• The bearer’s unit cannot perform any Shooting Attacks.
-• Only a single Banner of the Relentless Company may be activated during the same phase.
-The effects last until the end of the Player Turn.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="58a9-c83f-8819-4bfa" name="Flaming Standard" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="7194-2105-0fb1-913d" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="7194-2105-0fb1-913d" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5ac7-02ae-0ab4-ee85" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7194-2105-0fb1-913d" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="df84-d89e-d616-b9c0" name="Fire Banner" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">One use only. May be activated at the start of a Round of Combat or before shooting with the bearer’s unit. The bearer&apos;s unit gains Flaming Attacks. If activated when Engaged in Combat, effects lasts until the bearer’s unit is no longer Engaged in Combat. If activated before Shooting with the bearer’s unit, this effect lasts until end of the Phase. </characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e2f6-29ee-8b26-9f6e" name="Legion Standard" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="a5f4-90b2-83e6-606e" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="a5f4-90b2-83e6-606e" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0554-097b-043f-0296" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a5f4-90b2-83e6-606e" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="221d-73a7-1abc-a35b" name="Legion Standard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">A unit with one Legion Standard increases the maximum of its Rank Bonus by +1 (normally this means the unit can add up to 4 Full Ranks to its Combat Score). A unit with two Legion Standards increases the maximum of its Rank Bonus by +2 instead.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1339-adda-070d-906c" name="Stalker&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="1ae1-5497-4f16-c5b7" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atMost"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="1ae1-5497-4f16-c5b7" value="6.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d603-9133-33a0-7df8" type="max"/>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ae1-5497-4f16-c5b7" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="15df-81ad-6235-983b" name="Stalker&apos;s Standard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Banner</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer&apos;s unit gains Strider</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="98fe-a333-8a21-dcb0" name="Alchemist&apos;s Alloy" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="22bb-70bd-571d-6017" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe44-8d00-aa93-3344" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="22bb-70bd-571d-6017" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="63b1-1708-e7a2-6a08" name="Alchemist&apos;s Alloy" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and suffers -2 Offensive Skill.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5348-8c71-c793-57f3" name="Basalt Infusion" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="5490-f0a4-8106-e9b5" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a676-50d6-34dd-4c20" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5490-f0a4-8106-e9b5" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="f1e5-a0ac-15a9-364c" name="Basalt Infusion" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +1 Armour and Aegis (3+, against Flaming Attacks). The wearer automatically fails all Fortitude saves.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cba2-e616-5486-217b" name="Death Cheater" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="472d-0bff-19ad-b513" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="680d-7f06-0c0a-06c5" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="472d-0bff-19ad-b513" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="157a-0217-8e2b-f6be" name="Death Cheater" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Fortitude (4+) and +1 Armour.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b8a1-4182-3aba-ffd8" name="Destiny&apos;s Call" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="441f-cdc3-2641-5eb4" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d9e-0dd9-9c03-22c9" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="441f-cdc3-2641-5eb4" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="5d46-d0b1-afa4-c50b" name="Destiny&apos;s Call" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains Aegis (4+) and its Armour is set to 3 and cannot be improved beyond this. Standard Size Models only.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="47b1-c334-2935-e4f4" name="Essence of Mithril" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="567d-e1e4-0a5d-1bbc" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8a8-87ba-b529-c97d" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="567d-e1e4-0a5d-1bbc" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="aacf-0135-b153-71bd" name="Essence of Mithril" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Suit of Armour Enchantment</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +5 Armour, to a maximum of 5. Standard Sized models only.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="08dd-2bd2-1e5a-1f39" name="Ghostly Guard" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="ee96-f598-71db-f5e8" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="148f-f6ba-c045-3317" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ee96-f598-71db-f5e8" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="393e-2415-1ffa-d6d1" name="Ghostly Guard" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Heavy Armour and Plate Armour enchantment.</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wearer gains +2 Armour against non-Magical Attacks.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="97f7-20ef-fc6c-63a7" name="Dusk Forged" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="d8fb-29d0-debc-809d" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="93db-9a6d-1119-f5c5" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8fb-29d0-debc-809d" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="3907-6e2e-f2cc-915f" name="Dusk Forged" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Shield Enchantment</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer may choose to reroll its failed Armour Saves while using this Shield. If it does, it automatically fails all special saves.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="41fe-d2cc-82ef-381a" name="Willow&apos;s Ward" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="a232-f363-a538-7798" value="2.0">
-          <conditions>
-            <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="213f-7fe0-7bf6-4d56" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a232-f363-a538-7798" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="1a51-a0e3-e43a-7f08" name="Willow&apos;s Ward" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-          <characteristics>
-            <characteristic name="Type" typeId="d779-a728-a38c-8340">Shield Enchantment</characteristic>
-            <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The bearer cannot use Parry and gains +1 Armour. Impact Hits distributed towards the bearer suffer -2 Armour Penetration.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
@@ -1137,9 +507,6 @@ The effects last until the end of the Player Turn.</characteristic>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98e7-37b2-b6a7-13ce" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="0f9c-5f81-6d50-7462" name="Wizard Apprentice" hidden="false" targetId="0d8a-3fd8-a61d-5b74" type="rule"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1148,9 +515,6 @@ The effects last until the end of the Player Turn.</characteristic>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c80-09df-b71b-762a" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="7b4e-3543-3ebf-e443" name="Wizard Adept" hidden="false" targetId="c0a6-6da5-98d6-f051" type="rule"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1158,63 +522,6 @@ The effects last until the end of the Player Turn.</characteristic>
     <selectionEntry id="e7ab-249b-e180-109d" name="Wizard Master" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecac-fac9-9f47-edc2" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="61c4-b109-670c-b621" name="Wizard Master" hidden="false" targetId="fa5b-1bdc-8550-50c7" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="51ae-9fb7-612f-486c" name="On Foot" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92c6-25da-c52d-2a7c" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aef7-74e7-a303-c986" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="72cf-05b4-9722-db20" name="Mounted" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dea0-f560-9258-5eef" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d927-b7af-5c5b-b2ab" type="min"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="bdd9-f8c9-ecf3-a968" name="Height: Standard" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b57e-255c-21bf-8b47" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="43ec-35c1-9df7-bfca" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2a59-2c65-b97f-5915" name="Height: Large" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c7ea-c0d8-8bb5-10dd" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="539d-2d69-4173-b656" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="1479-d308-7303-9097" name="Height: Gigantic" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c35d-5cd8-6edb-e100" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4871-9ea9-1f2c-71af" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2b83-1551-c2b3-cafd" name="Height: Towering Presence" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9141-7319-cc33-a32f" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99ff-f356-e31f-67f0" type="max"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
@@ -1232,9 +539,6 @@ The effects last until the end of the Player Turn.</characteristic>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2cee-06b2-0fb3-9855" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="42e2-715e-fbf9-d5d6" name="Handgun" hidden="false" targetId="b092-dbc5-4c60-9a80" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1245,9 +549,6 @@ The effects last until the end of the Player Turn.</characteristic>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="318b-239e-60fa-42ef" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0da0-7281-e219-4475" type="min"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="4a63-9604-b76c-97f6" name="Commanding Presence" hidden="false" targetId="2304-d0e4-f97b-c4e5" type="rule"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1257,10 +558,6 @@ The effects last until the end of the Player Turn.</characteristic>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2602-ba16-b629-3cf5" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="051e-eed8-4d48-2248" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="4e1b-5abe-4201-b32a" name="Rally Around the Flag" hidden="false" targetId="bf56-e3dc-41ca-292b" type="rule"/>
-        <infoLink id="df4b-2178-ea99-76b9" name="Not a Leader" hidden="false" targetId="f611-6165-ada9-0d7d" type="rule"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1269,9 +566,6 @@ The effects last until the end of the Player Turn.</characteristic>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eab6-c8da-2be4-d5ca" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="1af4-8a70-22de-fb17" name="Hand Weapon" hidden="false" targetId="2d01-b358-db9b-3b99" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
@@ -1308,171 +602,66 @@ The effects last until the end of the Player Turn.</characteristic>
       </constraints>
       <selectionEntries>
         <selectionEntry id="311e-5a0b-83f2-9069" name="Eldritch Inscriptions" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="c5ae-726c-f925-b6b3" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9369-51e8-a408-1876" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c5ae-726c-f925-b6b3" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="c829-3241-7dd4-d4b0" name="Eldritch Inscriptions" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Failed to-wound rolls from attacks made with this weapon must be rerolled.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3eeb-4d3a-ca9b-17e5" name="King Slayer" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="6056-7200-eae6-1b0a" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f07-c141-0acb-6f38" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6056-7200-eae6-1b0a" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="42bb-c25a-0a67-996e" name="King Slayer" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder gains +X Attack Value while using this weapon, and attacks made with this weapon gain +X Strength and +X Armour Penetration, where X is equal to the number of enemy Characters in base contact with the wielder’s unit. This bonus is calculated at the Initiative Step when the attacks are made.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="51f1-66e8-4022-9d8b" name="Shield Breaker" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="bd3d-4ce1-4c98-08d4" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="44af-7e51-e210-1f4a" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bd3d-4ce1-4c98-08d4" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="9a7c-9b63-6b74-8be6" name="Shield Breaker" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this enchanted weapon gain +6 Armour Penetration, Magical Attacks ,and can never wound on to-wound rolls better than 3+.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="eedf-4585-d0c1-f613" name="Hero&apos;s Heart" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="e9c8-cacb-f16c-ea7f" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5942-d176-8677-4fd2" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e9c8-cacb-f16c-ea7f" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="3d1e-95aa-7268-83fe" name="Hero&apos;s Heart" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Hand Weapon and Paired Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder of this enchanted weapon gains +1 Attack Value when using it. Attacks made with this enchanted weapon gain Magical Attacks and always have at least Strength 5 and at least Armour Penetration 2.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="315a-5ef6-a1b7-336b" name="Touch of Greatness" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="bdfd-aea5-96d4-e00e" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eba2-9f45-2ded-d180" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bdfd-aea5-96d4-e00e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3dae-893d-ab4b-a760" name="Touch of Greatness" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">Attacks made with this weapon gain +1 Strength and +1 Armour Penetration. Strength modifiers from this weapon (combining both mundane and Weapon Enchantment modifiers) cannot exceed +2 (but can exceed +2 through modifiers from other sources, such as spells).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="dd35-7a49-6952-982e" name="Supernatural Dexterity" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="3957-a352-00de-cdb4" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="24dd-3eb3-0842-70c8" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3957-a352-00de-cdb4" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="6b28-248c-7f19-1ca9" name="Supernatural Dexterity" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">The wielder of this enchanted weapon gains +2 Offensive Skill and +2 Agility while using it, and attacks made with it gain Magical Attacks.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="81c6-6663-7fd4-18f7" name="Cleansing Light" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="7f1d-9ac8-6dfe-3129" value="2.0">
-              <conditions>
-                <condition field="limit::24fd-8af8-0c78-001c" scope="roster" value="8000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6425-23f8-e630-3237" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7f1d-9ac8-6dfe-3129" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="72e2-3e89-1f4a-9ee7" name="Cleansing Light" hidden="false" typeId="5bba-441c-01cb-6187" typeName="7 Artefact">
-              <characteristics>
-                <characteristic name="Type" typeId="d779-a728-a38c-8340">Melee Weapon Enchantment</characteristic>
-                <characteristic name="Effect" typeId="9f42-950f-d2ed-9247">At the start of each Round of Combat, the wielder may choose to have attacks made with this weapon become Divine Attacks and Flaming Attacks. The effects last until the end of the Round of Combat.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="49a2-989e-42c3-ee8b" name="Touch of Greatness" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9015-f957-ad0c-4c41" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cbb2-50ed-3eb7-f94e" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
