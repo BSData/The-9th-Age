@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="1" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="2" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -629,6 +629,16 @@
         <entryLink id="b840-e5f0-a29a-7836" name="P&amp;S: Binding Scroll" hidden="false" collective="false" import="true" targetId="3f7d-5a54-b1ca-550f" type="selectionEntry"/>
         <entryLink id="f3c6-248f-b9d5-b800" name="P&amp;S: Dragon&apos;s Brew" hidden="false" collective="false" import="true" targetId="b996-d7ae-e854-2601" type="selectionEntry"/>
         <entryLink id="9908-3b84-e711-bbc1" name="P&amp;S: Troll Tonic" hidden="false" collective="false" import="true" targetId="8931-ff15-6f7f-2b2a" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="19a0-8d2d-7f8e-5516" name="Command Group (Core)" hidden="false" collective="false" import="true">
+      <entryLinks>
+        <entryLink id="3ee8-5920-3c63-f478" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="8f82-6955-3d8a-01ea" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="5.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="9873-a922-96bb-b2e8" name="Musician" hidden="false" collective="false" import="true" targetId="10fe-ce12-d662-ae02" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
