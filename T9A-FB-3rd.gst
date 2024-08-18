@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="4" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="5" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -373,7 +373,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="10fe-ce12-d662-ae02" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="10fe-ce12-d662-ae02" name="CG: Musician" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9968-adaf-9cb5-9219" type="max"/>
       </constraints>
@@ -381,7 +381,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8f82-6955-3d8a-01ea" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="8f82-6955-3d8a-01ea" name="CG: Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e07-8da4-71e3-21bd" type="max"/>
       </constraints>
@@ -555,415 +555,565 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31b3-647d-8345-b2cc" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="7947-04af-3de1-5513" name="Spells" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="5a25-9578-eb1b-6f84" name="(1) Molten Copper" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e291-5f72-96a1-734b" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="d13e-f9d9-1ba7-2f21" name="(2) Corruption of Tin" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29ad-236d-01af-a819" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="3834-aa74-ebb2-eab4" name="(3) Living Steel" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e16d-2455-f36a-f1ff" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="bb4f-2d8a-af37-7a40" name="(4) Wall of Lead" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09b0-8bc1-b5b2-f1ae" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="0a54-7f99-0cf8-2332" name="(5) Word of Iron" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d48b-2a90-2c0d-8036" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="dfe7-4daa-67e3-debe" name="(6) Quicksilver Lash" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6306-0759-b2e2-1338" type="max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="f5fc-a15c-6c10-ff45" name="Path: Divination" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5bb-a137-2b4d-4635" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="278b-f577-4be4-d51c" name="Spells" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="7a79-19bf-188f-28a1" name="(1) Foresight" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e00-ee80-c685-8080" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="10cd-bf12-1db3-c137" name="(2) Fate&apos;s Judgment" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be60-b61d-5c17-ca33" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="8133-369d-f8d1-7ee4" name="(3) The Stars Align" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cc5-07fc-3171-d635" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="275a-9c5c-7259-c09e" name="(4) Chance of Redemption" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0777-7c46-3f3d-262f" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="3309-5d8d-250c-f3df" name="(5) Inescapable Doom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bf5-b667-b357-0588" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="419c-25c1-84e6-ffb6" name="(6) Augury of Despair" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="975f-d0b9-05bc-e4a1" type="max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="4583-991f-d493-f321" name="Path: Evocation" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35ea-7631-0f14-b688" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="69b5-01a8-be3b-156b" name="Spells" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="1c54-f540-043d-60c1" name="(1) Whispers of the Veil" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e8e-accf-8874-c041" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="d597-ae2d-0265-8013" name="(2) Touch of the Reaper" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa74-e7a4-deb1-c7e8" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="9e87-97e2-fd27-38bd" name="(3) Danse Macabre" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="151f-102c-7c79-6bc0" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="cb4f-8549-35ac-20c8" name="(4) Chorus of the Damned" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4593-2735-f598-54cf" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="bd03-a6fc-99be-b058" name="(5) Spectral Blades" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca8b-0dac-5fa4-a5f9" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="77e9-04df-9f47-0942" name="(6) Soul Blight" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1270-39ef-01b6-e9bc" type="max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3df8-f727-aa90-c4a5" name="Path: Druidism" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c34-e4e1-729d-3ac0" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="b6e0-afde-34b7-520c" name="Spells" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="d0d1-9e71-e842-0d2d" name="(1) Fountain of Youth" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29f7-1000-b4cc-6db7" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="da67-6e65-10c4-acca" name="(2) Entwining Roots" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d21-f076-9165-5f13" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="1bee-f284-7d76-ee44" name="(3) Healing Waters" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f18a-895b-9bdc-ac3c" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="588b-d11f-3b97-bd31" name="(4) Nature&apos;s Venom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a82-cf84-65c4-2d22" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="d6d1-2e52-e8b1-dac9" name="(5) Stone Skin" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddc4-74b3-295e-b713" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="1108-2d35-1f11-1e28" name="(6) Earth&apos;s Blessing" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20a3-d854-8720-ae74" type="max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="a56e-a327-8905-3194" name="Path: Cosmology" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="479f-7d50-2ebd-5518" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a0cd-2895-2205-7139" name="Spells" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="c6a4-5b0c-5de2-16d9" name="(1) Weal and Woe" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b27e-99f5-ec5e-0ab5" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="3b44-761f-89ed-f04a" name="(2) Hearts and Minds" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f29d-a0cb-cadd-2866" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="bb11-39d2-2f07-0f21" name="(3) Truth of Time" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b48-2105-305b-15a8" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="c488-ea79-9f29-4ee4" name="(4) Ice and Fire" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a4b-3e67-9a75-ba99" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="68df-20d1-670c-ed70" name="(5) Cosmic Scales" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03aa-708f-6174-5da8" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="7f3b-89d2-d638-8629" name="(6) Near and Far" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3221-5b0b-04c0-9c91" type="max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="36bf-5fb9-32bc-229a" name="Path: Shamanism" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ba3-33a8-cb3d-649f" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="4929-b582-bc39-4706" name="Spells" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="882a-db12-2a97-3317" name="(1) Predator&apos;s Instinct" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6870-78bc-0b9c-f5a6" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="1a62-f386-2df6-d701" name="(2) Awaken the Beast" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8968-fd1f-0290-a84f" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="33fa-6782-c3ab-0beb" name="(3) Swarm of Insects" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b2a-8cd4-b5d1-7f1a" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="59ce-d95c-ba2c-2dd4" name="(4) Savage Fury" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae50-dd66-e71f-742e" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="a0d6-c4b6-79c3-3c32" name="(5) Totemic Summon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc83-9678-3590-7185" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="6bc8-3470-36fc-9191" name="(6) Wild Shape" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fad-87b3-a6cc-e636" type="max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="180f-f95b-787a-93b4" name="Path: Witchcraft" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6160-8035-8c56-4b96" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ac1-5e62-4afe-cfd9" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="f032-76a3-c2b7-44bb" name="Spells" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="4176-db24-8be5-992a" name="(1) Evil Eye" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6934-c9de-03b6-49b2" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="f6d3-e63d-5ebd-a95e" name="(2) Soured Luck" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fec3-f964-aac9-1ed5" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="6595-39af-ebfd-64b6" name="(3) Illusory Paths" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fc9-f507-c811-1b67" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="23ef-daf2-ba7f-fe19" name="(4) Cauldron&apos;s Curse" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fe6-8f81-1c81-8943" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="d7c0-38e9-3ea5-5e15" name="(5) Mists of Invisibility" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f17-1405-1401-0367" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="e2f9-91bf-b0cf-dd3e" name="(6) Clouded Sight" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4ab-2d26-13be-ce88" type="max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="22cc-50e4-e8e3-97e2" name="Path: Thaumaturgy" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b88-e61a-944b-0276" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1ab-1a09-28b1-b76b" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="86e6-8e26-6e24-657e" name="Spells" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="256a-4acb-9b92-21b5" name="(1) Smite the Unbeliever" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6af-c5b9-2f6d-fdfd" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="5da6-f3ef-5e55-42f2" name="(2) Light of Faith" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6488-44d5-6393-30e4" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="1d7a-c008-dec5-b840" name="(3) Weight of Judgement" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7290-b383-9900-b8d4" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="31bb-658e-d98c-2473" name="(4) Holy Affliction" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e62b-981a-19da-eca7" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="46cd-c9ea-9fa8-fc94" name="(5) Rain of Fire" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26fb-763e-0377-9b92" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="ddaa-629c-ed16-5920" name="(6) Wrath of God" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4657-adb3-d815-2b55" type="max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="5a2d-a72f-83e2-c29a" name="Path: Pyromancy" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6822-8a23-de0e-5e97" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="d977-bb75-3bc3-df8a" name="Spells" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="1fbb-a54d-fd6d-566b" name="(1) Fireball" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0e7-1ba5-0e96-9bc8" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="21ad-02f3-5daf-8f20" name="(2) Flaming Swords" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d09f-89b1-27d3-2d7b" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="547b-e464-5bf0-ce81" name="(3) Dragon&apos;s Roar" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83bf-e0f5-8c15-972a" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="325e-d3e0-b8d2-c3e0" name="(4) Pyroclastic Flow" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03aa-e238-7fc9-d3f5" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="4a06-1be1-094f-ae4c" name="(5) Pillars of Fire" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ab2-e306-08fe-766b" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="43a9-bd58-9711-58c8" name="(6) Cage of Embers" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2a3-734b-ec49-287d" type="max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="cb6a-b12e-53b5-6499" name="Path: Occultism" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd82-7887-c21f-6acc" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="84e6-75ea-01c3-9362" name="Spells" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="7a8f-0eb0-1cde-f1a9" name="(1) The Devouring Dark" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fe2-ff3c-cb51-5a71" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="5398-d63c-e02a-5707" name="(2) Hand of Glory" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf4f-b108-d750-2978" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="77a3-2652-634f-0f3b" name="(3) Blood Curse" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6331-acfe-08c8-1712" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="4440-19d3-134a-71ec" name="(4) Pentagram of Pain" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8446-ff4e-c307-9515" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="d95a-5eec-5481-2209" name="(5) The Grave Calls" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce3b-5851-cf22-1d73" type="max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry id="13dd-9194-3e47-861b" name="(6) Umbral Majesty" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa04-8280-bd55-4546" type="max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6adb-2216-392f-d9d1" name="Spell: (Alc1) Molten Copper" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c3d-74be-87f1-312d" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0051-7b5f-a557-e891" name="Spell: (Alc2) Corruption of Tin" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bba1-dc5a-b061-3c5f" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="19a9-3070-d0e3-c614" name="Spell: (Alc3) Living Steel" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ec0-d831-fde6-715c" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2190-f52a-e387-f8c2" name="Spell: (Alc4) Wall of Lead" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="023a-ccbe-fa16-d5f5" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c334-4294-4a00-1f4b" name="Spell: (Alc5) Word of Iron" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf35-7640-e11e-f434" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2cc9-8193-f458-adfe" name="Spell: (Alc6) Quicksilver Lash" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b21-2eb6-fe82-aeac" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f15b-85b6-b957-1649" name="Spell: (Cos1) Weal and Woe" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="392e-c417-8969-ecd7" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="84d5-9d16-405d-0d8f" name="Spell: (Cos2) Hearts and Minds" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5596-2a56-f3d0-cc53" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f977-5198-f93a-719e" name="Spell: (Cos3) Truth of Time" hidden="true" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82f9-6023-ea4e-20df" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9a28-7726-57b4-fa6d" name="Spell: (Cos4) Ice and Fire" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a71-10a2-9441-9268" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="395a-498e-bec0-81ee" name="Spell: (Cos5) Cosmic Scales" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f26-d769-fe89-9593" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9070-2c35-45c0-2c20" name="Spell: (Cos6) Near and Far" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e6f-8f87-fd3b-d07d" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d7d7-14c2-c82c-22a2" name="Spell: (Div1) Foresight" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15dd-c165-3adf-3ab7" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d443-c96d-7e83-e87d" name="Spell: (Div2) Fate&apos;s Judgment" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00c0-16c9-9e2d-6cab" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f1ca-e2a2-b577-83e8" name="Spell: (Div3) The Stars Align" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eeb-b747-a95a-1fea" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a9c4-ef17-1698-dd2f" name="Spell: (Div4) Chance of Redemption" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2edf-92e3-f862-d71e" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5ca7-3088-5c05-bb0d" name="Spell: (Div5) Inescapable Doom" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="459a-ebb6-8ded-0197" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fd56-26bf-36db-b61b" name="Spell: (Div6) Augury of Despair" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26a9-e2db-30b3-b3b0" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="678a-8595-a675-5627" name="Spell: (Dru1) Fountain of Youth" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef4b-67f8-b57a-3a81" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ff50-420b-fcab-4d93" name="Spell: (Dru2) Entwining Roots" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efb8-ae11-b41e-669f" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="43cc-19be-519d-7011" name="Spell: (Dru3) Healing Waters" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5dd7-339d-d036-66de" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="53b2-573d-37d3-935d" name="Spell: (Dru4) Nature&apos;s Venom" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6506-7ef4-7042-7150" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fe21-9d0f-179f-01c3" name="Spell: (Dru5) Stone Skin" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6af-eb90-787c-4603" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dee3-3073-b71c-8797" name="Spell: (Dru6) Earth&apos;s Blessing" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27d1-47bb-60bb-cc28" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="312f-9421-1a32-6df4" name="Spell: (Evo1) Whispers of the Veil" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57c2-8da7-c6f9-a7ad" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7870-4298-147d-e65c" name="Spell: (Evo2) Touch of the Reaper" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54c2-b606-726a-aa7b" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dab6-fec5-9cff-8416" name="Spell: (Evo3) Danse Macabre" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="532c-7d9f-9545-71d6" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0cce-8107-31f2-6156" name="Spell: (Evo4) Chorus of the Damned" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="145d-fa78-fd98-5591" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fc2f-3de1-612e-77a7" name="Spell: (Evo5) Spectral Blades" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2aa0-0890-cfd9-0c21" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f725-a2e2-d7f3-840d" name="Spell: (Evo6) Soul Blight" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fad-e945-5802-0bb5" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="effd-6d84-330d-88d3" name="Spell: (Occ1) The Devouring Dark" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b39a-ebd6-786f-bddb" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9c17-af21-2696-a017" name="Spell: (Occ2) Hand of Glory" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="923c-98b2-3fca-1065" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9c15-a82c-7ae4-5b68" name="Spell: (Occ3) Blood Curse" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd5c-a46b-39bf-cb8d" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8e94-e452-ca4f-5e1b" name="Spell: (Occ4) Pentagram of Pain" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a249-e28d-2046-5a8c" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="eb2f-e83d-e1ea-3924" name="Spell: (Occ5) The Grave Calls" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91a0-8bb5-adab-6124" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c7a9-510a-2557-d0a1" name="Spell: (Occ6) Umbral Majesty" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1849-6d94-71bc-8dd5" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3581-7cb5-5c57-bc54" name="Spell: (Pyro1) Fireball" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="691d-06cd-b6be-95b1" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ba5c-b212-deb5-25c1" name="Spell: (Pyro2) Flaming Swords" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ea2-23d2-b4fa-2c13" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="81f4-460b-29a9-9fc2" name="Spell: (Pyro3) Dragon&apos;s Roar" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cc8-4d32-8e23-15b1" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4c85-6b3f-87ec-549b" name="Spell: (Pyro4) Pyroclastic Flow" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42b2-3af3-cbd6-2bb7" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c8e2-3043-9bfa-b103" name="Spell: (Pyro5) Pillars of Fire" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cd8-8bf7-66f0-40f8" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fdae-b006-4a4e-63a8" name="Spell: (Pyro6) Cage of Embers" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c01a-3385-af8f-6060" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a15b-9f3e-b78d-220d" name="Spell: (Sha1) Predator&apos;s Instinct" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f693-6a64-c7dd-c926" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c4f8-30bf-ccf2-24e2" name="Spell: (Sha2) Awaken the Beast" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f45-7437-c618-627c" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="01e6-c234-fb70-b727" name="Spell: (Sha3) Swarm of Insects" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1de-3503-fc5e-1db1" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6eff-e19a-c44f-84ba" name="Spell: (Sha4) Savage Fury" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b03f-6600-573f-e300" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fdcc-0368-e44c-8e2b" name="Spell: (Sha5) Totemic Summon" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf8a-342e-3e1c-3289" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="84c9-b052-dc77-c8e6" name="Spell: (Sha6) Wild Shape" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eac5-3646-e2c1-982d" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a7e7-090d-fa52-7c1e" name="Spell: (Tha1) Smite the Unbeliever" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2171-f307-77dd-6e47" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="04b6-3d87-eefb-5c01" name="Spell: (Tha2) Light of Faith" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c9e-a3ef-5837-3074" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="83f5-fc64-7b51-3e1c" name="Spell: (Tha3) Weight of Judgement" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="754e-7be8-c2c2-ccf9" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7670-eed6-b571-0301" name="Spell: (Tha4) Holy Affliction" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f3b-7c6e-71f1-f863" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2f67-0c04-f1ee-fa93" name="Spell: (Tha5) Rain of Fire" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb58-cf46-fef4-847c" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="22e4-ee9f-69a0-997f" name="Spell: (Tha6) Wrath of God" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d92-adbd-b3b1-20ad" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7940-ee86-0449-b1d4" name="Spell: (Wit1) Evil Eye" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b347-124f-ce49-d143" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ec77-e984-3a09-6d13" name="Spell: (Wit2) Soured Luck" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d6b-7056-4abb-03a4" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e9f1-c19b-0b9f-b60a" name="Spell: (Wit3) Illusory Paths" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e14-5bf8-691c-7682" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a649-e4ee-fded-f26c" name="Spell: (Wit4) Cauldron&apos;s Curse" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5aad-11d1-2f2f-f961" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c0a3-2346-2258-66a0" name="Spell: (Wit5) Mists of Invisibility" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca74-c2c4-928b-f576" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6631-cabd-d6a3-95aa" name="Spell: (Wit6) Clouded Sight" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c2a-7c4d-2fbe-c7e0" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="f853-d3c3-4165-d5ab" name="Weapon Enchantments" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="f853-d3c3-4165-d5ab" name="[AC] Weapon Enchantments" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2f2-85bc-ce11-c49d" type="max"/>
       </constraints>
@@ -980,7 +1130,7 @@
         <entryLink id="7e9e-ad84-4aa7-020a" name="Musician" hidden="false" collective="false" import="true" targetId="10fe-ce12-d662-ae02" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="3ca8-d93a-232c-d3b5" name="Shield Enchantments" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="3ca8-d93a-232c-d3b5" name="[AC] Shield Enchantments" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2c1-9afa-9cd4-c449" type="max"/>
       </constraints>
@@ -988,7 +1138,7 @@
         <entryLink id="a527-0e68-b768-0605" name="Shield: Wild Warding" hidden="false" collective="false" import="true" targetId="41fe-d2cc-82ef-381a" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="74ad-3e59-5174-60fa" name="Armour Enchantments" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="74ad-3e59-5174-60fa" name="[AC] Armour Enchantments" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bf2-549c-6ff1-924f" type="max"/>
       </constraints>
@@ -998,7 +1148,7 @@
         <entryLink id="7d40-4901-7b18-c4e4" name="Armour: Warding of Unity" hidden="false" collective="false" import="true" targetId="df39-7208-8901-186e" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="ab25-3916-e8af-98cb" name="Artefacts (Wizards)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="ab25-3916-e8af-98cb" name="[AC] Artefacts (Wizards)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c9f3-ddeb-b459-fd84" type="max"/>
       </constraints>
@@ -1009,7 +1159,7 @@
         <entryLink id="2107-5cce-cd9d-3511" name="Artefact: Talisman of the Void" hidden="false" collective="false" import="true" targetId="6377-f305-83f7-9417" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="6e26-c5df-c19e-83d4" name="Artefacts (non-Wizards)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="6e26-c5df-c19e-83d4" name="[AC] Artefacts (non-Wizards)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4658-33b0-7815-0832" type="max"/>
       </constraints>
@@ -1018,7 +1168,7 @@
         <entryLink id="c868-27b1-3c68-d17c" name="Artefact: Talisman of Shielding" hidden="false" collective="false" import="true" targetId="8cca-6eee-ecd5-1620" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="4eb1-cabb-a838-a005" name="Banner Enchantments" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="4eb1-cabb-a838-a005" name="[AC] Banner Enchantments" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d478-5a11-0230-7a8c" type="max"/>
       </constraints>
@@ -1029,7 +1179,7 @@
         <entryLink id="191d-b403-d8fa-21a7" name="Banner: Sheltering Standard" hidden="false" collective="false" import="true" targetId="c3cf-d3df-ce09-fca7" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="b37c-595d-f483-3f9c" name="Potions and Scrolls" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="b37c-595d-f483-3f9c" name="[AC] Potions and Scrolls" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="26ef-e21b-e058-bb8f" type="max"/>
       </constraints>
