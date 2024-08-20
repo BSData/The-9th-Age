@@ -362,7 +362,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="051e-eed8-4d48-2248" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d5a4-4049-60de-5914" name="Melee: Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
