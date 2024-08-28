@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="6" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="7" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -216,7 +216,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c253-ce04-6c42-8bf6" name="Weapon: Giant Slayer" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c253-ce04-6c42-8bf6" name="Weapon: Giant Slayer (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b8ec-88fe-1802-034c" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d519-ce01-461a-a9f0" type="max"/>
@@ -225,7 +225,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6454-0e64-e88b-0afa" name="Weapon: Hero&apos;s Heart" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="6454-0e64-e88b-0afa" name="Weapon: Hero&apos;s Heart (only on HW, PW)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="65fc-77a6-bc7d-708b" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="18d3-e6b2-9af0-18e2" type="max"/>
@@ -261,7 +261,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5348-8c71-c793-57f3" name="Armour: Basalt Infusion" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="5348-8c71-c793-57f3" name="Armour: Basalt Infusion (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a676-50d6-34dd-4c20" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5490-f0a4-8106-e9b5" type="max"/>
@@ -270,7 +270,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cba2-e616-5486-217b" name="Armour: Death Cheater" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="cba2-e616-5486-217b" name="Armour: Death Cheater (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="680d-7f06-0c0a-06c5" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="472d-0bff-19ad-b513" type="max"/>
@@ -279,7 +279,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b8a1-4182-3aba-ffd8" name="Armour: Destiny&apos;s Call" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b8a1-4182-3aba-ffd8" name="Armour: Destiny&apos;s Call (not on 5 or Construct)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d9e-0dd9-9c03-22c9" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="441f-cdc3-2641-5eb4" type="max"/>
@@ -288,7 +288,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="08dd-2bd2-1e5a-1f39" name="Armour: Ghostly Guard" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="08dd-2bd2-1e5a-1f39" name="Armour: Ghostly Guard (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="148f-f6ba-c045-3317" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ee96-f598-71db-f5e8" type="max"/>
@@ -416,7 +416,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="df39-7208-8901-186e" name="Armour: Warding of Unity" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="df39-7208-8901-186e" name="Armour: Warding of Unity (not on 4-5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="71e4-bbe5-3ac1-f919" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae24-62d0-5cc0-6404" type="max"/>
@@ -452,7 +452,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7273-9f4c-b409-f689" name="Artefact: Mask of Mindless Violence" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="7273-9f4c-b409-f689" name="Artefact: Mask of Mindless Violence (not on 4-5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0836-e09e-4fa9-6601" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a38-6ca0-b8f6-b80b" type="max"/>
@@ -470,7 +470,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8931-ff15-6f7f-2b2a" name="P&amp;S: Troll Tonic" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="8931-ff15-6f7f-2b2a" name="P&amp;S: Troll Tonic (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2a1b-1b58-3966-817f" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1229-9754-06e7-d482" type="max"/>
@@ -479,7 +479,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="47e3-2f3a-6a54-f42b" name="P&amp;S: Potion of Healing" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="47e3-2f3a-6a54-f42b" name="P&amp;S: Potion of Healing (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab68-599f-053c-6b9d" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ad4-85fe-14cb-4512" type="max"/>
@@ -488,7 +488,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b361-b115-36e5-cafe" name="P&amp;S: Elixier of Negation" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b361-b115-36e5-cafe" name="P&amp;S: Elixier of Negation (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6620-850a-4891-5fab" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="adf0-a45d-61a5-f407" type="max"/>
