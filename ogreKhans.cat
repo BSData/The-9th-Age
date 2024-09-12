@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="80c0-acf6-d2a6-815e" name="Ogre Khans" revision="4" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="8c9a-3026-84b4-cf16" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="80c0-acf6-d2a6-815e" name="Ogre Khans" revision="5" battleScribeVersion="2.03" authorName="DarkSky" library="false" gameSystemId="8c9a-3026-84b4-cf16" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="0730-0fd0-cf63-4684" name="Powder Keg" hidden="false"/>
     <categoryEntry id="2d36-b317-e68d-593e" name="Chained Beasts" hidden="false"/>
@@ -1294,9 +1294,12 @@
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1290-7db7-4bc1-5397" type="max"/>
+          </constraints>
           <entryLinks>
-            <entryLink id="2c0c-fc8b-37bc-2902" name="[EoS] Banner Enchantments (Parent)" hidden="true" collective="false" import="true" targetId="8f63-b258-8e49-9545" type="selectionEntryGroup"/>
-            <entryLink id="9878-fab3-51f3-be91" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="2c0c-fc8b-37bc-2902" name="[OK] Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="8f63-b258-8e49-9545" type="selectionEntryGroup"/>
+            <entryLink id="9878-fab3-51f3-be91" name="[AC] Banner Enchantments" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1598,72 +1601,6 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="210.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f234-dc8c-76e3-6e78" name="Knights of the Sun Griffon" hidden="false" collective="false" import="true" type="unit">
-      <constraints>
-        <constraint field="24fd-8af8-0c78-001c" scope="parent" value="600.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="668a-0dde-9b03-71f3" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="b6b7-f709-4970-36c8" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="06f0-29bb-b130-8ea0" name="Models" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf0b-79ef-221b-ffd4" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8f7-5706-4703-6747" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="65.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="4929-6c40-bf62-50a0" name="Melee Weapon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6e9-d2eb-0c7c-e2c1" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9202-fcc5-c465-3a2a" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0509-d990-53dc-b928" name="Melee: Halberd" hidden="false" collective="false" import="true" targetId="544f-9331-9cce-694d" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="0.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="9b73-45b3-90ca-e364" name="Melee: Lance" hidden="false" collective="false" import="true" targetId="b10f-350c-0581-f9c2" type="selectionEntry">
-              <modifiers>
-                <modifier type="increment" field="24fd-8af8-0c78-001c" value="10.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="8d28-598d-1341-4bf4" name="Banner Enchantment" hidden="true" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f82-6955-3d8a-01ea" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <entryLinks>
-            <entryLink id="f785-f9dc-f2b2-a534" name="[EoS] Banner Enchantments" hidden="true" collective="false" import="true" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
-            <entryLink id="182a-34d1-4f3b-bda2" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="211e-aaa2-4487-2641" name="Command Group" hidden="false" collective="false" import="true" targetId="b4c3-e840-1bd5-b746" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="15.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="8cad-ca2c-a891-c336" name="Kin Eater" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="71ac-d22f-0856-f3e5" type="max"/>
@@ -1887,9 +1824,12 @@
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7393-5792-28e3-8558" type="max"/>
+          </constraints>
           <entryLinks>
-            <entryLink id="57c2-e155-5af2-b05c" name="[EoS] Banner Enchantments (Parent)" hidden="true" collective="false" import="true" targetId="8f63-b258-8e49-9545" type="selectionEntryGroup"/>
-            <entryLink id="5583-cf00-a8d4-a440" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="57c2-e155-5af2-b05c" name="[OK] Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="8f63-b258-8e49-9545" type="selectionEntryGroup"/>
+            <entryLink id="5583-cf00-a8d4-a440" name="[AC] Banner Enchantments" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1974,9 +1914,12 @@
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5414-cab8-28be-a678" type="max"/>
+          </constraints>
           <entryLinks>
-            <entryLink id="a877-5914-184e-f735" name="[EoS] Banner Enchantments (Parent)" hidden="true" collective="false" import="true" targetId="8f63-b258-8e49-9545" type="selectionEntryGroup"/>
-            <entryLink id="312d-f5e2-6545-37c4" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="a877-5914-184e-f735" name="[OK] Banner Enchantments (Core)" hidden="false" collective="false" import="true" targetId="8f63-b258-8e49-9545" type="selectionEntryGroup"/>
+            <entryLink id="312d-f5e2-6545-37c4" name="[AC] Banner Enchantments" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2007,7 +1950,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3baa-f55e-1c16-0b3b" name="Sabretooth Tigers (Special)" hidden="false" collective="false" import="true" type="unit">
@@ -2037,7 +1980,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="60.0"/>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="79ba-72d7-9e5d-f7e2" name="Scrapling Trappers" hidden="false" collective="false" import="true" type="unit">
@@ -2161,7 +2104,7 @@
         <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="55ca-d9c4-7461-8763" type="max"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="7778-f50b-1cc6-4bef" name="New CategoryLink" hidden="false" targetId="f8f1-3d4f-12bf-73cd" primary="true"/>
+        <categoryLink id="9805-376d-8ac9-b547" name="New CategoryLink" hidden="false" targetId="0730-0fd0-cf63-4684" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="187e-a359-440c-7baa" name="Models" hidden="false" collective="false" import="true" type="model">
@@ -2183,9 +2126,12 @@
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35b2-adb8-dfa1-bdf3" type="max"/>
+          </constraints>
           <entryLinks>
-            <entryLink id="c839-e1bb-c6d0-7fb2" name="[OK] Banner Enchantments" hidden="true" collective="false" import="true" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
-            <entryLink id="317e-b32e-06ff-23b1" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="c839-e1bb-c6d0-7fb2" name="[OK] Banner Enchantments" hidden="false" collective="false" import="true" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
+            <entryLink id="317e-b32e-06ff-23b1" name="[AC] Banner Enchantments" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2396,9 +2342,12 @@
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f428-d7cb-5c43-4167" type="max"/>
+          </constraints>
           <entryLinks>
-            <entryLink id="aeb8-6702-746a-7a25" name="[OK] Banner Enchantments" hidden="true" collective="false" import="true" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
-            <entryLink id="f09d-1aa2-9a97-b849" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="aeb8-6702-746a-7a25" name="[OK] Banner Enchantments" hidden="false" collective="false" import="true" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
+            <entryLink id="f09d-1aa2-9a97-b849" name="[AC] Banner Enchantments" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2626,9 +2575,12 @@
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a27-72e0-7589-1a7a" type="max"/>
+          </constraints>
           <entryLinks>
-            <entryLink id="2d78-73ad-1b3a-dc03" name="[OK] Banner Enchantments" hidden="true" collective="false" import="true" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
-            <entryLink id="dbc8-26e6-77da-8c47" name="Banner Enchantments" hidden="true" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
+            <entryLink id="2d78-73ad-1b3a-dc03" name="[OK] Banner Enchantments" hidden="false" collective="false" import="true" targetId="1395-1a1a-49a0-9c1b" type="selectionEntryGroup"/>
+            <entryLink id="dbc8-26e6-77da-8c47" name="[AC] Banner Enchantments" hidden="false" collective="false" import="true" targetId="4eb1-cabb-a838-a005" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
