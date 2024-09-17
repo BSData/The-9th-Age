@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="7" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="8" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -216,7 +216,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c253-ce04-6c42-8bf6" name="Weapon: Giant Slayer (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c253-ce04-6c42-8bf6" name="Weapon: Giant Slayer (not on 4-5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b8ec-88fe-1802-034c" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d519-ce01-461a-a9f0" type="max"/>
@@ -297,7 +297,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="97f7-20ef-fc6c-63a7" name="Shield: Dusk Forged" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="97f7-20ef-fc6c-63a7" name="Shield: Dusk Forged (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="93db-9a6d-1119-f5c5" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8fb-29d0-debc-809d" type="max"/>
@@ -306,7 +306,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="41fe-d2cc-82ef-381a" name="Shield: Wild Warding" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="41fe-d2cc-82ef-381a" name="Shield: Wild Warding (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="213f-7fe0-7bf6-4d56" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a232-f363-a538-7798" type="max"/>
@@ -425,7 +425,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fefe-226d-24a9-9efe" name="Shield: Sigil of Protection" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="fefe-226d-24a9-9efe" name="Shield: Sigil of Protection (not on 5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5b54-fd61-a341-4b94" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b46-f867-80ee-171e" type="max"/>
@@ -1206,6 +1206,30 @@
           </costs>
         </entryLink>
         <entryLink id="9873-a922-96bb-b2e8" name="Musician" hidden="false" collective="false" import="true" targetId="10fe-ce12-d662-ae02" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="2114-9194-8847-c19e" name="not on 5" hidden="false" collective="false" import="true">
+      <entryLinks>
+        <entryLink id="4dbb-09f4-ba58-9c18" name="Armour: Basalt Infusion (not on 5)" hidden="false" collective="false" import="true" targetId="5348-8c71-c793-57f3" type="selectionEntry"/>
+        <entryLink id="0084-5627-3b03-99fd" name="Armour: Death Cheater (not on 5)" hidden="false" collective="false" import="true" targetId="cba2-e616-5486-217b" type="selectionEntry"/>
+        <entryLink id="f9d9-5353-86e1-f5e2" name="Armour: Destiny&apos;s Call (not on 5 or Construct)" hidden="false" collective="false" import="true" targetId="b8a1-4182-3aba-ffd8" type="selectionEntry"/>
+        <entryLink id="94b8-730a-5410-1681" name="Armour: Ghostly Guard (not on 5)" hidden="false" collective="false" import="true" targetId="08dd-2bd2-1e5a-1f39" type="selectionEntry"/>
+        <entryLink id="5082-5c0e-2af3-ae64" name="Armour: Warding of Unity (not on 4-5)" hidden="false" collective="false" import="true" targetId="df39-7208-8901-186e" type="selectionEntry"/>
+        <entryLink id="9d7b-828d-2cab-23fa" name="Artefact: Mask of Mindless Violence (not on 4-5)" hidden="false" collective="false" import="true" targetId="7273-9f4c-b409-f689" type="selectionEntry"/>
+        <entryLink id="2457-0471-8a82-cd2d" name="P&amp;S: Elixier of Negation (not on 5)" hidden="false" collective="false" import="true" targetId="b361-b115-36e5-cafe" type="selectionEntry"/>
+        <entryLink id="1f70-a46f-7bcb-2c2f" name="P&amp;S: Potion of Healing (not on 5)" hidden="false" collective="false" import="true" targetId="47e3-2f3a-6a54-f42b" type="selectionEntry"/>
+        <entryLink id="939e-e48f-4dae-323b" name="P&amp;S: Troll Tonic (not on 5)" hidden="false" collective="false" import="true" targetId="8931-ff15-6f7f-2b2a" type="selectionEntry"/>
+        <entryLink id="61d8-1911-280b-dcd3" name="Shield: Dusk Forged (not on 5)" hidden="false" collective="false" import="true" targetId="97f7-20ef-fc6c-63a7" type="selectionEntry"/>
+        <entryLink id="d9ea-5527-9473-92f4" name="Shield: Sigil of Protection (not on 5)" hidden="false" collective="false" import="true" targetId="fefe-226d-24a9-9efe" type="selectionEntry"/>
+        <entryLink id="ebda-6e16-ce58-05b6" name="Shield: Wild Warding (not on 5)" hidden="false" collective="false" import="true" targetId="41fe-d2cc-82ef-381a" type="selectionEntry"/>
+        <entryLink id="8958-058e-8e64-1387" name="Weapon: Giant Slayer (not on 5)" hidden="false" collective="false" import="true" targetId="c253-ce04-6c42-8bf6" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="97f4-4ba0-4fdc-7933" name="not on 4" hidden="false" collective="false" import="true">
+      <entryLinks>
+        <entryLink id="4198-1b0d-c675-3f46" name="Armour: Warding of Unity (not on 4-5)" hidden="false" collective="false" import="true" targetId="df39-7208-8901-186e" type="selectionEntry"/>
+        <entryLink id="6451-91bf-36d5-6bd2" name="Artefact: Mask of Mindless Violence (not on 4-5)" hidden="false" collective="false" import="true" targetId="7273-9f4c-b409-f689" type="selectionEntry"/>
+        <entryLink id="25f1-12d2-02f1-bc43" name="Weapon: Giant Slayer (not on 4-5)" hidden="false" collective="false" import="true" targetId="c253-ce04-6c42-8bf6" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
