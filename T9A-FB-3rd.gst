@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="8" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="9" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -416,7 +416,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="df39-7208-8901-186e" name="Armour: Warding of Unity (not on 4-5)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="df39-7208-8901-186e" name="Armour: Warding of Unity (not on 4-5 or exclusive)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="71e4-bbe5-3ac1-f919" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae24-62d0-5cc0-6404" type="max"/>
@@ -434,7 +434,7 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ae18-1071-359a-ed03" name="Artefact: Mimic Cloak" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="ae18-1071-359a-ed03" name="Artefact: Mimic Cloak (not on 4-5)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aab8-6f87-d063-68e9" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="39b5-a79f-7e3d-352f" type="max"/>
@@ -1119,6 +1119,15 @@
         <cost name="pts" typeId="24fd-8af8-0c78-001c" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2a74-df7a-a39e-9f32" name="Banner: Banner of Recruitment" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="933d-2e16-473d-9711" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0299-bab1-4c98-9ac2" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f853-d3c3-4165-d5ab" name="[AC] Weapon Enchantments" hidden="false" collective="false" import="true">
@@ -1223,6 +1232,7 @@
         <entryLink id="d9ea-5527-9473-92f4" name="Shield: Sigil of Protection (not on 5)" hidden="false" collective="false" import="true" targetId="fefe-226d-24a9-9efe" type="selectionEntry"/>
         <entryLink id="ebda-6e16-ce58-05b6" name="Shield: Wild Warding (not on 5)" hidden="false" collective="false" import="true" targetId="41fe-d2cc-82ef-381a" type="selectionEntry"/>
         <entryLink id="8958-058e-8e64-1387" name="Weapon: Giant Slayer (not on 5)" hidden="false" collective="false" import="true" targetId="c253-ce04-6c42-8bf6" type="selectionEntry"/>
+        <entryLink id="f9f6-37ba-5ad7-b113" name="Artefact: Mimic Cloak (not on 4-5)" hidden="false" collective="false" import="true" targetId="ae18-1071-359a-ed03" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="97f4-4ba0-4fdc-7933" name="not on 4" hidden="false" collective="false" import="true">
@@ -1230,6 +1240,7 @@
         <entryLink id="4198-1b0d-c675-3f46" name="Armour: Warding of Unity (not on 4-5)" hidden="false" collective="false" import="true" targetId="df39-7208-8901-186e" type="selectionEntry"/>
         <entryLink id="6451-91bf-36d5-6bd2" name="Artefact: Mask of Mindless Violence (not on 4-5)" hidden="false" collective="false" import="true" targetId="7273-9f4c-b409-f689" type="selectionEntry"/>
         <entryLink id="25f1-12d2-02f1-bc43" name="Weapon: Giant Slayer (not on 4-5)" hidden="false" collective="false" import="true" targetId="c253-ce04-6c42-8bf6" type="selectionEntry"/>
+        <entryLink id="29ef-dc6c-9527-1677" name="Artefact: Mimic Cloak (not on 4-5)" hidden="false" collective="false" import="true" targetId="ae18-1071-359a-ed03" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
